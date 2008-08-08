@@ -1,0 +1,179 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// 68HC11 Assembly highlighter written by Eden Kirin, foetus@aphex.fpz.hr
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               68HC11 Assembler
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+                                                                                                        
+Filter:                 68HC11 Assembler files (*.asm)|*.asm
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// op codes
+KeyWords1:              ABA ABX ABY ADCA ADCB ADDA ADDB ADDD ANDA ANDB ASL ASLD ASR
+                        BCLR BITA BITB BSET CBA CLC CLI CLR CLRA CLRB CLV CMPA CMPB
+                        COM COMA COMB CPD CPX CPY DAA DEC DECA DECB DES DEX DEY EORA
+                        EORB FDIV IDIV INC INCA INCB INS INX INY JMP JSR LDAA LDAB
+                        LDDD LDS LDX LDY LSL LSLD LSR LSRD MUL NEG NEGA NEGB NOP ORAA
+                        ORAB PSHA PSHB PSHX PSHY PULA PULB PULX PULY ROL ROR RTI RTS
+                        SBA SBCA SBCB SEC SEI SEV STAA STAB STD STOP STS STX STY SUBA
+                        SUBB SUBD SWI TAB TAP TBA TEST TPA TST TSTA TSTB TSX TSY TXS
+                        TYS WAI XGDX XGDY BCC BCS BEQ BGE BGT BHI BHS BLE BLO BLS BLT 
+                        BMI BNE BPL BRA BRCLR BRN BRSET BSET BSR BVC BVS
+
+// registers
+KeyWords2:              A B D X Y SP CCR PC
+                        PORTA PIOC PORTB PORTC PORTCL DDRC PORTD DDRD PORTE CFORC OC1M
+                        OC1D TCNT TIC1 TIC2 TIC3 TOC1 TOC2 TOC3 TOC4 TI4 TO5 TCTL1 TCLT2
+                        TMSK1 TFLG1 TMSK2 TFLG2 PACTL PACNT SPCR SPSR SPDR BAUD SCCR1
+                        SCCR2 SCSR SCDR ADCTL ADR1 ADR2 ADR3 ADR4 BPROT EPROG OPTION
+                        COPRST PPROG HPRIO INIT TEST1 CONFIG
+
+// assembler directives
+KeyWords3:              ORG FCC FCB FDB EQU RMB BSZ FILL END
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
