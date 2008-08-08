@@ -1,0 +1,62 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// 80196 Assembly highlighter written by Kamil Krejca & Pavel Sedlak
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               80C166 Assembler
+Filter:                 80C166 ASM files (*.asm;*.a66;*.inc;*.lst;*.m66)|*.asm;*.a66;*.inc;*.lst;*.m66
+HelpFile:
+CaseSensitive:          0
+LineComment:            ;
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefht. ABCDEFHT
+EscapeChar:
+
+KeyWords1:              add addb addc addbc and andb ashr atomic band bclr bcmp
+                        bfldh bfldl bmov bmovn bor bset bxor calla calli callr
+                        calls cmp cmpb cmpd1 cmpd2 cmpi1 cmpi2 cpl cplb diswdt
+                        div divl divlu einit extr extp extpr exts extsr idle jb
+                        jbc jmpa jmpi jmpr jmps jnb jnbs mov movb movbs movbz mul
+                        mulu neg negb nop or orb pcall pop prior push pwrdn ret
+                        reti retp rets rol ror scxt shl shr srst srvwdt sub subb
+                        subc  subcb trap xor xorb
+                        cc_UC cc_Z cc_NZ cc_EQ cc_NE cc_C cc_NC cc_V cc_NV
+                        cc_N cc_NN cc_ULT cc_ULE cc_UGE cc_UGT cc_SLE cc_SLT
+                        cc_NET
+
+
+KeyWords2:              assume cgroup code cseg dgroup dseg rseg
+                        public extrn extern global
+                        list nolist include debug case title module main end
+                        section ends data word byte at
+                        proc near far interrupt endp
+                        macro endm if else endif
+                        db dw dsb dsw
+
+KeyWords3:              r0 r1 r2 r3 r4 r5 r6 r7 r8 r9 r10 r11 r12 r13 r14 r15
+                        rl0  rl1 rl2 rl3 rl4 rl5 rl6 rl7
+                        rh0  rh1 rh2 rh3 rh4 rh5 rh6 rh7
+                        dpp0 dpp1 dpp2 dpp3 psw cp mdl mdh
+
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow B
+Keyword3Col:            clNavy clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $808000 clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
