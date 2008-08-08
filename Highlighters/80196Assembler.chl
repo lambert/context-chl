@@ -1,0 +1,49 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// 80196 Assembly highlighter written by Fábio de Freitas Caetano - fabio@neomundi.com.br
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               80196 Assembler
+Filter:                 80196 ASM files (*.a96;*.inc;*.lst;*.m96)|*.a96;*.inc;*.lst;*.m96
+HelpFile:
+CaseSensitive:          0
+LineComment:            ;
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefht. ABCDEFHT
+EscapeChar:
+
+KeyWords1:              add addb addc adcb and andb bbc bbs bc be bge bgt bh
+                        ble blt bnc bne bnh bnst bnv bnvt bst bv bvt bmov bmovi
+                        br call clr clrb clrc clrvt cmp cmpb cmpl dec decb di
+                        div divb divu divub djnz djnzw dpts ei epts ext extb
+                        idlpd inc incb jbc jbs jc je jge jgt jh jle jlt jnc jne
+                        jnh jnst jnv jnvt jst jv jvt lcall ld ldb ldbse ldbze
+                        ljmp mul mulb mulu mulub neg negb nop norml not notb or
+                        orb pop popa popf push pusha pushf ret rst scall setc
+                        shl shlb shll shr shra shrab shral shrb shrl sjmp skip
+                        st stb sub subb subc subcb tijmp trap xch xchb xor xorb
+
+KeyWords2:              cseg dseg rseg public extrn list nolist include debug
+                        title module main end at
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clNavy clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
