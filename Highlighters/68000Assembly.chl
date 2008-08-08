@@ -1,0 +1,54 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// 68000 Assembly highlighter by Rob Ward <wards@paradise.net.nz>
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               68000 Assembler
+Filter:                 68000 Assembler files (*.s,*.src)|*.s;*.src
+HelpFile:
+CaseSensitive:          0
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefhABCDEFH
+EscapeChar:
+
+KeyWords1:              ABCD ADD ADDA ADDI ADDQ ADDX AND ANDI ASL
+                        ASR Bcc BCHG BCLR BSET BSR BTST CHK CLR CMP
+                        CMPA CMPI CMPM DBcc DIVS DIVU EOR EORI EXG
+                        EXT ILLEGAL JMP JSR LEA LINK LSL LSR MOVE
+                        MOVE MOVE MOVE MOVE MOVEA MOVEM MOVEP MOVEQ
+                        MULS MULU NBCD NEG NEGX NOP NOT OR ORI PEA
+                        RESET ROL ROR ROXL ROXR RTE RTR RTS SBCD
+                        Scc STOP SUB SUBA SUBI SUBQ SUBX SWAP TAS
+                        TRAP TRAPV TST UNLK
+
+KeyWords2:            bra bmi bhs bne blo bhi dbra bpl
+
+KeyWords3:            org dc ds xref xdef equ IFDEF ELSEC ENDC
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+OverrideTxtFgColor:     0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
