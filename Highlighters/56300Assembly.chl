@@ -1,0 +1,70 @@
+//////////////////////////////////////////////////////////////////////////////
+// 56300 Assembly highlighter by Lukasz 'e2rd' Sanocki <e2rd@irc.pl>,
+// _REMAKE_ (for my own purpose) of
+// 68000 Assembly highlighter by Rob Ward <wards@paradise.net.nz>
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               56300 Assembler
+Filter:                 56300 Assembler files (*.asm,*.s)|*.asm;*.s
+HelpFile:
+CaseSensitive:          0
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefhABCDEFH
+EscapeChar:
+
+KeyWords1:              ABS ADC ADD ADDL ADDR AND ANDI ASL
+                        ASR BCHG BCLR BRA BRCLR BRKcc BRSET BScc
+                        BSCLR BSET BSR BSSET BTST CLB CLR CMP CMPM
+                        CMPU DEBUG DEBUGcc DEC DIV DMAC DO DO FOREVER DOR DOR FOREVER
+                        ENDDO EOR EXTRACT EXTRACTU I IFcc.U ILLEGAL
+                        INC INSERT JCLR JMP JSCLR JSET JSR JSSET
+                        L: LRA LSL LSR LUA MAC MAC(su,uu) MACI MACR MACRI
+                        MAX MAXM MERGE MOVE MOVEC MOVEM MOVEP MPY MPY(su,uu)
+                        MPYI MPYR MPYRI NEG NOP NORM NORMF NOT OR ORI
+                        PFLUSH PFLUSHUN PFREE PLOCK PLOCKR PUNLOCK PUNLOCKR
+                        R REP RESET RND ROL ROR RTI RTS R:Y SBC
+                        STOP SUB SUBL SUBR Tcc TFR TRAP TRAPcc TST U VSL WAIT X:
+                        X:R X:Y: Y:
+
+KeyWords2:            bcc bhs bcs blo bec beq bes bge bgt blc ble bls blt bmi bne bnr bpl bnn
+                      bscc bshs bscs bslo bsec bseq bses bsge bsgt bslc bsle bsls bslt bsmi bsne bsnr bspl bsnn
+                      ifcc ifhs ifcs iflo ifec ifeq ifes ifge ifgt iflc ifle ifls iflt ifmi ifne ifnr ifpl ifnn
+                      jcc jhs jcs jlo jec jeq jes jge jgt jlc jle jls jlt jmi jne jnr jpl jnn
+                      jscc jshs jscs jslo jsec jseq jses jsge jsgt jslc jsle jsls jslt jsmi jsne jsnr jspl jsnn
+                      tcc ths tcs tlo tec teq tes tge tgt tlc tle tls tlt tmi tne tnr tpl tnn
+                      trapcc traphs trapcs traplo trapec trapeq trapes trapge trapgt traplc traple trapls traplt                             trapmi trapne trapnr trappl trapnn
+
+KeyWords3:            comment define end fail force himem include lomem mode msg org radix rdirect scsjmp scsreg
+                      undef warn endsec equ global gset local section set xdef xref baddr bsb bsc bsm buffer dc dcb ds                       dsm dsr endbuf list lstcol nolist opt page prctl stitle tabs title cobj ident symobj dup dupa                       dupc dupf endif endm if maclib macro
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+OverrideTxtFgColor:     0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00C00000 clWindow
+Keyword2Col:            $00D636E2 clWindow
+Keyword3Col:            $00C0C000 clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $0000A811 clWindow
+NumberCol:              clRed clWindow
+StringCol:              $00049500 clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00FFFFC0
+
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
