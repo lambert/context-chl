@@ -1,0 +1,106 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// 4NT° Batch file Highlighter (Based on the 4NT help file)
+//                 Version 1.0, 06.05.2005
+//                 written by Flurin Honegger fhonegger@hispeed.ch
+//
+//
+//  ° 4NT is a cmd replacement by JPSoftware (http://www.jpsoft.com/4ntdes.htm)
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               4NT Batch files
+Filter:                 4NT Batch files (*.bat)|*.bat;*.cmd;*.btm
+Description:            4NT Batch file Highlighter written by Flurin Honegger
+HelpFile:
+CaseSensitive:          0
+LineComment:            REM ::
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z @$_.
+IdentifierChars:        a..z A..Z 0..9 @$_.
+NumConstBegChars:       0..9
+NumConstChars:          0..9 .
+EscapeChar:
+
+// 4NT Internal Commands
+KeyWords1:              ? ACTIVATE CHCP CHDIR DETACH DIRHISTORY DRAWBOX DRAWHLINE
+                        DRAWVLINE ECHO ECHO. ECHOERR ECHOS ECHOSERR ESET EVENTLOG
+                        EXCEPT EXIT FFIND FREE FTYPE HEAD HELP HISTORY IFTP INKEY
+                        INPUT KEYBD KEYS KEYSTACK LIST LOG MD MEMORY MKDIR MKLNK
+                        MOVE MSGBOX OPTION PATH PLAYAVI PLAYSOUND POPD PRINT PROMPT
+                        PUSHD QUERYBOX RD REBOOT RECYCLE REN RENAME RMDIR SCREEN
+                        SCRPUT SELECT SENDMAIL SETDOS SHORTCUT SHRALIAS SNPP START
+                        TAIL TASKEND TASKLIST TEE TIMER UNSET VSCRPUT WHICH WINDOW Y
+
+// 4NT language control
+KeyWords2:              != .AND. .OR. == ALIAS BEEP BREAK CALL CANCEL CASE CHOICE
+                        DEFAULT DEFINED DELAY DIREXIST DO ECHO ELSE ENDIFF ENDLOCAL
+                        ENDSWITCH EQ EQL EQU ERRORLEVEL EXIST EXIT FOR FUNCTION GE
+                        GEQ GLOBAL GOSUB GOTO GT GTR IF IFF IN ISALIAS ISAPP ISDIR
+                        ISFUNCTION ISINTERNAL ISLABEL ISWINDOW LE LEQ LOADBTM LSS
+                        LT NE NEQ NOT NOT OFF ON PAUSE QUIT REM RETURN SET SETLOCAL
+                        SHIFT SWITCH TEXT THEN UNALIAS UNFUNCTION
+
+// 4NT Variables
+KeyWords3:              %? %?? _? _4ver _acstatus _alias _ansi _apmac _apmbatt
+                        _apmlife _batch _batchline _batchname _battery _batterylife
+                        _batterypercent _bg _boot _build _childpid _ci _cmdline
+                        _cmdproc _co _column _columns _country _cpu _cpuusage _cwd
+                        _cwds _cwp _cwps _date _day _detachpid _disk _dname _dos
+                        _dosver _dow _dowf _dowi _doy _dpmi _dv _echo _env _fg
+                        _ftperror _hlogfile _host _hour _hwprofile _idow _idowf _ip
+                        _isodate _kbhit _kstack _lastdisk _logfile _minute _monitor
+                        _month _mouse _ndp _pid _pipe _ppid _row _rows _second
+                        _selected _shell _startpid _swapping _syserr _time _transient
+                        _video _win _windir _winfgwindow _winname _winsysdir _winticks
+                        _wintitle _winuser _winver _xpixels _year _ypixels errorlevel
+
+// 4NT Functions
+KeyWords4:              @abs @alias @altname @ascii @attrib @caps @cdrom @ceiling
+                        @char @clip @clipw @comma @convert @crc32 @date @day @dec
+                        @decimal @descript @device @digits @diskfree @disktotal @diskused
+                        @dosmem @dow @dowf @dowi @doy @ems @errtext @eval @exec @execstr
+                        @exetype @expand @ext @extended @field @fileage @fileclose @filedate
+                        @filename @fileopen @fileread @files @fileseek @fileseekl @filesize
+                        @filetime @filewrite @filewriteb @findclose @findfirst @findnext
+                        @floor @format @fstype @full @function @getdir @getfile @getfolder
+                        @idow @idowf @if @inc @index @iniread @iniwrite @insert @instr
+                        @int @label @left @len @lfn @line @lines @lower @lpt @makeage
+                        @makedate @maketime @master @max @min @month @name @numeric
+                        @option @path @ping @random @readscr @ready @regcreate @regquery
+                        @regset @regsetenv @remote @removable @repeat @replace @rexx @right
+                        @search @select @sfn @strip @substr @time @timer @trim @truename
+                        @unicode @unique @upper @verinfo @wattrib @wild @winclass
+                        @winexename @wininfo @winmemory @winmetrics @winstate @winsystem
+                        @word @words @xms @year
+
+
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clPurple clWindow B
+Keyword4Col:            clTeal clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clRed
