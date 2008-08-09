@@ -1,0 +1,121 @@
+// default file filter
+Filter:                 Altera AHDL (*.TDF,*.INC)|*.TDF;*.INC
+// help file which will be invokend when F1 is pressed
+HelpFile:
+CaseSensitive:       0
+LineComment:         --
+BlockCommentBeg: %
+BlockCommentEnd: %
+IdentifierBegChars:  a..z A..Z _.
+IdentifierChars:     a..z A..Z _ 0..9
+NumConstBegChars:    0..9
+NumConstChars:       0..9 abcdefhABCDEFH
+EscapeChar:
+// keyword table
+KeyWords1:
+CARRY
+CASCADE
+CEIL
+DFF
+DFFE
+DFFEA
+EXP
+FLOOR
+GLOBAL
+JKFF
+JKFFE
+LATCH
+LCELL
+MEMORY
+OPENDRN
+SOFT
+ SRFF
+SRFFE
+TFF
+TFFE
+TRI
+USED
+WIRE
+X
+KeyWords2:
+AND
+ASSERT
+BEGIN
+BIDIR
+BITS
+BURIED
+CASE
+CLIQUE
+CONNECTED_PINS
+CONSTANT
+DEFAULTS
+DEFINE
+DESIGN
+DEVICE
+DIV
+ELSE
+ELSIF
+END
+FOR
+ FUNCTION
+GENERATE
+GND
+HELP_ID
+IF
+INCLUDE
+INPUT
+IS
+LOG2
+MACHINE
+MOD
+NAND
+NODE
+NOR
+NOT
+OF
+OPTIONS
+OR
+OTHERS
+ OUTPUT
+PARAMETERS
+REPORT
+RETURNS
+SEGMENTS
+SEVERITY
+STATES
+SUBDESIGN
+TABLE
+THEN
+TITLE
+TO
+TRI_STATE_NODE
+VARIABLE
+VCC
+WHEN
+WITH
+XNOR
+XOR
+KeyWords3:
+StringBegChar:       "
+StringEndChar:       "
+MultilineStrings:    0
+UsePreprocessor:     0
+CurrLineHighlighted:    0
+// colors
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            clMaroon clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clWindowText clWindow
+StringCol:              clPurple clWindow
+SymbolCol:              clWindowText clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+// If CurrLineHighlighted: 1
+CurrentLineCol:         clBlack clYellow
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
