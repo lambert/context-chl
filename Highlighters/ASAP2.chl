@@ -1,0 +1,210 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+//                        ASAM MCD 2MC / ASAP2
+//
+// ASAP2 Highlighter : database files ( symbols ) for ASAP calibration
+//                                        ASAM MCD 2MC / ASAP2
+// v0.2
+//
+// Philippe De Macedo ( fdemacedo@free.fr )
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               ASAP2 Highlighter
+Description:            ASAP2 Highlighter : database files ( symbols ) for ASAP calibration
+Filter:                 ASAP2 files (*.a2l)|*.a2l
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 #abcdefABCDEF
+EscapeChar:
+
+// start and end of block
+KeyWords1:              begin end
+
+//Block types
+KeyWords2:              ASAP2_VERSION
+                        PROJECT
+                        HEADER
+                        MODULE
+                        A2ML
+                        MOD_COMMON
+                        MOD_PAR
+                        COMPU_METHOD
+                        MEASUREMENT
+                        REF_MEASUREMENT
+                        OUT_MEASUREMENT
+                        IF_DATA
+                        GROUP
+                        SUB_GROUP
+                        ROOT
+                        SUB_GROUP
+                        FUNCTION_LIST
+                        RECORD_LAYOUT
+                        CAN_PARAM
+                        SEED_KEY
+                        TP_BLOB
+                        CHECKSUM
+                        CHECKSUM_PARAM
+                        DEFINED_PAGES
+                        COMPU_METHOD
+                        FORMULA
+                        COMPU_VTAB
+                        CHARACTERISTIC
+                        REF_CHARACTERISTIC
+                        DEPENDENT_CHARACTERISTIC
+                        VIRTUAL_CHARACTERISTIC
+                        AXIS_PTS
+                        AXIS_PTS_REF
+                        AXIS_DESCR
+                        VIRTUAL
+                        MEMORY_SEGMENT
+                        SOURCE
+                        QP_BLOB
+                        RASTER
+
+//Keywords
+KeyWords3:              BIT_MASK
+                        ECU
+                        ECU_ADDRESS
+                        ECU_ADDRESS_EXTENSION
+                        FORMAT
+                        LINK_MAP
+                        DISPLAY
+                        VIRTUAL_CONVERSION
+                        CONSISTENCY
+                        ADDRESS_EXTENSION
+                        DAQ_MODE
+                        OPTIONAL_CMD
+                        RAT_FUNC
+                        COEFFS
+                        TAB_VERB
+                        COMPU_TAB_REF
+                        DEFAULT_VALUE
+                        KP_BLOB
+                        DP_BLOB
+                        VALUE
+                        EXTENDED_LIMITS
+                        BYTE_ORDER
+                        DEPOSIT
+                        MAP
+                        READ_ONLY
+                        READ_WRITE
+                        FIX_AXIS_PAR_DIST
+                        COM_AXIS
+                        AXIS_PTS_REF
+                        AXIS_PTS_X
+                        AXIS_PTS_Y
+                        AXIS_PTS_Z
+                        AXIS_RESCALE_X
+                        AXIS_RESCALE_Y
+                        AXIS_RESCALE_Z
+                        VAL_BLK
+                        FNC_VALUES
+                        FIX_NO_AXIS_PTS_X
+                        AXIS_PTS_X
+                        FIX_NO_AXIS_PTS_Y
+                        AXIS_PTS_Y
+                        MEMORY_LAYOUT
+                        USER
+                        CPU_TYPE
+                        VERSION
+                        NO_OF_INTERFACES
+                        VECTAB_ADDRESS
+                        TRGSEG_ADDRESS
+                        DAT_MOD
+                        TRG_MOD
+                        DISPLAY_TAB
+                        DISPLAY_PAR
+                        ETK_CFG
+                        ECU
+                        PHONE_NO
+                        CUSTOMER_NO
+                        PROJECT_NO
+                        SRC_ADDR_X
+                        SRC_ADDR_Y
+                        NO_AXIS_PTS_X
+                        NO_AXIS_PTS_Y
+                        STD_AXIS
+                        PERCENT
+                        WINGANGLE
+                        SRC_ADDR_X
+                        SRC_ADDR_Y
+                        CURVE
+                        BAUDRATE
+                        SAMPLE_POINT
+                        SAMPLE_RATE
+                        BTL_CYCLES
+                        SJW
+                        SYNC_EDGE
+                        DATA
+                        FLASH
+                        RAM
+                        ROM
+                        EXTERN
+                        INTERN
+                        LENGTH
+                        CAN_ID_FIXED
+                        STORE_SUPPORTED
+                        CHECKSUM_CALCULATION
+                        FLASH_BACK
+                        RAM_INIT_BY_ECU
+                        ROW_DIR
+                        COLUMN_DIR
+                        DIRECT
+                        BYTES_ONLY
+                        ARRAY_SIZE
+                        MATRIX_DIM
+                        MONOTONY
+                        MULTIPLEX
+                        NO_OF_INTERFACES
+                        FORMULA
+                        GUARD_RAILS
+                        CURVE
+                        DISPLAY_IDENTIFIER
+                        IDENTIFIER
+                        FIRST_PID
+                        NUMBER
+
+//Types
+KeyWords4:              UBYTE
+                        UWORD
+                        ULONG
+                        SBYTE
+                        SWORD
+                        SLONG
+                        FLOAT32_IEEE
+                        FLOAT64_IEEE
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow U
+Keyword2Col:            $000000C0 clWindow
+Keyword3Col:            clTeal clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              clFuchsia clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+
+BlockAutoindent:        0
+BlockBegStr:            /begin
+BlockEndStr:            /end
+Keyword4Col:            clNavy clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
