@@ -1,0 +1,83 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Flash 5 ActionScript highlighter written by Mark Bell, http://www.eclectica.nu
+// Anything missing, tell me! mark_bell@eclectica.fsnet.co.uk
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Flash 5 ActionScript
+Filter:                 ActionScript Source files (*.as)|*.as
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z %@_
+IdentifierChars:        a..z A..Z 0..9 ?
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefhABCDEFH
+EscapeChar:             \
+KeyWords1:               add and Array concat join length pop push reverse shift slice sort splice
+                         toString unshift Boolean toString valueOf break call chr Color getRGB
+                         getTransform setRGB setTransform continue Date getDate getDay getFullYear
+                         getHours getMilliseconds getMinutes getMonth getSeconds getTime
+                         getTimezoneOffset getUTCDate getUTCDay getUTCFullYear getUTCHours
+                         getUTCMilliseconds getUTCMinutes getUTCMonth getUTCSeconds getYear setDate
+                         setFullYear setHours setMilliseconds setMinutes setMonth setSeconds
+                         setTime setUTCDate setUTCFullYear setUTCHours setUTCMilliseconds
+                         setUTCMinutes setUTCMonth setUTCSeconds setYear toString UTC  delete do
+                         duplicateMovieClip else eq escape eval evaluate for fscommand function ge
+                         getProperty getTimer getURL getVersion gotoAndPlay gotoAndStop gt if
+                         ifFrameLoaded #include Infinity in int isFinite isNaN Key BACKSPACE
+                         CAPSLOCK CONTROL DELETEKEY DOWN END ENTER ESCAPE getAscii getCode HOME
+                         INSERT isDown isToggled LEFT PGDN PGUP RIGHT SHIFT SPACE TAB UP le length
+                         loadMovie loadVariables lt Math abs acos asin atan atan2 ceil cos E exp
+                         floor log LOG2E LOG10E LN2 LN10 PI pow random round sin sqrt SQRT1_2 SQRT2
+                         tan maxscroll mbchr mblength mbord mbsubstring Mouse hide show MovieClip
+                         attachMovie duplicateMovieClip getBounds getBytesLoaded getBytesTotal
+                         getURL globalToLocal gotoAndPlay gotoAndStop hitTest loadMovie
+                         loadVariables localToGlobal nextFrame play prevFrame removeMovieClip
+                         startDrag stop stopDrag swapDepths unloadMovie NaN ne new newline
+                         nextFrame nextScene not null Number MAX_VALUE MIN_VALUE NaN
+                         NEGATIVE_INFINITY POSITIVE_INFINITY toString valueOf Object toString
+                         valueOf onClipEvent on or ord parseFloat parseInt play prevFrame prevScene
+                         print printAsBitmap random removeMovieClip return scroll Selection
+                         getBeginIndex getCaretIndex getEndIndex getFocus setFocus setSelection set
+                         setProperty Sound attachSound getPan getTransform getVolume setPan
+                         setTransform setVolume start stop startDrag stopAllSounds stopDrag String
+                         charAt charCodeAt concat fromCharCode indexOf lastIndexOf length slice
+                         split substr substring toLowerCase toUpperCase substring targetPath
+                         tellTarget this toggleHighQuality trace typeof unescape unloadMovie
+                         updateAfterEvent var void while with XML appendChild attributes childNodes
+                         cloneNode createElement createTextNode docTypeDecl firstChild
+                         haschildNodes insertBefore lastChild load loaded nextSibling nodeName
+                         nodeType nodeValue onLoad parentNode parseXML previousSibling removeNode
+                         send sendAndLoad status toString xmlDecl XMLSocket close connect onClose
+                         onConnect onXML send _root _parent
+
+KeyWords2:              load unload enterFrame mouseMove mouseDown mouseUp keyDown keyUp data press
+                        release releaseOutside rollOver rollOut dragOver dragOut keyPress true
+                        false
+
+KeyWords3:              _alpha _currentframe _droptarget _focusrect _framesloaded _height _
+                        highquality _name _quality _rotation _soundbuftime _target _totalframes
+                        _url _visible _width _x _xmouse _xscale _y _ymouse _yscale
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clTeal clWindow B
+Keyword3Col:            clGreen clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $00C000C0 clWindow
+NumberCol:              clRed clWindow B
+StringCol:              clMaroon clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+OverrideTxtFgColor:     0
