@@ -1,0 +1,53 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// AWK highlighter written by Eden Kirin, eden.kirin@inet.hr
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               AWK
+Filter:                 AWK-scripts (*.awk)|*.awk
+HelpFile:
+CaseSensitive:          1
+LineComment:            #
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierChars:        a..z A..Z _
+IdentifierBegChars:     a..z A..Z _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// 1 Statements
+KeyWords1:              BEGIN break continue do else END exit for function if
+                        in pattern return while
+
+// 2 Internal Functions
+KeyWords2:              atan2 close cos exp fflush gensub getline gsub index
+                        int length log match next nextfile print printf rand
+                        sin split sprintf sqrt srand strftime sub substr system
+                        systime tolower toupper
+
+// 3 Built-In Variables
+KeyWords3:              ARGC ARGIND ARGV CONVFMT ENVIRON ERRNO FIELDWIDTHS
+                        FILENAME FNR FS IGNORECASE NF NR OFMT OFS ORS RLENGTH
+                        RS RSTART RT SUBSEP
+
+StringBegChar: "
+StringEndChar: "
+MultilineStrings: 0
+UsePreprocessor: 0
+CurrLineHighlighted: 0
+
+SpaceCol: clWindowText clWindow
+Keyword1Col: clNavy clWindow B
+Keyword2Col: clBlue clWindow B
+Keyword3Col: clOlive clWindow B
+IdentifierCol: clWindowText clWindow
+CommentCol: clGray clWindow I
+NumberCol: clRed clWindow
+StringCol: clGreen clWindow
+SymbolCol: clWindowText clWindow
+PreprocessorCol: clBlue clWindow
+SelectionCol: clWhite clNavy
+CurrentLineCol: clBlack clYellow
+
