@@ -1,0 +1,301 @@
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               AVR Assembler
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note:                if more than one extension is associated, eg:
+//                        C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 AVR Assembler files (*.asm)|*.asm
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type:         LineComment     - comment to the end of line
+//                       BlockCommentBeg - block comment begin, it could be
+//                                         multiline
+//                       BlockCommentEnd - block comment end
+//
+//                       WARNING: "CommentType" setting is obsolete and it's
+//                                not in use anymore!
+
+//CommentType:            0
+
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note:                characters shouldn't be delimited, except arrays
+//                      array of chars could be defined as from_char..to_char
+//                      number always starts with 0..9 except when NumConstBeg
+//                        defines other
+
+NumConstBegChars:       0..9 # bB xX $
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note:                characters shouldn't be delimited, except arrays
+//                      array of chars could be defined as from_char..to_char
+//                      number always starts with 0..9 except when NumConstBeg
+//                        defines other
+
+NumConstChars:          0..9 a..z A..Z _-
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note:                delimited with spaces, lines could be wrapped
+//                      you may divide keywords into two groups which can be
+//                        highlighted differently
+
+KeyWords1:              add adc adiw sub subi sbc sbci sbiw and andi or ori 
+			eor com neg sbr cbr inc dec tst clr ser 
+			mul muls mulsu fmul fmuls fmulsu 
+
+			rjmp ijmp eijmp jmp rcall icall eicall call
+			ret reti cpse cp cpc cpi sbrc sbrs sbic sbis
+			brbc brbs breq brne brcc brcs brsh brlo brmi brpl
+			brge brlt brhs brhc brts brtc brvs brvc brie brid
+
+			mov movw ldi lds ld ldd sts st lpm elpm spm espm
+			in out push pop
+
+			lsl lsr rol ror asr swap bset bclr sbi cbi bst bld
+			sec clc sen cln sez clz sei cli ses cls sev clv
+			set clt	seh clh nop sleep wdr break
+
+KeyWords2:              org equ db dw set nolist listmac list include exit
+			eseg endm endmacro desg device def csegsize cseg byte
+
+                        R0 R1 R2 R3 R4 R5 R6 R7 R8 R9 R10 R11 R12 R13 R14 R15
+                        R16 R17 R18 R19 R20 R21 R22 R23 R24 R25 R26 R27 R28 R29
+                        R30 R31
+
+			HIGH LOW BYTE2 BYTE3 BYTE4 LWRD HWRD PAGE EXP2 LOG2
+                        ZH ZL XH XL YH YL
+                        
+                        || && | & ^ != == >= <= > < >> << - + / * ~ !
+
+KeyWords3:
+
+//                      R0 R1 R2 R3 R4 R5 R6 R7 R8 R9 R10 R11 R12 R13 R14 R15
+//			R16 R17 R18 R19 R20 R21 R22 R23 R24 R25 R26 R27 R28 R29
+//			R30 R31
+
+//			HIGH LOW BYTE2 BYTE3 BYTE4 LWRD HWRD PAGE EXP2 LOG2
+
+                        TCCR3A TCCR3B TCCR3C TCNT3H TCNT3L OCR3AH OCR3AL
+                        OCR3BH OCR3BL OCR3CH OCR3CL ICR3H ICR3L
+
+                        TCCR1A TCCR1B TCCR1C TCNT1H TCNT1L OCR1AH OCR1AL
+                        OCR1BH OCR1BL OCR1CH OCR1CL ICR1H ICR1L
+                        TCNT1 OCR1A OCR1B OCR1C OCR1H OCR1L
+
+                        ETIMSK ETIFR TIMSK TIFR
+                        TCCR2 TCNT2 OCR2 ASSR
+                        TCCR0 TCNT0 OCR0
+                        TIFR0 TIFR1 TIFR2
+                        TIMSK0 TIMSK1 TIMSK2
+                        TCCR2A OCR2A TCCR0A OCR0A GTCCR
+
+                        GPIOR0 GPIOR1 GPIOR2
+                        DIDR0 DIDR1
+                        LCDCRA LCDCRB LCDFRR LCDCCR
+                        LCDDR0 LCDDR1 LCDDR2 LCDDR3
+                        LCDDR5 LCDDR6 LCDDR7 LCDDR8
+                        LCDDR10 LCDDR11 LCDDR12 LCDDR13
+                        LCDDR14 LCDDR15 LCDDR16 LCDDR17 LCDDR18
+
+                        OSCCAL ICRA SPMCR SPMCSR SPMCSR PLLCSR OCDR SMCR
+
+                        SREG SPH SPL MCUCR MCUCSR XDIV XMCRA XMCRB RAMPZ OCDR
+                        SP MCUSR EMCUCR CLKPR PCMSK0 PCMSK1
+
+                        EICRA EICRB EIMSK EIFR
+                        GIMSK GICR GIFR
+
+                        PORTA DDRA PINA PORTB DDRB PINB PORTC DDRC PINC
+                        PORTD DDRD PIND PORTE DDRE PINE PORTF DDRF PINF
+                        PORTG DDRG PING
+
+                        SPDR SPSR SPCR
+                        TWCR TWDR TWAR TWSR TWBR
+                        UDR0 UBRR0L UBRR0H UCSR0A UCSR0B UCSR0C
+                        UDR1 UBRR1L UBRR1H UCSR1A UCSR1B UCSR1C
+                        UBRRH UBRRL UCSRC UDR UCSRA UCSRB
+                        USIDR USISR USICR
+
+                        ACSR ADMUX ADCSR ADCH ADCL ADCSRA ADCSRB
+                        EEARH EEARL EEDR EECR
+                        WDTCR SFIOR
+
+// ADDITIONAL KEYWORDS - USE TO BE DECIDED BY THE INDIVIDUAL USER
+
+
+//			PA7 PA6 PA5 PA4 PA3 PA2 PA1 PA0
+//			PB7 PB6 PB5 PB4 PB3 PB2 PB1 PB0
+//			PC7 PC6 PC5 PC4 PC3 PC2 PC1 PC0
+//			PD7 PD6 PD5 PD4 PD3 PD2 PD1 PD0
+//			PE7 PE6 PE5 PE4 PE3 PE2 PE1 PE0
+//			PF7 PF6 PF5 PF4 PF3 PF2 PF1 PF0
+//			PG4 PG3 PG2 PG1 PG0
+
+//			PORTA7 PORTA6 PORTA5 PORTA4 PORTA3 PORTA2 PORTA1 PORTA0
+//			PORTB7 PORTB6 PORTB5 PORTB4 PORTB3 PORTB2 PORTB1 PORTB0
+//			PORTC7 PORTC6 PORTC5 PORTC4 PORTC3 PORTC2 PORTC1 PORTC0
+//			PORTD7 PORTD6 PORTD5 PORTD4 PORTD3 PORTD2 PORTD1 PORTD0
+//			PORTE7 PORTE6 PORTE5 PORTE4 PORTE3 PORTE2 PORTE1 PORTE0
+//			PORTF7 PORTF6 PORTF5 PORTF4 PORTF3 PORTF2 PORTF1 PORTF0
+//			PORTG4 PORTG3 PORTG2 PORTG1 PORTG0
+
+//			DDA7 DDA6 DDA5 DDA4 DDA3 DDA2 DDA1 DDA0
+//			DDB7 DDB6 DDB5 DDB4 DDB3 DDB2 DDB1 DDB0
+//			DDC7 DDC6 DDC5 DDC4 DDC3 DDC2 DDC1 DDC0
+//			DDD7 DDD6 DDD5 DDD4 DDD3 DDD2 DDD1 DDD0
+//			DDE7 DDE6 DDE5 DDE4 DDE3 DDE2 DDE1 DDE0
+//			DDF7 DDF6 DDF5 DDF4 DDF3 DDF2 DDF1 DDF0
+//			DDG4 DDG3 DDG2 DDG1 DDG0
+
+//			PINA7 PINA6 PINA5 PINA4 PINA3 PINA2 PINA1 PINA0
+//			PINB7 PINB6 PINB5 PINB4 PINB3 PINB2 PINB1 PINB0
+//			PINC7 PINC6 PINC5 PINC4 PINC3 PINC2 PINC1 PINC0
+//			PIND7 PIND6 PIND5 PIND4 PIND3 PIND2 PIND1 PIND0
+//			PINE7 PINE6 PINE5 PINE4 PINE3 PINE2 PINE1 PINE0
+//			PINF7 PINF6 PINF5 PINF4 PINF3 PINF2 PINF1 PINF0
+//			PING4 PING3 PING2 PING1 PING0
+
+//			RXC TXC UDRE FE DOR U2X MPCM
+//			RXC0 TXC0 UDRE0 FE0 DOR0 UPE0 U2X0 MPCM0
+//			RXC1 TXC1 UDRE1 FE1 DOR1 UPE1 U2X1 MPCM1
+
+//			RXCIE TXCIE UDRIE RXEN TXEN UCSZ2 RXB8 TXB8
+//			RXCIE0 TXCIE0 UDRIE0 RXEN0 TXEN0 UCSZ02 RXB80 TXB80
+//			RXCIE1 TXCIE1 UDRIE1 RXEN1 TXEN1 UCSZ12 RXB81 TXB81
+
+//			UMSEL UPM1 UPM0 USBS UCSZ1 UCSZ0 UCPOL
+//			UMSEL0 UPM01 UPM00 USBS0 UCSZ01 UCSZ00 UCPOL0
+//			UMSEL1 UPM11 UPM10 USBS1 UCSZ11 UCSZ10 UCPOL1
+
+//			SPIE SPE DORD MSTR CPOL CPHA SPR1 SPR0 SPIF WCOL SPI2X
+//			TWINT TWEA TWSTA TWSTO TWWC TWEN TWIE
+//			TWS7 TWS6 TWS5 TWS4 TWS3 TWPS1 TWSP0
+//			TWA6 TWA5 TWA4 TWA3 TWA2 TWA1 TWA0 TWGCE
+
+//                      SRE SRW10 SE SM1 SM0 SM2 IVSEL IVCE
+
+//                      JTD JTRF WDRF BORF EXTRF PORF
+
+//                      SRL2 SRL1 SRL0 SRW01 SRW00 SRW11
+//                      XMBK XMM2 XMM1 XMM0
+
+//                      SPMIE ASB ASRE RWWSB RWWSRE BLBSET PGWRT PGERS SPMEN
+//                      IDRD OCDR6 OCDR5 OCDR4 OCDR3 OCDR2 OCDR1 OCDR0
+//                      XDIVEN XDIV6 XDIV5 XDIV4 XDIV3 XDIV2 XDIV1 XDIV0
+//                      TSM ADHSM ACME PUD PSR0 PSR1 PSR2 PSR3 PSR321
+
+//                      ADEN ADSC ADFR ADIF ADIE ADPS2 ADPS1 ADPS0 REFS1 REFS0
+//                      ADLAR MUX4 MUX3 MUX2 MUX1 MUX0 ADATE
+
+//                      ACD ACBG ACO ACI ACIE ACIC ACIS1 ACIS0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter:    StringBegChar - string begin char
+//                      StringEndChar - string end char
+//                      MultilineStrings - enables multiline strings, as perl
+//                                         has it
+//
+//                       WARNING: "StringDelimiter" setting is obsolete and
+//                                it's not in use anymore!
+
+//StringDelimiter:        0
+
+StringBegChar:          ' "
+StringEndChar:          ' "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor:    0 - no
+//                      1 - yes
+// note:                if yes, '#' and statements after it will be
+//                        highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line:      0 - no
+//                      1 - yes
+// note:                if yes, current line will be highlighted
+
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+//////////////////////////////////////////////////////////////////////////////
