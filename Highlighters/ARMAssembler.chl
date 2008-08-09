@@ -1,0 +1,216 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// ARM Assembly highlighter by David Thomas, modified from:
+//
+// x86 Assembly highlighter written by Eden Kirin, foetus@aphex.fpz.hr
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               ARM Assembler
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 ARM Assembler files (*.s,*.hdr)|*.s;*.hdr
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// op codes
+
+// This does not cover the entire range of instructions. Because ARM instructions can be 
+// conditional most instructions can have at least 17 different forms. Such a table would
+// be very large. However it does contain the most common instructions and conditions, in
+// my experience.
+
+// The condition codes are: AL NV EQ NE CC CS GE LT GT LE HS LO HI LS MI PL
+
+KeyWords1:
+ADC ADCEQ ADCGE ADCGT ADCLE ADCLT ADCNE ADD ADDEQ ADDGE ADDGT ADDLE ADDLT ADDNE ADDS ADR
+ADREQ ADRL ADRNE AND ANDEQ ANDGT ANDS BICS EOR MOV MOVCS MOVEQ MOVGE MOVGT MOVLE MOVLT
+MOVNE MOVS MVN ORR ORREQ ORRGES ORRGT ORRNE ORRS RSB RSBGT RSBLT RSC SBC SUB SUBCC SUBEQ
+SUBGE SUBGES SUBNE SUBS SUBS SUBLE SUBGT ADDLS ANDNE
+
+// ARM v5TE saturated arithmetic
+
+QADD QSUB
+
+// comparison instructions
+
+CMN CMP CMPEQ CMPNE TEQ TEQCS TST TSTNE
+
+// multiplier instructions
+
+MLA MUL SMLAL SMULL UMLAL UMULL
+
+// branch instructions
+
+B BCC BCS BEQ BGE BGT BHI BIC BICEQ BICGT BL BLE BLEQ BLLT BLNE BLO BLS BLT BLX BNE BX SWI
+
+// memory instructions
+
+LDMFD LDMGTFD LDMIA LDMIB LDMLEFD LDMLTFD LDR LDRB LDRCSH LDREQ LDREQB LDREQH LDRGE LDRGEB
+LDRGT LDRGTH LDRH LDRH LDRLT LDRNE LDRNEB LDRNEH LDRSB LDRSH STMFD STMGEIA STMIA STMIB STR
+STRB STREQ STREQB STREQH STRGE STRGEH STRGT STRH STRNEH SWP
+
+// shift instructions
+
+ASL ASR LSL LSR ROR RRX
+
+// data
+
+DCB DCD DCW
+
+// registers
+
+KeyWords2:
+r0 r1 r2 r3 r4 r5 r6 r7 r8 r9 r10 r11 r12 r13 r14 r15 v1 v2 v3 v4 v5 v6 sl fp ip sp lr pc
+
+// assembler keywords
+
+KeyWords3:
+ALIGN AREA CODE END ERROR EXPORT GBLA GBLS GET IMPORT LAND LTORG MACRO MEND READONLY SETA
+SETS
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWhite clBlack
+Keyword1Col:            $0080FFFF clBlack B
+Keyword2Col:            $00C0FFFF clBlack
+Keyword3Col:            $00C0C0FF clBlack B
+IdentifierCol:          clWhite clBlack
+CommentCol:             $00C0FFC0 clBlack
+NumberCol:              $00FFC0C0 clBlack
+StringCol:              clWhite clBlack
+SymbolCol:              $00A0A0A0 clBlack
+PreprocessorCol:        clWhite clBlack
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clWindowText $00202020
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clRed clBlack
+
+
