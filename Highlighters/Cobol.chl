@@ -1,0 +1,154 @@
+//////////////////////////////////////////////////////////////////////////////////
+//           ***Common Business Oriented Language***                            //
+// Cobol highlighter written by Johnson Kuriakose, jkuriakose@netzero.net       //
+//                                                                              //
+//////////////////////////////////////////////////////////////////////////////////
+
+Language:               COBOL
+Filter:                 Cobol files (*.cbl)|*.cob;*.cbl
+HelpFile:
+CaseSensitive:          0
+LineComment:            *
+IdentifierBegChars:     a..z A..Z / + < <= = > >=
+IdentifierChars:        a..z A..Z _ 0123456789  -
+NumConstBegChars:       0..9 abcdefABCDEF
+NumConstChars:          0..9 #abcdefABCDEF
+EscapeChar:
+
+KeyWords1:
+//////////////////////////////////////////////////////////////////////////////////
+//Reserved words used in cobol.
+//////////////////////////////////////////////////////////////////////////////////
+                        ENVIRONMENT DIVISION
+                        DATA DIVISION
+                        WORKING STORAGE
+                        WORKING-STORAGE
+                        PROCEDURE DIVISION
+                        IDENTIFICATION DIVISION
+KeyWords2:
+///////////////////////////////////////////////////////////////////////////////////
+//    These are also reserved words used in cobol.
+//Some of the words ending with '-' are used for the purpose of syntax highlighting
+////////////////////////////////////////////////////////////////////////////////////
+
+                        ACCEPT ACCESS ADD ADDRESS ADVANCING AFTER ALL ALLOWING
+                        ALPHABET ALPHABETIC ALPHABETIC-LOWER ALPHABETIC-UPPER
+                        ALPHANUMERIC ALPHANUMERIC-EDITED ALSO ALTER ALTERNATE
+                        AND ANY APPLY ARE AREA AREAS ARITHMETIC ASCENDING
+                        ASSIGN AT AUTHOR B-AND BASIS BEFORE BEGINNING B-EXOR
+                        BINARY BIT BITS BLANK B-LESS BLOCK B-NOT BOOLEAN B-OR
+                        BOTTOM BY CALL CANCEL CBL CD CF CH CHARACTER CHARACTERS
+                        CLASS CLASS-ID CLOCK-UNITS CLOSE COBOL CODE CODE-SET
+                        COLLATING COLUMN COMMA COMMIT COMMON COMMUNICATION COMP
+                        COMP- COMP-1 COMP-1 COMP-1 COMP-2 COMP-3 COMP-4 COMP-6
+                        COMP-7 COMP-8 COMP-9 COMPUTATIONAL COMPUTATIONAL-
+                        COMPUTATIONAL-1 COMPUTATIONAL-2 COMPUTATIONAL-3
+                        COMPUTATIONAL-4 COMPUTATIONAL-6 COMPUTATIONAL-7
+                        COMPUTATIONAL-8 COMPUTATIONAL-9 COMPUTATIONAL-X COMPUTE
+                        COMP-X COM-REG CONFIGURATION CONNECT CONTAINED CONTAINS
+                        CONTENT CONTINUE CONTROL CONTROL-AREA CONTROLS
+                        CONVERTING COPY CORR CORRESPONDING COUNT CURRENCY
+                        CURRENT CYCLE DATE DATE-COMPILED DATE-WRITTEN DAY DAY-
+                        OF-WEEK DB DB-ACCESS-CONTROL-KEY DBCS DB-DATA-NAME DB-
+                        EXCEPTION DB-RECORD-NAME DB-SET-NAME DB-STATUS DE DEBUG
+                        ITEM DEBUG NAME DEBUG SUB DEBUG-CONTENTS DEBUGGING
+                        DEBUG-ITEM DEBUG-LINE DEBUG-NAME DEBUG-SUB- DEBUG-SUB-1
+                        DEBUG-SUB-2 DEBUG-SUB-3 DECIMAL-POINT DECLARATIVES
+                        DEFAULT DELETE DELIMITED DELIMITER DEPENDING DESCENDING
+                        DESTINATION DETAIL DISABLE DISCONNECT DISPLAY DISPLAY-
+                        DISPLAY-1 DISPLAY-2 DISPLAY-3 DISPLAY-4 DISPLAY-5
+                        DISPLAY-6 DISPLAY-7 DISPLAY-8 DISPLAY-9 DIVIDE DOWN
+                        DUPLICATE DUPLICATES DYNAMIC EGCS EGI EJECT ELSE EMI
+                        EMPTY ENABLE END END-ADD END-CALL END-COMPUTE END-
+                        DELETE END-DISABLE END-DIVIDE END-ENABLE END-EVALUATE
+                        END-IF ENDING END-INVOKE END-MULTIPLY END-OF-PAGE END-
+                        PERFORM END-READ END-RECEIVE END-RETURN END-REWRITE END-
+                        SEARCH END-SEND END-START END-STRING END-SUBTRACT END-
+                        TRANSCEIVE END-UNSTRING END-WRITE ENTER ENTRY EOP EQUAL
+                        EQUALS ERASE ERROR ESI EVALUATE EVERY EXACT EXCEEDS
+                        EXCEPTION EXCLUSIVE EXIT EXTEND EXTERNAL FALSE FD FETCH
+                        FILE FILE CONTROL FILE-CONTROL FILE-CONTROL. FILLER
+                        FINAL FIND FINISH FIRST FOOTING FOR FORM FORMAT FREE
+                        FROM FUNCTION GENERATE GET GIVING GLOBAL GO GOBACK
+                        GREATER GROUP HEADING HIGH VALUE HIGH-VALUE HIGH-VALUES
+                        ID IF IN INDEX INDEX- INDEX-1 INDEX-2 INDEX-3 INDEX-4
+                        INDEX-5 INDEX-6 INDEX-7 INDEX-8 INDEX-9 INDEXED
+                        INDICATE INHERITS INITIAL INITIALIZE INITIATE INPUT
+                        INPUT-OUTPUT INSERT INSPECT INSTALLATION INTO INVALID
+                        INVOKE I-O I-O-CONTROL IS JUST JUSTIFIED KANJI KEEP KEY
+                        LABEL LAST LD LEADING LEFT LENGTH LESS LIMIT LIMITS
+                        LINAGE LINAGE-COUNTER LINE LINE COUNTER LINE-COUNTER
+                        LINES LINKAGE LOCALLY LOCAL-STORAGE LOCK LOW-VALUE LOW-
+                        VALUES LS-AREA MEMBER MEMORY MERGE MESSAGE METACLASS
+                        METHOD METHOD-ID MODE MODIFY MODULES MORE LABELS MORE-
+                        LABELS MOVE MULTIPLE MULTIPLY NATIVE NEGATIVE NEXT NO
+                        NORMAL NOT NULL NULLS NUMBER NUMERIC NUMERIC EDITED
+                        NUMERIC-EDITED OBJECT OBJECT-COMPUTER OCCURS OF OFF
+                        OMITTED ON ONLY OPEN OPTIONAL OR ORDER ORGANIZATION
+                        OTHER OUTPUT OVERFLOW OVERRIDE OWNER PACKED DECIMAL
+                        PACKED-DECIMAL PADDING PAGE PAGE COUNTER PAGE-COUNTER
+                        PARAGRAPH PASSWORD PERFORM PF PH PIC PICTURE PLUS
+                        POINTER POSITION POSITIVE PRESENT PRINTING PRIOR
+                        PROCEDURE-POINTER PROCEDURES PROCEED PROCESS PROCESSING
+                        PROGRAM PROGRAM-ID PROTECTED PURGE QUEUE QUOTE QUOTES
+                        RANDOM RD READ READY REALM RECEIVE RECONNECT RECORD
+                        RECORDING RECORD-NAME RECORDS RECURSIVE REDEFINES REEL
+                        REFERENCE REFERENCES RELATION RELATIVE RELEASE RELOAD
+                        REMAINDER REMOVAL RENAMES REPEATED REPLACE REPLACING
+                        REPORT REPORTING REPORTS REPOSITORY RERUN RESERVE RESET
+                        RETAINING RETRIEVAL RETURN RETURN-CODE RETURNING
+                        REVERSED REWIND REWRITE RF RH RIGHT ROLLBACK ROUNDED
+                        RUN SAME SD SEARCH SECTION SECURITY SEGMENT SEGMENT-
+                        LIMIT SELECT SELF SEND SENTENCE SEPARATE SEQUENCE
+                        SEQUENTIAL SERVICE SESSION-ID SET SHARED SHIFT-IN SHIFT-
+                        OUT SIGN SIZE SKIP SKIP1 SKIP2 SKIP3 SORT SORT-CONTROL
+                        SORT-CORE-SIZE SORT-FILE-SIZE SORT-MERGE SORT-MESSAGE
+                        SORT-MODE-SIZE SORT-RETURN SOURCE SOURCE-COMPUTER SPACE
+                        SPACES SPECIAL NAMES SPECIAL-NAMES STANDARD STANDARD-
+                        STANDARD-1 STANDARD-2 STANDARD-3 STANDARD-4 START
+                        STATUS STOP STORE STRING SUB-QUEUE-1 SUB-QUEUE-2 SUB-
+                        QUEUE-3 SUB-QUEUE- SUB-SCHEMA SUBTRACT SUM SUPER
+                        SUPPRESS SYMBOLIC SYNC SYNCHRONIZED TABLE TALLY
+                        TALLYING TAPE TENANT TERMINAL TERMINATE TEST TEXT THAN
+                        THEN THROUGH THRU TIME TIMEOUT TIMES TITLE TO TOP TRACE
+                        TRAILING TRANSCEIVE TRUE TYPE UNEQUAL UNIT UNSTRING
+                        UNTIL UP UPDATE UPON USAGE USAGE-MODE USE USING VALID
+                        VALIDATE VALUE VALUES VARYING WAIT WHEN WHEN-COMPILED
+                        WITH WITHIN WORDS WRITE WRITE-ONLY ZERO ZEROES ZEROS
+                        -  /  +  <  <=  =  >  >=
+
+KeyWords3:
+//////////////////////////////////////////////////////////////////////////////////
+//These are not reserved words in cobol, but they are used for special purposes.//
+//////////////////////////////////////////////////////////////////////////////////
+
+                        X XX XXX XXXX  XXXXX XXXXXX XXXXXXX XXXXXXXX XXXXXXXXX
+                        Z ZZ ZZZ ZZZZ  ZZZZZ ZZZZZZ ZZZZZZZ ZZZZZZZZ ZZZZZZZZZ
+                        Z Z9 ZZ9 ZZZ9  ZZZZ9 ZZZZZ9 ZZZZZZ9 ZZZZZZZ9 ZZZZZZZZ9
+                        Z Z9 Z99 Z999  Z9999 Z99999 Z999999 Z9999999 Z99999999
+                        V VV VVV VVVV  VVVVV VVVVVV VVVVVVV VVVVVVVV VVVVVVVVV
+                        V V9 VV9 VVV9  VVVV9 VVVVV9 VVVVVV9 VVVVVVV9 VVVVVVVV9
+                        V V9 V99 V999  V9999 V99999 V999999 V9999999 V99999999
+                        S S9 S99 S9V9  S9V99 S99V99 S999V99 S9999V99 S99999V99
+//////////////////////////////////////////////////////////////////////////////////
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+
+SpaceCol:               clAqua clBlack
+Keyword1Col:            $001694EC clBlack BU
+Keyword2Col:            clRed clBlack B
+Keyword3Col:            $00FF9700 clBlack B
+IdentifierCol:          clLime clBlack
+CommentCol:             clGray clBlack
+NumberCol:              clAqua clBlack
+StringCol:              clWhite clBlack B
+SymbolCol:              clFuchsia clBlack
+PreprocessorCol:        clGray clBlack IS
+SelectionCol:           clWhite clRed
+CurrentLineCol:         clYellow clNavy
+
