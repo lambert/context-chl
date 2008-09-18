@@ -1,0 +1,89 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// CD Shell scripts Highlighter - http://www.cdshell.org/
+// Based on http://www.911cd.net/forums/index.php?showtopic=3708
+// by goldfndr (Google me)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               CD Shell scripts
+Filter:                 CD Shell scripts (*.cds) | *.cds
+HelpFile:
+CaseSensitive:          0
+LineComment:            #
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _ $
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+//  commands
+KeyWords1:              About Boot Call Cd chain Clear Cls Dir Diskemu Else
+                        End Font Getkey Goto Help Hotkey If isolinux List
+                        Loadmodule Ls Man memdisk Part Print Quit Reboot
+                        Restart Return RPM Script Set Show Then Type Wait
+                        Exit
+
+// command keywords
+KeyWords2:              action activate description flags keycode
+                        default eithershift name testkey
+                        commands functions keys modules
+                        warm cold
+                        more noscript never console image
+
+// macros (the ones with "$" could go into a separate section)
+KeyWords3:              $appName $blinkMode $dateYear $dateMonth $dateDay
+                        $timeHour $timeMinute $timeSecond $textColor
+                        $boldColor $overscanColor $version $versionDebug
+                        $versionDOS $vesa $vga $lastKey $tabSize $textCursorX
+                        $textCursorY $< $$
+                        appName blinkMode dateYear dateMonth dateDay timeHour
+                        timeMinute timeSecond textColor boldColor lastKey vga
+                        overscanColor version versionDebug versionDOS vesa
+                        tabSize textCursorX textCursorY
+
+// functions
+KeyWords4:              bootCheck color compare icompare defined key file
+
+// key names
+KeyWords5:              f1 f10 f11 f12 f2 f3 f4 f5 f6 f7 f8 f9
+                        af1 af10 af11 af12 af2 af3 af4 af5 af6 af7 af8 af9
+                        cf1 cf10 cf11 cf12 cf2 cf3 cf4 cf5 cf6 cf7 cf8 cf9
+                        sf1 sf10 sf11 sf12 sf2 sf3 sf4 sf5 sf6 sf7 sf8 sf9
+                        backspace cBracket delete insert ; home end enter
+                        esc left pgdn pgup right space tab up down
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clNavy clWindow BI
+Keyword3Col:            clBlue clWindow B
+Keyword4Col:            clOlive clWindow B
+Keyword5Col:            clOlive clWindow BI
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+
+// Unable to map these entries
+// BracketChars = [()]
+// OperatorChars = -+*/<>!~%^&|=
+// PreprocStart = $
+//
+// Missed: Exit default eithershift
+// Dupe: End
+// Undoc: RPM $versiondebug $< $$
+
