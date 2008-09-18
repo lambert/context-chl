@@ -1,0 +1,60 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// DOS Batch files Highlighter (Based on the MS-DOS 6.22 help file)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               DOS Batch files
+Filter:                 DOS Batch files (*.bat)|*.bat
+HelpFile:
+CaseSensitive:          0
+LineComment:            REM
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// "Internal" commands supported by Command.com
+KeyWords1:              BREAK CHCP CHDIR CD CLS COPY CTTY DATE DEL DIR ERASE
+                        EXIT LOADHIGH LH MD MKDIR PATH PROMPT REN RENAME RD
+                        RMDIR TIME TYPE VER VERIFY VOL
+
+// Commands related to Batch files and the Config.sys file
+KeyWords2:              BUFFERS CALL CHOICE COUNTRY DEVICE DEVICEHIGH DO DOS
+                        ECHO ERRORLEVEL EXIST FOR FCBS FILES GOTO IF IN INCLUDE
+                        LASTDRIVE MENUCOLOR MENUDEFAULT MENUITEM NUMLOCK NOT
+                        PAUSE SET SHELL SHIFT STACKS SUBMENU SWITCHES
+
+// "External" commands, they are just exe & com files
+KeyWords3:              ANSI APPEND ATTRIB CHCP CHKDSK CHKSTATE COMMAND DEBUG
+                        DEFRAG DELTREE DISKCOMP DISKCOPY DISPLAY DOSKEY
+                        DOSSHELL DRIVER DRIVPARM DRVSPACE DRVSPACE EDIT EGA
+                        EMM386 EXPAND FASTHELP FASTOPEN FC FDISK FIND FORMAT
+                        GRAPHICS HELP MOVE HIMEM INSTALL INTERLNK INTERSVR KEYB
+                        LABEL LOADFIX MEM MEMMAKER MORE MSCDEX MSD NLSFUNC
+                        POWER PRINT QBASIC RAMDRIVE REPLACE RESTORE SCANDISK
+                        SETVER SHARE SMARTDRV SORT SUBST SYS TREE UNDELETE
+                        UNFORMAT XCOPY
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
