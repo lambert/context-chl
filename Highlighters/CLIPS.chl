@@ -1,0 +1,169 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// CLIPS 6.0 highlighter written by Michal Sankot, sankotm@fel.cvut.cz, 2002
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               CLIPS
+Filter:                 CLIPS files (*.clp)|*.clp
+HelpFile:
+CaseSensitive:          0
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+
+IdentifierBegChars:     ? $ a..z A..Z + - * / < > =
+IdentifierChars:        a..z A..Z _ - 0..9 ? $
+
+NumConstBegChars:       0..9
+
+NumConstChars:          0..9
+
+EscapeChar:
+
+// definition statements
+KeyWords1:              defclass-module deffacts-module deffunction-module defgeneric-module defglobal-module
+                        definstances-module defrule-module deftemplate-module
+                        defclass deffacts deffunction defgeneric defmethod defglobal definstances defmessage-handler
+                        defmodule defrule deftemplate
+                        ppdefclass ppdeffacts ppdeffunction ppdefgeneric ppdefglobal ppdefinstances
+                        ppdefmessage-handler ppdefmethod ppdefmodule ppdefrule ppdeftemplate ppinstance
+                        undefclass undeffacts undeffunction undefgeneric undefglobal undefinstances
+                        undefmessage-handler undefmethod undefrule undeftemplate unmake-instance
+
+// mathematical symbols
+KeyWords2:              - != * ** / + < <= <> = > >= 
+
+
+// other keywords
+KeyWords3:		do default
+			abs acos acosh acot acoth acsc acsch and asec asech
+                        asin asinh atan atanh cos cosh cot coth csc csch deg-grad deg-rad div evenp eq
+                        exp false grad-deg log log10 max min mod neq oddp or pi rad-deg random round sec
+                        sech seed sin sinh sqrt tan tanh true
+
+			case if then else not switch
+	                active-duplicate-instance active-initialize-instance active-make-instance
+                        active-message-duplicate-instance active-message-modify-instance active-modify-instance
+                        agenda any-instancep apropos assert assert-string batch bind bload bload-instances break
+                        browse-classes bsave bsave-instances build call-next-handler call-next-method
+                        call-specific-method class class-abstractp class-existp class-reactivep class-slots
+                        class-subclasses class-superclasses clear clear-focus-stack close conserve-mem
+                        constructs-to-c create$ delayed-do-for-all-instances delete$ delete-instance dependencies
+                        dependents describe-class direct-mv-delete direct-mv-insert direct-mv-replace
+                        do-for-all-instances do-for-instance dribble-off dribble-on duplicate duplicate-instance
+                        duplicate-instance dynamic-get dynamic-put edit eval exit expand$ explode$ fact-index
+                        facts fetch find-all-instances find-instance first$ float floatp focus format gensym
+                        gensym* get get-auto-float-dividend get-current-module get-defclass-list get-deffacts-list
+                        get-deffunction-list get-defgeneric-list get-defglobal-list get-definstances-list
+                        get-defmessage-handler-list get-defmethod-list get-defmodule-list get-defrule-list
+                        get-deftemplate-list get-dynamic-constraint-checking get-fact-duplication get-focus
+                        get-focus-stack get-function-restrictions get-incremental-reset get-method-restrictions
+                        get-reset-globals get-salience-evaluation get-sequence-operator-recognition
+                        get-static-constraint-checking get-strategy halt help help-path implode$ init-slots
+                        initialize-instance initialize-instance insert$ instance-address instance-addressp
+                        instance-existp instance-name instance-name-to-symbol instance-namep instancep instances
+                        integer integerp length length$ lexemep list-defclasses list-deffacts list-deffunctions
+                        list-defgenerics list-defglobals list-definstances list-defmessage-handlers list-defmethods
+                        list-defmodules list-defrules list-deftemplates list-focus-stack list-watch-items load
+                        load-facts load-instances loop-for-count lowcase make-instance make-instance matches
+                        mem-requests mem-used member member$ message-duplicate-instance message-duplicate-instance
+                        message-handler-existp message-modify-instance message-modify-instance modify
+                        modify-instance modify-instance multifieldp mv-append mv-delete mv-replace mv-slot-delete
+                        mv-slot-insert mv-slot-replace mv-subseq next-handlerp next-methodp nth nth$ numberp
+                        object-pattern-match-delay open options override-next-handler override-next-method pointerp
+                        pop-focus preview-generic preview-send primitives-info print-region printout progn progn$
+                        put read readline refresh refresh-agenda release-mem remove remove-break rename replace$
+                        reset rest$ restore-instances retract return rule-complexity rules run save save-facts
+                        save-instances send sequencep set-auto-float-dividend set-break set-current-module
+                        set-dynamic-constraint-checking set-fact-duplication set-incremental-reset set-reset-globals
+                        set-salience-evaluation set-sequence-operator-recognition set-static-constraint-checking
+                        set-strategy setgen show-breaks show-defglobals show-fht show-fpn show-joins show-opn
+                        slot-allowed-values slot-cardinality slot-delete$ slot-direct-accessp slot-direct-delete$
+                        slot-direct-insert$ slot-direct-replace$ slot-existp slot-facets slot-initablep
+                        slot-insert$ slot-publicp slot-range slot-replace$ slot-sources slot-types slot-writablep
+                        str-assert str-cat str-compare str-explode str-implode str-index str-length stringp
+                        sub-string subclassp subset subsetp subseq$ superclassp switch sym-cat symbol-to-instance-name
+                        symbolp system time toss type type unwatch upcase watch while wordp
+			declare
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+
+Keyword1Col:            clPurple clWindow // defs
+Keyword2Col:            clBlue clWindow // math
+Keyword3Col:            clBlue clWindow B// others
+IdentifierCol:          clBlack clWindow
+//Keyword2Col:            clBlack clWindow // math
+//Keyword3Col:            clBlack clWindow // others
+//IdentifierCol:          clBlue clWindow
+
+//CommentCol:             clTeal clWindow I
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clRed clWindow
+SymbolCol:              clBlack clWindow
+
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+
+
+
