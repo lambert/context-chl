@@ -1,0 +1,514 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// CSS highlighter written by Kovács Endre János, kovacsendre@coder.hu
+// version 1.51, 2003.04.15
+//
+// Includes all of CSS1, CSS2 + various extensions
+// New CSS3 keywords are added as the draft evolves
+//
+// Version history
+// ---------------
+//  1.51 [April 2003]
+//   + Updated CSS3 support to match latest W3C draft
+//  1.5  [April 2003]
+//   + Several updates (including CSS3)
+//  1.41 [October 2002]
+//   + More non-standard keywords added
+//  1.4  [July 2002]
+//   + Added several additional Microsoft-specific keywords
+//  1.3  [October 2001]
+//   + Completed aural style sheets support
+//   + Various minor additions
+//  1.2  [September 2001]
+//   + Added frequently used font names
+//  1.1  [September 2001]
+//   * Cleaned up file a little
+//   + Added basic aural style sheets support
+//  1.0  [July 2001]
+//   * Initial release
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Cascading Style Sheets
+Filter:                 Cascading Style Sheets (*.css)|*.css
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+IdentifierBegChars:     a..z A..Z _%@
+IdentifierChars:        a..z A..Z -_ 0..9 ?
+
+NumConstBegChars:       0..9 #.
+NumConstChars:          0..9 ABCDEF.
+// NumConstChars:          0..9 abcdefABCDEF.
+//there is a problem here: a..f and A..F should ONLY be
+//accepted as numeric chars when they appear in a hexadecimal
+//number (here beginning with #), but there is no way to filter it.
+//This conflicts with the identifier "em" for example (take "12.4em")
+
+EscapeChar:
+
+KeyWords1:              background
+                        background-attachment background-color background-image
+                        background-position background-repeat
+
+                        border
+                        border-collapse border-color border-spacing border-style border-width
+
+                        border-bottom
+                        border-bottom-color border-bottom-style border-bottom-width
+                        border-left
+                        border-left-color border-left-style border-left-width
+                        border-right
+                        border-right-color border-right-style border-right-width
+                        border-top
+                        border-top-color border-top-style border-top-width
+
+                        caption-side
+                        clear
+                        clip
+                        color
+                        content
+                        counter-increment counter-reset
+                        direction
+                        display
+                        float
+                        font
+                        font-size-adjust
+                        height
+                        line-height
+                        list-style-type
+                        marker-offset marks
+                        margin margin-bottom margin-left margin-right margin-top
+                        orphans widows
+                        outline outline-color outline-style outline-width
+                        page
+                        page-break-after page-break-before page-break-inside
+                        quotes
+                        size
+                        text-align text-decoration text-indent
+                        text-shadow
+                        unicode-bidi
+                        width
+                        white-space
+                        min-height min-width
+                        max-height max-width
+
+                        cursor
+                        position filter
+                        text-transform
+                        word-spacing letter-spacing
+                        align vertical-align
+                        padding padding-bottom padding-left padding-right padding-top
+                        list-style list-style-image list-style-position
+                        cellpadding cellspacing
+
+                        overflow
+                        visibility
+                        z-index
+
+                        //microsoft
+                        scrollbar-base-color scrollbar-face-color scrollbar-highlight-color
+                        scrollbar-shadow-color scrollbar-3dlight-color scrollbar-arrow-color
+                        scrollbar-track-color scrollbar-darkshadow-color
+
+                        table-layout
+                        table-border-color-light table-border-color-dark //?
+                        empty-cells
+
+                        //aural style sheets
+                        speak speak-punctuation
+                        azimuth
+                        elevation
+                        cue cue-after cue-before
+                        pause pause-after pause-before
+                        play-during
+                        speech-rate
+                        voice-family
+                        pitch pitch-range
+                        stress
+                        richness
+                        volume
+                        speak-header speak-numeral
+
+                        //descriptors
+                        ascent bbox cap-height centerline definition-src descent
+                        font-family font-size font-stretch font-style font-variant font-weight
+                        mathline panose-1 slope src stemh stemv topline unicode-range
+                        units-per-em widths x-height
+
+                        //BECSS
+                        behavior
+
+                        //CSS3
+                        background-clip background-size background-quantity background-spacing background-origin
+
+                        border-top-right-radius border-bottom-right-radius border-bottom-left-radius border-top-left-radius border-radius
+                        border-top-image border-right-image border-bottom-image border-left-image border-image
+                        border-top-left-image border-top-right-image border-bottom-right-image border-bottom-left-image border-corner-image
+                        border-top-fit-length border-right-fit-length border-bottom-fit-length border-left-fit-length
+                        border-top-fit-width border-right-fit-width border-bottom-fit-width border-left-fit-width
+                        border-fit-length border-fit-width border-fit
+                        border-top-left-fit-length border-top-right-fit-length border-bottom-right-fit-length border-bottom-left-fit-length
+                        border-top-left-fit-width border-top-right-fit-width border-bottom-right-fit-width border-bottom-left-fit-width
+                        border-corner-fit-length border-corner-fit-width border-corner-fit
+                        border-image-transform border-break box-shadow
+
+                        box-sizing box-width box-height clear-after crop display-model display-role
+                        fit fit-position float-displace indent-edge-reset
+                        marquee marquee-direction marquee-repetition marquee-speed marquee-style
+                        overflow-clip overflow-x overflow-y
+
+                        opacity color-profile rendering-intent
+
+                        font-effect font-emphasize font-emphasize-position font-emphasize-style font-smooth
+
+                        line-stacking-strategy line-stacking-ruby line-stacking-shift line-stacking
+                        alignment-adjust alignment-baseline baseline-shift dominant-baseline inline-box-align
+                        drop-initial-size drop-initial-value drop-initial-after-adjust drop-initial-after-align
+                        drop-initial-before-adjust drop-initial-before-align
+
+                        column-count column-width column-min-width column-width-policy
+                        column-gap column-rule column-rule-color column-rule-style column-rule-width
+                        column-span
+                        column-space-distribution
+
+                        ruby-align ruby-overhang ruby-position ruby-span
+
+                        glyph-orientation-horizontal glyph-orientation-vertical writing-mode text-script
+                        min-font-size max-font-size text-align-last text-justify text-justify-trim text-kashida-space
+                        line-break word-break word-break-CJK word-break-inside
+                        all-space-treatment linefeed-treatment text-overflow text-overflow-ellipsis
+                        text-overflow-mode white-space-treatment wrap-option
+                        kerning-mode kerning-pair-threshold punctuation-trim text-autospace
+                        text-line-through text-line-through-color text-line-through-mode text-line-through-style
+                        text-overline text-overline-color text-overline-mode text-overline-style text-underline
+                        text-underline-color text-underline-mode text-underline-position text-underline-style text-blink
+                        line-grid line-grid-mode line-grid-progression
+                        hanging-punctuation text-combine
+
+                        appearance resizer key-equivalent nav-index nav-up nav-right nav-down nav-left
+
+KeyWords2:              px ex em
+                        pc pt in mm cm
+                        url rgb counter attr
+                        //CSS3
+                        deg grad rad
+                        ms s
+                        Hz kHz
+                        attr
+                        //overflow-clip
+                        rect inset-rect
+                        //color
+                        hsl hsla rgba
+                        //key-equivalent
+                        accesskey-attr
+                        //HTML tags could be inserted here...
+                        //As I often use custom tags and classes, I chose not to
+
+KeyWords3:              //general
+                        none normal default left right inherit auto important
+                        //color names
+                        transparent
+                        //X11 color keywords
+                        AliceBlue AntiqueWhite Aqua Aquamarine Azure Beige Bisque Black
+                        BlanchedAlmond Blue BlueViolet Brown BurlyWood CadetBlue Chartreuse
+                        Chocolate Coral CornflowerBlue Cornsilk Crimson Cyan DarkBlue
+                        DarkCyan DarkGoldenrod DarkGray DarkGreen DarkKhaki DarkMagenta
+                        DarkOliveGreen DarkOrange DarkOrchid DarkRed DarkSalmon DarkSeaGreen
+                        DarkSlateBlue DarkSlateGray DarkTurquoise DarkViolet DeepPink
+                        DeepSkyBlue DimGray DodgerBlue FireBrick FloralWhite ForestGreen
+                        Fuchsia Gainsboro GhostWhite Gold Goldenrod Gray Green GreenYellow
+                        Honeydew HotPink IndianRed Indigo Ivory Khaki Lavender LavenderBlush
+                        LawnGreen LemonChiffon LightBlue LightCoral LightCyan
+                        LightGoldenrodYellow LightGreen LightGrey LightPink LightSalmon
+                        LightSeaGreen LightSkyBlue LightSlateGray LightSteelBlue LightYellow
+                        Lime LimeGreen Linen Magenta Maroon MediumAquamarine MediumBlue
+                        MediumOrchid MediumPurple MediumSeaGreen MediumSlateBlue
+                        MediumSpringGreen MediumTurquoise MediumVioletRed MidnightBlue
+                        MintCream MistyRose Moccasin NavajoWhite Navy OldLace Olive OliveDrab
+                        Orange OrangeRed Orchid PaleGoldenrod PaleGreen PaleTurquoise
+                        PaleVioletRed PapayaWhip PeachPuff Peru Pink Plum PowderBlue Purple
+                        Red RosyBrown RoyalBlue SaddleBrown Salmon SandyBrown SeaGreen
+                        Seashell Sienna Silver SkyBlue SlateBlue SlateGray Snow SpringGreen
+                        SteelBlue Tan Teal Thistle Tomato Turquoise Violet Wheat White
+                        WhiteSmoke Yellow YellowGreen
+                        //system colors
+                        ActiveBorder ActiveCaption AppWorkspace
+                        ButtonFace ButtonHighlight ButtonShadow ButtonText
+                        CaptionText GrayText Highlight HighlightText
+                        InactiveBorder InactiveCaption InactiveCaptionText
+                        InfoBackground InfoText Menu MenuText Scrollbar
+                        ThreeDDarkShadow ThreeDFace ThreeDHighlight
+                        ThreeDLightShadow ThreeDShadow
+                        Window WindowFrame WindowText
+                        //cursors
+                        crosshair pointer move
+                        e-resize ne-resize nw-resize n-resize
+                        se-resize sw-resize s-resize w-resize
+                        text wait help hand no-drop not-allowed progress
+                        //direction
+                        ltr rtl
+
+                        //background-attachment
+                        fixed scroll
+                        //background-repeat
+                        repeat repeat-x repeat-y no-repeat
+
+                        //border-collapse
+                        collapse separate
+                        //border-style
+                        solid dashed dotted double groove inset outset ridge
+                        //border-width
+                        thin medium thick
+
+                        //clear
+                        both
+                        //content
+                        open-quote close-quote no-open-quote no-close-quote
+                        //display
+                        inline block list-item run-in compact marker table inline-table
+                        table-row-group table-header-group table-footer-group table-row
+                        table-column-group table-column table-cell table-caption
+                        oeb-page-head oeb-page-foot //e-book specific
+                        //font-family
+                        serif sans-serif cursive fantasy monospace mono
+                        caption icon menu message-box small-caption status-bar
+                        //font-size
+                        xx-small x-small small large x-large xx-large smaller larger
+                        //font-style
+                        italic oblique regular
+                        //font-weight
+                        bold light bolder lighter
+                        //font-stretch
+                        wider narrower ultra-condensed extra-condensed condensed
+                        semi-condensed semi-expanded expanded extra-expanded ultra-expanded
+                        //list-style-type
+                        disc circle square decimal decimal-leading-zero lower-roman upper-roman
+                        lower-greek lower-latin upper-latin lower-alpha upper-alpha
+                        hebrew armenian georgian cjk-ideographic hiragana katakana
+                        hiragana-iroha katakana-iroha
+                        //page-break-...
+                        always auto avoid
+                        //text-align, text-align-last
+                        center justify
+                        //text-decoration
+                        underline overline line-through blink
+                        //unicode-bidi
+                        bidi-override
+                        //white-space
+                        pre nowrap
+
+                        //position
+                        absolute relative
+                        //size
+                        portrait landscape
+                        //font-variant
+                        small-caps
+                        //text-transform
+                        capitalize uppercase lowercase
+                        //vertical-align
+                        top bottom baseline sub super middle text-top text-bottom central
+                        //list-style-position
+                        inside outside
+                        //visibility
+                        visible hidden
+                        //empty-cells
+                        show hide
+
+                        //AURAL STYLE SHEETS
+                        //speak
+                        spell-out
+                        //speak-punctuation
+                        code
+                        //speak-numeral
+                        digits continuous
+                        //azimuth
+                        left-side far-left center-left center-right far-right right-side
+                        leftwards rightwards behind
+                        //elevation
+                        below level above higher lower
+                        //speech-rate
+                        x-slow slow fast x-fast slower faster
+                        //volume
+                        silent x-soft soft loud x-loud
+                        //voice-family
+                        male female child
+                        //pitch
+                        x-low low high x-high
+                        //play-during
+                        mix
+
+                        //Frequently used font names. I don't believe these should be
+                        //included -- it makes the highlighting inconsistent, but people
+                        //want it, so people get it
+                        Tahoma Verdana Arial Helvetica Geneva Swiss SunSans-Regular
+                        Times Roman New Courier MSIcons Jester Kids Garamond Casablanca
+
+                        //CSS3
+                  //Border
+                        continue
+                        scale stretch overwrite space
+                        rotate reflect-xy reflect-right reflect-left
+                  //Box
+                        //box-sizing
+                        content-box border-box
+                        //clear
+                        start end after
+                        //display
+                        inline-block ruby-base-container ruby-text-container
+                        //display-model
+                        inline-inside block-inside ruby
+                        //display-role
+                        ruby-text ruby-base ruby-base-group ruby-text-group
+                        //fit
+                        fill meet slice
+                        //float-displace
+                        line indent block-within-page
+                        //indent-edge-reset
+                        margin-edge border-edge padding-edge content-edge
+                        //marquee
+                        forwards backwards ahead reverse up down
+                        infinite
+                        slide alternate
+                  //Color
+                        //colors
+                        ActiveHyperlink ActiveHyperlinkText HoverHyperlink HoverHyperlinkText
+                        Hyperlink HyperlinkText VisitedHyperlink VisitedHyperlinkText
+                        flavor
+                        currentColor
+                        //additional SVG 1.0 color names
+                        darkgrey darkslategrey dimgrey lightgray lightslategrey slategrey
+                        //color-profile
+                        sRGB
+                        //rendering-intent
+                        perceptual relative-colorimetric saturation absolute-colorimetric
+                  //Font
+                        initial
+                        //font-effect
+                        engrave emboss
+                        //font-smoothing
+                        never
+                        //font-emphasize
+                        accent dot before
+                  //Line
+                        //vertical-align
+                        use-script
+                        //line-stacking-strategy
+                        inline-line-height block-line-height grid-height
+                        //line-stacking-ruby
+                        exclude-ruby include-ruby
+                        //line-stacking-shift
+                        consider-shifts disregard-shifts
+                        //text-height
+                        text-size max-size
+                        //alignment-adjust
+                        text-before-edge central text-after-edge ideographic alphabetic hanging mathematical
+                        //dominant-baseline
+                        no-change reset-size
+                        //drop-initial-before-align
+                        caps-height
+                  //List
+                        box check diamond hyphen
+
+                        ethiopic-numeric japanese-formal japanese-informal lower-armenian simp-chinese-formal
+                        simp-chinese-informal syriac tamil trad-chinese-formal trad-chinese-informal upper-armenian
+
+                        arabic-indic binary bengali cambodian devanagari gujarati gurmukhi kannada khmer lao
+                        lower-hexadecimal malayalam mongolian myanmar octal oriya persian telugu tibetan thai upper-hexadecimal urdu
+
+                        afar amharic amharic-abegede cjk-earthly-branch cjk-heavenly-stem ethiopic ethiopic-abegede
+                        ethiopic-abegede-am-et ethiopic-abegede-gez ethiopic-abegede-ti-er ethiopic-abegede-ti-et
+                        ethiopic-halehame-aa-er ethiopic-halehame-aa-et ethiopic-halehame-am-et ethiopic-halehame-gez
+                        ethiopic-halehame-om-et ethiopic-halehame-sid-et ethiopic-halehame-so-et ethiopic-halehame-ti-er
+                        ethiopic-halehame-ti-et ethiopic-halehame-tig hangul hangul-consonant lower-norwegian oromo
+                        sidama somali tigre tigrinya-er tigrinya-er-abegede tigrinya-et tigrinya-et-abegede upper-greek
+                        upper-norwegian
+
+                        asterisks footnotes
+
+                        circled-decimal circled-lower-latin circled-upper-latin dotted-decimal double-circled-decimal
+                        filled-circled-decimal parenthesised-decimal parenthesised-lower-latin
+                  //Columns
+                        flexible strict
+                        inner outer between
+                        all
+                  //Ruby
+                        distribute-letter distribute-space line-edge
+                  //Text
+                        //writing-mode
+                        lr-tb rl-tb tb-rl tb-lr bt-rl bt-lr lr rl tb
+                        //text-justify
+                        inter-word inter-ideograph distribute newspaper inter-cluster kashida
+                        //text-justify-trim
+                        punctuation punctuation-and-kana
+                        //word-break-CJK
+                        break-all keep-all
+                        //word-break-inside
+                        hyphenate
+                        //space treatment
+                        preserve treat-as-space treat-as-zero-width-space ignore-if-after-linefeed
+                        ignore-if-before-linefeed ignore-if-surrounding-linefeed
+                        //white-space
+                        pre-wrap pre-lines
+                        //text-overflow-mode
+                        ellipsis ellipsis-word
+                        //wrap-option
+                        wrap hard-wrap soft-wrap emergency
+                        //kerning-mode
+                        pair contextual
+                        //text-autospace
+                        ideograph-numeric ideograph-alpha ideograph-space ideograph-parenthesis
+                        //overline, underline, line-through mode and style
+                        words skip-white-space slip-glyph skip-glyph-and-white-space
+                        dot-dash dot-dot-dash wave
+                        //text-underline-position
+                        auto-pos before-edge after-baseline after-edge
+                        //line-grid-mode and progression
+                        ideograph text-height
+                        //text-combine
+                        letters lines
+                  //UI
+                        //appearance
+                        document workspace desktop tooltip dialog button default-button 
+                        pull-down-menu pop-up-menu list-menu field
+                        //resizer
+                        horizontal vertical
+                        //cursor
+                        copy alias context-menu cell all-scroll col-resize row-resize vertical-text
+                        //key-equivalent
+                        list-item-marker
+                        accesskey fn fcn caps cmd rcmd lcmd opt ropt lopt ctrl rctrl lctrl 
+                        shift rshift lshift alt ralt lalt win rwin lwin meta rmeta lmeta
+                        f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15
+                        tab esc enter return namemenu rcl snd
+                        home pgup pgdn 
+                        bs del ins undo cut copy paste clr sto
+                        prtsc sysrq scrlock brk numlock pwr
+                        system-new system-open system-close system-save system-print
+                        system-quit system-terminate-operation system-undo system-redo
+                        system-cut system-copy system-paste system-clear system-duplicate
+                        system-select-all system-find system-find-again
+                        system-ok system-cancel system-apply
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clPurple clWindow I
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
