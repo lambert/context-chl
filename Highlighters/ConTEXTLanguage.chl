@@ -1,0 +1,31 @@
+Language:               ConTEXT Language Files
+Filter:                 ConTEXT Language Files (*.lng)|*.lng
+LineComment:            ;
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefhABCDEFH
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+
+HelpFile:
+CurrLineHighlighted:    0
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clWindowText clWindow
+Keyword2Col:            clWindowText clWindow
+Keyword3Col:            clWindowText clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $00909090 clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clWindowText clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
