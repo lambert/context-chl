@@ -1,0 +1,141 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// AviSynth highlighter written by *LigH*
+//
+// based on the AviSynth syntax file for TextPad by James D. Lin (stickboy)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               AviSynth
+Description:            AviSynth highlighter written by *LigH*
+Filter:                 AviSynth (*.avs;*.avsi)|*.avs;*.avsi
+HelpFile:
+CaseSensitive:          0
+LineComment:            #
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 #abcdefABCDEF
+EscapeChar:
+
+// Keywords
+KeyWords1:              bool clip float val function global int true false
+                        return try catch last
+
+// Internal functions
+KeyWords2:              Floor Ceil Round Int Float Frac Abs Sign HexValue
+                        Sin Cos Pi Log Exp Pow Sqrt Rand Spline UCase LCase
+                        RevStr StrLen FindStr LeftStr RightStr MidStr
+                        VersionNumber VersionString Chr Time Value String
+                        IsBool IsInt IsFloat IsString IsClip
+                        Select Defined Default Exist Eval Apply Import Assert
+                        NOP SetMemoryMax SetWorkingDir
+                        LoadPlugin LoadVirtualDubPlugin LoadVFAPIPlugin
+
+// Clip properties
+KeyWords3:              Width Height FrameCount FrameRate FrameRateNumerator
+                        FrameRateDenominator Audiorate AudioLength AudioLengthF
+                        AudioChannels AudioBits IsAudioFloat IsAudioInt IsRGB
+                        IsRGB24 IsRGB32 IsYUY2 IsYV12 IsYUV IsPlanar
+                        IsInterleaved IsFieldBased IsFrameBased GetParity
+
+// Filters
+KeyWords4:              AVISource SegmentedAVISource AVIFileSource OpenDMLSource
+                        WAVSource DirectShowSource SegmentedDirectShowSource
+                        BlankClip Blackness ImageReader ImageSource Import
+                        TCPDeliver TCPSource
+                        AddBorders Blur Sharpen ColorYUV ConvertToRGB
+                        ConvertToYUY2 ConvertToYV12 ConvertBackToYUY2
+                        ConvertToRGB32 ConvertToRGB24 Crop CropBottom
+                        GeneralConvolution Greyscale Invert Layer Mask ResetMask
+                        ColorKeyMask Letterbox Levels Limiter Overlay
+                        MergeChroma MergeLuma ReduceBy2 HorizontalReduceBy2
+                        VerticalReduceBy2 BilinearResize BicubicResize
+                        LanczosResize Lanczos4Resize PointResize RGBAdjust
+                        ShowAlpha SpatialSoften TemporalSoften SwapUV UToY
+                        VToY YToUV Tweak
+                        AlignedSplice UnalignedSplice AssumeFPS ChangeFPS
+                        ConvertFPS DeleteFrame Dissolve DuplicateFrame FadeIn
+                        FadeOut FadeIn2 FadeOut2 FadeIO FadeIO2 FreezeFrame
+                        Loop SelectEven SelectOdd SelectEvery SelectRangeEvery
+                        Trim
+                        AssumeFrameBased AssumeFieldBased AssumeTFF AssumeBFF
+                        Bob ComplementParity DoubleWeave Interleave Pulldown
+                        SeparateFields SwapFields Weave
+                        Amplify AmplifyDB AssumeSampleRate AudioDub
+                        ConvertToMono ConvertAudioTo8bit ConvertAudioTo16bit
+                        ConvertAudioTo24bit ConvertAudioTo32bit
+                        ConvertAudioToFloat DelayAudio EnsureVBRMP3Sync
+                        GetChannel KillAudio MergeChannels MixAudio Normalize
+                        ResampleAudio SSRC SuperEQ TimeStretch Tone
+                        Animate ApplyRange ConditionalFilter ScriptClip
+                        ConditionalReader FixBrokenChromaUpsampling
+                        FixLuminance FlipHorizontal FlipVertical ImageWriter
+                        PeculiarBlend Reverse Subtitle TurnLeft TurnRight
+                        Turn180 WriteFile WriteFileIf WriteFileStart
+                        WriteFileEnd
+                        ColorBars Compare Histogram Info MessageClip
+                        ShowFiveVersions ShowFrameNumber ShowSMPTE
+                        StackHorizontal StackVertical Subtract Version
+
+// Plugin functions
+KeyWords5:              Telecide FieldDeinterlace Decimate IsCombed DGBob
+                        FDecimate KernelDeint MultiDecimate IBob SmartDecimate
+                        GreedyHMA TomsMoComp UnComb aDeInt
+                        PeachSmoother FluxSmoothT FluxSmoothST NoMoSmooth
+                        MipSmooth STMedianFilter Convolution3D
+                        MSmooth SSHiQ SmoothUV VagueDenoiser Deen
+                        TemporalCleaner RemoveDirt GrapeSmoother CNR2
+                        MSharpen Asharp aWarpSharp UnFilter WarpSharp XSharpen
+                        FastBilinearResize FastBicubicResize BicublinResize
+                        VobSub TextSub SSIM VqmCalc
+                        TemporalSmoother SelectRangeEvery BlendFields MotionMask
+                        MaskedDeinterlace SmartDeinterlace MaskedMix MPEG2Source
+                        LumaFilter YV12toRGB24 YV12toYUY2 BlindPP
+                        MPEGSource MPASource AC3Source RawSource
+                        AutoCrop DeSpot DeScratch GuavaComb BorderControl
+                        FillMargins ReInterpolate411
+                        Dup DePanEstimate DePan DePanInterleave DePanStabilize
+                        MonitorFilter
+                        Binarize CombMask DEdgeMask EdgeMask FitY2U FitY2V
+                        FitY2UV FitU2Y FitV2Y FitU2V FitV2U Inpand Expand
+                        Deflate Inflate HysteresyMask Invert Logic RGBLUT
+                        YV12LUT YV12LUTxy MaskedMerge MotionMask YV12Convolution
+                        YV12Subtract
+                        MVAnalyse MVBlur MVCompensate MVConvertFPS MVDenoise
+                        MVInterpolate MVMask MVShow
+                        VideoScope AudioGraph Blockbuster ReverseFieldDominance
+                        ChromaShift AddGrain DctFilter DctFilterD UnDot DVInfo
+
+
+//                      I assume Underline and Strike-out are mutually exclusive
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       1
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clNavy clWindow
+Keyword4Col:            clNavy clWindow
+Keyword5Col:            clNavy clWindow
+IdentifierCol:          clGreen clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clPurple clWindow
+SymbolCol:              clOlive clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clWhite
+
+OverrideTxtFgColor:     0
+
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clMaroon clWindow
