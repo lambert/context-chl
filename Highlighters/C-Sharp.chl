@@ -1,0 +1,52 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// CSharp (C#) highlighter written by Marco Amrein, mamrein@iiic.ethz.ch
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               CSharp
+Filter:                 CSharp files (*.cs)|*.cs
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             \
+
+KeyWords1:              as new break switch finally case fixed throw
+                        catch for try checked foreach typeof goto lock
+                        if continue unchecked in unsafe ref out params
+                        default return using do is else sizeof while
+
+KeyWords2:              abstract enum long event namespace static implicit
+                        readonly decimal delegate interface sbyte internal
+                        sealed virtual double short void stackalloc explicit
+                        string bool extern struct null false base object byte
+                        operator this int float override true char private
+                        class ushort protected uint const public ulong
+
+KeyWords3:
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
