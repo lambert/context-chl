@@ -1,0 +1,119 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Blitz Basic Context Syntax Highlighter by Eikon (eikon@carolina.rr.com)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language: Blitz Basic
+Description: Blitz Basic Context Syntax Highlighter by Eikon (eikon@carolina.rr.com)
+Filter: Blitz Basic Files (*.bb)|*.bb
+HelpFile:
+CaseSensitive: 0
+LineComment: ;
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars: a..z A..Z _%@.
+IdentifierChars: a..z A..Z _ 0..9 ?
+NumConstBegChars: 0..9
+NumConstChars: 0..9 abcdefhABCDEFH
+EscapeChar:
+KeyWords1: Abs After And Before Case Const Data Default Delete Dim
+           Each Else ElseIf End End Function End Select End Type EndIf Exit False
+           Field First Float For Forever Function Global Gosub Goto If Include
+           Insert Int Last Local Mod New Next Not Null Or Pi Read  Repeat Restore
+           Return Sar Select Sgn Shl Shr Step Str Then To True Type Until Wend
+           While Xor
+
+KeyWords2: Sin DebugLog FreeTimer WaitTimer CreateTimer SetEnv GetEnv SystemProperty
+           CommandLine MilliSecs Delay ExecFile RuntimeError AppTitle Stop End
+           RuntimeStats NetMsgData NetMsgTo NetMsgFrom NetMsgType RecvNetMsg
+           SendNetMsg NetPlayerLocal NetPlayerName DeleteNetPlayer CreateNetPlayer
+           StopNetGame JoinNetGame HostNetGame StartNetGame ChannelPlaying
+           ChannelPan ChannelVolume ChannelPitch ResumeChannel PauseChannel
+           StopChannel PlayCDTrack PlayMusic PlaySound SoundPan SoundVolume
+           SoundPitch LoopSound FreeSound LoadSound DirectInputEnabled
+           EnableDirectInput FlushJoy JoyVDir JoyUDir JoyZDir JoyYDir JoyXDir
+           JoyHat JoyRoll JoyYaw JoyPitch JoyV JoyU JoyZ JoyY JoyX JoyWait WaitJoy
+           GetJoy JoyHit JoyDown JoyType MoveMouse FlushMouse MouseZSpeed
+           MouseYSpeed MouseXSpeed MouseZ MouseY MouseX MouseWait WaitMouse
+           GetMouse MouseHit MouseDown FlushKeys WaitKey GetKey KeyHit KeyDown
+           HidePointer ShowPointer Locate Input Print Write ImageRectCollide
+           ImageRectOverlap RectsOverlap ImagesCollide ImagesOverlap TFormFilter
+           TFormImage RotateImage ResizeImage ScaleImage ImageYHandle ImageXHandle
+           ImageHeight ImageWidth AutoMidHandle MidHandle HandleImage MaskImage
+           DrawBlockRect DrawImageRect TileBlock TileImage DrawBlock DrawImage
+           ImageBuffer GrabImage SaveImage FreeImage LoadAnimImage CreateImage
+           CopyImage LoadImage CloseMovie MoviePlaying MovieHeight MovieWidth
+           DrawMovie OpenMovie StringHeight StringWidth FontHeight FontWidth
+           FreeFont LoadFont CopyRect Text Line Oval Rect Plot Cls SetFont ClsColor
+           ColorBlue ColorGreen ColorRed GetColor Color Viewport Origin
+           CopyPixelFast CopyPixel WritePixelFast ReadPixelFast WritePixel
+           ReadPixel UnlockBuffer LockBuffer SaveBuffer LoadBuffer GraphicsBuffer
+           SetBuffer GraphicsDepth GraphicsHeight GraphicsWidth Flip VWait ScanLine
+           BackBuffer FrontBuffer GammaBlue GammaGreen GammaRed UpdateGamma
+           SetGamma EndGraphics Graphics TotalVidMem AvailVidMem GfxModeDepth
+           GfxModeHeight GfxModeWidth GfxModeExists CountGfxModes SetGfxDriver
+           GfxDriverName CountGfxDrivers CallDLL WriteBytes ReadBytes PokeFloat
+           PokeInt PokeShort PokeByte PeekFloat PeekInt PeekShort PeekByte CopyBank
+           ResizeBank BankSize FreeBank CreateBank DeleteFile CopyFile FileType
+           FileSize DeleteDir CreateDir ChangeDir CurrentDir NextFile CloseDir
+           ReadDir SeekFile FilePos CloseFile WriteFile ReadFile OpenFile
+           TCPTimeouts TCPStreamPort TCPStreamIP AcceptTCPStream CloseTCPServer
+           CreateTCPServer CloseTCPStream OpenTCPStream UDPTimeouts UDPMsgPort
+           UDPMsgIP UDPStreamPort UDPStreamIP RecvUDPMsg SendUDPMsg CloseUDPStream
+           CreateUDPStream HostIP CountHostIPs DottedIP CopyStream WriteLine
+           WriteString WriteFloat WriteInt WriteShort WriteByte ReadLine ReadString
+           ReadFloat ReadInt ReadShort ReadByte ReadAvail Eof CurrentTime
+           CurrentDate Bin Hex Len Asc Chr RSet LSet Trim Lower Upper Mid Instr
+           Replace Right Left String RndSeed SeedRnd Rand Rnd Log10 Log Exp Ceil
+           Floor Sqr ATan2 ATan ACos ASin Tan Cos
+
+StringBegChar: "
+StringEndChar: "
+MultilineStrings: 0
+UsePreprocessor: 0
+CurrLineHighlighted: 0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note: first value is foreground, second is background color
+// and third (optional) represents font attribute:
+// B - bold
+// I - italic
+// U - underline
+// S - strike out
+// attributes can be combined: eg. B or BI
+// as value, it could be used any standard windows color:
+// clBlack, clMaroon, clGreen, clOlive, clNavy,
+// clPurple, clTeal, clGray, clSilver, clRed, clLime,
+// clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+// clDkGray, clWhite, clScrollBar, clBackground,
+// clActiveCaption, clInactiveCaption, clMenu, clWindow,
+// clWindowFrame, clMenuText, clWindowText, clCaptionText,
+// clActiveBorder, clInactiveBorder, clAppWorkSpace,
+// clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+// clGrayText, clBtnText, clInactiveCaptionText,
+// clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+// clInfoBk
+// as value, it could be used hex numeric constant too:
+// $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol: clWindowText $00606020
+Keyword1Col: $005FE7FF $00606020
+Keyword2Col: $005FE7FF $00606020
+Keyword3Col: clBlue clWindow
+IdentifierCol: clWhite $00606020
+CommentCol: clAqua $00606020
+NumberCol: $00FFF0C8 $00606020
+StringCol: clLime $00606020
+SymbolCol: $00C8F0FF $00606020
+PreprocessorCol: clBlue clWindow
+SelectionCol: clWhite clNavy
+CurrentLineCol: clBlack clYellow
+
+OverrideTxtFgColor: 0
+BlockAutoindent: 0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol: clWindowText clWindow
