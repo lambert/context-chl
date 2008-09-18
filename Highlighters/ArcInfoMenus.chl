@@ -1,0 +1,56 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// ARC/INFO Menu highlighter
+//
+// Michael Corsello,
+// Nth Dimension Systems, LLC.
+// Mike_Corsello@hotmail.com
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               ESRI ARC/INFO Menus
+Filter:                 Menu files (*.men,*.menu)|*.men;*.menu
+HelpFile:
+CaseSensitive:          0
+LineComment:            /*
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z . &
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 .
+EscapeChar:
+
+KeyWords1:              &BEGIN_MENU &BEGIN_BLOCK &MENUITEM &REF &END_BLOCK &SEPARATOR &END_MENU &ENABLE
+                        &MENU &PAUSE &RETURN &RUN &RUNWATCH &STOP &THREAD &TTY &R &RE &S &SV &SETVAR
+
+KeyWords2:              BUTTON CHECKBOX CHOICE DISPLAY FORMINIT FORMOPT INPUT SLIDER MENU DISMISS HELP KEEP
+                        NEXT VALUE RETURN CHARACTER INTEGER TYPEIN YES SCROLL NO SETVARIABLES IMMEDIATE 
+                        MESSAGEVARIABLE ICON ROWS CANCEL SIZE REAL SORT
+
+KeyWords3:              % ! *! !* | ^ ; ~
+
+StringBegChar:          ' "
+StringEndChar:          ' "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clMaroon clWindow B
+Keyword3Col:            $00C000C0 clWindow B
+IdentifierCol:          clBlack clWindow
+CommentCol:             $00C0C000 clWindow
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clOlive clWindow B
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            0
+BlockEndStr:            4
+MatchedBracesCol:       $008080FF clWindow B
