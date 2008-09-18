@@ -1,0 +1,110 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// CyPro highlighter written by Eden Kirin, eden.kirin@inet.hr
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               CyPro project
+Filter:                 CyPro project files (*.cyp)|*.cyp
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefhABCDEFH #.
+EscapeChar:
+
+// keywords
+
+KeyWords1:              CASE DO ELSE ELSIF END_CASE END_FOR END_IF END_WHILE
+                        FOR IF OF THEN TO WHILE
+                        VAR VAR_END RETAIN CONSTANT ARRAY AT
+                        FUNCTION BEGIN END LANGUAGE
+
+// internal functions
+
+KeyWords2:              DCLR DPRNB DPRNC DPRNI DPRNL DPRNR DPRNS FP FN
+                        HSC_START HSC_STOP HSC_ACTIVE HSC_READ HSC_WRITE
+                        HSC_SET_ACTION HSC_CHECK_ACTION HSC_RESET_ACTION
+                        HSC_ENABLE_ZERO HSC_DISABLE_ZERO HSC_CHECK_ZERO
+                        HSC_DETECT_ZERO HSC_READ_ZERO COM_INIT TX_START TX_STOP
+                        TX_COUNT TX_ACTIVE RX_START RX_STOP RX_COUNT RX_ACTIVE
+                        RX_STATUS RX_STRCMP RX_STRPOS RX_STRTOI RX_STRTOL
+                        RX_STRTOR RX_BUFRD RTC_READ_YEAR RTC_READ_MONTH
+                        RTC_READ_DATE RTC_READ_WEEKDAY RTC_READ_HOUR
+                        RTC_READ_MIN RTC_READ_SEC RTC_WRITE_YEAR
+                        RTC_WRITE_MONTH RTC_WRITE_DATE RTC_WRITE_WEEKDAY
+                        RTC_WRITE_HOUR RTC_WRITE_MIN RTC_WRITE_SEC
+
+
+KeyWords3:              BOOL INT LONG REAL WORD TIMER COUNTER VOID
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText $00F0FFFF
+Keyword1Col:            clBlue $00F0FFFF
+Keyword2Col:            clPurple $00F0FFFF
+Keyword3Col:            clNavy $00F0FFFF
+IdentifierCol:          clWindowText $00F0FFFF
+CommentCol:             clGray $00F0FFFF
+NumberCol:              clRed $00F0FFFF
+StringCol:              clMaroon $00F0FFFF
+SymbolCol:              clGray $00F0FFFF
+PreprocessorCol:        clTeal $00F0FFFF
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
