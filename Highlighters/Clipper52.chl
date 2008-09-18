@@ -1,0 +1,183 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Clipper 5.2  highlighter written by Guido Lampo - guidolampo@libero.it
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Clipper 5.2
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+
+Filter:                 Clipper 5.2 files (*.prg,*.ch)|*.prg;*.ch
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+
+NumConstBegChars:       0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// direttive del compilatore ed istruzioni
+KeyWords1:              command traslate xcommand xtranslate
+                        define error ifdef inndef include stdout
+                        undef announce begin sequence field function
+                        init procedure local memvar parameters
+                        private procedure public request return
+                        static do while enddo if else elseif endif
+                        for next exit
+                        case endcase other nil .or .and .not .f .t
+
+// comandi clipper
+KeyWords2:              ? ?? @ box clear prompt say get color when
+                        valid range pict to accept append blank
+                        append from average quit gets memory typeahead
+                        close commit continue copy file copy structure
+                        copy structure extended copy to count create
+                        create do from default to delete erase tag display()
+                        eject go goto index on all record rest
+                        eval every unique ascending descending input
+                        join keyboard label form list locate menu pack
+                        quit read recall reindex release rename replace
+                        report from restore run save seek select set
+                        alternate bell century coclor confirm console
+                        cursor date decimals deleted delimiters device
+                        epoch escape exact filter fixed intensity key
+                        margin message order path printer relation
+                        scoreboard softseek wrap with
+                        skip sort sum total type unlock update use new
+                        wait zap
+
+//funzioni di clipper
+KeyWords3:              aadd abs achoice aclone acopy adel aeval afill
+                        ains alert alias alltrim altd array ascan asize
+                        asort at atail bin2i bin2l bin2w bof break browse
+                        cdowchr cmonth col colorselect ctod curdir chr date
+                        day dbappend dbclearfilter dbclearindex
+                        dbclearrelation dbclearall dbclosearea dbcloseall
+                        dbcommit
+                        dbcommitall dbcreate dbcreateindex dbdelete
+                        dbedit dbeval dbf dbfilter dbgobottom dbgoto
+                        dbgotop dbrecall dbreindex dbrelation dbrlock
+                        dbrlocklist dbrselect dbrunlock dbseek
+                        dbselectarea dbsetfilter dbsetindex dbsetorder
+                        dbsetrelation dbskip dbstruct dbunlock dbunlockall
+                        dbusearea deleted descend devout devpos directory
+                        dispbegin dispbox dispcount dispend dispspace
+                        dispout doserror dow dtoc dtos empty eof
+                        errorblock errorinhandler errorlevel eval exp
+                        fclose fcount fcreate ferase ferror field
+                        fieldname fieldblock fieldget fieldpos fieldput
+                        fieldwblock file flock fopen found fread freadstr
+                        frename fseek fwrite getactive getenv hardcr
+                        header i2bin iif indexext indexkey indexord inkey
+                        int isalpha iscolor isdigit islower isprinter
+                        isupper l2bin lastkey lastrec left len log lower
+                        ltrim lupdate max maxcol maxrow memoedit memoline
+                        memoread memory memotran memowrit memvarblock
+                        min mlctopos mlcount mlpos mod month mpostolc
+                        neterr netname nextkey nosnow ordbagext ordbagname
+                        ordcreate orddestroy ordfor ordkey ordlistadd
+                        ordlistclear ordlistrebuild ordname ordnumber
+                        ordsetfocus os outerr outstd padc padl padr pcol
+                        pcount proclineprocname prow qout qqout rat rddlist
+                        rddname rddsetdefault readexit readinsert
+                        readmodal readvar reccount recno recsize replicate
+                        restscreen right rlock lock round row rtrim
+                        savesreen scroll seconds select setblink setcancel
+                        setcolor setcursor setkey setmode setpos setprc
+                        soundex space sqrt str strtran stuff substr time
+                        tone transform trim updated upper used val valtype
+                        version
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       ;
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+
+SpaceCol:               $00D0D0D0 clNavy
+Keyword1Col:            $00C0FFC0 clNavy
+Keyword2Col:            $00C0C000 clNavy
+Keyword3Col:            clYellow clNavy
+IdentifierCol:          $00D0D0D0 clNavy
+CommentCol:             $00598FFF clNavy
+NumberCol:              $004040FF clNavy
+StringCol:              $00C0C0FF clNavy
+SymbolCol:              clWhite clNavy
+PreprocessorCol:        $00FF40FF clNavy
+SelectionCol:           clBlack clWhite
+CurrentLineCol:         $00D0D0D0 $00C00000
+
+OverrideTxtFgColor:     0
