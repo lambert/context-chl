@@ -1,0 +1,1345 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// CoCreate OneSpace Designer Modeling highlighter
+//     written by Wolfgang Traetner
+//     adapted to version 13.00, Oct 2004, Wolfgang Traetner
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// remark:
+//   The lists of keyword3+4+5 are very long. These are (may be) all words
+//    of CoCreate OSDM's integration kit documentation
+//
+//  If your machine is slow or your files are quite long you should think
+//   about to remove all the words listed in that section.
+//
+//  changes: Keywords1 == standard LISP
+//           Keywords2 == all lisp - :keywords of integration kit
+//           OSD changes:
+//           Keywords3 == some action routines and other stuff used
+//                          quite often via sd-call-cmds
+//           Keywords4 == contents of function_index.html
+//           Keywords5 == contents of anno_function_index.html
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               CoCreate OneSpace Designer LISP (including Common LISP)
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 OneSpace Designer Lisp files (*.lsp, *.rec, *.env *_customize, *.el)|*.lsp; *.rec; *.env; *_customize; *.el
+
+// also Emacs Lisp files (*.el) are included.
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+//  to be adjusted to :
+// HelpFile: <osddir>\help\common\integration_kit\reference\function_index.html
+
+// HelpFile:               ??\help\common\integration_kit\reference\function_index.html
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            ;
+BlockCommentBeg:        #|
+BlockCommentEnd:        |#
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _:%@?&$#
+IdentifierChars:        a..z A..Z _ 0..9 ?&%$#@:-=<>
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 .
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:             \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// common lisp
+
+KeyWords1:              - * *error* / /= ~ + < <= = => > 1- 1+ abs acad_colordlg
+                        acad_strlsort alert and angle angtof angtos append apply
+                        ascii assoc atan atof atoi atom atoms-family autoload
+                        boole boundp caaaar caaadr caaar caadar caaddr caadr
+                        caar cadaar cadadr cadar caddar cadddr caddr cadr car
+                        cdaaar cdaadr cdaar cdadar cdaddr cdadr cdar cddaar
+                        cddadr cddar cdddar cddddr cdddr cddr cdr chr close
+                        command cond cons cos cvport cvunit defun distance
+                        distof entdel entget entlast entmake entmod entnext
+                        entsel entupd eq equal eval exit exp expt findfile
+                        fix float foreach funcall gcd getangle getcorner getdist
+                        getenv getfiled getint getkword getorient getpoint
+                        getreal getstring getvar graphscr grdraw grread grtext
+                        grvecs handent help if initget inters itoa lambda last
+                        length list listp log logand logior lsh mapcar
+                        max mem member menucmd min minusp nentsel nentselp
+                        not nth null numberp open or osnap polar prin1 princ
+                        print progn let declare prompt quit quote read read-char read-line
+                        redraw rem repeat reverse rtos set setf setq
+                        setvar setview sin snvalid sqrt ssadd ssdel ssget
+                        ssgetfirst sslength ssmemb ssname ssnamex sssetfirst
+                        startapp strcase strcat strlen subst substr tblnext
+                        tblobjname tblsearch terpri textbox textpage textscr
+                        trace trans type untrace wcmatch ver while vports
+                        write-char write-line zerop defparameter defvar defstruct
+                        load delete-file probe-file with-open-file
+                        case cond getf putf
+                        push nconc
+                        when unless loop dolist while dotimes loop-finish
+                        string= string< string> string<= string>= string/=
+                        string-downcase string-match-pattern-p string-p string-replace
+                        string-split string-trim string-upcase
+                        in-package use-package export import
+                        T NIL
+
+// OneSpace Designer IKIT functions
+//KeyWords2:              // alternative short list
+//                        // the most important defdialog keywords
+//                        :module :dialog-title :variables :after-initialization :local-functions
+//                        :dialog-control :without-show :mutual-exclusion :toolbox-button
+//                        :start-variable :initial-variable :token-sequence :prompt-variable
+//                        :top-prompt-text :precondition :exception :dialog-type
+//                        :ok-action-precondition :must-variables-scope :ok-action
+//                        :ok-action-next-variable :cancel-action :cleanup-action
+//                        :help-action :undo-modelling-steps-on-cancel :after-initialization-ui
+//                        :display-token :enter-ui :exit-ui :complete-focus-variable
+//                        :mutual-exclusion-persistent-data-storage :persistent-data-storage-module
+//                        :persistent-data-storage-variant-variable
+//                        // the most important defdialog keywords - subactions
+//                        :embedded-ui :close-behavior :bottom-line :x-offset :y-offset
+//                        // the most important defdialog keywords - file manager
+//                        :filing-variables :file-type :file-type-title :patterns
+//                        :in-cmd-file-type-match :out-cmd-file-type-match :override-elements-text
+//                        :attempt-in-form-with-any-file :exclude-from-universal-load
+//                        :universal-load-with-user-units :display :enable-form
+//                        :in-patterns :out-patterns :in-display :out-display
+//                        :in-enable-form :out-enable-form :in-form :in-title :out-title
+//                        :in-cmd-show-options :out-cmd-show-options
+//                        :auto-complete-on-filename :allow-old-revision :allow-load-as-version
+//                        // the most important defdialog keywords - UICT
+//                        :uict-option-menu-name :uict-install-function :embedded-area-definition :trace
+//                        // the most important defdialog keywords - values
+//                        :parallel :sequential :sequential-loop
+//                        :terminate :interrupt :subaction
+//                        :ok :default :error
+//                        :visible-variables :all-variables
+//                        :no-cancel :cancel
+//                        :ok-cancel-help :help
+//                        :action-routine :personality :none
+//                        // the most important defdialog keywords - sd-set-variable-status
+//                        :enable :optional :visible :indicator :title :value
+//                        :title-pixmap-name :title-insensitive-pixmap-name
+//                        :title-select-pixmap-name :title-select-insensitive-pixmap-name
+//                        :indicator :image-file :image-name :image-width :image-height
+//                        :image-alignment :image-foreground :image-background
+//                        :tb :tx :tbs :txs :indicator-tb :indicator-tbs
+
+KeyWords2:              // the big long complete keyword list
+                        :+W :15 :2D :2DVIEW :30 :32X32 :3D :3DGEO :3DGEO_FACE_REFLECTANCE
+                        :3DGEO_FACE_TRANSPARENCY :3DGEO_HIDDEN :3DGEO_LABEL :3DGEO_MIXED :3DGEO_PART_REFLECTANCE
+                        :3DGEO_PART_TRANSPARENCY :3DGEO_SHADED :3DGEO_WIRE :3D_HATCH_HANDLING :3_POS :64X64
+                        :A-VISIBLE :A0 :A1 :A2 :A3 :A4 :A5 :ABORT :ABORTBUTTONACTION :ABORTBUTTONLABEL :ABORT_DIM
+                        :ABOVE :ABOVE-SPECIFIC :ABOVE_LINE :ABS_ANGLE :ACCELERATION :ACCELERATOR :ACCEPT
+                        :ACCURACY :ACIS_SAT :ACME_WAREHOUSE :ACT-FUN :ACTION :ACTION-FUNC :ACTION-ROUTINE
+                        :ACTION-TYPE :ACTIVATE :ACTIVATEACTION :ACTIVATIONFUNCTION :ACTIVE :ACT_TABLE
+                        :ADAPT_TANGENT_LENGTH :ADD :ADD-SUFFIX :ADDITIONAL-TOKEN-STRING :ADD_COMPONENTS
+                        :ADD_CURVE :ADD_PLACES :ADD_REF_ELEM :ADD_VIEW_ANGLE :ADJACENT :ADJACENT-NEG
+                        :ADJACENT-POS :ADJUST :ADJUSTED :ADJUSTLAST :ADJUST_POINT :ADU-COLORS :ADVANCED :ADVICE
+                        :AFTER-INITIALIZATION :AFTER-INITIALIZATION-UI :AFTER-INPUT :AFTER-INPUT-UI
+                        :AFTER-POSITION :AFTERAPPLYBEHAVIOR :AFTEREDITACTION :AFTERMAPACTION :AFTERUNMAPACTION
+                        :ALIGNMENT :ALIGN_AXIS :ALIGN_FACES :ALIGN_FACES_OFFSET :ALL :ALL-IN-RANGE
+                        :ALL-IN-SD-ACCESS :ALL-VARIABLES :ALL-VISIBLE :ALLOW :ALLOW-ACTIONS
+                        :ALLOW-LOAD-AS-VERSION :ALLOW-NEW-DIRECTION-ON-MODIFY :ALLOW-OLD-REVISION :ALLOWANCE 
+                        :ALLOWANCE-FORMULA :ALLOWANCE-TYPE :ALLOWANCE_FORMULA :ALLOWANCE_TABLE :ALLOWED-ACTIONS 
+                        :ALLOWED-OWNER-TYPES :ALLOWED-VALUES :ALLOW_FACE_PART :ALLOW_WIRE_PART :ALL_2D :ALL_3D 
+                        :ALL_AT_TOP :ALL_DERIVED :ALL_FEATURES :ALL_FREE :ALL_IN_PA_LIST :ALL_IN_RANGE 
+                        :ALL_IN_SHEET :ALL_LABELS :ALL_LABELS_REL :ALL_RELATIONS :ALL_REL_SETS :ALL_VX :ALL_WP 
+                        :ALT-LOCATION-FIRST :ALTERNATE-LOCATION :ALWAYS :ALWAYS-OFFER-DEFAULTS 
+                        :AM-PRESELECTION-DIMENSION :AM-PRESELECTION-GEOMETRY :AM-PRESELECTION-TEXT 
+                        :AM-PRESELECTION-VIEW :AM-VIEWPORT-RIGHT-MOUSE-BUTTON 
+                        :AM-VIEWPORT-SHIFT-RIGHT-MOUSE-BUTTON :AMBIENT :AMBIENT_TEMPERATURE :AMG-ELEMENT-ORDER 
+                        :AMG-ELEMENT-SHAPE :AMG-PART :AMG_DEFAULT_ELEMENT_SIZE :AMG_DUMP_FILE_FORMAT 
+                        :AMG_ELEMENT_ORDER :AMG_ELEMENT_SHAPE :AMG_PART :ANALYSE :ANCHOR_PNT :ANCHOR_PT :AND :ANG 
+                        :ANGLE :ANGLE_INCREMENT :ANGLE_REFERENCE :ANGLE_REL :ANGLE_TO :ANGULAR :ANG_BISECT 
+                        :ANG_ERR :ANIMATE :ANISOTROPIC :ANNOTATION-SEL-ITEM :ANNOTATION-TYPE :ANNOTATIONS
+                        :ANNOTATIONS_AND_REFERENCE_ELEMENTS
+                        :ANNOTATIONS_AND_REFERENCE_ELEMENTS_AND_REFERENCE_VERTICES :ANNOTATOR :ANSYS_53 :ANY 
+                        :ANY_CATEGORY :AP203 :AP214 :APPEND :APPEND_POINT :APPEND_STRING :APPL-APPLICATION 
+                        :APPL-DEF-APPLICATION :APPL-DEF-LIFE :APPL-DEF-MODEL :APPL-DEF-NAME :APPL-DEF-STATUS 
+                        :APPL-DEF-YEAR :APPL-DISCIPLINE :APPL-MODEL :APPL-NAME :APPL-STATUS :APPL-YEAR 
+                        :APPLICABLE-FUNC :APPLICATION :APPLIED-LOADS :APPLIED_FLOW :APPLY :APPLY-CLOSE-HELP
+                        :APPLY-CUSTOM-CLOSE-HELP :APPLYACTION :APPLYCOLUMNIDENTIFIERA :APPLYCOLUMNIDENTIFIERB 
+                        :APPLYCOLUMNS :ARC :ARC_2D :ARC_3D :ARC_3POS :ARC_CENTER :ARC_INCLUDED 
+                        :ARE-ALL-BRANCHES-EXPANDED :ARE-SECONDARY-ICONS-DISPLAYED :AREA :AREABACKGROUND :AREA_MAX
+                        :AREA_MIN :ARGUMENTS :ARMPIXMAP :ARROW :ARROWS :ARROW_FEEDBACK :ARROW_FILL :ARROW_FILLED
+                        :ARROW_MODE :ARROW_SIZE :ARROW_TYPE :ASCII :ASIS :ASIZE :ASK :ASSEM-STRUCT :ASSEMBLY
+                        :ASSEM_STRUCT :ASSIGNED :ASSIGNED-TOGGLE :ASSOCIATIVITY-2D :ASSY-OP :AS_SOURCE :AS_STORED 
+                        :ATLERNATE-LOCATION-FIRST :ATM :ATTACHED_TO_CONTENTS :ATTACHMENT :ATTACHMENTENT 
+                        :ATTACHMENTS :ATTEMPT-IN-FORM-WITH-ANY-FILE :ATTR-DISPLAY :ATTR-TITLE :ATTR-TYPE 
+                        :ATTR-VALUE-FNC :ATTRIBUTE :ATTRIBUTE-NAMES :ATT_U_OFFSET :ATT_V_OFFSET :ATYPE 
+                        :AT_ELEMENT :AT_NODES :AT_POS :AUTHOR :AUTHORIZER :AUTO :AUTO-ADD-PROPOSAL :AUTO-COMMAND 
+                        :AUTO-COMPLETE-ON-FILENAME :AUTO-SAVE :AUTO-SECTION-HATCH :AUTO-VERIFIER :AUTO-VERIFY 
+                        :AUTO-WEIGHT :AUTOADD :AUTOMATIC :AUTOMATICSELECTION :AUTOWRAP :AUTO_BODYCHECK 
+                        :AUTO_CREATE :AUTO_DIRECTION :AUTO_LABELFDBK :AUTO_MODE_AXIS :AUTO_MODE_CENPNT 
+                        :AUTO_MODE_IMAGE :AUTO_MODE_TOL_AND_QUALITY :AUTO_REMOVE :AUTO_SOLVE :AUTO_WEIGHT 
+                        :AVAILCMD :AXIAL_OFFSET :AXIS :AXIS-DIR :AXIS-START-POS :A_FILE :B :B-VISIBLE :BACK 
+                        :BACKGRND-COLOR :BACKGRND_COLOR :BACKGROUND :BACKGROUND-OFF :BACKGROUND-ON 
+                        :BACKGROUND_COLOR :BACKWARD :BACKWARD-ARROW :BACKWARDS :BACK_BORDER :BACK_BORDER_COLOR 
+                        :BACK_CHAMFER_ANGLE :BACK_CHAMFER_DEPTH :BACK_CURRENT :BAD :BALLOON :BALLOONED :BAR :BASE 
+                        :BASE-DIRECTORY :BASE-FACE :BASELINE_LONG :BASELINE_SHORT :BASENAME :BASE_DIAM :BASE_FACE 
+                        :BASE_HEIGHT :BASE_LENGTH :BASIC :BASIC_BROWSER_COLOR :BASIC_LABEL_COLOR :BC_REACTION 
+                        :BEFORE-INPUT :BEFORE-POSITION :BEFOREBOX :BEFOREBUTTON :BEFOREMAPACTION
+                        :BEFOREUNMAPACTION :BEGINNING :BEHAVIORS :BELOW :BELOW-SPECIFIC :BELOW_BUTTON :BELOW_LINE 
+                        :BELOW_MENU :BEND :BEND-ANGLE :BEND-FACE :BEND-FLAT-TEXT :BEND-PROCESS :BEND-PROCESSES 
+                        :BEND-RADIUS :BEND-RELIEFS :BEND_ALLOWANCE_FIXED :BEND_ALLOWANCE_SHOP :BEND_ANGLE 
+                        :BEND_GROUP :BEND_PROCESS :BEND_RADIUS :BETWEEN_POINTS :BIG :BINARY :BISECT :BLA :BLANK 
+                        :BLANKS :BLANK_PART :BLEND_3D :BLEND_AUTO :BLUE :BOARDHOLES :BODY-NOTE :BODY_CHECK
+                        :BODY_DIAM :BODY_HEIGHT :BODY_LENGTH :BODY_WIDTH :BOOL :BOOLEAN :BOOLEAN-COLUMN 
+                        :BOOLEAN_BACK :BORDER-COLOR :BORDERCOLOR :BORDERWIDTH :BORDER_TYPE :BORDER_WIDTH_LEFT 
+                        :BORDER_WIDTH_LOWER :BORDER_WIDTH_RIGHT :BORDER_WIDTH_UPPER :BORE-PROFILE :BOSS 
+                        :BOSS_POCKET :BOTH :BOTH-IMAGE :BOTH-PIXMAPS :BOTH_ARROW_DIA :BOTH_ENDS :BOTH_SIDES 
+                        :BOTTOM :BOTTOM-LINE :BOTTOM-NEXT :BOTTOMATTACHMENT :BOTTOMCENTER :BOTTOMLEFT :BOTTOMLINE
+                        :BOTTOMOFFSET :BOTTOMPOSITION :BOTTOMRIGHT :BOTTOMSHADOWCOLOR :BOTTOMWIDGET 
+                        :BOTTOM_SF_QUAL :BOTTOM_SIDE :BOTTON-LINE :BOTTON-NEXT :BOTTONMENU :BOX :BOXED :BRACE 
+                        :BRACKET :BRACKET_L :BRACKET_U :BREAKOUT-LABEL :BREAKOUT_BORDER :BREAKOUT_DEPTH_FACE 
+                        :BREAKOUT_DEPTH_POINT :BREAKOUT_DEPTH_WP :BRITISHTON :BROKEN_LINE :BROWN :BROWSER-EXAMPLE 
+                        :BROWSER-IMAGE :BROWSER-PUSH-CMD :BROWSER-RELEASE-CMD :BROWSE_SEL :BSF :BSP :BSW :BTU 
+                        :BTU_PER_FOOT2_HOUR_FAHRENHEIT :BTU_PER_FOOT_HOUR_FAHRENHEIT :BTU_PER_POUND_FAHRENHEIT 
+                        :BTU_PER_SECOND :BUFFER-DISPLAY :BUILD_IN :BUILT-IN-FEEDBACK :BUNDLE :BUSY :BUTON1 
+                        :BUTTON :BUTTON1 :BUTTON1_OF_PAGE1 :BUTTON1_OF_PAGE2 :BUTTON2 :BUTTON2_OF_PAGE1 
+                        :BUTTON2_OF_PAGE2 :BUTTON3 :BUTTON4 :BUTTON5 :BUTTONBOX :BUTTONID :BUTTONMENU 
+                        :BUTTONMENUOFFOBJECTONLY :BUTTONS :BY-EDGE :BY-FACE :BY_BOSS_POCKET :BY_BOX :BY_BOX_VP 
+                        :BY_BOX_VP_OBJ :BY_BOX_WP :BY_BOX_WP_OBJ :BY_DIMENSION :BY_EDGE_3D :BY_EDGE_LBL_REL 
+                        :BY_EDGE_RELATION :BY_FACE :BY_FACES :BY_FACE_LBL_REL :BY_FACE_RELATION :BY_FEATURE 
+                        :BY_OWNER :BY_POINTS :BY_VERTEX_2D :BY_VERTEX_3D :BY_VERTEX_LBL_REL :BY_VERTEX_RELATION 
+                        :B_EDGES :C-GEO :C-TITLE :C-VISIBLE :CABLE-TEST :CAD-CAM-LINK-CUSTOMIZATION 
+                        :CAD-CAM-LINK-STEPPED-HOLE :CAD_SYSTEM :CAL :CALLACTION :CAL_PER_SECOND :CAM 
+                        :CAN-BE-DROPPED :CANCEL :CANCEL-ACTION :CANCEL-CLEANUP :CANCELACTION :CANCEL_DELETE
+                        :CANCEL_UNDELETE :CAN_CENTER :CAN_DIAM :CAN_HEIGHT :CAP-PART :CAP-POINT :CAP-TAN-DIR 
+                        :CAP-WEIGHT :CAP_PART :CASCADEPIXMAP :CASCADING :CATCH :CATCH-FLYBY :CATEGORIES 
+                        :CATEGORIES-ONLY :CATEGORY :CELLSIZE :CELSIUS :CENTER :CENTERLINE :CENTERLINE-CREATION 
+                        :CENTER_DASH_DASH :CENTER_LINE :CENTER_POINT :CENTER_VP :CENTIMETER_PER_SECOND :CENTROID 
+                        :CEN_ABS_OFFSET :CEN_COLOR :CEN_DIA :CEN_LINE :CEN_LINE_TYPE :CEN_LTYPE :CEN_PENSIZE
+                        :CEN_PNT :CEN_RAD :CEN_RAD_ANG :CEN_REL_OFFSET :CEN_SELECT :CHAIN :CHAMFER :CHAMFER_2D 
+                        :CHAMFER_ANGLE :CHAMFER_DEPTH :CHAM_RAD :CHANGE-GRAPHICS-ROOT :CHANGE-TABLE-ROOT 
+                        :CHANGED_DOC_3D :CHANGE_CONTENTS_FILE :CHANGE_FACES :CHANGE_INSTANCE_FILE :CHANGE_NODE 
+                        :CHANGE_TANGENT_AT :CHAR :CHAR-CODE :CHECK :CHECK- :CHECK-DISTANCES :CHECK-FUNCTION 
+                        :CHECK-PART :CHECK-SECONDARY-VALUE-TYPE :CHECK_AND_FIX :CHECK_AND_FIX_FEAT :CHECK_FAILED 
+                        :CHECK_FUNCTION :CHECK_PART :CHECK_SHEET :CHGTHI :CIRCLE :CIRCLE_2D :CIRCLE_3D :CIRCULAR 
+                        :CLASH-CHECK :CLASH-PARTS :CLASHING_ONLY :CLASH_COLOR :CLASH_RESULT :CLASH_RESULTS 
+                        :CLASH_VIEW :CLASS :CLASS-ID :CLASS-NAME :CLASS-NB :CLASS-NN :CLASS-NT :CLASS-TYPE 
+                        :CLASSIC :CLASSICMENU :CLEANUP-ACTION :CLEANUPACTION :CLEAR :CLEAR-SELECT-LIST 
+                        :CLEAR-TABLE-ROOTS :CLEAR-TOKEN :CLEARACTION :CLEARLABEL :CLEAR_DIM_TEXT :CLEAR_TANGENT 
+                        :CLEAR_VIEW :CLIP-FLAG :CLIPPING :CLIP_PLANES :CLOCKWISE :CLOSE :CLOSE-BEHAVIOR 
+                        :CLOSE-IF-NOT-PINNED :CLOSE-SPACE :CLOSEACTION :CLOSED :CLOSED-NONPERIODIC 
+                        :CLOSED-PERIODIC :CLR :CM :CMD :CODE :COI :COINCIDENT :COINCIDENT_REL :COINITIALIZE 
+                        :COLLAPSED :COLON_SYNTAX :COLOR :COLOR-OFF :COLOR-ON :COLORSYMBOL :COLOR_RGB :COLUMN 
+                        :COLUMN-DEFINITION :COLUMN-NAMES :COLUMN-TYPE :COLUMNIDENTIFIER :COLUMNIDENTIFIERA 
+                        :COLUMNIDENTIFIERB :COLUMNNAME :COLUMNNAMES :COLUMNS :COLUMNSORTUI :COLUMNX :COLUMNY
+                        :COLUMN_NAMES :COMMA :COMMAND :COMMAND-NAME :COMMANDINPUT :COMMANDS :COMMANDTITLE 
+                        :COMMENT :COMMON :COMP :COMPILE-TOPLEVEL :COMPLEMENT :COMPLETE-FOCUS-VARIABLE :COMPLEX 
+                        :COMPONENT :COMPONENTS :COMPUTE_MAX_DRILL_DIA_FOR_TAPPED_HOLE 
+                        :COMPUTE_MIN_DRILL_DIA_FOR_TAPPED_HOLE :CONCAVE :CONCENTRIC :CONCEPTS :COND_NO :COND_SZ 
+                        :CONE :CONE_ALLOWANCE :CONE_ANGLE :CONFIGURATION :CONFIGURATION-SET :CONFINED :CONFIRM
+                        :CONFIRM-OVERWRITE :CONFIRM-OVERWRITE-OR-APPEND :CONFIRMATION :CONFLICT :CONNECT 
+                        :CONNECTED :CONST :CONSTANT :CONSTR :CONSTRUCTION :CONSTRUCTION_GEOMETRY :CONSTRUCTOR 
+                        :CONST_RADIUS :CONTACT :CONTAINER :CONTAINER-MODE :CONTAINERS :CONTENT :CONTENTS 
+                        :CONTENTS+INSTANCE :CONTEXT :CONTEXT-ACTION :CONTEXT-ENABLE :CONTIN :CONTOUR :CONTROL 
+                        :CONTROLBUTTONS :CONTROL_LINE :CONTROL_POINT :CONVECTION :CONVEX :COORD-SYS
+                        :COORD-SYS-OBJECT :COORD1 :COORD2 :COORD3 :COORDINATE :COORDINATE-SYSTEM :COORDINATES 
+                        :COORDINATE_SYSTEM :COORD_ORIGIN :COORD_SYS-MODE :COORD_SYSTEM :COORD_V_AXIS 
+                        :COORD_W_AXIS :COPIED_PART :COPIED_PARTS :COPY :CORE :CORE-DIAMETER :CORNER-RELIEFS 
+                        :CORNER1 :CORNER2 :CORNER_1 :CORNER_2 :CORP :COUNINITIALIZE :COUNT :CREATE :CREATE-DIA 
+                        :CREATE-OBJECTS :CREATEASTAB :CREATE_AT_CONTENTS :CREATE_AUT_IND :CTRL :CUBIC 
+                        :CURR-WP-ONLY :CURRENT :CURRENT-FRAME :CURRENT-SHEET :CURRENT_PART :CURRENT_TANGENT 
+                        :CURRENT_WP :CURR_ASSEMBLY :CURR_ONLY :CURR_PART :CURR_PART_ONLY :CURR_WP :CURR_WP_ONLY 
+                        :CURSORPOSITION :CURSORPOSITIONVISIBLE :CURSOR_ADJUSTMENT :CURSOR_RANGE :CURVATURE 
+                        :CURVATURES :CURVE :CURVES :CURVE_LIST :CUST-FEAT :CUST-OP-OBJECT-OBJ :CUST-OP-OBJECT-VAR 
+                        :CUSTOM-FEATURE :CUSTOMBOTTOMFORM :CUSTOMBUTTONACTION :CUSTOMBUTTONLABEL :CUSTOMER 
+                        :CUSTOMER-ACCU :CUSTOMTOPFORM :CUST_CHECK_LEVEL :CUT-PROCESSES :CUT_ADU_TRACK :CV-SPACE 
+                        :CWT :CYL-AXIS :CYLINDER :CYLINDRICAL :CYL_FACES :C_ANGLE :C_ARC_2D :C_A_BACKWARDS 
+                        :C_A_FORWARDS :C_A_N_CYCLES :C_A_N_STEPS :C_A_RETRACE :C_A_STEP :C_CHAMFER_2D 
+                        :C_CHECK_FIX :C_CIRCLE_2D :C_C_CLASH :C_D_BACKWARDS :C_D_FORWARDS :C_D_N_CYCLES 
+                        :C_D_N_STEPS :C_D_RETRACE :C_D_STEP :C_FILLET_2D :C_FRAME :C_GEO :C_KEEP_BLEND 
+                        :C_KEEP_TANGENT :C_LINE_2D :C_N_BACKWARDS :C_N_FORWARDS :C_N_N_CYCLES :C_N_N_STEPS 
+                        :C_N_RETRACE :C_N_STEP :C_SPLINE_2D :C_STICKY_EDGE :C_STICKY_VERTEX :C_USER_POINT 
+                        :C_VAR_CHECK :D-VISIBLE :DASH :DASHED :DASHED- :DASH_CENTER :DATA :DATABASE 
+                        :DATABASE-ELID :DATABASE-PART-NAME :DATABASE-TYPE :DATASET :DATASETS :DATE :DATUM :DATUM1 
+                        :DATUM1-2ND :DATUM2 :DATUM2-2ND :DATUM3 :DATUM_BOTTOM :DATUM_STEP :DATUM_TOP :DAY 
+                        :DA_ACCELERATION :DA_ACCELERATION_FACTOR :DA_ANIM :DA_ANIMATE_RESET :DA_ANIMATE_VRML
+                        :DA_APPLIED_LOADS_TOGGLE :DA_ASSIGNED_MAT :DA_AUTHOR :DA_CONTOUR_AVERAGING 
+                        :DA_CONTOUR_COLORRANGE :DA_CONTOUR_COMPONENT :DA_CONTOUR_DISPLAY :DA_COORDINATES 
+                        :DA_COORD_SYSTEM :DA_DB :DA_DEFORMED_COMPONENT :DA_DEFORMED_DISPLAY :DA_DENSITY 
+                        :DA_DENSITY_FACTOR :DA_DIR :DA_DISPLACEMENT_TOGGLE :DA_DISPLAY_METHOD :DA_DRAW_EDGES 
+                        :DA_DYNAMICS_MOVE :DA_DYNAMICS_ROTATE :DA_DYNAMICS_ROTATEZ :DA_DYNAMICS_ZOOM
+                        :DA_ELEMENT_FORCE_TOGGLE :DA_EMBEDDED_VRML :DA_ENERGY :DA_ENERGY_FACTOR
+                        :DA_ERROR_PERCENTAGE :DA_FILE :DA_FILMCOEFF :DA_FILMCOEFF_FACTOR :DA_FIXED_VALUE :DA_FLUX 
+                        :DA_FORCE :DA_FORCE_FACTOR :DA_FORMAT :DA_FORWARD :DA_FRAMES :DA_FREQUENCY 
+                        :DA_FREQUENCY_FACTOR :DA_HEATFLOW :DA_HEATFLOW_FACTOR :DA_HEATFLUX :DA_HEATFLUX_FACTOR 
+                        :DA_INTERVAL :DA_LBC :DA_LOGO :DA_LOWER_CUTOFF_EIGENVALUE :DA_LOWER_CUTOFF_FREQ 
+                        :DA_MATERIAL :DA_MAX_ITERATIONS :DA_MAX_ORDER :DA_MAX_VAL :DA_MESH :DA_MESH_VRML 
+                        :DA_MIN_ORDER :DA_MIN_VAL :DA_MODE :DA_MODEL :DA_MODES :DA_MODE_CONTROL :DA_MOMENT 
+                        :DA_MOMENT_FACTOR :DA_NAME :DA_NEW_OWNER :DA_NEW_STUDY :DA_NEXT :DA_NUMBER_MODES 
+                        :DA_NUM_COLORS :DA_NUM_MODES :DA_OWNER :DA_PART :DA_PREF_FILE :DA_PRESSURE 
+                        :DA_PRESSURE_FACTOR :DA_PREVIOUS :DA_PROJECT :DA_P_ELM_TOGGLE :DA_RANGE_METHOD 
+                        :DA_REACTION_FORCE_TOGGLE :DA_REPS :DA_RESULT :DA_RES_COMMENT :DA_RES_VRM :DA_REVERSE 
+                        :DA_SCALE_FACTOR :DA_SCALE_METHOD :DA_SCALE_PERCENT :DA_SECURITY_FACTOR :DA_SOURCE 
+                        :DA_SPECIFIC-HEAT :DA_SPECIFIC_HEAT :DA_SPECIFIC_HEAT_FACTOR :DA_STEP_BACK 
+                        :DA_STEP_BACKWARD :DA_STEP_FORWARD :DA_STRAIN_ENERGY_TOGGLE :DA_STRAIN_TOGGLE :DA_STRESS 
+                        :DA_STRESS_FACTOR :DA_STRESS_TOGGLE :DA_STUDY :DA_STUDY_COMMENT :DA_SUMMARY_FILE 
+                        :DA_SYMBOL_COLOR :DA_SYMBOL_LOCATION :DA_SYSTEM :DA_TABLE :DA_TABULAR :DA_TARGET_NAME 
+                        :DA_TARGET_OWNER :DA_TEMPERATURE :DA_TEMP_FACTOR :DA_THERMCOND :DA_THERMCOND_FACTOR 
+                        :DA_TIME :DA_TIME_FACTOR :DA_UPDATE_DISPLAY :DA_UPPER_CUTOFF_EIGENVALUE 
+                        :DA_UPPER_CUTOFF_FREQ :DA_VELOCITY :DA_VELOCITY_FACTOR :DA_VIEW :DA_VIEW_FIT :DA_VRML2 
+                        :DB :DB_TABLE :DEACT-FUN :DEACTIVATIONFUNCTION :DECIMAL-POINT :DECIMAL-POINTS 
+                        :DECIMALPOINTS :DECIMALS :DECIMAL_SYNTAX :DEC_COMMA :DEC_PLACE :DEC_PLACES :DEC_PNT
+                        :DEFAULT :DEFAULT-2D :DEFAULT-3D :DEFAULT-START-INDEX :DEFAULT-TOKENS :DEFAULT-VALUE 
+                        :DEFAULT-VALUES :DEFAULTBUTTON :DEFAULTMENU :DEFAULTPOSITION :DEFAULTVALUE :DEFAULT_2D 
+                        :DEFAULT_3D :DEFD-EXAMPLES :DEG :DEGREE :DEG_MIN_SEC :DELAY-INPUT-TOOL :DELETE :DELETED 
+                        :DELETE_ANNOS :DELETE_CURVE :DELETE_ENTRY :DELETE_POINT :DELTAX :DELTAY :DEL_ALL 
+                        :DEL_NOTHING :DEL_PREVIOUS :DEMO :DENS :DENSITY :DEPENDENCY :DEPTH :DEPTH_DP :DERIVED
+                        :DESCR :DESCRIPTION :DEST-SPACE :DESTINATION :DESTRUCTOR :DETACH :DETAIL :DETAIL-BORDER 
+                        :DETAIL-LABEL :DETAIL-SCALE :DETAILS :DETAIL_VIEW :DEVIATION :DEVICE :DFM_RULE_VIOLATION 
+                        :DFM_WARNING :DG-EXAMPLE :DG-EXAMPLES :DIA :DIALOG :DIALOG-CONTROL :DIALOG-IMAGE 
+                        :DIALOG-TITLE :DIALOG-TYPE :DIALOGSTYLE :DIALOGTITLE :DIAM :DIAMETER :DIAMOND :DIA_DP 
+                        :DIE_WIDTH :DIGITS :DIM :DIM-FIRST-POINT :DIM-POINTER :DIM-POSITION-POINT 
+                        :DIM-SECOND-POINT :DIM-TYPE :DIMENSION :DIMENSIONS :DIMETRIC :DIMPLE_DIA :DIM_ANGLE 
+                        :DIM_ARC :DIM_CHAIN :DIM_CHAMFER :DIM_COORD :DIM_DATUM_LONG :DIM_DATUM_LONG_SYM 
+                        :DIM_DATUM_SHORT :DIM_DIAMETER :DIM_LINE :DIM_LINE_COLOR :DIM_LINE_SYM :DIM_LIST 
+                        :DIM_NAME :DIM_RADIUS :DIM_TAN :DIM_TEXT :DIM_TEXT_END :DIM_TEXT_OFF :DIM_TEXT_ON 
+                        :DIM_VALUE :DIN_100 :DIR :DIRECT :DIRECTION :DIRECTION- :DIRECTIONAL :DIRECTION_NEGATIVE 
+                        :DIRECTION_OPEN :DIRECTION_POSITIVE :DIRECTORY :DIR_DIST :DIR_LEN :DIS :DISABLE 
+                        :DISABLE-SORT :DISABLEDIMAGE :DISABLEDSELECTEDIMAGE :DISC :DISCONNECT :DISPLACEMENT
+                        :DISPLAY :DISPLAY-FUNC :DISPLAY-IN-GRAPHICS :DISPLAY-IN-TABLE :DISPLAY-NAME :DISPLAY-ONLY 
+                        :DISPLAY-OPTIONS :DISPLAY-PRIMARY-ICON :DISPLAY-ROOT-NODE :DISPLAY-SECONDARY-ICON 
+                        :DISPLAY-TOKEN :DISPLAY-TREE :DISPLAY-UI :DISPLAY-UNITS :DISPLAYHEIGHT :DISPLAYONLY 
+                        :DISPLAYWIDTH :DISPLAY_MODE :DISPLAY_NORMAL :DIST :DIST-ANGLE :DIST-DIST :DIST-FORMULA 
+                        :DISTANCE :DISTANCE-FORMULA :DISTANCE1 :DISTANCE2 :DISTANCE_INCREMENT :DISTANCE_REL 
+                        :DISTANCE_TYPE :DIST_ANGLE :DIST_DIST :DITHERED :DOC :DOC3D:DOC3D-SET-DP-NAMING-STANDARDS 
+                        :DOC3D_ :DOC3D_DETAIL_DP_LABEL_COLOR :DOC3D_DETAIL_DP_LABEL_FONT 
+                        :DOC3D_DETAIL_DP_LABEL_FRAME :DOC3D_DETAIL_DP_LABEL_INCLUDES_SCALING_INFO 
+                        :DOC3D_DETAIL_DP_LABEL_OFFSET :DOC3D_DETAIL_DP_LABEL_POSITION :DOC3D_DETAIL_DP_LABEL_SIZE
+                        :DOC3D_DETAIL_DP_SHOW_DP_LABEL :DOC3D_DP_LABEL_COLOR :DOC3D_DP_LABEL_FONT 
+                        :DOC3D_DP_LABEL_FRAME :DOC3D_DP_LABEL_INCLUDES_DPNAME 
+                        :DOC3D_DP_LABEL_INCLUDES_SCALING_INFO :DOC3D_DP_LABEL_OFFSET :DOC3D_DP_LABEL_POSITION 
+                        :DOC3D_DP_LABEL_SCALING_PREFIX :DOC3D_DP_LABEL_SIZE :DOC3D_DP_SHOW_DP_LABEL 
+                        :DOC3D_SECTION_DP_LABEL_COLOR :DOC3D_SECTION_DP_LABEL_FONT :DOC3D_SECTION_DP_LABEL_FRAME
+                        :DOC3D_SECTION_DP_LABEL_INCLUDES_SCALING_INFO :DOC3D_SECTION_DP_LABEL_OFFSET 
+                        :DOC3D_SECTION_DP_LABEL_POSITION :DOC3D_SECTION_DP_LABEL_PREFIX 
+                        :DOC3D_SECTION_DP_LABEL_SIZE :DOC3D_SECTION_LINE_LABEL_COLOR 
+                        :DOC3D_SECTION_LINE_LABEL_FONT :DOC3D_SECTION_LINE_LABEL_FRAME 
+                        :DOC3D_SECTION_LINE_LABEL_OFFSET :DOC3D_SECTION_LINE_LABEL_POSITION 
+                        :DOC3D_SECTION_LINE_LABEL_SIZE :DOC3D_SECTION_LINE_LEADER_COLOR 
+                        :DOC3D_SECTION_LINE_LEADER_LENGTH :DOCK-LOCATION :DOCKING :DOCU :DOCU---+--- 
+                        :DOCU-CALC-GEO-ONLY :DOCU-DRAWING :DOCU-FRAME :DOCU-PLANES :DOCU-PRIM-SECTION-LINE-LABELS 
+                        :DOCU-SHEET :DOCU-TEXT :DOCU-USER-GEO-ONLY :DOCUMENTATION_AND_MEASUREMENT 
+                        :DOCUMENTATION_AND_TOLERANCING :DOCUMENTATION_ONLY :DOCUPART :DOCUPLANE :DOCUPLANE-SET 
+                        :DOCUPNTCNP :DOCU_CUTAWAYS_VISIBLE_IN_DEPENDANT_VIEWS :DOCU_CUTAWAY_BORDER_EDGE_COLOR 
+                        :DOCU_CUTAWAY_BORDER_EDGE_LTYPE :DOCU_CUTAWAY_BORDER_EDGE_SIZE 
+                        :DOCU_CUTAWAY_BORDER_VISIBLE :DOCU_DETAIL_BORDER_COLOR :DOCU_DETAIL_BORDER_EDGE_COLOR 
+                        :DOCU_DETAIL_BORDER_EDGE_LTYPE :DOCU_DETAIL_BORDER_EDGE_SIZE :DOCU_DETAIL_BORDER_LTYPE 
+                        :DOCU_DETAIL_BORDER_SIZE :DOCU_DETAIL_LABEL_BORDER_PREFIX :DOCU_DETAIL_LABEL_COLOR 
+                        :DOCU_DETAIL_LABEL_FILLED :DOCU_DETAIL_LABEL_FONT :DOCU_DETAIL_LABEL_FONT_2BYTE 
+                        :DOCU_DETAIL_LABEL_FRAME :DOCU_DETAIL_LABEL_OFFSET :DOCU_DETAIL_LABEL_RATIO 
+                        :DOCU_DETAIL_LABEL_SIZE :DOCU_DETAIL_LABEL_SLANT :DOCU_DETAIL_VIEW_LABEL_COLOR 
+                        :DOCU_DETAIL_VIEW_LABEL_FILLED :DOCU_DETAIL_VIEW_LABEL_FONT 
+                        :DOCU_DETAIL_VIEW_LABEL_FONT_2BYTE :DOCU_DETAIL_VIEW_LABEL_FRAME 
+                        :DOCU_DETAIL_VIEW_LABEL_INCLUDES_SCALING_INFO :DOCU_DETAIL_VIEW_LABEL_OFFSET
+                        :DOCU_DETAIL_VIEW_LABEL_POSITION :DOCU_DETAIL_VIEW_LABEL_RATIO 
+                        :DOCU_DETAIL_VIEW_LABEL_SIZE :DOCU_DETAIL_VIEW_LABEL_SLANT
+                        :DOCU_ONLY_LAST_SECTION_VISIBLE_IN_DEPENDANT_VIEWS :DOCU_PARTIAL_BORDER_EDGE_COLOR 
+                        :DOCU_PARTIAL_BORDER_EDGE_LTYPE :DOCU_PARTIAL_BORDER_EDGE_SIZE 
+                        :DOCU_PARTIAL_USE_DOCUPLANE_FOR_LABEL :DOCU_PARTIAL_USE_DOCUPLANE_NAME_FOR_LABEL
+                        :DOCU_PLANE-MODE :DOCU_PLANES :DOCU_SECTION_LINE_GEO_COLOR :DOCU_SECTION_LINE_GEO_LTYPE 
+                        :DOCU_SECTION_LINE_GEO_SIZE :DOCU_SECTION_LINE_LABEL_COLOR 
+                        :DOCU_SECTION_LINE_LABEL_FILLED :DOCU_SECTION_LINE_LABEL_FONT 
+                        :DOCU_SECTION_LINE_LABEL_FONT_2BYTE :DOCU_SECTION_LINE_LABEL_FRAME 
+                        :DOCU_SECTION_LINE_LABEL_OFFSET :DOCU_SECTION_LINE_LABEL_POSITION 
+                        :DOCU_SECTION_LINE_LABEL_RATIO :DOCU_SECTION_LINE_LABEL_SIZE 
+                        :DOCU_SECTION_LINE_LABEL_SLANT :DOCU_SECTION_LINE_LEADER_ARR_SIZE 
+                        :DOCU_SECTION_LINE_LEADER_ARR_TYPE :DOCU_SECTION_LINE_LEADER_COLOR 
+                        :DOCU_SECTION_LINE_LEADER_LENGTH :DOCU_SECTION_LINE_LEADER_LTYPE 
+                        :DOCU_SECTION_LINE_LEADER_MODE :DOCU_SECTION_LINE_LEADER_SIZE 
+                        :DOCU_SECTION_LINE_SEGM_COLOR :DOCU_SECTION_LINE_SEGM_LENGTH 
+                        :DOCU_SECTION_LINE_SEGM_LTYPE :DOCU_SECTION_LINE_SEGM_MODE :DOCU_SECTION_LINE_SEGM_SIZE 
+                        :DOCU_SECTION_VIEW_LABEL_COLOR :DOCU_SECTION_VIEW_LABEL_FILLED 
+                        :DOCU_SECTION_VIEW_LABEL_FONT :DOCU_SECTION_VIEW_LABEL_FONT_2BYTE 
+                        :DOCU_SECTION_VIEW_LABEL_FRAME :DOCU_SECTION_VIEW_LABEL_INCLUDES_SCALING_INFO 
+                        :DOCU_SECTION_VIEW_LABEL_OFFSET :DOCU_SECTION_VIEW_LABEL_POSITION 
+                        :DOCU_SECTION_VIEW_LABEL_PREFIX :DOCU_SECTION_VIEW_LABEL_RATIO 
+                        :DOCU_SECTION_VIEW_LABEL_SIZE :DOCU_SECTION_VIEW_LABEL_SLANT :DOCU_VIEW_LABEL_COLOR 
+                        :DOCU_VIEW_LABEL_FILLED :DOCU_VIEW_LABEL_FONT :DOCU_VIEW_LABEL_FONT_2BYTE 
+                        :DOCU_VIEW_LABEL_FRAME :DOCU_VIEW_LABEL_INCLUDES_SCALING_INFO 
+                        :DOCU_VIEW_LABEL_INCLUDES_VIEWNAME :DOCU_VIEW_LABEL_OFFSET :DOCU_VIEW_LABEL_POSITION
+                        :DOCU_VIEW_LABEL_RATIO :DOCU_VIEW_LABEL_SCALING_BRACKETS :DOCU_VIEW_LABEL_SCALING_PREFIX 
+                        :DOCU_VIEW_LABEL_SCALING_SYNTAX :DOCU_VIEW_LABEL_SIZE :DOCU_VIEW_LABEL_SLANT 
+                        :DOCU_VIEW_LABEL_TEXT_FOR_BACK_VIEW :DOCU_VIEW_LABEL_TEXT_FOR_BOTTOM_VIEW 
+                        :DOCU_VIEW_LABEL_TEXT_FOR_FRONT_VIEW :DOCU_VIEW_LABEL_TEXT_FOR_GEN_VIEW 
+                        :DOCU_VIEW_LABEL_TEXT_FOR_ISO_VIEW :DOCU_VIEW_LABEL_TEXT_FOR_LEFT_VIEW
+                        :DOCU_VIEW_LABEL_TEXT_FOR_RIGHT_VIEW :DOCU_VIEW_LABEL_TEXT_FOR_TOP_VIEW :DOIT :DOMAIN 
+                        :DONE :DONEACTION :DONELABEL :DONE_DIM :DOS :DOT :DOTS :DOTTED :DOT_CENTER :DOT_TYPE 
+                        :DOUBLECLICKACTION :DOUBLECLICKINTERVAL :DOUBLE_SEL :DOWN :DOWN-FLAG :DO_IT :DP :DPNAME 
+                        :DP_BY_LABEL :DP_POSITION :DRAFT :DRAFT_ANGLE :DRAFT_PLANE :DRAG :DRAG-CALLBACK 
+                        :DRAG-CIRCLE-AXIS :DRAG-CIRCLE-CEN :DRAG-CURSOR-SINGLE :DRAG-FAST-COMPLETE 
+                        :DRAG-FROM-POLESTAR :DRAG-FROM-POLESTAR: :DRAG-LINE-DIR :DRAG-MAX-VALUE :DRAG-MIN-VALUE 
+                        :DRAG-MODE :DRAG-PLANE-NOR :DRAG-SCALE :DRAG-SOURCE :DRAG-TARGET :DRAG-ZERO-POS 
+                        :DRAGACTION :DRAGGED-POSITION :DRAG_VARIABLE :DRAW-SYMBOL-COMMAND :DRAWING :DRAWLINE
+                        :DRAWLIST :DRILL-DEPTH :DRILL-POINT :DRILL-RADIUS :DRILL_DEPTH 
+                        :DRILL_DEPTH_SAFETY_ZONE_THICKNESS :DRILL_DEPTH_TOL :DRILL_DIA 
+                        :DRILL_DIA_SAFETY_ZONE_THICKNESS :DRILL_DIA_TOL :DRILL_RAD :DWG :DWG_NUMBER :DWG_SCALE 
+                        :DYNAMIC :DYNAMIC-COLUMN :DYNAMIC-SCALE :DYNE :DYNE_CENTIMETER :DYNE_PER_CM2 
+                        :D_A_BACKWARDS :D_A_FORWARDS :D_A_N_CYCLES :D_A_N_STEPS :D_A_RETRACE :D_A_STEP 
+                        :D_CHECK_FIX :D_C_CLASH :D_D_BACKWARDS :D_D_FORWARDS :D_D_N_CYCLES :D_D_N_STEPS 
+                        :D_D_RETRACE :D_D_STEP :D_KEEP_BLEND :D_KEEP_TANGENT :D_N_BACKWARDS :D_N_FORWARDS 
+                        :D_N_N_CYCLES :D_N_N_STEPS :D_N_RETRACE :D_N_STEP :D_STICKY_EDGE :D_STICKY_VERTEX 
+                        :D_VAR_CHECK :E:LABEL :EARLY :EAT-PICK :ECONOFAST :EDGE :EDGE-2 :EDGE-2D :EDGE-SIDE 
+                        :EDGED :EDGEDISPL :EDGEFORCE :EDGEFTEMP :EDGEHEATFL :EDGES :EDGETRLRE :EDGE_2D :EDGE_3D 
+                        :EDGE_LENGTH :EDGE_SIDE :EDGE_TANGENT :EDISON :EDIT :EDIT-CELL :EDIT-DIA :EDIT-FUNC 
+                        :EDITABLE :EDITABLE-PRIMARY-VALUE-TYPE :EDITCELLCHECKFUNCTION :EDITED :EDITED_VALUE 
+                        :EDITMODE :EE_UNIT :ELAN :ELEM :ELEMENTS :ELEMENT_FORCE :ELEM_CENTROID :ELEM_FACE
+                        :EMBEDDED-AREA :EMBEDDED-AREA-DEFINITION :EMBEDDED-LOCATION :EMBEDDED-UI :ENABLE 
+                        :ENABLE-FORM :ENABLE-LENGTH-DRAG :ENABLE-U-ROTATE :ENABLE-V-ROTATE :ENABLE-W-ROTATE 
+                        :ENABLE-WIDGET-TIPS :ENABLE_CHILDREN :END :END-1ST :END-2ND :END-INPUT-FEEDBACK 
+                        :ENDPOSITION :END_EDGES :END_EDGE_SIDE :END_NAME :END_TANGENT :ENGLISH :ENLARGEMENT 
+                        :ENTER-UI :ENTERACTION :ENTERACTIONAFTERRANGESELECTION :ENTRY-TYPE :ENTRYALIGNMENT
+                        :ENTRYBORDER :ENUM-COLUMN :ENUM-TYPE :ENVIRONMENT :EQUAL :EQUAL_3D :ERROR :ERROR-MESSAGE 
+                        :ERROR-TYPE :ERROR_BROWSER_COLOR :ERROR_LABEL_COLOR :EVALUATE :EVERYTIME :EXAMPLE 
+                        :EXAMPLES :EXCEPTION :EXCLUDE-FROM-UNIVERSAL-LOAD :EXCLUDE_FACES :EXCLUSIVE :EXECUTE 
+                        :EXISTENCE :EXIT :EXIT-UI :EXIT-WITH-ERROR :EXOR :EXPAND-SHRINK :EXPAND-SHRINK-RANGE 
+                        :EXPAND-SHRINK-TOGGLE-TYPE :EXPAND-TABLE :EXPAND-TITLE :EXPAND-TOKEN :EXPAND-TREE 
+                        :EXPANDABLE :EXPANDED :EXPR :EXPR-TYPE :EXTEND_BOSS :EXTENSION :EXTENSION_LINE :EXTERNAL 
+                        :EXTERNAL-DIALOG-TITLE :EXTERNAL-EXPAND-SHRINK :EXTERNAL-EXPAND-SHRINK-TOGGLE-TYPE 
+                        :EXTERNALEDITOR :EXTRUDE-PROFILE :EXTRUDE_DIRECTION :EXT_SEL_ADD :EXT_SEL_INIT 
+                        :EXT_SEL_MOD :F@F :FAB-OP :FAB-OPS :FACE :FACE-PART-ALLOWED :FACEDISPL :FACEFORCE 
+                        :FACEFRCNV :FACEFTEMP :FACEHEATFL :FACEPRESSURE :FACES :FACES_ONLY :FACES_TYPE 
+                        :FACET-ACCURACY :FACETRLRE :FACE_3D :FACE_BUTTON_SWAP :FACE_LIST :FACE_NORMAL :FACE_PART 
+                        :FACE_PT :FACE_TO_UNTRIM :FACT1 :FACT2 :FACT3 :FACT4 :FACTOR :FACTOR_SCALE :FAHRENHEIT 
+                        :FAILED :FAILURE :FALSE :FANG :FAST :FAST-COMPLETE :FCHK :FDIS :FEAT-NAME :FEAT-SEL-ITEM 
+                        :FEATS :FEATURE :FEATURE-CLASS-NAME :FEATURE-LONG-NAME :FEATURE-MODE :FEATURE-NAME 
+                        :FEATURE-TYPE :FEATURE-VARIABLE :FEATURES :FEATURE_ABBREV :FEATURE_FEEDBACK_LEVEL 
+                        :FEATURE_FLAGSTRING :FEATURE_ID :FEATURE_PTS :FEATURE_TYPE :FEEDB 
+                        :FEEDBACK-APPLY-FUNCTION :FEEDBACK-DESTROY-FUNCTION :FEEDBACK-INIT-FUNCTION 
+                        :FEEDBACK-UPDATE-FUNCTION :FIFTH :FILE :FILE-NAME :FILE-SLOT :FILE-TYPE :FILE-TYPE-TITLE 
+                        :FILE2D_OUT :FILEACCU :FILENAME :FILENAME-INCL-PATH :FILENAME_DELOLD :FILENAME_GENERATE
+                        :FILENAME_PREFIX :FILEPATH :FILETYPE :FILE_NAME :FILING :FILING-VARIABLE 
+                        :FILING-VARIABLES :FILL :FILLCOLOR :FILLED :FILLET_2D :FILLET_RADIUS :FILLING
+                        :FILLONSELECT :FILLORDER :FILTER :FILTER-FUNCTION :FILTERSTATUSLINE :FILTER_FEATURES 
+                        :FINISH :FIRST :FIRST-FOUND :FIRST_ANGLE :FIRST_ARROW_TYPE :FIRST_LIST :FIRST_REF :FIT 
+                        :FIT_VP :FIX :FIX1 :FIX2 :FIX3 :FIXED :FIXED_AXES :FIXED_REL :FIXED_SCALE :FIXTEXT 
+                        :FIX_EDGES :FLAGGED :FLAG_DP :FLAT :FLAT-ERROR-LINEWIDTH :FLAT-INFO :FLAT-TEXT 
+                        :FLAT_DIRECTION :FLAT_INFO :FLAT_ORIGIN :FLAT_TEXT :FLAT_TRAPEZOID :FLIP_DIR :FLOAT
+                        :FLOAT-COLUMN :FLOAT-POS :FLOG :FLOW :FNAME :FNC :FNUM :FOCUS :FOCUS-TYPE :FOCUS1 
+                        :FOCUS1_AXIS :FOCUS1_BASIC :FOCUS1_CENTER :FOCUS1_DIRECTION :FOCUS1_PLANE :FOCUS2 
+                        :FOCUS2_AXIS :FOCUS2_BASIC :FOCUS2_CENTER :FOCUS2_DIRECTION :FOCUS2_PLANE :FOCUS_LOST 
+                        :FOCUS_RECEIVED :FOCUS_TYPE :FONT :FONT-CODE :FONT1B :FONT2B :FONTFILE :FONTNAME :FOO 
+                        :FOO-KEY :FOOT :FOOT_PER_SECOND :FOOT_PER_SECOND2 :FOOT_POUNDFORCE 
+                        :FOOT_POUNDFORCE_PER_SECOND :FOOT_POUNDFORCE_PER_SECOND_FOOT2 
+                        :FOOT_POUNDFORCE_PER_SECOND_FOOT2_FAHRENHEIT :FOOT_POUNDFORCE_PER_SECOND_FOOT_FAHRENHEIT 
+                        :FORCE :FORCE-CLOSE :FORCED_CONVECTION :FORCE_UPDATE :FOREGROUND :FORM :FORMAT 
+                        :FORMATFUNCTIONS :FORWARD :FORWARD-ARROW :FORWARD-ONLY :FORWARD-PICKING :FORWRDS 
+                        :FOR_FACE :FOR_PART :FP :FPATH :FPS_FACE :FRACT_INCH :FRAME :FRAME-STYLE :FRAME-TYPE 
+                        :FRAME2 :FRAME_OFF :FRAME_ON :FRAME_TYPE :FREE :FREE1 :FREE2 :FREE3 
+                        :FREEDOM_CONSTRAINED_COLOR :FREEDOM_FIXED_COLOR :FREEDOM_UNCONSTRAINED_COLOR :FREE_ANGLE 
+                        :FREE_ANNOS :FREE_CONVECTION :FREE_DISTANCE :FREE_NUMBER :FRENCH :FROM_MATRL :FRONT 
+                        :FRONT_BORDER :FRONT_BORDER_COLOR :FRONT_CHAMFER_ANGLE :FRONT_CHAMFER_DEPTH 
+                        :FRONT_CURRENT :FRONT_DIRECTION :FRONT_STRING :FR_DIR :FSB_APPLY :FSB_CANCEL :FSB_HELP 
+                        :FSB_NO_MATCH :FSB_OK :FTP :FT_FR_INCH :FT_FR_IN_SIGN :FT_FR_IN_TEXT :FULL :FULL-STRING 
+                        :FULL_NAME :FULL_RANGE :FUNC :FUNCTION :FUNC_FEAT :FUNC_FEAT: :FXD :G1 :G2 :G3 :G4 :G5 
+                        :G6 :G6A;HMQ$5$L$?% :G7 :GAP :GAP_DL_TO_BOX :GAP_EL_TO_ELEM :GATHERED_CURVES :GDT_DATUMS 
+                        :GDT_DATUMS: :GDT_SYMBOL :GDT_ZONE :GDT_ZONE_SHAPE1 :GDT_ZONE_SHAPE2 :GDT_ZONE_SIZE1 
+                        :GDT_ZONE_SIZE2 :GEAR :GENERAL :GENERAL_INFO :GENERIC :GEO :GEOM :GEOM-2D :GEOMETRIC 
+                        :GEOMETRY :GEOM_VAR :GEO_COLOR :GEO_SEL_ITEMS :GERMAN :GET :GET-CHILDREN
+                        :GET-GRAPHICS-ROOT :GET-PARENT :GET-SELECTED-OBJECTS :GETFROMPARENT :GET_ALL :GET_ALL_TOL 
+                        :GET_ANGLE :GET_FIRST :GET_LAST :GET_TABLE_ROOTS :GLOBAL :GLOBALCONSTR :GLOBAL_DEFAULT 
+                        :GLOBAL_SCALE :GO :GOODIES :GRADIAN :GRAM_PER_CENTIMETER3 :GRAPHICS :GRAPHICS-MODE 
+                        :GRAPHICSROOTBITMAPPATH :GRAVITY :GRAY :GRAY_SHADES :GRD :GREATER :GREEN :GRID 
+                        :GRIDHEIGHT :GRIDWIDTH :GRID_HEIGHT :GRID_MODE :GRID_WIDTH :GROUP :GROUP-MODE :GROUPED-
+                        :GROUPED-BOOLEAN :GROUPED-TOGGLE :GROUPS :GROUPTITLE :GROUP_BY :GROW-DOWNWARD 
+                        :GROW-UPWARD :GUI-VALUE :G_ORIGIN :H7 :HALF :HALF_OVERLAP :HANDLE :HARDPOINT :HATCH 
+                        :HATCHES :HATCHING :HATCH_ANGLE :HATCH_COLOR :HATCH_DIST :HATCH_DISTANCE :HATCH_LINETYPE 
+                        :HATCH_PART :HATCH_PATTERN :HATCH_REFPOINT :HEADER-CONFIG :HEADER_CONFIG :HEATGEN
+                        :HEAT_TRANSFER :HEAT_TREAT :HEIGHT :HELP :HELP-ACTION :HELPACTION :HELPPAGEID 
+                        :HEM-FLAT-TEX :HEM-FLAT-TEXT :HEM-PROCESSES :HEM_DIST :HEM_EDGE :HEM_FORMULA :HEM_LENGTH 
+                        :HEM_PROCESS :HERTZ :HIDDEN :HIDDEN-HATCH :HIDDEN-LINE-VISIBLE :HIDE :HIDE-INPUT-TOOL 
+                        :HIGH :HIGHLIGHT :HOLE :HOLE_DEPTH :HOLE_DIA :HOLE_DIA_SAFETY_ZONE_THICKNESS 
+                        :HOLE_DIA_TOL :HOLE_RADIUS :HOLE_SIDE_SF_QUAL :HORIZ :HORIZONTAL :HORIZ_TO_SRC :HOUR 
+                        :HOURS :HP-UX :HP_SYMBOLS :HP_SYMBOLS2 :HSL :HTTP :ICON :ICON-CLICK :ICON-FILE 
+                        :ICON-HEIGHT :ICON-HELP :ICON-WIDTH :ICONIFY :ID :IDENTIFIER :IDFFILE :IF-DOES-NOT-EXIST 
+                        :IF-EXISTS :IGES :IGNORE-DUPLICATE-EDGES-IF-HIDDEN :IGNORE-PIN 
+                        :IGNORE-POSITION-IF-IN-FOCUS :IGNORECMDICONS :IGNOREPIN :ILLEGAL :IMAGE :IMAGE-ALIGNMENT 
+                        :IMAGE-BACKGROUND :IMAGE-FILE :IMAGE-FOREGROUND :IMAGE-HEIGHT :IMAGE-NAME :IMAGE-WIDTH 
+                        :IMAGES :IMAGE_SHOWN :IMPORT-ASCII-FILE :IMPORT-COMPS-FILE :IMPRINT_BLANKS :IMPRINT_DIR 
+                        :IMPRINT_DIRECTION :IMPRINT_DISTANCE :IMPRINT_KEEP_PROFILE :IMPRINT_KEEP_TOOL 
+                        :IMPRINT_KEEP_WP :IMPRINT_LINEAR :IMPRINT_PART :IMPRINT_PARTS :IMPRINT_TOOLS 
+                        :IMPRINT_TO_PART :IMPRINT_WP :IN-CMD :IN-CMD-FILE-TOKEN :IN-CMD-FILE-TYPE-MATCH 
+                        :IN-CMD-INITIAL-TOKEN :IN-CMD-OPTIONS :IN-CMD-SHOW-OPTIONS :IN-DISPLAY :IN-ENABLE-FORM 
+                        :IN-FORM :IN-PATTERNS :IN-PLANE :IN-TITLE :IN-VIEW :INACTIVE :INACTIVE_COLOR :INCH 
+                        :INCHES :INCH_PER_SECOND :INCH_PER_SECOND2 :INCH_POUNDFORCE :INCH_POUNDFORCE_PER_SECOND
+                        :INCH_POUNDFORCE_PER_SECOND_FOOT2 :INCH_POUNDFORCE_PER_SECOND_INCH2 
+                        :INCH_POUNDFORCE_PER_SECOND_INCH2_FAHRENHEIT :INCH_POUNDFORCE_PER_SECOND_INCH_FAHRENHEIT 
+                        :INCL-POSITION :INCLCHILDREN :INCLINE_ANGLE :INCLPART :INCLTAB :INCLUDE-CHAMFER 
+                        :INCLUDE-PARENT-IN-DETAIL-NAME :INCLUDE-PARENT-IN-PARTIAL-NAME 
+                        :INCLUDE-PARTIAL-PREFIX-FOR-SECTION :INCOMPLETE :INCONSISTENT :INCREMENT :INCREMENTAL
+                        :INCREMENTAL-SELECTION :INDENT-LINES :INDENT-WITH-PIXMAP :INDENT-WITHOUT-PIXMAP :INDEX 
+                        :INDEX-COLOR :INDEX-FRAME-TYPE :INDEX-POSITION :INDEX-SIZE :INDICATOR :INDICATOR-TB 
+                        :INDICATOR-TBS :INDICATOR-TOGGLE-DATA :INDICATOR-TYPE :INDICATORON :INDICATORTYPE 
+                        :INERTIA :INERTIA_TENSOR :INFO-IMAGE :INFO-PREFIX :INIT :INITAL-VALUE :INITIAL-ELEMENT 
+                        :INITIAL-ENABLE :INITIAL-MODIFY-VALUE :INITIAL-OPTIONAL :INITIAL-PROMPT-TEXT 
+                        :INITIAL-VALUE :INITIAL-VARIABLE :INITIAL-VISIBLE :INITIAL-VLAUE :INITIAL-WIDTH 
+                        :INITIALDIRECTORY :INITIALIZE :INITIALIZED :INITIALPATTERN :INITIALTEXT :INITIALVALUE 
+                        :INITIAL_FLAG_LABEL_VISIBILITY :INIT_ACCESS_MODE :INIT_DEL_CALC :INIT_DEL_MANU 
+                        :INIT_UND_CALC :INIT_UND_MANU :INNER :INNER-ATTRIBUTES-COLOR :INNER-ATTRIBUTES-LINETYPE 
+                        :INNER-ATTRIBUTES-LINEWIDTH :INNER-FACES :INNER-RADIUS :INPUT :INPUT_MODE 
+                        :INSENSITIVECOLUMNS :INSERT_POINT :INSIDE :INSPECTION :INSTANCE :INSTANCE+PARENT-CONTENTS 
+                        :INS_CEN_CATCH :INTEGER :INTEGER-COLUMN :INTERACTIVE :INTERACTIVE-REST :INTERNAL 
+                        :INTERPOLATION :INTERPOLATION_POINT :INTERROGATOR :INTERROGATOR-FUNC :INTERROGATOR-TYPE 
+                        :INTERRUPT :INTERS :INTERSECTION :INTERSECTIONS :INTIAL-VALUE :INTIIAL-VALUE :INTPATH 
+                        :INVALID :INVALIDATE :INVISIBLE :IN_ASSEMBLY :IN_ASSEMBLY_LABEL :IN_ASSY_LBL_REL
+                        :IN_ASSY_RELATION :IN_DIA :IN_LAYOUT :IN_PART :IN_PART_LABEL :IN_PART_LBL_REL 
+                        :IN_PART_RELATION :IN_PLANE :IN_RELATION_LBL_REL :IN_VIEW :IN_WPSET :IN_WPSET_LABEL 
+                        :IN_WP_LABEL :IN_WP_LBL_REL :IN_WP_RELATION :IO :IRIX :IS-DESCENDENT :IS-DUAL-MODE 
+                        :IS-EDITABLE :IS-ENTRY-APPLICABLE :IS-ENTRY-VISIBLE :IS-EXPANDABLE :IS-GRAPHICS-MODE 
+                        :IS-OBJECT-DISPLAYED :IS-OBJECT-EXPANDED :IS-OBJECT-SELECTED :IS-OBJECT-TABLE-ROOT 
+                        :IS-ON-FN :IS-SELECTABLE :IS-SENSITIVE :IS-TABLE-MODE :ISALIGNED :ISHOMOGENEOUS :ISO
+                        :ISOMETRIC :ISOMETRIC_VIEW :ISOTROPIC :ISO_MODE :ISSET :ISVISIBLE :ITALIAN :ITEM :ITEM4 
+                        :ITEMHEIGHT :ITEMS :ITEM_5 :JAPANESE :JIS :JIS_TYE :JIS_TYPE :JJ_PART :JOULE 
+                        :JOULE_PER_KILOGRAM_KELVIN :JOULE_PER_SECOND :JUMP :JUSTFICATION :JUSTIFICATION :KEEP 
+                        :KEEP-PROFILE-AFTER-INPUT :KEEP-PROFILE-BEFORE-INPUT :KEEP-SETTINGS 
+                        :KEEP-TOOLBODY-UNTRIMMED :KEEP-WP-AFTER-INPUT :KEEP-WP-BEFORE-INPUT :KEEP-WP-PROFILE
+                        :KEEP-WP-PROFILE-EMBEDDED-LOCATION :KEEP-WP-PROFILE-POST-SEPARATOR 
+                        :KEEP-WP-PROFILE-PRE-SEPARATOR :KEEP_AS_DEFAULT :KEEP_AS_TOOL :KEEP_ATTR :KEEP_BLEND 
+                        :KEEP_BOSS :KEEP_FEATURE :KEEP_LABELS :KEEP_MATERIAL :KEEP_MOLD :KEEP_PROFILE 
+                        :KEEP_RESULTS :KEEP_STEPS :KEEP_TANGENT :KEEP_TOOL :KEEP_TOOLS :KEEP_WP :KELVIN :KEY 
+                        :KEYCOLUMNS :KEYCOLUMNSAPPLYTOKEN :KEYCOLUMNSAPPLYUNITS :KEYS :KEYVALUES :KEYWORD :KG 
+                        :KILLFOCUSACTION :KILOCAL :KILOCAL_PER_SECOND :KILOGRAMFORCE :KILOGRAM_PER_M3 :KILOHERTZ 
+                        :KILOJOULE :KILOJOULE_PER_SECOND :KILOMETER_PER_HOUR :KILONEWTON_METER :KILOWATT_PER_M2 
+                        :KILOWATT_PER_M2_KELVIN :KILOWATT_PER_M_KELVIN :KIP :KM :KNIFE_EDGES :KNOB :KNOB_AXIS 
+                        :KNOB_DIRECTION :K_FACTOR :LABEL :LABEL-FRAME :LABEL-STR :LABEL-STRING 
+                        :LABEL-TEXT-PUSH-ACTION :LABELINSENSITIVEPIXMAP :LABELPIXMAP :LABELS 
+                        :LABELSELECTINSENSITIVEPIXMAP :LABELSELECTPIXMAP :LABELSTRING :LABELTYPE :LABEL_FDBK 
+                        :LABEL_FONT :LABEL_ICON :LABEL_NAME :LABEL_ORIENTATION :LABEL_REL :LABEL_SIZE 
+                        :LABEL_VALUE :LANDSCAPE :LANGUAGE :LARGE :LAST :LAST-INPUT-AT-TOP :LASTUSED :LAST_VP 
+                        :LAYOUT :LAYOUT-MODE :LAYOUTS :LAYOUT_VIEW_BORDER :LAYOUT_VIEW_LABEL :LB :LBC :LBTB :LBTF 
+                        :LEADER_LENGTH :LEAD_DIAM :LEAD_THICK :LEAD_WIDTH :LEFT :LEFT-CENTER :LEFT-HAND 
+                        :LEFT-NEXT :LEFT-TOGGLE :LEFTATTACHMENT :LEFTBOTTOM :LEFTCENTER :LEFTOFFSET :LEFTPOSITION 
+                        :LEFTTOP :LEFTWIDGET :LEFT_ZERO_SUPPR :LEFT_ZERO_SUPPR_OFF :LEFT_ZERO_SUPPR_ON :LEGO 
+                        :LENGTH :LENGTH-2D :LENGTH-3D :LENGTH_MAX :LENGTH_MIN :LESS :LEVEL-PREFIX :LIBHEAD 
+                        :LIBPATH :LIBRARY :LIBRARY_3D :LIBSUB :LIFT_ANGLE :LIGHT_HELP_BODY :LIGHT_ICONS :LIMIT 
+                        :LIMIT1 :LIMIT1_TOL :LIMIT2 :LIMIT2_TOL :LIMITED :LIMITS :LINE :LINE- :LINE-DIST 
+                        :LINE-HORI :LINE-PARTO :LINE-PERPEND :LINE-REMOVE :LINE-TWOPTS :LINE-TYPE :LINE-VERTI
+                        :LINE-WIDTH :LINEAR :LINEAR_BUCKLING :LINEAR_STATIC :LINECOLOR :LINESIZE_ONLY 
+                        :LINESIZE_PREFERED :LINESP :LINESTYLE :LINE_2D :LINE_3D :LINE_COLOR :LINE_DIST :LINE_TYPE 
+                        :LINK :LIP_ANGLE :LIP_EDGE :LIP_LENGTH :LISP :LISP-FEEDBACK :LIST :LISTLABEL 
+                        :LISTMARGINHEIGHT :LISTMARGINWIDTH :LISTSIZEPOLICY :LISTSPACING :LL :LM :LOAD-3D 
+                        :LOAD-DRAWING :LOAD-DUP-AS-NEW :LOAD-FILE-TYPE :LOAD-PD :LOAD-SHARED :LOAD-TOOL-FUNC
+                        :LOAD-TOPLEVEL :LOADFILENAME :LOADTIME :LOAD_CONFIG :LOCAL :LOCAL-FUNCTION 
+                        :LOCAL-FUNCTIONS :LOCALCONSTR :LOCALIZED-KEYWORDS :LOCAL_COORD :LOCATION :LOFT_CHECK 
+                        :LOFT_TYPE :LOGFILE :LOGICALTABLE :LOG_FILENAME :LONG :LONG_DASHED :LOW :LOWER 
+                        :LOWER-POINT :LOWER-RESULT :LOWER_LEFT :LOWER_MIDDLE :LOWER_RIGHT :LOWER_TOL :LOWEST 
+                        :LOWEST-ABOVE :LOWEST-IN-RANGE :LOWEST_ABOVE :LOWEST_IN_RANGE :LPO_VDAPS :LR :LTB :LTF 
+                        :LTYPE :LT_BLUE :LT_LENGTH :LT_TYPE :L_ZERO :MACRO_NAME :MAGENTA :MAGNITUDE :MAINTAIN 
+                        :MAINTEXT :MAIN_NUM :MAIN_TOL :MAJOR :MANG :MANUAL :MANUAL-INPUT :MANUALLY 
+                        :MANUAL_HATCHES :MAPMENU :MAPTOGGLE :MARGIN :MARGINHEIGHT :MARGINWIDTH :MASK :MASS 
+                        :MASTER :MAT-ID :MATCH-BACKSLASH :MATCH-LEADING-PERIOD :MATCH-SLASH :MATCHLINE 
+                        :MATCHLINE_CREATE :MATCHLINE_REMOVE :MATCH_3PT :MATCH_PT_DIR_PT :MATCH_THREE_POINTS 
+                        :MATCH_THREE_PTS :MATERIAL :MATERIAL-NOT-FOUND :MATERIALS :MATE_ALIGN :MATE_FACES 
+                        :MATE_FACES_OFFSET :MAT_ID :MAX :MAX-DEPTH-EXCEEDED :MAX-PROPOSALS :MAX-VISIBLE-PROPOSALS 
+                        :MAX-WIDTH :MAXHEIGHT :MAXIMAL_CHECK :MAXIMUM :MAXIMUM-LABEL :MAXIMUM-NUMBER-OF-PARTS 
+                        :MAXRANGECOUNT :MAXROWS :MAXVALUE :MAXVISIBLERANGECOUNT :MAXWIDTH :MAX_BACK 
+                        :MAX_BEND_FORCE :MAX_BEND_FORCE_PER_M :MAX_BEND_LENGTH :MAX_CURVATURE :MAX_FORWARD 
+                        :MAX_INTERVAL :MAX_LOW :MAX_PRINCIPAL :MAX_SHEAR :MAX_THICK :MAX_UPP :MDIS :MEAS-OP 
+                        :MEAS-OPS :MEASURE-ANGLE :MEASURE-AXIS :MEASURE-DIRECTION :MEASURE-FEEDBACK-FUNCTION 
+                        :MEASURE-POINT :MEASURE-VECTOR :MEASURE-VECTOR-LIST :MEASURE_ANGLE :MEASURE_DIR 
+                        :MEASURE_DISTANCE :MEASURE_LENGTH :MEASURE_RADIUS :MECH_PART :MEDIUM :MEGAHERTZ 
+                        :MEGA_PASCAL :MEI :MENU-ACTION :MENU-EXAMPLE :MENUBAR :MENUHISTORY :MENUPOSITION :MESSAGE 
+                        :MESSAGE-NUMBER :META-NAME :METER_PER_MINUTE :METER_PER_SECOND :METER_PER_SECOND2 :METRIC
+                        :METRIC1 :METRIC2 :METRICTON :MF :MFG :MG :MG-ELEM-SHAPE-QUAD :MG-ELEM-SHAPE-TETRA---+ 
+                        :MG-ELEM-SHAPE-TRIA :MG-LINEAR :MG-P_ELEMENTS :MG-P_ELEMENTS--+ :MG-QUADRATIC---+ 
+                        :MG_ASCII :MG_ELEM_SHAPE_QUAD :MG_ELEM_SHAPE_TETRA :MG_ELEM_SHAPE_TRIA :MG_LINEAR :MG_PNF 
+                        :MG_QUADRATIC :MG_VRML :MI :MI-FILE :MID-DIR :MID-DISC :MID-HELP-POS :MIDDLE :MIDDLE_LEFT 
+                        :MIDDLE_MIDDLE :MIDDLE_RIGHT :MID_PRINCIPAL :MILES :MILES_PER_HOUR :MILL-PROFILE
+                        :MILLIMETER_PER_SECOND :MILLISECONDS :MILLIWATT_PER_M2 :MILS :MIN :MIND1 :MIND2 :MIND3 
+                        :MIND4 :MINHEIGHT :MINIMAL :MINIMAL-OWNER :MINIMAL-UI :MINIMAL-UI-AUTO-CLOSE 
+                        :MINIMAL-UI-CLOSE-ACTION :MINIMAL-UI-TITLE :MINIMAL-UI-TYPE :MINIMAL-UI-VALUE 
+                        :MINIMAL-UI-WIDTH :MINIMAL_CHECK :MINIMAL_EDGE :MINIMAL_LIP_LENGTH :MINIMAL_OWNER 
+                        :MINIMUM :MINIMUM-LABEL :MINIMUM-NUMBER-OF-PARTS :MINLEFTTOP :MINOR :MINUTES :MINVALUE 
+                        :MINWIDTH :MIN_BEND_RAD :MIN_CURVATURE :MIN_INTERVAL :MIN_LOW :MIN_MAX :MIN_PRINCIPAL 
+                        :MIN_SPACE :MIN_THICK :MIRROR_EDGE :MIRROR_PLANE :MIXED :MI_FILENAME :ML :MLEN :MM :MODAL 
+                        :MODE :MODEL :MODEL-RING :MODEL-UPDATE :MODELHOLES :MODEL_3D :MODEL_MAT_ID :MODEL_NAME 
+                        :MODEL_TEMP :MODEMENU :MODEMENUINITIALBUTTON :MODEMENULABEL :MODEMENUMUTUALEXCLUSION 
+                        :MODEMENUOFFOBJECTONLY :MODIFICATION_MODE :MODIFIED :MODIFIER0 :MODIFIER0-2ND :MODIFIER1 
+                        :MODIFIER1-2ND :MODIFIER2 :MODIFIER2-2ND :MODIFIER3 :MODIFIER_A :MODIFIES :MODIFY
+                        :MODIFY-LTAB-VALUE :MODIFYACTION :MODIFY_FACE :MODULE :MODULETITLE :MOD_METHOD :MONTH 
+                        :MOUNT_CLEAR :MOUSE_RELATIVE :MOVE-IT :MOVE_POINT :MR :MRAD :MT :MULTI-CLICK :MULTILINE 
+                        :MULTIPLE :MULTIPLE-ITEMS :MULTIPLE-ROWS :MULTIPLE_SEL :MULTIVIEW :MUST-VARIABLE-SCOPE 
+                        :MUST-VARIABLES-SCOPE :MUSTMATCH :MUTUAL-EXCLUSION :MUTUAL-EXCLUSION-CLEANUP 
+                        :MUTUAL-EXCLUSION-PERSISTENT-DATA-STORAGE :MUTUALEXCLUSION :MY-DIALOG-PACKAGE 
+                        :MY-FILE-TYPE :MY-PACKAGE :MY-SPECIAL-BOM-ATTR :MY_DIRECTION :MY_VARIABLE :MY_VECTOR 
+                        :MY_VECTOR_LIST :N1 :N10 :N11 :N12 :N2 :N3 :N4 :N5 :N6 :N7 :N8 :N9 :NAME :NAME-STR 
+                        :NAME-STRING :NASTRAN :NEGATIVE :NEG_FACE_NORMAL :NEG_HORIZ :NEG_U :NEG_V :NEG_VERT 
+                        :NEG_VP_DIR :NEG_W :NEG_X :NEG_Y :NEG_Z :NEW :NEW-DOCUMENT :NEW-DOCUMENT-AND-PART 
+                        :NEW-GROUP :NEW-INPUT-AT-TOP :NEW-KEY :NEW-MENU :NEW-NAME :NEW-VERSION-PARALLEL
+                        :NEW-VERSION-REPLACE :NEWTON :NEWTON_METER :NEWTON_MILLIMETER :NEWTON_PER_KILOGRAM 
+                        :NEWTON_PER_M2 :NEWTON_PER_MILLIMETER2 :NEWTON_PER_MM2 :NEW_3D :NEW_ANGLE :NEW_ANGLE_DIST 
+                        :NEW_DISTANCE :NEW_DISTANCE1 :NEW_DISTANCE2 :NEW_END_RADIUS :NEW_LINETYPE :NEW_NAME 
+                        :NEW_OWNER :NEW_P :NEW_PARAMETER :NEW_PART :NEW_PARTS :NEW_RADIUS :NEW_START_RADIUS 
+                        :NEW_SYMBOL :NEXT :NEXT-CATCH :NEXT-VARIABLE :NEXT_BOOLEAN :NEXT_CATCH :NEXT_CATCH_ONLY
+                        :NIL :NO :NO- :NO-CANCEL :NO-GEO-INFO :NO-GEOMETRY-MODIFIED :NO-HIGHLIGHT :NO-PROXY 
+                        :NOCHAIN :NOCHECK :NODE-NAME :NOLABEL_FDBK :NOMINAL-DIAMETER :NOMINAL-DIAMETER-INCH 
+                        :NOMINAL_PIPE_DIA :NOMINAL_VALUE :NON-GEOMETRIC :NONE :NONE_TO_SRC :NONPREF :NON_CONTIN 
+                        :NON_RECURSIVE :NORESIZE :NORMAL :NORMAL-ARC :NORMALIZE :NORMALS_OPEN :NORMALS_OPPOSITE 
+                        :NORMALS_SAME :NORMAL_NEGATIVE :NORMAL_OPEN :NORMAL_POSITIVE :NORMAL_TO :NORM_WP 
+                        :NOR_DIST :NOSE_ANGLE :NOSE_LENGTH :NOSE_WIDTH :NOT-EQUAL :NOT-GREATER :NOT-LESS 
+                        :NOT-MANUFACTURABLE :NOTE :NOT_TRANSP :NO_AUTOLABELFDBK :NO_AUTO_BODYCHECK 
+                        :NO_AUTO_LABELFDBK :NO_DISPLAY_BOX :NO_ERROR :NO_HIGHLIGHT :NO_LABEL_FDBK 
+                        :NO_LINETYPE_ADJUST :NO_OVERLAP :NO_PROJECT :NO_REP :NO_TANGENT :NO_TOL :NPT :NR_SLOTS 
+                        :NT :NUM :NUMBER :NUMBER-OF-SELECTED-OBJECTS :NUMBER-OF-TABLE-ROOTS :NUMCOLUMNS 
+                        :NUM_STEPS :NURBS :N_CYCLES :N_STEPS :OBJ-DATA :OBJ-NAME :OBJ-PATH :OBJ-PRINTNAME 
+                        :OBJCLIENTDATA :OBJECT :OBJECTS :OBJPATH :OBJPNAME :OFF :OFF-TOKEN :OFF: :OFF:FINE! 
+                        :OFFSET :OFFSET-FLAT-TEXT :OFFSET-PROCESSES :OFFSET_FORMULA :OFFSET_HEIGHT :OFFSET_LINE 
+                        :OFFSET_POINT :OFFSET_PROCESS :OFFSET_TYPE :OFFSET_VALUE :OK :OK-ACTION 
+                        :OK-ACTION-NEXT-VALUE :OK-ACTION-NEXT-VARIABLE :OK-ACTION-PRECONDITION :OK-CANCEL-HELP 
+                        :OK-CLEANUP :OKACTION :OKBUTTONACTION :OKBUTTONLABEL :OLI :ON :ON-ATTACH-CNT 
+                        :ON-BODY-MERGE :ON-BODY-SPLIT :ON-COPY :ON-EMPTY-SELECTION :ON-INVALIDATE :ON-LOST-REF 
+                        :ON-MERGE :ON-REQUEST :ON-SPLIT :ON-TOKEN :ON-XFORM :ON-XFROM :ONE :ONE-VIEW :ONELEVEL 
+                        :ONE_ELEMENT :ONE_FACE :ONLINE :ONLY_ANNOTATIONS :ON_ELEMENT :ON_LINE :OPEN :OPEN_FACE 
+                        :OPEN_REF :OPERATION_TYPE :OPPOSITE :OPTION :OPTION-DIALOG-POS :OPTION-MENU-NAME 
+                        :OPTIONAL :OPTIONS :OR :ORDER :ORGANISATION :ORIENTATION :ORIGIN :ORIGINAL_PART :OSD
+                        :OTHER :OTHER-ALLOWED :OTHER-CLEANUP :OUT-CMD :OUT-CMD-FILE-TOKEN
+                        :OUT-CMD-FILE-TYPE-MATCH :OUT-CMD-INITIAL-TOKEN :OUT-CMD-OPTIONS :OUT-CMD-SELECT-TOKEN 
+                        :OUT-CMD-SHOW-OPTIONS :OUT-DISPLAY :OUT-ENABLE-FORM :OUT-FILE-TOKEN :OUT-PATTERNS 
+                        :OUT-TITLE :OUTER :OUTER-FACES :OUTER-RADIUS :OUTFILE :OUTLINE :OUTPUT :OUTPUT-FILE 
+                        :OUTPUT_TO_ME10 :OUTPUT_TO_VP :OUTSIDE :OUT_DIA :OUT_FILE :OVERRIDE
+                        :OVERRIDE-ELEMENTS-TEXT :OVERRIDEREDIRECT :OVERWRITE :OVERWRITE-3D :OVERWRITE-DRAWING 
+                        :OVERWRITE-ELEMENTS-TEXT :OVERWRITEIFEXISTS :OVER_CONSTRAINED :OWNER :OWNER-VARIABLE 
+                        :OWNER_FRAME :OWNER_SHEET :OWNER_SKETCH :OWNER_TYPE :OWNER_VIEW :OZ :P-CURVES :P00 :P01 
+                        :P02 :P03 :P04 :P1 :P2 :P3 :PACKAGE :PACKAGE-FILE :PACKING :PAGE :PAGEID :PAGETITLE 
+                        :PAGE_ID :PANELWIDTH :PAPERSIZE :PAPER_SIZE :PAR :PARALLEL :PARALLEL_ANGLE 
+                        :PARALLEL_FACES :PARALLEL_REL :PARALLEL_TO :PARAL_TO_SRC :PARAL_TO_TGT :PARAMETERS_EXPAND 
+                        :PARAMETERS_SHRINK :PARAMETRIC :PARENT :PARENT-CONTENTS :PARENT-INSTANCE 
+                        :PARENT-MENU-NAME :PARENT-NODE :PARENT-SHELL :PARENT_ASSEMBLY :PARENT_VIEW :PART 
+                        :PART-ASSEMBLY :PART-INCL-NEW :PART-MODE :PART-NUMBER :PARTASSY :PARTHOLES 
+                        :PARTIAL-BORDER :PARTIAL-LABEL :PARTIAL-SCALE :PARTIAL_VIEW :PARTNAME :PARTS 
+                        :PARTS-AND-ASSEMBLIES :PARTS-ONLY :PARTS_ASSEMBLIES :PARTTEMP :PARTTYP :PART_ASMB 
+                        :PART_ASSMB :PART_WIDTH :PAR_FACE :PAR_WP :PASCAL :PATCH :PATH :PATHNAME :PATHNAMES 
+                        :PATRAN :PATTERN :PATTERNLIST :PATTERNS :PATTERN_LENGTH :PA_LIST :PA_LIST_VS_PA_LIST 
+                        :PBCPART :PCBASS :PCBASSEMBLY :PCBMODEL :PCBPART :PCBWORKPLANE :PCBWP :PCL :PCURVES 
+                        :PCV-ACCURACY :PCV_ACCURACY :PDS :PENSIZE_ONLY :PENSIZE_PREFERED :PEN_NUMBER :PEN_SIZE 
+                        :PEN_WIDTH :PERCENT :PERCENT_SCALE :PERCENT_TOL :PERMANENT :PERMANENT_SETTINGS_2D 
+                        :PERMANENT_SETTINGS_3D :PERPEND :PERPENDICULAR :PERPENDICULAR_REL :PERPEND_TO 
+                        :PERP_TO_SRC :PERP_TO_TGT :PERSISTENT-DATA-STORAGE :PERSISTENT-DATA-STORAGE-MODULE 
+                        :PERSISTENT-DATA-STORAGE-VARIANT-VARIABLE :PERSISTENT-HIGHLIGHT :PERSISTENT-PROPOSALS 
+                        :PERSONALITY :PERSPECTIVE :PFLAG :PHANTOM :PHONE :PICK :PICK-TOKEN :PICKED-POLESTAR :PIN 
+                        :PINNED :PINS :PINTYPE :PIN_1 :PIN_2 :PIN_SPAN :PIPE :PIPE-RADIUS :PIPE_G :PIPE_G:LABEL
+                        :PIPE_RADIUS :PIPE_RP :PIPE_RP:LABEL :PIPING :PISTON_ANG :PISTON_RAD :PITCH :PIXMAP 
+                        :PIXMAP-FILE :PIXMAP-NAME :PLACE :PLACE-AT-TOP :PLACEMENT :PLANAR :PLANAR_REF :PLANE 
+                        :PLANE_REF :PLANE_TYPE :PLIST :PLOTTER :PLOTTER_NAME :PLOTTER_TYPE :PLOT_ANGLE 
+                        :PLOT_TRANSF :PLUS_MINUS :PLUS_TOL :PM :PM_ID :PM_NICK_NAME :PM_PATH :PM_TOL :PM_VALUE 
+                        :PNT2 :POCKET :POINT :POINT-2D :POINT-3D :POINT-3D-PICK :POINT-ON-EDGE :POINT-ON-EDGE1
+                        :POINT-ON-EDGE2 :POINT-ON-FACE :POINT-ON-FACE1 :POINT-ON-FACE2 :POINTS 
+                        :POINT_AND_DIRECTION :POINT_EDGE :POINT_FACE :POINT_PICK_CREATE :POLESTAR-PASSENGER 
+                        :POLESTAR_PICK :POLISHED :POLYGON :POLYGONP :POPDOWN :POPUP :PORT :PORTRAIT :POS 
+                        :POSITION :POSITION-PART :POSITION-PROMPT :POSITION-WP :POSITIONAL :POSITIONS 
+                        :POSITION_BACK :POSITIVE :POSITIVE-INTEGER :POSITIVE-LENGTH :POSITIVE-NUMBER :POST 
+                        :POSTFIX :POSTFIX_FONT :POSTFIX_SIZE :POST_SIZE :POUNDAL :POUNDEL :POUNDFORCE 
+                        :POUNDFORCE_PER_FOOT2 :POUNDFORCE_PER_INCH2 :POUND_FOOT :POUND_INCH :POUND_PER_INCH3
+                        :POWER :PRE :PRECONDITION :PREF :PREFERENCE :PREFIX :PREFIX_FONT :PREFIX_SIZE :PREF_TABLE 
+                        :PRESELECTION-3D-ANNO :PRESELECTION-ASSEMBLY :PRESELECTION-DEFINITION-TIME 
+                        :PRESELECTION-DOCUPLANE :PRESELECTION-EDGE :PRESELECTION-FACE :PRESELECTION-PART 
+                        :PRESELECTION-WP :PREV :PREVIEW :PRE_DEFINED :PRE_SIZE :PRIMARY :PRIMARY-IMAGE 
+                        :PRIMARY-PIXMAP :PRIMARYIMAGEHEIGHT :PRIMARYIMAGEWIDTH :PRINCIPAL :PRINT :PRINT-VALUE 
+                        :PRINT-VALUES :PRINTER :PROCESS :PROCESS-TOOL-PARAMLIST :PROCESSINGDIRECTION 
+                        :PROD-DESCRIPTION :PRODUCT :PRODUCT-CONTEXT :PRODUCT-DEF-CONTEXT :PRODUCT-DESCRIPTION 
+                        :PRODUCT-ID :PRODUCT-NAME :PROFILE :PROFILE_FNC :PROF_FNC :PROF_WP :PROJECT :PROJECTION 
+                        :PROMPT :PROMPT-TEST :PROMPT-TEXT :PROMPT-VARIABLE :PROPATH :PROPERTIES :PROPOSALS 
+                        :PROPOSALS-ORDER :PROTECT :PROTOCOL :PROXY :PRP :PSFILE :PSI :PT_DIR :PT_PT_PT :PUNCT 
+                        :PUSH :PUSH-1 :PUSH-2 :PUSH-3 :PUSH-ACTION :PUSH-ACTION-UI :PUSH-INFO :PUSH-OTHER 
+                        :PUSHACTION :PUSHBUTTON :PUSHBUTTONENABLED :PUSHBUTTONGADGET :PUSH_21_PUSHED 
+                        :PUSH_22_PUSHED :PUT_ALL :PUT_ALL_TOL :PX_ORDER :PY_ORDER :PZ_ORDER :P_CURVES :P_ERROR 
+                        :P_LINEAR_STATIC :P_MODAL :QE_PART :QUADRATIC :QUALIFIER :QUERY-ONLY :QUESTION
+                        :QUICKVIEW-DIR :QUICKVIEW-PARCELS :QUICKVIEW-PRECONDITION :QUICKVIEW-SHADED 
+                        :QUICKVIEW-TYPE :QUICKVIEW-USE-BOTH-SIDES :QUICKVIEW-WP :QUICKVIEW_ON_EDIT :QV-PARCEL 
+                        :Q_CONTENTS :Q_DBMOD :Q_DBRO :Q_INSTANCE :Q_SDMOD :Q_SDRO :R :RACK :RAD :RADIAN 
+                        :RADIATION :RADIO :RADIOBEHAVIOR :RADIUS :RADIUS1 :RADIUS2 :RANGE :RATIO :RAW :RAW-ANGLE 
+                        :RAW-LENGTH :RAW-VPORT-PICK :RA_MAX_VAL :RA_MIN_MAX :RA_MIN_VAL :RA_TYPE :RA_VALUE :RBTB
+                        :RBTF :REACTION-FORCE :READ-ACCESS :REAL :REALIZED :RECEIVE :RECOMPUTESIZE :RECORDER 
+                        :RECREATED_2D :RECRE_2D :RECTANGLE :RECURSIVE :RECURSIVE-GEO-ELEMENTS :RED 
+                        :REDO_ALL_BLENDS :REDO_NO_BLENDS :REDO_SELECTED_BLENDS :RED_TO_BLUE :REF :REF-ARROW-SIZE 
+                        :REF-ARROW-TYPE :REF-COLOR :REF-CONTROL :REF-ELEM :REF-VARIABLE :REF-WP :REFDES 
+                        :REFERENCE :REFERENCE-CONTROL :REFERENCE-DIALOG :REFERENCE-POSITION :REFERENCE-VARIABLE 
+                        :REFERENCE-WP :REFERENCE_FACE :REFERENCE_PLANE :REFL-COLOR :REFL-POWER :REFLECT_PLANE 
+                        :REFLINE :REFL_COLOR :REFL_POWER :REFRESH-EVENTS :REFRESH-TREE :REFS :REFS: 
+                        :REF_ARROW_SIZE :REF_ARROW_TYPE :REF_COLOR :REF_ELEM :REF_FEAT :REF_LINE_TYPE :REF_POINT 
+                        :REF_SRC :REF_TEMP :REF_WP :REL-SETS :RELATION :RELATION_SET :RELATIVE :RELATIVE-POSITION 
+                        :RELEASE :RELEASE-NAME :RELEASEACTION :RELIEF-TYPE :RELIEF_DEPTH :RELIEF_TOOL 
+                        :RELIEF_TYPE :REL_ANGLE :REL_DISTANCE :REL_SET-MODE :REMOTE :REMOVE 
+                        :REMOVE-DUPLICATE-HIDDEN-LINES :REMOVE-FULL-CIRCLES :REMOVE-FULL-CIRCLES--+-- 
+                        :REMOVE-LIBRARY-PARTS :REMOVE-LIBRARY-PARTS--+-- :REMOVE-SMALL-PARTS :REMOVE_COMPONENTS 
+                        :REMOVE_INVISIBLE_ELEMENTS :REM_PLACES :RENAME :RENUMBER :REP :REPEAT 
+                        :REPEAT-INPUT-UNTIL-DEFINED :REPEAT-INPUT-UNTIL-INPUT-DEFINED :REPEAT-WITH-ERROR 
+                        :REPEATDELAY :REPEAT_FACTOR :REPLACE :REPLACEMENT-INFO :REPORT :REPORT-FORMAT 
+                        :REPORT-VARIABLES :RESELECT :RESET :RESET- :RESET-VARIABLE :RESET_COORD :RESIZABLE 
+                        :RESIZEHEIGHT :RESIZEPOLICY :RESIZEWIDTH :RESIZE_FACTOR :RESOLUTION :RESOLVER_MODE
+                        :RESTRICT :RESULT-TYPE :RESURSIVE :REVERSE :REVERSE-CYL-AXIS :REVERSED :REVERSE_DIR 
+                        :REVERSE_FRONT_DIR :REVERSE_FRONT_UP_DIR :REVERSE_UP_DIR :REVISION :REV_FIRST_DIR 
+                        :REV_SECOND_DIR :RE_INTERSECT :RGB :RGB-COLOR :RGB_COLOR :RGD :RIGHT :RIGHT-HAND
+                        :RIGHT-NEXT :RIGHT-TOGGLE :RIGHTATTACHMENT :RIGHTBOTTOM :RIGHTCENTER :RIGHTOFFSET 
+                        :RIGHTPOSITION :RIGHTTOP :RIGHTWIDGET :RIGHT_ZERO_SUPPR :RIGHT_ZERO_SUPPR_OFF 
+                        :RIGHT_ZERO_SUPPR_ON :RIGID :RIGID_REL :RING :RISING_FACE :ROOT :ROOTCONTROL :ROTATE 
+                        :ROTATE_PT :ROTATION :ROTATIONAL :ROTATION_ANGLE :ROT_ANGLE :ROUGH :ROUGH_TOL :ROUND 
+                        :ROUND_BRACKETS :ROUND_MINING :ROW :ROWKEY :ROWS :ROW_SPAN :RP_MAX_VAL :RP_MIN_MAX
+                        :RP_MIN_VAL :RP_VALUE :RTB :RTF :RT_MAX_VAL :RT_MIN_MAX :RT_MIN_VAL :RT_VALUE :RUNTIME 
+                        :RX_TYPE :R_FACES :R_ZERO :SAFETY_ZONES :SAME :SAMPLE :SAT :SAT1 :SAT3 :SAVE 
+                        :SAVE-FILE-TYPE :SAVE-LOG_FILE :SAVE-PD :SAVE-VARIABLES :SAVE-VARIALBES :SAVEFILENAME 
+                        :SAVE_TO_REGISTRY :SAW :SBFILE :SCALE :SCALE-INFO :SCALED :SCALEHEIGHT :SCALEMETHOD 
+                        :SCALEMULTIPLE :SCALEWIDTH :SCALE_FACTOR :SCREEN :SCREEN-X :SCREEN-Y :SCREEN_PEN_SIZE 
+                        :SCREEN_X :SCREEN_Y :SCREEN_Z :SCROLLBARDISPLAYPOLICY :SCROLLBARPLACEMENT 
+                        :SCROLLHORIZONTAL :SCROLLINGPOLICY :SCROLLVERTICAL :SD :SD-ACCESS :SD-ACCESS-ONLY 
+                        :SD-ASSEMBLY :SD-ASSEMBLY-CONTENTS :SD-CORP-SITE-USER :SD-CUST-OP-REFERENCE 
+                        :SD-CUST-OP-SOURCE :SD-FILE :SD-PART :SD-PART-CONTENTS :SD-WORKPLANE 
+                        :SD-WORKPLANE-CONTENTS :SD-WPSET :SD-WPSET-CONTENTS :SDLIB-TABLE :SDLIB-TYPE 
+                        :SDLIB-UNIQUE-ID :SD_DATA :SD_DATA_MODIFIED :SD_PACKAGE :SD_PKG :SD_SES :SE 
+                        :SEC-ICON-CLICK :SECOND :SECONDARY :SECONDARY-IMAGE :SECONDARY-PIXMAP 
+                        :SECONDARY-VALUE-TYPE :SECONDARYIMAGEHEIGHT :SECONDARYIMAGEWIDTH :SECONDS :SECONDTEXT 
+                        :SECOND_ARROW_TYPE :SECOND_LIST :SECOND_REF :SECTION :SECTION-LABEL :SECTION-LINE 
+                        :SECTION-SURFACE :SECTION_VIEW :SECURE-SECTION-FLAG :SECURED :SEC_NUM :SEC_TOL :SEEEND 
+                        :SEGMENTS :SEGM_NO_OVERLAP :SEGM_OVERLAP :SEL-CS :SEL-INST-CONTEXT :SELECT :SELECT-ALL 
+                        :SELECT-AND-ACTIVATE :SELECT-AND-EXECUTE :SELECT-ATTRIBUTE :SELECT-VARIABLE :SELECTCOLOR 
+                        :SELECTED :SELECTEDIMAGE :SELECTED_OWNER :SELECTED_PART :SELECTINSENSITIVEPIXMAP 
+                        :SELECTION :SELECTIONACTION :SELECTIONMODE :SELECTIONPOLICY :SELECTPIXMAP 
+                        :SELECT_CATEGORY :SELECT_DONE :SELECT_FACE :SELECT_FEATURE :SELECT_PART 
+                        :SELECT_PART_ASSEMBLY :SEL_CS :SEL_FACE :SEL_LIST :SEL_PART :SEL_SYMBOL :SEL_TEST
+                        :SEL_TEXT :SEND :SENSITIVE :SEPARATOR :SEQUENTIAL :SEQUENTIAL-LOOP :SESSION :SET 
+                        :SET-BROWSER-MODE :SET-DETAILED-MODE :SET-DETAILED-PIXMAP-MODE :SET-DUAL-MODE 
+                        :SET-GRAPHICS-MODE :SET-OBJECT-DESCRIPTION :SET-OBJECT-EDITOR :SET-OBJECT-EXPANSION 
+                        :SET-OBJECT-SELECTION :SET-PARTIAL-VISIBLE-ADD-MODE :SET-SEPERATION :SET-TABLE-MODE 
+                        :SET-VISIBLE :SETFOCUSACTION :SETT_IGES :SETT_STEP :SET_ENTRY :SET_KNOBS :SET_RELATIONS
+                        :SEVERITY :SF-SPACE :SHADED :SHADOWTHICKNESS :SHADOWTYPE :SHAPE :SHAPE-DESCRIPTION 
+                        :SHAPE-NAME :SHAPE-PROD-DEF :SHAPE-PROD-DEF-CLOSE :SHARE :SHARED :SHARP_BEND_RADIUS 
+                        :SHARP_EDGE :SHEET :SHEET-ADVISOR :SHEET-NAME :SHEET_FEATURE :SHEET_MATERIAL :SHEET_PART
+                        :SHEET_THICKNESS :SHEET_TO_SCALE :SHELL :SHIFT :SHOP-NAME :SHOPNAME :SHOW 
+                        :SHOW-INPUT-TOOL :SHOW-SELECT-MENU :SHOW-TREE-DETAILS :SHOWASDEFAULT :SHOWFOCUS :SHOWLOG 
+                        :SHOWMODIFIED :SHOWVALUE :SHOW_AFFECTED :SHOW_AFFECTED_BLENDS :SHOW_ANGLE :SHOW_DIALOG 
+                        :SHOW_DIAMETER :SHOW_DISTANCE :SHOW_DOWNSIDE :SHOW_MEASURED_ANGLE :SHOW_MEASURED_DISTANCE 
+                        :SHOW_MEASURED_LENGTH :SHOW_MEASURED_RADIUS :SHOW_RADIUS :SHRINK-TITLE :SHRINK-TOKEN 
+                        :SHRINKABLE :SIDE :SIDE_BEHIND :SIDE_EDGE :SIDE_INFRONT :SIDE_NEGATIVE :SIDE_OPEN 
+                        :SIDE_POSITIVE :SIDE_SF_QUAL :SIGN :SIGNED :SIMPLIFICATION :SINGLE :SINGLE-CELL 
+                        :SINGLE-CLICK :SINGLE-ROW :SINGLE_BEND :SINGLE_SEL :SINGLE_SELECTION :SINGLE_SIDE 
+                        :SINGLE_VX :SINK_BOTTOM_SF_QUAL :SINK_DEPTH :SINK_DEPTH_PROP 
+                        :SINK_DEPTH_SAFETY_ZONE_THICKNESS :SINK_DEPTH_TOL :SINK_DIA :SINK_DIA_PROP 
+                        :SINK_DIA_SAFETY_ZONE_THICKNESS :SINK_DIA_TOL :SINK_SIDE_SF_QUAL :SITE :SIXTH :SIZE 
+                        :SIZE_ABS :SIZE_REL :SIZE_X :SIZE_Y :SI_METRIC :SKETCH :SKETCH_NAME :SKIN_PART :SKIP 
+                        :SLANT :SLASH :SLASH_SYNTAX :SLASH_TYPE :SLIDERSIZE :SLIDER_DRAG_CALLBACK 
+                        :SLIDER_VALUECHANGED :SLIDE_ORIGIN :SLOT :SLOT_WIDTH :SLUG_PER_FOOT3 :SMALL :SMOOTH 
+                        :SMOOTH_ANGLE :SMOOTH_EDGES_3D :SM_PART :SOLID :SOLIDDESIGNER :SOLVED 
+                        :SOLVED_BROWSER_COLOR :SOLVED_LABEL_COLOR :SOLVING_MODELING :SOLVING_POSITIONING 
+                        :SOLVING_SIMULTANEOUS :SOLVING_STEPS :SOLVING_TRANSFORMATION_COUPLED :SOME-KEY :SORT-BY 
+                        :SORT-OFF :SORTED :SOURCE :SOURCE-SPACE :SOURCE_FILE :SPACE :SPACE-HANDLE :SPACING
+                        :SPANISH :SPECIAL :SPHERE :SPIN :SPINDOWNACTION :SPINE :SPINUPACTION :SPLINE :SPLINE_2D 
+                        :SPLINE_3D :SPLINE_OPTION_CREATE_EXPAND :SPLINE_OPTION_CREATE_SHRINK :SPLINE_SF :SPOT 
+                        :SQUARE :SQUARE_BRACKETS :SRC-LOCATION :SS-SURFACE :ST100 :ST200 :STAMP-PROCESSES 
+                        :STAMP_DIR :STANDARD :STANDARD_VIEW :STANDARD_VP :STARBASE :START :START-INPUT-FEEDBACK 
+                        :START-NODE :START-TANGENT :START-VARIABLE :START-VARIABLES :STARTPOSITION :STARTUP
+                        :START_EDGES :START_EDGE_SIDE :START_NAME :START_TANGENT :STATE :STATUS 
+                        :STD_TAP_CLEARANCE :STEEL :STEP :STEREOLITHOGRAPHY :STOP :STORE :STORE-FLAG 
+                        :STORE-PICK-POINT :STOREPARTS :STORE_3D_METHOD :STR :STRAIGHT :STRAIN :STRAIN-ENERGY 
+                        :STRAIN-ENERGY-DENSITY--+ :STRAIN-ENERGY-DENSITY---+ :STRATEGY :STRESS :STRETCH :STRING 
+                        :STRING-CLIENT-DATA :STRING-COLUMN :STRIPES :STRUCTURE :STUDIES :STUDY :STUDY-MODE 
+                        :STUDY_DATA :SUB-MENU :SUB-MENU-NAME :SUBACTION :SUBACTION-BOTTOM-LINE 
+                        :SUBACTION-CLOSE-BEHAVIOR :SUBACTION-NAME :SUBASSY-OP :SUBASSY-OPS :SUBDIRECTORY :SUBFIX 
+                        :SUBFIX_FONT :SUBFIX_SIZE :SUBGROUPS :SUBMENU :SUBMENUID :SUBTITLE :SUB_SIZE :SUCCESS 
+                        :SUMMARY :SUPER :SUPERFIX :SUPERFIX_FONT :SUPERFIX_SIZE :SUPER_SIZE :SUPPRESS 
+                        :SUPPRESS-HIDDEN-TANGENT :SUPPRESS-MIN :SUPPRESS-SCALE-VALUE :SUPPRESS-TITLE :SURFACE 
+                        :SURFACE_AREA :SURFACE_AXIS :SURFACE_PROFILE :SURFACE_TYPE :SUSPENDED :SWAP 
+                        :SWITCHTOMAINTASKMENU :SWITCH_DIR :SWITCH_RESOLUTION :SYM :SYMBOL :SYMBOL---+--- 
+                        :SYMBOL-REF-ELEM :SYMBOL-REF-ELEM-POINT :SYMBOL-UNIQUE-PART-ID :SYMMETRYLINE-CREATION 
+                        :SYM_CATEGORY :SYM_COLOR :SYM_LINE_TYPE :SYM_LTYPE :SYM_NAME :SYM_OFFSET :SYM_PENSIZE
+                        :SYM_PIXMAP :SYM_PLANE :SYM_REFS :SYM_SELECT :SYNTAX :SYS-SETTINGS :SYSCMD :SYSCMDID 
+                        :SYSTEM :S_FACES :T1 :T2 :T3 :T4 :T5 :T6 :T7 :TABIMAGE :TABLE :TABLE-DETAILS 
+                        :TABLE-DISPLAY-NAME :TABLE-NAME :TABLE-TITLE :TABLESTATUSBAR :TABLETITLE :TABNAME 
+                        :TABONLY :TABTITLE :TAN :TAN-SMOOTH-ADJACENT :TAN-SMOOTH-ANGLE :TAN-SMOOTH-WEIGHT 
+                        :TAN-USER-ALL :TAN-USER-DIR :TAN-USER-DIRECTION :TAN-USER-SINGLE :TAN-USER-WEIGHT 
+                        :TAN2_PT :TAN3 :TANGENT :TANGENT-LINE-VISIBLE :TANGENTS :TANGENT_ANGLE :TANGENT_CONCAVE 
+                        :TANGENT_CONVEX :TANGENT_REL :TANGENT_TWO_POINTS :TAN_CEN :TAN_EDGES :TAN_EDGES_CALC
+                        :TAN_PT_PT :TAP :TAPER-GROUP :TAP_DEPTH :TAP_DEPTH_TOL :TAP_RAD :TAP_UNITS :TASKBAR 
+                        :TASKBARPAGE :TASKS :TB :TBS :TDB-ENTRY-MISSING :TDB-SHOP-MISSING :TDB-TABLE-MISSING 
+                        :TDB-TOOL-MISSING :TEMPERATURE :TEMPERATURES :TEMP_INCREMENT :TENSILE_STRENGTH :TERMINATE 
+                        :TERTIARY :TEST :TEST1 :TEST105 :TEST2 :TEST_123_PUSHED :TEST_126_PUSHED :TEST_127_PUSHED 
+                        :TEST_129_PUSHED :TEST_211_PUSHED :TEST_212_PUSHED :TEST_24_PUSHED :TEST_27_PUSHED
+                        :TEST_28_PUSHED :TEST_32_PUSHED :TEST_33_PUSHED :TEST_411_PUSHED :TEST_412_PUSHED 
+                        :TEST_413_PUSHED :TEXT :TEXT---+--- :TEXT-COLOR :TEXT-STRING :TEXTS 
+                        :TEXT_121_ENTER_PRESSED :TEXT_124_ENTER_PRESSED :TEXT_ANGLE :TEXT_COLOR :TEXT_DISP_MODE 
+                        :TEXT_EDITOR :TEXT_FIND :TEXT_FONT :TEXT_FORMAT_DECIMALS :TEXT_FORMAT_DEC_PNT 
+                        :TEXT_FORMAT_LEFT_ZERO_SUPPR :TEXT_FORMAT_RIGHT_ZERO_SUPPR :TEXT_ITEM :TEXT_POS 
+                        :TEXT_READABLE :TEXT_SIZE :TEXT_STRING :TEXT_VAR :TF_MAX_VAL :TF_MIN_MAX :TF_MIN_VAL 
+                        :TF_VALUE :THE :THERMAL_FLUX :THERMAL_GRADIENT :THICK :THICKNESS :THIRD :THIRD_ANGLE 
+                        :THIS_KEYWORD :THIS_VIEW :THREAD :THREAD-COLOR :THREAD-CREATION :THREAD-DIRECTION 
+                        :THREAD-HAND :THREAD-NAME :THREAD-NAME-UNIQUE :THREAD-NUMBER :THREAD-PROFILE :THREAD-TYPE 
+                        :THREAD-UNIT :THREAD_DIA :THREAD_HAND :THREAD_SIZE :THREAD_STARTS :THREAD_TPI 
+                        :THREE_POINTS :TITLE :TITLE-ALIGNMENT :TITLE-INSENSITIVE-PIXMAP-NAME :TITLE-PIXMAP-NAME 
+                        :TITLE-SELECT-INSENSITIVE-PIXMAP-NAME :TITLE-SELECT-PIXMAP-NAME :TITLEFOREGROUND 
+                        :TITLESTRING :TOGGLE :TOGGLE-DATA :TOGGLE-PAIR :TOGGLE-PUSH-FUNCTION 
+                        :TOGGLE-RELEASE-FUNCTION :TOGGLE-TYPE :TOGGLEBUTTON :TOGGLEBUTTONGADGET :TOGGLE_23_PUSHED 
+                        :TOGGLE_23_RELEASED :TOGGLE_25_PUSHED :TOGGLE_25_RELEASED :TOKEN-SEQUENCE :TOL :TOL-FORM 
+                        :TOL-FORM-2ND :TOL-PROJ :TOL-UL :TOL-VALUE :TOL-VALUE-2ND :TOLERANCE 
+                        :TOLERANCE_AND_QUALITY :TOLERANCE_DEPTH :TOLERANCE_DEPTH_TOL :TOLERANCE_TYPE 
+                        :TOLERANCE_VALUE1 :TOLERANCE_VALUE2 :TOLERANCING_AND_DOCUMENTATION :TOLERANCING_ONLY 
+                        :TOL_BASIC :TOL_DEFAULT :TOL_FONT :TOL_FORMAT :TOL_FORMAT_DECIMALS :TOL_FORMAT_DEC_PNT 
+                        :TOL_FORMAT_LEFT_ZERO_SUPPR :TOL_FORMAT_RIGHT_ZERO_SUPPR :TOL_HIGH :TOL_LIMIT :TOL_LOW 
+                        :TOL_NONE :TOL_PLUS_MINUS :TOL_PM :TOL_SIZE :TOL_TYPE :TOL_UL :TOL_UPP_LOW :TON
+                        :TON_PER_M3 :TOOL :TOOL-ID :TOOL-OVERLAP :TOOL-PROPERTY-LIST :TOOLBAR-GROUP :TOOLBARGROUP 
+                        :TOOLBOX :TOOLBOX-BUTTON :TOOLPART :TOOLS :TOOLS-FILE :TOOL_ANGLE :TOOL_FNC :TOOL_ID 
+                        :TOOL_PART :TOOL_TYPE :TOOL_WIDTH :TOP :TOP-LABEL :TOP-NEXT :TOP-PROMPT-TEXT 
+                        :TOPATTACHMENT :TOPCENTER :TOPLABEL :TOPLEFT :TOPMENU :TOPMENUOFFOBJECTONLY :TOPOFFSET
+                        :TOPPOSITION :TOPRIGHT :TOPSHADOWCOLOR :TOPWIDGET :TOP_LEVEL_INSTANCE_FILES
+                        :TOP_PART_ASSY :TOP_SIDE :TORUS :TOTAL-VALUE :TOTAL_FLOW :TOTAL_VALUE :TOUCHING_ONLY 
+                        :TO_ALL :TO_FACE :TO_FACES :TO_FACES_TYPE :TO_GEO :TO_LEFT :TO_PART :TO_PART_TYPE 
+                        :TO_PLANE :TO_PLANE_TYPE :TO_POINT :TO_RIGHT :TO_TEXT :TPI :TR :TRACE :TRANSFER-TO-MODEL 
+                        :TRANSFERRED_2D :TRANSFORM :TRANSFORMATION :TRANSF_2D :TRANSF_LABEL :TRANSLATE 
+                        :TRANSLATION :TRANSLATIONAL :TRANSP :TRANSPARENT :TRAPEZOID :TRAVERSALON :TREE 
+                        :TREE-DETAILS :TREE-DISPLAY-NAME :TREE-PRINT-NAME :TREESTATUSBAR :TRIANGLE :TRIANGLE_TYPE 
+                        :TRIMETRIC :TRIMMED :TRIMMED-PARAMETRIC :TRIMMED_PARAMETRIC :TRIMSTRING :TRIPLE-CHOICE 
+                        :TROUGHCOLOR :TRUE :TRUE_COLOR_PLOTTING :TR_ASSIGN :TR_GROUP :TR_SHOW_TYPES 
+                        :TR_SHOW_VALUES :TR_UNASSIGN :TR_UPDATE :TURN-PROFILE :TURNS :TURN_ANGLE :TWEAK-CHECK 
+                        :TWO :TWO_ELEMENTS :TWO_FACES :TWO_POINTS :TWO_PT :TWO_PTA :TWO_PTS :TWO_PTV :TWO_TANGENT 
+                        :TX :TXS :TYPE :TYPE1 :TYPE2 :TYPES :U :U-DIR :UDPATE-FUNC :UI-BEHAVIOR :UI-NAME 
+                        :UI-NAMEÇÃíLÇÕÉåÉCÉAÉEÉGÅEÉEÅ :UI-NAMEÇÕÉÅÉJÉÖÅ :UI-TOGGLE-BEHAVIOR :UIB :UIBEHAVIOR 
+                        :UICT-CB :UICT-INDICATOR-TB :UICT-INSTALL-FUNCTION :UICT-LB :UICT-OPTION-MENU-NAME 
+                        :UICT-RA :UICT-TB :UICT-TX :UINCH :UINTERFACE :UL :UM :UNACCEPTABLE-DEFORMATION :UNC 
+                        :UNDEFINED :UNDEL_BACK_COLOR :UNDEL_CACL_COLOR :UNDEL_CALC_COLOR :UNDEL_MANU_COLOR 
+                        :UNDERLINE :UNDERLINED :UNDO :UNDO-MODELLING-STEPS-ON-CANCEL :UNDO_BACK_COLOR 
+                        :UNDO_FORW_COLOR :UNDO_HIDE_COLOR :UNF :UNFIX_EDGES :UNFIX_FACES :UNIT :UNITS :UNIT_LA 
+                        :UNIT_LL :UNIT_UA :UNIT_UL :UNIVERSAL-LOAD-WITH-USER-UNITS :UNIX :UNKNOWN :UNREGISTER 
+                        :UNSCALED :UNTRIMMED :UNTYPED :UP :UP-DIR :UP-FLAG :UPDATE :UPDATE-ARGS :UPDATE-EVENT 
+                        :UPDATE-EVENTS :UPDATE-FUNC :UPDATE-MODE :UPDATE-NOM-VAL-CHANGE 
+                        :UPDATE-ON-PREFIX-POSTFIX-CHANGE :UPDATE-ON-TOLERANCE-CHANGE :UPDATE-ON-VALUE-CHANGE
+                        :UPDATE-PRE-POST-CHANGE :UPDATE-TOL-CHANGE :UPDATE-VIEW-IMMEDIATELY :UPDATED_2D 
+                        :UPDATED_3D :UPDATE_2D :UPDATE_AMOUNT :UPDATE_COLORS :UPDATE_ON_EDIT :UPDATE_RELS :UPDOW 
+                        :UPDOWN :UPD_2D :UPD_3D :UPN :UPPER :UPPER-POINT :UPPER-RESULT :UPPER_LEFT :UPPER_LOWER 
+                        :UPPER_MIDDLE :UPPER_RIGHT :UPPER_TOL :UP_DIR :UP_DIRECTION :UR :URL :USABLE-AS- 
+                        :USABLE-AS-CORNER-RELIEF :USABLE-AS-RECTANGULAR-RELIEF :USABLE-AS-ROUND-RELIEF :USE
+                        :USE-VP-BUTTONS :USE2D :USER :USER-SITE-CORP-SD :USERACTION :USERLABEL :USER_DEF 
+                        :USER_DEFINED :USER_FORMAT_HEIGHT :USER_FORMAT_WIDTH :USER_FRAME :USER_POINT 
+                        :USE_DOCUPLANE :USE_EDITOR :USE_FACE_BOX :USING-FALLBACK-STRATEGY :US_CUSTOMARY1 
+                        :US_CUSTOMARY2 :UV :U_DIR :U_TANGENT :V :V-DIR :V1 :V2 :V2D :V3 :V3D :VAL1 :VAL2 :VAL3 
+                        :VALID :VALUE :VALUE-CHANGE-CALLBACK :VALUE-FIXED :VALUE-NUMBER :VALUE-SCALED 
+                        :VALUE-STRING :VALUE-TYPE :VALUE-TYPES :VALUE-VISIBILITY-ALIGNMENT :VALUE1 :VALUE2 
+                        :VALUECHANGE :VALUECHANGEDACTION :VALUEDECREMENT :VALUEINCREMENT :VALUES :VALUE_FIXED 
+                        :VALUE_FONT :VALUE_FORMAT :VALUE_SCALED :VALUE_SIZE :VALUE_TYPE :VAR :VAR1 :VARIABLE 
+                        :VARIABLES :VAR_RADIUS :VDAPS_PART :VEC :VEC-LIST :VECTOR-DRAG-MAX-VALUE 
+                        :VECTOR-DRAG-MIN-VALUE :VECTOR-DRAG-SCALE :VECTOR-TRANSFORM :VERBOSE :VERIFIER :VERSION
+                        :VERSION-DESCRIPTION :VERSION-ID :VERT :VERTEX :VERTEXDISPL :VERTEXFORCE :VERTEXFTEMP 
+                        :VERTEXHEATFL :VERTEXTRLRE :VERTEX_2D :VERTEX_3D :VERTICAL :VERTICES :VERT_TO_SRC :VIEW 
+                        :VIEW-2D :VIEW-3D :VIEW-NAME :VIEW-SET :VIEW-TYPE :VIEW-UNIQUE-PART-ID :VIEWER :VIEWPORT 
+                        :VIEWPORT-RIGHT-MOUSE-BUTTON :VIEWPORT-SHIFT-RIGHT-MOUSE-BUTTON :VIEWS :VIEWS_PARTS 
+                        :VIEWS_PARTS_L :VIEW_2D :VIEW_3D :VIEW_DOCU_SEL :VIEW_NAME :VIEW_PLACEMENT :VIEW_POSITION 
+                        :VIEW_SET :VIEW_TO_ROT :VIEW_TO_SCALE :VIEW_WITH_WRONG_NAME :VISIBIBLE-ONLY :VISIBLE 
+                        :VISIBLE-ONLY :VISIBLE-VARIABLES :VISIBLEITEMCOUNT :VISUALPOLICY :VOIDS :VOLUME 
+                        :VON_MISES :VP :VP-ONLY :VPX :VPY :VPZ :VP_BOX :VP_DIR :VRML-FILE :VSET :VSL-FILE 
+                        :VSL-OP-TYPE :VSL-STRING :VSL-VARS :VU :VW :V_TANGENT :W :W-DIR :WARNING 
+                        :WARNING-HEADLINE :WARNINGS :WATT_PER_M2 :WATT_PER_M2_KELVIN :WATT_PER_MILLIMETER2 
+                        :WATT_PER_MILLIMETER2_KELVIN :WATT_PER_M_KELVIN :WEIGHT :WHICH :WHITE_TO_BLUE
+                        :WIDE-TOGGLE :WIDTH :WINDOW_VP :WIRE :WIRE-PART-ALLOWED :WIREFRAME :WIRE_PART 
+                        :WITH-CONTAINER :WITH-NAME-COLUMN :WITH-PIXMAP :WITH-PROFILE :WITH-WP :WITHOUT-PIXMAP 
+                        :WITHOUT-SHOW :WITHOUT-WP :WITHOUT_AB :WITH_AB :WM-NAME :WM_ON_OFF :WORDWRAP :WORKPLANE 
+                        :WORKPLANES :WORKPLANES_2DCONSTRUCTION :WORKPLANES_2DGEO :WORKPLANES_2DGEO_LABEL 
+                        :WORKPLANES_2DGEO_VERTICES :WORKPLANES_3DCONSTRUCTION :WORKPLANES_BORDER
+                        :WORKPLANES_HIDDEN :WORKPLANES_LABEL :WORKPLANES_LOCAL_AXIS :WORKPLANE_SETS_MATCH_LINES 
+                        :WORLD :WORLD_ORIGIN :WP :WP-MODE :WP-NORMAL :WP-REVERSE-NORMAL :WP-WITH-PROFILE 
+                        :WPHEIGHT :WPS :WPSET :WP_ALL :WP_BOX :WP_CURRENT :WP_ITM :WRITE :WRITE-ACCESS :WU :X 
+                        :X-AXIS :X-OFFSET :X-ROT :XGCENTER_DASH :XGDASH :XGDASH_DOT :XGDASH_DOT_DOT :XGDOT 
+                        :XGLONG_DASH :XGSOLID :XMALIGNMENT_BEGINNING :XMALIGNMENT_CENTER :XMALIGNMENT_END 
+                        :XMAS_NEEDED :XMATTACH_FORM :XMATTACH_NONE :XMATTACH_OPPOSITE_WIDGET :XMATTACH_POSITION 
+                        :XMATTACH_WIDGET :XMAUTOMATIC :XMBOTTOM_LEFT :XMBOTTOM_RIGHT :XMBROWSE_SELECT :XMCONSTANT 
+                        :XMDIALOG_APPLICATION_MODAL :XMDIALOG_FULL_APPLICATION_MODAL :XMDIALOG_MODELESS 
+                        :XMDIALOG_SYSTEM_MODAL :XMEXTENDED_SELECT :XMHORIZONTAL :XMIT :XMMAX_ON_BOTTOM 
+                        :XMMAX_ON_LEFT :XMMAX_ON_RIGHT :XMMAX_ON_TOP :XMMULTIPLE_SELECT :XMMULTI_LINE_EDIT 
+                        :XMN_OF_MANY :XMONE_OF_MANY :XMPACK_COLUMN :XMPACK_NONE :XMPACK_TIGHT :XMPIXMAP 
+                        :XMRESIZE_ANY :XMRESIZE_GROW :XMRESIZE_IF_POSSIBLE :XMRESIZE_NONE :XMSHADOW_ETCHED_IN 
+                        :XMSHADOW_ETCHED_OUT :XMSHADOW_IN :XMSHADOW_OUT :XMSINGLE_LINE_EDIT :XMSINGLE_SELECT
+                        :XMSTATIC :XMSTRING :XMTOP_LEFT :XMTOP_RIGHT :XMVARIABLE :XMVERTICAL :XY :XY-OR-VIEW
+                        :XY-PLANE :X_AXIS :X_COMPONENT :X_SCALE :X_SIZE :X_SYNTAX :Y :Y-AXIS :Y-OFFSET :Y-ROT
+                        :YARD :YEAR :YELLOW :YES :YES-CLEANUP :YZ-PLANE :YZ_COMPONENT :Y_COMPONENT :Y_SCALE
+                        :Y_SIZE :Z :Z-AXIS :ZERO-POS :ZIP :ZX-PLANE :ZX_COMPONENT :Z_AXIS :Z_COMPONENT :Z_SCALE
+
+// OSD dialogs          some very common 3D modeling operations
+// OneSpace Designer IKIT functions
+KeyWords3:		units delete_3d subtract_3d unite_3d
+			create_part change_pa_id scale_pa current_part
+			position_pa create_multiple_pa
+			rename_feature define_element_name
+			set_part_base_color set_part_color
+
+KeyWords4:              // function_index.html
+                        compile-file get_selection gpnt2d gpnt3d sel_item sd-abort-dialog sd-accept-dialog 
+                        sd-activate-polestar sd-active-cust-feat sd-add-application-button 
+                        sd-add-application-data sd-add-button-box sd-add-item-attribute-values sd-add-menu-button 
+                        sd-add-status-group-entry sd-allow-display-table-user-filter sd-allow-last-used-file-type 
+                        sd-animate-relation sd-announce-license-free-module sd-append-area sd-append-grid-area 
+                        sd-append-newline sd-attach-item-attribute sd-assign-db-attribute sd-assign-toolbar-group 
+                        sd-basic-wp-profile-check-p sd-blend-face-p sd-blend-vertex-region-p sd-box-points 
+                        sd-browser-add-interrogator sd-browser-add-popup-entry sd-browser-click-action 
+                        sd-browser-exec-cmd sd-browser-define-table sd-browser-print-tree 
+                        sd-calculate-maximal-extension sd-call-action-active-p sd-call-cmds sd-call-dialog 
+                        sd-call-win-command-by-sysid sd-chamfer-face-p sd-change-file-permission 
+                        sd-change-logical-table-contents sd-classic-polestar-data sd-color-to-rgb 
+                        sd-construction-geo-p sd-control-enabled-p sd-control-p sd-control-visible-p 
+                        sd-convert-filename-from-platform sd-convert-filename-to-platform sd-coord-sys-axis-p 
+                        sd-coord-sys-elem-p sd-coord-sys-object-p sd-coord-sys-origin-p sd-coord-sys-plane-p 
+                        sd-copy-file sd-create-BrowserNode sd-create-browser-tree sd-create-colorbutton-control 
+                        sd-create-context-menu sd-create-cursor sd-create-dialog-shell sd-create-display-table 
+                        sd-create-display-table-control sd-create-event sd-create-graphical-browser 
+                        sd-create-grid-area sd-create-image sd-create-label-control sd-create-list-control 
+                        sd-create-logical-table sd-create-main-task-menu sd-create-menu sd-create-pixmap 
+                        sd-create-polestar sd-create-quickview sd-create-pushbutton-control 
+                        sd-create-range-control sd-create-scrolled-grid-area sd-create-separator-control 
+                        sd-create-status-group sd-create-tab-control sd-create-text-control 
+                        sd-create-togglebutton-control sd-cust-feat-get-registered-2D-label-props 
+                        sd-cust-feat-inq-label sd-cust-feat-inq-props sd-cust-feat-inq-vars
+                        sd-cust-feat-local-appearance sd-cust-feat-register-2D-label-props sd-cust-feat-select 
+                        sd-db-attribute-browser-set-active-object sd-db-element-load sd-db-element-exists 
+                        sd-db-element-store sd-db-element-elid sd-db-errors sd-db-element-build-identifier 
+                        sd-dde-add-topic sd-dde-close sd-dde-enable sd-dde-execute sd-dde-execute-timeout 
+                        sd-dde-initiate sd-dde-remove-topic sd-dde-request sd-dde-request-timeout 
+                        sd-deactivate-polestar sd-debug-cmds sd-define-db-attribute sd-define-db-personality
+                        sd-defdialog sd-deffeature sd-define-available-command sd-define-licensing-module 
+                        sd-define-thread sd-deg-to-rad sd-del-item-attribute-values sd-delete-available-command 
+                        sd-delete-polestar sd-delete-quickview sd-destroy-browser-tree sd-destroy-control 
+                        sd-destroy-display-table sd-destroy-graphical-browser sd-destroy-image 
+                        sd-destroy-logical-table sd-destroy-main-task-menu sd-destroy-menu sd-destroy-pixmap 
+                        sd-destroy-status-group sd-destroy-thread sd-detach-item-attribute 
+                        sd-dialog-shell-pinned-p sd-dialog-shell-visible-p sd-dimension-p sd-dir-rotate 
+                        sd-dir-xform sd-directory-p sd-disable-application-commands sd-disable-button 
+                        sd-disable-control sd-disable-must-variable-check sd-disable-dialog-pds sd-display-error 
+                        sd-display-help-page sd-display-message sd-display-question 
+                        sd-display-table-format-N-digit(s) sd-display-table-p sd-display-to-internal-string 
+                        sd-display-url sd-display-warning sd-docu-group-p sd-docuplane-p 
+                        sd-docuplane-section-line-p sd-docuplane-set-p sd-dump-control-tree sd-edge-name-to-elem 
+                        sd-edge-to-bspline-cv sd-edit-display-table-cell sd-enable-application-commands 
+                        sd-enable-button sd-enable-control sd-enable-must-variable-check sd-end-feedback 
+                        sd-entering-ok-action-p sd-eval-control-action sd-ext-string-p sd-face-name-to-elem 
+                        sd-feature-point-p sd-filter-display-table sd-filter-silhouette-faces 
+                        sd-formatted-license-expiry-time sd-gdt-p sd-gen-obj-basename sd-gen-unique-filename 
+                        sd-general-text-editor-get-value sd-general-text-editor-insert-value 
+                        sd-general-text-editor-set-value sd-get-app-customization-file-prefix
+                        sd-get-app-customization-subdirectory sd-get-app-external-name 
+                        sd-get-app-specific-customization-file sd-get-BrowserNode-struct sd-get-control-geometry 
+                        sd-get-control-title sd-get-current-application sd-get-current-cursor 
+                        sd-get-current-status-group sd-get-current-tab-control-page 
+                        sd-get-current-working-directory sd-get-customization-file sd-get-default-control-height 
+                        sd-get-default-dialog-client-area-width sd-get-display-table-custom-bottom-form 
+                        sd-get-display-table-custom-top-form sd-get-display-table-logical-table 
+                        sd-get-display-table-selection sd-get-dynamic-slider-control sd-get-embedded-area-name 
+                        sd-get-file-type-keys sd-get-last-vp-pick sd-get-library-attr sd-get-list-control-items 
+                        sd-get-list-control-selected-items sd-get-logical-table-attribute 
+                        sd-get-logical-table-column-identifiers sd-get-logical-table-column-type 
+                        sd-get-logical-table-key-column-identifiers sd-get-logical-table-number-of-rows 
+                        sd-get-logical-table-types sd-get-module-controller-button sd-get-persistent-data 
+                        sd-get-pds-variable-value sd-get-pnt-on-face sd-get-quickview 
+                        sd-get-range-control-selected-item sd-get-slider-control-value sd-get-slider-value 
+                        sd-get-status-group-entry-value sd-get-text-control-value sd-get-text-control-range 
+                        sd-get-toolbar-combobox-selected-item sd-get-variable-ui-properties 
+                        sd-get-variable-status sd-get-visible-profile-pnt sd-get-window-placement sd-gpnt3d-to-2d 
+                        sd-hide-console-window sd-hide-control sd-hide-cust-feat-browser sd-hide-dialog-shell 
+                        sd-hide-display-table sd-hide-general-text-editor sd-hide-graphical-browser 
+                        sd-hide-status-group-entry sd-hide-toolbar sd-hide-toolbox sd-hsl-to-rgb sd-iconify-vp 
+                        sd-image-p sd-inq-3d-annotation-attachment sd-inq-3d-annotation-cust-feat 
+                        sd-inq-3d-annotation-default-settings sd-inq-3d-annotation-docuplane 
+                        sd-inq-3d-annotation-fixtext sd-inq-3d-annotation-index sd-inq-3d-annotation-open-ref 
+                        sd-inq-3d-annotation-owner sd-inq-3d-annotation-position sd-inq-3d-annotation-props 
+                        sd-inq-3d-annotation-reference sd-inq-3d-annotation-reference-position
+                        sd-inq-3d-annotation-settings sd-inq-3d-annotation-tolerance sd-inq-3d-annotation-type 
+                        sd-inq-3d-annotation-value sd-inq-active-rset sd-inq-angle-units 
+                        sd-inq-app-specific-user-customization-dir sd-inq-app-specific-user-customization-file 
+                        sd-inq-application-data-p sd-inq-assembly-p sd-inq-assigned-general-tolerances 
+                        sd-inq-available-command-data sd-inq-base-curve sd-inq-blend-face 
+                        sd-inq-bspline-edge-ctrl-pnt sd-inq-bspline-edge-ctrl-pnts 
+                        sd-inq-bspline-edge-knot-vector sd-inq-bspline-edge-weights sd-inq-bspline-face-ctrl-pnts 
+                        sd-inq-bspline-face-u-knot-vector sd-inq-bspline-face-v-knot-vector 
+                        sd-inq-bspline-face-weights sd-inq-catch-extent sd-inq-catch-part sd-inq-catch-project 
+                        sd-inq-catch-range sd-inq-catch-type sd-inq-catch-wp sd-inq-catch-wp-scope 
+                        sd-inq-chamfer-face sd-inq-clashing-color sd-inq-common-profiledir-pathname 
+                        sd-inq-container-p sd-inq-coord-sys-color sd-inq-coord-sys-default-color 
+                        sd-inq-coord-sys-default-size sd-inq-coord-sys-elem sd-inq-coord-sys-elem-type 
+                        sd-inq-coord-sys-elem-value sd-inq-coord-sys-size sd-inq-coord-sys-store-visibility-flag 
+                        sd-inq-curr-cmds sd-inq-curr-docuplane sd-inq-curr-part sd-inq-curr-wp 
+                        sd-inq-current-language sd-inq-current-vp sd-inq-cust-feat-3d-annotation 
+                        sd-inq-db-attributes sd-inq-db-attribute-values sd-inq-default-active-part-color 
+                        sd-inq-default-face-part-color sd-inq-default-facet-refinement 
+                        sd-inq-default-geo-resolution sd-inq-default-mixed-display sd-inq-default-part-color 
+                        sd-inq-default-part-density sd-inq-default-part-reflectance-color 
+                        sd-inq-default-part-reflectance-power sd-inq-default-part-transparency 
+                        sd-inq-default-wp-border-type sd-inq-default-wp-color sd-inq-default-wp-grid-height 
+                        sd-inq-default-wp-grid-mode sd-inq-default-wp-grid-width sd-inq-default-wp-min-size 
+                        sd-inq-default-wp-resolution sd-inq-detail-docuplane-parent sd-inq-docuplane-annotations 
+                        sd-inq-docuplane-default-settings sd-inq-docuplane-props sd-inq-docuplane-section-line 
+                        sd-inq-docuplane-set sd-inq-docuplane-settings sd-inq-docuplane-type
+                        sd-inq-draft-analysed-faces sd-inq-draft-angle-face sd-inq-dynamic-redraw-mode 
+                        sd-inq-edge-arclen-param sd-inq-edge-convexity sd-inq-edge-edge-dist 
+                        sd-inq-edge-edge-int-pts sd-inq-edge-geo sd-inq-edge-pnt sd-inq-elem-name 
+                        sd-inq-empty-part-p sd-inq-error-obj sd-inq-exact-box sd-inq-face-color 
+                        sd-inq-face-edge-dist sd-inq-face-face-dist sd-inq-face-geo sd-inq-face-part-p 
+                        sd-inq-face-pnt sd-inq-face-reflectance-color sd-inq-face-reflectance-power 
+                        sd-inq-face-transparency sd-inq-feature-components sd-inq-feature-highlight-color 
+                        sd-inq-feature-point-vertex sd-inq-file-size sd-inq-file-status sd-inq-geometry-mode 
+                        sd-inq-geo-props sd-inq-group-annotations sd-inq-group-children sd-inq-group-parents 
+                        sd-inq-group-props sd-inq-group-type sd-inq-group-variable-condition 
+                        sd-inq-index-settings sd-inq-index-default-settings sd-inq-index-update-behaviour 
+                        sd-inq-install-dir sd-inq-item-attributes sd-inq-item-attribute 
+                        sd-inq-layout-default-hidden-line-calc sd-inq-layout-default-hidden-line-mode 
+                        sd-inq-layout-default-projection-mode sd-inq-layout-default-tangent-edge-calc 
+                        sd-inq-layout-default-tangent-edge-mode sd-inq-layout-default-view-projection 
+                        sd-inq-layout-mi-part-structure sd-inq-layout-view-components 
+                        sd-inq-layout-view-hidden-line-calc sd-inq-layout-view-hidden-line-mode 
+                        sd-inq-layout-view-tangent-edge-calc sd-inq-layout-view-tangent-edge-mode 
+                        sd-inq-layout-view-up-direction sd-inq-layout-views sd-inq-length-units sd-inq-mass-units 
+                        sd-inq-mod3d-blend-labels-mode sd-inq-mod3d-blend-preview-color 
+                        sd-inq-mod3d-blend-suppress-color sd-inq-mod3d-body-check-mode sd-inq-model-clipping-mode 
+                        sd-inq-model-clip-plane-enabled-p sd-inq-model-clip-plane-defined-p 
+                        sd-inq-model-clip-plane-origin sd-inq-model-clip-plane-u-dir 
+                        sd-inq-model-clip-plane-w-dir sd-inq-obj-3d-annotations sd-inq-obj-basename 
+                        sd-inq-obj-children sd-inq-obj-clipping-flag sd-inq-obj-contents-modified-p 
+                        sd-inq-obj-contents-name sd-inq-obj-contents-read-only-p sd-inq-obj-contents-sysid
+                        sd-inq-obj-instance-modified-p sd-inq-obj-instance-read-only-p sd-inq-obj-mod-time 
+                        sd-inq-obj-parent-contents-read-only-p sd-inq-obj-parent-instance-read-only-p 
+                        sd-inq-obj-pathname sd-inq-obj-selective-instance-p sd-inq-obj-shared-objects 
+                        sd-inq-obj-sysid sd-inq-obj-untouchable-p sd-inq-parent-obj sd-inq-part-color 
+                        sd-inq-part-density sd-inq-part-geo-resolution sd-inq-part-layouts 
+                        sd-inq-part-named-edges sd-inq-part-named-faces sd-inq-part-named-features 
+                        sd-inq-part-named-vertices sd-inq-part-p sd-inq-part-reflectance-color 
+                        sd-inq-part-reflectance-power sd-inq-part-transparency sd-inq-platform 
+                        sd-inq-polestar-pick sd-inq-profile-center sd-inq-quickview sd-inq-rec-feature 
+                        sd-inq-relations sd-inq-relation-activity sd-inq-relation-animation 
+                        sd-inq-relation-behavior sd-inq-relation-default-animation 
+                        sd-inq-relation-default-behavior sd-inq-relation-default-colors 
+                        sd-inq-relation-default-label-appearance sd-inq-relation-default-solving 
+                        sd-inq-relation-name sd-inq-relation-open-ref sd-inq-relation-props sd-inq-relation-type 
+                        sd-inq-rsets sd-inq-rset-name sd-inq-rset-props sd-inq-section-docuplane-parent 
+                        sd-inq-secure-section-flag sd-inq-simplified-object-p sd-inq-simplification-owner-p 
+                        sd-inq-simplification-name sd-inq-simplification-owner-id sd-inq-taper-group 
+                        sd-inq-taper-group-color sd-inq-taper-group-face-p sd-inq-taper-group-faces 
+                        sd-inq-taper-group-geometric-values sd-inq-taper-group-name sd-inq-taper-group-p 
+                        sd-inq-taper-groups sd-inq-temp-dir sd-inq-touching-color sd-inq-thread sd-inq-username 
+                        sd-inq-user-profiledir-pathname sd-inq-version-string sd-inq-version sd-inq-vertex-geo 
+                        sd-inq-vp-bg-color sd-inq-vp-camera sd-inq-vp-capping-color 
+                        sd-inq-vp-capping-color-status sd-inq-vp-capping-status sd-inq-vp-clip-back-enabled-p 
+                        sd-inq-vp-clip-front-enabled-p sd-inq-vp-corners sd-inq-vp-cursor-size 
+                        sd-inq-vp-direction-axes sd-inq-vp-drawlist-locked-p sd-inq-vp-drawlist-member-p 
+                        sd-inq-vp-drawlist-objects sd-inq-vp-exists-p sd-inq-vp-frozen-p
+                        sd-inq-vp-interference-status sd-inq-vp-iconified-p sd-inq-vp-light-attenuation 
+                        sd-inq-vp-light-attenuation-enabled-p sd-inq-vp-light-autoupdate 
+                        sd-inq-vp-light-brightness sd-inq-vp-light-color sd-inq-vp-light-cone 
+                        sd-inq-vp-light-current sd-inq-vp-light-direction sd-inq-vp-light-follow 
+                        sd-inq-vp-light-position sd-inq-vp-light-spot sd-inq-vp-light-spot-enabled-p 
+                        sd-inq-vp-light-switch sd-inq-vp-light-type sd-inq-vp-maximized-p 
+                        sd-inq-vp-model-clipping-enabled-p sd-inq-vp-show sd-inq-vp-type2d-p sd-inq-wire-part-p 
+                        sd-inq-workplane-p sd-inq-wp-border-type sd-inq-wp-color sd-inq-wp-grid-mode 
+                        sd-inq-wp-grid-spacing sd-inq-wp-min-size sd-inq-wp-origin sd-inq-wp-resolution 
+                        sd-inq-wp-u-dir sd-inq-wp-v-dir sd-inq-wp-w-dir sd-inq-wpset-p sd-inquire-file-type 
+                        sd-insert-logical-table-column sd-insert-logical-table-row 
+                        sd-insert-module-controller-button sd-insert-tab-control-page 
+                        sd-insert-text-control-value sd-internal-to-display-string sd-intf 
+                        sd-is-required-db-attribute sd-license-expiry-time sd-license-free-module-activate 
+                        sd-license-free-module-activation-event sd-license-free-module-active-p 
+                        sd-license-free-module-deactivate sd-license-free-module-deactivation-event 
+                        sd-license-free-module-p sd-license-server sd-load-additional-available-commands-file 
+                        sd-load-all-additional-available-command-files sd-load-all-toolbars 
+                        sd-load-application-menubar sd-load-customization-file sd-load-toolbar 
+                        sd-logical-table-need-display-table-update-p sd-logical-table-p 
+                        sd-logical-table-resume-display-table-updates sd-logical-table-secured-p 
+                        sd-logical-table-suspend-display-table-updates sd-logical-table-update-display-tables 
+                        sd-lower-application sd-make-directory sd-maximize-vp sd-menu-active-p 
+                        sd-minimize-application sd-modify-file-type sd-modify-quickview sd-mod-item-attribute 
+                        sd-module-activate sd-module-activation-event sd-module-active-p sd-module-deactivate 
+                        sd-module-deactivation-event sd-motif-p sd-move-file sd-multi-lang-string sd-num-equal-p
+                        sd-num-to-string sd-online-reference sd-partial-docuplane-p sd-pathlist-to-pathname 
+                        sd-pathname-to-obj sd-pathname-to-pathlist sd-proj-pnt-on-edge sd-proj-pnt-on-face 
+                        sd-process-event sd-put-buffer sd-query-browser sd-rad-to-deg sd-raise-application 
+                        sd-read-logical-table-cell sd-read-logical-table-row sd-redraw-vp sd-register-file-type 
+                        sd-remove-all-toolbars sd-remove-application-button sd-remove-button-box 
+                        sd-remove-db-attribute sd-remove-logical-table-row sd-remove-menu-button 
+                        sd-remove-persistent-data sd-remove-status-group-entry sd-remove-toolbar 
+                        sd-request-redraw-vp sd-reset-display-table-filter sd-reset-display-table-selection 
+                        sd-reset-display-table-sort sd-reset-togglebutton sd-reset-toolbar-button sd-resize-vp 
+                        sd-restore-application sd-restore-vp sd-restore-window-placement sd-resume-feedback 
+                        sd-retrieve-pick-point sd-retrieve-url sd-return-from-ok-action 
+                        sd-return-to-model-checkpoint sd-rgb-to-color sd-rgb-to-hsl sd-search-file 
+                        sd-secure-logical-table sd-set-active-main-task-button sd-set-application-icon-pixmap 
+                        sd-set-clashing-color sd-set-cmd-specific-context-menu-entries sd-set-cmd-cursor 
+                        sd-set-control-action sd-set-control-color sd-set-control-focus sd-set-control-geometry 
+                        sd-set-control-image sd-set-control-title sd-set-colorbutton-color 
+                        sd-set-create2d-menu-behavior sd-set-current-application-menubar sd-set-current-cursor 
+                        sd-set-current-tab-control-page sd-set-current-working-directory 
+                        sd-set-db-attribute-verbose-error-handling sd-set-dialog-shell-title sd-set-dialog-title 
+                        sd-set-display-table-column-title sd-set-display-table-help-action 
+                        sd-set-display-table-help-page sd-set-display-table-selection sd-set-display-table-title 
+                        sd-set-dynamic-redraw-mode sd-set-dynamic-scale-bounds 
+                        sd-set-file-browser-default-view-mode sd-set-hold-time sd-set-idle-behavior 
+                        sd-set-initial-file-type sd-set-library-attr sd-set-list-control-items 
+                        sd-set-list-control-selected-items sd-set-logical-table-attribute sd-set-model-checkpoint 
+                        sd-set-persistent-data sd-set-proposals sd-set-proxy sd-set-range
+                        sd-set-range-control-items sd-set-range-control-selected-item sd-set-secure-section-flag 
+                        sd-set-slider-control-value sd-set-slider-value sd-set-status-group-entry-value 
+                        sd-set-text-control-selection sd-set-text-control-value sd-set-togglebutton 
+                        sd-set-toolbar-button sd-set-toolbar-combobox-selected-item sd-set-touching-color 
+                        sd-set-variable-status sd-set-vp-camera sd-set-vp-capping-color 
+                        sd-set-vp-default-bg-color sd-set-window-placement sd-show-console-window sd-show-control 
+                        sd-show-cust-feat-browser sd-show-dialog-shell sd-show-display-table 
+                        sd-show-graphical-browser sd-show-general-text-editor sd-show-status-group-entry 
+                        sd-show-toolbar sd-show-toolbox sd-small-ui-p sd-sort-display-table 
+                        sd-start-axis-feedback sd-start-box-feedback sd-start-circle-rad-feedback 
+                        sd-start-direction-feedback sd-start-marker-feedback sd-start-point-feedback
+                        sd-start-polyline-feedback sd-start-rubberarc-beg-end-feedback 
+                        sd-start-rubberarc-cen-beg-feedback sd-start-rubberarc-dia-feedback 
+                        sd-start-rubberbox-feedback sd-start-rubbercircle-cen-feedback 
+                        sd-start-rubbercircle-dia-feedback sd-start-rubbercircle-2-pts-feedback 
+                        sd-start-rubberinfline-angle-feedback sd-start-rubberinfline-feedback 
+                        sd-start-rubberinfline-horizontal-feedback sd-start-rubberinfline-vertical-feedback 
+                        sd-start-rubberline-3d-feedback sd-start-rubberline-angle-feedback 
+                        sd-start-rubberline-feedback sd-start-rubberline-horizontal-feedback 
+                        sd-start-rubberline-vertical-feedback sd-start-dialog sd-status-group-entry-p 
+                        sd-status-group-p sd-store-window-placement sd-string= sd-string&lt; sd-string&gt; 
+                        sd-string&lt;= sd-string&gt;= sd-string/= sd-string-downcase sd-string-match-pattern-p 
+                        sd-string-p sd-string-replace sd-string-split sd-string-trim sd-string-upcase 
+                        sd-subscribe-event sd-subscribe-init-persistent-data sd-suspend-feedback 
+                        sd-switch-application sd-switch-main-task-menu sd-switch-status-group 
+                        sd-sys-background-job sd-sys-exec sd-sys-getenv sd-sys-to-user-units sd-sysid-to-obj
+                        sd-togglebutton-set-p sd-toolbar-visible-p sd-unregister-file-type 
+                        sd-unsecure-logical-table sd-unsubscribe-event sd-unsubscribe-init-persistent-data 
+                        sd-user-to-sys-units sd-vec-add sd-vec-angle-between sd-vec-cross-product sd-vec-equal-p 
+                        sd-vec-length sd-vec-normalize sd-vec-null-p sd-vec-rotate sd-vec-scalar-product 
+                        sd-vec-scale sd-vec-subtract sd-vec-translate sd-vec-xform sd-vertex-name-to-elem 
+                        sd-am-view-p sd-am-view-set-p sd-vp-add-title-postfix sd-vp-remove-title-postfix 
+                        sd-windows-p sd-with-current-working-directory sd-with-suspended-feedback 
+                        sd-write-logical-table-cell sd-3d-annotation-p 
+
+KeyWords5:              // annotation_function_index.html
+                        sd-am-add-curr-info-attributes sd-am-add-info-attributes sd-am-arc-struct
+                        sd-am-bspline-struct sd-am-center-line-p sd-am-center-line-settings-struct
+                        sd-am-center-line-struct sd-am-change-curr-info-attribute
+                        sd-am-change-global-info-attribute sd-am-change-info-attribute sd-am-circle-struct
+                        sd-am-constr-circle-struct sd-am-constr-line-struct sd-am-construction-geometry-p
+                        sd-am-create-geo-circular sd-am-create-geo-point sd-am-create-geo-spline
+                        sd-am-create-geo-straight sd-am-create-section-view sd-am-create-sketch
+                        sd-am-create-standard-view sd-am-create-symbol-arc sd-am-create-symbol-circle
+                        sd-am-create-symbol-dialog sd-am-create-symbol-hatch sd-am-create-symbol-line
+                        sd-am-create-symbol-param sd-am-create-symbol-text sd-am-create-text
+                        sd-am-delete-all-curr-info-attributes sd-am-delete-all-global-info-attributes
+                        sd-am-delete-all-info-attributes sd-am-errors sd-execute-annotator-command
+                        sd-execute-annotator-function sd-am-flat-p sd-am-frame-p sd-am-geo-attributes-struct
+                        sd-am-geometry-p sd-get-annotator-position sd-get-annotator-reference
+                        sd-am-hatch-pattern-struct sd-am-inq-all-sheets sd-am-inq-all-sketches
+                        sd-am-inq-all-view-sets sd-am-inq-center-line sd-am-inq-curr-automatic-hatch-pattern-name
+                        sd-am-inq-curr-avu-colors sd-am-inq-curr-catch-extent sd-am-inq-curr-catch-mode
+                        sd-am-inq-curr-catch-range sd-am-inq-curr-center-line-settings
+                        sd-am-inq-curr-geometry-attributes sd-am-inq-curr-info-attributes
+                        sd-am-inq-curr-manual-hatch-pattern-name sd-am-inq-curr-ref-text-line-attributes
+                        sd-am-inq-curr-sheet sd-am-inq-curr-sheet-name sd-am-inq-curr-symmetry-line-settings
+                        sd-am-inq-curr-text-attributes sd-am-inq-curr-view-set sd-am-inq-default-dim-angle
+                        sd-am-inq-default-dim-arrow-line-broken-line sd-am-inq-default-dim-arrow-line-center-line
+                        sd-am-inq-default-dim-arrow-line-color sd-am-inq-default-dim-arrow-line-extension-line
+                        sd-am-inq-default-dim-arrow-line-l-abs-size sd-am-inq-default-dim-arrow-line-l-fill
+                        sd-am-inq-default-dim-arrow-line-l-type sd-am-inq-default-dim-arrow-line-lr-placement
+                        sd-am-inq-default-dim-arrow-line-offset-line
+                        sd-am-inq-default-dim-arrow-line-offset-point sd-am-inq-default-dim-arrow-line-pensize
+                        sd-am-inq-default-dim-arrow-line-r-abs-size sd-am-inq-default-dim-arrow-line-r-fill
+                        sd-am-inq-default-dim-arrow-line-r-type sd-am-inq-default-dim-auto-arc
+                        sd-am-inq-default-dim-auto-chamfer sd-am-inq-default-dim-auto-circle-pref 
+                        sd-am-inq-default-dim-auto-datum-step sd-am-inq-default-dim-auto-min-space 
+                        sd-am-inq-default-dim-auto-mode sd-am-inq-default-dim-auto-position 
+                        sd-am-inq-default-dim-auto-strategy sd-am-inq-default-dim-cm-format 
+                        sd-am-inq-default-dim-deg-min-sec-format sd-am-inq-default-dim-degree-format 
+                        sd-am-inq-default-dim-fix-texts sd-am-inq-default-dim-frac-format 
+                        sd-am-inq-default-dim-fract-inch-format sd-am-inq-default-dim-frame 
+                        sd-am-inq-default-dim-frame-color sd-am-inq-default-dim-ft-fr-in-sign-format 
+                        sd-am-inq-default-dim-ft-fr-in-text-format sd-am-inq-default-dim-ft-fr-inch-format 
+                        sd-am-inq-default-dim-gradian-format sd-am-inq-default-dim-inches-format 
+                        sd-am-inq-default-dim-km-format sd-am-inq-default-dim-location 
+                        sd-am-inq-default-dim-main-angle-format sd-am-inq-default-dim-main-angle-unit
+                        sd-am-inq-default-dim-main-bracket sd-am-inq-default-dim-main-dim-1b-font 
+                        sd-am-inq-default-dim-main-dim-2b-font sd-am-inq-default-dim-main-dim-color 
+                        sd-am-inq-default-dim-main-dim-ratio sd-am-inq-default-dim-main-dim-slant 
+                        sd-am-inq-default-dim-main-length-format sd-am-inq-default-dim-main-length-unit 
+                        sd-am-inq-default-dim-main-tol-1b-font sd-am-inq-default-dim-main-tol-2b-font 
+                        sd-am-inq-default-dim-main-tol-color sd-am-inq-default-dim-main-tol-ratio 
+                        sd-am-inq-default-dim-main-tol-slant sd-am-inq-default-dim-mm-format 
+                        sd-am-inq-default-dim-mt-format sd-am-inq-default-dim-orientation 
+                        sd-am-inq-default-dim-postfix-1b-font sd-am-inq-default-dim-postfix-2b-font 
+                        sd-am-inq-default-dim-postfix-color sd-am-inq-default-dim-postfix-ratio 
+                        sd-am-inq-default-dim-postfix-slant sd-am-inq-default-dim-prefix-1b-font 
+                        sd-am-inq-default-dim-prefix-2b-font sd-am-inq-default-dim-prefix-color 
+                        sd-am-inq-default-dim-prefix-ratio sd-am-inq-default-dim-prefix-slant 
+                        sd-am-inq-default-dim-radian-format sd-am-inq-default-dim-sec-angle-format 
+                        sd-am-inq-default-dim-sec-angle-unit sd-am-inq-default-dim-sec-bracket 
+                        sd-am-inq-default-dim-sec-dim-1b-font sd-am-inq-default-dim-sec-dim-2b-font 
+                        sd-am-inq-default-dim-sec-dim-color) sd-am-inq-default-dim-sec-dim-ratio 
+                        sd-am-inq-default-dim-sec-dim-slant sd-am-inq-default-dim-sec-length-format 
+                        sd-am-inq-default-dim-sec-length-unit sd-am-inq-default-dim-sec-tol-1b-font 
+                        sd-am-inq-default-dim-sec-tol-2b-font sd-am-inq-default-dim-sec-tol-color 
+                        sd-am-inq-default-dim-sec-tol-ratio sd-am-inq-default-dim-sec-tol-slant 
+                        sd-am-inq-default-dim-span sd-am-inq-default-dim-subfix-1b-font 
+                        sd-am-inq-default-dim-subfix-2b-font sd-am-inq-default-dim-subfix-color 
+                        sd-am-inq-default-dim-subfix-ratio sd-am-inq-default-dim-subfix-slant 
+                        sd-am-inq-default-dim-superfix-1b-font sd-am-inq-default-dim-superfix-2b-font 
+                        sd-am-inq-default-dim-superfix-color sd-am-inq-default-dim-superfix-ratio
+                        sd-am-inq-default-dim-superfix-slant sd-am-inq-default-dim-text-abs-main-dim-size 
+                        sd-am-inq-default-dim-text-abs-main-tol-size sd-am-inq-default-dim-text-abs-postfix-size 
+                        sd-am-inq-default-dim-text-abs-prefix-size sd-am-inq-default-dim-text-abs-sec-dim-size 
+                        sd-am-inq-default-dim-text-abs-sec-tol-size sd-am-inq-default-dim-text-abs-subfix-size 
+                        sd-am-inq-default-dim-text-abs-superfix-size sd-am-inq-default-dim-text-rel-main-dim-size 
+                        sd-am-inq-default-dim-text-rel-main-tol-size sd-am-inq-default-dim-text-rel-postfix-size 
+                        sd-am-inq-default-dim-text-rel-prefix-size sd-am-inq-default-dim-text-rel-sec-dim-size 
+                        sd-am-inq-default-dim-text-rel-sec-tol-size sd-am-inq-default-dim-text-rel-subfix-size 
+                        sd-am-inq-default-dim-text-rel-superfix-size sd-am-inq-default-dim-tol-values 
+                        sd-am-inq-default-drawing-no sd-am-inq-default-view-settings 
+                        sd-am-inq-dim-extline1-begin-pnt sd-am-inq-dim-extline1-end-pnt 
+                        sd-am-inq-dim-extline2-begin-pnt sd-am-inq-dim-extline2-end-pnt sd-am-inq-dim-fix-texts 
+                        sd-am-inq-dim-line-begin-pnt sd-am-inq-dim-line-end-pnt sd-am-inq-dim-lower-tol-value 
+                        sd-am-inq-dim-main-lower-tol-text sd-am-inq-dim-main-upper-tol-text 
+                        sd-am-inq-dim-main-value-text sd-am-inq-dim-sec-lower-tol-text 
+                        sd-am-inq-dim-sec-upper-tol-text sd-am-inq-dim-sec-value-text sd-am-inq-dim-text-cen-pnt 
+                        sd-am-inq-dim-tol-values sd-am-inq-dim-type sd-am-inq-dim-upper-tol-value 
+                        sd-am-inq-dim-value sd-am-inq-dim-values sd-am-inq-drawing-modified sd-am-inq-drawing-no 
+                        sd-am-inq-drawing-scale sd-am-inq-drawing-selected-owner sd-am-inq-drawing-up-to-date 
+                        sd-am-inq-geometry-attributes sd-am-inq-global-info-attributes sd-am-inq-hatch-mode 
+                        sd-am-inq-hatch-pattern sd-am-inq-info-attributes sd-am-inq-loaded-fonts sd-am-inq-name 
+                        sd-am-inq-reference-3d-vp sd-am-inq-registered-frames 
+                        sd-am-inq-registered-hatch-pattern-names sd-am-inq-sheet sd-am-inq-specific-geo-props 
+                        sd-am-inq-symbol-param sd-am-inq-symbol-param-names sd-am-inq-symbol-text-area
+                        sd-am-inq-symmetry-line sd-am-inq-text-attributes sd-am-inq-text-strings 
+                        sd-am-inq-unique-name sd-am-inq-used-fonts sd-am-inq-view sd-am-inq-view-set
+                        sd-am-inq-view-settings sd-am-inq-vp-corners sd-am-inq-vp-cursor-size sd-am-inq-vp-show 
+                        sd-am-inq-vp-window linetype sd-am-line-struct sd-am-load-sketch 
+                        sd-am-ref-text-line-attributes-struct sd-am-ref-text-line-p sd-am-register-symbol 
+                        sd-am-reset-reference-3d-vp sd-am-set-common-owner sd-am-set-default-owner
+                        sd-am-set-reference-3d-vp sd-am-set-symbol-param-value sd-am-sheet-p sd-am-sheet-struct 
+                        sd-am-simple-pattern-struct sd-am-sketch-p sd-am-symbol-p sd-am-symmetry-line-p 
+                        sd-am-symmetry-line-settings-struct sd-am-symmetry-line-struct standard_annotation_events 
+                        sd-am-text-attributes-struct sd-am-text-p sd-am-unregister-symbol 
+                        sd-am-unregister-symbol-all sd-am-update-view sd-am-view-default-settings-struct 
+                        sd-am-view-p sd-am-view-set-p sd-am-view-set-struct sd-am-view-settings-struct 
+                        sd-am-view-struct 
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clNavy clWindow B
+Keyword3Col:            clPurple clWindow
+Keyword4Col:            clNavy clWindow B
+Keyword5Col:            $00FF8080 clWindow B
+IdentifierCol:          clNavy clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clGreen clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clWindowText clWindow
+PreprocessorCol:        clTeal clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00C0FFFF
+
+///////  end of file /////////
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clRed clBlack
+OverrideTxtFgColor:     0
