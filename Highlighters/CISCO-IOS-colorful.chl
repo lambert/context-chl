@@ -1,0 +1,73 @@
+  ////////////////////////////////////////////////////////////////////////////////
+ //                                                                              //
+//     CISCO IOS colorful highlighter written by Tobias Momber * momber.org *     //
+ //                                                                              //
+  ////////////////////////////////////////////////////////////////////////////////
+
+Language:       CISCO IOS - colorful
+Filter:         CISCO config + log files (*.cfg,*.cnf,*.txt,*.log)|*.cfg;*.cnf;*.txt;*.log
+HelpFile:
+CaseSensitive:          0
+LineComment:            ! remark
+BlockCommentBeg:        ^CCC ^C
+BlockCommentEnd:        ^C
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z -
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 . $ /
+EscapeChar:             \
+// global keywords
+KeyWords1:	active alias archive async-bootp audit banner bba-group boot
+                buffers call cdp class-map clock cns config-register control-plane
+                default default-value define description dnsix-dmdp dnsix-nat do
+                downward-compatible-config enable
+                end exception exit file flow-sampler-map help hostname interface ip
+		ipv6 ixi kron li-view line logging memory menu monitor multilink 
+                netbios parser partition priority-list privilege process
+                process-max-time pseudowire-class queue-list random-detect-group
+                rbe regexp rtr scheduler service snmp snmp-server sntp stackmaker
+                standby subscriber table-map template tftp-server time-range track
+                vc-class virtual-template vpdn vpdn-group vpdn-template
+                gigabitethernet fastethernet ethernet fa administratively down up
+// switching keywords
+KeyWords2:      switching
+                arp bridge channel-group dot1q pvst spanning-tree stp access trunk
+                vtp portfast mode transparent vlan Port-channel full half auto
+// routing keywords
+KeyWords3:      routing
+                dialer-list dial-peer dialer default-gateway point-to-point
+                ospf rip bgp egrp eigrp hsrp area network route-map router
+// security keywords
+KeyWords4:      security
+                aaa access-list crypto key l2tp-class login map-class password
+                password-encryption policy-manager policy-map ppp radius-server 
+                subscriber-policy security tacacs-server username permit deny udp
+                tcp icmp session-timeout built teardown access-group src dst ro rw 
+                tacacs radius
+// negative keywords
+KeyWords5:      no shutdown
+////////////////////////////////////////////////////////////////////////////////////
+StringBegChar:
+StringEndChar:
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clWindowText clWindow B // global commands
+Keyword2Col:            clNavy clWindow B       // switching commands
+Keyword3Col:            $00FF0080 clWindow B    // routing commands
+Keyword4Col:            $008000FF clWindow B    // security commands
+Keyword5Col:            clWindowText $BBBBBB BI // negative commands
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $00FF4040 clWindow BI
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00CCCCCC //FFFFCC
+MatchedBracesCol:       clWindowText clWindow
