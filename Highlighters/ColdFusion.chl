@@ -1,0 +1,159 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// ColdFusion highlighter by Marko 'Paranoid' Crnic <paranoid@x.srk.fer.hr>
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               ColdFusion
+Filter:                 ColdFusion files (*.cfm)|*.cfm
+HelpFile:
+CaseSensitive:          0
+LineComment:
+BlockCommentBeg:        <!---
+BlockCommentEnd:        --->
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z -_. 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9
+EscapeChar:
+
+// tags
+KeyWords1:              a b
+                        body br
+                        cfabort cfapplet cfapplication cfassociate
+                        cfauthenticate cfbreak cfcache cfcol
+                        cfcollection cfcontent cfcookie cfdirectory
+                        cferror cfexit cffile cfform cfftp cfgrid
+                        cfgridcolumn cfgridrow cfgridupdate cfheader
+                        cfhtmlhead cfhttp cfhttpparam
+                        cfif cfelseif cfelse
+                        cfinclude cfindex cfinput cfinsert
+                        cfldap cflocation cflock cfloop cfmail
+                        cfmodule cfobject cfoutput cfparam cfpop
+                        cfprocparam cfprocresult cfquery cfregistry
+                        cfreport cfschedule cfscript cfsearch cfselect
+                        cfset cfsetting cfslider cfstoredproc
+                        cfswitch cfcase cfdefaultcase
+                        cftable cftextinput cfthrow cftransaction
+                        cftree cftreeitem
+                        cftry cfcatch
+                        cfupdate cfwddx
+                        form
+                        head html
+                        input
+                        link
+                        meta
+                        pre
+                        script style
+                        table tr td th title
+                        textarea
+
+// attributes
+KeyWords2:              accept action addnewline addtoken agentname align
+                        appendkey applicationtimeout attachmentpath
+                        attributecollection attributes basetag bgcolor
+                        blockfactor body bold border branch cachedafter
+                        cachedwithin cc cfsqltype checked class clientmanagement
+                        clientstorage colheaderalign colheaderbold colheaderfont
+                        colheaderfontsize colheaderitalic colheaders collection
+                        colspacing columns completepath connection context
+                        criteria custom1 custom2 data dataalign datacollection
+                        datasource dbname dbserver dbtype dbvarname debug default
+                        delete deletebutton deletefile delimiter destination detail
+                        directory display dn domain enablecab enablecfoutputonly
+                        enctype enddate endtime entry errorcode expand expires
+                        expireurl expression extendedinfo extensions external
+                        file filefield filter font fontsize formfields formula
+                        from grid griddataalign gridlines groovecolor group header
+                        headeralign headerbold headerfont headerfontsize headeritalic
+                        headerlines height highlighthref href hrefkey hscroll hspace
+                        htmltable img imgopen imgstyle index input insert insertbutton
+                        interval isolation italic key keyonly label language mailerid
+                        mailto maxlength maxrows message messagenumber method
+                        mimeattach mode multiple name namecomplict newdirectory
+                        notsupported null numberformat onerror onsubmit onvalidate
+                        operation orderby output parrent passthrough password path
+                        picturebar port procedure protocol provider providerdsn
+                        proxybypass proxyserver publish query queryasroot range
+                        recurse rel refreshlabel report requesttimeout required reset
+                        resoleurl resultset retrycount returncode rowheaderalign
+                        rowheaderbold rowheaderfont rowheaderfontsize rowheaderitalic
+                        rowheaders rowheaderwidth rowheight scale scope secure
+                        securitycontext select selectcolor selected selectmode server
+                        sessionmanagement sessiontimeout setclientcookies setcookie
+                        showdebugoutput showerror size sort sortascendingbutton
+                        sortdescendingbutton source sql start startdate startrow starttime
+                        step stoponerror subject tablename tableowner tablequalifier
+                        target task template text textcolor textqualifier
+                        throwonfailure throwontimeout timeout title to toplevelvariable
+                        type url urlpath username usetimezoneinfo validate value
+                        variable vscroll vspace width
+                        frameset frame noframes center p
+
+// functions & other
+KeyWords3:              Abs ArrayAppend ArrayAvg ArrayClear ArrayDeleteAt
+                        ArrayInsertAt ArrayIsEmpty ArrayLen ArrayMax
+                        ArrayMin ArrayNew ArrayPrepend ArrayResize ArraySet
+                        ArraySort ArraySum ArraySwap ArrayToList Asc Atn
+                        BitAnd BitMaskClear BitMaskRead BitMaskSet BitNot
+                        BitOr BitSHLN BitSHRN BitXor CJustify Ceiling Chr
+                        Compare CompareNoCase Cos CreateDate CreateDateTime
+                        CreateODBCDate CreateODBCDateTime CreateODBCTime
+                        CreateTime CreateTimeSpan DE DateAdd DateCompare DateDiff
+                        DateFormat DatePart Day DayOfWeek DayOfWeekAsString
+                        DayOfYear DaysInMonth DaysInYear DecimalFormat DecrementValue
+                        Decrypt DeleteClientVariable DirectoryExists DollarFormat
+                        Encrypt Evaluate Exp ExpandPath FileExists Find FindNoCase
+                        FindOneOf FirstDayOfMonth Fix FormatBaseN GetBaseTagData
+                        GetBaseTagList GetClientVariablesList GetDirectoryFromPath
+                        GetFileFromPath GetLocale GetTempDirectory GetTempFile
+                        GetTemplatePath GetTickCount GetToken HTMLCodeFormat
+                        HTMLEditFormat Hour IIf IncrementValue InputBaseN Insert
+                        Int IsArray IsAuthenticated IsAuthorized IsBoolean IsDate
+                        IsDebugMode IsDefined IsLeapYear IsNumeric IsNumericDate
+                        IsQuery IsSimpleValue IsStruct LCase LJustify LSCurrencyFormat
+                        LSDateFormat LSIsCurrency LSIsDate LSIsNumeric LSNumberFormat
+                        LSParseCurrency LSParseDateTime LSParseNumber LSTimeFormat
+                        LTrim Left Len ListAppend ListChangeDelims ListContains
+                        ListContainsNoCase ListDeleteAt ListFind ListFindNoCase ListFirst
+                        ListGetAt ListInsertAt ListLast ListLen ListPrepend ListRest
+                        ListSetAt ListToArray Log Log10 Max Mid Min Minute Month
+                        MonthAsString Now NumberFormat ParagraphFormat ParameterExists
+                        ParseDateTime Pi PreserveSingleQuotes Quarter QueryAddRow
+                        QueryNew QuerySetCell QuotedValueList REFind REFindNoCase
+                        REReplace REReplaceNoCase RJustify RTrim Rand RandRange
+                        Randomize RemoveChars RepeatString Replace ReplaceList
+                        ReplaceNoCase Reverse Right Round Second SetLocale SetVariable
+                        Sgn Sin SpanExcluding SpanIncluding Sqr StripCR StructClear
+                        StructCopy StructCount StructDelete StructFind StructInsert
+                        StructIsEmpty StructKeyExists StructNew StructUpdate Tan
+                        TimeFormat Trim UCase URLEncodedFormat Val ValueList Week
+                        WriteOutput Year YesNoFormat
+                        not and or eq neq lt gt lte gte is
+                        content http-equiv
+                        rows framespacing frameborder
+                        marginwidth marginheight src noresize
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       1
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00C00000 clWindow
+Keyword2Col:            $00C000C0 clWindow
+Keyword3Col:            clGreen clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00ECDABB
+
+
+
+
+
+
