@@ -1,0 +1,67 @@
+/////////////////////////////////////
+//
+// BHT BASIC Highlighter for ConText
+// By Marco Pontello
+//    marcopon at myrealbox.com
+//    http://mark0.ngi.it
+//
+//                        26/01/2004
+//
+// Used for programming Denso BHT
+// handy barcode scanner / terminal
+//
+/////////////////////////////////////
+
+Language:               BHT BASIC
+Filter:                 BHT BASIC programs (*.src)|*.src
+HelpFile:
+CaseSensitive:          0
+LineComment:            '
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 $ % _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// keywords - statements
+KeyWords1:              apload beep call chain clfile close cls common cursor data
+                        defreg def fn end dim end erase field for next get gosub goto
+                        if then else input key on off kill kpload let line input locate
+                        error goto open out power print using put read rem restore
+                        resume return screen select case wait while wend xfile $include
+
+
+// keywords - functions
+KeyWords2:              abs asc bcc$ chkdgt$ chr$ country$ csrlin date$ eof erl err ext$
+                        fre hex$ inkey$ inp input$ inst int left$ len loc lof mark$
+                        mid$ pos right$ search soh$ str$ stx$ time$ timea timeb timec
+                        val
+
+
+KeyWords3:
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clWindowText clWindow B
+Keyword2Col:            clWindowText clWindow
+Keyword3Col:            clGreen clWindow
+IdentifierCol:          $00804000 clWindow
+CommentCol:             $0000C000 clWhite
+NumberCol:              clRed clWindow
+StringCol:              $00C08000 clWindow
+SymbolCol:              $008080FF clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clBlue
+CurrentLineCol:         clBlack $00FFFFC0
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:
+BlockEndStr:
