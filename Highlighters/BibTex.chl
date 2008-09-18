@@ -1,0 +1,47 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// BibTex highlighter written by Hugo Ortega H. hugorteg@yahoo.com
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language: 		    BibTex
+Filter:			    BibTex files (*.bib)|*.bib
+HelpFile:
+CaseSensitive: 	    0
+LineComment:		    %
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z 0..9 @
+IdentifierChars:	    a..z A..Z 0..9
+NumConstBegChars:	    (){}=,
+NumConstChars:
+EscapeChar:
+
+KeyWords1:		    @article @book @booklet @conference @inbook @incollection @inproceedings @manual
+				    @mastersthesis @misc @phdthesis @proceedings @techreport @unpublished
+
+KeyWords2:		    author title journal year volume number pages month note editor publisher series address
+				    edition howpublished chapter type booktitle series type organization school institution
+
+KeyWords3:		    @string @comment
+
+StringBegChar: 	    "
+StringEndChar: 	    "
+MultilineStrings:	    1
+UsePreprocessor:	    0
+CurrLineHighlighted:    1
+
+SpaceCol: 		    clWindowText clWindow
+Keyword1Col:		    clBlue clWindow B
+Keyword2Col:		    clNavy clWindow B
+Keyword3Col:		    clMaroon clWindow
+IdentifierCol: 	    clWindowText clWindow
+CommentCol:		    $00A0A0A0 clWindow I
+NumberCol:		    clRed clWindow
+StringCol:		    clGreen clWindow
+SymbolCol:		    clBlack clWindow
+PreprocessorCol:	    clBlue clWindow
+SelectionCol:		    clWhite clNavy
+CurrentLineCol:	    clBlack $00C0FFFF
+
+OverrideTxtFgColor:     0
