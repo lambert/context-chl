@@ -1,0 +1,114 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// C higlighter Darkblue  -  Lars
+// version 1.0, 2007.04.11
+// I like it with the FIXEDSYS font
+//
+//  1.0  [April 2007]
+//   * Initial release
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               C Darkblue.Style
+Filter:                 C Darkblue Style(*.c,*.h)|*.c;*.h
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+
+NumConstBegChars:       0..9 0x
+NumConstChars:          0..9 abcdefABCDEF. // & hexa
+
+EscapeChar:             \
+
+// ANSI C comand and other typedefs
+KeyWords1:
+                        auto
+                        char
+                        const
+                        double
+                        enum
+                        extern
+                        float
+                        inline
+                        int
+                        long
+                        register
+                        restrict
+                        short
+                        signed
+                        static
+                        struct
+                        typedef
+                        union
+                        unsigned
+                        void
+                        volatile
+                        int8_t
+                        uint8_t
+                        int16_t
+                        uint16_t
+                        int32_t
+                        uint32_t
+                        sbit
+                        bit
+
+
+// functions
+KeyWords2:
+                        while
+                        switch
+                        sizeof
+                        return
+                        for
+                        goto
+                        if
+                        else
+                        continue
+                        default
+                        do
+                        break
+                        case
+                        offsetof
+
+// trigraph
+KeyWords3:              ??=
+                        ??
+                        ??/
+                        ??
+                        ??'
+                        ??<
+                        ??!
+                        ??>
+                        ??-
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText $00400000
+Keyword1Col:            $0080FF80 $00400000
+Keyword2Col:            $0080FFFF $00400000
+Keyword3Col:            clBlue $00400000
+IdentifierCol:          $00D0D0D0 $00400000
+CommentCol:             $00FFA080 $00400000
+NumberCol:              $00FF80FF $00400000
+StringCol:              $009314FF $00400000
+SymbolCol:              $00A9A9A9 $00400000
+PreprocessorCol:        $00FF80FF $00400000
+SelectionCol:           $00D0D0D0 $00FF8080
+CurrentLineCol:         clBlack $00FFC000
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+Keyword4Col:            clWindowText $00400000
+Keyword5Col:            clWindowText $00400000
+MatchedBracesCol:       $00D0D0D0 clTeal
