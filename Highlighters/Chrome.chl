@@ -1,0 +1,88 @@
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Chrome
+
+//////////////////////////////////////////////////////////////////////////////
+
+Description:           Chrome Highliter written by Florian Sundermann, context@boombuler.de
+
+//////////////////////////////////////////////////////////////////////////////
+
+Filter:                 Chrome files (*.chrome,*.pas)|*.chrome;*.pas
+
+//////////////////////////////////////////////////////////////////////////////
+
+HelpFile:
+
+//////////////////////////////////////////////////////////////////////////////
+
+CaseSensitive:          0
+
+//////////////////////////////////////////////////////////////////////////////
+
+LineComment:            //
+BlockCommentBeg:        (* {
+BlockCommentEnd:        *) }
+
+//////////////////////////////////////////////////////////////////////////////
+
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+
+//////////////////////////////////////////////////////////////////////////////
+
+NumConstBegChars:       0..9 $
+
+//////////////////////////////////////////////////////////////////////////////
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+//////////////////////////////////////////////////////////////////////////////
+
+EscapeChar:		&
+
+//////////////////////////////////////////////////////////////////////////////
+
+KeyWords1:              abstract add and array as assembly async begin case
+			class const constructor create delegate div do
+			downto else end ensure enum event except finalizer finally flags
+			for forward function if implementation in inherited inline interface
+			invariants is iterator locking loop method mod module namespace
+			new nil not nullable of old on operator or out partial private
+			procedure property protected public raise record repeat require 
+			sealed set shl shr step then to try type unit until uses using var
+			where while with xor yield self each empty external final finalize
+			global has matching override pinned read readonly reintroduce remove
+			unsafe virtual write
+
+
+KeyWords2:              false true
+
+//////////////////////////////////////////////////////////////////////////////
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+UsePreprocessor:        0
+
+//////////////////////////////////////////////////////////////////////////////
+
+CurrLineHighlighted:    0
+
+//////////////////////////////////////////////////////////////////////////////
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clNavy clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
