@@ -1,0 +1,230 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Armed Assault (and Operation Flashpoint) - Skripting
+//
+// v0.1 16/12/2006 - 01:00 (AM) ;) by weasel75
+//
+// This file is released AS IS.
+// No warranty, no nothing.
+// Feel free to modify/improve!
+//
+// This highlighter needs ConText v0.97.3 or newer to support 5 KeyWords !!!
+//
+// Installation: Just drop this file into your
+// "highlighters"-folder in the ConText installation-path. Enjoy!
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//
+// language name
+//
+Language:               Armed Assault + Operation Flashpoint
+
+
+//
+// default file filter
+//
+Filter:                 ArmA/OFP scripts (*.sqs, *.sqf) | *.sqs;*.sqf
+
+
+//
+// no help-file ATM :(
+//
+// HelpFile: c:\???
+
+
+//
+// language case sensitivity [ 0/1 ]
+//
+CaseSensitive:          0
+
+
+//
+// comments
+//
+LineComment:            ; 
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+
+//
+// identifiers, char by char
+//
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+
+//
+// numeric constants [begin] characters
+//
+NumConstBegChars:       0..9
+NumConstChars:          0..9
+
+
+//
+// escape character - none in ArmA, or is there?!
+//
+EscapeChar:                 \
+
+
+//
+// keywords 1-5 (not more supported ATM (ConText v. 0.98.5))
+//
+// functions with no return
+KeyWords1: action actionKeys addAction addEventHandler addLiveStats addMagazine addMagazineCargo addMagazinePool addRating addScore addSwitchableUnit addWaypoint addWeapon addWeaponCargo addWeaponPool allowDammage allowFleeing allowGetIn animate animatePhase animateState assignAsCargo assignAsCommander assignAsDriver assignAsGunner assignTeam
+  buttonSetAction
+  camCommand camCommit camCommitPrepared camCommitted camCreate camDestroy cameraEffect camPrepareTarget camSetBank camSetDir camSetDive camSetFocus camSetFov camSetFovRange camSetPos camSetRelPos camSetTarget camUseNVG
+  clearMagazineCargo clearMagazinePool clearRadio clearWeaponCargo clearWeaponPool closeDialog closeDisplay commandFollow commandFSM commandGetOut commandMove commandStop commandTarget commandWatch
+  ctrlActivate ctrlCommit ctrlEnable ctrlMapAnimAdd ctrlMapAnimClear ctrlMapAnimCommit ctrlSetActiveColor ctrlSetBackgroundColor ctrlSetEventHandler ctrlSetFade ctrlSetFocus ctrlSetFont ctrlSetFontH1 ctrlSetFontH1B ctrlSetFontH2 ctrlSetFontH2B ctrlSetFontH3 ctrlSetFontH3B ctrlSetFontH4 ctrlSetFontH4B ctrlSetFontH5 ctrlSetFontH5B ctrlSetFontH6 ctrlSetFontH6B ctrlSetFontHeight ctrlSetFontHeightH1 ctrlSetFontHeightH2 ctrlSetFontHeightH3 ctrlSetFontHeightH4 ctrlSetFontHeightH5 ctrlSetFontHeightH6 ctrlSetFontP ctrlSetFontPB ctrlSetForegroundColor ctrlSetPosition ctrlSetScale ctrlSetStructuredText ctrlSetText ctrlSetTextColor ctrlSetTooltip ctrlSetTooltipColorBox ctrlSetTooltipColorShade ctrlSetTooltipColorText ctrlShow
+  cutObj cutRsc cutText
+  deleteCenter deleteCollection deleteGroup deleteIdentity deleteMarker deleteStatus deleteTarget deleteVehicle deleteWaypoint disableAI disableUserInput disableCTRL displaySetEventHandler dissolveTeam doFire doFollow doFSM doGetOut doMove doStop doTarget doWatch drawArrow drawEllipse drawIcon drawLine drawRectangle drop
+  echo enableAI enableAttack enableEndDialog enableEnvironment enableRadio enableReload enableTeamSwitch engineOn estimatedTimeLeft
+  fadeMusic fadeRadio fadeSound fillWeaponsFromPool finishMissionInit fire flyInHeight fog fogForecast forceEnd forceMap forceSpeed
+  glanceAt globalChat globalRadio groupChat groupRadio
+  hideBehindScripted hideBody hint hintC hintCadett hintCArray hintCText htmlLoad
+  inflame inGameUISetEventHandler initAmbientLive
+  join
+  kbAddDatabase kbAddDatabaseTarget kbAddTopic kbRemoveTopic kbTell
+  land lbClear lbDelete lbSetColor lbSetCurSel lbSetData lbSetPicture lbSetSelected lbSetValue leaveVehicle lightAttachObject lightDetachObject limitSpeed lock
+  mapAnimAdd mapAnimClear mapAnimCommit
+  objStatus onBriefingGear onBriefingGroup onBriefingNotes onBriefingPlan onBriefingTeamSwitch onMapSingleClick onPlayerConnected onPlayerDisconnected orderGetIn
+  pickWeaponPool playMission playMove playMusic playSound publicVariable putWeaponPool processInitCommands
+  reload removeAction removeAllEventHandlers removeAllWeapons removeEventHandler removeMagazine removeMagazines removeSwitchableUnit removeWeapon resize respawnVehicle reveal runInitScript
+  saveGame saveVar say scopeName selectLeader selectPlayer selectWeapon sendSimpleCommand setAccTime setAmmoCargo setAperture setBehaviour setCameraEffect setCameraInterest setCaptive setCombatMode setDamage setDammage setDate setDestination setDir setDropInterval setEffectCondition setFace setFaceAnimation setFlagOwner setFlagSide setFlagTexture setFog setFormation setFormationTask
+  setFormDir setFriend setFuel setFuelCargo setGroupId setHideBehind setIdentity setLightAmbient setLightBrightness setLightColor setMarkerBrush setMarkerColor setMarkerDir setMarkerPos setMarkerShape setMarkerSize setMarkerText setMarkerType setMimic setMousePosition setMusicEffect setObjectTexture setOvercast setParticleCircle setParticleParams setParticleRandom setPlayable setPos setPosASL
+  setRadioMsg setRain setRank setRepairCargo setSkill setSoundEffect setSpeedMode setTargetAge setTerrainGrid setTitleEffect setTriggerActivation setTriggerArea setTriggerStatements setTriggerText setTriggerTimeout setTriggerType setUnitAbility setUnitPos setUnitRank setVariable setVectorDir setVectorUp setVehicleAmmo setVehicleArmor setVehicleId setVehicleInit setVehicleLock setVehiclePosition
+  setVehicleVarName setVelocity setViewDistance setWaypointBehaviour setWaypointCombatMode setWaypointDescription setWaypointFormation setWaypointHousePosition setWaypointPosition setWaypointScript setWaypointSpeed setWaypointStatements setWaypointTimeout setWaypointType setWPPos showCinemaBorder showCompass showGPS showMap showPad showRadio showWarrant showWatch showWaypoint
+  sideChat sideRadio skipTime sleep sliderSetPosition sliderSetRange sliderSetSpeed stop switchCamera switchLight switchMove synchronizeWaypoint
+  teamSwitch titleObj titleRsc titleText triggerAttachObject triggerAttachVehicle
+  unassignTeam unassignVehicle
+  vehicleChat vehicleRadio
+  waypointAttachObject
+  waypointAttachVehicle
+
+// functions that return stuff
+KeyWords2: abs accTime acos ammo asin atan atan2 atg
+  behaviour benchmark boundingBox buttonAction buttonActionControl
+  camCreate cameraInterest cameraOn campaignConfigFile ceil combatMode commander composeText configFile configName cos count counta countEnemy countFriendly countSide countType countUnknown createAgent createCenter createDialog createDisplay createGroup createGuardedPoint createMarker createMine createSoundSource createTrigger createUnit createVehicle createVehicleLocal crew ctrlFade ctrlParent ctrlPosition ctrlScale ctrlText ctrlType ctrlCurrentCommand
+  damage date daytime deg direction distance driver
+  effectiveCommander emptyPositions exp expectedDestination
+  find findCover findDisplay findNearestEnemy flag flagOwner floor format formation formationDirection formationLeader formationMembers formationPosition formationTask formatText formLeader fuel
+  getArray getDammage getDir getHideFrom getMarkerColor getMarkerPos getMarkerSize getMarkerType getNumber getPos getPosASL getSpeed getText getVariable getWPPos group gunner
+  hierarchyObjectsCount
+  image inheritsFrom intersect
+  keyImage keyName knowsAbout
+  lbAdd lbColor lbCurSel lbData lbPicture lbSelection lbSize lbText lbValue leader lightIsOn lineBreak list ln loadFile localize lockWP lookAt log
+  magazines markerColor markerPos markerSize markerType max min missionConfigFile missionName missionStart mod modelToWorld move moveInCargo moveInCommander moveInDriver moveInGunner moveInTurret moveTarget moveTo musicVolume
+  name nearestObject nearObjects needReload nextWeatherChange
+  object overcast overcastForecast
+  parseNumber parseText pi playerRespawnTime playersNumber position posScreenToWorld positionCameraToWorld posWorldToScreen precision preprocessFile preprocessFileLineNumbers primaryWeapon
+  queryMagazinePool queryWeaponPool
+  rad radioVolume rain random rank rating round
+  score scudState secondaryWeapon selectionPosition setAttributes side sin skill sliderPosition sliderRange sliderSpeed soundVolume speed speedMode supportInfo str surfaceType switchableUnits
+  tan teamSwitchEnabled text tg time typeName typeOf
+  unitPos unitReady units
+  vectorDir vectorUp vehicle vehicles vehicleVarName velocity verifySignature
+  waypointPosition weapondirection weapons wind worldName worldToModel
+
+// function that return Boolean, or boolean operators
+KeyWords3: < > == >= <=
+  alive and
+  camCommitted canFire canMove canStand captive cheatsEnabled ctrlCommitted ctrlEnabled ctrlMapAnimDone ctrlShown ctrlVisible
+  dialog
+  false finite fleeing
+  greater
+  handsHit hasWeapon
+  in inflamed isArray isClass isEngineOn isFormationLeader isHidden isHideBehindScripted isKeyActive isKindOf isMarkedForCollection isNil isNull isNumber isPlayer isText
+  kbHasTopic
+  lbIsSelected less loadIdentity loadStatus local locked
+  mapAnimDone moveToCompleted moveToFailed
+  not
+  or
+  preloadCamera preloadObject preloadSound preloadTitleObj preloadTitleRsc
+  reloadEnabled requiredVersion
+  saveIdentity saveStatus scriptDone shownCompass shownGPS shownMap shownPad shownRadio shownWarrant shownWatch someAmmo sqrt stopped surfaceIsWater
+  true
+
+// Language / Code-Flow
+KeyWords4: assert
+  breakOut breakTo
+  call case catch comment compile
+  default do
+  else exec execVM exit exitWith
+  for forEach from
+  goto
+  halt
+  if
+  private
+  select set spawn step switch
+  terminate then throw to
+  waitUntil while
+
+// reserved key-words
+KeyWords5: _control _this _x civilian controlNull displayNull east enemy friendly grpNull nil objNull player playerSide resistance sideEnemy sideFriendly sideLogic west
+
+
+//
+// string delimiters
+//
+StringBegChar:          " '
+StringEndChar:          " '
+MultilineStrings:       0
+
+
+//
+// use preprocessor [ 0/1 ]
+//
+// in ArmA/OFP, this is for jumpmarks
+//
+UsePreprocessor:        1
+
+
+//
+// highlight line: [ 0/1 ]
+//
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            clBlue clWindow b
+Keyword4Col:            clWindowText clWindow b
+Keyword5Col:            clGreen clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clGreen clWindow b
+StringCol:              clOlive clWindow I
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clMaroon clWindow B
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+HelpFile:
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:		}
+MatchedBracesCol:       clFuchsia clWindow Bu
