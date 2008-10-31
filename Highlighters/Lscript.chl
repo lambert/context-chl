@@ -1,0 +1,521 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Lscript highlighter written by Mike Green, dodgy@shortbutpurple.fsnet.co.uk
+//                                and Glenn Tester, gtester@ghostoutpost.com
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Lscript
+
+//////////////////////////////////////////////////////////////////////////////
+// put whatever you want here, short description, author name, email address..
+
+Description:            Lscript highlighter written by Mike Green <dodgy@shortbutpurple.fsnet.co.uk> and Glenn Tester <gtester@ghostoutpost.com>
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Lscript Files (*.ls,*.lws)|*.ls;*.lws
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invoked when F1 is pressed
+
+HelpFile:               L:/DOCUMENTATION/help/LightWave_Eight_Help.htm
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:              \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into five groups which can be
+// highlighted differently
+
+// Layout commands
+
+KeyWords1:              About AboutOpenGL AdaptiveSampling AdaptiveThreshold
+                        AddAreaLight AddBone AddButton AddCamera AddChildBone
+                        AddDistantLight AddEnvelope AddLinearLight AddNull
+                        AddPartigon AddPlugins AddPointLight AddPosition
+                        AddRotation AddScale AddSpotlight AddToSelection
+                        AdjustRegionTool AffectCaustics AffectDiffuse AffectOpenGL
+                        AffectSpecular AlertLevel AmbientColor AmbientIntensity
+                        Antialiasing ApertureHeight ApplyServer AreaLight 
+                        AutoConfirm AutoFrameAdvance AutoKey
+
+						Backdrop BackdropColor BackView BController BLimits BlurLength BoneActive BoneFalloffType
+                        BoneJointComp BoneJointCompAmounts BoneJointCompParent
+                        BoneLimitedRange BoneMaxRange BoneMinRange BoneMuscleFlex
+                        BoneMuscleFlexAmounts BoneMuscleFlexParent BoneNormalization
+                        BoneRestLength BoneRestPosition BoneRestRotation BoneSource
+                        BoneStrength BoneStrengthMultiply BoneWeightMapName BoneWeightMapOnly
+                        BoneWeightShade BoneXRay BottomView BoundingBoxThreshold
+                        BStiffness
+
+                        CacheCaustics CacheRadiosity CacheShadowMap
+                        CameraMask CameraView CameraZoomTool CastShadow CausticIntensity
+                        CenterItem CenterMouse ChangeTool ClearAllBones ClearAllCameras
+                        ClearAllLights ClearAllObjects ClearAudio ClearScene ClearSelected
+                        Clone CommandHistory CommandInput Compositing ConeAngleTool
+                        ContentDirectory CreateKey
+
+                        DecreaseGrid DeleteKey DepthBufferAA DepthOfField DisplayOptions DistantLight
+                        DrawAntialiasing DrawBones DrawChildBones DynamicUpdate
+
+                        EditBones EditCameras EditKeys EditLights
+                        EditMenus EditObjects EditPlugins EditServer EnableCaustics
+                        EnableDeformations EnableForegroundFaderAlpha EnableForegroundKey EnableIK
+						EnableLensFlares EnableRadiosity EnableServer
+                        EnableShadowMaps EnableVIPER EnableVolumetricLights EnableXH
+                        EnableYP EnableZB EnhancedAA ExcludeLight ExcludeObject
+                        EyeSeparation
+
+                        FasterBones FirstFrame FirstItem FitAll FitSelected
+                        FlareIntensity FlareOptions FocalDistance FogColor FogMaxAmount
+                        FogMaxDistance FogMinAmount FogMinDistance FogType FractionalFrames
+                        FrameSize FramesPerSecond FrameStep FreePreview FrontView FullTimeIK
+
+                        GeneralOptions Generics GlobalApertureHeight GlobalBlurLength GlobalFrameSize
+						GlobalIllumination GlobalMaskPosition GlobalMotionBlur GlobalParticleBlur 
+						GlobalPixelAspect GlobalResolutionMulitplier GoalItem GoalStrength
+                        GoToFrame GradientBackdrop GraphEditor GridSize GroundColor
+                        
+                        HController HideToolbar HideWindows HLimits HStiffness
+                        
+                        ImageEditor ImageProcessing IncludeLight IncludeObject IncreaseGrid IndirectBounces
+                        Item_SetWindowPos ItemActive ItemColor ItemLock ItemProperties
+                        ItemVisibility
+
+                        KeepGoalWithinReach
+                        
+                        LastFrame LastItem LastPluginInterface Layout_SetWindowPos Layout_SetWindowSize
+                        LeftView LensFlare  LensFStop LightColor LightConeAngle LightEdgeAngle
+                        LightFalloffType LightIntensity LightIntensityTool LightQuality LightRange 
+                        LightView LimitB LimitDynamicRange LimitedRegion LimitH LimitP LinearLight
+                        LoadAudio LoadFromScene LoadMotion LoadObject LoadObjectLayer
+                        LoadPreview LoadScene LocalCoordinateSystem
+
+                        MakePreview MaskColor MaskPosition MasterPlugins MatchGoalOrientation MatteColor
+                        MatteObject MetaballResolution Model MorphAmount MorphAmountTool
+                        MorphMTSE MorphSurfaces MorphTarget MotionBlur MotionBlurDOFPreview
+                        MotionOptions MovePathTool MovePivotTool MoveTool
+
+                        NadirColor NetRender NextFrame NextItem NextKey NextSibling NextViewLayout
+                        NoiseReduction Numeric 
+
+                        ObjectDissolve
+
+                        ParentCoordinateSystem ParentInPlace ParentItem
+                        ParticleBlur PathAlignLookAhead PathAlignMaxLookSteps PathAlignReliableDist
+						Pause PController PerspectiveView
+                        PivotPosition PivotRotation PixelAspect PlayAudio PlayBackward PlayForward
+                        PlayPreview PLimits PointLight PolygonEdgeColor PolygonEdgeFlags
+                        PolygonEdgeThickness PolygonEdgeZScale PolygonSize Position Presets
+                        PreviewFirstFrame PreviewFrameStep PreviewLastFrame PreviewOptions
+                        PreviousFrame PreviousItem PreviousKey PreviousSibling
+                        PreviousViewLayout PStiffness 
+
+                        Quit 
+                        
+                        RadiosityIntensity RadiosityTolerance RadiosityType RayRecursionLimit 
+                        RayTraceReflection RayTraceRefraction RayTraceShadows
+                        RayTraceTransparency ReceiveShadow RecentContentDirs RecentScenes
+                        ReconstructionFilter RecordMaxAngles RecordMinAngles RecordPivotRotation
+                        RecordRestPosition Redraw RedrawNow Refresh RefreshNow RegionPosition
+                        RemoveEnvelope RemoveFromSelection RemoveServer Rename RenderFrame
+                        RenderOptions RenderScene RenderSelected RenderThreads
+                        ReplaceObjectLayer ReplaceWithNull ReplaceWithObject Reset 
+                        ResolutionMultiplier RestLengthTool RightView RotatePivotTool
+                        RotateTool Rotation 
+                        
+                        SaveAllObjects SaveAlpha SaveAlphaPrefix SaveCommandList SaveCommandMessages
+                        SaveEndomorph SaveLight SaveLWSC1 SaveMotion SaveObject SaveObjectCopy
+                        SavePreview SaveRGB SaveRGBPrefix SaveScene SaveSceneAs SaveSceneCopy SaveTransformed
+                        SaveViewLayout Scale Scene_SetWindowPos Scene_SetWindowSize
+                        SceneEditor SchematicPosition SchematicView SelectAllBones
+                        SelectAllCameras SelectAllLights SelectAllObjects SelectByName
+                        SelectChild SelectItem SelectParent SelfShadow SetForegroundImage
+						SetForegroundAlphaImage SetForegroundDissolve SetHighClipColor SetLowClipColor 
+						ShadowColor
+                        ShadowExclusion ShadowMapAngle ShadowMapFitCone ShadowMapFuzziness
+                        ShadowMapSize ShadowType ShowCages ShowFieldChart ShowHandles
+                        ShowIKChains ShowMotionPaths ShowSafeAreas ShowTargetLines 
+                        ShrinkEdgesWithDistance SingleView SizeTool SkelegonsToBones SkyColor
+                        Spotlight SquashTool Statistics StatusMsg Stereoscopic StretchTool
+                        SubdivisionOrder SubPatchLevel SurfaceEditor SyncImageToFrame Synchronize 
+                        
+                        TargetItem TopView
+                        
+                        UnaffectedByFog UnaffectedByIK Undo UnseenByAlphaChannel UnseenByCamera
+                        UnseenByRays UseGlobalResolution UseGlobalBlur UseGlobalMask UseMorphedPositions
+
+                        ViewLayout VIPER VolumetricLighting
+                        VolumetricLightingOptions VolumetricRadiosity Volumetrics
+                        
+                        WorldCoordinateSystem
+                        
+                        XYView XZView
+                        
+                        ZenithColor ZoomFactor ZoomIn ZoomInX2 ZoomOut ZoomOutX2 ZYView
+
+                        //Object Agents
+                        .bone Camera Channel ChannelGroup Envelope File Glyph Icon Image Light Mesh Scene Surface VMap
+
+// commands
+
+KeyWords2:              @data @define @else @end @fpdepth @if @include @insert @library @localipc @name @save @script
+						@sequence @version @warnings
+
+                        abs acos angle append ascii asin atan
+
+                        binary break
+
+                        case ceil center chdir clearimage cloned comringattach comringdecode comringdetach
+                        comringencode comringmsg continue cos cosh cot cross2d cross3d csc
+                        ctlstring ctlinteger ctlnumber ctlvector ctldistance ctlchoice ctltext ctlcolor ctlsurface 
+						ctlfont ctlpopup ctledit ctlpercent ctlangle ctlrgb ctlhsv ctlcheckbox ctlstate
+						ctlfilename ctlbutton ctllistbox ctlslider ctlminislider ctlsep ctlimage ctltab
+						ctlallitems ctlmeshitems ctlcameraitems ctllightitems ctlboneitems ctlimageitems 
+						ctlchannel ctlviewport Control_Management ctlpage ctlgroup ctlposition ctlactive
+						ctlvisible ctlalign ctlrefresh ctlmenu ctlinfo
+
+                        date debug deg dot2d dot3d drawborder drawbox drawcircle drawelipse drawerase
+                        drawfillcircle drawfillelipse drawline drawpixel drawtext drawtextwidth drawtextheight dump
+
+                        else end error exp expose extent
+
+                        fac filecrc filedelete fileexists filefind filerename filestat floor for foreach format frac
+						fullpath
+
+                        gamma getdir getenv getfile getfirstitem getsep getvalue globalrecall globalstore
+
+                        hash hex hostBuild hostVersion hypot
+
+                        if info integer
+
+                        library licenseId lscriptVersion load loadimage log log10
+
+                        matchdirs matchfiles max min mkdir mod monend moninit monstep
+
+                        nil normalize number
+
+                        octal overlayglyph
+
+                        parse platform pow
+
+                        rad random randu range read readdouble readInt readNumber readShort recall regexp
+                        reqabort reqbegin reqend reqisopen reqkeyboard reqopen reqposition reqpost reqredraw
+						reqsize reqresize requpdate rmdir return round runningUnder
+
+                        save sec select selector setdesc setvalue sin sinh size sizeof sleep spawn split sqrt step
+                        store string strleft strlower strright strsub strupper switch
+
+                        tan tanh targetobject terminate text time
+
+                        wait warn when while write writeDouble writeInt writeNumber writeShort
+
+                        vector visitnodes vmag
+
+// members
+
+KeyWords3:              .active .alertlevel .alpha .alphaprefix .animfilename .autokeycreate
+
+                        .backdroptype .blue .boxthreshold .button
+
+                        .channelsvisible .childrenvisible .compfg .compbg .compfgalpha .coneangles .cosine
+                        .count .ctl .curFilename .curFrame .currenttime .curTime .curType
+
+                        .depth .diffshade .diffuse .dimensions .displayopts .dynamicupdate
+
+                        .end .eta
+
+                        .filename .flags .fogtype .fps .frame .frameend .frameheight .framestart .framestep
+                        .framewidth
+
+                        .generalopts .genus .geometry .gNorm .goal .green
+ 
+                        .h .hasAlpha .height
+
+                        .id .innerlimit .isColor
+
+                        .keyCount .keys
+
+                        .limiteregion .locked .luminous
+
+                        .maxsamplesperpixel .minsamplesperpixel .mirror .motionx .motiony
+
+                        .name .newFilename .newFrame .newTime .newType .null .numthreads
+
+                        .objID .oPos .outerlimit oXfrm
+
+                        .parent .pixel .pixelaspect .point .points .pointcount .polNum .polycount .polygon
+                        .polygons .postBehavior .preBehavior .previewend .previewstart .previewstep
+
+                        .range .rawblue .rawgreen .rawred .rayLength .raySource .red .reflectblue
+                        .reflectgreen .reflectred .recursiondepth .renderend .renderopts .renderstart 
+                        .renderstep .rendertype .restlength .rgbprefix .roughness
+
+                        .selected .setColor .setPattern .shading .shadow .shadows .shadowtype .size .source
+                        .special .specshade .specular .spotsize .start .sx .sy .sz
+
+                        .target .totallayers .totalpoints .totalpolygons .trans .transparency .type
+
+                        .value .view .visible .visibility
+
+                        .w .width .wNorm .wPos .wXfrm
+
+                        .x .xoffset
+
+                        .y .yoffset
+
+                        .z
+//methods
+KeyWords4:              .active .addLayer .addParticle .alphaspot .ambient .asAsc .asBin
+						.asInt .asNum .asStr .asVec .attach .axislocks
+
+                        .backdropColor .backdropRay .backdropSqueeze .bone .blurLength
+
+                        .close .color .contains .copy .createKey
+ 
+                        .deleteKey .detach .drawCircle .drawLine .drawPoint .drawText .drawTriangle
+
+                        .edit .eof .event
+
+                        .firstChannel .firstLayer .firstSelect .focalDistance .focalLength .fogColor
+                        .fogMaxAmount .fogMaxDist .fogMinAmount .fogMinDist .fovAngles .fStop
+
+                        .get .getChannelGroup .getEnvelope .getForward .getKeyBias .getKeyContinuity
+                        .getKeyCurve .getKeyHermite .getKeyTension .getKeyTime .getKeyValue
+                        .getParticle .getPivot .getPivotRotation .getPosition .getRight .getRotation .getSelect .getScaling
+                        .getTag .getTexture .getUp .getValue .getWorldPosition
+                        .getWorldForward .getWorldRight .getWorldRotation .getWorldUp .globalBlur
+						.globalMask .globalResolution
+
+
+                        .firstChannel .firstChild .focalDistance .focalLength .fovAngles .fStop
+
+                        .hasCCEnd .hasCCStart
+
+                        .illuminate .indexOf .isAscii .isAlnum .isAlpha .isBone .isCamera .isChannel .isChannelGroup
+                        .isCntrl .isCurve .isDigit .isEnvelope .isImage
+                        .isInt .isLight .isLower .isMapped .isMesh .isNil .isNum .IsOpen .isOriginal
+                        .isPrint .isPunct .isScene .isSpace .isStr .isUpper .isValid .isVMap .isVec .isXDigit
+
+                        .keyExists
+
+                        .layer .layerName .layerVisible .limits .line .linecount .load .luma
+
+                        .next .nextLayer .nextSelect .nextChannel .nextChild .nl
+
+                        .offset .open
+
+                        .pack .param .parse .paste .persist .pointCount .points .polygonCount .position
+
+                        .rayCast .rayTrace .read .readByte .readInt .readNumber .readDouble .readShort 
+						.readString .readVector .reduce
+                        .remParticle .renderCamera .reopen .replace .reset .restParam .rewind .rgb .rgbambient
+                        .rgbcolor .rgbspot
+
+                        .save .schemaPosition .select .set .setChannelGroup .setColor .setKeyBias 
+						.setKeyContinuity .setKeyCurve
+                        .setKeyHermite .setKeyTension .setKeyValue .setParticle .setPattern .setPoints
+                        .setTag .setValue .server .serverFlags .sortA .sortD .surface
+
+                        .trunc
+
+						.write .writeln .writeByte .writeData. writeInt .writeNumber .writeDouble .writeShort
+						.writeString .writeVector
+
+                        .value .vertex .vertexCount .visible .visibility
+
+                        .zoomFactor
+
+
+
+
+//Modeler
+KeyWords5:              
+                        //General Commands
+                        addcurve addpoint addpolygon addquad addtriangle alignpols autoflex axisdrill
+
+                        bend bevel boolean boundingbox
+
+                        changepart changesurface close closeall cmdseq copy copysurface createsurface
+                        cut
+
+                        deformregion delete
+
+                        editbegin editend exit extrude
+ 
+                        fixedflex flip fontclear fontcount fontindex fontload fontname fracsubdivide
+                        freezecurves
+ 
+                        getdefaultsurface
+ 
+                        jitter
+ 
+                        lathe layerName layerVisible load lyrbg lyrdata lyrempty lyremptybg
+                        lyremptyfg lyrfg lyrsetbg lyrsetfg lyrswap
+ 
+                        magnet make4patch makeball makebox makecone makedisc maketesball maketext
+                        mergepoints mergepols meshedit mirror morphpols move
+ 
+                        new nextsurface
+
+                        paste pathclone pathextrude pixel pointcount pointinfo pointmove pole polycount
+                        polyinfo polynormal polypointcount polypoints polysurface
+
+                        quantize
+
+                        railclone railextrude redo removepols rempoint rempoly renamesurface
+                        revert rotate
+
+                        save scale selhide selinvert selmode selpoint selpolygon selunhide selectvmap
+                        setlayername setobject setpivot setsurface shapebevel shear skinpols
+                        smooth smoothcurves smoothscale smoothshift soliddrill splitpols
+                        subdivide swaphidden
+
+                        taper triple toggleCCend toggleCCstart togglepatches twist
+
+                        undo undogroupend undogroupbegin unifypols unweld
+
+                        vortex
+
+                        weldaverage weldpoints
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWhite clBlack
+Keyword1Col:            clFuchsia clBlack
+Keyword2Col:            $00C0C000 clBlack
+Keyword3Col:            $00FF8080 clBlack
+Keyword4Col:            clAqua clBlack
+Keyword5Col:            clFuchsia clBlack
+IdentifierCol:          clYellow clBlack
+CommentCol:             clSilver clBlack
+NumberCol:              clYellow clBlack
+StringCol:              $0000C000 clBlack
+SymbolCol:              $004040FF clBlack
+PreprocessorCol:        clBlue clBlack
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+MatchedBracesCol:       clWhite clBlack
