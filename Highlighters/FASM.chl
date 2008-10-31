@@ -1,0 +1,682 @@
+// Flat Assembler 1.66 Highlighter Created by: Hayden McKay 19th March 2007.
+// Compliments http://developer.intel.com/products/processor/index.htm
+//     and the Intel 64-32 Software Developer's Manual.
+// FASM Assembler Created by Tomasz Grysztar http://flatassembler.net/
+// FASM Language header
+Language:               FASM
+Filter:                 Assembler files (*.asm)|*.asm
+HelpFile:               C:\FASM\fasm.pdf
+// FASM Preprocessor Rules
+MultilineStrings:       0
+UsePreprocessor:        0
+CaseSensitive:          0
+CurrLineHighlighted:    1
+LineComment:            ;
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+// FASM Syntax Identifiers
+IdentifierBegChars:     a..z A..Z _ @.
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefhABCDEFHx
+StringBegChar:          "'
+StringEndChar:          "'
+EscapeChar:
+// FASM Color Scheme based on Tomasz's Editor for Windows
+SpaceCol:               clGray $00F0F0F0
+Keyword1Col:            clBlack $00F0F0F0 B
+Keyword2Col:            clBlack $00F0F0F0 B
+Keyword3Col:            clBlack $00F0F0F0 B
+Keyword3Col:            clBlack   $00F0F0F0 B
+Keyword3Col:            clBlack   $00F0F0F0 B
+IdentifierCol:          clGray $00F0F0F0 BI
+CommentCol:             clGray $00F0F0F0 I
+NumberCol:              $00009000 $00F0F0F0 B
+StringCol:              $000000B0 $00F0F0F0 BI
+SymbolCol:              $00F03030 $00F0F0F0 B
+PreprocessorCol:        clBlack $00F0F0F0 BI
+SelectionCol:           $000000B0 $0030D0F0
+CurrentLineCol:         clBlack $0030D0F0
+MatchedBracesCol:       $000000B0 $00F0F0F0
+// CommentCol:          clGray    $00FFFFFF I    // An Alternative
+   OverrideTxtFgColor:
+KeyWords1:
+// Byte Registers
+   AL BL CL DL AH BH CH DH AL BL CL DL
+   DIL SIL BPL SPL R8L R9L R10L R11L R12L R13L R14L R15L
+// Word Registers
+   AX BX CX DX DI SI BP SP AX BX CX DX DI SI BP SP
+   R8W R9W R10W R11W R12W R13W R14W R15W
+// Doubleword Registers
+   EAX EBX ECX EDX EDI ESI EBP ESP EAX EBX ECX EDX EDI ESI EBP ESP
+   R8D R9D R10D R11D R12D R13D R14D R15D
+// Quadword Registers
+   RAX RBX RCX RDX RDI RSI RBP RSP R8D R9D R10D R11D R12D R13D R14D R15D
+// MMX registers
+// MMX0 MMX1 MMX2 MMX3 MMX4 MMX5 MMX6 MMX7
+   MM0  MM1  MM2  MM3  MM4  MMX  MMX  MM7
+// XMM registers
+   XMM0 XMM1 XMM2 XMM3 XMM4 XMM5 XMM6 XMM7 XMM8 XMM9
+   XMM10 XMM11 XMM12 XMM13 XMM14 XMM15 MXCSR
+// Segment Registers
+   CS DS SS ES FS GS
+// Status Registers
+    ST0 ST1 ST2 ST3 ST4 ST5 ST6 ST7
+// Control Registers
+   CR0 CR2 CR3 CR4 CR8 GDTR LDTR IDTR
+// Debug Registers
+   DR0 DR1 DR2 DR3 DR6 DR7
+KeyWords2:        
+// Data tranfer instructions
+   CMOVE  CMOVZ   
+   CMOVNE CMOVNZ  
+   CMOVA  CMOVNBE 
+   CMOVAE CMOVNB  
+   CMOVB  CMOVNAE 
+   CMOVBE CMOVNA  
+   CMOVG  CMOVNLE 
+   CMOVGE CMOVNL  
+   CMOVL  CMOVNGE
+   CMOVLE CMOVNG  
+   CMOVC          
+   CMOVNC         
+   CMOVO          
+   CMOVNO         
+   CMOVS          
+   CMOVNS         
+   CMOVP  CMOVPE  
+   CMOVNP CMOVPO  
+   XCHG           
+   BSWAP
+   XADD           
+   CMPXCHG        
+   CMPXCHG8B      
+   PUSH           
+   POP            
+   PUSHA  PUSHAD  
+   POPA   POPAD
+   CWD    CDQ     
+   CBW    CWDE    
+   MOVSX          
+   MOVZX          
+// Binary Arithmetic Instructions
+   ADD    
+   ADC    
+   SUB    
+   SBB
+   IMUL   
+   MUL    
+   IDIV   
+   DIV    
+   INC    
+   DEC    
+   NEG    
+   CMP    
+// Decimal Arithmetic Instructions
+   DAA    
+   DAS
+   AAA    
+   AAS    
+   AAM    
+   AAD    
+// Logical Instructions
+   AND    
+   OR
+   XOR    
+   NOT    
+// Shift and Rotate Instructions
+   SAR      
+   SHR      
+   SAL SHL  
+   SHRD     
+   SHLD     
+   ROR
+   ROL      
+   RCR      
+   RCL      
+// Bit and Byte Instructions
+   BT                 
+   BTS                
+   BTR                
+   BTC                
+   BSF                
+   BSR                
+   SETE  SETZ         
+   SETNE SETNZ        
+   SETA  SETNBE       
+   SETAE SETNB  SETNC 
+   SETB  SETNAE SETC  
+   SETBE SETNA        
+   SETG  SETNLE       
+   SETGE SETNL
+   SETL  SETNGE       
+   SETLE SETNG        
+   SETS               
+   SETNS              
+   SETO               
+   SETNO              
+   SETPE SETP         
+   SETPO SETNP        
+   TEST
+// Control Transfer Instructions
+   JMP           
+   JE   JZ       
+   JNE  JNZ      
+   JA   JNBE     
+   JAE  JNB      
+   JB   JNAE     
+   JBE  JNA      
+   JG   JNLE     
+   JGE  JNL      
+   JL   JNGE     
+   JLE  JNG      
+   JC            
+   JNC           
+   JO            
+   JNO           
+   JS            
+   JNS
+   JPO  JNP      
+   JPE  JP       
+   JCXZ JECXZ    
+   LOOP          
+   LOOPZ  LOOPE  
+   LOOPNZ LOOPNE 
+   CALL          
+   RET
+   RETF
+   IRET
+   IRETD
+   INT           
+   INTO          
+   BOUND         
+   ENTER         
+   LEAVE         
+// String Instructions
+   MOVS  MOVSB 
+   MOVS  MOVSW 
+   MOVS  MOVSD 
+   CMPS  CMPSB 
+   CMPS  CMPSW 
+   CMPS  CMPSD 
+   SCAS  SCASB 
+   SCAS  SCASW 
+   SCAS  SCASD 
+   LODS  LODSB 
+   LODS  LODSW 
+   LODS  LODSD
+   STOS  STOSB 
+   STOS  STOSW 
+   STOS  STOSD 
+   REP         
+   REPE  REPZ  
+   REPNE REPNZ 
+// I/O Instructions
+   IN          
+   OUT
+   INS  INSB   
+   INS  INSW   
+   INS  INSD   
+   OUTS OUTSB  
+   OUTS OUTSW  
+   OUTS OUTSD  
+// Enter and Leave Instructions
+   ENTER  
+   LEAVE  
+// Flag Control (EFLAG) Instructions
+   STC          
+   CLC          
+   CMC          
+   CLD          
+   STD          
+   LAHF         
+   SAHF         
+   PUSHF PUSHFD
+   POPF  POPFD  
+   STI          
+   CLI          
+// Segment Register Instructions
+   LDS  
+   LES  
+   LFS  
+   LGS  
+   LSS
+// Miscellaneous Instructions
+   LEA        
+   NOP        
+   UD2        
+   XLAT XLATB 
+   CPUID      
+// x87 FPU Data Transfer Instructions
+   FLD      
+   FST      
+   FSTP     
+   FILD     
+   FIST     
+   FISTP    
+   FBLD     
+   FBSTP    
+   FXCH     
+   FCMOVE   
+   FCMOVNE
+   FCMOVB   
+   FCMOVBE  
+   FCMOVNB  
+   FCMOVNBE 
+   FCMOVU   
+   FCMOVNU  
+// x87 FPU Basic Arithmetic Instructions
+   FADD    
+   FADDP
+   FIADD   
+   FSUB    
+   FSUBP   
+   FISUB   
+   FSUBR   
+   FSUBRP  
+   FISUBR  
+   FMUL    
+   FMULP   
+   FIMUL   
+   FDIV    
+   FDIVP   
+   FIDIV   
+   FDIVR   
+   FDIVRP  
+   FIDIVR  
+   FPREM   
+   FPREM1
+   FABS    
+   FCHS    
+   FRNDINT 
+   FSCALE  
+   FSQRT   
+   FXTRACT 
+// x87 FPU Comparison Instructions
+   FCOM    
+   FCOMP
+   FCOMPP  
+   FUCOM   
+   FUCOMP  
+   FUCOMPP 
+   FICOM   
+   FICOMP  
+   FCOMI   
+   FUCOMI  
+   FCOMIP  
+   FUCOMIP 
+   FTST    
+   FXAM    
+// x87 FPU Transcendental Instructions
+   FSIN    
+   FCOS    
+   FSINCOS 
+   FPTAN   
+   FPATAN
+   F2XM1   
+   FYL2X   
+   FYL2XP1 
+// x87 FPU Load Constants Instructions
+   FLD1   
+   FLDZ   
+   FLDPI  
+   FLDL2E 
+   FLDLN2
+   FLDL2T 
+   FLDLG2 
+// x87 FPU Control Instructions
+   FINCSTP    
+   FDECSTP    
+   FFREE      
+   FINIT      
+   FNINIT     
+   FCLEX      
+   FNCLEX     
+   FSTCW      
+   FNSTCW     
+   FLDCW      
+   FSTENV     
+   FNSTENV    
+   FLDENV     
+   FSAVE      
+   FNSAVE
+   FRSTOR     
+   FSTSW      
+   FNSTSW     
+   WAIT FWAIT 
+   FNOP       
+// x87 FPU and SMID state Managment Instructions
+   FXSAVE     
+   FXRSTOR    
+// MMX Data Transfer Instructions
+   MOVD       
+   MOVQ       
+// MMX Conversion Instructions
+   PACKSSWB   
+   PACKSSDW   
+   PACKUSWB   
+   PUNPCKHBW  
+   PUNPCKHWD  
+   PUNPCKHDQ  
+   PUNPCKLBW  
+   PUNPCKLWD  
+   PUNPCKLDQ  
+// MMX Packed Arithmetic Instructions
+   PADDB    
+   PADDW    
+   PADDD    
+   PADDSB   
+   PADDSW
+   PADDUSB  
+   PADDUSW  
+   PSUBB    
+   PSUBW    
+   PSUBD    
+   PSUBSB   
+   PSUBSW   
+   PSUBUSB  
+   PSUBUSW
+   PMULHW   
+   PMULLW   
+   PMADDWD  
+// MMX  Comparison Instructions
+   PCMPEQB  
+   PCMPEQW  
+   PCMPEQD  
+   PCMPGTB  
+   PCMPGTW  
+   PCMPGTD  
+// MMX Logical Instructions
+   PAND   
+   PANDN  
+   POR    
+   PXOR   
+// MMX Shift and Rotate Instructions
+   PSLLW  
+   PSLLD
+   PSLLQ  
+   PSRLW  
+   PSRLD  
+   PSRLQ  
+   PSRAW  
+   PSRAD  
+// MMX State Management Instructions
+   EMMS   
+// SSE Data Transfer Instructions
+   MOVAPS   
+   MOVUPS   
+   MOVHPS   
+   MOVHLPS  
+   MOVLPS   
+   MOVLHPS  
+   MOVMSKPS 
+   MOVSS    
+// SSE Packed Arithmetic Instructions
+   ADDPS   
+   ADDSS   
+   SUBPS   
+   SUBSS   
+   MULPS   
+   MULSS   
+   DIVPS   
+   DIVSS   
+   RCPPS
+   RCPSS   
+   SQRTPS  
+   SQRTSS  
+   RSQRTPS 
+   RSQRTSS 
+   MAXPS   
+   MAXSS   
+   MINPS   
+   MINSS
+// SSE Comparison Instructions
+   CMPPS   
+   CMPSS   
+   COMISS  
+   UCOMISS 
+// SSE Logical Instructions
+   ANDPS  
+   ANDNPS 
+   ORPS   
+   XORPS  
+// SSE Shuffle and Unpack Instructions
+   SHUFPS   
+   UNPCKHPS 
+   UNPCKLPS 
+// SSE Conversion Instructions
+   CVTPI2PS  
+   CVTSI2SS  
+   CVTPS2PI
+   CVTTPS2PI 
+   CVTSS2SI  
+   CVTTSS2SI 
+// SSE MXCSR State Management Instructions
+   LDMXCSR   
+   STMXCSR   
+// SSE 64-Bit SIMD Integer Instructions
+   PAVGB    
+   PAVGW
+   PEXTRW   
+   PINSRW   
+   PMAXUB   
+   PMAXSW   
+   PMINUB   
+   PMINSW   
+   PMOVMSKB 
+   PMULHUW  
+   PSADBW   
+   PSHUFW   
+// SSE Cacheability Control, Prefetch, and Instruction Ordering Instructions
+   MASKMOVQ  
+   MOVNTQ    
+   MOVNTPS   
+   PREFETCHh 
+   SFENCE    
+// SSE2 Data Movement Instructions
+   MOVUPD
+   MOVHPD   
+   MOVLPD   
+   MOVMSKPD 
+   MOVSD    
+// SSE2 Packed Arithmetic Instructions
+   ADDPD  
+   ADDSD  
+   SUBPD  
+   SUBSD  
+   MULPD  
+   MULSD  
+   DIVPD  
+   DIVSD  
+   SQRTPD 
+   SQRTSD 
+   MAXPD  
+   MAXSD  
+   MINPD  
+   MINSD  
+// SSE2 Packed Arithmetic Instructions
+   ADDPD  
+   ADDSD  
+   SUBPD  
+   SUBSD  
+   MULPD  
+   MULSD  
+   DIVPD
+   DIVSD  
+   SQRTPD 
+   SQRTSD 
+   MAXPD  
+   MAXSD  
+   MINPD  
+   MINSD  
+// SSE2 Logical Instructions
+   ANDPD  
+   ANDNPD 
+   ORPD   
+   XORPD  
+// SSE2 Compare Instructions
+   CMPPD   
+   CMPSD   
+   COMISD  
+   UCOMISD 
+// SSE2 Shuffle and Unpack Instructions
+   SHUFPD   
+   UNPCKHPD 
+   UNPCKLPD 
+// SSE2 Conversion Instructions
+   CVTPD2PI  
+   CVTTPD2PI 
+   CVTPI2PD  
+   CVTPD2DQ  
+   CVTTPD2DQ
+   CVTDQ2PD  
+   CVTPS2PD  
+   CVTPD2PS  
+   CVTSS2SD  
+   CVTSD2SS  
+   CVTSD2SI  
+   CVTTSD2SI 
+   CVTSI2SD  
+// SSE2 Packed Single-Precision Floating-Point Instructions
+   CVTDQ2PS  
+   CVTPS2DQ  
+   CVTTPS2DQ 
+// SSE2 128-Bit SIMD Integer Instructions
+   MOVDQA     
+   MOVDQU     
+   MOVQ2DQ    
+   MOVDQ2Q    
+   PMULUDQ    
+   PADDQ      
+   PSUBQ      
+   PSHUFLW    
+   PSHUFHW    
+   PSHUFD     
+   PSLLDQ     
+   PSRLDQ     
+   PUNPCKHQDQ 
+   PUNPCKLQDQ 
+// SSE2 Cacheability Control and Ordering Instructions
+   CLFLUSH    
+   LFENCE     
+   MFENCE     
+   PAUSE      
+   MASKMOVDQU 
+   MOVNTPD    
+   MOVNTDQ    
+   MOVNTI     
+// SSE3 x87-FP Integer Conversion Instruction
+   FISTTP   
+// SSE3 Specialized 128-bit Unaligned Data Load Instruction
+   LDDQU    
+// SSE3  SIMD Floating-Point Packed ADD/SUB Instructions
+   ADDSUBPS 
+   ADDSUBPD 
+// SSE3 SIMD Floating-Point Horizontal ADD/SUB Instructions
+   HADDPS   
+   HSUBPS   
+   HADDPD   
+   HSUBPD   
+// SSE3 SIMD Floating-Point LOAD/MOVE/DUPLICATE Instructions
+   MOVSHDUP 
+   MOVSLDUP 
+   MOVDDUP  
+// SSE3 Agent Synchronization Instructions
+    MONITOR 
+    MWAIT   
+// Horizontal Addition/Subtraction
+   PHADDW  
+   PHADDSW 
+   PHADDD  
+   PHSUBW  
+   PHSUBSW 
+   PHSUBD  
+// Packed Absolute Values
+   PABSB 
+   PABSW 
+   PABSD 
+// Multiply and Add Packed Signed and Unsigned Bytes
+   PMADDUBSW 
+// Packed Multiply High with Round and Scale
+   PMULHRSW 
+// Packed Shuffle Bytes
+   PSHUFB 
+// Packed Sign
+   PSIGNB 
+   PSIGNW 
+   PSIGND
+// Packed Align Right
+   PALIGNR 
+// System Instructions
+   LGDT   
+   SGDT   
+   LLDT   
+   SLDT   
+   LTR    
+   STR    
+   LIDT   
+   SIDT   
+   MOV    
+   LMSW   
+   SMSW   
+   CLTS   
+   ARPL   
+   LAR    
+   LSL    
+   VERR   
+   VERW   
+   MOV    
+   INVD   
+   WBINVD 
+   INVLPG 
+   LOCK   
+   HLT    
+   RSM    
+   RDMSR  
+   WRMSR  
+   RDPMC  
+   RDTSC  
+   SYSENTER 
+   SYSEXIT  
+// 64-Bit Node Instructions
+   CDQE       
+   CMPSQ      
+   CMPXCHG16B 
+   LODSQ      
+   MOVSQ      
+   MOVZX      
+   STOSQ      
+   SWAPGS     
+   SYSCALL    
+   SYSRET     
+// Virtual-Machine Extentions
+   VMPTRLD  
+   VMPTRST  
+   VMCLEAR  
+   VMREAD   
+   VMWRITE  
+   VMCALL   
+   VMLAUNCH 
+   VMRESUME 
+   VMXOFF   
+   VMXON    
+KeyWords3:        
+              format MZ MS MS64 COFF ELF ELF64 PE PE64 GUI DLL at on console native org
+              segment section readable writeable executable shareable discardable from
+              notpageable linkremove linkinfo include public export import fixups code
+              data resource entry stack heap use16 use32 use64 binary extrn
+              display define load store fix
+              label virtual macro local forward reverse common struc restruc purge
+              align rva ptr far short near offset
+              repeat times irp irps restore
+              while else break end if
+              match eqtype eq equ
+              file byte word dword fword pword qword tbyte tword dqword dup
+              db dw du dd dp df dq dt
+              rb rw    rd rp rf rq rt
+OverrideTxtFgColor:     0
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
