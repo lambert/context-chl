@@ -1,0 +1,213 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// IBM CLP highlighter
+//
+// Aout 2006
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               IBM CLP
+
+//////////////////////////////////////////////////////////////////////////////
+// put whatever you want here, short description, author name, email address..
+
+Description:            IBM CLP highlighter, written by Balder
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 IBM CLP (*.CLP,*.CLLE,*.CL)|*.clp;*.clle;*.cl
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invoked when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+
+LineComment:
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _@&£*.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into five groups which can be
+// highlighted differently
+
+// Op Codes
+KeyWords1:
+ADDLIBLE ADDPFM ALCOBJ 
+CALL CHGAUT CHGCURLIB CHGDTAARA CHGJOB CHGLIBL CHGMSGQ CHGPF CHGPFM CHGSPLFA CHGVAR CHGWTR CHKOBJ
+CLOF CLRMSGQ CLRPFM CLRSAVF CPYF CPYSPLF CPYFRMPCD CPYTOPCD CRTDTAARA CRTDUPOBJ CRTPF
+DCL DCLDTAARA DIRNAMLEN DCLF DLCOBJ DLTDLO DLTDTAARA DLTF DLTOVR DLTOVR DLTSPLF DLYJOB 
+DO DSPMSG DSPDBR DSPFD DSPFFD DSPOBJD
+EDTLIBL ELSE ENDDO ENDJOB ENDSBS ENDWTR FIDELITY FNDSTRPDM HLDJOB HLDJOBQ GO GOTO IF
+MONMSG OPNQRYF OVRDBF OVRDSPF OVRPRTF
+RCLRSC RCVF RCVF RCVMSG RCVNETF RETURN RGZPFM RLSJOB RMVLIBLE RMVM RMVMSG RNMDLO 
+RTVDTAARA RTVJOBA RTVOBJD RTVMBRD RTVCFGSTS RTVCURDIR RTVNETA RTVUSRPRF RTVSYSVAL RUNQRY
+SAVDLO SBMJOB SETATNPGM SIGNOFF SNDBRKMSG SNDF SNDMSG SNDNETF SNDPGMMSG SNDRCVF SNDUSRMSG
+STRPASTHR STRPRTWTR STRQMQRY UPDDTA WRKJOB WRKOBJLCK WRKOUTQ WRKSBMJOB WRKSPLF WRKWTR
+
+// RESERVED
+KeyWords2:
+*ADD *ALL *AND *BCAT *CALLER *CAT *CHAR *CNNDEV *CTL *DEC *DTAARA *EQ *EXCL *FILE *FILEEND *FIRST *FROMMBR
+*GE *GT *IMMED *INFO *JOBD *JOBD
+*LAST *LDA *LE *LIBL *LIN *LIST *LT *NE *NET *NO *NOCHK *NOLIST *NOMSG *NOSRC *NOT *NOTIFY
+*OFF *ON *OR *OUTFILE *REPLACE *SAME *SAVF *SECLVL *STD *SYSOPR *TCAT *WRKSTN *YES
+%BIN %SST %SUBSTRING %SWITCH
+QDATE QTIME RMTLOCNAME
+
+//KeyWords
+KeyWords3:
+AUT BRKMSG CFGD CFGOBJ CFGTYPE CLEAR CMD CMDLBL CNNDEV COND COPIES CPI CRTFILE DATA DEV DLO DLVRY DLY DTAARA ENDPGM EXEC
+FILE FLR FMTOPT FORMTYPE FROMDOC FROMFILE FROMFLR FROMLIB FROMMBR GRPPRF HOLD INCREL INLLIBL JOB JOBD JOBPTY JOBQ
+KEYFLD LEN LIB LIBL LOG LOGCLPGM LVL MBR MBROPT MSG MSGDTA MSGF MSGF MSGID MSGLEN MSGQ MSGRPY MSGTYPE NBRCURRCD NEWDLO
+OBJ OBJTYPE OBJTYPE OPNID OPTION OUTFILE OUTMBR OUTPTY OUTPUT OUTQ OVRFLW
+PAGESIZE PAGRTT PARM PGM PGMQ POSITION PRTMBRLIST PRTRCDS QMQRY QRY QRYFILE QRYSLT
+RANGE RCDFMT RCDSLT REPLACE RMV RSMTIME RMTPWD RMTUSER RTGDTA RTNDIR RTNVAR RUNPTY
+SAVE SAVE SAVF SBMFROM SBMMSGQ SBMMSGQLIB SBS SCDTIME SCHEDULE SETVAR SHARE SIZE SPLFNAME SPLNBR 
+SRCMBR STATUS STSCDE SWS SYSNAME SYSVAL
+TEXT THEN TODOC TOFILE TOFLR TOLIB TOMBR TOMSGQ TOPGMQ TOUSRID TYPE USER USRDTA USRLIBL USRPRF
+VALUE VAR VRTCTL VRYCFG WAIT WTR
+
+KeyWords4:              
+
+KeyWords5:              
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clRed clWindow
+Keyword3Col:            clFuchsia clWindow
+Keyword4Col:            clBlue clWindow
+Keyword5Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+//BlockBegStr:
+BlockEndStr:
+//BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
