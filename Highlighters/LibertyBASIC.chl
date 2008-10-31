@@ -1,0 +1,58 @@
+////////////////////////////
+//
+// Liberty BASIC Highlighter
+//
+////////////////////////////
+
+Language:               Liberty BASIC
+Filter:                 Liberty BASIC programs (*.bas)|*.bas
+HelpFile:
+CaseSensitive:          0
+LineComment:            '
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// keywords
+KeyWords1:              as beep bmpbutton bmpsave button call checkbox close combobox
+                        confirm cursor dim dump end field fileDialog files fontDialog for
+                        function get getTrim gosub goto graphicBox groupBox if input input
+                        kill let line input listbox loadbmp lprint mainWin menu mkdir name
+                        next noMainWin notice onComError open out playWave popUpMenu print
+                        printerDialog prompt put radioButton reDim rem return rmDir run
+                        scan sort staticText struct sub textBox textEditor then timer
+                        titleBar trace upperLeftX upperLeftY wait wend while
+
+
+// functions
+KeyWords2:              abs asc asn atn chr commandLine cos date dechex defaultDir
+                        displayHeight displayWidth drive eof exp hbmp hexdec hwnd inkey inp
+                        input instr int left len lof log lower max mid min platform right
+                        rnd sin space str tan time trim unloadBmp upper using val version
+                        windowHeight windowWidth word
+
+KeyWords3:
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clWindowText clWindow
+Keyword2Col:            clWindowText clWindow
+Keyword3Col:            clGreen clWindow
+IdentifierCol:          $00804000 clWindow
+CommentCol:             $00B0B0B0 clWindow
+NumberCol:              clRed clWindow
+StringCol:              $00C08000 clWindow
+SymbolCol:              $008080FF clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clGray $00C0C0FF
+CurrentLineCol:         clBlack clYellow
+
