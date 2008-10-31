@@ -1,0 +1,66 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// KiXtart (www.kixtart.org) highlighter written by Peter Koch, pkoc@gmx.de
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:		KiXtart
+Filter: 		KiXtart files (*.kix)|*.kix
+HelpFile:
+CaseSensitive:		0
+LineComment:		;
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:	a..z A..Z _
+IdentifierChars:	a..z A..Z _
+NumConstBegChars:	0..9
+NumConstChars:		0..9 abcdefx.
+EscapeChar:
+
+KeyWords1:		BEEP BIG BREAK CALL CD CLS COLOR Cookie Copy DEL Dim
+			DISPLAY DO UNTIL EXIT FLUSHKB  For Each Next Function
+			GET Gets Global GO Gosub GOTO IF ELSE ENDIF Md	PLAY
+			Quit Rd Redim Return RUN Select Case EndSelect SET SETL
+			SETM SETTIME SHELL SLEEP SMALL USE WHILE LOOP
+
+KeyWords2:		AddKey AddPrinterConnection AddProgramGroup
+			AddProgramItem Asc At BackupEventLog Box Chr
+			ClearEventLog Close CompareFileTimes CreateObject
+			DecToHex DelKey DelPrinterConnection DelProgramGroup
+			DelProgramItem DelTree DelValue Dir EnumGroup
+			EnumIpInfo EnumKey EnumLocalGroup EnumValue Execute
+			Exist ExistKey ExpandEnvironmentVars GetDiskSpace
+			GetFileAttr GetFileSize GetFileTime GetFileVersion
+			GetObject InGroup Instr KeyExist LCase Len LoadHive
+			LoadKey LogEvent LogOff LTrim MessageBox OleCallFunc
+			OleCallProc OleCreateObject OleGetObject OleGetProperty
+			OleGetSubObject OlePutProperty OleReleaseObject Open
+			ReadLine ReadProfileString ReadType ReadValue
+			RedirectOutput Rnd RTrim SaveKey SendKeys SensMessage
+			SetASCII SetConsole SetDefaultPrinter SetFileAttr
+			SetFocus SetSystemState SetTitle SetWallpaper
+			ShowProgramGroup Shutdown SIDToName Split SRND Substr
+			UBound UCase UnloadHive Val VarType VarTypeName
+			WriteLine WriteProfileString WriteValue WriteValue
+
+KeyWords3:		AND OR NOT
+
+StringBegChar:		"
+StringEndChar:		"
+MultilineStrings:	0
+UsePreprocessor:	0
+CurrLineHighlighted:	0
+
+SpaceCol:		clWindowText clWindow
+Keyword1Col:		clNavy clWindow B
+Keyword2Col:		clBlue clWindow B
+Keyword3Col:		clOlive clWindow B
+IdentifierCol:		clWindowText clWindow
+CommentCol:		clGray clWindow I
+NumberCol:		clRed clWindow
+StringCol:		clMaroon clWindow
+SymbolCol:		clGray clWindow
+PreprocessorCol:	clBlue clWindow
+SelectionCol:		clWhite clNavy
+CurrentLineCol: 	clBlack clYellow
+
