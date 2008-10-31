@@ -1,0 +1,94 @@
+//      Euphoria 3.0 Highlighter (original written by Mark Bloedel, MBloedel@juno.com)
+//      jiri babor
+//      01-08-24
+//      jbabor@paradise.net.nz
+// EDITED BY D. NEWHALL     Dec-10-2004 (derek_newhall@yahoo.com)
+// EDITED BY Hayden McKay   Mar-18-2007 (The RDS Euphoria Scheme)
+// * bugfix - invalid filter syntax was causing ConTEXT to not recognise *.e files
+// * update - added variables, constants and directives as defined by euphoria
+// * update - added multitasking subroutines as defined by euphoria
+// * update - added ConTEXT's matched braces feature
+Language:               Euphoria
+Description:            Euphoria Programming Language - (c) 2005 Rapid Deployment Software
+Filter:                 Euphoria files (*.e,*.ex,*.ew,*.eu,*.exw)|*.e;*.ex;*.ew;*.eu;*.exw
+HelpFile:               C:\Euphoria\html\Refman.htm
+CaseSensitive:          1
+LineComment:            --
+IdentifierBegChars:     a..z A..Z ?
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       #. 0..9
+NumConstChars:          #eABCDEF. 0..9
+EscapeChar:             \
+//   Euphoria Reserved Words
+KeyWords1:    if end then procedure else for return do elsif while type constant
+              to and or exit function global by not include with without xor as
+//   Euphoria Builtins
+KeyWords2:    length puts integer sequence position object append prepend print printf
+              clear_screen floor getc gets get_key rand repeat atom compare find match time
+              command_line open close trace getenv sqrt sin cos tan log system date
+              remainder power machine_func machine_proc abort peek poke call sprintf arctan
+              and_bits or_bits xor_bits not_bits pixel get_pixel mem_copy mem_set c_proc
+              c_func routine_id call_proc call_func poke4 peek4s peek4u profile equal
+              system_exec platform task_create task_schedule task_yield task_self
+              task_suspend task_list task_status task_clock_stop task_clock_start
+//   Euphoria Standard Library
+KeyWords3:   all_palette allocate allocate_low allocate_string allow_break arccos
+             arcsin atom_to_float32 atom_to_float64 bits_to_int bk_color bytes_to_int
+             call_back chdir check_break crash_file crash_message crash_routine current_dir
+             cursor custom_sort define_c_func define_c_proc define_c_var dir
+             display_image display_text_image dos_interrupt draw_line ellipse
+             float32_to_atom float64_to_atom flush free free_console free_low get
+             get_active_page get_all_palette get_bytes get_display_page get_mouse
+             get_position get_screen_char get_vector graphics_mode instance int_to_bits
+             int_to_bytes lock_file lock_memory lower message_box mouse_events
+             mouse_pointer open_dll palette PI polygon prompt_number prompt_string
+             put_screen_char read_bitmap register_block reverse save_bitmap save_image
+             save_screen save_text_image scroll seek set_active_page set_display_page
+             set_rand set_vector sleep sort sound sprint text_color text_rows tick_rate
+             unlock_file unregister_block upper use_vesa value video_config wait_key
+             walk_dir where wildcard_file wildcard_match wrap
+// Euphoria Defined Constants
+KeyWords4:   PI DB_OK DB_OPEN_FAIL DB_EXISTS_ALREADY DB_LOCK_FAIL DB_LOCK_NO DB_LOCK_SHARED
+             DB_LOCK_EXCLUSIVE C_CHAR C_UCHAR C_SHORT C_USHORT C_INT C_UINT C_LONG C_ULONG
+             C_POINTER C_FLOAT C_DOUBLE E_INTEGER E_ATOM E_SEQUENCE E_OBJECT NULL
+             LOCK_SHARED LOCK_EXCLUSIVE D_NAME D_ATTRIBUTES D_SIZE D_YEAR D_MONTH D_DAY
+             D_HOUR D_MINUTE D_SECOND W_BAD_PATH my_dir GET_SUCCESS GET_EOF GET_FAIL BLUE
+             CYAN RED BROWN BRIGHT_BLUE BRIGHT_CYAN BRIGHT_RED YELLOW BLACK GREEN MAGENTA
+             WHITE GRAY BRIGHT_GREEN BRIGHT_MAGENTA BRIGHT_WHITE BLINKING VC_COLOR VC_MODE
+             VC_LINES VC_COLUMNS VC_XPIXELS VC_YPIXELS VC_NCOLORS VC_PAGES NO_CURSOR
+             UNDERLINE_CURSOR THICK_UNDERLINE_CURSOR HALF_BLOCK_CURSOR BLOCK_CURSOR
+             BMP_SUCCESS BMP_OPEN_FAILED BMP_UNEXPECTED_EOF BMP_UNSUPPORTED_FORMAT
+             BMP_INVALID_MODE REG_LIST_SIZE REG_DI REG_SI REG_BP REG_BX REG_DX REG_CX
+             REG_AX REG_FLAGS REG_ES REG_DS DOS32 WIN32 LINUX FREEBSD MOVE LEFT_DOWN
+             LEFT_UP, RIGHT_DOWN, RIGHT_UP MIDDLE_UP ANY_UP MB_ABORTRETRYIGNORE
+             MB_APPLMODAL MB_DEFAULT_DESKTOP_ONLY MB_DEFBUTTON1 MB_DEFBUTTON2
+             MB_DEFBUTTON3 MB_DEFBUTTON4 MB_HELP MB_ICONASTERISK MB_ICONERROR
+             MB_ICONEXCLAMATION MB_ICONHAND MB_ICONINFORMATION MB_ICONQUESTION MB_ICONSTOP
+             MB_ICONWARNING MB_OK MB_OKCANCEL MB_RETRYCANCEL MB_RIGHT MB_RTLREADING
+             MB_SERVICE_NOTIFICATION MB_SETFOREGROUND MB_SYSTEMMODAL MB_TASKMODAL MB_YESNO
+             MB_YESNOCANCEL IDABORT IDCANCEL IDIGNORE IDNO IDOK IDRETRY IDYES
+             trace type_check
+KeyWords5:
+StringBegChar:          "'
+StringEndChar:          "'
+UsePreprocessor:        1  
+CurrLineHighlighted:    1
+SpaceCol:               $00A8A8A8 $00A8A8A8
+Keyword1Col:            $00A80000 $00A8A8A8 B
+Keyword2Col:            $00A800A8 $00A8A8A8 B
+Keyword3Col:            clBlack $00A8A8A8 B
+Keyword4Col:            clBlack $00A8A8A8 B
+Keyword5Col:            clBlack $00A8A8A8 B
+IdentifierCol:          clBlack $00A8A8A8
+CommentCol:             $000000A8 $00A8A8A8 I
+NumberCol:              clBlack $00A8A8A8
+StringCol:              $0000A000 $00A8A8A8 I
+SymbolCol:              clBlack $00A8A8A8 B
+SelectionCol:           $00FFFF60 $00585458
+CurrentLineCol:         clBlack $00A0A0A0
+PreprocessorCol:        $00A80000 $00A8A8A8
+MatchedBracesCol:       $0058FCFF $00A8A8A8
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
