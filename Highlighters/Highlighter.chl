@@ -1,0 +1,61 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// ConTEXT Highlighter highlighter written by Robert Ingham, rcingham@iee.org
+//
+// Rucursion is fascinating - you can go back to it forever :)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               ConTEXT Highlighter
+Filter:                 Highlighter files (*.chl)|*.chl
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 #abcdefABCDEF
+EscapeChar:
+
+KeyWords1:              BlockCommentBeg BlockCommentEnd CaseSensitive CommentCol CurrentLineCol
+                        CurrLineHighlighted EscapeChar Filter HelpFile IdentifierBegChars
+                        IdentifierChars IdentifierCol Keyword1Col Keyword2Col Keyword3Col
+                        KeyWords1 KeyWords2 KeyWords3 Language LineComment MultilineStrings
+                        NumberCol NumConstBegChars NumConstChars PreprocessorCol SelectionCol
+                        SpaceCol StringBegChar StringCol StringEndChar SymbolCol UsePreprocessor
+                        OverrideTxtFgColor BlockAutoindent BlockBegStr BlockEndStr MatchedBracesCol
+
+KeyWords2:              clBlack clMaroon clGreen clOlive clNavy clPurple clTeal clGray clSilver
+                        clRed clLime clYellow clBlue clFuchsia clAqua clLtGray clDkGray clWhite
+                        clScrollBar clBackground clActiveCaption clInactiveCaption clMenu clWindow
+                        clWindowFrame clMenuText clWindowText clCaptionText clActiveBorder
+                        clInactiveBorder clAppWorkSpace clHighlight clHighlightText clBtnFace
+                        clBtnShadow clGrayText clBtnText clInactiveCaptionText clBtnHighlight
+                        cl3DDkShadow cl3DLight clInfoText clInfoBk
+
+KeyWords3:              B I U S BI BU BS IU IS BIU BIS
+//                      I assume Underline and Strike-out are mutually exclusive
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clMaroon clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+
