@@ -1,0 +1,251 @@
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               FO
+
+//////////////////////////////////////////////////////////////////////////////
+// put whatever you want here, short description, author name, email address..
+
+Description:            Formatting Objects highlighter Version 0.1 by Daniel E. Brown daniel_e_brown@hotmail.com
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 FO (*.fo)|*.fo
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invoked when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+
+LineComment:
+BlockCommentBeg:        <!--
+BlockCommentEnd:        -->
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@. -
+IdentifierChars:        a..z A..Z _ 0..9 ? -
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into five groups which can be
+// highlighted differently
+
+// Top-Level Tags
+KeyWords1:             fo
+
+// 2nd-Level Tags
+KeyWords2:             basic-link bidi-override block block-container character color-profile
+                       conditional-page-master-reference declarations external-graphic
+                       float flow footnote footnote-body initial-property-set inline inline-container
+                       instream-foreign-object layout-master-set leader 
+                       list-block list-item list-item-body list-item-label
+                       marker multi-case multi-properties multi-property-set multi-switch multi-toggle
+                       page-number page-number-citation page-sequence page-sequence-master
+                       region-body region-before region-after region-start region-end
+                       repeatable-page-master-alternatives repeatable-page-master-reference
+                       retrieve-marker root simple-page-master single-page-master-reference static-content
+                       table table-and-caption table-body table-caption table-column table-cell table-header table-footer table-row 
+                       title wrapper
+
+// Attributes
+KeyWords3:
+                       absolute-position active-state alignment-adjust alignment-baseline auto-restore azimuth
+                       background background-attachment background-color background-image background-position background-position-horizontal
+                       background-position-vertical background-repeat baseline-shift blank-or-not-blank block-progression-dimension
+                       border border-after-color border-after-precedence border-after-style border-after-width 
+                       border-before-color border-before-precedence border-before-style border-before-width border-bottom
+                       border-bottom-color border-bottom-style border-bottom-width border-collapse border-color
+                       border-end-color border-end-precedence border-end-style border-end-width border-left
+                       border-left-color border-left-style border-left-width border-right border-right-color
+                       border-right-style border-right-width border-separation border-spacing border-start-color
+                       border-start-precedence border-start-style border-start-width border-style border-top border-top-color
+                       border-top-style border-top-width border-width bottom break-after break-before caption-side
+                       case-name case-title character clear clip color color-profile-name column-count column-gap
+                       column-number column-width content-height content-type content-width country cue cue-after cue-before
+                       destination-placement-offset direction display-align dominant-baseline elevation 
+                       empty-cells end-indent ends-row extent external-destination
+                       float flow-name font font-family font-selection-strategy font-size font-size-adjust font-stretch
+                       font-style font-variant font-weight force-page-count format
+                       glyph-orientation-horizontal glyph-orientation-vertical grouping-separator grouping-size
+                       height hyphenate hyphenation-character hyphenation-keep hyphenation-ladder-count hyphenation-push-character-count
+                       hyphenation-remain-character-count id indicate-destination initial-page-number
+                       inline-progression-dimension internal-destination keep-together keep-with-next 
+                       keep-with-previous language last-line-end-indent leader-alignment leader-length
+                       leader-pattern leader-pattern-width left letter-spacing letter-value line-height line-height-shift-adjustment line-stacking-strategy linefeed-treatment
+                       margin margin-bottom margin-left margin-right margin-top marker-class-name 
+                       master-name max-height max-width maximum-repeats media-usage 
+                       min-height min-width number-columns-repeated number-columns-spanned number-rows-spanned
+                       odd-or-even orphans overflow 
+                       padding padding-after padding-before padding-bottom padding-end padding-left padding-right padding-start padding-top
+                       page-break-after page-break-before page-break-inside page-height page-position page-width 
+                       pause pause-after pause-before pitch pitch-range play-during position
+                       precedence provisional-distance-between-starts provisional-label-separation 
+                       ref-id reference-orientation region-name relative-align relative-position rendering-intent
+                       retrieve-boundary retrieve-class-name retrieve-position richness right role
+                       rule-style rule-thickness scaling scaling-method score-spaces script show-destination 
+                       size source-document space-after space-before space-end space-start space-treatment
+                       span speak speak-header speak-numeral speak-punctuation speech-rate src
+                       start-indent starting-state starts-row stress suppress-at-line-break switch-to
+                       table-layout table-omit-footer-at-break table-omit-header-at-break target-presentation-context
+                       target-processing-context target-stylesheet text-align text-align-last text-altitude 
+                       text-decoration text-depth text-indent text-shadow text-transform top
+                       treat-as-word-space unicode-bidi vertical-align visibility
+                       voice-family volume white-space white-space-collapse widows width
+                       word-spacing wrap-option writing-mode z-index
+
+// Attribute Values
+KeyWords4:
+                        absolute absolute-colorimetris active after after-edge alphabetic always any auto
+                        auto-even auto-odd avoid backslant baseline before before-edge bidi-override blank
+                        blink bold bolder bottom bounded-in-one-dimension capitalize caption center-left center-right
+                        central code collapse column condensed consider-shifts continuous dashed digits disregard-shifts
+                        document dots dotted double embed end end-on-even end-on-odd error-if-overflow even
+                        even-page expanded extra-condensed extra-expanded far-left far-right fast faster first
+                        first-including-carryover first-starting-within-page fixed focus font-height force groove hanging
+                        hidden high higher hover icon ideographic ignore ignore-if-after-linefeed ignore-if-before-linefeed
+                        ignore-if-surrounding-linefeed inherit inside integer-pixels italic justify landscape
+                        last last-ending-within-page last-starting-within-page left left-side leftwards
+                        lighter line-height line-through link loud low lower lowercase lr lr-tb mathematical
+                        max-height medium menu middle narrower no-blink no-change no-force no-line-through
+                        none non-uniform no-overline no-repeat normal not-blank no-underline nowrap no-wrap
+                        oblique odd odd-oage once outside overline page page-sequence paginate perceptual
+                        portrait pre preserve relative relative-colorimetric repeat repeat-x repeat-y
+                        resample-any-method reset-size rest retain ridge right rightwards right-side
+                        rl rl-tb rule saturation scroll semi-condensed separate silent slow slower small-caps
+                        small-caption soft solid space spell-out start static sub super suppress tb tb-rl
+                        text-after-edge text-before-edge text-bottom text-top top tradional transparent treat-as-space
+                        treat-as-zero-width-space ultra-condensed ultra-expanded unbounded underline uniform uppercase
+                        use-content use-font-metrics use-normal-stylesheet use-script use-target-processing-context
+                        visible visited wider x-fast x-high x-loud x-low xsl-any xsl-before-float-separator
+                        xsl-following xsl-footnote-separator x-slow xsl-preceding xsl-region-after xsl-region-before
+                        xsl-region-body xsl-region-end xsl-region-start x-soft false true
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00C00000 clWindow B
+Keyword2Col:            $00C00000 clWindow
+Keyword3Col:            clGreen clWindow
+Keyword4Col:            clPurple clWindow
+Keyword5Col:            clAqua clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $00909090 clWindow I
+NumberCol:              clGray clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clNavy clWindow B
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            2
+BlockEndStr:
