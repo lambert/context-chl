@@ -1,0 +1,224 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Hamster-Script Highlighter, di Alan Ford
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Hamster-Script
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Hamsterscript (*.hsc)|*.hsc
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:               d:\hamster\hamster_it.hlp
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            #
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _ $.
+IdentifierChars:        a..z A..Z _ 0..9 ?!
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefABCDEFx
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into three groups which can be
+// highlighted differently
+
+// op codes
+
+KeyWords1:              quit beep error assert var entercontext
+                        leavecontext label goto break continue
+                        sleep trace dump debug runscript set varset inc dec
+                        true false isint int abs sgn isstr ord chr str hex len
+                        pos copy delete trim lowercase uppercase replace eval
+                        re_match re_extract re_parse re_split ticks
+                        time timegmt decodetime encodetime errcatch errnum
+                        errmsg errmodule errlineno errline errsender iniread
+                        execute iniwrite fileexists filesize filetime filedelete
+                        filerename filecopy direxists dirmake dirremove dirchange
+                        dircurrent dirwindows dirsystem listalloc listfree
+                        listexists listclear listcount listget listset listgettag
+                        listsettag listgetkey listsetkey listadd listdelete
+                        listinsert listsort listsettext listgettext listindexof
+                        listload listsave listfiles listdirs listrasentries print
+                        warning addlog msgbox inputbox inputpw listbox atclear
+                        atadd atexecute rasgetconnection rasisconnected rasdial
+                        rashangup rasgetip iif icase gosub paramcount paramstr
+                        settasklimiter gettasksactive gettaskswait gettasksrun
+                        sethostsentry_byname sethostsentry_byaddr localhostname
+                        localhostaddr openssltunnel closessltunnel
+                        getprocessidentifier eventcreate eventclose eventset
+                        eventreset eventpulse eventwait
+                        ArtAlloc ArtFree ArtGetText ArtSetText ArtGetHeaders
+                        ArtSetHeaders ArtGetBody ArtSetBody ArtGetHeader ArtAddHeader
+                        ArtSetHeader ArtDelHeader ArtHeaderExists ArtLoad ArtSave
+                        IniDelete IniEraseSection LookUpHostAddr LookUpHostName
+                        dllload dllcall dlllasterror dllfree memalloc memsize memsetint
+                        memgetint memsetstr memgetstr memvarptr memfree memforget
+                        AtCount AtSubfunction AtFrom AtUntil AtOnDays AtEveryMins
+                        ScriptPriority EventMultipleWait SysErrorMessage ClipRead
+                        ClipWrite RFCTimeZone DiskFreeKB GetEnvironment digest
+                        random DecodeMIMEHeaderString listappend ConstEnum ControlGetStatus
+                        Const MsgHeadernameOfIndex MsgIndexOfHeader MsgGetHeader
+                        MsgDelHeader MsgAddHeader MsgSetHeader TimeToHeaderDate
+
+
+KeyWords2:              endsub if else elseif endif do while repeat
+                        loop endwhile until for endfor sub return
+
+
+KeyWords3:              hamversion hampath hamhscpath hamhsmpath
+                        hamlogspath hamserverpath hamgroupspath hammailpath
+                        hamnewsoutpath hammailsoutpath hammessage hamgetstatus
+                        hamthreadcount hamisidle hamwaitidle hamflush hampurge
+                        hamrebuildgloballists hamrebuildhistory hamsetlogin
+                        hamnewspull hamnewspost hamnewsjobsclear hamnewsjobspulldef
+                        hamnewsjobspostdef hamnewsjobspull hamnewsjobspost
+                        hamnewsjobsfeed hamnewsjobsstart hamnewsjobsgetcounter
+                        hamnewsjobsgetserver hamnewsjobsgetparam hamnewsjobsgettype
+                        hamnewsjobsgetpriority hamnewsjobssetpriority hamnewsjobsadd
+                        hamnewsjobsdelete hammailexchange hamfetchmail hamsendmail
+                        hamsendmailauth hamnewmail hamrasdial hamrashangup hamgroupcount
+                        hamgroupname hamgroupindex hamgroupopen hamgroupclose hamartcount
+                        hamartnomin hamartnomax hamarttext hamarttextexport hamartimport
+                        hamartdeletemid hamartlocatemid hamscorelist hamscoretest
+                        HamNNTPServer HamSMTPServer HamPOP3Server HamIMAPServer
+                        HamReCoServer HamShutdown HamStopAllTasks HamStopThread
+                        HamResetCounters HamMainWindow HamTrayIcon HamReloadConfig
+                        HamReloadIPAccess HamChangePassword HamRotateLog hamaddlog
+                        HamDialogEditDirs HamDialogScripts HamDialogNewsKillfileLog
+                        HamDialogAddPull HamMainFQDN HamMidFQDN HamEnvelopeFrom
+                        HamPostmaster HamUsenetAcc HamRCpath HamNewsJobsCheckActive
+                        HamAddGroup HamDelGroup HamAddPull HamDelPull HamArtLocateMidInGroup
+                        HamArtDeleteMidInGroup HamArtDeleteNrInGroup
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       _
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00FF4040 clWindow B
+Keyword2Col:            $00C000C0 clWindow B
+Keyword3Col:            $00C00000 clWindow B
+IdentifierCol:          $000000C0 clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clGreen clWindow B
+StringCol:              clBlack clWindow
+SymbolCol:              clWindowText clWindow
+PreprocessorCol:        $0000C000 clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00C0FFFF
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clTeal clWindow
