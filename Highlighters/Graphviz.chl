@@ -1,0 +1,98 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// NSIS Script Highlighter written by Marc Noirot
+//
+// Updated for NSIS 1.94 by Vedran Miletic, riva_station@yahoo.com
+//
+// ConTEXT, Winamp2, Winamp3, NSIS, so fabulous apps :)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               DOTHighlighter
+Filter:                 DOT files (*.dot)|*.dot
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _!$.
+IdentifierChars:        a..z A..Z _ 0..9 -
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefxABCDEF
+EscapeChar:
+
+// objects
+KeyWords1: digraph graph node edge subgraph
+
+// attribs
+KeyWords2:  bottomlabel color comment distortion fillcolor fixedsize fontcolor fontname fontsize
+            group height label layer orientation peripheries regular shape shapefile sides skew
+            style toplabel URL width z arrowhead arrowsize arrowtail color comment constraint
+            decorate dir fontcolor fontname fontsize headlabel headport headURL label labelangle
+            labeldistance labelfloat labelfontcolor labelfontname labelfontsize layer lhead ltail
+            minlen samehead sametail style taillabel tailport tailURL weight bgcolor center
+            clusterrank color comment compound concentrate fillcolor fontcolor fontname fontpath
+            fontsize label labeljust labelloc layers margin mclimit nodesep nslimit nslimitl
+            ordering orientation page pagedir quantum rank rankdir ranksep ratio remincross
+            rotate samplepoints searchsize size style URL splines
+
+// node / edge types / color names
+KeyWords3: none normal inv dot odot invdot invodot open halfopen empty invempty diamond odiamond
+           box obox tee crow box polygon ellipse circle point egg triangle plaintext diamond
+           trapezium parallelogram house hexagon octagon doublecircle doubleoctagon tripleoctagon
+           invtriangle invtrapezium invhouse Mdiamond Msquare Mcircle record Mrecord epsf
+           turquoise antiquewhite coral darkgoldenrod azure crimson gold bisque darksalmon goldenrod aliceblue
+           blanchedalmond deeppink greenyellow blue cornsilk firebrick lightgoldenrod blueviolet
+           floralwhite hotpink lightgoldenrodyellow cadetblue gainsboro indianred lightyellow cornflowerblue
+           ghostwhite lightpink palegoldenrod darkslateblue honeydew lightsalmon yellow deepskyblue
+           ivory maroon yellowgreen dodgerblue lavender mediumvioletred indigo lavenderblush orangered lightblue
+           lemonchiffon palevioletred chartreuse lightskyblue linen pink darkgreen lightslateblue
+           mintcream red darkolivegreen mediumblue mistyrose salmon darkseagreen mediumslateblue
+           moccasin tomato forestgreen midnightblue navajowhite violetred green navy
+           oldlace greenyellow navyblue papayawhip Browns lawngreen powderblue peachpuff beige lightseagreen royalblue
+           seashell brown limegreen skyblue snow burlywood mediumseagreen slateblue thistle chocolate
+           mediumspringgreen steelblue wheat darkkhaki mintcream white khaki olivedrab whitesmoke peru palegreen blueviolet
+           rosybrown seagreen darkorchid saddlebrown springgreen darkviolet darkslategray sandybrown yellowgreen magenta
+           dimgray sienna mediumorchid gray tan mediumpurple gray aquamarine mediumvioletred lightgray Oranges cyan orchid
+           lightslategray darkorange darkturquoise palevioletred slategray orange lightcyan plum orangered mediumaquamarine purple
+           mediumturquoise violet black paleturquoise violetred true solid dashed dotted bold invis filled
+           diagonals
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $000000AA clWindow B
+Keyword2Col:            $00AA0000 clWindow B
+Keyword3Col:            $00007500 clWindow
+
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clBlue clWindow
+StringCol:              clBlue clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $000000AA clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clBlue clWindow
+StringCol:              clBlue clWindow
+SymbolCol:              clBlack clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
+
