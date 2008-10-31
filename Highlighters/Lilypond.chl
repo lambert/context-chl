@@ -1,0 +1,89 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Lilypond highlighter written by Nicolas Vaughan; nivaca@gmail.com
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Lilypond
+Filter:                 Lilypond files (*.ly)|*.ly
+HelpFile:               D:\Nivaca\PDFs\LILYPOND\lilypond.pdf
+CaseSensitive:          1
+LineComment:            %
+BlockCommentBeg:        %{
+BlockCommentEnd:        %}
+IdentifierBegChars:     a..z A..Z _\
+IdentifierChars:        a..z A..Z 0..9
+NumConstBegChars:
+NumConstChars:
+EscapeChar:
+
+KeyWords1:              \accepts \aeolian \afterGrace \aikenHeads \alternative \applyContext
+                        \applyOutput \arpeggio \arpeggioBracket \arpeggioDown \arpeggioNeutral
+                        \arpeggioUp \ascendens \auctum \augmentum \autoBeamOff \autoBeamOn \bar
+                        \book \break \breve \cadenzaOff \cadenzaOn \caesura \cavum \clef \context \coda
+                        \chordmode \deminutum \denies \descendens \displayLilyMusc \displayLilyMusic \displayMusic
+                        \divisioMaior \divisioMaxima \divisioMinima \dorian \dotsDown \dotsNeutral
+                        \dotsUp \dynamicDown \dynamicNeutral \dynamicUp \emptyText \f \fatText
+                        \ff \fff \ffff \finalis \flexa \fp \frenchChords \germanChords \glissando
+                        \grace \header in LaTeX documents \hideNotes \hideStaffSwitch \inclinatum
+                        \include \ionian \italianChords \key \key \layout \linea \locrian \longa
+                        \lydian \lyricmode \lyricsto \major \mark \mark \maxima \melisma \melismaEnd
+                        \mf \minor \mixolydian \mp \new \noBreak \noPageBreak \normalsize \oneVoice
+                        \oriscus \override \p \pageBreak \paper \partial \pes \phrasingSlurDown
+                        \phrasingSlurNeutral \phrasingSlurUp \phrygian \pp \ppp \pppp
+                        \lyricmode \quilisma \relative \repeat \repeatTie \repeatTie \rest \rfz
+                        \sacredHarpHeads \segno \semiGermanChords \set \setEasyHeads \sf \sff \sfz \shiftOff
+                        \shiftOn \shiftOnn \shiftOnnn \showStaffSwitch \skip \slurDashed \slurDotted
+                        \slurDown \slurNeutral \slurSolid \slurUp \small \sp \spp \startTrillSpan
+                        \stemDown \stemNeutral \stemUp \stopTrillSpan \stropha \tag \tempo \tieDashed
+                        \tieDotted \tieDown \tieNeutral \tieSolid \tieUp \time \times \tiny \transpose
+                        \tupletDown \tupletNeutral \tupletUp \tweak \unfoldRepeats \unHideNotes \unset
+                        \version \virga \virgula \voiceFour \voiceOne \voiceThree \voiceTwo \with
+
+KeyWords2:              after-title-space allowBeamBreak annotate-spacing arranger aug auto-first-page-number
+                        autoBeaming autoBeamSettings barCheckSynchronize base-shortest-duration
+                        before-title-space between-system-padding between-system-space between-title-space
+                        blank-last-page-force blank-page-force bookTitleMarkup bottom-margin breakbefore
+                        chordNameExceptions chordNameSeparator chordNoteNamer chordPrefixSpacer chordRootNamer
+                        common-shortest-duration composer convert-ly copyright currentBarNumber dedication
+                        defaultBarType dim evenFotterMarkup evenHeaderMarkup first-page-number followVoice
+                        font-interface foot-separation head-separation horizontal-shift indent instrument
+                        layout file left-margin line-width line-width optimal-breaking page-turn-breaking
+                        m maj majorSevenSymbol meter minimumFret minimumPageTurnLength minimumRepeatLengthForPageTurn
+                        modern style accidentals modern-cautionary modern-voice modern-voice-cautionary
+                        no-reset accidental style oddFooterMarkup oddHeaderMarkup opus page-spacing-weight
+                        page-top-space paper-height paper-width papersize piano accidentals piece pipeSymbol
+                        poet print-page-number printallheaders printallheaders printfirst-page-number R r
+                        ragged-bottom ragged-last ragged-last-bottom ragged-right repeatCommands repeatCommands
+                        s scoreTitleMarkup set-accidental-style shapeNoteStyles showLastLength skipTypesetting
+                        spacing Staff midiInstrument stem-spacing-correction stemLeftBeamCount stemRightBeamCount
+                        subdivideBeams subsubtitle subtitle suggestAccidentals sus system-count
+                        systemSeparatorMarkup tagline texi title top-margin tremoloFlags
+                        tupletNumberFormatFunction whichBar | ~
+KeyWords3:              ' ,
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       1
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clMaroon clWindow
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            clRed clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clPurple clWindow
+SymbolCol:              clGreen clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:            "
+BlockEndStr:            "
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clBlack clPurple
