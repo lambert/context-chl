@@ -1,0 +1,55 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Haskell highlighter written by Jason Feingold, jfeingold@starnetusa.com
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Haskell
+Filter:                 Haskell files (*.hs)|*.hs
+HelpFile:
+CaseSensitive:          1
+LineComment:            --
+BlockCommentBeg:        {-
+BlockCommentEnd:        -}
+IdentifierBegChars:     a..z A..Z _ '
+IdentifierChars:        a..z A..Z _ 0..9 '
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             \
+
+KeyWords1:              class instance data type newtype deriving
+                        where let in do case of otherwise if then else
+                        module import hiding qualified primitive
+                        infixr infixl
+
+
+KeyWords2:
+
+KeyWords3:
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlack clWindow
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
+
