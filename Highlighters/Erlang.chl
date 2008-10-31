@@ -1,0 +1,78 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Erlang higlighter written by John Haugleand
+// http://blog.sc.tri-bit.com/
+// Please relate any errors to johnhaugeland@yahoo.com
+//
+
+Language:               Erlang/OTP R12
+Filter:                 Erlang files (*.erl,*.hrl,*.htp)|*.erl;*.hrl;*.htp
+
+HelpFile:
+CaseSensitive:          1
+
+LineComment:            %
+
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 _ :
+
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 abcdefhABCDEFH #
+
+EscapeChar:             \
+
+KeyWords1:              after and andalso band begin bnot bor bsl bsr bxor case catch cond div end fun if let not of or orelse query receive rem try when xor
+
+KeyWords2:              erlang append_element apply atom_to_list binary_to_float binary_to_list binary_to_term bump_reductions cancel_timer check_process_code
+                        concat_binary date delete_module demonitor disconnect_node display element erase exit fault float float_to_binary float_to_list fun_info
+                        fun_to_list function_exported garbage_collect get get_cookie get_keys group_leader halt hash hd hibernate info integer_to_list is_alive
+                        is_builtin is_process_alive length link list_to_atom list_to_binary list_to_float list_to_integer list_to_pid list_to_tuple load_module
+                        loaded localtime localtime_to_universaltime make_ref make_tuple md5 md5_final md5_init md5_update memory module_loaded monitor
+                        monitor_node node nodes now open_port phash phash2 pid_to_list port_close port_command port_connect port_control port_call port_info
+                        port_to_list ports pre_loaded process_display process_flag process_info processes purge_module put read_timer ref_to_list register
+                        registered resume_process round self send send_after send_nosuspend set_cookie set_element size spawn spawn_link spawn_opt split_binary
+                        start_timer statistics suspend_process system_flag system_info system_monitor term_to_binary throw time tl trace trace_info
+                        trace_pattern trunc tuple_to_list universaltime_to_localtime unlink unregister whereis yield abs is_atom is_binary is_constant is_float
+                        is_function is_function is_integer is_list is_number is_pid is_port is_reference is_tuple is_record is_record
+
+KeyWords3:              Unary + - bnot not / * div rem band and + - bor bxor bsl bsr or xor ++ -- == /= =< < >= > =:= =/= andalso orelse = catch ? # !
+
+KeyWords4:              module import export compile vsn behavior behaviour define record include include_lib file
+
+KeyWords5:              alarm_handler: any: app: application: appmon: appup: asn1ct: asn1rt: auth: beam_lib: c: calendar: code: compile: config: corba: corba_object: cosEventApp: CosEventChannelAdmin: CosEventChannelAdmin_ConsumerAdmin: CosEventChannelAdmin_EventChannel: CosEventChannelAdmin_ProxyPullConsumer: CosEventChannelAdmin_ProxyPullSupplier: CosEventChannelAdmin_ProxyPushConsumer: CosEventChannelAdmin_ProxyPushSupplier: CosEventChannelAdmin_SupplierAdmin: CosEventDomainAdmin: CosEventDomainAdmin_EventDomain: CosEventDomainAdmin_EventDomainFactory: cosEventDomainApp: CosFileTransfer_Directory: CosFileTransfer_File: CosFileTransfer_FileIterator: CosFileTransfer_FileTransferSession: CosFileTransfer_VirtualFileSystem: cosFileTransferApp: CosNaming: CosNaming_BindingIterator: CosNaming_NamingContext: CosNaming_NamingContextExt: CosNotification: CosNotification_AdminPropertiesAdmin: CosNotification_QoSAdmin: cosNotificationApp: CosNotifyChannelAdmin_ConsumerAdmin: CosNotifyChannelAdmin_EventChannel: CosNotifyChannelAdmin_EventChannelFactory: CosNotifyChannelAdmin_ProxyConsumer: CosNotifyChannelAdmin_ProxyPullConsumer:
+                        CosNotifyChannelAdmin_ProxyPullSupplier: CosNotifyChannelAdmin_ProxyPushConsumer: CosNotifyChannelAdmin_ProxyPushSupplier: CosNotifyChannelAdmin_ProxySupplier: CosNotifyChannelAdmin_SequenceProxyPullConsumer: CosNotifyChannelAdmin_SequenceProxyPullSupplier: CosNotifyChannelAdmin_SequenceProxyPushConsumer: CosNotifyChannelAdmin_SequenceProxyPushSupplier: CosNotifyChannelAdmin_StructuredProxyPullConsumer: CosNotifyChannelAdmin_StructuredProxyPullSupplier: CosNotifyChannelAdmin_StructuredProxyPushConsumer: CosNotifyChannelAdmin_StructuredProxyPushSupplier: CosNotifyChannelAdmin_SupplierAdmin: CosNotifyComm_NotifyPublish: CosNotifyComm_NotifySubscribe: CosNotifyFilter_Filter: CosNotifyFilter_FilterAdmin: CosNotifyFilter_FilterFactory: CosNotifyFilter_MappingFilter: cosProperty: CosPropertyService_PropertiesIterator: CosPropertyService_PropertyNamesIterator: CosPropertyService_PropertySet: CosPropertyService_PropertySetDef: CosPropertyService_PropertySetDefFactory: CosPropertyService_PropertySetFactory: cosTime: CosTime_TimeService: CosTime_TIO: CosTime_UTO:
+                        CosTimerEvent_TimerEventHandler: CosTimerEvent_TimerEventService: cosTransactions: CosTransactions_Control: CosTransactions_Coordinator: CosTransactions_RecoveryCoordinator: CosTransactions_Resource: CosTransactions_SubtransactionAwareResource: CosTransactions_Terminator: CosTransactions_TransactionFactory: cover: cprof: cpu_sup: crashdump: crypto: crypto_app: dbg: debugger: dets: dialyzer: dict: digraph: digraph_utils: disk_log: disksup: driver_entry: ei: ei_connect: epmd: epp: eprof: erl: erl_boot_server: erl_call:
+                        erl_connect: erl_ddll: erl_driver: erl_error: erl_eterm: erl_eval: erl_expand_records: erl_format: erl_global: erl_id_trans: erl_internal: erl_lint: erl_malloc: erl_marshal: erl_parse: erl_pp: erl_prim_loader: erl_scan: erl_set_memory_block: erl_tar: erlang: erlang_mode: erlc: erlsrv: error_handler: error_logger: erts_alloc: et: et_collector: et_selector: et_viewer: etop: ets: file: file_sorter: filelib: filename: fixed: fprof: ftp: gb_sets: gb_trees: gen_event: gen_fsm:
+                        gen_server: gen_tcp: gen_udp: global: global_group: gs: heart: http: http_base_64: httpd: httpd_conf: httpd_socket: httpd_util: i: ic: ic_c_protocol: ic_clib: inet: init: instrument: int: interceptors: inviso: inviso_as_lib: inviso_lfm: inviso_lfm_tpfreader: inviso_rt: io: io_lib: kernel_app: lib: lists: lname: lname_component: log_mf_h: make: math: megaco: megaco_codec_meas: megaco_codec_transform: megaco_encoder: megaco_flex_scanner: megaco_tcp: megaco_transport:
+                        megaco_udp: megaco_user: memsup: mnemosyne: mnesia: mnesia_frag_hash: mnesia_registry: mnesia_session: mod_alias: mod_auth: mod_esi: mod_security: Module_Interface: ms_transform: net_adm: net_kernel: nteventlog: observer_app: odbc: orber: orber_acl: orber_diagnostics: orber_ifr: orber_tc: orddict: ordsets: os: os_mon: os_mon_mib: os_sup: otp_mib: overload: packages: pg: pg2: pman: pool: proc_lib: proplists: qlc: queue: random: rb: regexp:
+                        registry: rel: release_handler: relup: rpc: run_erl: runtime_tools_app: sasl_app: script: seq_trace: sets: shell: shell_default: slave: snmp: snmp_app: snmp_community_mib: snmp_framework_mib: snmp_generic: snmp_index: snmp_notification_mib: snmp_pdus: snmp_standard_mib: snmp_target_mib: snmp_user_based_sm_mib: snmp_view_based_acm_mib: snmpa: snmpa_error: snmpa_error_io: snmpa_error_logger: snmpa_error_report: snmpa_local_db: snmpa_mpd: snmpa_network_interface: snmpa_notification_filter: snmpa_supervisor: snmpc: snmpm: snmpm_mpd: snmpm_network_interface: snmpm_user: sofs: ssh: ssh_cli: ssh_cm:
+                        ssh_sftp: ssh_sftpd: ssh_ssh: ssh_sshd: ssh_transport: ssl: ssl_app: ssl_pkix: start: start_erl: start_webtool: stdlib_app: string: supervisor: supervisor_bridge: sys: systools: tags: tftp: timer: toolbar: ttb: tv: user: webtool: werl: win32reg: wrap_log_reader: xmerl: xmerl_eventp: xmerl_scan: xmerl_xpath: xmerl_xs: xref: yecc: zip: zlib:
+
+
+
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+SpaceCol:               clWindowText clBlack
+Keyword1Col:            $00C0C000 clBlack
+Keyword2Col:            $00FF0080 clBlack
+Keyword3Col:            $00FF4040 clWindow
+IdentifierCol:          $00FF8020 clBlack
+CommentCol:             $00003E3E clBlack
+NumberCol:              $00C000C0 clBlack B
+StringCol:              $00C00000 clBlack
+SymbolCol:              $00783C00 clBlack
+PreprocessorCol:        clBlue clBlack
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword4Col:            $0075EA00 clBlack
+Keyword5Col:            $00C0C000 clBlack B
+MatchedBracesCol:       $0000FFC6 $00004000
