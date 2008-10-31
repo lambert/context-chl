@@ -1,0 +1,145 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Fenix highlighter file for ConTEXT by Sandman.
+//
+// Version 1.56, Fenix 0.93
+//
+// Comments? http://fenixdocs.com/index.php/Image_talk:Fenix.chl
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Fenix
+Description:            Fenix syntax highlighting file for ConTEXT by Sandman.
+Filter:                 Fenix files (*.prg,*.inc,*.fh)|*.prg;*.inc;*.fh
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _@
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 #abcdefABCDEF
+EscapeChar:
+
+///////////////////predefined vars/words
+KeyWords1:
+
+//predefined globals
+						fxi_os cdinfo mouse_status focus_status window_status exit_status scale_mode fading sound_channels full_screen setup joy scroll mouse fps text_z timer argc argv ascii scan_code restore_type dump_type fileinfo shift_status joy_filter joy_status joy_state max_process_time m7 fps text_flags pansep reverb volume sound_freq sound_mode graph_mode speed_gauge frame_time regex_reg alpha_steps fileinfo
+//predefined locals
+						blendop _saved_ x y z id file graph region height son size smallbro alpha size_x size_y angle cnumber bigbro father ctype flags reserved priority resolution xgraph
+//predefined datatypes
+						signed unsigned byte word int float string pointer
+//syntax
+						include import frame return offset debug type
+//other
+						_case_sensitive _extended_conditions _free_syntax _hidden _ignore_errors _max_process _no_check _no_id_check _no_null_check _no_optimization _no_range_check _no_strfix _normal _simple_conditions _subdir _system _volid video_modes setup_program fast_mixer compiler_options channel dup dirinfo
+//Network.DLL
+						net
+
+///////////////////predefined words/syntax
+KeyWords2:
+						onexit default case local private public global const repeat until if elseif else while for from to step or xor not and mod struct switch end program process declare begin function loop continue break
+
+///////////////////functions
+KeyWords3:
+
+//Native funtions
+						move_window set_wav_volume set_channel_volume stop_wav resume_wav pause_wav is_playing_wav reserve_channels minimize getenv save_fgc load_fgc save_fbm load_fbm copy_struct rm rmdir join sort ksort cd_drives cd_status cd_name cd_getinfo cd_play cd_stop cd_pause cd_resume cd_eject cd_numtracks cd_currtrack copy save_fpl save_pal new_fnt strcasecmp load_fpl play_wav atof ftoa get_timer new_fpg unload_fgc unload_fbm number_joy joy_name joy_buttons joy_axes memcmp memcopy memset memsetw malloc fpg_exists realloc alloc save_png map_buffer get_screen chr asc len load_ttfaa load_image load_image_pal is_bmp is_gif is_jpg is_lbm is_pcx is_pnm is_tif is_xcf is_xpm is_png load_mpeg play_mpeg pause_mpeg stop_mpeg rewind_mpeg set_mpeg_volume is_playing_mpeg unload_mpeg loop_mpeg mpeg_filter mpeg_total_time mpeg_current_time atoi strlen substr feof file flength fgets fputs abs acos advance asin atan atan2 calculate change_channel change_sound char chdir clear_screen collision compress_file convert_palette cos decode_file define_region delete_draw delete_text disk_free draw encode encode_file end_fli exit fade fade_off fade_on fclose fget_angle fget_dist filelength find_color flush fopen force_pal frame_fli fread free fseek ftell fwrite get_angle get_dirinfo get_dist get_distx get_disty get_fileinfo get_id get_joy_button get_joy_position get_pixel get_point get_real_point get_song_line get_song_pos getdrive go_to_flag graphic_info graphic_set ignore_error is_playing_cd is_playing_song is_playing_sound itoa key let_me_alone load load_fnt load_fpg load_map load_pal load_pcm load_pcx load_screen load_song load_wav load_wld load_png load_ttf lower malloc map_block_copy map_get_pixel map_put map_put_pixel map_xput map_xputnp memory_total memory_free mkdir move_draw move_scroll move_text near_angle net_get_games net_join_game new_map num_video_modes out_region path_find path_free path_line play_cd play_song pow put put_pixel put_screen qsort quality_mixer radius rand rand_seed refresh_scroll remove reset_fli reset_sound roll_palette save save_map save_pcx screen_copy set_color set_fps set_mode set_point set_song_pos set_volume setdrive signal sin sizeof song sound sound_bits_16 sound_bits_8 sqrt start_fli start_mode7 start_mode8 start_scroll stop_cd stop_mode7 stop_mode8 stop_scroll stop_song stop_sound strcat strchr strcmp strcpy strdel strset strstr system tan uncompress_file drive_size unload_fnt unload_fpg unload_map unload_pcm unload_pcx unload_song unload_wav upper vsync write write_in_map write_int xadvance xput map_clear map_clone map_exists map_name set_center map_set_name paste_graph glob cd file_exists fnt_new get_glyph get_text_color text_height text_width write_var load_bdf set_text_color save_fnt set_glyph write_string write_float select_joy say draw_box draw_circle draw_curve draw_fcircle draw_box draw_line draw_rect drawing_alpha drawing_color drawing_map drawing_stipple drawing_z fade_music_in fade_music_off pause_song resume_song set_song_volume set_panning set_distance set_position reverse_stereo find format regex regex_replace rpad lpad split strrev trim lcase ucase fpg_add fpg_new save_fpg exists BLENDOP_APPLY BLENDOP_APPLY BLENDOP_ASSIGN BLENDOP_ASSIGN BLENDOP_FREE BLENDOP_IDENTIDY BLENDOP_GRAYSCALE BLENDOP_INTENSITY BLENDOP_NEW BLENDOP_SWAP blendop_tint blendop_translucency set_icon set_title blur filter grayscale rgbscale quicksort path_getxy path_wall start_fli end_fli frame_fli reset_fli ftime time find_color get_colors get_rgb load_pal rgb set_colors
+//Network.DLL
+						net_about net_version net_intversion net_init net_quit net_open net_connect net_listen net_port net_ipaddress net_hostname net_close net_disconnect net_closeall net_disconnectall net_message net_send net_messagern net_sendrn net_getmessage net_recv net_sendvar net_recvvar net_sendgraph net_recvgraph net_sendfile net_recvfile net_separator net_getseparator net_getseparatorlength net_resolve net_iptoint net_inttoip net_geterror net_stat_buffer
+//WPF.dll
+						wpf_start wpf_nodenrbuild wpf_readpath wpf_about
+//JOY.dll
+						joy_numjoys joy_name joy_open joy_opened joy_numaxes joy_numballs joy_numbuttons joy_numhats joy_getaxis joy_getball joy_getbutton joy_gethat joy_close joy_about
+
+///////////////////predefined constants/words
+KeyWords4:
+
+//screen modes
+						screen background
+						complete_dump complete_restore partial_dump partial_restore no_restore
+						m320x200 m320x240 m640x480 m800x600 m1024x768 m1280x1024
+//graph- and rendermodes
+						MODE_WINDOW MODE_2XSCALE MODE_FULLSCREEN MODE_DOUBLEBUFFER DOUBLE_BUFFER MODE_HARDWARE HW_SURFACE MODE_MODAL MODE_FRAMELESS
+						MODE_8BITS MODE_8BPP MODE_16BITS MODE_16BPP
+//sound modes
+						mode_stereo mode_mono
+
+//scale modes
+						SCALE_NONE SCALE_SCALE2X SCALE_HQ2X SCALE_SCANLINE2X SCALE_NORMAL2X
+//scroll/mode7/mode8
+						c_0 c_1 c_2 c_3 c_4 c_5 c_6 c_7 c_8 c_9 c_m7 c_m8 c_screen c_scroll
+//signals
+						s_freeze_tree s_freeze s_kill_tree s_kill s_sleep_tree s_sleep s_wakeup_tree s_wakeup
+//blit flags
+						B_HMIRROR B_VMIRROR TRANSLUCENT B_ALPHA B_ABLEND B_SBLEND B_NOCOLORKEY
+//graphic infos
+						g_width g_height g_center_x g_center_y g_x_center g_y_center g_pitch g_depth g_frames g_animation_step g_animation_steps g_animation_speed
+//filemodes
+						O_READ O_READWRITE O_RDWR O_WRITE O_ZREAD O_ZWRITE
+						SEEK_SET SEEK_CUR SEEK_END
+//process statuscodes
+						STATUS_DEAD STATUS_KILLED STATUS_RUNNING STATUS_SLEEPING STATUS_FROZEN STATUS_WAITING
+//cd statuscodes
+						CD_ERROR CD_TRAYEMPTY CD_STOPPED CD_PLAYING CD_PAUSED
+//os codes
+						OS_WIN32 OS_LINUX OS_BEOS OS_MACOS OS_GP32 OS_DC OS_BSD
+//pathfind
+						PF_NODIAG PF_REVER
+//keys
+						_LESS _EQUALS _GREATER _ASTERISK _R_ALT _R_CONTROL _L_ALT _L_CONTROL _MENU _L_WINDOWS _R_WINDOWS _esc _F1 _F2 _F3 _F4 _F5 _F6 _F7 _F8 _F9 _F10 _F11 _F12 _prn_scr _scroll_lock _wave _1 _2 _3 _4 _5 _6 _7 _8 _9 _0 _minus _plus _backspace _tab _l_brachet _r_brachet _enter _caps_lock _semicolon _apostrophe _backslash _l_shift _comma _point _slash _r_shift _control _alt _space _ins _home _pgup _del _end _pgdn _num_lock _c_backslash _c_asterisk _c_minus _c_home _c_up _c_pgup _c_left _c_center _c_right _c_end _c_down _c_pgdn _c_ins _c_del _c_plus _c_enter _A _B _C _D _E _F _G _H _I _J _K _L _M _N _O _P _Q _R _S _T _U _V _W _X _Y _Z _a _b _c _d _e _f _g _h _i _j _k _l _m _n _o _p _q _r _s _t _u _v _w _x _y _z _left _up _right _down
+//numbers
+						pi min_int max_int true false
+//other
+						null all_drawing all_sound all_text _depth
+//Network.DLL
+						NET_MAX_MSG_LEN
+						NET_STATUS_DISCONNECTING NET_STATUS_DISCONNECTED NET_STATUS_INACTIVE NET_STATUS_ACTIVE NET_STATUS_ESTABLISHED NET_STATUS_ESTABLISHING
+						NET_ERROR_NONE NET_ERROR_INITIALIZATION NET_ERROR_NOTINITIALIZED NET_ERROR_INVALIDADDRESS NET_ERROR_RESOLVINGHOST NET_ERROR_ALLOCSOCKETSET NET_ERROR_INVALIDSOCKETSET NET_ERROR_SOCKETSETINACTIVE NET_ERROR_ADDINGSOCKET NET_ERROR_INVALIDSOCKET NET_ERROR_DELETINGSOCKET NET_ERROR_CONNECTING NET_ERROR_INVALIDCONN NET_ERROR_CONNINACTIVE NET_ERROR_LISTENINGONCONN NET_ERROR_TOOMANYCONNS NET_ERROR_TOOFEWCONNS NET_ERROR_WRONGTYPE NET_ERROR_ALREADYINIT NET_ERROR_MESSAGETOOLONG NET_ERROR_MESSAGETOOSHORT NET_ERROR_OUTGOINGSTACKFULL NET_ERROR_INCOMINGSTACKFULL NET_ERROR_SENDING NET_ERROR_RECEIVING NET_ERROR_DISCONNECTING NET_ERROR_DISCONNECTED NET_ERROR_TOOMANYLISTENERS NET_ERROR_INVALIDPORTNUMBER NET_ERROR_SIZEMISMATCH NET_ERROR_RESOLVINGIP NET_ERROR_NONEXTERNALCONN NET_ERROR_NONEWMESSAGE NET_ERROR_UNFINISHEDMESSAGE NET_ERROR_NULLPOINTER NET_ERROR_NONEXISTINGGRAPH NET_ERROR_NONEXISTINGFILE NET_ERROR_CREATINGGRAPH NET_ERROR_OPENINGFILE
+						NET_CONSOLEREPORTS_NO NET_CONSOLEREPORTS_YES
+						NET_FPS
+
+///////////////////Homebrew stuff
+KeyWords5:
+
+//FNC.dll
+						itoz itow switch_bit get_bit set_bit write_on_map fget_360angle console console_h call log blendop_deassign
+//ITS.dll
+						its_init its_c_tc its_tc_c its_tc_bc its_bc_tc its_c_oc its_move its_move_abs its_move_2 its_zoom its_zoom_r its_c_tc_2 its_tc_c_2
+//ITS
+						its_start its_world its_mousedata its_loadscreen its_loadworld its_saveworld its_unloadworld its_loadgfl its_buildworld its_editworld
+						obj_angle obj_angle2
+//XTR
+						put_block put_block_ul put_block_s uni_button_text uni_button uni_button_c s_i2 s_i make_font mousepointer mousegraph ntos ntos2 ntos_nc back_refr bib kill is_img fader processes graph_reporter new_map_c load_png8 load_fpg0 unload_fpg0 showerror signal_all setmode setfps setres settitle img_load fnt_loadbmp say2
+						name
+
+StringBegChar:          "'
+StringEndChar:          "'
+MultilineStrings:       1
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clPurple clWindow B
+Keyword3Col:            clBlue clWindow
+Keyword4Col:            clPurple clWindow
+Keyword5Col:            $00C00000 clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              $00505050 clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clRed clWindow
+PreprocessorCol:        clBlue clWindow B
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clWindow
+MatchedBracesCol:       clFuchsia clWindow
+
+OverrideTxtFgColor:     0
+
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+
