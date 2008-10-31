@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////
+//
+// Skeleton highlighter written by Larry Altman, 
+// larrytheotter@highstream.net
+// All keywords copied from the Interactive System Productivity Facility 
+// (ISPF) Dialog Developer’s Guide and Reference z/OS Version 1 Release 
+// 2.0, document number SC34-4821-01, Second Edition(October, 2001).
+//
+////////////////////////////////////////////////////////////////////////
+
+Language:               IBM Skeleton
+Filter:                 Skeleton files (*.skl)|*.skl
+HelpFile:
+CaseSensitive:          0
+LineComment:            )CM
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     ) & a..z A..Z _%@. !
+IdentifierChars:        ) a..z A..Z _ 0..9 !
+NumConstBegChars:       0..9 X
+NumConstChars:          0..9
+EscapeChar:
+// File Tailoring Control Statements
+KeyWords1: )BLANK )CM )DEFAULT )TB )TBA )SEL )ENDSEL
+
+// More File Tailoring Control Statements
+KeyWords2: )DOT )ENDDOT )IM )SET
+
+// Logical Operators
+KeyWords3: EQ = NE ¬= GT > LT < GE >= LE <= NG ¬> NL ¬< OR || AND &&
+
+// Arithmetic Operators
+KeyWords4: + - * /
+
+// Logic Instructions
+KeyWords5: IF ELSE
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+// foreground background colors, font type(e.g. bold, italic, ...)
+SpaceCol:               clWindowText $00C0FFFF
+Keyword1Col:            clRed $00C0FFFF B
+Keyword2Col:            $00C000C0 $00C0FFFF B
+Keyword3Col:            clTeal $00C0FFFF
+Keyword4Col:            clBlue $00C0FFFF
+Keyword5Col:            clFuchsia $00C0FFFF
+IdentifierCol:          clWindowText $00C0FFFF
+CommentCol:             clGreen $00C0FFFF B
+NumberCol:              clPurple $00D0D0D0
+StringCol:              clMaroon $00C0FFFF
+SymbolCol:              clMaroon $00C0FFFF
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clYellow clNavy
+CurrentLineCol:         clBlack $00C0C0FF
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            )SEL
+BlockEndStr:            )ENDSEL
+
+MatchedBracesCol:       clWindowText clWindow
