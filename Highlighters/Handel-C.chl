@@ -1,0 +1,157 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Handel-C highlighter
+// written by Eric Chan
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Handel-C
+
+//////////////////////////////////////////////////////////////////////////////
+
+Description:            Handel-C is a language developed by Celoxica that is used to program the FPGA
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Handel-C files (*.hcc,*.hch)|*.hcc;*.hch
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+
+//////////////////////////////////////////////////////////////////////////////
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+NumConstChars:          0..9 abcdefx.
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+EscapeChar:             \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// reserved words
+
+KeyWords1:              assert auto break case chan chanin chanout char clock const
+                        continue default delay do double else enum expr extern
+                        external external_divide family float for goto if ifselect
+                        in inline int interface internal internal_divid intwidth
+                        let long macro mpram par part prialt proc ram register
+                        releasesema reset return rom select sema set seq shared short
+                        signal signed sizeof static struct switch try reset trysema
+                        typedef typeof undefined union unsigned void volatile while
+                        width with wom
+
+// predefined words
+
+KeyWords2:
+
+KeyWords3:
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+StringBegChar:          " '
+StringEndChar:          " '
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+UsePreprocessor:        1
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00C00000 clWindow B
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           $00404000 $00AAAAAA
+CurrentLineCol:         clSilver clNavy
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+MatchedBracesCol:       clWhite clBlack
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
