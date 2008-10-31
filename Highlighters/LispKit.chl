@@ -1,0 +1,62 @@
+//LispKit Lisp Highlighter file
+// By Derek Newhall (derek_newhall@yahoo.com)
+
+// LispKit Lisp is the LISP dialect used by Peter Henderson in his book 
+// "Functional Programming: Application and Implementation", 1980,
+// Prentice Hall (ISBN 0-13-331579-7)
+
+// See http://en.wikipedia.org/wiki/Lispkit_Lisp for more info and examples.
+
+Language:    LispKit Lisp
+
+Description: LispKit Lisp highlighter by D. Newhall (derek_newhall@yahoo.com). LispKit Lisp is the LISP dialect used by Peter Henderson in his book "Functional Programming: Application and Implementation". See http://en.wikipedia.org/wiki/Lispkit_Lisp for more info and examples.
+
+Filter:                 LispKit Lisp files (*.lks)|*.lks
+
+CaseSensitive:  0  //Not entirely sure about this
+
+LineComment:            ;
+
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+
+NumConstBegChars:       0..9
+
+KeyWords1: LETREC LET LAMBDA
+           ADD SUB MUL DIV REM QUOTE
+           ATOM EQ LEQ IF
+           CONS CAR CDR
+
+KeyWords2: T N NIL  //NEGATIVE is possibly one of these constants too.
+
+KeyWords3: &
+
+KeyWords4:
+
+KeyWords5:
+
+
+UsePreprocessor:        0
+
+
+CurrLineHighlighted:    1
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00C00000 clWindow B
+Keyword2Col:            $0000C000 clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              $0000C000 clWindow B
+SymbolCol:              clPurple clWindow B
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00E7EDD8
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+MatchedBracesCol:       clRed clWindow
+HelpFile:
+BlockBegStr:
+BlockEndStr:
+Keyword3Col:            clPurple clWindow B
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+StringCol:              clWindowText clWindow
+PreprocessorCol:        clWindowText clWindow
