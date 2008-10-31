@@ -1,0 +1,202 @@
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               LS-DYNA
+
+//////////////////////////////////////////////////////////////////////////////
+// put whatever you want here, short description, author name, email address..
+
+Description:            LS-DYNA
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 LS-DYNA (*.k)|*.k
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invoked when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+
+LineComment:            $ $$
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into five groups which can be
+// highlighted differently
+
+// op codes
+
+KeyWords1:              keyword title end node node_rigid_surface node_scalar
+                        element_beam element_beam_thickness element_beam_scalar element_beam_pid element_beam_offset element_beam_orientation
+                        element_direct_matgrix_input element_discrete element_inertia element_inertia_offset
+                        element_mass element_plotel 
+                        element_seatbelt element_seatbelt_accelerometer element_seatbelt_pretensioner element_seatbelt_retractor element_seatbelt_sensor element_seatbelt_slipring
+                        element_shell element_shell_thickness
+                        element_solid
+                        part part_print part_contact part_contact_print
+                        part_inertia part_inertia_print
+                        part_reposition part_reposition_print part_reposition_contact part_reposition_contact
+                        part_inertia_contact part_inertia_contact_print
+                        part_adaptive_failure part_modes part_sensor part_move
+                        section_beam section_discrete section_point_source
+                        section_point_source_mixture section_seatbelt
+                        section_shell section_shell_ale section_shell_efg
+                        section_solid section_solid_ale section_solid_efg
+                        section_sph section_tshell
+                        set_node_list set_part_list set_shell_list
+                        set_segment
+
+// controls cards
+
+KeyWords2:              control_termination control_timestep control_hourglass control_energy
+
+
+KeyWords3:              airbag_simple_pressure_volume_id
+                        database_deforc database_elout database_glstat database_jntforc database_matsum
+                        database_ncforc database_nodout database_binary_d3plot
+                        database_history_node database_history_beam
+                        define_coordinate_nodes define_coordinate_system define_curve
+                        constrained_joint_spherical_id constrained_joint_revolute_id
+                        initial_velocity_generation
+
+// mat definitions
+
+KeyWords4:              mat_elastic mat_rigid mat_composite_damage mat_elastic_spring_discrete_beam
+                        mat_spring_elastic
+
+// Unsupported hypermesh 7.0 cards
+
+KeyWords5:              constrained_joint_rotational_motor include
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clRed clWindow B
+Keyword2Col:            clRed clWindow B
+Keyword3Col:            clRed clWindow B
+Keyword4Col:            clRed clWindow B
+Keyword5Col:            clRed clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow BI
+NumberCol:              clBlack clWindow
+StringCol:              clBlack clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
