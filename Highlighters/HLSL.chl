@@ -1,0 +1,133 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// HLSL Effect Highlighter by Jarrett Billingsley (DrakeX)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+Language:               DirectX HLSL Effect
+
+Description: HLSL Effect highlighter, based on DX9.0c version of HLSL.  By
+	Jarrett Billingsley (DrakeX)
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+Filter:                 HLSL Effect Files (*.fx,*.fxh)|*.fx;*.fxh
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invoked when F1 is pressed
+HelpFile:
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+CaseSensitive:          1
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type
+LineComment:            //
+BlockCommentBeg:		/*
+BlockCommentEnd:		*/
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+NumConstBegChars:       0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+NumConstChars:          0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+EscapeChar: \
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+KeyWords1:
+// keywords
+				asm asm_fragment bool column_major compile
+				compile_fragment const discard decl do
+				double else extern false float
+				for half if in inline
+				inout int matrix out pass
+				pixelfragment return register row_major sampler
+				sampler1D sampler2D sampler3D samplerCUBE sampler_state
+				shared stateblock stateblock_state static string
+				struct technique texture texture1D texture2D
+				texture3D textureCUBE true typedef uniform
+				vector vertexfragment void volatile while
+				float float2 float3 float4
+				float2x2 float2x3 float2x4
+				float3x2 float3x3 float3x4
+				float4x2 float4x3 float4x4
+				int int2 int3 int4
+				int2x2 int2x3 int2x4
+				int3x2 int3x3 int3x4
+				int4x2 int4x3 int4x4
+				bool bool2 bool3 bool4
+				bool2x2 bool2x3 bool2x4
+				bool3x2 bool3x3 bool3x4
+				bool4x2 bool4x3 bool4x4
+				vs_1_1 vs_2_0 vs_2_x vs_3_0 vs_2_sw vs_3_sw
+				ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 ps_2_x ps_3_0 ps_2_sw ps_3_sw
+				vertexshader pixelshader vertexfragment pixelfragment compile_fragment
+
+// intrinsics
+KeyWords2:
+				abs acos all any asin atan
+				atan2 ceil clamp clip cos cosh cross D3DCOLORtoUBYTE4 ddx ddy
+				degrees determinant distance dot exp exp2 faceforward floor fmod
+				frac frexp fwidth isfinite isinf isnan ldexp length lerp lit log
+				log10 log2 max min modf mul noise normalize pow radians reflect
+				refract round rsqrt saturate sign sin sincos sinh smoothstep
+				sqrt step tan tanh tex1D tex1D tex1Dbias tex1Dgrad tex1Dlod
+				tex1Dproj tex2D tex2D tex2Dbias tex2Dgrad tex2Dlod tex2Dproj
+				tex3D tex3D tex3Dbias tex3Dgrad tex3Dlod tex3Dproj texCUBE
+				texCUBE texCUBEbias texCUBEgrad texCUBElod texCUBEproj transpose
+
+KeyWords3:
+KeyWords4:
+KeyWords5:
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor
+UsePreprocessor:        0
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line
+CurrLineHighlighted:    1
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+SpaceCol:               clWhite clBlack
+KeyWords1Col:		$ff0000 $000000
+KeyWords2Col:		$ff0000 $000000
+IdentifierCol:          clWhite clBlack
+CommentCol:             clGreen clBlack
+NumberCol:              $0040FF40 clBlack
+StringCol:              $000080FF clBlack
+SymbolCol:              clWhite clBlack
+PreprocessorCol:        clRed clBlack
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clWhite $00232323
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+Keyword1Col:            clRed clBlack
+Keyword2Col:            $00FF80FF clBlack
+Keyword3Col:            clYellow clBlack
+MatchedBracesCol:       clWhite clBlack
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
