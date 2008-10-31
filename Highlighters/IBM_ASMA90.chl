@@ -1,0 +1,162 @@
+////////////////////////////////////////////////////////////////////////
+//
+// IBM ASMA90 highlighter written by Larry Altman,
+// larrytheotter@highstream.net
+// All instructions copied from the z/Architecture Reference Summary, 
+// Second Edition(June 2003), Document number: SA22-7871-01.
+//
+////////////////////////////////////////////////////////////////////////
+
+Language:               IBM ASMA90 HighLevel Assembler
+Filter:                 ASMA90 Assembler files (*.asm)|*.asm
+HelpFile:
+CaseSensitive:          1
+LineComment:            *
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 $
+NumConstBegChars:       0..9 X
+NumConstChars:          0..9
+EscapeChar:
+// Machine Instructions by Mnemonic
+KeyWords1:              A AD ADB ADBR ADR AE AEB AEBR AER AG AGF AGFR
+                        AGHI AGR AH AHI AHY AL ALC ALCG ALCGR ALCR ALG
+                        ALGF ALGFR ALGR ALR ALY AP AR AU AUR AW AWR AXBR
+                        AXR AY
+
+                        BAKR BAL BALR BAS BASR BASSM BC BCR BCT BCTG
+                        BCTGR BCTR BRAS BRASL BRC BRCL BRCT BRCTG BRXH
+                        BRXHG BRXLE BRXLG BSA BSG BSM BXH BXHG BXLE
+                        BXLEG
+
+                        C CD CDB CDBR CDFBR CDFR CDGBR CDGR CDR CDS CDSG
+                        CDSY CE CEB CEBR CEFBR CEFR CEGBR CEGR CER CFC
+                        CFDBR CFDR CFEBR CFER CFXBR CFXR CG CGDBR CGDR
+                        CGEBR CGER CGF CGFR CGHI CGR CGXBR CGXR CH CHI
+                        CHY CKSM CL CLC CLCL CLCLE CLCLU CLG CLGF CLGFR
+                        CLGR CLI CLIY CLM CLMH CLMY CLR CLST CLY CMPSC
+                        CP CPYA CR CS CSCH CSG CSP CSPG CSY CUSE CUTFU
+                        CUUTF CVB CVBG CVBY CVD CVDG CVDY CXBR CXFBR
+                        CXFR CXGBR CXGR CXR CY D DD DDB DDBR DDR DE DEB
+                        DEBR DER DIDBR DIEBR DL DLG DLGR DLR DP DR DSG
+                        DSGF DSGFR DSGR DXBR DXR EAR ED EDMK EFPC EPAR
+                        EPSW EREG EREGG ESAR ESEA ESTA EX
+
+                        FIDBR FIDR FIEBR FIER FIXBR FIXR
+
+                        HDR HER HSCH
+
+                        IAC IC ICM ICMH ICMY ICY IDTE IIHH IIHL IILH
+                        IILL IPK IPM IPTE ISKE IVSK
+
+                        KDB KDBR KEB KEBR KIMD KLMD KM KMAC KMC KXBR
+
+                        L LA LAE LAM LAMY LARL LASP LAY LB LCDBR LCDR
+                        LCEBR LCER LCGFR LCGR LCR LCTL LCTLG LCXBR LCXR
+                        LD LDE LDEB LDEBR LDER LDR LDXBR LDXR LDY LE
+                        LEDBR LEDR LER LEXBR LEXR LEY LFPC LG LGB LGF
+                        LGFR LGH LGHI LGR LH LHI LHY LLGC LLGF LLGFR
+                        LLGH LLGT LLGTR LLIHH LLIHL LLILH LLILL LM LMD
+                        LMG LMH LMY LNDBR LNDR LNEBR LNER LNGFR LNGR
+                        LNR LNXBR LNXR LPDBR LPDR LPEBR LPER LPGFR LPGR
+                        LPQ LPR LPSW LPSWE LPXBR LPXR LR LRA LRAG LRAY
+                        LRDR LRER LRV LRVG LRVGR LRVH LRVR LTDBR LTDR
+                        LTEBR LTER LTGFR LTGR LTR LTXBR LTXR LURA LURAG
+                        LXD LXDB LXDBR LXDR LXE LXEB LXEBR LXER LXER
+                        LXR LY LZDR LZER LZXR
+
+                        M MAD MADB MADBR MADR MAE MAEB MAEBR MAER MC MD
+                        MDB MDBR MDE MDEB MDEBR MDER MDR ME MEE MEEB
+                        MEEBR MEER MER MGHI MH MHI ML MLG MLGR MLR MP MR
+                        MS MSCH MSD MSDB MSDBR MSDR MSE MSEB MSEBR MSER
+                        MSG MSGF MSGFR MSGR MSR MSTA MSY MVC MVCDK MVCIN
+                        MVCK MVCL MVCLE MVCLU MVCP MVCS MVCSK MVI MVIY
+                        MVN MVO MVPG MVST MVZ MXBR MXD MXDB MXDBR MXDR
+                        MXR
+
+                        N NC NG NGR NI NIHH NIHL NILH NILL NIY NR NY
+
+                        O OC OG OGR OI OIHH OIHL OILH OILL OIY OR OY
+
+                        PACK PALB PC PGIN PGOUT PKA PKU PLO PR PT PTLB
+
+                        RCHP RLL RLLG RP RRBE RSCH
+
+                        S SAC SACF SAL SAM24 SAM31 SAM64 SAR SCHM SCK
+                        SCKC SCKPF SD SDB SDBR SDR SE SEB SEBR SER SFPC
+                        SG SGF SGFR SGR SH SHY SIE SIGP SL SLA SLAG SLB
+                        SLBG SLBGR SLBR SLDA SLDL SLG SLGF SLGFR SLGR
+                        SLL SLLG SLR SLY SP SPKA SPM SPT SPX SQD SQDB
+                        SQDBR SQDR SQE SQEB SQEBR SQER SQXBR SQXR SR SRA
+                        SRAG SRDA SRDL SRL SRLG SRNM SRP SRST SSAR SSCH
+                        SSKE  SSM ST STAM STAMY STAP STC STCK STCKC
+                        STCKE STCM STCMH STCMY STCPS STCRW STCTG STCTL
+                        STCY STD STDY STE STEY STFL STFPC STG STH STHY
+                        STIDP STM STMG STMH STMY STNSM STOSM STPQ STPT
+                        STPX STRAG STRV STRVG STRVH STSI STSCH STURA
+                        STURG STY SU SUR SVC SW SWR SXBR SXR SY
+
+                        TAM TAR TB TBDR TBEDR TCDB TCEB TCXB THDER THDR
+                        TM TMH TMHH  TMHL TML TMLH TMLL TMY TP TPI TPROT
+                        TR TRACE TRACG TRAP2 TRAP4 TRE TROO TROT TRT
+                        TRTO TRTT TS TSCH
+
+                        UNPK UNPKA UNPKU UPT
+
+                        X XC XG XGR XI XIY XR XSCH XY
+
+                        ZAP
+
+// Assembler Instructions
+KeyWords2: *PROCESS ACONTROL CCW CCW0 CCW1 DC DS ALIAS AMODE CATTR COM
+           CSECT CXD DSECT DXD ENTRY EXTRN LOCTR RMODE RSECT START WXTRN
+           XATTR DROP USING AEJECT ASPACE CEJECT EJECT PRINT SPACE TITLE
+           ADATA CNOP COPY END EQU EXITCTL ICTL ISEQ LTORG OPSYN ORG POP
+           PUNCH PUSH REPRO ACTR AGO AIF AINSERT ANOP AREAD GBLA GBLB
+           GBLC LCLA LCLB LCLC MHELP MNOTE SETA SETAF SETB SETC SETCF
+           MACRO MEND MEXIT
+
+// Extended-Mnemonic Instructions for Branch on Condition
+KeyWords3: B BR NOP NOPR BH BHR BL BLR BE BER BNH BNHR
+           BNL BNLR BNE BNER BP BPR BM BMR BZ BZR BO BOR BNP BNPR
+           BNM BNMR BNZ BNZR BNO BNOR BO BOR BM BMR BZ BZR
+           BNO BNOR BNM BNMR BNZ BNZR
+
+// Extended-Mnemonic Instructions for Relative-Branch Instructions
+KeyWords4: BRU J BRUL JLU JNOP* BRH JH* BRL JL* BRE JE* BRNH JNH*
+           BRNL JNL* BRNE JNE* BRP JP* BRM JM* BRZ JZ* BRO JO* BRNP JNP*
+           BRNM JNM* BRNZ JNZ* BRNO JNO* BRO JO* BRM JM* BRZ JZ*
+           BRNO JNO* BRNM JNM* BRNZ JNZ* JAS JASL JCT JCTG JXH JXHG JXLE
+           JXLEG
+
+KeyWords5:
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+
+// foreground background colors
+SpaceCol:               clWindowText $00C0FFFF
+Keyword1Col:            clRed $00C0FFFF
+Keyword2Col:            $00C000C0 $00C0FFFF
+Keyword3Col:            clTeal $00C0FFFF
+Keyword4Col:            clBlue $00C0FFFF
+Keyword5Col:            clFuchsia $00C0FFFF
+IdentifierCol:          clWindowText $00D0D0D0
+CommentCol:             clGreen $00C0FFFF B
+NumberCol:              clPurple $00D0D0D0
+StringCol:              clMaroon $00C0FFFF
+SymbolCol:              clMaroon $00C0FFFF
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clYellow clNavy
+CurrentLineCol:         clBlack $00C0C0FF
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+
+MatchedBracesCol:       clWindowText clWindow
