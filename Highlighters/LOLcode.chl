@@ -1,0 +1,72 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// LOLcode highlighter written by goldfndr (Google me)
+// http://lolcode.com/keywords/keywords and http://lolcode.com/tests/1.2
+// This has some 1.0 and proposed; 1.3 is not yet available (2007-12-30)
+//
+// BTW should be LineComment but only 1 letter parsed, so BTW must end with !
+// OBTW TLDR is proper BlockComment
+//
+//////////////////////////////////////////////////////////////////////////////
+Language:		LOLcode
+Filter: 		LOLcode (*.lol)|*.lol
+HelpFile:
+CaseSensitive:		1
+LineComment:		^
+BlockCommentBeg:	BTW OBTW
+BlockCommentEnd:	! TLDR
+IdentifierBegChars:	a..z A..Z _
+IdentifierChars:	a..z A..Z _ 0..9
+NumConstBegChars:	0..9
+NumConstChars:		0..9 abcdefx.
+EscapeChar:
+
+// Program flow
+KeyWords1:		BYES DIAF GTFO HAI KTHXBYE MKAY
+			IM IN YR UPPIN NERFIN WILE TIL WATCHIN KTHX
+			IZ YARLY NOWAI FOUND
+			WTF OMGWTF OMG OIC O YA RLY
+//			AWSUM THX NOES
+//			IF U SAY SO
+
+// Variables
+KeyWords2:		I HAS A ITZ NUMBAR NUMBR YARN ARRAY BUKKIT MAH
+			LOL R MAEK NOW
+			HOW DUZ
+
+// Operators
+KeyWords3:		BIGR SMALR SMALLR THAN LIEK SAEM DIFFRINT
+			NOT AND OR XOR WIN FAIL NOOB TROOF
+			UP UPZ NERF NERFZ TIEMZ TIEMZD OVAR OVARZ
+			SUM DIFF PRODUKT QWOSHUNT MOD
+			ALL ANY BOTH EITHER WON OF AN MEBBE SMOOSH
+
+// I/O
+KeyWords4:		PLZ OPEN CAN GIMMEH LINE WORD LETTAR OUTTA
+			VISIBLE INVISIBLE N
+
+// Other
+KeyWords5:		STDIO
+
+
+StringBegChar:		"
+StringEndChar:		"
+MultilineStrings:	1
+UsePreprocessor:	0
+CurrLineHighlighted:	1
+
+SpaceCol:		clWindowText clWindow
+Keyword1Col:		clNavy clWindow B
+Keyword2Col:		clPurple clWindow B
+Keyword3Col:		clBlue clWindow B
+Keyword4Col:		clPurple clWindow
+Keyword5Col:		clBlue clWindow
+IdentifierCol:		clWindowText clWindow
+CommentCol:		clGray clWindow I
+NumberCol:		clRed clWindow
+StringCol:		clGreen clWindow
+SymbolCol:		clGray clWindow U
+PreprocessorCol:	clBlue clWindow
+SelectionCol:		clWhite clNavy
+CurrentLineCol: 	clBlack clYellow
+
