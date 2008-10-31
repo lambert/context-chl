@@ -1,0 +1,199 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// JSP highlighter
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Java Server Page
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Java Server Pages (*.jsp)|*.jsp
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            //
+BlockCommentBeg:        <!--
+BlockCommentEnd:        -->
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+KeyWords1:              abbr accept accesskey action align alink alt applicationname archive axis
+                        background behavior below bgcolor bgproperties border bordercolor bordercolordark bordercolorlight borderstyle
+                        caption cellpadding cellspacing char charoff charset checked cite class classid clear code codebase codetype
+                        color cols colspan compact content coords
+                        data datetime declare defer dir direction disabled dynsrc
+                        enctype equiv face for frame frameborder framespacing
+                        gutter headers height href hreflang hspace http icon id ismap
+                        label language leftmargin link longdesc loop lowsrc
+                        marginheight marginwidth maximizebutton maxlength media method methods minimizebutton multiple
+                        name nohref noresize noshade nowrap
+                        object onabort onblur onchange onclick ondblclick onfocus onkeydown onkeypress onkeyup onload onmousedown
+                        onmousemove onmouseout onmouseover onmouseup onreset onselect onsubmit onunload profile prompt
+                        readonly rel rev rows rowspan rules runat
+                        scheme scope scrollamount scrolldelay scrolling selected shape showintaskbar singleinstance
+                        size span src standby start style summary sysmenu
+                        tabindex target text title topmargin type url urn usemap
+                        valign value valuetype version vlink vrml vspace
+                        width windowstate wrap
+
+KeyWords2:              a abbr above acronym address applet array area
+                        b base basefont bgsound bdo big blink blockquote body box br button
+                        caption center cite code col colgroup comment
+                        dd del dfn dir div dl dt em embed fieldset fig font form frame frameset
+                        h h1 h2 h3 h4 h5 h6 head hr hta html i iframe img input ins isindex
+                        kbd label legend li link listing  map marquee menu meta multicol
+                        nextid nobr noframes noscript note ol optgroup option p param plaintext pre q range root
+                        s samp script select small sound spacer span sqrt style strike strong style sub sup
+                        table tbody td text textarea textflow tfoot th thead title tr tt
+                        u ul var wbr xmp
+                        &aacute &agrave &acirc &amp &atilde &aring &auml &aelig
+                        &ccedil &copy &eacute &egrave &ecirc &euml
+                        &iacute &igrave &icirc &iuml &eth &gt &lt &nbsp &ntilde
+                        &oacute &ograve &ocirc &otilde &ouml &oslash &quot
+                        &reg &szlig &uacute &ugrave &ucirc &uuml
+                        &yacute &thorn &trade &yuml
+
+KeyWords3:              abstract break byte boolean catch case class char continue default
+                        double do else extends false final float for finally
+                        if import implements int interface instanceof long length
+                        native new null package private protected public final return
+                        switch synchronized short static super
+                        try true this throw throws threadsafe transient void while
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "'
+StringEndChar:          "'
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $007B007B clWindow
+Keyword2Col:            $007B7D39 clWindow
+Keyword3Col:            $007B007B clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $00BD5D39 clWindow
+NumberCol:              clRed clWindow
+StringCol:              $00FF0029 clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
