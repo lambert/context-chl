@@ -1,0 +1,261 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// IBM RPG II, RPG III, RPG IV & RPG ILE highlighter 
+//
+// Aout 2006
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               IBM RPG
+
+//////////////////////////////////////////////////////////////////////////////
+// put whatever you want here, short description, author name, email address..
+
+Description:            IBM RPG highlighter, written by Bill Griffith, Updated by Balder
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 IBM RPG (*.rpg,*.rpgle)|*.rpg;*.rpgle
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invoked when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+//           Line Comment = * Line Comment Valid Columns = [7]
+
+LineComment:            //
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _ @&£$*.%
+IdentifierChars:        a..z A..Z _ 0..9 -?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into five groups which can be
+// highlighted differently
+
+KeyWords1:
+// Operation Codes
+ACQ ADD ADDDUR ALLOC ANDEQ ANDGE ANDGT ANDLE ANDLT ANDNE
+BEGSR BITOF BITOFF BITON
+CABEQ CABGE CABGT CABLE CABLT CABNE CALL CALLB CALLP CAS CASEQ CASGE CASGT CASLE CASLT CASNE
+CAT CHAIN CHECK CHECKR CLEAR CLOSE COMIT COMMIT COMP DEALLOC DEBUG DEFINE DEFN DELET DELETE DIV
+DO DOU DOUEQ DOUGE DOUGT DOULE DOULT DOUNE DOW DOWEQ DOWGE DOWGT DOWLE DOWLT DOWNE DSPLY DUMP
+ELSE ELSEIF END ENDCS ENDDO ENDFOR ENDIF ENDMON ENDSL ENDSR EVAL EVALR EXCEPT EXCPT EXFMT EXSR EXTRCT
+FEOD FOR FORCE GOTO
+IF IFEQ IFGE IFGT IFLE IFLT IFNE IN ITER KFLD KLIST LEAVE LEAVESR LOKUP LOOKUP
+MHHZO MHLZO MLHZO MLLZO MONITOR MOVE MOVEA MOVEL MULT MVR NEXT
+OCCUR OCUR ON-ERROR OPEN OR OREQ ORGE ORGT ORLE ORLT ORNE OTHER OUT PARM PLIST POST
+READ READC READE READP READPE REDPE REALLO REALLOC REL RESET RETRN RETURN ROLBK
+SCAN SELEC SELECT SETGT SETLL SETOF SETOFF SETON SHTDN SORTA SQRT SUB SUBDUR SUBST
+TAG TEST TESTB TESTN TESTZ TIME UNLCK UNLOCK UPDAT UPDATE
+WHEN WHENEQ WHENGE WHENGT WHENLE WHENLT WHENNE WHEQ WHGE WHGT WHLE WHLT WHNE WRITE
+XFOOT XLATE Z-ADD Z-SUB
+
+KeyWords2:
+// Indicators & Constants
+*ALTSEQ
+*BLANK *BLANKS
+*CANCL *CDMY *CMDY *CYMD
+*DATE *DAY *DEFN *DETC *DETL *DFT *DMY *DTAARA
+*END *ENTRY *EQUATE *EUR *EXT
+*FILE *FTRANS
+*GETIN
+*HMS *HIVAL
+*IN0 *IN1 *IN2 *IN3 *IN4 *IN5 *IN6 *IN7 *IN8 *IN9
+*IN00 *IN01 *IN02 *IN03 *IN04 *IN05 *IN06 *IN07 *IN08 *IN09
+*IN10 *IN11 *IN12 *IN13 *IN14 *IN15 *IN16 *IN17 *IN18 *IN19
+*IN20 *IN21 *IN22 *IN23 *IN24 *IN25 *IN26 *IN27 *IN28 *IN29
+*IN30 *IN31 *IN32 *IN33 *IN34 *IN35 *IN36 *IN37 *IN38 *IN39
+*IN40 *IN41 *IN42 *IN43 *IN44 *IN45 *IN46 *IN47 *IN48 *IN49
+*IN50 *IN51 *IN52 *IN53 *IN54 *IN55 *IN56 *IN57 *IN58 *IN59
+*IN60 *IN61 *IN62 *IN63 *IN64 *IN65 *IN66 *IN67 *IN68 *IN69
+*IN70 *IN71 *IN72 *IN73 *IN74 *IN75 *IN76 *IN77 *IN78 *IN79
+*IN80 *IN81 *IN82 *IN83 *IN84 *IN85 *IN86 *IN87 *IN88 *IN89
+*IN90 *IN91 *IN92 *IN93 *IN94 *IN95 *IN96 *IN97 *IN98 *IN99
+*INLR *INP *INPUT *INPUTPACKED *INOF *INZOFL *INZSR *ISO
+*INU1 *INU2 *INU3 *INU4 *INU5 *INU6 *INU7 *INU8
+*INL1 *INL2 *INL3 *INL4 *INL5 *INL6 *INL7 *INL8 *INL9
+*INH1 *INH2 *INH3 *INH4 *INH5 *INH6 *INH7 *INH8 *INH9
+*INKA *INKB *INKC *INKD *INKE *INKF *INKG *INKH *INKI *INKJ *INKK *INKL
+*INKM *INKN *INKP *INKQ *INKR *INKS *INKT *INKU *INKV *INKW *INKX *INKY
+*IN H1 H2 H3 H4 H5 H6 H7 H8 H9 L1 L2 L3 L4 L5 L6 L7 L8 L9 LR RT OF
+KA KB KC KD KE KF KG KH KI KJ KK KL KM KN KP KQ KR KS KT KU KV KW KX KY
+*INIT *INZSR *ISO
+*JIS *JOB *JOBRUN *JUL
+*LDA *LIKE *LOCK *LONGJUL *LOVAL
+*MAXDIGS *MDY *MODE *MONTH
+*NAMVAR *NO *NODEBUGIO *NOIND *NOINZOFLI *NONE *NOPASS *NOZONED *NULL
+*OFF *OFL *OMIT *ON *ONLY *OPCODE *OUT
+*PARMS *PDA *PLACE *PROC *PROGRAM *PSSR
+*RECORD *RESDECPOS *RIGHTADJ *ROUTINE
+*SIZE *SRC *STATUS *START *STRING *SRCSTMT *SYS
+*TERM *TOTC *TOTL
+UDATE UMONTH UDAY *USA *USRCTL UYEAR
+*VARSIZE
+*YEAR *YES *YMD
+*ZERO *ZEROS
+
+
+KeyWords3:
+// Built in Functions
+%ABS %ADDR %ALLOC %BITAND %BITNOT %BITOR %BITXOR
+%CHAR %CHECK %CHECKR
+%DATE %DAYS %DEC %DECH %DECPOS %DIFF %DIV
+%EDITC %EDITFLT %EDITW %ELEM %EOF %EQUAL %ERROR
+%FIELDS %FLOAT %FOUND %GRAPH %HOURS
+%INT %INTH %KDS %LEN %LOOKUP %LOOKUPGE %LOOKUPGT %LOOKUPLE %LOOKUPLT
+%MINUTES %MONTHS %MSECONDS %NULLIND
+%OCCUR %OPEN %PADDR %PARMS %REALLOC %REM %REPLACE
+%SCAN %SECONDS %SHTDN %SIZE %SQRT %STATUS %STR %SUBDT %SUBST
+%THIS %TIME %TIMESTAMP %TLOOKUP %TLOOKUPGE %TLOOKUPGT %TLOOKUPLE %TLOOKUPLT %TRIM %TRIML %TRIMR
+%UCS2 %UNS %UNSH
+%XFOOT %XLATE %YEARS
+
+KeyWords4: 
+// Keywords.
+ALT BASED CONST COPY CTDATA DATEDIT DATFMT DECEDIT DIM DISK EOF EXTNAME EXTPGM FROMFILE INDDS INFDS INZ 
+LIKE OFLIND OPTION OPTIONS OVERLAY PERRCD PRINTER RENAME SFILE TITLE VALUE WORKSTN
+
+KeyWords5:
+// Compiler directive.
+FREE END-FREE EXEC SQL END-EXEC
+EOF EJECT COPY INCLUDE SPACE
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clRed clWindow
+Keyword3Col:            clFuchsia clWindow
+Keyword4Col:            clBlue clWindow
+Keyword5Col:            $0040FF40 clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+//BlockBegStr:            BEGSR
+BlockEndStr:
+//BlockEndStr:            ENDSR
+MatchedBracesCol:       clWindowText clWindow
