@@ -1,0 +1,108 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon highlighter for ConTEXT
+// Tommi Nieminen <mailto:tommi_nieminen@luukku.com>
+// Last changed: 28-Jul-2002
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Icon
+Filter:                 Icon scripts (*.icn)|*.icn
+Description:            Icon highlighter written by Tommi Nieminen
+HelpFile:
+CaseSensitive:          1
+LineComment:            #
+//BlockCommentBeg:        /*
+//BlockCommentEnd:        */
+IdentifierChars:        a..z A..Z _
+IdentifierBegChars:     a..z A..Z _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// Statements
+KeyWords1:              all
+                        break by
+                        continue
+                        do
+                        else end every
+                        fail for function
+                        global
+                        if initial invocable
+                        link local
+                        next not
+                        then
+                        procedure
+                        repeat return
+                        static suspend
+                        table to
+                        until
+                        while
+                        &ascii &clock &cset &date &dateline &digits &features
+&function &file &getenv &host &lcase &letters &line &progname &system &time
+&ucase &version
+
+// The most important built-in functions
+// (OK, a fuzzy line that...)
+KeyWords2:              args
+                        collect
+                        exit
+                        list
+                        main
+                        open
+                        proc prockind procname
+                        read reads record
+                        save seek seq set stop
+                        type
+                        variable
+                        write writes
+                        &collections &dump &e &errornumber &errortext
+&errorvalue &errout &file &host &input &level &line &output &progname &regions
+&storage &trace &version
+
+// Other built-in functions
+// (No library functions should be here)
+KeyWords3:              abs scos any asin atan
+                        bal
+                        center char chdir close compress copy cos
+                        delete detab display dtor
+                        entab error errorclear exp
+                        find flush
+                        get getch getche getenv
+                        iand icom image insert integer ior ishift ixor
+                        kbhit key
+                        left log
+                        many map mapstrs match member move
+                        name numeric
+                        ord
+                        pop pull push put
+                        real remove rename repl replace reverse right rtod
+runerr
+                        segment sin sort sortf sqrt string
+                        tab tan trim
+                        upto
+                        &phi &phi &random
+
+StringBegChar: "
+StringEndChar: "
+MultilineStrings: 0
+UsePreprocessor: 0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              $00C0C000 clWindow
+StringCol:              $00C0C000 clWindow
+SymbolCol:              clBlue clWindow
+PreprocessorCol:        $0000C000 clWindow I
+SelectionCol:           clWindowText $00C0FFFF
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
