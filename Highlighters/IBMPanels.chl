@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////
+//
+// IBM ISPF Panel highlighter written by Larry Altman,
+// larrytheotter@highstream.net
+// All keywords copied from the Interactive System Productivity Facility
+// (ISPF) Dialog Developer’s Guide and Reference z/OS Version 1 Release
+// 2.0, document number SC34-4821-01, Second Edition(October, 2001)
+//
+////////////////////////////////////////////////////////////////////////
+
+Language:               IBM Panels
+Filter:                 Panel files (*.pnl)|*.pnl
+HelpFile:
+CaseSensitive:          1
+LineComment:            /* */
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     ) & a..z A..Z _%@.
+IdentifierChars:        ) & a..z A..Z _ 0..9
+NumConstBegChars:       0..9 X
+NumConstChars:          0..9
+EscapeChar:
+// Panel Sections
+KeyWords1: )CCSID )PANEL )ATTR )ABC )ABCINIT )ABCPROC )BODY )MODEL )AREA
+           )INIT )REINIT )PROC )HELP )PNTS )LIST )END )PDC
+
+// Section Keywords in Alphabetical Order (dups removed)
+KeyWords2: ACC ACTION AREA ASIS ATTN CAPS CHOICE CKBOX CMD COLOR COMBO
+           CSRGRP CUADYN DATAMOD DDLIST DEFAULT DEPTH DESC EXPAND EXTEND
+           FIELD FORMAT GE HILITE IMAGE INTENS JUST KANA KEYLIST LISTBOX 
+           LMSG  MNEM MSG NOJUMP NUMBER NUMERIC OUTLINE PAD PADC PANEL
+           PARM PAS PASSTHRU PDC PDSEP RADIO REP RUN SCROLL SKIP SMSG
+           TYPE UNAVAIL USERMOD VAL WIDTH WINDOW 
+
+// Logical and Arithmetic Operators
+KeyWords3: AND & OR | .. + - * / = EQ ¬= NE > GT < LT >= GE <= LE ¬> NG
+           ¬< NL
+
+// Functions and Statements
+KeyWords4: TRUNC TRANS PFK LVLINE ADDSOSI DELSOSI ONEBYTE TWOBYTE ELSE
+           EXIT GOTO IF PANEXIT REFRESH TOG VEDIT VER VGET VPUT
+
+// Control Variables
+KeyWords5: .ALARM .ATTR .ATTRCHAR .AUTOSEL .CSRPOS .CSRROW .CURSOR .HELP
+           .MSG .NRET .PFKEY .RESP .TRAIL .ZVARS
+           
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       1
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+
+// foreground background colors
+SpaceCol:               clWindowText $00C0FFFF
+Keyword1Col:            clRed $00C0FFFF
+Keyword2Col:            $00C000C0 $00C0FFFF
+Keyword3Col:            clTeal $00C0FFFF
+Keyword4Col:            clBlue $00C0FFFF
+Keyword5Col:            clFuchsia $00C0FFFF
+IdentifierCol:          clWindowText $00D0D0D0
+CommentCol:             clGreen $00C0FFFF B
+NumberCol:              clPurple $00D0D0D0
+StringCol:              clMaroon $00C0FFFF
+SymbolCol:              clMaroon $00C0FFFF
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clYellow clNavy
+CurrentLineCol:         clBlack $00C0C0FF
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+
+MatchedBracesCol:       clWindowText clWindow
