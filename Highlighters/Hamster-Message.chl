@@ -1,0 +1,146 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Hamster-Message Highlighter, von Klaus Fischer, k-fischer@uni.de
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Hamster-Messaggio
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Hamstermessaggio (*.msg)|*.msg
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:               D:\hamster\hamster_it.hlp
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:           >
+BlockCommentBeg:       
+BlockCommentEnd:       
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _ 0..9 .([-!=ﬂ
+IdentifierChars:        a..z A..Z _ 0..9 .)]-!=ﬂ
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// op codes
+
+
+KeyWords1:              Subject From Date Message-ID References
+                        Reply-To Newsgroups Organization X-Newsreader
+                        User-Agent X-Mailer Lines MIME-Version
+                        Content-Type Content-Transfer-Encoding
+                        Followup-To !MAIL-FROM !MAIL-TO
+
+KeyWords2:              ACK AFAIC AFAIR AOL BTW CU CUL DITO EOF EOL EOT FQDN
+                        HTH IIRC IMO IMHO MID NAK ROFL ROTFL RTFM SCNR 
+                        dito. (TM) (c) [..] [...] X-Face -- 
+                       
+
+KeyWords3:              1) 2) 3) 4) 5) [1] [2] [3] [4] [5] 1. 2. 3. 4. 5.
+                        a) b) c) d) e) I. II. III. IV. V. Footnotes Fuﬂnoten
+                        charset=ISO-8859-1 charset=ISO-8859-15 charset=UTF-8
+                        charset=ASCII 8Bit 7Bit X-No-Archive Cancel Supersedes
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:  1        
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                  first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                        as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                        as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00000040 clWindow
+Keyword2Col:            $0040FFFF clWindow
+Keyword3Col:            clWhite clWindow
+IdentifierCol:          clBlack clWindow
+CommentCol:             clNavy clWindow
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clWindowText clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00C0FFFF
+PreprocessorCol:        clTeal clWindow
+
+OverrideTxtFgColor:     0
