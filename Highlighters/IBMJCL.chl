@@ -1,0 +1,89 @@
+//////////////////////////////////////////////////////////////////////////////
+//********** J O B    C O N T R O L   L A N G U A G E ***********************
+// JCL highlighter written by Johnson Kuriakose, jkuriakose@netzero.net
+//
+//////////////////////////////////////////////////////////////////////////////
+//                      Job Control Language
+Language:               JCL
+Filter:                 Jcl files (*.jcl)|*.jcl
+HelpFile:
+CaseSensitive:          0
+LineComment:            //*
+IdentifierBegChars:     a..z A..Z _& -
+IdentifierChars:        a..z A..Z _ 0..9_& -
+NumConstBegChars:       0..9 $ ½ ¾ ¼
+NumConstChars:          0..9 #abcdefABCDEF
+EscapeChar:
+
+KeyWords1:
+//********************JCL JOB
+                      &SYSUID ADDRSPC BYTES CARDS CCSID CLASS COND GROUP JOB
+                      LINES MSGCLASS MSGLEVEL NOTIFY PAGES PASSWORD PERFORM
+                      PROC_INFO PROC_USAGE PROGNAME PRTY RD REGION RESTART
+                      SCHENV SECLABEL TIME TYPRUN USER ACCT ADDRSPC CCSID RD
+                      DPRTY DYNAMNBR EXEC INPUTDSN PERFORM PGM PROC REGION TIME
+
+                      PROG NODE JOBNAME SMSD DATETIME PARM INPUTDSN VOLSER STACK DJDE
+
+KeyWords2:
+//********************JCL  DD
+                      ACCODE AMP AVGREC BLKSIZE BLKSZLIM BLP BURST CCSID CHARS
+                      CHKPT CNTL COPIES DATA DATACLAS DCB DD DDNAME DEST DISP
+                      DLM DSID DSN DSNAME DSNTYPE DUMMY DYNAM ENDCNTL EXPDT FCB
+                      FILEDATA FLASH FREE HOLD JCLLIB JOBCAT JOBLIB KEYLEN
+                      KEYOFF LABEL LIKE LRECL MGMTCLAS MODIFY NL OUTLIM OUTPUT
+                      PATH PATHDISP PATHMODE PATHOPTS PROTECT QNAME RECFM
+                      RECORG REF REFDD RETAIN RETPD RLS SECMODEL SEGMENT SER SL
+                      SPACE SPIN STEPCAT STEPLIB STORCLAS SUBSYS SYSABEND
+                      SYSCHK SYSCKEOV SYSIN SYSMDUMP SYSOUT SYSUDUMP TERM UCS
+                      UNIT VOL VOLUME
+
+KeyWords3:
+//********************JCL OTHER
+                      COMMAND ELSE ENDIF IF INCLUDE JCLLIB PEND SET SUBCHARS
+                      SYMBOLIC-PARM SYMBOLIC-PARMS THEN XMIT
+
+//********************JCL OUTPUT
+                      ADDRESS BUILDING BURST CHARS CKPTLINE CKPTPAGE CKPTSEC
+                      COLORMAP COMPACT COMSETUP CONTROL COPIES DATACK DEFAULT
+                      DEPT DEST DPAGELBL DUPLEX FCB FLASH FORMDEF FORMLEN FORMS
+                      FSSDATA GROUPID INDEX INTRAY JESDS LINDEX LINECT MODIFY
+                      NAME NOTIFY OFFSETXB OFFSETXF OFFSETYB OFFSETYF OUTBIN
+                      OUTDISP OVERLAYB OVERLAYF OVFL PAGEDEF PIMSG PORTNO
+                      PRMODE PRTERROR PRTOPTNS PRTQUEUE PRTY RESFMT RETAINF
+                      RETAINS RETRYL RETRYT ROOM SYSAREA THRESHLD TITLE TRC UCS
+                      USERDATA USERLIB WRITER
+
+//********************JES2 JECL SYNTAX
+                      JOBPARM MESSAGE NETACCT OUTPUT PRIORITY ROUTE SETUP
+                      SIGNOFF SIGNON XEQ XMIT
+
+//********************Miscelaneous
+                      AFF BUFN CATLG CONTIG CYL DEFER DELETE EXEC FB FBA GT JSTEP KEEP
+                      LINKLIB LT MOD MSGFILE NEW OLD PDS PROD REFORMAT RLSE SCAN SHR
+                      SORTOUT SYSDA SYSPRINT SYSPROC SYSTSIN SYSTSPRT TEST TRK UNCTALG
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clGreen clBlack
+Keyword1Col:            clRed clBlack
+Keyword2Col:            clWhite clBlack
+Keyword3Col:            clFuchsia clBlack
+IdentifierCol:          clLime clBlack
+CommentCol:             clGray clBlack
+NumberCol:              $001694EC clBlack
+StringCol:              clWhite clBlack
+SymbolCol:              $00FF9700 clBlack
+PreprocessorCol:        clWhite clGray U
+SelectionCol:           clWhite clRed
+CurrentLineCol:         clYellow clTeal
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
