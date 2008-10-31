@@ -1,0 +1,56 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// Eggdrop & IRCD config file highlighter written by Roberto Bilic, druid@globirc.net
+// Version 0.3
+// About: This highlighter is for eggdrop's and ircd config files.
+// IRC server: irc.globirc.net
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+Language:               Config files
+Filter:                 Config files (*.conf) | *.conf
+HelpFile:
+CaseSensitive:          0
+LineComment:
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9
+EscapeChar:
+
+KeyWords1:              add assoc addlang bind blowfish chan channel checkmodule compress
+                        deop filesys irc join loadhelp loadmodule logfile notes scripts
+                        set share source tcl transfer unbind wire include
+
+KeyWords2:              autoop autovoice bitch cycle dontkickops dynamicbans dynamicexempts
+                        dynamicinvites enforcebans greet inactive nodesynch protectfriends
+                        protectops revenge revengebot seen secret shared statuslog userbans
+                        userexempts userinvites
+
+KeyWords3:              +a +b +c +d +e +f +g +h +i +j +k +l +m +n +q +o +p +r +s +t +u +w
+                        +x +y +z
+
+KeyWords4:              flood-chan flood-ctcp flood-deop flood-kick flood-join flood-msg
+
+StringBegChar:          " {
+StringEndChar:          " }
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clMaroon clWindow
+Keyword3Col:            clYellow clBlack
+Keyword4Col:            clRed clWindow I
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clWindowText clWindow
+SelectionCol:           clYellow clNavy
+CurrentLineCol:         clHighlight clYellow
+OverrideTxtFgColor:     0
