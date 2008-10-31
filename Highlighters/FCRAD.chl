@@ -1,0 +1,81 @@
+//ConTEXT Highlighter file for FirstClass Rapid Application Developer (FCRAD)
+//by Kurtis Kopf, Las Vegas, NV
+//kurtis@zekimedia.com
+
+Language:               FirstClass RAD
+Filter:                 FCRAD files (*.rad)|*.rad
+HelpFile:
+CaseSensitive:          0
+LineComment:            '
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefABCDEF
+EscapeChar:
+
+//basic keywords and functions
+KeyWords1:              and as mod not or xor beep call
+                        console const dim do while loop end erase exit for next givetime
+                        gosub return goto if then else elseif load msgbox on error option
+                        playsound print randomize redim rem report runapp select case
+                        spawn sub type unload wend true false
+
+//variable types, object events, and object attributes
+KeyWords2:
+                        currency date dbconnection dbstatement double email file
+                        integer long single string fcokonly fcokcancel fcyesno fcyesnocancel
+                        fcok fccancel fcyes fcno activate click deactivate doubleclick hidden
+                        title disableformevents enableformevents hide releasedataenv show
+                        swap change gotfocus lostfocus admin bold border bottom caption
+                        center color condense creationdate data datasize datatype editable
+                        extend filename filesize filetype filecreator fileflags fulljust
+                        grey index italic key list modificationdate noopenspace outline
+                        password protected resourcesize rjust selectable selected shadow
+                        text transparent underline value wrap sellength selstart setfocus
+                        to from subject body send accessmode autocommit currentqualifier
+                        displaywarnings logintimeout odbccursors opttrace opttracefile
+                        packetsize quotechar translatedll translateoption txnlsolation
+                        closeconnection commit dberror openconnection rollback asyncenable
+                        bindtype column concurrency cursortype keysetsize maxlength maxrows
+                        noscan numcols querytimeout retrievedata rowsetsize simulatecursor
+                        usebookmarks bof closestatement delete empty eof executesql filter
+                        findfirst findlast findnext findprev gettables insert lock movefirst
+                        movelast movenext moveprev nomatch numcols openstatement refresh
+                        requery unfilter unlock update colnum data datatype name nullable
+                        precision scale text value archive closefile download normal readonly
+                        resourcesize subdir system closefile download openfile position read
+                        write driverconnection
+
+//internal functions
+KeyWords3:              abs asc atn batchadmin chr cos dateserial datevalue day exp
+                        fcappserverversion fcclientplatform fcbatchadmin fcbatchadminreply
+                        fcbatchadmincode fcclientplatform fcclientversion fcserverserialnumber
+                        fcuserfirstname fcuserid fcuserlastname fcusermi fcusername
+                        fcuserprivgroup fcgetprivgroup fcprivgroup fcusercid
+                        fix hex hour iif instr int isarray isdate isnumeric
+                        lbound lcase left len log ltrim mid minute month msgboxresponse
+                        now oct replace right rnd round rtrim second sgn shell sin space sqr
+                        startupstring str strcomp strfill tab tan tcase time timer
+                        timeserial timevalue today trim ubound ucase val weekday year
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clTeal clWindow
+Keyword3Col:            clNavy clWindow
+IdentifierCol:          clPurple clWindow
+CommentCol:             $000099FF clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $000099FF
+OverrideTxtFgColor:     0
