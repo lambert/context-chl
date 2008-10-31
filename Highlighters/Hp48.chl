@@ -1,0 +1,78 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// HP48 Highlighter
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               HP48 program files
+Filter:                 HP48 files (*.hp)|*.hp
+HelpFile:
+CaseSensitive:          0
+LineComment:
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// PALAVRAS RESERVADAS DA HP48 - reserved words
+KeyWords1:             ABS ACK ACKALL ACOS ACOSH ADD ALOG AMORT AND ANIMATE APPLY ARC ARCHIVE ARG
+                       ARRYç çARRY ASIN ASINH ASN ASR ATAN ATANH ATICK ATTACH AUTO AXES BAR BARPLOT
+                       BAUD BEEP BESTFIT BIN BINS BLANK BUFLEN BYTES BçR CEIL CENTR CF %CH CHOOSE
+                       CHR CKSM CLEAR CLKADJ CLLCD CLOSEIO CLÖ CLUSR CLVAR CNRM çCOL COL+ COL- COLç
+                       COLÖ COLCT COMB CON COND CONIC CONJ CONLIB CONST CONT CONVERT CORR COS COSH COV
+                       CR CRDIR CROSS CST CSWP CYLIN CçPX CçR DARCY ÖDAT DATE DATE+ çDATE DDAYS DEC
+                       DECR DEFINE DEG DELALARM DELAY DELKEYS DEPND DEPTH DET DETACH çDIAG DIAGç DIFFEQ
+                       DISP DOERR DOLIST DOSUBS DOT DRAW DRAX DROP DROPN DROP2 DTAG DUP DUPN DUP2
+                       DçR e EGVEGVL ENDSUB ENG EQ EQç EQNLIB ERASE ERRM ERRN ERR0 EVAL EXP
+                       EXPAN EXPFIT EXPM EYEPT F0ñ FACT FANNING FC? FC?C FFT FINDALARM FINISH FIX FLOOR
+                       FP FREE1 FREEZE FS? FS?C FUNCTION FV GET GETI GOR GRAD GRAPH GRIDMAP çGROB
+                       GXOR *H HALT HEAD HEX HISTOGRAM HISTPLOT HMS+ HMS- HMSç çHMS HOME i IDN
+                       IFFT IFT IFTE IM INCR INDEP INFORM INPUT INV IOPAR IP ISOL KERRM KEY KGET KILL
+                       LABEL LAST LASTARG LCDç çLCD LIBEVAL LIBS LINE ÖLINE LINFIT LININ LISTç çLIST
+                       ÖLIST úLIST õLIST LN LNP1 LOG LOGFIT LQ LR LSQ LU MANT êMATCH èMATCH MAX MAXR
+                       MAXÖ MCALC MEAN MEM MENU MERGE1 MIN MINEHUNT MINIT MINÖ MITM MOD MSGBOX MROOT
+                       MSOLVR MUSER NDIST NÖ NEG NEWOB NOT NOVAL NSUB NUM NUMX NUMY çNUM OBJç OCT
+                       OFF OLDPRT OPENIO OR ORDER OVER ÖPAR PARAMETRIC PARITY PARSURFACE PATH PCOEF PCONTOUR
+                       PCOV PDIM PERM PEVAL PGDIR PICK PICT PICTURE PINIT PIXOFF PIXON PIX? PKT PMAX PMIN
+                       PMT POLAR POS PREDV PREDX PREDY PRLCD PROMPT PROOT PRST PRSTC PRTPAR PRVAR PR1
+                       PSDEV PURGE PUT PUTI PV PVAR PVARS PVIEW PWRFIT PYR PXçC çQ QR QUAD QUOTE çQá RAD
+                       RAND RANK RANM RATIO RCEQ RCI RCIJ RCL RCLALARM RCLF RCLKEYS RCLMENU RCLÖ RCWS RDM
+                       RDZ RE RECN RECT RECV REPL RES RESTORE REVLIST RKF RKFERR RKFSTEP RL RLB
+                       RND RNRM ROLL ROLLD ROOT ROT ROW+ ROW- ROWç RR RRB RREF RRK RRKSTEP RSBERR RSD
+                       RSW RçB RçC RçD SAME SBRK SCALE SCATRPLOT SCATTER SCHUR SCI SCLÖ SCONJ SDEV SEND
+                       SEQ SERVER SF SHOW SIDENS SIGN SIN SINH SINV SIZE SL SLB SLOPEFIELD SNEG SNRM SOLVEQN
+                       SORTSEQ SPHERE SQ SR SRAD SRB SRECV STD STEQ STIME STO STOALARM STOF
+                       STOKEYS STO+ STO- STO* STO/ STOÖ STRç çSTR STREAM STWS SUB SVD SVL SWAP SYSEVAL
+                       %T çTAG TAN TAIL TANH TAYLR TDELTA TEACH TEXT TICKS TIME çTIME TINC TLINE
+                       TMENU TOT TRANSIO TRN TRNC TRUTH TSTR TVARS TVM TVMBEG TVMEND TVMROOT TYPE UBASE
+                       UFACT çUNIT UPDIR UTPC UTPF UTPN UTPT VAR VARS VPAR VTYPE çV3 Vç *W WAIT
+                       WIREFRAME WSLOG ÖX ÖX^2 XCOL XMIT XOR XPON XRECV XRNG XROOT XSEND XVOL XXRNG
+                       ÖX*Y ÖY ÖY^2 YCOL YRNG YSLICE YVOL YYRNG ZFACTOR ZVOL + - * / ^ < â > ä = == ã !
+                       Ñ à % á Ö Ö+ Ö- É | ç
+
+KeyWords2:              ´ ª CASE THEN END IF IFERR START NEXT FOR STEP DO UNTIL WHILE REPEAT
+
+KeyWords3:             a A acre arcmin arcs atm au ≈ b bar bbl Bq Btu bu ∞C c C cal cd chain Ci ct cu ∞ d
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
