@@ -1,0 +1,193 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// FreeBASIC Hightlighter, writed by Leandro Daniel Huff - leandrohuff@gmail.com
+//
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+// language name
+Language:               FreeBASIC
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// FreeBASIC files (*.fb,*.bas)|*.fb,*.bas
+Filter:                 FreeBASIC files (*.fb,*.bas)|*.fb,*.bas
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+HelpFile:
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+CaseSensitive:          0
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+LineComment:            '
+BlockCommentBeg:
+BlockCommentEnd:
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstBegChars:       & 0..9
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstChars:          0..9 abcdefhABCDEFH
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+EscapeChar:
+//////////////////////////////////////////////////////////////////////////////
+// basic keywords table
+KeyWords1:
+   as asm call case continue declare dim do else elseif end exit for function
+   gosub goto if iif loop namespace next option return scope select
+   sub then to type until using wend while with word
+//////////////////////////////////////////////////////////////////////////////
+// typedef table
+KeyWords2:
+   const          //(Constant)
+   enum           //(Enumaration)
+   ptr            //(Pointer)
+   byte           //(8-bit signed -128..+127)
+   ubyte          //(8-bit unsigned 0..+255)
+   short          //(16-bit signed -32768..+32767)
+   ushort         //(16-bit unsigned 0..65535)
+   integer        //(32-bit signed -2147483648..+2147483647)
+   uinteger       //(32-bit unsigned 0..4294967395)
+   long           //(32-bit signed -2147483648..+2147483647)
+   longint        //(64-bit signed -9223372036854775808..+9223372036854775807)
+   ulongint       //(64-bit unsigned 0..+18446744073709551615)
+   single         //(Single precision +/-2.802597 E-45..+/-3.402823 E+38)
+   double         //(Double precision +/-4.490656458412465 E-324..+/-1.797693134862310 E+308)
+   string         //(Variable fixed length strings 0..2GB)
+   zstring        //(Null terminated strings 0..2GB)
+   wstring        //(Wide character strings 0..2GB)
+
+//////////////////////////////////////////////////////////////////////////////
+// runtime library tables
+KeyWords3:
+// Array
+   CLEAR ERASE LBOUND DYNAMIC STATIC PRESERVE REDIM UBOUND
+// Console
+   CLS COLOR CSRLIN LOCATE PRINT SPC TAB VIEW WIDTH WRITE
+// Data Time
+   DATE SETDATE SETTIME TIME TIMER DATEADD DATEDIFF DATEPART DATESERIAL DATEVALUE
+   DAY HOUR ISDATE MINUTE MONTH MONTHNAME NOW SECOND TIMESERIAL TIMEVALUE WEEKDAY
+   WEEKDAYNAME YEAR
+// Error Handling
+   ERL ERFN ERMN ERR ERROR LOCAL ON RESUME
+// File IO
+   ACCESS APPEND BINARY CHDIR CLOSE CURDIR DIR ENCODING EOF FREEFILE GET INPUT KILL
+   LINE LOC LOCK LOF LSET MKDIR NAME OPEN OUTPUT POS PUT PRINT RANDOM RESET RMDIR
+   RSET SEEK UNLOCK WINPUT FILECOPY FILELEN
+// Mathematical
+   ABS ACOS ASIN ATAN2 ATN COS EXP FIX HIBYTE HIWORD LOBYTE LOG LOWORD SGN
+   SIN SQR TAN
+// Operation System
+   COMMAND EXEC EXEPATH ENVIRON FRE RUN SETENVIRON SHELL SYSTEM
+   // String
+   ASC BIN CHR HEX INSTR LCASE LEFT LEN LTRIM MID MKD MKI MKL MKS OCT RIGHT RTRIM
+   SPACE STR TRIM UCASE VAL VALINT VALLNG VALUINT VALULNG WBIN WCHR WHEX WINPUT WOCT
+   WSPACE WSTR
+// Threading Support
+   CONDWAIT CONDSIGNAL CONDBROADCAST CONDDESTROY CONDCREATE MUTEXUNLOCK MUTEXLOCK
+   MUTEXDESTROY MUTEXCREATE THREADWAIT THREADCREATE
+   // User Input
+   INKEY INPUT GETKEY LINE WINPUT
+// GFX Functions
+   BLOAD BSAVE CIRCLE COLOR DRAW DRAW STRING FLIP IMAGECONVERTROW IMAGECREATE
+   IMAGEDESTROY GET GETJOYSTICK GETMOUSE INP LINE MULTIKEY OUT PAINT PALETTE
+   PCOPY PMAP POINT PRESET PSET PUT RGB RGBA SCREEN SCREENCOPY SCREENINFO
+   SCREENLIST SCREENLOCK SCREENPTR SCREENRES SCREENSET SCREENSYNC SCREENUNLOCK
+   SETMOUSE VIEW WAIT WINDOW WINDOWTITLE BLOAD BSAVE GETJOYSTICK GETMOUSE MULTIKEY
+// Screen
+   SCREEN SCREENCOPY SCREENINFO SCREENLIST SCREENLOCK SCREENPTR SCREENRES SCREENSET
+   SCREENSYNC SCREENUNLOCK
+//////////////////////////////////////////////////////////////////////////////
+// bitwise operators
+KeyWords4:
+   AND   //(Conjunction)
+   EQV   //(Equivalence)
+   IMP   //(Implication)
+   NOT   //(Complement)
+   OR    //(Disjunction, Inclusive Or)
+   XOR   //(Exclusive Or)
+   SHL   //(Shift-left)
+   SHR   //(Shift-right)
+   MOD   //(Modulus)
+//////////////////////////////////////////////////////////////////////////////
+KeyWords5:
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+UsePreprocessor:        1
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+CurrLineHighlighted:    0
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            $00FF11A6 clWindow
+Keyword3Col:            clPurple clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clGreen clWindow
+StringCol:              clBlue $00FFFFC0
+SymbolCol:              clRed clWindow
+PreprocessorCol:        clRed clWindow
+SelectionCol:           $000000C0 $00C0FFFF
+CurrentLineCol:         clBlack clYellow
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       $000000C0 $00C0C0FF
+Keyword4Col:            clFuchsia clWindow
+Keyword5Col:            clOlive clWindow
