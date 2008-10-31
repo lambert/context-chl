@@ -1,0 +1,609 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// FrameScript highlighter by Malcolm McLean <mmclean@email.com>
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               FrameScript
+Filter:                 FrameScript files (*.fsl)|*.fsl
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9
+EscapeChar:
+
+// Commands
+
+KeyWords1:              Add Apply CallClient Clear Close Copy Cut Delete Demote DialogBox
+                        Display DocCompare Else EndEvent EndIf
+                        EndLoop EndSub Event Execute Export Find
+                        Generate Get If Import Install LeaveLoop
+                        LeaveSub Local Loop Merge MsgBox New Open
+                        Paste PopClipboard Print PushClipboard
+                        Quit Read Remove Replace Return Run Save
+                        Select Set Sort Split Straddle Sub
+                        Uninstall Unwrap Update Wrap Write
+
+// Options
+
+KeyWords2:              AddTo After AlertUserAboutFailure AllowAsSpecial AllowInconsistentNumProps
+                        AllowNonFMFiles AllowViewOnlyFiles
+                        Ascending AttrDefName Attribute
+                        AttributeDef AttributeDefList
+                        AttributeList AttrName AttrType
+                        AutoBackupOnSave Backward BeefyDoc Before
+                        BodyRows BookFiles BookIsInUse BookObject
+                        BottomMargin BottomRow Button
+                        Button3Label Button4Label ByCopy ByRef
+                        Cancel Caption CellObject CellSeparator
+                        Center Changebars CharacterFormat
+                        CharPropsChange CheckBox1 CheckBox1Label
+                        CheckBox2 CheckBox2Label CheckBox3
+                        CheckBox3Label CheckBox4 CheckBox4Label
+                        Child Choice ClosedDocs ColumnGap
+                        CombinedFonts CommandObject CompName Cond
+                        ConditionFormat CondName Console
+                        CutTblCells Default DeleteText Descending
+                        DestPage Direction Directory
+                        DisallowBookDoc DisallowBookMIF
+                        DisallowDoc DisallowFilterTypes
+                        DisallowGraphicTypes DisallowMacEditions
+                        DisallowMIF DisallowPlainText
+                        DisallowSgml DocObject Document
+                        DocumentProps DoNotImportEDD
+                        DontApplyAllRows DontDeleteHiddenText
+                        DontNotifyApiClients Edit1 Edit2 Edit3
+                        ElementDefName ElementDefs ElementLoc
+                        ElementRange EndPos EventProc Everything
+                        Export ExportFileTypeHint ExportObjectId
+                        ExportObjectNeedsDpi ExportTextRange
+                        ExportType FC File FileIsGraphic
+                        FileIsInUse FileIsMakerDoc
+                        FileIsOldVersion FileIsSgmlDoc
+                        FileIsStructured FileIsText FileType
+                        FileTypeHint FilterFormatId FirstPageLeft
+                        FirstPageRight FitGraphicInSelectedRect
+                        Flag FlowBegin FlowEnd FnAnchor Font
+                        FontChangedMetric FontNotFoundInCatalog
+                        FontNotFoundInDoc FooterRows FootNote
+                        ForceImportAsText ForceOpenAsText
+                        ForceUpdate ForEach Format
+                        FormatChangeList FormatImportedText
+                        FormatRule FormatRuleClause Formats
+                        Formatting FrameAnchor FrameClient From
+                        FromDocObject FromString FromTextLoc
+                        GraphicDpi HeaderRows Height HowToImport
+                        Hyperlinks Hypertext Hyphenating
+                        IgnoreMods ImportAsType
+                        ImportFlowPageSpace ImportFlowTag
+                        ImportTblTag In Incr Indirect Init
+                        InitVal InList InObject InRange
+                        InsertCondName InString Integer
+                        Interactive Internal IntList IntoFirst
+                        IntValue Invisible IOType Label Label1
+                        Label2 Label3 Landscape
+                        LanguageNotAvailable
+                        LeaveHeadingRowsEmpty LeftCol
+                        LeftInsideMargin LibVar LineBegin LineEnd
+                        List LockCantBeReset LoopVar Lowercase
+                        MakeIconic MakePageCount MakeVisible
+                        ManualUpdate MarkerAnchor MarkerTypeName
+                        Member MenuObject MenuSepObject Message
+                        Metric MetricList ModDateChanged Mode
+                        Name NameStripe NewDoc NewDocObject
+                        NewVar NoCase NoNotify Number
+                        NumCellSeparators NumCols NumColumns
+                        NumExportParams NumImportParams
+                        NumOpenParams NumRows NumSaveParams
+                        NumUpdateBookParams Object Off Offset
+                        OldDocObject On OpenAsType
+                        OpenBookViewOnly OpenComposite
+                        OpenDocFluid OpenDocs OpenDocViewOnly
+                        OpenFileNotWritable OpenId
+                        OpenInNewWindow OpenSummary Page
+                        PageBegin PageEnd PageLayout Paragraph
+                        Parent ParentObject Path PgfBegin PgfEnd
+                        PgfFmtName PointList Portrait Prefix
+                        PrevObject Properties Property
+                        PropertyName RangeMax RangeMin Real
+                        Redisplay ReferencePage RefFileNotFound
+                        RemoveBookInfo RemoveChars
+                        RemoveExceptions RemoveLeading
+                        RemoveManualPageBreaks RemoveOverrides
+                        RemoveOverrides RemovePageBreaks
+                        RemoveTrailing ReplaceAll ReplaceFirst
+                        ReplaceLast Required
+                        ResetEquationSettings ResetRefFrames
+                        RestartPgfNums RetainNameStripe
+                        ReturnComposite ReturnElementRange
+                        ReturnIndex ReturnPos ReturnRange Returns
+                        ReturnStatus ReturnString ReturnSummary
+                        ReturnVal Reverse Rewind RightCol
+                        RightInsideMargin RowObject RulingFormat
+                        SaveAsModeName SaveFileNotWritable
+                        SaveFileTypeHint SaveMode
+                        SaveTextExtraBlankLineAtEOP
+                        SaveTextTblSetting Script Scriptname
+                        ScriptVar ScrollTo SelectTable
+                        SgmlBookFileName SgmlExportApplication
+                        SgmlImportApplication SgmlOpenApplication
+                        SgmlSaveApplication Shortcut
+                        ShowBookErrorLog ShowBrowser ShowBrowser
+                        ShowSaveTextDialog SingleSided SkipStep
+                        SourcePage Start StartCol StartPos
+                        StartRow String StringList SubColBegin
+                        SubColEnd SubVar Suffix SummaryOnly Tab
+                        TabDecimal Table TabLeader TableCells
+                        TableCols TableColumns TableFormat
+                        TableObject TableRows TabList TabType
+                        TblAnchor TblNumHeadingRows Template Text
+                        Textfile TextFrameBegin TextFrameEnd
+                        TextInset TextInsetBegin TextInsetEnd
+                        TextInsetName TextList TextLoc
+                        TextProperties TextRange Threshold
+                        TiContents Title Title2 To TopMargin
+                        TopRow TreatParaAsRow Type UByteList
+                        UIntList UndefAttr Units UNIXpermissions
+                        Until UpdateBookGeneratedFiles
+                        UpdateBookNumbering UpdateBookOleLinks
+                        UpdateBookTextReferences UpdateBookXRefs
+                        UpdateBrowserDirectory UpdateFRVList
+                        UpdateTextReferences UpdateXRefs
+                        Uppercase UseAutoSaveFile
+                        UseDefaultUNIXpermissions UseMainFlow
+                        UseRecoverFile Using Value VarBegin
+                        VarEnd Variable VariableFormat Variables
+                        Visible VisibleOnly When While WholeWord
+                        Width Wildcard With X XRefBegin XRefEnd
+                        XRefFormat Y
+
+// Properties
+KeyWords3:              AFrame Alert Arc BodyPage Book BookComponent Cell CharFmt Color
+                        CombinedFontDefn Command CondFmt Doc
+                        Element ElementDef Ellipse Flow
+                        FmtChangeList FmtRule FmtRuleClause Fn
+                        Group HiddenPage Inset Line Marker
+                        MarkerType MasterPage Math Menu
+                        MenuItemSeparator Pgf PgfFmt Polygon
+                        Polyline Rectangle RefPage RoundRect Row
+                        Rubi RulingFmt Session SubCol Tbl TblFmt
+                        TextFrame TextLine TiApiClient TiFlow
+                        TiText TiTextTable UFrame Var VarFmt XRef
+                        XRefFmt
+
+                        AcrobatBookmarkDisplayTags AcrobatLevel
+                        AddMarkerTypeToStandardMarkers AdjHyphens
+                        AFrameIsCropped AFrameIsFloating
+                        Alignment AllowAsSpecial
+                        AllowAsSpecialCase AlsoInsert AnchorType
+                        Angle ApplyEOPRules ApplyFormatRules
+                        ArrowBaseAngle ArrowLength
+                        ArrowScaleFactor ArrowScaleHead
+                        ArrowTipAngle ArrowType AttrDefChoices
+                        AttrDefDefaults AttrDefFlags AttrDefName
+                        AttrDefRangeMax AttrDefRangeMin
+                        AttrDefRequired AttrDefType AttrDisplay
+                        AttributeDefs Attributes
+                        AttributeValueInvalid
+                        AttributeValueRequired AttrName
+                        AttrValues AutoBackup AutoChangeBars
+                        AutoNumChar AutoNumString AutoSave
+                        AutoSaveSeconds BaselineOffset BasePointX
+                        BasePointY Black BlockLines
+                        BookComponentIsGeneratable
+                        BookComponentMissing BookComponentType
+                        BookDontUpdateReferences BookIsModified
+                        BookIsSelected BookIsViewOnly BorderWidth
+                        BottomMargin BottomSeparator
+                        CanHaveCheckMark Capitalization CellAngle
+                        CellBottomMargin CellColNum CellIsShown
+                        CellIsStraddled CellLeftMargin
+                        CellMarginsFixed CellMarginSpacingDelta
+                        CellNumColsStraddled CellNumRowsStraddled
+                        CellOverrideFill CellRightMargin
+                        CellTopMargin CellUseOverrideBRuling
+                        CellUseOverrideFill
+                        CellUseOverrideLRuling
+                        CellUseOverrideRRuling
+                        CellUseOverrideShading
+                        CellUseOverrideTRuling CellVAlignment
+                        ChangeBar ChangeBarDistance
+                        ChangeBarPosition ChangeBarThickness
+                        ChapNumComputeMethod ChapterNumber
+                        ChapterNumStyle ChapterNumText CharTag
+                        CheckMarkIsOn ColGap ColGapWidth
+                        ColorOverprint ColorPrintCtl
+                        ColorTintPercent ColorViewCtl
+                        ColumnsAreBalanced CommandNum Comment
+                        ComponentDisplayText ComponentIsSelected
+                        CondFmtIsShown ContentHeight
+                        ContentIsLooselyValid
+                        ContentIsStrictlyValid ContentMustBeEmpty
+                        ContentNeededAtBegin ContentNeededAtEnd
+                        ContextLabel Count CountElements
+                        CurrentMenuSet CustomElementList Cyan
+                        Dash DefaultExclusions DefaultInclusions
+                        DesktopHeight DesktopWidth DesktopX
+                        DesktopY DialogEncodingName Dictionary
+                        DisableAutofitAfterZoom Displaying
+                        DisplayName
+                        DocAcrobatColumnArticleThreads
+                        DocAcrobatDefaultsChanged
+                        DocAcrobatElementList DocAcrobatElements
+                        DocAcrobatNoArticleThreads
+                        DocIsDoubleSided DocIsHelp DocIsModified
+                        DocIsViewOnly DocIsViewOnlyWinPalette
+                        DocOpenType DocSaveType
+                        DontUpdateTextInsets DontUpdateXRefs
+                        DownloadFonts DTheta
+                        ElementBoundaryDisplay ElementCatalog
+                        ElementCatalogDisplay ElementDefType
+                        ElementInCatalog ElementIsCollapsed
+                        ElementIsExcludedInContext
+                        ElementIsInvalidInParent
+                        ElementIsInvalidInPosition
+                        ElementIsUndefined
+                        ElementMarkedForNamedDestination
+                        ElementPgfFormat ElementSelection
+                        ElementType ElementTypeMismatch
+                        ElemPrefixSuffix EnabledWhen
+                        EqnIntegralSizeLarge EqnIntegralSizeMed
+                        EqnIntegralSizeSmall EqnLevel1SizeLarge
+                        EqnLevel1SizeMed EqnLevel1SizeSmall
+                        EqnLevel2SizeLarge EqnLevel2SizeMed
+                        EqnLevel2SizeSmall EqnLevel3SizeLarge
+                        EqnLevel3SizeMed EqnLevel3SizeSmall
+                        EqnSigmaSizeLarge EqnSigmaSizeMed
+                        EqnSigmaSizeSmall ErrorInBookComponent
+                        Exclusions ExportFilters
+                        ExtractElementTags ExtractTags FamilyName
+                        Fcode Fcodes Filename Fill FirstIndent
+                        FirstPageNum FirstPageVerso FirstPgfRules
+                        FlowIsAutoConnect FlowIsFeathered
+                        FlowIsPostScript FlowIsSynchronized
+                        FMInterfaceEncodingName Fmt
+                        FmtChangeListInCatalog FmtChangeListTag
+                        FmtRuleClauses FmtRuleType FM_BinDir
+                        FM_CurrentDir FM_HelpDir FM_HomeDir
+                        FM_InitDir FM_SgmlDir FnCustNumString
+                        FnFirstNum FnFmt FnHeightPerCol
+                        FnInstancePosition FnInstancePrefix
+                        FnInstanceSuffix FnNum FnNumberingPerPage
+                        FnNumComputeMethod FnNumStyle
+                        FnRefPosition FnRefPrefix FnRefSuffix
+                        FontAngle FontAngleNames FontEncodingName
+                        FontFamily FontFamilyAttributes
+                        FontFamilyNames FontPanoseName
+                        FontPlatformName FontPostScriptName
+                        FontSize FontVariation FontVariationNames
+                        FontWeight FontWeightNames FormatOverride
+                        FormatTag Functions GeneralRule
+                        GeneralRuleErrorOffsets
+                        GenerateAcrobatInfo GenerateInclude
+                        GraphicCantBeSelected GraphicIsButton
+                        GraphicIsSelected Gravity GreekSize
+                        HasShiftOrUnshiftCommand HeadArrow Height
+                        HelpLink HelpPending HoleAtEnd
+                        HoleBeforeElement HorizontalSpreadLarge
+                        HorizontalSpreadMed HorizontalSpreadSmall
+                        HostName Hypertext HypertextCommandText
+                        HypertextDoValidate
+                        HypertextParseBadParam
+                        HypertextParsedArgs
+                        HypertextParsedClientName
+                        HypertextParsedCmdCode
+                        HypertextParsedCmdDest
+                        HypertextParsedCmdDestObjID
+                        HypertextParsedCmdDestObjType
+                        HypertextParsedCmdMatrixColumns
+                        HypertextParsedCmdMatrixRows
+                        HypertextParsedDIFileName
+                        HypertextParsedFlowName
+                        HypertextParsedLinkName
+                        HypertextParsedMessage
+                        HypertextParsedPageName
+                        HypertextParsedRangeName
+                        HypertextParsedTitle HypertextParseErr
+                        HypertextParseErrMsg HypertextValidateErr
+                        Hyphenate HyphMinPrefix HyphMinSuffix
+                        HyphMinWord IconBarOn IDAttrValue
+                        ImportFilters ImportFmtInclude ImportHint
+                        Inclusions InCond InitStructurePattern
+                        InkName InsertLinks InsetDpi InsetEditor
+                        InsetFile InsetIsFixedSize
+                        InsetIsFlippedSideways InsetIsInverted
+                        InsetUpdater InvalidHighestLevel
+                        InvariantName IParm IsIconified IsInFront
+                        IsObject IsOnScreen IsTextRange
+                        KByteAllocationSize KeepWithNext
+                        KeepWithPrev KernX KernY
+                        KeyboardShortcutLabel KeyboardShortcuts
+                        Label Labels Language LastPgfRules
+                        LastUpdate Leading LeftColNum LeftIndent
+                        LeftMargin LetterSpace LineAscent
+                        LineBaseline LineBreakAfter LineCap
+                        LineDescent LineSpacing LineSpacingFactor
+                        Locked LocX LocY Magenta MagicMarker
+                        MarkerNames MarkerText MarkerType
+                        MarkerTypeNames MasterPage
+                        MatchingFirstPgfClauses
+                        MatchingLastPgfClauses
+                        MatchingObjectClauses
+                        MatchingPrefixClauses
+                        MatchingSuffixClauses MatchingTextClauses
+                        MathFullForm MathSize MaxBottomMargin
+                        MaxFirstIndent MaxFontSize
+                        MaxInterlinePadding MaxInterPgfPadding
+                        MaxJLetSpace MaxJRomSpace MaxLeading
+                        MaxLeftIndent MaxLeftMargin
+                        MaxRightIndent MaxRightMargin MaxSpace
+                        MaxSpaceAbove MaxSpaceBelow MaxSpread
+                        MaxStretch MaxTabPosition MaxTopMargin
+                        MenuItemIsEnabled MenuItemType MenuType
+                        Message Mif8bitOutput MinBottomMargin
+                        MinFirstIndent MinFontSize MinHang
+                        MinJLetSpace MinJRomSpace MinLeading
+                        MinLeftIndent MinLeftMargin
+                        MinRightIndent MinRightMargin MinSpace
+                        MinSpaceAbove MinSpaceBelow MinSpread
+                        MinStretch MinTabPosition MinTopMargin
+                        Mode Name NarrowRubiSpaceForJapanese
+                        NarrowRubiSpaceForOther
+                        NewElemAttrDisplay NewElemAttrEditing
+                        NextTag NumAtEnd Numbers NumCols
+                        NumColumns NumPoints NumTabs
+                        ObjectFmtRules Objectname Offset
+                        OldTypeNum OpenDir OperatingSystem
+                        OptJLetSpace OptJRomSpace OptSpace
+                        OrphanRows Outline Overflowed Overline
+                        Overprint PageBackground PageHeight
+                        PageIsRecto PageNum PageNumbering
+                        PageNumComputeMethod PageNumString
+                        PageNumStyle PagePrefix PageRounding
+                        PageSide PageSuffix PageWidth PairKern
+                        Pantone ParsedGeneralRule
+                        ParsedSpecification Path
+                        PDFAllNamedDestinations PDFBookmark
+                        PDFDestsMarked PDFDocInfo PDFStructure
+                        PDFStructureLevel Pen PercentDone
+                        PgfAlignment PgfIsAutoNum
+                        PgfMarkedForNamedDestination PgfNumber
+                        PgfNumbering PgfNumComputeMethod
+                        PgfSpacingFactor PgfSpellChecked PgfSplit
+                        Placement Platform PointPageNum
+                        PointPageNumStyle Points PolyIsBezier
+                        Position PrefixRules PrintBlankPages
+                        PrintCollated PrintCols PrintEmulsion
+                        PrintEndPage PrintEndPageName
+                        PrintEndPoint PrinterName PrintEvenPages
+                        PrintFileName PrintImaging PrintInclude
+                        PrintLastSheetFirst PrintLowRes
+                        PrintManualFeed PrintNumCopies
+                        PrintOddPages PrintPaperHeight
+                        PrintPaperWidth PrintRegistrationMarks
+                        PrintRegMarkDate PrintRows PrintScale
+                        PrintScope PrintSeps PrintSpotBW
+                        PrintStartPage PrintStartPageName
+                        PrintStartPoint PrintThumbnails
+                        PrintToFile PrintTomboMarks ProcessNumber
+                        ProductName Properties PropName PropVal
+                        Public Radius RectangleIsSmoothed
+                        Reformatting RememberMissingFontNames
+                        Required ReservedColor RightColNum
+                        RightIndent RightMargin RowIsShown
+                        RowKeepWithNext RowKeepWithPrev
+                        RowMaxHeight RowMinHeight RowStart
+                        RowType RpcProgramNumber RpcPropertyName
+                        RubiAlignAtLineBounds RubiFixedSize
+                        RubiOverhang RubiSize RuleClauseType
+                        RulingGap RulingLines RulingPenWidth
+                        Runaround RunaroundGap RunInSeparator
+                        ScreenCaptureDocToFile ScreenHeight
+                        ScreenWidth ScreenX ScreenY
+                        SeparateInclusions SgmlApplication Shadow
+                        ShowAll ShowCondIndicators SideHeadGap
+                        SideHeadPlacement SideHeadRoomInFlow
+                        SideHeadWidth SideOffset Size
+                        SkipBlankSeps SmallCapsSize
+                        SmallCapsStretch SmartQuotes SmartSpaces
+                        Snap SnapAngle SnapGridUnits SpaceAbove
+                        SpaceBelow Spacing Specification
+                        SpotColorView Spread Start StatusLine
+                        StopCountingAt Stretch Strikethrough
+                        Strings StyleOverride StyleOverrides
+                        SubScriptShift SubScriptSize
+                        SubScriptStretch SuffixRules
+                        SuperScriptShift SuperScriptSize
+                        SuperScriptStretch Symbols SymbolsList
+                        SystemVar TableTagging Tabs TailArrow
+                        TblAlignment TblBodyFirstFill
+                        TblBodyFirstPeriod TblBodyNextFill
+                        TblBodyNextPeriod TblBodyRowRulingPeriod
+                        TblBodyShadeBy TblCatalogEntry
+                        TblCellBottomMargin TblCellLeftMargin
+                        TblCellRightMargin TblCellTopMargin
+                        TblColRulingPeriod TblColWidths
+                        TblFnCellPosition TblFnCellPrefix
+                        TblFnCellSuffix TblFnCustNumString
+                        TblFnFmt TblFnNumComputeMethod
+                        TblFnNumStyle TblFnPosition TblFnPrefix
+                        TblFnSuffix TblHFFill TblInitNumBodyRows
+                        TblInitNumCols TblInitNumFRows
+                        TblInitNumHRows TblLastBodyRuling
+                        TblLeftIndent TblNumbering TblNumCols
+                        TblNumRows TblPlacement TblRightIndent
+                        TblSpaceAbove TblSpaceBelow TblTag
+                        TblTitleGap TblTitlePosition
+                        TblTitleSelected TblWidth Text TextData
+                        TextFmtRules TextIsInvalidInElement
+                        TextLineType TextLoc TextOffset TextRange
+                        TextSelection TextType Theta
+                        TiAutomaticUpdate TiByRows TiClientData
+                        TiClientName TiClientSource TiClientType
+                        TiEOLisEOP TiFile TiFileModDate
+                        TiFlowName TiFlowPageSpace TiFormat
+                        TiHeadersEmpty TiIsNested TiIsUnresolved
+                        TiLocked TiMacEdition TiMainFlow
+                        TintPercent TiNumCols TiNumHeaderRows
+                        TiNumSeparators TiRemoveOverrides
+                        TiRemovePageBreaks TiSeparator TiTblTag
+                        TiTextEncoding TmpDir TopMargin
+                        TopSeparator Transient
+                        TrapwiseCompatibility Tsume
+                        TypeOfDisplayText UIColorBackground
+                        UIColorRuler Underlining Unique
+                        Untouchable UseCapitalization
+                        UseChangeBar UseColor UseFontAngle
+                        UseFontFamily UseFontSize
+                        UseFontVariation UseFontWeight
+                        UseInitialStructure UseKernX UseKernY
+                        UseLanguage UseNextTag UseOutline
+                        UseOverline UsePairKern UsePosition
+                        UserHomeDir UserLogin UserName UserString
+                        UseSepOverride UseShadow UseSpread
+                        UseStretch UseStrikethrough UseTsume
+                        UseUnderlining Valid Validating
+                        ValidationFlags ValidHighestLevel
+                        Variables VersionMajor VersionMinor
+                        VersionRevision VerticalSpreadLarge
+                        VerticalSpreadMed VerticalSpreadSmall
+                        ViewBorders ViewDisplayUnits
+                        ViewFontSizeUnits ViewFormattingBar
+                        ViewGrid ViewGridUnits ViewLinkBoundaries
+                        ViewNoGraphics ViewOnlyDeadCodes
+                        ViewOnlySelect ViewOnlyWinBorders
+                        ViewOnlyWinMenubar ViewOnlyWinPalette
+                        ViewOnlyWinPopup ViewOnlyXRef
+                        ViewPageScrolling ViewQuickAccessBar
+                        ViewRulers ViewRulerUnits ViewTextSymbols
+                        VolNumComputeMethod VolumeNumber
+                        VolumeNumStyle VolumeNumText
+                        WesternFontPanoseName
+                        WesternFontPlatformName
+                        WesternFontPostScriptName
+                        WideRubiSpaceForJapanese
+                        WideRubiSpaceForOther Width WindowSystem
+                        XRefFile XRefIsUnresolved XRefSrcIsElem
+                        XRefSrcText YakumonoType Yellow Zoom
+
+                        ActiveAlert ActiveBook ActiveDoc Begin
+                        BookComponent BookParent
+                        BottomRowSelection CellAboveInCol
+                        CellBelowInCol CellBelowInTbl
+                        CellDefaultBottomRuling
+                        CellDefaultLeftRuling
+                        CellDefaultRightRuling
+                        CellDefaultTopRuling
+                        CellOverrideBottomRuling
+                        CellOverrideLeftRuling
+                        CellOverrideRightRuling
+                        CellOverrideShading CellOverrideTopRuling
+                        CellRow ChangeBarColor Child Color
+                        CombinedFontFamily ComponentElement
+                        CurrentPage Doc DocFluidFlow Element
+                        ElementDef End ExpandOMaticParent
+                        FirstAFrame FirstBodyPageInDoc FirstCell
+                        FirstCellInRow FirstCharFmtInDoc
+                        FirstChildElement FirstColorInDoc
+                        FirstCombinedFontDefnInDoc
+                        FirstCommandInSession
+                        FirstComponentInBook FirstCondFmtInDoc
+                        FirstElementDefInDoc FirstFlowInDoc
+                        FirstFmtChangeListInDoc FirstFn
+                        FirstFnInDoc FirstGraphicInDoc
+                        FirstGraphicInFrame FirstGraphicInGroup
+                        FirstMarkerInDoc FirstMarkerTypeInDoc
+                        FirstMasterPageInDoc FirstMenuItemInMenu
+                        FirstMenuItemInSession FirstOpenBook
+                        FirstOpenDoc FirstPgf FirstPgfFmtInDoc
+                        FirstPgfInDoc FirstRefPageInDoc
+                        FirstRowInTbl FirstRubiInDoc
+                        FirstRulingFmtInDoc
+                        FirstSelectedComponentInBook
+                        FirstSelectedGraphicInDoc
+                        FirstSelectedTiInDoc FirstSubCol
+                        FirstTblFmtInDoc FirstTblInDoc
+                        FirstTextFrameInFlow FirstTiInDoc
+                        FirstVarFmtInDoc FirstVarInDoc
+                        FirstXRefFmtInDoc FirstXRefInDoc Flow
+                        FmtChangeList FmtRule FmtRuleClause
+                        FrameDoc FrameObject FrameParent
+                        GroupParent HiddenPage
+                        HighestLevelElement InTextFrame InTextObj
+                        LastAFrame LastBodyPageInDoc LastCell
+                        LastChildElement LastFn
+                        LastGraphicInFrame LastGraphicInGroup
+                        LastMasterPageInDoc LastPgf
+                        LastRefPageInDoc LastRowInTbl LastSubCol
+                        LastTextFrameInFlow LeftMasterPage
+                        MainFlowInDoc MarkerTypeId Menu MenuBar
+                        NextAFrame NextCell NextCellInRow
+                        NextCellInTbl NextCharFmtInDoc
+                        NextColorInDoc NextCommandInSession
+                        NextComponentInBook NextCondFmtInDoc
+                        NextElementDefInDoc NextFlowInDoc
+                        NextFmtChangeListInDoc NextFn NextFnInDoc
+                        NextGraphicInDoc NextGraphicInFrame
+                        NextGraphicInGroup NextInvalidElement
+                        NextMarkerInDoc NextMarkerTypeInDoc
+                        NextMenuItemInMenu NextMenuItemInSession
+                        NextOpenBookInSession
+                        NextOpenDocInSession NextPgfFmtInDoc
+                        NextPgfInDoc NextPgfInFlow NextRowInTbl
+                        NextRulingFmtInDoc
+                        NextSelectedComponentInBook
+                        NextSelectedGraphicInDoc
+                        NextSiblingElement NextSubCol
+                        NextTblFmtInDoc NextTblInDoc
+                        NextTextFrameInFlow NextTiInDoc
+                        NextVarFmtInDoc NextVarInDoc
+                        NextXRefFmtInDoc NextXRefInDoc Object
+                        Page PageFrame PageFramePage PageNext
+                        PagePrev Parent ParentElement
+                        ParentTextFrame PrevAFrame PrevCell
+                        PrevCellInRow PrevComponentInBook PrevFn
+                        PrevGraphicInFrame PrevGraphicInGroup
+                        PrevMenuItemInMenu PrevPgfInFlow
+                        PrevRowInTbl PrevSiblingElement
+                        PrevSubCol PrevTextFrameInFlow
+                        RightMasterPage RowTbl RulingSep
+                        SelectedTbl SepOverride
+                        ShiftOrUnshiftCommand SubFmtRule
+                        TblBodyElement TblBodyFirstColor
+                        TblBodyNextColor TblBodyRowRuling
+                        TblBottomRuling TblColRuling TblElement
+                        TblFooterElement TblHeaderElement
+                        TblHFColor TblHFRowRuling
+                        TblHFSeparatorRuling TblLeftRuling
+                        TblOtherBodyRowRuling TblOtherColRuling
+                        TblRightRuling TblTitleElement
+                        TblTopRuling TintBaseColor
+                        TopRowSelection VarFmt ViewOnlyMenuBar
+                        XRefFmt
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+OverrideTxtFgColor:     0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00C00000 clWindow B
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            $00FF8080 clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              $000000C0 clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
