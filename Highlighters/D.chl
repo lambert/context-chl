@@ -1,0 +1,211 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// D highlighter written by Jarrett Billingsley (DrakeX)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+Language:               D
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+Filter:                 D source files (*.d)|*.d
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+HelpFile:
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+CaseSensitive:          1
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type
+
+LineComment:		//
+BlockCommentBeg:	/*
+BlockCommentEnd:	*/
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+
+NumConstBegChars:       0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+
+NumConstChars:          0..9 _ abcdefiluxABCDEFILUX
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:	\
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+
+KeyWords1:	abstract
+		alias
+		align
+		asm
+		assert
+		auto
+
+		body
+		bool
+		break
+		byte
+
+		case
+		cast
+		catch
+		cdouble
+		cent
+		cfloat
+		char
+		class
+		const
+		continue
+		creal
+
+		dchar
+		default
+		delegate
+		delete
+		deprecated
+		do
+		double
+
+		else
+		enum
+		export
+		extern
+
+		false
+		final
+		finally
+		float
+		for
+		foreach
+		foreach_reverse
+		function
+
+		goto
+
+		idouble
+		if
+		ifloat
+		import
+		in
+		inout
+		int
+		interface
+		ireal
+		is
+		
+		lazy
+		long
+
+		mixin
+		module
+
+		new
+		null
+
+		out
+		override
+
+		package
+		pragma
+		private
+		protected
+		public
+
+		real
+		return
+
+		scope
+		short
+		static
+		struct
+		super
+		switch
+		synchronized
+
+		template
+		this
+		throw
+		true
+		try
+		typedef
+		typeid
+		typeof
+
+		ubyte
+		ucent
+		uint
+		ulong
+		union
+		ushort
+
+		void
+		volatile
+
+		wchar
+		while
+		with
+		
+KeyWords2:
+		debug
+		version
+		unittest
+		invariant
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter
+
+StringBegChar:          "`'
+StringEndChar:          "`'
+MultilineStrings:       1
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor
+
+UsePreprocessor:        0
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line
+
+CurrLineHighlighted:    1
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+
+SpaceCol:               clWhite clBlack
+KeyWords1Col:		$ff0000 $000000
+KeyWords2Col:		$ff0000 $000000
+IdentifierCol:          clWhite clBlack
+CommentCol:             clGreen clBlack
+NumberCol:              $0040FF40 clBlack
+StringCol:              $000080FF clBlack
+SymbolCol:              clWhite clBlack
+PreprocessorCol:        clRed clBlack
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clWhite $00303030
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+Keyword1Col:            clRed clBlack
+Keyword2Col:            $00FF40FF clBlack
+Keyword3Col:            clYellow clBlack
+MatchedBracesCol:       $00FF8080 clBlack
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
