@@ -1,0 +1,178 @@
+///////////////////////////////////////////////////////////////////////////////
+// Groovy highlighter written by Bart Kiers (bkiers@gmail.com) based on:     //
+// http://docs.codehaus.org/download/attachments/23080/wordfile-groovy2.txt  //
+///////////////////////////////////////////////////////////////////////////////
+
+Language:               Groovy
+Filter:                 Groovy files (*.groovy, *.gvy, *.gy)|*.groovy; *.gvy; *.gy (*.groovy, *.gvy, *.gy)|*.groovy; *.gvy; *.gy (*.groovy, *.gvy, *.gy)|*.groovy; *.gvy; *.gy (*.groovy, *.gvy, *.gy)|*.groovy; *.gvy; *.gy
+                        (*.groovy, *.gvy, *.gy)|*.groovy; *.gvy; *.gy
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             \
+
+KeyWords1:              abstract
+                        break byte boolean
+                        catch case class char continue
+                        def default double do
+                        else extends
+                        false final float for finally
+                        if import implements  in int interface instanceof
+                        long length
+                        native new null
+                        package private protected property public
+                        return
+                        switch synchronized short static super
+                        try true this throw throws threadsafe transient
+                        void
+                        while
+
+KeyWords2:              ==~
+                        =~
+                        ~
+                        ==
+                        !=
+                        <=>
+                        =
+                        ->
+                        ..<
+                        ..
+                        <=
+                        =>
+                        <<
+                        >>>
+                        >>
+                        <
+                        >
+                        !
+                        &&
+                        ||
+                        &
+                        |
+
+KeyWords3:              abs accept and any append asImmutable asList 
+                        asSynchronized asWritable collect compareTo contains 
+                        count disjoint div downto dump eachByte eachDir 
+                        eachFile eachFileMatch eachFileRecurse eachLine 
+                        eachMatch eachObject eachWithIndex encodeBase64 every 
+                        execute find findAll findIndexOf flatten getAt getCount 
+                        getErr getIn getLastMatcher getMetaPropertyValues 
+                        getOut getProperties getRootLoader getText grep 
+                        identity inject inspect intdiv intersect invokeMethod 
+                        is isCase leftShift min minus mod multiply 
+                        newInputStream newObjectInputStream newOutputStream 
+                        newPrintWriter newReader newWriter next padLeft 
+                        padRight plus pop power previous print printf println 
+                        putAt readLine readLines replaceAll reverse reverseEach 
+                        rightShift rightShiftUnsigned round runAfter size sleep 
+                        sort splitEachLine spread start startDaemon step subMap 
+                        sum toArrayString toCharacter toDouble toFloat 
+                        toInteger toList toListString toLong toMapString 
+                        toSpreadList toSpreadMap toURL tokenize transformChar 
+                        transformLine upto use withInputStream withOutputStream 
+                        withPrintWriter withReader withStream withStreams 
+                        withWriter withWriterAppend write writeLine xor
+
+KeyWords4:              AbstractHttpServlet AbstractReaderSource AllTestSuite 
+                        AnnotatedNode AnnotationNode AntBuilder 
+                        AntlrASTProcessor AntlrASTProcessSnippets 
+                        AntlrClassSource AntlrParserPlugin
+                        AntlrParserPluginFactory AntlrSourceSummary 
+                        AntProjectPropertiesDelegate ArgumentListExpression 
+                        ArrayExpression AsmClassGenerator AssertStatement 
+                        ASTHelper ASTNode ASTParserException 
+                        ASTRuntimeException AttributeExpression 
+                        AbstractMethodError AccessException Acl AclEntry 
+                        AclNotFoundException ActionEvent ActionListener 
+                        Adjustable AdjustmentEvent AdjustmentListener 
+                        Adler32 AlreadyBoundException Applet AppletContext 
+                        AppletStub AreaAveragingScaleFilter 
+                        ArithmeticException Array 
+                        ArrayIndexOutOfBoundsException ArrayStoreException 
+                        AudioClip AWTError AWTEvent AWTEventMulticaster 
+                        AWTException
+                        BaseMarkupBuilder BenchmarkInterceptor BigDecimalMath 
+                        BigIntegerMath BinaryExpression Binding 
+                        BitwiseNegateEvaluatingException BitwiseNegExpression 
+                        BlockStatement BooleanExpression BreakStatement 
+                        Buildable Builder Builder.Built BuilderSupport 
+                        BytecodeExpression BytecodeHelper BeanDescriptor 
+                        BeanInfo Beans BigDecimal BigInteger BindException 
+                        BitSet Boolean BorderLayout BreakIterator 
+                        BufferedInputStream BufferedOutputStream BufferedReader 
+                        BufferedWriter Button ButtonPeer Byte 
+                        ByteArrayInputStream ByteArrayOutputStream
+                        CachingGroovyEngine CaseStatement CastExpression 
+                        CatchStatement CharsetToolkit ClassCodeVisitorSupport 
+                        ClassCompletionVerifier ClassExpression ClassExtender 
+                        ClassGenerator ClassGeneratorException ClassHelper 
+                        ClassNode ClassSource Closure ClosureComparator 
+                        ClosureConstraintMatcher ClosureException 
+                        ClosureExpression ClosureListener ClosureModel 
+                        CodeVisitorSupport CompilationFailedException 
+                        CompilationUnit CompilationUnit.ClassgenCallback 
+                        CompilationUnit.ProgressCallback Compiler 
+                        CompilerConfiguration CompileStack CompileUnit 
+                        Completer ComponentFacade CompositeVisitor 
+                        ConfigurationException ConsoleSupport 
+                        ConstantExpression ConstructorCallExpression 
+                        ConstructorNode ContainerFacade ContinueStatement 
+                        CSTNode CurriedClosure Calendar CallableStatement 
+                        Canvas CanvasPeer Certificate Character 
+                        CharacterIterator CharArrayReader CharArrayWriter 
+                        CharConversionException Checkbox CheckboxGroup CheckboxMenuItem CheckboxMenuItemPeer CheckboxPeer CheckedInputStream CheckedOutputStream Checksum Choice ChoiceFormat ChoicePeer Class ClassCastException ClassCircularityError ClassFormatError ClassLoader ClassNotFoundException Clipboard ClipboardOwner Cloneable CloneNotSupportedException CollationElementIterator CollationKey Collator Color ColorModel Compiler Component ComponentAdapter ComponentEvent ComponentListener ComponentPeer ConnectException ConnectIOException Connection Constructor Container ContainerAdapter ContainerEvent ContainerListener ContainerPeer ContentHandler ContentHandlerFactory CRC32 CropImageFilter Cursor Customizer CardLayout
+DataSet DeclarationExpression DefaultAction DefaultGroovyMethods DefaultGroovyMethods.ProcessRunner DefaultGroovyMethods.RangeInfo DefaultGroovyStaticMethods DefaultMethodKey DefaultTableColumn DefaultTableModel DefaultTableModel.MyTableColumnModel DelegatingMetaClass DOMBuilder DOMCategory DomToGroovy DoWhileStatement DummyClassGenerator DynamicVariable DatabaseMetaData DataFlavor DataFormatException DatagramPacket DatagramSocket DatagramSocketImpl DataInput DataInputStream DataOutput DataOutputStream DataTruncation Date DateFormat DateFormatSymbols DecimalFormat DecimalFormatSymbols Deflater DeflaterOutputStream DGC Dialog DialogPeer Dictionary DigestException DigestInputStream DigestOutputStream Dimension DirectColorModel Double Driver DriverManager DriverPropertyInfo DSAKey DSAKeyPairGenerator DSAParams DSAPrivateKey DSAPublicKey
+EmptyRange EmptyStatement ErrorCollector ErrorReporter Eval ExceptionMessage Expando Expression ExpressionStatement ExpressionTransformer EmptyStackException Enumeration EOFException Error Event EventListener EventObject EventQueue EventSetDescriptor Exception ExceptionInInitializerError ExportException
+Factory FieldExpression FieldNode FileIterator FileReaderSource FileScanner FileSystemCompiler FilteredAttributes FilteredNodeChildren FloatingPointMath FlushingStreamWriter FormModel ForStatement FeatureDescriptor Field FieldPosition File FileDescriptor FileDialog FileDialogPeer FileInputStream FilenameFilter FileNameMap FileNotFoundException FileOutputStream FileReader FileWriter FilteredImageSource FilterInputStream FilterOutputStream FilterReader FilterWriter Float FlowLayout FocusAdapter FocusEvent FocusListener Font FontMetrics FontPeer Format Frame FramePeer
+GeneratorContext GPathResult Grok Groovy GroovyBugError Groovyc GroovyCategorySupport GroovyClass GroovyClassLoader GroovyClassLoader.ClassCollector GroovyClassLoader.PARSING GroovyClassVisitor GroovyCodeSource GroovyCodeSourcePermission GroovyCodeVisitor GroovyEngine GroovyException GroovyExceptionInterface GroovyInterceptable GroovyLexer GroovyLog GroovyMain GroovyMBean GroovyMock GroovyObject GroovyObjectSupport GroovyRecognizer GroovyResourceLoader GroovyResultSet GroovyRowResult GroovyRuntimeException GroovyScriptEngine GroovyServlet GroovyShell GroovySocketServer GroovySourceAST GroovyStarter GroovyTestCase GroovyTestSuite GroovyTokenTypes GString GStringExpression GStringTemplateEngine Graphics GregorianCalendar GridBagConstraints GridBagLayout GridLayout Group GZIPInputStream GZIPOutputStream
+HasCleanup Hashtable HttpURLConnection
+IFileNameFinder IfStatement IllegalPropertyAccessException ImportNode IncorrectClosureArgumentsException IndentPrinter InnerClassNode InputStreamReaderSource Inspector Inspector.MemberComparator IntegerMath InteractiveShell Interceptor IntRange Invoker InvokerHelper InvokerInvocationException IteratorClosureAdapter Identity IdentityScope IllegalAccessError IllegalAccessException IllegalArgumentException IllegalComponentStateException IllegalMonitorStateException IllegalStateException IllegalThreadStateException Image ImageConsumer ImageFilter ImageObserver ImageProducer IncompatibleClassChangeError IndexColorModel IndexedPropertyDescriptor IndexOutOfBoundsException InetAddress Inflater InflaterInputStream InputEvent InputStream InputStreamReader Insets InstantiationError InstantiationException Integer InternalError InterruptedException InterruptedIOException IntrospectionException Introspector InvalidClassException InvalidKeyException InvalidObjectException InvalidParameterException InvocationTargetException IOException ItemEvent ItemListener ItemSelectable
+Janitor JavaPrompt 
+Key KeyAdapter KeyEvent KeyException KeyListener KeyManagementException KeyPair KeyPairGenerator
+LabelVerifier LexerFrame LineColumn ListExpression LoaderConfiguration LocatedMessage LongMath Label LabelPeer LastOwnerException LayoutManager LayoutManager2 Lease LightweightPeer LineNumberInputStream LineNumberReader LinkageError List ListPeer ListResourceBundle LoaderHandler Locale LocateRegistry LogStream Long
+MapEntry MapEntryExpression MapExpression MarkupBuilder Message MetaArrayLengthProperty MetaBeanProperty MetaClass MetaClassHelper MetaClassImpl MetaClassRegistry MetaExpandoProperty MetaFieldProperty MetaMethod MetaProperty MethodCaller MethodCallExpression MethodClosure MethodHelper MethodKey MethodNode MethodPointerExpression MindMapPrinter MissingClassException MissingFieldException MissingMethodException MissingPropertyException MixinNode ModuleNode MultipleCompilationErrorsException MalformedURLException MarshalException Math MediaTracker Member MemoryImageSource Menu MenuBar MenuBarPeer MenuComponent MenuComponentPeer MenuContainer MenuItem MenuItemPeer MenuPeer MenuShortcut MessageDigest MessageFormat Method MethodDescriptor MissingResourceException Modifier MouseAdapter MouseEvent MouseListener MouseMotionAdapter MouseMotionListener MulticastSocket
+NamedArgumentListExpression Namespace NamespaceBuilder NamespaceBuilderSupport NegationExpression NestedValueModel NewInstanceMetaMethod NewStaticMetaMethod NoChildren Node Node NodeAsHTMLPrinter NodeBuilder NodeChild NodeIterator NodeList NodePrinter NodePrinter NonEmptySequence NotExpression NullWriter NumberMath Numbers Naming NegativeArraySizeException NoClassDefFoundError NoRouteToHostException NoSuchAlgorithmException NoSuchElementException NoSuchFieldError NoSuchFieldException NoSuchMethodError NoSuchMethodException NoSuchObjectException NoSuchProviderException NotActiveException NotBoundException NotOwnerException NotSerializableException NullPointerException Number NumberFormat NumberFormatException
+ObjectRange OrderBy Object ObjectInput ObjectInputStream ObjectInputValidation ObjectOutput ObjectOutputStream ObjectStreamClass ObjectStreamException ObjID Observable Observer Operation OptionalDataException OutOfMemoryError OutputStream OutputStreamWriter Owner
+Parameter ParameterArray ParserException ParserPlugin ParserPluginFactory Phases PostfixExpression PrefixExpression PreOrderTraversal ProcessingUnit Prompt PromptFactory PropertyExpression PropertyModel PropertyNode PropertyValue Proxy ProxyMetaClass PaintEvent Panel PanelPeer ParameterDescriptor ParseException ParsePosition Permission PipedInputStream PipedOutputStream PipedReader PipedWriter PixelGrabber Point Polygon PopupMenu PopupMenuPeer PreparedStatement Principal PrintGraphics PrintJob PrintStream PrintWriter PrivateKey Process Properties PropertyChangeEvent PropertyChangeListener PropertyChangeSupport PropertyDescriptor PropertyEditor PropertyEditorManager PropertyEditorSupport PropertyResourceBundle PropertyVetoException ProtocolException Provider ProviderException PublicKey PushbackInputStream PushbackReader
+QName 
+Range RangeExpression ReaderSource ReadException ReadOnlyPropertyException Reduction Reference ReflectionMetaMethod ReflectionMethodInvoker Reflector ReflectorGenerator RegexExpression RegexSupport ResolveVisitor ResourceConnector ResourceException ReturnStatement RootLoader RootLoaderRef RuntimeIncompleteClassException RuntimeParserExceptionRandom RandomAccessFile Reader Rectangle Registry RegistryHandler Remote RemoteCall RemoteException RemoteObject RemoteRef RemoteServer RemoteStub ReplicateScaleFilter ResourceBundle ResultSet ResultSetMetaData RGBImageFilter RMIClassLoader RMIFailureHandler RMISecurityException RMISecurityManager RMISocketFactory RuleBasedCollator Runnable Runtime RuntimeException
+SAXBuilder Script ScriptBytecodeAdapter ScriptException ScriptReference ScriptTestAdapter Sequence ServletBinding ServletCategory ShellCompleter SimpleMessage SimpleTemplateEngine SourceBuffer SourceCodeTraversal SourcePrinter SourceSummary SourceUnit SpreadExpression SpreadList SpreadListEvaluatingException SpreadMap SpreadMapEvaluatingException SpreadMapExpression Sql SqlWhereVisitor Startable Statement StaticMethodCallExpression StreamingMarkupWriter StringBufferWriter StringReaderSource StringWriterIOException SummaryCollector SwingBuilder SwitchStatement SynchronizedStatement SyntaxErrorMessage SyntaxException Scrollbar ScrollbarPeer ScrollPane ScrollPanePeer SecureRandom Security SecurityException SecurityManager SequenceInputStream Serializable ServerCloneException ServerError ServerException ServerNotActiveException ServerRef ServerRuntimeException ServerSocket Shape Short Signature SignatureException Signer SimpleBeanInfo SimpleDateFormat SimpleTimeZone Skeleton SkeletonMismatchException SkeletonNotFoundException Socket SocketException SocketImpl SocketImplFactory SocketSecurityException SQLException SQLWarning Stack StackOverflowError Statement StreamCorruptedException StreamTokenizer String StringBuffer StringBufferInputStream StringCharacterIterator StringIndexOutOfBoundsException StringReader StringSelection StringTokenizer StringWriter StubNotFoundException SyncFailedException System SystemColor
+TableLayout TableLayoutCell TableLayoutRow TableMap TableSorter Template TemplateEngine TemplateServlet TemporaryMethodKey TernaryExpression TestCaseRenderEngine ThrowStatement Token TokenException TokenMismatchException TracingInterceptor TransformMetaMethod TraversalHelper TryCatchStatement Tuple TupleExpression TypeMismatchException Types TextArea TextAreaPeer TextComponent TextComponentPeer TextEvent TextField TextFieldPeer TextListener Thread ThreadDeath ThreadGroup Throwable Time Timestamp TimeZone Toolkit TooManyListenersException Transferable Types
+UnicodeEscapingReader URLReaderSource Utilities UID UnexpectedException UnicastRemoteObject UnknownError UnknownHostException UnknownServiceException UnmarshalException Unreferenced UnsatisfiedLinkError UnsupportedEncodingException UnsupportedFlavorException URL URLConnection URLEncoder URLStreamHandler URLStreamHandlerFactory UTFDataFormatException
+ValueHolder ValueModel Variable Variable VariableExpression VariableScope VariableScopeVisitor Verifier VerifierCodeVisitor VerifyClass Visitor VisitorAdapter Vector VerifyError VetoableChangeListener VetoableChangeSupport VirtualMachineError Visibility VMID Void
+WarningMessage WhileStatement Wiki2Markup Wiki2TestCase Writable WritableFile Window WindowAdapter WindowEvent WindowListener WindowPeer WriteAbortedException Writer
+XmlNodePrinter XmlParser XmlSlurper XmlTemplateEngine
+ZipEntry ZipException ZipFile ZipInputStream ZipOutputStream
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clMaroon clWindow B
+Keyword4Col:            clPurple clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $0000C000 clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clRed clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+CurrLineHighlighted:    0
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
