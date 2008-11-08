@@ -1,0 +1,251 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// ConTEXT highlighter definition file.
+//
+// PCB layout and footprint files highlighter written by Bert Timmerman, bert.timmerman@xs4all.nl
+//
+// PCB can be found at: http://sourceforge.net/projects/pcb/
+//
+// Template from: x86 Assembly highlighter by Eden Kirin, context@fixedsys.com
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               PCB layout and footprint files
+
+//////////////////////////////////////////////////////////////////////////////
+// put whatever you want here, short description, author name, email address..
+
+Description:            PCB layout and footprint files highlighter written by Bert Timmerman, bert.timmerman@xs4all.nl
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Pcb files (*.fp, *.pcb)|*.fp;*.pcb
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invoked when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+
+LineComment:            #
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:        a..z A..Z _%@?&$
+IdentifierChars:           a..z A..Z _ 0..9 ?&%$@:
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 .
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into five groups which can be
+// highlighted differently
+
+// drawing entity keywords
+KeyWords1:              
+                        Arc 
+                        Cursor 
+                        DRC 
+                        Element 
+                        FileVersion 
+                        Flags 
+                        Grid 
+                        Groups
+                        Layer 
+                        Line 
+                        Net 
+                        NetList 
+                        PCB 
+                        PolyArea 
+                        Polygon 
+                        Rat 
+                        Styles
+                        Symbol 
+                        Text 
+                        Thermal 
+                        Via
+
+// entity keywords
+KeyWords2:              
+                        Attribute 
+                        Connect 
+                        ElementArc 
+                        ElementLine 
+                        Mark 
+                        Pad 
+                        Pin 
+                        SymbolLine
+
+// most common flags
+KeyWords3:              
+                        auto 
+                        clearline 
+                        clearnew
+                        clearpoly
+                        edge2 
+                        found 
+                        liveroute 
+                        lock
+                        locknames 
+                        nameonpcb 
+                        onsolder 
+                        rubberend 
+                        showdrc
+                        snappin 
+                        square 
+                        thindraw 
+                        uniquename 
+                        unknown
+
+// special layer names
+KeyWords4:              
+                        Board-Outline 
+                        component 
+                        GND 
+                        GND-comp 
+                        GND-sldr 
+                        keepout 
+                        outline 
+                        silk 
+                        solder 
+                        unused 
+                        Vcc 
+                        Vcc-comp 
+                        Vcc-sldr
+
+// common and not so common routing styles
+KeyWords5:              
+                        Fat 
+                        Power 
+                        MorePower 
+                        Signal 
+                        Skinny 
+                        Thin
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          " '
+StringEndChar:          " '
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clPurple clWindow B
+Keyword3Col:            clBlue clWindow
+Keyword4Col:            clBlue clWindow
+Keyword5Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
