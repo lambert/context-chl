@@ -1,0 +1,79 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Netware login script highlighter written by goldfndr (Google me)
+// Note: these are generally stored in NDS or in a .DAT file so the extension is meaningless
+//
+//////////////////////////////////////////////////////////////////////////////
+Language:		NetWare login script
+Filter: 		NetWare login scripts (*.cls)|*.cls
+HelpFile:
+CaseSensitive:		0
+LineComment:		REM
+			*
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:	a..z A..Z _ % #
+IdentifierChars:	a..z A..Z _ 0..9 . ?
+NumConstBegChars:	0..9
+NumConstChars:		0..9 abcdefx.
+EscapeChar:
+
+// Program flow
+KeyWords1:		break on off fire phasers goto
+			if and or then else end
+			include no_default pause profile
+			script_server shift swap
+
+// External commands
+KeyWords2:		attach context drive tree pccompatible
+			map display errors ins del root next
+			@ # cls display exit fdisplay term write
+			comspec machine noswap set time temp dos
+			lastlogintime #capture cx
+
+// Variables
+KeyWords3:		day day_of_week month month_name
+			nday_of_week short_year year
+			am_pm greeting_time hour hour24
+			minute second
+			cn login_alias_context full_name last_name
+			login_context login_name
+			member of not
+			password_expires requester_context user_id
+			file_server network_address
+			netware_requester os os_version p_station
+			platform shell_type smachine station winver
+			dialup offline
+			access_server error_level
+			%day %day_of_week %month %month_name
+			%nday_of_week %short_year %year
+			%am_pm %greeting_time %hour %hour24
+			%minute %second
+			%cn %login_alias_context %full_name %last_name
+			%login_context %login_name
+			%password_expires %requester_context %user_id
+			%file_server %network_address
+			%netware_requester %os %os_version %p_station
+			%platform %shell_type %smachine %station %winver
+			%dialup %offline
+			%access_server %error_level
+
+StringBegChar:		"
+StringEndChar:		"
+MultilineStrings:	1
+UsePreprocessor:	0
+CurrLineHighlighted:	0
+
+SpaceCol:		clWindowText clWindow
+Keyword1Col:		clNavy clWindow B
+Keyword2Col:		clPurple clWindow B
+Keyword3Col:		clBlue clWindow B
+IdentifierCol:		clWindowText clWindow
+CommentCol:		clGray clWindow I
+NumberCol:		clRed clWindow
+StringCol:		clGreen clWindow I
+SymbolCol:		clGray clWindow
+PreprocessorCol:	clBlue clWindow
+SelectionCol:		clWhite clNavy
+CurrentLineCol: 	clBlack clYellow
+
