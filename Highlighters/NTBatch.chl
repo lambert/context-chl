@@ -1,0 +1,60 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// NT/2K Batch files Highlighter (Based on the NT Commands help file)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               NT/2K Batch files
+Filter:                 NT/2K Batch files (*.bat)|*.bat;*.cmd
+HelpFile:
+CaseSensitive:          0
+LineComment:            REM
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// General commands
+KeyWords1:              ASSOC AT ATTRIB CACLS CD CHDIR CHKDSK CHKNTFS CLS
+                        CMD COLOR COMMAND COMP COMPACT CONVERT COPY DATE
+                        DEBUG DEL DIR DISKCOMP DISKCOPY DOSKEY EDIT
+                        ENDLOCAL ERASE FC FIND FINDSTR FORMAT FTYPE GRAFTABL
+                        HELP LABEL MD MKDIR MODE MORE MOVE PATH PAUSE POPD
+                        PRINT PROMPT PUSHD RD RECOVER REN RENAME REPLACE
+                        RMDIR SET SETLOCAL SORT START SUBST TIME TITLE TREE
+                        TYPE VER VERIFY VOL XCOPY
+
+// Commands used only in batch files
+KeyWords2:              BREAK CALL CHOICE ECHO EXIT FOR GOTO IF REM SHIFT
+
+// Sub-keywords
+KeyWords3:              CMDEXTVERSION DEFINED DISABLEDELAYEDEXPANSION 
+                        DISABLEEXTENSIONS DO ELSE ENABLEDELAYEDEXPANSION 
+                        ENABLEEXTENSIONS EQU ERRORLEVEL EXIST GEQ GTR IN LEQ
+                        LSS NEQ NOT OFF ON
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
+
