@@ -1,0 +1,288 @@
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+// NQC highlighter by Astronouth7303
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+Language:               NQC
+Filter:                 NQC files (*.nqc,*.nqh)|*.nqc;*.nqh
+HelpFile:               //D:\Program Files\ConTEXT\HelpFiles\BRICXCC.HLP
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefhxABCDEF
+EscapeChar:             \
+
+KeyWords1:   // reserved words
+	__event_src	__res	__taskid	abs
+	__nolist	__sensor	__type acquire
+	asm	do	int	sub
+	break	else	monitor	switch
+	case	false	repeat	task
+	catch	for	return	true
+	const	goto	sign	void
+	continue	if	start while
+	default	inline	stop
+
+KeyWords2:   // functions
+	// Sensor setup
+	SetSensor	SetSensorType	SetSensorMode	ClearSensor
+	// Sensor info
+	SensorValue	SensorType	SensorMode	SensorValueBool	SensorValueRaw
+	// Sensor Calibration	SCOUT
+	SetSensorLowerLimit	SetSensorUpperLimit	SetSensorHysteresis	CalibrateSensor
+	
+	// Output primitives
+	SetOutput	SetDirection	SetPower	OutputStatus
+	// Convience calls
+	On	Off	Float	Fwd	Rev	Toggle	OnFwd	OnRev	OnFor
+	
+	// Global output	RCX2, SCOUT, SPY
+	SetGlobalOutput	SetGlobalDirection	SetMaxPower	GlobalOutputStatus
+	
+	// LCD modes	RCX
+	SelectDisplay	SetUserDisplay
+	
+	// Messages	RCX, SCOUT
+	ClearMessage	SendMessage	SetTxPower
+	
+	// Communications setup
+	SetSerialComm	SetSerialPacket	SetSerialData	SerialData	SerialPacket	SerialComm	SendSerial
+	SerialType	SetSerialType	SerialBaud	SetSerialBaud	SerialChannel	SetSerialChannel	SerialPreamblePos
+	SetSerialPreamblePos	SerialPreambleLen	SetSerialPreambleLen	SerialChecksum	SetSerialChecksum
+	SerialBiPhase	SetSerialBiPhase
+	
+	// VLL	SCOUT, SPY
+	SendVLL
+	
+	// Timers
+	ClearTimer	Timer	SetTimer	FastTimer
+	
+	// Counters
+	ClearCounter	IncCounter	DecCounter	Counter
+	
+	// Access control	RCX2, SCOUT, SPY
+	SetPriority
+	
+	// Events	RCX2, SCOUT, SPY
+	ActiveEvents	CurrentEvents	Event
+	
+	// Event config	RCX2, SPY
+	SetEvent	ClearEvent	ClearAllEvents	EventState	CalibrateEvent	SetUpperLimit	UpperLimit
+	SetLowerLimit	LowerLimit	SetHysteresis	Hysteresis	SetClickTime	ClickTime	SetClickCounter
+	ClickCounter
+	
+	// Scout events	SCOUT
+	SetSensorClickTime	SetCounterLimit	SetTimerLimit
+	
+	// Data Logging	RCX
+	CreateDatalog	AddToDatalog	UploadDatalog
+	
+	// General features
+	Wait	StopAllTasks	Random	SetRandomSeed	BatteryLevel	FirmwareVersion	SetSleepTime	SleepNow	PlaySound
+	
+	// RCX Specific Features	RCX
+	Program	SelectProgram	Watch	SetWatch
+	
+	// Scout Specific Features	SCOUT
+	SetScoutRules	ScoutRules	SetScoutMode	SetEventFeedback	EventFeedback	SetLight
+	
+	// CyberMaster Specific Features	CM
+	Drive	OnWait	OnWaitDifferent	ClearTachoCounter	TachoCount	TachoSpeed	ExternalMotorRunning	AGC
+	
+	// Spybotics Specific Features	SPY
+	// Animation	SPY
+	LED	SetAnimation
+	// SFX	SPY
+	EffectSound	EffectTime	SetEffectSound	SetEffectTime
+	
+	// World	SPY
+	ClearWorld	FindWorld	Target	SetTargetID	SetTargetNote	GetWorld	GetWorldAspect	GetWorldDirection
+	GetWorldLinkID	GetWorldNote	GetWorldRange	GetWorldShortID	SetWorldNote
+	
+	// a bunch more	SPY
+	Pop	Push	Stack	SetStack	TimerState	SetTimerState	EEPROM	IndirectEEPROM	SetEEPROM	CurrentTaskID
+	RxMessageLock	SetRxMessageLock	RxMessageIndex	RxMessageChannel	RxMessageID	RxMessage	PingControl
+	PingData	SetPingData	PingInterval	SetPingInterval	PingID	BeaconControl	LinkID	RCRxChannel
+	SetRCRxChannel	RCTxChannel	SetRCTxChannel	RCTxMode	SetRCTxMode	StartTask	StopTask	Action	Disp
+	BasicMove	FancyMove	RandomMove	SlowDownMov	SpeedUpMove	Sum2Mem	Sum4Mem	SendAllRangeMessage
+	SendRCXMessage	SendSpybotMessage
+
+KeyWords3:   // constants
+	// Sensors
+	SENSOR_1	SENSOR_2	SENSOR_3
+	// Sensor types
+	SENSOR_TYPE_NONE	SENSOR_TYPE_TOUCH
+	SENSOR_TYPE_TEMPERATURE	SENSOR_TYPE_LIGHT
+	SENSOR_TYPE_ROTATION
+	
+	// Sensor modes
+	SENSOR_MODE_RAW	SENSOR_MODE_BOOL
+	SENSOR_MODE_EDGE	SENSOR_MODE_PULSE
+	SENSOR_MODE_PERCENT	SENSOR_MODE_FAHRENHEIT
+	SENSOR_MODE_CELSIUS	SENSOR_MODE_ROTATION
+	
+	// Sensor config
+	SENSOR_TOUCH	SENSOR_LIGHT	SENSOR_ROTATION
+	SENSOR_CELSIUS	SENSOR_FAHRENHEIT	SENSOR_PULSE
+	SENSOR_EDGE
+	
+	// Output mode
+	OUT_OFF	OUT_ON	OUT_FLOAT
+	
+	// Output direction
+	OUT_FWD	OUT_REV	OUT_TOGGLE
+	
+	// Outputs
+	OUT_A	OUT_B	OUT_C
+	
+	// AFX	SPY
+	SOUND_SHOCKED	SOUND_FIRE_LASER	SOUND_FIRE_ELECTRONET	SOUND_FIRE_SPINNER	SOUND_HIT_BY_LASER
+	SOUND_HIT_BY_ELECTRONET	SOUND_HIT_BY_SPINNER	SOUND_TAG	SOUND_CRASH	SOUND_FIGHT	SOUND_GOT_IT
+	SOUND_GENERAL_ALERT	SOUND_OUT_OF_ENERGY_ALERT	SOUND_LOW_ENERGY_ALERT	SOUND_SCORE_ALERT
+	SOUND_TIME_ALERT	SOUND_PROXIMITY_ALERT	SOUND_DANGER_ALERT	SOUND_BOMB_ALERT	SOUND_FINAL_COUNTDOWN
+	SOUND_TICK_TOCK	SOUND_GOTO	SOUND_SCAN	SOUND_POINT_TO	SOUND_ACTIVATE_SHIELDS	SOUND_ACTIVATE_REFLECT
+	SOUND_ACTIVATE_CLOAK	SOUND_ACTIVATE_FLASH_BLIND	SOUND_MAGNET	SOUND_QUAD_DAMAGE	SOUND_REPULSE
+	SOUND_TURBO	SOUND_FREEZE	SOUND_SLOW	SOUND_REVERSE	SOUND_DIZZY	SOUND_BOOST	SOUND_DEACTIVATE_SHIELDS
+	SOUND_DEACTIVATE_REFLECT	SOUND_DEACTIVATE_CLOAK	SOUND_REFLECT	SOUND_EXPLOSION	SOUND_BIG_EXPLOSION
+	SOUND_PLACE_BOMB	SOUND_HIT_BY_WIND	SOUND_OUCH	SOUND_GEIGER	SOUND_WHISTLE	SOUND_IM_IT	SOUND_HELP
+	SOUND_SIREN	SOUND_BURNT	SOUND_GRINDED	SOUND_SMACKED	SOUND_TRILL_UP	SOUND_TRILL_DOWN	SOUND_YELL
+	SOUND_WHISPER	SOUND_NONE
+	
+	// Sounds
+	PlayTone	MuteSound	UnmuteSound	ClearSound	SelectSounds
+	
+	// LCD modes	RCX
+	DISPLAY_WATCH	DISPLAY_SENSOR_1	DISPLAY_SENSOR_2	DISPLAY_SENSOR_3	DISPLAY_OUT_A	DISPLAY_OUT_B
+	DISPLAY_OUT_C
+	
+	// Tx power	RCX, SCOUT
+	TX_POWER_LO	TX_POWER_HI
+	
+	// Communication options	RCX2
+	SERIAL_COMM_DEFAULT	SERIAL_COMM_4800	SERIAL_COMM_DUTY25	SERIAL_COMM_76KHZ	SERIAL_PACKET_DEFAULT
+	SERIAL_PACKET_PREAMBLE	SERIAL_PACKET_NEGATED	SERIAL_PACKET_CHECKSUM	SERIAL_PACKET_RCX
+	
+	// Extended communication options	SPY
+	SERIAL_TYPE_SPYBOT	SERIAL_TYPE_RCX	SERIAL_TYPE_RC	SERIAL_TYPE_USER	SERIAL_BAUD_2400
+	SERIAL_BAUD_4800	SERIAL_BAUD_9600	SERIAL_CHANNEL_IR	SERIAL_CHANNEL_PC	SERIAL_CHECKSUM_NONE
+	SERIAL_CHECKSUM_SUM	SERIAL_CHECKSUM_ZERO_SUM	SERIAL_BIPHASE_OFF	SERIAL_BIPHASE_ON
+	
+	// Access control	RCX2, SCOUT, SPY
+	ACQUIRE_OUT_A	ACQUIRE_OUT_B	ACQUIRE_OUT_C	ACQUIRE_SOUND	ACQUIRE_LED	ACQUIRE_USER_1	ACQUIRE_USER_2
+	ACQUIRE_USER_3	ACQUIRE_USER_4
+	
+	// Event config	RCX2, SPY
+	EVENT_TYPE_PRESSED	EVENT_TYPE_RELEASED	EVENT_TYPE_PULSE	EVENT_TYPE_EDGE	EVENT_TYPE_FASTCHANGE
+	EVENT_TYPE_LOW	EVENT_TYPE_NORMAL	EVENT_TYPE_HIGH	EVENT_TYPE_CLICK	EVENT_TYPE_DOUBLECLICK
+	EVENT_TYPE_MESSAGE	EVENT_TYPE_ENTRY_FOUND	EVENT_TYPE_MSG_DISCARD	EVENT_TYPE_MSG_RECEIVED
+	EVENT_TYPE_VLL_MSG_RECEIVED	EVENT_TYPE_ENTRY_CHANGED
+	
+	// Scout events	SCOUT
+	EVENT_1_PRESSED	EVENT_1_RELEASED	EVENT_2_PRESSED	EVENT_2_RELEASED	EVENT_LIGHT_HIGH
+	EVENT_LIGHT_NORMAL	EVENT_LIGHT_LOW	EVENT_LIGHT_CLICK	EVENT_LIGHT_DOUBLECLICK	EVENT_COUNTER_0
+	EVENT_COUNTER_1	EVENT_TIMER_0	EVENT_TIMER_1	EVENT_TIMER_2	EVENT_MESSAGE
+	
+	// LED mode	SPY
+	LED_MODE_ON	LED_MODE_BLINK	LED_MODE_DURATION	LED_MODE_SCALE	LED_MODE_SCALE_BLINK
+	LED_MODE_SCALE_DURATION	LED_MODE_RED_SCALE	LED_MODE_RED_SCALE_BLINK	LED_MODE_GREEN_SCALE
+	LED_MODE_GREEN_SCALE_BLINK	LED_MODE_YELLOW	LED_MODE_YELLOW_BLINK	LED_MODE_YELLOW_DURATION
+	LED_MODE_VLL	LED_MODE_VLL_BLINK	LED_MODE_VLL_DURATION
+	
+	// LED value	SPY
+	LED_RED1	LED_RED2	LED_RED3	LED_GREEN1	LED_GREEN2	LED_GREEN3	LED_YELLOW	LED_ALL_RED	LED_ALL_GREEN
+	LED_ALL_RED_GREEN	LED_ALL
+	
+	// LED ROM animation	SPY
+	ANIMATION_SCAN	ANIMATION_SPARKLE	ANIMATION_FLASH	ANIMATION_RED_TO_GREEN	ANIMATION_GREEN_TO_RED
+	ANIMATION_POINT_FORWARD	ANIMATION_ALARM	ANIMATION_THINKING
+	
+	// More spy constants	SPY
+	REL_GT	REL_LT	REL_EQ	REL_NE
+	SPY_TARGETID	SPY_NOTE	SPY_LINKID	SPY_RANGE	SPY_DIRECTION	SPY_ASPECT	SPY_INFO	SPY_SHORTID
+	TARGET_NONE	ID_NONE	ID_CTRL1	ID_CTRL2	ID_CTRL3	ID_CTRL4	ID_CTRL5	ID_CTRL6	ID_PC	ID_BOT_MIN
+	ID_BOT_MAX
+	ASPECT_FRONT_LEFT	ASPECT_FRONT	ASPECT_FRONT_RIGHT	ASPECT_BACK_RIGHT	ASPECT_BACK	ASPECT_BACK_LEFT
+	DIRECTION_LEFT	DIRECTION_LEFT_OF_CENTER	DIRECTION_CENTER	DIRECTION_RIGHT_OF_CENTER	DIRECTION_RIGHT
+	RANGE_NOWHERE	RANGE_ANYWHERE	RANGE_THERE	RANGE_HERE
+	TIMER_RUNNING	TIMER_STOPPED
+	MSG_NONE	MSG_IR	MSG_P
+	RC_CHANNEL_BROADCAST	RC_CHANNEL_1	RC_CHANNEL_2	RC_CHANNEL_3	RC_CHANNEL_DISABLED
+	RCTXMODE_SINGLE_SHOT	RCTXMODE_CONTINUOUS
+	MOVE_BASIC_FORWARD	MOVE_BASIC_BACKWARD	MOVE_BASIC_SPIN_LEFT	MOVE_BASIC_SPIN_RIGHT
+	MOVE_BASIC_TURN_LEFT	MOVE_BASIC_TURN_RIGHT	MOVE_BASIC_AVOID_LEFT	MOVE_BASIC_AVOID_RIGHT
+	MOVE_BASIC_REST	MOVE_BASIC_STOP
+	MOVE_FANCY_ZIGZAG	MOVE_FANCY_SHAKE	MOVE_FANCY_SCAN	MOVE_FANCY_STEP	MOVE_FANCY_STEP_BACK
+	MOVE_FANCY_SEARCH	MOVE_FANCY_FAKE_LEFT	MOVE_FANCY_RAKE_RIGHT	MOVE_FANCY_BUG_FORWARD
+	MOVE_FANCY_LAZY	MOVE_FANCY_WALK	MOVE_FANCY_WALK_BACK	MOVE_FANCY_DANCE
+	MOVE_RANDOM_FORWARD	MOVE_RANDOM_BACKWARD	MOVE_RANDOM_SPIN_LEFT	MOVE_RANDOM_SPIN_RIGHT
+	MOVE_RANDOM_TURN_LEFT	MOVE_RANDOM_TURN_RIGHT	MOVE_RANDOM_REST
+	MOVE_SLOWDOWN_FORWARD	MOVE_SLOWDOWN_BACKWARD	MOVE_SLOWDOWN_SPIN_LEFT	MOVE_SLOWDOWN_SPIN_RIGHT
+	MOVE_SPEEDUP_FORWARD	MOVE_SPEEDUP_BACKWARD	MOVE_SPEEDUP_SPIN_LEFT	MOVE_SPEEDUP_SPIN_RIGHT
+
+KeyWords4:   // resource declarations	SPY
+	ANIMATION	SOUNDEFFECT
+	
+KeyWords5:   // resource commands	SPY
+	// ANIMATION	SPY
+	AnimateLED	RepeatAnimation
+	// SOUNDEFFECT	SPY
+	Gate	GateOff	Glide	Vibrato	WaitEffect	FixedWaitEffect	Tone	FixedTone	RepeatEffect
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            clPurple clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clMaroon clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+
+MatchedBracesCol:       clRed clWindow
+Keyword4Col:            clTeal clWindow
+Keyword5Col:            clOlive clWindow
+
+
