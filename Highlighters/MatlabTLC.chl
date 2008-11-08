@@ -1,0 +1,262 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Matlab TLC Highlighter written by Erik Newton, newteksoftware.co.uk
+// Version 1 09-SEP-2004
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Matlab TLC
+Description:            Matlab TLC Highlighter written by Erik Newton, newteksoftware.co.uk
+Filter:                 Matlab TLC (*.tlc)|*.tlc
+HelpFile:
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+
+LineComment:            %%
+BlockCommentBeg:        /%
+BlockCommentEnd:        %/
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _% 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+// Directives
+KeyWords1:              %matlab %if %elseif %else %endif
+                        %switch %case %break %default %endswitch
+                        %with %endwith 
+                        %setcommandswitch %assert
+                        %error %warning %trace %exit
+                        %assign
+                        %createrecord %addtorecord %mergerecord %copyrecord
+                        %realformat
+                        %language %implements
+                        %generatefile %filescope
+                        %include %addincludepath
+                        %roll %endroll
+                        %function %return %endfunction
+                        %foreach %endforeach %for
+                        %openfile %selectfile %closefile
+                        %generate %undef
+
+// Functions
+KeyWords2:              LibBlockInputSignal
+                        LibBlockInputSignalAddr                      
+                        LibBlockInputSignalDataTypeId                
+                        LibBlockInputSignalDataTypeName              
+                        LibBlockInputSignalDimensions                
+                        LibBlockInputSignalIsComplex                 
+                        LibBlockInputSignalIsFrameData               
+                        LibBlockInputSignalNumDimensions             
+                        LibBlockInputSignalWidth                     
+                        LibBlockOutputSignal                         
+                        LibBlockOutputSignalAddr                     
+                        LibBlockOutputSignalDataTypeId               
+                        LibBlockOutputSignalDataTypeName             
+                        LibBlockOutputSignalDimensions               
+                        LibBlockOutputSignalIsComplex                
+                        LibBlockOutputSignalIsFrameData              
+                        LibBlockOutputSignalNumDimensions            
+                        LibBlockOutputSignalWidth                    
+                        LibBlockMatrixParameter                      
+                        LibBlockMatrixParameterAddr                  
+                        LibBlockParameter                            
+                        LibBlockParameterAddr                        
+                        LibBlockParameterDataTypeId                  
+                        LibBlockParameterDataTypeName
+                        LibBlockParameterIsComplex                   
+                        LibBlockParameterSize                        
+                        LibBlockContinuousState                      
+                        LibBlockDWork                                
+                        LibBlockDWorkAddr                            
+                        LibBlockDWorkDataTypeId                      
+                        LibBlockDWorkDataTypeName                    
+                        LibBlockDWorkIsComplex                       
+                        LibBlockDWorkName                            
+                        LibBlockDWorkUsedAsDiscreteState             
+                        LibBlockDWorkWidth                           
+                        LibBlockDiscreteState                        
+                        LibBlockIWork                                
+                        LibBlockMode                                 
+                        LibBlockPWork                                
+                        LibBlockRWork                                
+                        LibBlockReportError                          
+                        LibBlockReportFatalError                     
+                        LibBlockReportWarning                        
+                        LibGetBlockPath                              
+                        LibGetFormattedBlockPath                     
+                        LibAddToModelSources                         
+                        LibCacheDefine                               
+                        LibCacheExtern                               
+                        LibCacheFunctionPrototype                    
+                        LibCacheIncludes                             
+                        LibCacheTypedefs                             
+                        LibGetGlobalTIDFromLocalSFcnTID              
+                        LibGetNumSFcnSampleTimes                     
+                        LibGetSFcnTIDType                            
+                        LibGetTaskTimeFromTID                        
+                        LibIsContinuous                              
+                        LibIsDiscrete                                
+                        LibIsSFcnSampleHit                           
+                        LibIsSFcnSingleRate                          
+                        LibIsSFcnSpecialSampleHit                    
+                        LibCallFCSS                                  
+                        LibGetDataTypeComplexNameFromId              
+                        LibGetDataTypeEnumFromId                     
+                        LibGetDataTypeNameFromId                     
+                        LibGetT                                      
+                        LibIsComplex                                 
+                        LibIsFirstInitCond                           
+                        LibMaxIntValue                               
+                        LibMinIntValue                               
+                        LibBlockInputSignalBufferDstPort             
+                        LibBlockInputSignalStorageClass              
+                        LibBlockInputSignalStorageTypeQualifier      
+                        LibBlockOutputSignalIsGlobal                 
+                        LibBlockOutputSignalIsInBlockIO              
+                        LibBlockOutputSignalIsValidLValue            
+                        LibBlockOutputSignalStorageClass             
+                        LibBlockOutputSignalStorageTypeQualifier     
+                        LibBlockSrcSignalBlock                       
+                        LibBlockSrcSignalIsDiscrete                  
+                        LibBlockSrcSignalIsGlobalAndModifiable       
+                        LibBlockSrcSignalIsInvariant                 
+
+// System record
+KeyWords3:              RollRegions 
+                        NumDataInputPorts NumDataOutputPorts
+
+// Built-In Functions and Values
+KeyWords4:              CAST EXISTS FEVAL FILE_EXISTS FORMAT FIELDNAMES 
+                        GETFIELD GENERATE GENERATE_FILENAME 
+                        GENERATE_FORMATTED_VALUE GENERATE_FUNCTION_EXISTS 
+                        GENERATE_TYPE GENERATE_TYPE_FUNCTION_EXISTS
+                        GET_COMMAND_SWITCH IDNUM IMAG 
+                        INT8MAX INT8MIN INT16MAX INT16MIN INT32MAX INT32MIN INTMIN INTMAX
+                        ISALIAS ISEQUAL ISEMPTY ISFIELD ISINF ISNAN ISFINITE NULL_FILE
+                        NUMTLCFILES OUTPUT_LINES REAL REMOVEFIELD ROLL_ITERATIONS
+                        SETFIELD SIZE STDOUT STRING STRINGOF SYSNAME
+                        TLCFILES TLC_FALSE TLC_TRUE TLC_TIME TLC_VERSION
+                        TYPE UINT8MAX UINT16MAX UINT32MAX UINTMAX
+                        WHITE_SPACE WILL_ROLL
+
+KeyWords5:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clPurple clWindow
+Keyword4Col:            clPurple clWindow
+Keyword5Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
+
