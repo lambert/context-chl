@@ -1,0 +1,84 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// M (MUMPS) Highlighter (Based on "M[UMPS] by Example"
+//                         http://www.jacquardsystems.com/Examples/)
+//
+//       Version 1.0, 20.06.2005
+//       written by Flurin Honegger fhonegger@hispeed.ch
+//
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               MUMPS
+Filter:                 MUMPS files (*.mps)|*.mps
+Description:            M (MUMPS) Highlighter written by Flurin Honegger
+HelpFile:
+CaseSensitive:          1
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z ^$%
+IdentifierChars:        a..z A..Z 0..9 $%
+NumConstBegChars:       0..9
+NumConstChars:          0..9 .
+EscapeChar:
+
+
+// M language control
+KeyWords1:              AB ABLOCK A ASSIGN ASTA ASTART ASTO ASTOP AUNB AUNBLOCK
+                        B BREAK C CLOSE D DO E ELSE ESTA ESTART ESTO ESTOP,
+                        ETR ETRIGGER F FOR G GOTO H HALT HANG I IF J JOB K KILL
+                        KS KSUBSCRIPTS KV KVALUE L LOCK M MERGE N NEW O OPEN
+                        Q QUIT R READ RL RLOAD RS RSAVE S SET TC TCOMMIT TH THEN
+                        TRE TRESTART TRO TROLLBACK TS TSART U USE V VIEW W WRITE
+                        X XECUTE.
+
+// M Functions
+KeyWords2:              $A $ASCII $C $CHAR $D $DATA $DE $DEXTRACT $DP $DPIECE
+                        $E $EXTRACT $F $FIND $FN $FNUMBER $G $GET $H $HOROLOG
+                        $J $JUSTIFY $L $LENGTH $M $MUMPS $NA $NAME $N $NEXT $O $ORDER
+                        $P $PIECE $QL $QLENGTH $QS $QSUBSCRIPT $Q $QUERY $R $RANDOM
+                        $RE $REVERSE $S $SELECT $ST $STACK $T $TEXT $TR $TRANSLATE
+                        $V $VIEW $WF $WFONT $WTF $WTFIT $WTW $WTWIDTH
+
+// M Special Variables
+KeyWords3:
+
+                        $D $DEVICE $EC $ECODE $ER $EREF $ES $ESTACK $ET $ETRAP $H $HOROLOG
+                        $I $IO $IOR $IOREFERENCE $J $JOB $K $KEY $PD $PDISPLAY $PIOR $PIOREFERENCE
+                        $P $PRINCIPAL $Q $QUIT $R $REFERENCE $ST $STACK $S $STORAGE $SY $SYSTEM
+                        $T $TEST $TL $TLEVEL $TR $TRESTART $X $Y
+
+// M Structured System Variables
+KeyWords4:             ^$C ^$CHARACTER ^$D ^$DEVICE ^$DI ^$DISPLAY ^$E ^$EVENT ^$G ^$GLOBAL ^$J
+                       ^$JOB ^$LI ^$LIBRARY ^$L ^$LOCK ^$R ^$ROUTINE ^$S ^$SYSTEM ^$W ^$WINDOW
+                       ^$Y
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clPurple clWindow B
+Keyword4Col:            clTeal clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clRed
