@@ -1,0 +1,61 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Object Constraint Language highlighter 
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               OCL
+Filter:                 OCL files (*.ocl)|*.ocl
+HelpFile:
+CaseSensitive:          1
+LineComment:            --
+BlockCommentBeg:       
+BlockCommentEnd:        
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             \
+
+KeyWords1:              attr context self init derive inv pre post 
+			abs floor and or not xor implies if then else	
+			endif implies in concat size substring let def
+			package endpackage oper true false
+
+KeyWords2:		String Boolean Integer Real Set PropertySet Bag 
+			Sequence Collection
+			
+KeyWords3:		
+			
+KeyWords4:		
+
+KeyWords5:		
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       1
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clBlack clWindow
+StringCol:              clTeal clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWindowText $00D2D2D2
+CurrentLineCol:         clWindowText $00C0FFFF
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:            package
+BlockEndStr:            endpackage
+Keyword4Col:            clBlack clWindow B
+Keyword5Col:            clRed clWindow B
+MatchedBracesCol:       clWindowText clWindow
+Keyword3Col:            clNavy clWindow
+
+
