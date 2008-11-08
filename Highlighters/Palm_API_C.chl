@@ -1,0 +1,3184 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// PALM API / ANSI C higlighter  -  Pierre Brial| harlock@ool.fr
+// version 1.0, 2004.07.01
+// developed from nEUrOO's ANSI C higlighter (neuroo@kouette.com)
+//
+//  1.0  [July 2004]
+//   * Initial release
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               PALM API C
+Filter:                 PALM API C (*.c,*.h)|*.c;*.h
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+
+NumConstBegChars:       0..9 0x
+NumConstChars:          0..9 abcdefABCDEF. // & hexa
+
+EscapeChar:             \
+
+// ANSI C comand
+KeyWords1:
+                        auto
+                        break
+                        case
+                        char
+                        const
+                        continue
+                        default
+                        do
+                        double
+                        else
+                        enum
+                        extern
+                        float
+                        for
+                        goto
+                        if
+                        inline
+                        int
+                        long
+                        register
+                        restrict
+                        return
+                        short
+                        signed
+                        sizeof
+                        static
+                        struct
+                        switch
+                        typedef
+                        union
+                        unsigned
+                        void
+                        volatile
+                        while
+                        _Bool
+                        _Complex
+                        _Imaginary
+
+// functions
+KeyWords2:
+                       main
+                       abort
+                       abs
+                       acos
+                       acosf
+                       acosh
+                       acoshf
+                       acoshl
+                       acosl
+                       asctime
+                       asin
+                       asinf
+                       asinh
+                       asinhf
+                       asinhl
+                       asinl
+                       assert
+                       atan
+                       atan2
+                       atan2f
+                       atan2l
+                       atanf
+                       atanh
+                       atanhf
+                       atanhl
+                       atanl
+                       atexit
+                       atof
+                       atoi
+                       atol
+                       atoll
+                       bsearch
+                       btowc
+                       cabs
+                       cabsf
+                       cabsl
+                       cacos
+                       cacosf
+                       cacosh
+                       cacoshf
+                       cacoshl
+                       cacosl
+                       calloc
+                       carg
+                       cargf
+                       cargl
+                       casin
+                       casinf
+                       casinh
+                       casinhf
+                       casinhl
+                       casinl
+                       catan
+                       catanf
+                       catanh
+                       catanhf
+                       catanhl
+                       catanl
+                       cbrt
+                       cbrtf
+                       cbrtl
+                       ccos
+                       ccosf
+                       ccosh
+                       ccoshf
+                       ccoshl
+                       ccosl
+                       ceil
+                       ceilf
+                       ceill
+                       cexp
+                       cexpf
+                       cexpl
+                       cimag
+                       cimagf
+                       cimagl
+                       clearerr
+                       clock
+                       clog
+                       clogf
+                       clogl
+                       conj
+                       conjf
+                       conjl
+                       copysign
+                       copysignf
+                        copysignl
+                       cos
+                       cosf
+                       cosh
+                       coshf
+                        coshl
+                        cosl
+                        cpow
+                        cpowf
+                         cpowl
+                        cproj
+                        cprojf
+                         cprojl
+                       creal
+                       crealf
+                        creall
+                        csin
+                        csinf
+                        csinh
+                        csinhf
+                         csinhl
+                         csinl
+                        csqrt
+                        csqrtf
+                         csqrtl
+                        ctan
+                        ctanf
+                        ctanh
+                        ctanhf
+                         ctanhl
+                         ctanl
+                       ctime
+                       difftime
+                       div
+                       div
+                       div
+                       erf
+                       erfc
+                       erfcf
+                        erfcl
+                       erff
+                        erfl
+                       exit
+                       exp
+                       exp2
+                       exp2f
+                        exp2l
+                       expf
+                        expl
+                       expm1
+                       expm1f
+                        expm1l
+                       fabs
+                       fabsf
+                        fabsl
+                       fclose
+                       fdim
+                       fdimf
+                        fdiml
+                       feclearexcept
+                       fegetenv
+                       fegetexceptflag
+                       fegetround
+                       feholdexcept
+                       feof
+                       feraiseexcept
+                       ferror
+                       fesetenv
+                       fesetexceptflag
+                       fesetround
+                       fetestexcept
+                       feupdateenv
+                       fflush
+                       fgetc
+                       fgetpos
+                       fgets
+                       fgetwc
+                       fgetws
+                       floor
+                       floorf
+                        floorl
+                       fma
+                       fmaf
+                        fmal
+                       fmax
+                       fmaxf
+                        fmaxl
+                       fmin
+                       fminf
+                        fminl
+                       fmod
+                       fmodf
+                        fmodl
+                       fopen
+                       fpclassify
+                       fprf
+                       fputc
+                       fputs
+                       fputwc
+                       fputws
+                       fread
+                       free
+                       freopen
+                       frexp
+                       frexpf
+                        frexpl
+                       fscanf
+                       fseek
+                       fsetpos
+                        ftell
+                       fwide
+                       fwprf
+                       fwrite
+                       fwscanf
+                       getc
+                       get
+                       getenv
+                       gets
+                       getwc
+                       getw
+                       tm gmtime
+                       hypot
+                       hypotf
+                        hypotl
+                       ilogb
+                       ilogbf
+                       ilogbl
+                       isalnum
+                       isalpha
+                       iscntrl
+                       isdigit
+                       isfinite
+                       isgraph
+                       isgreater
+                       isgreaterequal
+                       isinf
+                       isless
+                       islessequal
+                       islessgreater
+                       islower
+                       isnan
+                       isnormal
+                       ispr
+                       ispunct
+                       isspace
+                       isunordered
+                       isupper
+                       iswalnum
+                       iswalpha
+                       iswcntrl
+                       iswctype
+                       iswdigit
+                       iswgraph
+                       iswlower
+                       iswpr
+                       iswpunct
+                       iswspace
+                       iswupper
+                       iswxdigit
+                       isxdigit
+                        labs
+                       ldexp
+                       ldexpf
+                        ldexpl
+                       lgamma
+                       lgammaf
+                        lgammal
+                         llabs
+                         llr
+                         llrf
+                         llrl
+                         llround
+                         llroundf
+                         llroundl
+                        localeconv
+                        localtime
+                       log
+                       log10
+                       log10f
+                        log10l
+                       log1p
+                       log1pf
+                        log1pl
+                       log2
+                       log2f
+                        log2l
+                       logb
+                       logbf
+                        logbl
+                       logf
+                        logl
+                       jmp
+                        lr
+                        lrf
+                        lrl
+                        lround
+                        lroundf
+                        lroundl
+                       malloc
+                       mbrlen
+                       mbrtowc
+                       mbsinit
+                       mbsrtowcs
+                       mbstowcs
+                       mbtowc
+                       memchr
+                       memcmp
+                       memcpy
+                       memmove
+                       memset
+                       mktime
+                       modf
+                       modff
+                        modfl
+                       nan
+                       nanf
+                        nanl
+                       nearby
+                       nearbyf
+                        nearbyl
+                       nextafter
+                       nextafterf
+                        nextafterl
+                       nexttoward
+                       nexttowardf
+                        nexttowardl
+                       perror
+                       pow
+                       powf
+                        powl
+                       prf
+                       putc
+                       put
+                       puts
+                       putwc
+                       putw
+                       qsort
+                       raise
+                       rand
+                       realloc
+                       remainder
+                       remainderf
+                        remainderl
+                       remove
+                       remquo
+                       remquof
+                        remquol
+                       rename
+                       rewind
+                       r
+                       rf
+                        rl
+                       round
+                       roundf
+                        roundl
+                       scalbln
+                       scalblnf
+                        scalblnl
+                       scalbn
+                       scalbnf
+                        scalbnl
+                       scanf
+                       setbuf
+                       setjmp
+                       setlocale
+                       setvbuf
+                       signbit
+                       sin
+                       sinf
+                       sinh
+                       sinhf
+                        sinhl
+                        sinl
+                       snprf
+                       sprf
+                       sqrt
+                       sqrtf
+                        sqrtl
+                       srand
+                       sscanf
+                       strcat
+                       strchr
+                       strcmp
+                       strcoll
+                       strcpy
+                       strcspn
+                       strerror
+                       strftime
+                       strlen
+                       strncat
+                       strncmp
+                       strncpy
+                       strpbrk
+                       strrchr
+                       strspn
+                       strstr
+                       strtod
+                       strtof
+                       strtoimax
+                       strtok
+                        strtol
+                        strtold
+                         strtoll
+                         strtoul
+                          strtoull
+                       strtoumax
+                       strxfrm
+                       swprf
+                       swscanf
+                       system
+                       tan
+                       tanf
+                       tanh
+                       tanhf
+                        tanhl
+                        tanl
+                       tgamma
+                       tgammaf
+                        tgammal
+                      time
+                      tmpfile
+                       tmpnam
+                       tolower
+                       toupper
+                       towctrans
+                       towlower
+                       towupper
+                       trunc
+                       truncf
+                        truncl
+                       ungetc
+                       ungetwc
+                      va_arg
+                       va_copy
+                       va_end
+                       va_start
+                       vfprf
+                       vfscanf
+                       vfwprf
+                       vfwscanf
+                       vprf
+                       vscanf
+                       vsprf
+                       vsprf
+                       vsscanf
+                       vswprf
+                       vswscanf
+                       vwprf
+                       vwscanf
+                       wcrtomb
+                       wcscat
+                       wcschr
+                       wcscmp
+                       wcscoll
+                       wcscpy
+                       wcscspn
+                       wcsftime
+                       wcslen
+                       wcsncat
+                       wcsncmp
+                       wcsncpy
+                       wcspbrk
+                       wcsrchr
+                       wcsrtombs
+                       wcsspn
+                       wcsstr
+                       wcstod
+                       wcstof
+                       wcstoimax
+                       wcstok
+                        wcstol
+                        wcstold
+                         wcstoll
+                       wcstombs
+                         wcstoul
+                          wcstoull
+                       wcstoumax
+                       wcsxfrm
+                       wctob
+                       wctomb
+                      wctrans
+                      wctype
+                       wmemchr
+                       wmemcmp
+                       wmemcpy
+                       wmemmove
+                       wmemset
+                       wprf
+                       wscanf
+//Palm API and some system variables
+sysAppLaunchCmdTimeChange
+SysFatalAlert
+AlmAlarmProcPtr
+almErrFull
+almErrMemory
+AlmGetAlarm
+AlmGetProcAlarm
+almProcCmdCustom
+AlmProcCmdEnum
+almProcCmdReschedule
+almProcCmdTriggered
+AlmSetAlarm
+AlmSetProcAlarm
+alphaGraffitiSilkscreenArea
+appErrorClass
+appEvtHookKeyMask
+AppInfoPtr
+appInfoStringsRsc
+appStopEvent
+AttnCallbackProc
+AttnCommandArgsType
+AttnCommandType
+AttnDoSpecialEffects
+attnErrMemory
+AttnFlagsType
+AttnForgetIt
+AttnGetAttention
+AttnGetCounts
+AttnIndicatorEnable
+AttnIndicatorEnabled
+AttnIterate
+AttnLaunchCodeArgsType
+AttnLevelType
+AttnListOpen
+AttnNotifyDetailsType
+AttnUpdate
+autoRepeatKeyMask
+badDrawWindowValue
+BarBeamBitmap
+BarCopyBitmap
+BarCutBitmap
+BarDeleteBitmap
+BarInfoBitmap
+BarPasteBitmap
+BarSecureBitmap
+BarUndoBitmap
+BitmapCompressionType
+BitmapDirectInfoType
+BitmapFlagsType
+BitmapPtr
+bitmapRsc
+BitmapType
+BitmapVersionOne
+BitmapVersionTwo
+BitmapVersionZero
+BmpBitsSize
+BmpColortableSize
+BmpCompress
+BmpCreate
+BmpDelete
+BmpGetBits
+BmpGetColortable
+BmpGlueGetBitDepth
+BmpGlueGetDimensions
+BmpGlueGetNextBitmap
+BmpSize
+boldFont
+ButtonFrameType
+byteAttrFirst
+byteAttrLast
+byteAttrMiddle
+byteAttrSingle
+capsLockMask
+DmSeekRecordInCategory
+moving
+Category
+Category
+Category
+CategoryCreateList
+CategoryCreateListV10
+categoryDefaultEditCategoryString
+categoryDefaultEditString
+CategoryEdit
+CategoryEditV10
+CategoryEditV20
+CategoryFind
+CategoryFreeList
+CategoryFreeListV10
+CategoryGetName
+CategoryGetNext
+categoryHideEditCategory
+CategoryInitialize
+CategorySelect
+CategorySelectV10
+CategorySetName
+CategorySetTriggerLabel
+CategoryTruncateName
+charAttrAlNum
+charAttrAlpha
+charAttrCntrl
+charAttrDelim
+charAttrGraph
+charAttrPrint
+charAttrSpace
+charEncoding
+CharEncodingType
+charEncodingUnknown
+ChrHorizEllipsis
+ChrIsHardKey
+ChrNumericSpace
+ClipboardAddItem
+ClipboardAppendItem
+ClipboardFormatType
+ClipboardGetItem
+CncAddProfile
+CncDefineParamID
+CncDefineParamId
+CncDeleteProfile
+CncGetParamType
+CncGetProfileInfo
+CncGetProfileList
+CncGetSystemFlagBitnum
+CncGetTrueParamID
+CncIsFixedLengthParamType
+CncIsSystemFlags
+CncIsSystemRange
+CncIsThirdPartiesRange
+CncIsVariableLengthParamType
+cncNotifyProfileEvent
+CncProfileCloseDB
+CncProfileCount
+CncProfileCreate
+CncProfileDelete
+CncProfileGetIDFromIndex
+CncProfileGetIDFromName
+CncProfileGetIndex
+CncProfileID
+CncProfileNotifyDetailsType
+CncProfileOpenDB
+CncProfileSetCurrent
+CncProfileSettingGet
+CncProfileSettingSet
+ColorTableEntries
+ColorTableType
+commandChr
+commandKeyMask
+ContrastAdjust
+ControlAttrType
+controlKeyMask
+ControlPtr
+ControlStyleType
+ControlType
+CountryType
+Crc16CalcBlock
+creator
+CtlDrawControl
+CtlEnabled
+ctlEnterEvent
+CtlEraseControl
+ctlExitEvent
+CtlGetLabel
+CtlGetSliderValues
+CtlGetValue
+CtlHandleEvent
+CtlHideControl
+CtlHitControl
+CtlNewControl
+CtlNewGraphicControl
+CtlNewSliderControl
+ctlRepeatEvent
+ctlSelectEvent
+CtlSetEnabled
+CtlSetGraphics
+CtlSetLabel
+CtlSetSliderValues
+CtlSetUsable
+CtlSetValue
+CtlShowControl
+CtlValidatePointer
+SysCreateDataBaseList
+DateAdjust
+DateDaysToDate
+DateGlueTemplateToAscii
+DateGlueToDOWDMFormat
+DatePtr
+DateSecondsToDate
+dateStringLength
+dateTableItem
+DateTime
+DateTimePtr
+DateTimeType
+DateToAscii
+DateToDays
+DateToDOWDMFormat
+DateType
+DayDrawDays
+DayDrawDaySelector
+DayHandleEvent
+DayOfMonth
+DayOfWeek
+DayOfWeekType
+daySelectEvent
+DaysInMonth
+defaultAlarmSoundLevel
+defaultAlarmSoundVolume
+defaultAutoLockTime
+defaultAutoLockTimeFlag
+defaultAutoLockType
+defaultAutoOffDuration
+defaultAutoOffDurationSecs
+defaultBoldFont
+defaultGameSoundLevel
+defaultGameSoundVolume
+defaultLargeFont
+defaultSmallFont
+defaultSysSoundLevel
+defaultSysSoundVolume
+defaultSystemFont
+DeleteProc
+DeviceInfoType
+DeviceInfoType
+EvtProcessSoftKeyStroke
+DirectionType
+DlkGetSyncInfo
+dmAllCategories
+dmAllHdrAttrs
+dmAllRecAttrs
+DmArchiveRecord
+DmAttachRecord
+DmAttachResource
+dmCategoryLength
+DmCloseDatabase
+DmComparF
+DmCreateDatabase
+DmCreateDatabaseFromImage
+DmDatabaseInfo
+DmDatabaseProtect
+DmDatabaseSize
+dmDBNameLength
+DmDeleteCategory
+DmDeleteDatabase
+DmDeleteRecord
+DmDetachRecord
+DmDetachResource
+dmErrDatabaseNotProtected
+dmErrRecordArchived
+DmFindDatabase
+DmFindRecordByID
+DmFindResource
+DmFindResourceType
+DmFindSortPosition
+DmFindSortPositionV10
+DmGet1Resource
+DmGetAppInfoID
+DmGetDatabase
+DmGetDatabaseLockState
+DmGetLastErr
+DmGetNextDatabaseByTypeCreator
+DmGetRecord
+DmGetResource
+DmGetResourceIndex
+dmHdrAttrAppInfoDirty
+dmHdrAttrBackup
+dmHdrAttrBundle
+dmHdrAttrCopyPrevention
+dmHdrAttrHidden
+dmHdrAttrLaunchableData
+dmHdrAttrOKToInstallNewer
+dmHdrAttrOpen
+dmHdrAttrReadOnly
+dmHdrAttrRecyclable
+dmHdrAttrResDB
+dmHdrAttrResetAfterInstall
+dmHdrAttrStream
+DmInsertionSort
+dmMaxRecordIndex
+dmModeExclusive
+dmModeLeaveOpen
+dmModeReadOnly
+dmModeReadWrite
+dmModeShowSecret
+dmModeWrite
+DmMoveCategory
+DmMoveRecord
+DmNewHandle
+DmNewRecord
+DmNewResource
+DmNextOpenDatabase
+DmNextOpenResDatabase
+DmNumDatabases
+DmNumRecords
+DmNumRecordsInCategory
+DmNumResources
+DmOpenDatabase
+DmOpenDatabaseByTypeCreator
+DmOpenDatabaseInfo
+DmOpenDBNoOverlay
+DmOpenRef
+DmPositionInCategory
+DmQueryNextInCategory
+DmQueryRecord
+DmQuickSort
+dmRecAttrBusy
+dmRecAttrCategoryMask
+dmRecAttrDelete
+dmRecAttrDirty
+dmRecAttrSecret
+dmRecNumCategories
+DmRecordInfo
+DmReleaseRecord
+DmReleaseResource
+DmRemoveRecord
+DmRemoveResource
+DmRemoveSecretRecords
+DmResID
+DmResizeRecord
+DmResizeResource
+DmResourceInfo
+DmResType
+DmSearchRecord
+DmSearchResource
+DmSearchStatePtr
+DmSearchStateType
+dmSeekBackward
+dmseekForward
+DmSeekRecordInCategory
+DmSet
+DmSetDatabaseInfo
+DmSetRecordInfo
+DmSetResourceInfo
+DmStrCopy
+dmSysOnlyHdrAttrs
+dmSysOnlyRecAttrs
+dmUnfiledCategory
+DmWrite
+DmWriteCheck
+doubleTapKeyMask
+dowDateStringLength
+dowLongDateStrLength
+SysTaskDelay
+drawItemsCallback
+DrawStateType
+DrvEntryPoint
+DrvrInfoType
+DrvrRcvQType
+DrvrStatusEnum
+editingStrID
+ErrAlert
+ErrCatch
+ErrDisplay
+ErrDisplayFileLineMsg
+ErrEndCatch
+ErrExceptionList
+ErrExceptionType
+ErrFatalDisplayIf
+errNone
+ErrNonFatalDisplayIf
+ERROR_CHECK_FULL
+ERROR_CHECK_LEVEL
+ERROR_CHECK_NONE
+ERROR_CHECK_PARTIAL
+ErrorBase
+ErrorMgr
+ErrThrow
+ErrTry
+event
+Event
+Event
+EventPtr
+events
+eventsEnum
+EventType
+EvtAddEventToQueue
+EvtAddUniqueEventToQueue
+EvtCopyEvent
+EvtDequeuePenPoint
+EvtDequeuePenStrokeInfo
+EvtEnableGraffiti
+EvtEnqueueKey
+EvtEventAvail
+EvtFlushKeyQueue
+EvtFlushNextPenStroke
+EvtFlushPenQueue
+EvtGetEvent
+EvtGetPen
+EvtGetPenBtnList
+EvtKeyQueueEmpty
+EvtKeyQueueSize
+EvtPenQueueSize
+EvtProcessSoftKeyStroke
+EvtResetAutoOffTimer
+EvtSetAutoOffCmd
+EvtSysEventAvail
+evtWaitForever
+EvtWakeup
+EvtWakeupWithoutNilEvent
+ExgAccept
+exgAskCancel
+exgAskOk
+ExgAskParamType
+ExgAskResultType
+exgBeamPrefix
+exgBeamScheme
+ExgConnect
+ExgControl
+ExgDBDeleteProcPtr
+ExgDBRead
+ExgDBWrite
+ExgDBWriteProcPtr
+ExgDialogInfoType
+ExgDisconnect
+ExgDoDialog
+exgErrNoKnownTarget
+exgErrNotSupported
+ExgGet
+exgGet
+ExgGetDefaultApplication
+ExgGetRegisteredApplications
+ExgGetRegisteredTypes
+ExgGetTargetApplication
+ExgGoToType
+ExgLibAccept
+exgLibAPIVersion
+ExgLibClose
+ExgLibConnect
+ExgLibControl
+exgLibCtlGetPreview
+exgLibCtlGetTitle
+exgLibCtlGetVersion
+exgLibCtlSpecificOp
+ExgLibDisconnect
+ExgLibGet
+ExgLibHandleEvent
+ExgLibOpen
+ExgLibPut
+ExgLibReceive
+ExgLibRequest
+ExgLibSend
+ExgLibSleep
+exgLibSmsIncompleteDeleteOp
+exgLibSmsIncompleteGetCountOp
+exgLibSmsPrefDisplayOp
+exgLibSmsPrefGetDefaultOp
+exgLibSmsPrefGetOp
+exgLibSmsPrefSetOp
+ExgLibWake
+ExgLocalLib
+exgLocalOpAccept
+exgLocalOpGet
+exgLocalOpGetSender
+exgLocalOpNone
+exgLocalOpPut
+ExgLocalOpType
+exgLocalPrefix
+exgLocalScheme
+ExgLocalSocketInfoType
+exgMaxDescriptionLength
+exgMaxTitleLen
+exgMaxTypeLength
+exgMemError
+ExgMgr
+exgNoAsk
+ExgNotifyGoto
+ExgNotifyPreview
+ExgNotifyReceive
+exgPreviewDialog
+exgPreviewDraw
+exgPreviewFirstUser
+ExgPreviewInfoType
+exgPreviewLastUser
+exgPreviewLongString
+exgPreviewQuery
+exgPreviewShortString
+ExgPut
+ExgReceive
+exgRegCreatorID
+exgRegExtensionID
+ExgRegisterData
+ExgRegisterDatatype
+ExgRegisterDataV35
+exgRegSchemeID
+exgRegTypeID
+ExgRequest
+ExgSend
+exgSendBeamPrefix
+exgSendPrefix
+exgSendScheme
+ExgSetDefaultApplication
+ExgSocketType
+exgTitleBufferSize
+exgUnwrap
+expCapabilityHasStorage
+expCapabilityReadOnly
+expCapabilitySerial
+ExpCardGetSerialPort
+ExpCardInfo
+ExpCardInfoType
+ExpCardPresent
+expErrCardBadSector
+expErrCardNoSectorReadWrite
+expErrCardNotPresent
+expErrCardProtectedSector
+expErrCardReadOnly
+expErrEnumerationEmpty
+expErrIncompatibleAPIVer
+expErrInvalidSlotRefNum
+expErrNotEnoughPower
+expErrNotOpen
+expErrSlotDeallocated
+expErrStillOpen
+expErrUnimplemented
+expErrUnsupportedOperation
+expHandledSound
+expHandledVolume
+expMediaType_Any
+expMediaType_CompactFlash
+expMediaType_MacSim
+expMediaType_MemoryStick
+expMediaType_MultiMediaCard
+expMediaType_PoserHost
+expMediaType_RAMDisk
+expMediaType_SecureDigital
+expMediaType_SmartMedia
+ExpSlotDriverInstall
+ExpSlotDriverRemove
+ExpSlotEnumerate
+ExpSlotLibFind
+fgetc
+fgets
+FieldAttrType
+FieldPtr
+FieldType
+FileClearerr
+FileClose
+FileControl
+FileDelete
+FileDmRead
+FileEOF
+FileError
+FileFlush
+FileGetLastError
+FileInfoType
+FileOpen
+FileOpEnum
+FileOriginEnum
+FileRead
+FileRef
+FileRewind
+FileSeek
+FileTell
+FileTruncate
+FileWrite
+Find
+FindDrawHeader
+FindGetLineBounds
+FindParamsType
+FindSaveMatch
+FindStrInStr
+FldCalcFieldHeight
+fldChangedEvent
+FldCompactText
+FldCopy
+FldCut
+FldDelete
+FldDirty
+FldDrawField
+fldEnterEvent
+FldEraseField
+FldFreeMemory
+FldGetAttributes
+FldGetBounds
+FldGetFont
+FldGetInsPtPosition
+FldGetMaxChars
+FldGetNumberOfBlankLines
+FldGetScrollPosition
+FldGetScrollValues
+FldGetSelection
+FldGetTextAllocatedSize
+FldGetTextHandle
+FldGetTextHeight
+FldGetTextLength
+FldGetTextPtr
+FldGetVisibleLines
+FldGrabFocus
+FldHandleEvent
+fldHeightChangedEvent
+FldInsert
+FldMakeFullyVisible
+FldNewField
+FldPaste
+FldRecalculateField
+FldReleaseFocus
+FldScrollable
+FldScrollField
+FldSendChangeNotification
+FldSendHeightChangeNotification
+FldSetAttributes
+FldSetBounds
+FldSetDirty
+FldSetFont
+FldSetInsertionPoint
+FldSetInsPtPosition
+FldSetMaxChars
+FldSetMaxVisibleLines
+FldSetScrollPosition
+FldSetSelection
+FldSetText
+FldSetTextAllocatedSize
+FldSetTextHandle
+FldSetTextPtr
+FldSetUsable
+FldUndo
+FldWordWrap
+FloatMgr
+FlpAToF
+FlpBufferCorrectedAdd
+FlpCorrectedAdd
+FlpFToA
+FlpSetNegative
+FlpBufferAToF
+FlpBufferCorrectedSub
+FlpCorrectedSub
+FlpGetSign
+FlpIsZero
+FlpNegate
+FlpSetPositive
+FloatMgrOld
+FntAverageCharWidth
+FntBaseLine
+FntCharHeight
+FntCharsInWidth
+FntCharsWidth
+FntCharWidth
+FntDefineFont
+FntDescenderHeight
+FntGetFont
+FntGetFontPtr
+FntGetScrollValues
+FntGlueGetDefaultFontID
+FntGlueWCharWidth
+FntGlueWidthToOffset
+FntLineHeight
+FntLineWidth
+FntSetFont
+FntWCharWidth
+FntWidthToOffset
+FntWordWrap
+FntWordWrapReverseNLines
+FrmGetFocus
+FrmSetFocus
+Font
+FontDefaultType
+FontSelect
+FontSelect
+form
+form
+FormType
+Form
+FormActiveStateType
+FormAttrType
+FormBitmapType
+FormCheckResponseFuncType
+FormEventHandlerType
+FormFrameType
+FormGadgetAttrType
+formGadgetDeleteCmd
+formGadgetDrawCmd
+formGadgetEraseCmd
+formGadgetHandleEventCmd
+FormGadgetHandlerType
+FormGadgetType
+FormLabelType
+FormLineType
+FormObjAttrType
+FormObjectKind
+FormObjectType
+FormObjListType
+FormPopupType
+FormPtr
+FormRectangleType
+FormTitleType
+FormType
+FplAdd
+FplAToF
+FplBase10Info
+FplDiv
+FplFloatToLong
+FplFloatToULong
+FplFree
+FplFToA
+FplInit
+FplLongToFloat
+FplMul
+FplSub
+fprintf
+fputc
+fputs
+FrameBitsType
+FrameType
+FrmAlert
+FrmCloseAllForms
+frmCloseEvent
+FrmCopyLabel
+FrmCopyTitle
+FrmCustomAlert
+FrmCustomResponseAlert
+FrmDeleteForm
+FrmDispatchEvent
+FrmDoDialog
+FrmDrawForm
+FrmEraseForm
+frmGadgetEnterEvent
+frmGadgetMiscEvent
+FrmGetActiveField
+FrmGetActiveForm
+FrmGetActiveFormID
+FrmGetControlGroupSelection
+FrmGetControlValue
+FrmGetFirstForm
+FrmGetFocus
+FrmGetFormBounds
+FrmGetFormId
+FrmGetFormPtr
+FrmGetGadgetData
+FrmGetLabel
+FrmGetNumberOfObjects
+FrmGetObjectBounds
+FrmGetObjectId
+FrmGetObjectIndex
+FrmGetObjectPosition
+FrmGetObjectPtr
+FrmGetObjectType
+FrmGetTitle
+FrmGetWindowHandle
+FrmGlueGetActiveField
+frmGotoEvent
+FrmGotoForm
+FrmGraffitiStateType
+FrmHandleEvent
+FrmHelp
+FrmHideObject
+FrmInitForm
+frmInvalidObjectId
+frmLoadEvent
+FrmNewBitmap
+FrmNewForm
+FrmNewGadget
+FrmNewGsi
+FrmNewLabel
+frmNoSelectedControl
+frmOpenEvent
+FrmPointInTitle
+FrmPopupForm
+frmRedrawUpdateCode
+FrmRemoveObject
+frmResponseCreate
+frmResponseQuit
+FrmRestoreActiveState
+FrmReturnToForm
+FrmSaveActiveState
+FrmSaveAllForms
+frmSaveEvent
+FrmSetActiveForm
+FrmSetCategoryLabel
+FrmSetControlGroupSelection
+FrmSetControlValue
+FrmSetEventHandler
+FrmSetFocus
+FrmSetGadgetData
+FrmSetGadgetHandler
+FrmSetMenu
+FrmSetObjectBounds
+FrmSetObjectPosition
+FrmSetTitle
+FrmShowObject
+frmTitleEnterEvent
+frmTitleSelectEvent
+frmUpdateEvent
+FrmUpdateForm
+FrmUpdateScrollers
+FrmValidatePtr
+FrmVisible
+ftrErrNoSuchFeature
+FtrGet
+FtrGetByIndex
+FtrPtrFree
+FtrPtrNew
+FtrPtrResize
+FtrSet
+FtrUnregister
+getchar
+GetCharAttr
+GetCharCaselessValue
+GetCharSortValue
+gethostname
+gets
+GetSize
+GetSpace
+FindDrawHeader
+FindGetLineBounds
+GoToParamsType
+EvtDequeuPenPoint
+Graffiti
+GraffitiReference
+GraffitiShift
+GraffitiUI
+GraphicControlType
+GraphicStatePtr
+GrfAddMacro
+GrfAddPoint
+GrfCleanState
+GrfDeleteMacro
+GrfFilterPoints
+GrfFindBranch
+GrfFlushPoints
+GrfGetAndExpandMacro
+GrfGetGlyphMapping
+GrfGetMacro
+GrfGetMacroName
+GrfGetNumPoints
+GrfGetPoint
+GrfGetState
+GrfInitState
+GrfMatch
+GrfMatchGlyph
+GrfProcessStroke
+GrfSetState
+GsiEnable
+GsiEnabled
+GsiInitialize
+GsiSetLocation
+GsiSetShiftState
+Helper
+HelperNotifyEnumerateListType
+HelperNotifyEventType
+HelperNotifyExecuteType
+HelperNotifyValidateType
+HelperServiceClass
+HelperServiceEMailDetailsType
+HelperServiceSMSDetailsType
+HelperServiceSMSDetailType
+HostControl
+hostent
+HostGremlinIsRunning
+IndexedColorType
+INetCacheEntryType
+INetCacheInfoType
+inetCfgName
+inetCompressionType
+INetCompressionTypeEnum
+INetConfigNameType
+inetContentType
+INetContentTypeEnum
+inetHTTPAttr
+INetHTTPAttrEnum
+INetLibCacheGetObject
+INetLibCacheList
+INetLibCheckAntennaState
+INetLibClose
+INetLibConfigAliasGet
+INetLibConfigAliasSet
+INetLibConfigDelete
+INetLibConfigIndexFromName
+INetLibConfigList
+INetLibConfigMakeActive
+INetLibConfigRename
+INetLibConfigSaveAs
+INetLibGetEvent
+INetLibOpen
+INetLibSettingGet
+INetLibSettingSet
+INetLibSockClose
+INetLibSockConnect
+INetLibSockHTTPAttrGet
+INetLibSockHTTPAttrSet
+INetLibSockHTTPReqCreate
+INetLibSockHTTPReqSend
+INetLibSockOpen
+INetLibSockRead
+INetLibSockSettingGet
+INetLibSockSettingSet
+INetLibSockStatus
+INetLibURLCrack
+INetLibURLGetInfo
+INetLibURLOpen
+INetLibURLsAdd
+INetLibWiCmd
+INetMgr
+inetOpenURLFlag
+inetScheme
+INetSchemeEnum
+inetSetting
+INetSettingEnum
+inetSockReadyEvent
+inetSockSetting
+INetSockSettingEnum
+inetSockStatusChangeEvent
+inetStatus
+INetStatusEnum
+InetURLInfo
+inetURLInfoFlag
+InetURLType
+InsPoint
+InsPtEnable
+InsPtEnabled
+InsPtGetHeight
+InsPtGetLocation
+InsPtSetHeight
+InsPtSetLocation
+international
+Internet
+intlErrInvalidSelector
+IntlGetRoutineAddress
+IntlGlue
+IntlGlueGetRoutineAddress
+IntlMgr
+IntlSetRoutineAddress
+IrAdvanceCredit
+IrBind
+IrCallbackParms
+IrClose
+IrConnectIrLap
+IrConnectReq
+IrConnectRsp
+IrDataReq
+IrDisconnectIrLap
+IrDiscoverReq
+irGetScanningMode
+irGetStatistics
+IrIAS_Add
+IrIAS_GetInteger
+IrIAS_GetIntLsap
+IrIAS_GetObjectID
+IrIAS_GetOctetString
+IrIAS_GetOctetStringLen
+IrIAS_GetType
+IrIAS_GetUserString
+IrIAS_GetUserStringCharSet
+IrIAS_GetUserStringLen
+IrIAS_Next
+IrIAS_Query
+IrIAS_SetDeviceName
+IrIAS_StartResult
+IrIasQueryCallback
+IrIsIrLapConnected
+IrIsMediaBusy
+IrIsNoProgress
+IrIsRemoteBusy
+irlib
+IrLocalBusy
+IrMaxRxSize
+IrMaxTxSize
+IrOpen
+irRestoreScanning
+irSetBaudMask
+IrSetConTypeLMP
+IrSetConTypeTTP
+IrSetDeviceInfo
+irSetScanningMode
+irSetSerialMode
+irSetSupported
+irSuppressScanning
+IrTestReq
+IrUnbind
+ISO
+kAttnCommandCustomEffect
+kAttnCommandDrawDetail
+kAttnCommandDrawList
+kAttnCommandGoThere
+kAttnCommandGotIt
+kAttnCommandIterate
+kAttnCommandPlaySound
+kAttnCommandSnooze
+kAttnFlagsAllBits
+kAttnFlagsAlwaysCustomEffect
+kAttnFlagsAlwaysLED
+kAttnFlagsAlwaysSound
+kAttnFlagsAlwaysVibrate
+kAttnFlagsCapabilitiesMask
+kAttnFlagsCustomEffectBit
+kAttnFlagsEverything
+kAttnFlagsHasCustomEffect
+kAttnFlagsHasLED
+kAttnFlagsHasSound
+kAttnFlagsHasVibrate
+kAttnFlagsLEDBit
+kAttnFlagsNoCustomEffect
+kAttnFlagsNoLED
+kAttnFlagsNoSound
+kAttnFlagsNothing
+kAttnFlagsNoVibrate
+kAttnFlagsSoundBit
+kAttnFlagsUserSettingsMask
+kAttnFlagsUserWantsCustomEffect
+kAttnFlagsUserWantsLED
+kAttnFlagsUserWantsSound
+kAttnFlagsUserWantsVibrate
+kAttnFlagsUseUserSettings
+kAttnFlagsVibrateBit
+kAttnFtrCapabilities
+kAttnFtrCreator
+kAttnLevelInsistent
+kAttnLevelSubtle
+kCncDeviceKindLocalNetwork
+kCncDeviceKindModem
+kCncDeviceKindPhone
+kCncDeviceKindSerial
+kCncErrDBAccessFailed
+kCncErrProfileParamNotFound
+kCncFtrCncMgrVersion
+kCncMgrVersion
+kCncNotifyCreateRequest
+kCncNotifyDeleteRequest
+kCncNotifyModifyRequest
+kCncNotifyUpdateListRequest
+kCncParam_PSDCreator
+kCncParam_PSDName
+kCncParam_PSDParameterBuffer
+kCncParam_PSDType
+kCncParamBaud
+kCncParamBluetoothDeviceAddr
+kCncParamBluetoothDeviceName
+kCncParamBuffer
+kCncParamCountryIndex
+kCncParamDeviceKind
+kCncParamDialingMode
+kCncParamFlowControl
+kCncParamInitString
+kCncParamIntlModemCountryStringList
+kCncParamIntlModemResetStringList
+kCncParamInvisible
+kCncParamLocked
+kCncParamName
+kCncParamNoDetails
+kCncParamNonEditable
+kCncParamPort
+kCncParamReadOnly
+kCncParamReceiveTimeOut
+kCncParamResetString
+kCncParamSerialPortFlags
+kCncParamString
+kCncParamSystemFlag
+kCncParamSystemFlags
+kCncParamThirdPartiesRange
+kCncParamTimeOut
+kCncParamTTCreator
+kCncParamTTType
+kCncParamUInt16
+kCncParamUInt32
+kCncParamUInt8
+kCncParamVersion
+kCncParamVolume
+kCncProfileClassicResetStringSize
+kCncProfileNameSize
+kCncProfileUsualInitStringSize
+kCncProfileUsualResetStringSize
+kCncProfileVersion
+kDrvrVersion
+kDrvrVersion3
+kDrvrVersion4
+keyBitPageDown
+keyBitPageUp
+keyBitPower
+KeyCurrentState
+keyDownEvent
+KeyMgr
+KeyRates
+KeySetMask
+kHelperNotifyActionCodeEnumerate
+kHelperNotifyActionCodeExecute
+kHelperNotifyActionCodeValidate
+kHelperServiceClassIDEMail
+kHelperServiceClassIDFax
+kHelperServiceClassIDSMS
+kHelperServiceClassIDVoiceDial
+kMaxCountryNameLen
+kMaxCurrencyNameLen
+kMaxCurrencySymbolLen
+labelTableItem
+LanguageType
+largeBoldFont
+SysBroadcastActionCode
+Launcher
+LEVENT_DATA_IND
+LEVENT_DISCOVERY_CNF
+LEVENT_LAP_CON_CNF
+LEVENT_LAP_CON_IND
+LEVENT_LAP_DISCON_IND
+LEVENT_LM_CON_CNF
+LEVENT_LM_CON_IND
+LEVENT_LM_DISCON_IND
+LEVENT_PACKET_HANDLED
+LEVENT_STATUS_IND
+LEVENT_TEST_CNF
+LEVENT_TEST_IND
+libEvtHookKeyMask
+libPalmOSGlue
+LineInfoPtr
+LineInfoType
+drawItemsCallback
+List
+ListAttrType
+ListDrawDataFuncType
+ListPtr
+ListType
+lLanguageName
+lmAnyCountry
+lmAnyLanguage
+lmChoice
+lmErrBadLocaleIndex
+lmErrBadLocaleSettingChoice
+lmErrSettingDataOverflow
+lmErrUnknownLocale
+LmGetLocaleSetting
+LmGlueGetLocaleSetting
+LmGlueGetNumLocales
+LmGlueLocaleToIndex
+LmLocaleType
+LocaleMgr
+Localize
+LocGetNumberSeparators
+longDateStrLength
+LstDrawList
+lstEnterEvent
+LstEraseList
+lstExitEvent
+LstGetNumberOfItems
+LstGetSelection
+LstGetSelectionText
+LstGetTopItem
+LstGetVisibleItems
+LstGlueGetTopItem
+LstHandleEvent
+LstMakeItemVisible
+LstNewList
+LstPopupList
+LstScrollList
+lstSelectEvent
+LstSetDrawFunction
+LstSetHeight
+LstSetListChoices
+LstSetPosition
+LstSetSelection
+LstSetTopItem
+maxCategoryWidthID
+maxFieldLines
+maxFieldTextLen
+maxStrIToALen
+MdmDial
+mdmErrBusy
+mdmErrCmdError
+mdmErrNoDCD
+mdmErrNoTone
+mdmErrUserCan
+MdmHangUp
+MeasurementSystemType
+MemCardInfo
+MemCmp
+MemDebugMode
+memErrChunkLocked
+memErrInvalidParam
+memErrNotEnoughSpace
+MemHandleCardNo
+MemHandleDataStorage
+MemHandleFree
+MemHandleHeapID
+MemHandleLock
+MemHandleNew
+MemHandleResize
+MemHandleSetOwner
+MemHandleSize
+MemHandleSsetOwner
+MemHandleToLocalID
+MemHandleUnlock
+MemHeapCheck
+MemHeapCompact
+MemHeapDynamic
+memHeapFlagReadOnly
+MemHeapFlags
+MemHeapFreeBytes
+MemHeapID
+MemHeapScramble
+MemHeapSize
+MemLocalIDKind
+MemLocalIDToGlobal
+MemLocalIDToGlobalNear
+MemLocalIDToLockedPtr
+MemLocalIDToPtr
+MemMove
+MemNumCards
+MemNumHeaps
+MemNumRAMHeaps
+MemoryMgr
+MemPtrCardNo
+MemPtrDataStorage
+MemPtrFree
+MemPtrHeapID
+MemPtrNew
+MemPtrRecoverHandle
+MemPtrResize
+MemPtrSetOwner
+MemPtrSize
+MemPtrSsetOwner
+MemPtrToLocalID
+MemPtrUnlock
+MemSet
+MemSetDebugMode
+MemStoreInfo
+Menu
+menu
+MenuAddItem
+MenuBarAttrType
+MenuBarPtr
+MenuBarType
+menuButtonCause
+menuChr
+menuCloseEvent
+MenuCmdBarAddButton
+MenuCmdBarButtonType
+MenuCmdBarDisplay
+MenuCmdBarGetButtonData
+menuCmdBarMaxTextLength
+menuCmdBarOnLeft
+menuCmdBarOnRight
+menuCmdBarOpenEvent
+menuCmdBarResultMenuItem
+MenuCmdBarResultType
+MenuCmdBarType
+menuCommandCause
+MenuDispose
+MenuDrawMenu
+MenuEraseStatus
+menuErrNoMenu
+menuErrNotFound
+menuErrOutOfMemory
+menuErrSameId
+menuErrTooManyItems
+menuEvent
+MenuGetActiveMenu
+MenuHandleEvent
+MenuHideItem
+MenuInit
+MenuItemType
+menuOpenEvent
+MenuPullDownPtr
+MenuPullDownType
+FrmSetMenu
+MenuSeparatorChar
+MenuSetActiveMenu
+MenuSetActiveMenuRscID
+MenuShowItem
+netErrAlreadyOpen
+netErrAuthFailure
+netErrBadScript
+netErrBufTooSmall
+netErrBufWrongSize
+netErrDNSAborted
+netErrDNSAllocationFailure
+netErrDNSBadName
+netErrDNSBadProtocol
+netErrDNSFormat
+netErrDNSImpossible
+netErrDNSIrrelevant
+netErrDNSLabelTooLong
+netErrDNSNameTooLong
+netErrDNSNIY
+netErrDNSNonexistantName
+netErrDNSNoPort
+netErrDNSNoRecursion
+netErrDNSNoRRS
+netErrDNSNotInLocalCache
+netErrDNSRefused
+netErrDNSServerFailure
+netErrDNSTimeout
+netErrDNSTruncated
+netErrDNSUnreachable
+netErrInterfaceDown
+netErrInterfaceNotFound
+netErrInternal
+netErrInvalidInterface
+netErrInvalidSettingSize
+netErrIPCantFragment
+netErrIPktOverflow
+netErrIPNoDst
+netErrIPNoRoute
+netErrIPNoSrc
+netErrMessageTooBig
+netErrNoInterfaces
+netErrNoMoreSockets
+netErrNoMultiPacketAddr
+netErrNoMultiPktAddr
+netErrNotOpen
+netErrOutOfCmdBlocks
+netErrOutOfMemory
+netErrOutOfPackets
+netErrOutOfResources
+netErrParamErr
+netErrPortInUse
+netErrPPPAddressRefused
+netErrPPPTimeout
+netErrPrefNotFound
+netErrQuietTimeNotElapsed
+netErrReadOnlySetting
+netErrSocketAlreadyConnected
+netErrSocketBusy
+netErrSocketClosedByRemote
+netErrSocketInputShutdown
+netErrSocketNotConnected
+netErrSocketNotListening
+netErrSocketNotOpen
+netErrStillOpen
+netErrTimeout
+netErrTooManyInterfaces
+netErrTooManyTCPConnections
+netErrUnimplemented
+netErrUnknownProtocol
+netErrUnknownService
+netErrUnknownSetting
+netErrUnreachableDest
+netErrUserCancel
+netErrWouldBlock
+netErrWrongSocketType
+netFDIsSet
+netFDSet
+netFDSetSize
+NetFDSetType
+netFDZero
+NetHostInfoBufType
+NetHostInfoType
+NetHToNL
+NetHToNS
+netIFMediaDown
+netIFMediaUp
+NetIFSettingEnum
+netIOFlagDontRoute
+netIOFlagOutOfBand
+netIOFlagPeek
+NetIOParamType
+NetIOVecPtr
+NetIOVecType
+NetIPAddr
+NetLibAddrAToIN
+NetLibAddrINToA
+NetLibClose
+NetLibConnectionRefresh
+NetLibDmReceive
+NetLibFinishCloseWait
+NetLibGetHostByAddr
+NetLibGetHostByName
+NetLibGetMailExchangeByName
+NetLibGetServByName
+NetLibIFAttach
+NetLibIFDetach
+NetLibIFDown
+NetLibIFGet
+NetLibIFSettingGet
+NetLibIFSettingSet
+NetLibIFUp
+NetLibMaster
+NetLibOpen
+NetLibOpenCount
+NetLibReceive
+NetLibReceivePB
+NetLibSelect
+NetLibSend
+NetLibSendPB
+NetLibSettingGet
+NetLibSettingSet
+NetLibSocketAccept
+NetLibSocketAddr
+NetLibSocketBind
+NetLibSocketClose
+NetLibSocketConnect
+NetLibSocketListen
+NetLibSocketOpen
+NetLibSocketOptionGet
+NetLibSocketOptionSet
+NetLibSocketShutdown
+NetLibTracePrintF
+NetLibTracePutS
+NetMasterEnum
+netMasterICMPStats
+netMasterInterfaceInfo
+netMasterInterfaceStats
+netMasterIPStats
+NetMasterPBPtr
+netMasterTCPStats
+netMasterTraceEventGet
+netMasterUDPStats
+NetMgr
+NetNToHL
+NetNToHS
+NetServInfoBufType
+NetServInfoType
+NetSettingEnum
+NetSocket
+NetSocketAddrEnum
+netSocketAddrINET
+NetSocketAddrINType
+netSocketAddrRaw
+NetSocketAddrRawType
+NetSocketAddrType
+netSocketDirBoth
+NetSocketDirEnum
+netSocketDirInput
+netSocketDirOutput
+NetSocketLingerType
+NetSocketOptEnum
+NetSocketOptLevelEnum
+netSocketProtoIPRAW
+netSocketProtoIPTCP
+netSocketProtoIPUDP
+NetSocketRef
+NetSocketTypeEnum
+netTracingAppMsgs
+netTracingErrors
+netTracingFuncs
+netTracingMsgs
+netTracingPkts
+NetUReadN
+NetUTCPOpen
+NetUWriteN
+nilEvent
+noFocus
+noListSelection
+noMenuItemSelection
+noMenuSelection
+noPreferenceFound
+noteTextTableItem
+notifyDetailsP
+NotifyMgr
+NumberFormatType
+numericGraffitiSilkscreenArea
+numericTableItem
+numLockMask
+numUneditableCategories
+omErrBadOverlayDBName
+omErrBaseRequiresOverlay
+omErrDatabaseRequiresOverlay
+omErrInvalidLocaleIndex
+omErrNoNextSystemLocale
+omErrUnknownLocale
+omFtrCreator
+omFtrDefaultLocale
+omFtrShowErrorsFlag
+OmGetCurrentLocale
+OmGetIndexedLocale
+OmGetNextSystemLocale
+OmGetRoutineAddress
+OmGetSystemLocale
+OmGlueGetCurrentLocale
+OmGlueGetSystemLocale
+OmLocaleToOverlayDBName
+OmLocaleType
+OmOverlayDBNameToLocale
+omOverlayDBType
+omOverlayRscID
+omOverlayRscType
+OmSelector
+OmSetSystemLocale
+PdiDefineReaderDictionary
+PdiDefineResizing
+PdiDefineWriterDictionary
+PdiEnterObject
+PdiLibClose
+PdiLibOpen
+PdiParameterPairTest
+PdiReaderDelete
+PdiReaderNew
+PdiReaderType
+PdiReadParameter
+PdiReadProperty
+PdiReadPropertyField
+PdiReadPropertyName
+PdiSetCharset
+PdiSetEncoding
+PdiWriteBeginObject
+PdiWriteEndObject
+PdiWriteParameter
+PdiWriteParameterStr
+PdiWriteProperty
+PdiWritePropertyBinaryValue
+PdiWritePropertyFields
+PdiWritePropertyStr
+PdiWritePropertyValue
+PdiWriterDelete
+PdiWriterNew
+PdiWriterType
+PenBtnInfoType
+PenCalibrate
+penDownEvent
+PenMgr
+penMoveEvent
+PenResetCalibration
+penUpEvent
+PhoneLookup
+PhoneNumberLookup
+PhoneNumberLookupCustom
+PilotMain
+PluginCallbackProcType
+PluginCmdPtr
+PluginCmdType
+PluginExecCmdType
+PluginInfoPtr
+PluginInfoType
+pluginMaxNumOfCmds
+pluginNetLibCallUIProc
+pluginNetLibCheckCancelStatus
+pluginNetLibConnLog
+pluginNetLibDoNothing
+pluginNetLibGetSerLibRefNum
+pluginNetLibGetUserName
+pluginNetLibGetUserPwd
+pluginNetLibPromptUser
+pluginNetLibReadBytes
+pluginNetLibWriteBytes
+PointType
+popSelectEvent
+popupTriggerTableItem
+poweredOnKeyMask
+prefAlarmSoundVolume
+preferenceDataVer2
+preferenceDataVer3
+preferenceDataVer4
+preferenceDataVer5
+preferenceDataVer6
+preferenceDataVer8
+preferenceDataVer9
+preferenceDataVerLatest
+preferenceDataVersion
+Preferences
+prefGameSoundVolume
+PrefGetAppPreferences
+PrefGetAppPreferencesV10
+PrefGetPreference
+PrefGetPreferences
+PrefOpenPreferenceDB
+PrefOpenPreferenceDBV10
+PrefSetAppPreferences
+PrefSetAppPreferencesV10
+PrefSetPreference
+PrefSetPreferences
+prefShowPrivateRecords
+prefSysSoundVolume
+prefTimeZone
+PrgCallbackData
+PrgCallbackFunc
+PrgHandleEvent
+PrgStartDialog
+PrgStartDialogV31
+PrgStopDialog
+PrgUpdateDialog
+PrgUserCancel
+printf
+PrivateRecords
+privateRecordViewEnum
+putc
+putchar
+puts
+PwdExists
+PwdRemove
+PwdSet
+PwdVerify
+RctCopyRectangle
+RctGetIntersection
+RctInsetRectangle
+RctOffsetRectangle
+RctPtInRectangle
+RctSetRectangle
+ReadProc
+RectanglePtr
+RectangleType
+ResGlueLoadConstant
+ResLoadConstant
+ResLoadForm
+ResLoadMenu
+resumeSleepChr
+RGBColorType
+SclDrawScrollBar
+sclEnterEvent
+sclExitEvent
+SclGetScrollBar
+SclHandleEvent
+sclRepeatEvent
+SclSetScrollBar
+scptLaunchCmdDoNothing
+scptLaunchCmdExecuteCmd
+scptLaunchCmdListCmds
+ScrDisplayMode
+ScrDisplayModeOperation
+ScriptPlugin
+ScriptPluginLaunchCodesEnum
+ScriptPluginSelectorProcPtr
+FrmUpdateScrollers
+ScrollBar
+ScrollBarAttrType
+ScrollBarPtr
+ScrollBarRegionType
+ScrollBarType
+ScrOperation
+SecurityAutoLockType
+SecVerifyPW
+SelDay
+SelectDay
+selectDayByDay
+selectDayByMonth
+selectDayByWeek
+SelectDayV10
+SelectOneTime
+SelectTime
+SelectTimeZone
+SelTime
+SelTimeZone
+separatorItemSelection
+SerClearErr
+SerClose
+SerControl
+serCtlBreakStatus
+serCtlEmuSetBlockingHook
+SerCtlEnum
+serCtlFirstReserved
+serCtlHandshakeThreshold
+serCtlLAST
+serCtlMaxBaud
+serCtlStartBreak
+serCtlStartLocalLoopback
+serCtlStopBreak
+serCtlStopLocalLoopback
+serDev
+serErrAlreadyOpen
+serErrBadParam
+serErrBadPort
+serErrConfigurationFailed
+serErrLineErr
+serErrNotOpen
+serErrNotSupported
+serErrStillOpen
+serErrTimeOut
+serFncConsole
+serFncDebugger
+serFncHotSync
+serFncPPPSession
+serFncSLIPSession
+serFncTelephony
+serFncUndefined
+SerGetSettings
+SerGetStatus
+SerialDrvr
+SerialLinkMgr
+SerialMgr
+SerialMgrOld
+SerialVdrv
+serLineError
+SerOpen
+serPortConsolePort
+serPortCradlePort
+serPortCradleRS232Port
+serPortCradleUSBPort
+serPortIrPort
+serPortLocalHotSync
+SerReceive
+SerReceive10
+SerReceiveCheck
+SerReceiveFlush
+SerReceiveWait
+SerSend
+SerSend10
+SerSendFlush
+SerSendWait
+SerSetReceiveBuffer
+SerSetSettings
+SerSettingsType
+sethostname
+shiftKeyMask
+EvtGetPenBtnList
+SilkscreenAreaType
+silkscreenRectGraffiti
+silkscreenRectScreen
+SioAddCommand
+SioClearScreen
+SioExecCommand
+Siofgetc
+Siofgets
+Siofprintf
+Siofputc
+Siofputs
+SioFree
+Siogets
+SioHandleEvent
+SioInit
+SioMain
+Sioprintf
+Sioputs
+Siosystem
+Siovfprintf
+SleepEventParamType
+SliderControlType
+SlkClose
+SlkCloseSocket
+slkErrAlreadyOpen
+slkErrBadParam
+slkErrBuffer
+slkErrChecksum
+slkErrNotOpen
+slkErrOutOfSockets
+slkErrSocketNotOpen
+slkErrTimeOut
+slkErrWrongDestSocket
+SlkFlushSocket
+SlkOpen
+SlkOpenSocket
+SlkPktHeaderType
+SlkReceivePacket
+SlkSendPacket
+SlkSetSocketListener
+SlkSocketListenType
+SlkSocketPortID
+SlkSocketSetTimeout
+SlkWriteDataType
+SmsLib
+SmsParamsType
+SmsPrefType
+SmsReceiveCDMAParamsType
+SmsReceiveGSMParamsType
+SmsReceiveParamsType
+SmsReceiveTDMAParamsType
+SMSReportParamsType
+SmsSendCDMAParamsType
+SMSSendParamsType
+SmsSendTDMAParamsType
+SndBlockingFuncType
+SndCallbackInfoType
+SndCmdIDType
+SndCommandType
+SndComplFuncType
+SndCreateMidiList
+SndDoCmd
+SndGetDefaultVolume
+SndInterruptSmfIrregardless
+sndMaxAmp
+SndMidiListItemType
+sndMidiNameLength
+SndMidiRecHdrType
+sndMidiRecSignature
+SndMidiRecType
+SndPlaySMF
+SndPlaySmfIrregardless
+SndPlaySmfResource
+SndPlaySmfResourceIrregardless
+SndPlaySystemSound
+SndSetDefaultVolume
+SndSmfCallbacksType
+SndSmfChanRangeType
+sndSmfCmdDuration
+SndSmfCmdEnum
+sndSmfCmdPlay
+SndSmfOptionsType
+sndSmfPlayAllMilliSec
+SndSysBeepType
+sockaddr
+sockaddr_in
+socket
+SortRecordInfoType
+sound
+sound
+sound
+SoundMgr
+sprintf
+sprintf
+SrmClearErr
+SrmClose
+SrmControl
+srmControlCustom
+SrmCtlEnum
+SrmCustomControl
+srmDefaultCTSTimeout
+SrmExtOpen
+SrmExtOpenBackground
+SrmGetDeviceCount
+SrmGetDeviceInfo
+SrmGetStatus
+SrmOpen
+SrmOpenBackground
+SrmOpenConfigType
+SrmPrimeWakeupHandler
+SrmRcvQType
+SrmReceive
+SrmReceiveCheck
+SrmReceiveFlush
+SrmReceiveWait
+SrmReceiveWindowClose
+SrmReceiveWindowOpen
+SrmSend
+SrmSendCheck
+SrmSendFlush
+SrmSendWait
+SrmSetReceiveBuffer
+srmSettings
+SrmSetWakeupHandler
+srmStatus
+stdFont
+StdIOPalm
+StdIOProvider
+StrAToI
+StrCaselessCompare
+StrCat
+StrChr
+StrCompare
+StrCompareAscii
+StrCopy
+StrDelocalizeNumber
+StrDelocalizeNumber,
+StringMgr
+StrIToA
+StrIToH
+StrLen
+StrLocalizeNumber
+StrNCaselessCompare
+StrNCat
+strncmp
+StrNCompare
+StrNCompareAscii
+StrNCopy
+StrPrintF
+StrStr
+StrToLower
+StrVPrintF
+sys_socket
+SysAlarmTriggeredParamType
+SysAppLaunch
+sysAppLaunchCmdAddRecord
+sysAppLaunchCmdAlarmTriggered
+sysAppLaunchCmdCardLaunch
+SysAppLaunchCmdCardType
+sysAppLaunchCmdCountryChange
+sysAppLaunchCmdDisplayAlarm
+sysAppLaunchCmdExgAskUser
+sysAppLaunchCmdExgGetData
+sysAppLaunchCmdExgPreview
+sysAppLaunchCmdExgReceiveData
+sysAppLaunchCmdFind
+sysAppLaunchCmdGoto
+sysAppLaunchCmdGoToURL
+sysAppLaunchCmdInitDatabase
+sysAppLaunchCmdLookup
+sysAppLaunchCmdNotify
+sysAppLaunchCmdOpenDB
+sysAppLaunchCmdPanelCalledFromApp
+sysAppLaunchCmdReturnFromPanel
+sysAppLaunchCmdSaveData
+sysAppLaunchCmdSyncNotify
+sysAppLaunchCmdSystemLock
+sysAppLaunchCmdSystemReset
+sysAppLaunchCmdTimeChange
+sysAppLaunchCmdURLParams
+SysAppLauncherDialog
+sysAppLaunchFlagNewGlobals
+sysAppLaunchFlagNewGlobals
+sysAppLaunchFlagSubCal
+sysAppLaunchFlagUIApp
+SysBatteryInfo
+SysBatteryInfoV20
+SysBatteryKind
+SysBinarySearch
+SysBroadcastActionCode
+SysCopyStringResource
+SysCreateDataBaseList
+SysCreatePanelList
+SysCurAppDatabase
+SysDBListItemType
+SysDisplayAlarmParamType
+sysErrLibNotFound
+sysErrNoFreeLibSlots
+sysErrNoFreeRAM
+sysErrOutOfOwnerID
+sysErrOutOfOwnerIDs
+sysErrParamErr
+SysErrString
+SysEvent
+SysEvtMgr
+sysExternalConnectorAttachEvent
+sysExternalConnectorDetachEvent
+SysFatalAlert
+sysFileCBtConnectPanelHelper
+sysFileCSmsLib
+sysFileCUart328
+sysFileCUart328EZ
+sysFileCUart650
+sysFileCVirtIrComm
+sysFileCVirtRfComm
+sysFileDescStdIn
+SysFormPointerArrayToStrings
+sysFtrDefaultBoldFont
+sysFtrDefaultFont
+sysFtrNewSerialPresent
+sysFtrNewSerialVersion
+sysFtrNumEncoding
+sysFtrNumIntlMgr
+sysFtrNumNotifyMgrVersion
+sysFtrNumProcessor328
+sysFtrNumProcessorEZ
+sysFtrNumProcessorID
+sysFtrNumProcessorMask
+sysFtrNumROMVersion
+SysGetOSVersionString
+SysGetROMToken
+SysGetRomToken
+SysGetStackInfo
+SysGetTrapAddress
+SysGlueGetTrapAddress
+SysGlueTrapExists
+SysGraffitiReferenceDialog
+SysGremlins
+SysHandleEvent
+SysInsertionSort
+SysKeyboardDialog
+SysKeyboardDialogV10
+SysLibFind
+SysLibInstall
+SysLibLoad
+SysLibRemove
+sysNotifyAntennaRaisedEvent
+SysNotifyBroadcast
+SysNotifyBroadcastDeferred
+sysNotifyBroadcasterCode
+SysNotifyBroadcastFromInterrupt
+sysNotifyCardInsertedEvent
+sysNotifyCardRemovedEvent
+sysNotifyDBDeletedEvent
+SysNotifyDBDeletedType
+SysNotifyDBInfoType
+sysNotifyDefaultQueueSize
+sysNotifyDeleteProtectedEvent
+sysNotifyDeviceUnlocked
+SysNotifyDisplayChangeDetailsType
+sysNotifyDisplayChangeEvent
+sysNotifyEarlyWakeupEvent
+sysNotifyErrBroadcastBusy
+sysNotifyErrDuplicateEntry
+sysNotifyErrEntryNotFound
+sysNotifyErrNoStackSpace
+sysNotifyErrQueueFull
+sysNotifyForgotPasswordEvent
+sysNotifyGotUsersAttention
+sysNotifyHelperEvent
+sysNotifyIrDASniffEvent
+sysNotifyLateWakeupEvent
+sysNotifyLocaleChangedEvent
+SysNotifyLocaleChangedType
+sysNotifyMenuCmdBarOpenEvent
+sysNotifyNetLibIFMediaEvent
+SysNotifyNetLibIFMediaType
+sysNotifyNoDatabaseID
+sysNotifyNormalPriority
+SysNotifyParamType
+sysNotifyPhoneEvent
+sysNotifyPOSEMountEvent
+SysNotifyProcPtr
+SysNotifyRegister
+sysNotifyResetFinishedEvent
+sysNotifyRetryEnqueueKey
+sysNotifySleepNotifyEvent
+sysNotifySleepRequestEvent
+sysNotifySyncFinishEvent
+sysNotifySyncStartEvent
+sysNotifyTimeChangeEvent
+SysNotifyUnregister
+sysNotifyVersionNum
+sysNotifyVolumeMountedEvent
+sysNotifyVolumeUnmountedEvent
+SysQSort
+SysRandom
+sysRandomMax
+SysReset
+sysResIDExtPrefs
+sysResTExtPrefs
+SysSetAutoOffTime
+SysSetTrapAddress
+sysSleepAutoOff
+sysSleepPowerButton
+sysSleepResumed
+sysSleepUnknown
+SysStringByIndex
+SysTaskDelay
+SystemMgr
+SystemPreferencesChoice
+SystemPreferencesType
+SystemResources
+SysTicksPerSecond
+sysTrap
+SysTraps
+SysUIAppSwitch
+SysUtils
+TableAttrType
+TableColumnAttrType
+TableDrawItemFuncPtr
+TableDrawItemFuncType
+TableItemPtr
+TableItemStyleType
+TableItemType
+TableLoadDataFuncType
+tableMaxTextItemSize
+TablePtr
+TableRowAttrType
+TableSaveDataFuncType
+TableType
+tAIB
+taif
+TblDrawTable
+TblEditing
+tblEnterEvent
+TblEraseTable
+tblExitEvent
+TblFindRowData
+TblFindRowID
+TblGetBounds
+TblGetColumnSpacing
+TblGetColumnWidth
+TblGetCurrentField
+TblGetItemBounds
+TblGetItemFont
+TblGetItemInt
+TblGetItemPtr
+TblGetLastUsableRow
+TblGetNumberOfRows
+TblGetRowData
+TblGetRowHeight
+TblGetRowID
+TblGetSelection
+TblGlueGetNumberOfColumns
+TblGlueGetTopRow
+TblGlueSetSelection
+TblGrabFocus
+TblHandleEvent
+TblHasScrollBar
+TblInsertRow
+TblMarkRowInvalid
+TblMarkTableInvalid
+TblRedrawTable
+TblReleaseFocus
+TblRemoveRow
+TblRowInvalid
+TblRowMasked
+TblRowSelectable
+TblRowUsable
+tblSelectEvent
+TblSelectItem
+TblSetBounds
+TblSetColumnEditIndicator
+TblSetColumnMasked
+TblSetColumnSpacing
+TblSetColumnUsable
+TblSetColumnWidth
+TblSetCustomDrawProcedure
+TblSetItemFont
+TblSetItemInt
+TblSetItemPtr
+TblSetItemStyle
+TblSetLoadDataProcedure
+TblSetRowData
+TblSetRowHeight
+TblSetRowID
+TblSetRowMasked
+TblSetRowSelectable
+TblSetRowStaticHeight
+TblSetRowUsable
+TblSetSaveDataProcedure
+TblUnhighlightSelection
+tblUnusableRow
+tbmf
+Tbmp
+TelCallStateType
+TelCancel
+TelCfgGetPhoneNumberType
+TelCfgGetSmsCenterType
+TelCfgSetSmsCenter
+TelCgfGetPhoneNumber
+TelCgfGetSmsCenter
+TelClose
+TelClosePhoneConnection
+TelDataCallNumberType
+TelDtcCallNumber
+TelDtcCloseLine
+TelDtcReceiveData
+TelDtcReceiveDataType
+TelDtcSendData
+TelDtcSendDataType
+TelEmcCall
+TelEmcCloseLine
+TelEmcGetNumber
+TelEmcGetNumberType
+TelEmcSelectNumber
+TelEmcSetNumber
+TelEmcSetNumberType
+TelephonyMgr
+TelEventType
+TelGetCallState
+TelGetEvent
+TelGetNumberCount
+TelGetTelephonyEvent
+TelInfGetInformation
+TelInformationType
+TelIsCfgServiceAvailable
+TelIsDtcServiceAvailable
+TelIsEmcServiceAvailable
+TelIsInfServiceAvailable
+TelIsNwkServiceAvailable
+TelIsOemServiceAvailable
+TelIsPhbServiceAvailable
+TelIsPhoneConnected
+TelIsPowServiceAvailable
+TelIsSmsServiceAvailable
+TelIsSndServiceAvailable
+TelIsSpcServiceAvailable
+TelIsStyServiceAvailable
+TelMatchPhoneDriver
+TelNwkGetLocation
+TelNwkGetLocationType
+TelNwkGetNetworkName
+TelNwkGetNetworkNameType
+TelNwkGetNetworks
+TelNwkGetNetworksType
+TelNwkGetNetworkType
+TelNwkGetSearchMode
+TelNwkGetSelectedNetwork
+TelNwkGetSignalLevel
+TelNwkSelectNetwork
+TelNwkSetSearchMode
+TelOemCall
+TelOemCallType
+TelOpen
+TelOpenPhoneConnection
+TelPhbAddEntry
+TelPhbDeleteEntry
+TelPhbEntryType
+TelPhbGetAvailablePhonebooks
+TelPhbGetAvailablePhonebooksType
+TelPhbGetEntries
+TelPhbGetEntriesType
+TelPhbGetEntry
+TelPhbGetEntryCount
+TelPhbGetEntryCountType
+TelPhbGetEntryMaxSizes
+TelPhbGetEntryMaxSizesType
+TelPhbGetSelectedPhonebook
+TelPhbSelectPhonebook
+TelPowGetBatteryStatus
+TelPowGetPowerLevel
+TelPowSetPhonePower
+TelSendCommandString
+TelSendCommandStringType
+TelSmsDateTimeType
+TelSmsDeleteMessage
+TelSmsDeleteMessageType
+TelSmsDeliveryAdvancedCDMAType
+TelSmsDeliveryAdvancedGSMType
+TelSmsDeliveryAdvancedTDMAType
+TelSmsDeliveryMessageType
+TelSmsExtensionType
+TelSmsGetAvailableStorage
+TelSmsGetAvailableStorageType
+TelSmsGetDataMaxSize
+TelSmsGetMessageCount
+TelSmsGetMessageCountType
+TelSmsGetSelectedStorage
+TelSmsGetUniquePartId
+TelSmsManualAckType
+TelSmsReadMessage
+TelSmsReadMessages
+TelSmsReadMessagesType
+TelSmsReadReport
+TelSmsReadReports
+TelSmsReadReportsType
+TelSmsReadSubmittedMessage
+TelSmsReadSubmittedMessages
+TelSmsReadSubmittedMessagesType
+TelSmsReportType
+TelSmsSelectStorage
+TelSmsSendManualAcknowledge
+TelSmsSendMessage
+TelSmsSendMessageType
+TelSmsSubmitAdvancedCDMAType
+TelSmsSubmitAdvancedGSMType
+TelSmsSubmitAdvancedTDMAType
+TelSmsSubmitMessageType
+TelSmsSubmittedMessageType
+TelSndMute
+TelSndPlayKeyTone
+TelSndPlayKeyToneType
+TelSndStopKeyTone
+TelSpcAcceptCall
+TelSpcCallNumber
+TelSpcCloseLine
+TelSpcConference
+TelSpcGetCallerNumber
+TelSpcGetCallerNumberType
+TelSpcHoldLine
+TelSpcPlayDTMF
+TelSpcPlayDTMFType
+TelSpcRejectCall
+TelSpcRetrieveHeldLine
+TelSpcSelectLine
+TelSpcSendBurstDTMF
+TelSpcStartContinuousDTMF
+TelSpcStopContinuousDTMF
+TelStyChangeAuthenticationCode
+TelStyChangeAuthenticationType
+TelStyEnterAuthenticationCode
+TelStyGetAuthenticationState
+TextMgr
+textTableItem
+textWithNoteTableItem
+TimAdjust
+TimDateTimeToSeconds
+TimePtr
+timeTableItem
+TimeToAscii
+TimeType
+timeZoneStringLength
+TimGetSeconds
+TimGetTicks
+TimSecondsToDateTime
+TimSetSeconds
+TimTimeZoneToUTC
+TimUTCToTimeZone
+tint
+translitOpLowerCase
+translitOpPreprocess
+TranslitOpType
+translitOpUpperCase
+TsmGlueGetFepMode
+TsmGlueSetFepMode
+TxtByteAttr
+TxtCaselessCompare
+TxtCharAttr
+TxtCharBounds
+TxtCharEncoding
+TxtCharIsAlNum
+TxtCharIsAlpha
+TxtCharIsCntrl
+TxtCharIsDelim
+TxtCharIsDigit
+TxtCharIsGraph
+TxtCharIsHardKey
+TxtCharIsHex
+TxtCharIsLower
+TxtCharIsPrint
+TxtCharIsPunct
+TxtCharIsSpace
+TxtCharIsUpper
+TxtCharIsValid
+TxtCharSize
+TxtCharWidth
+TxtCharXAttr
+TxtCompare
+TxtConvertEncoding
+TxtEncodingName
+txtErrConvertOverflow
+txtErrTranslitOverflow
+txtErrTranslitOverrun
+txtErrTranslitUnderflow
+txtErrUnknownEncoding
+txtErrUnknownTranslitOp
+TxtFindString
+TxtGetChar
+TxtGetNextChar
+TxtGetPreviousChar
+TxtGetTruncationOffset
+TxtGetWordWrapOffset
+TxtGlueByteAttr
+TxtGlueCaselessCompare
+TxtGlueCharAttr
+TxtGlueCharBounds
+TxtGlueCharEncoding
+TxtGlueCharIsAlNum
+TxtGlueCharIsAlpha
+TxtGlueCharIsCntrl
+TxtGlueCharIsDelim
+TxtGlueCharIsDigit
+TxtGlueCharIsGraph
+TxtGlueCharIsHex
+TxtGlueCharIsLower
+TxtGlueCharIsPrint
+TxtGlueCharIsPunct
+TxtGlueCharIsSpace
+TxtGlueCharIsUpper
+TxtGlueCharIsValid
+TxtGlueCharIsVirtual
+TxtGlueCharSize
+TxtGlueCharWidth
+TxtGlueCharXAttr
+TxtGlueCompare
+TxtGlueEncodingName
+TxtGlueFindString
+TxtGlueGetChar
+TxtGlueGetHorizEllipsisChar
+TxtGlueGetNextChar
+TxtGlueGetNumericSpaceChar
+TxtGlueGetPreviousChar
+TxtGlueGetTruncationOffset
+TxtGlueLowerChar
+TxtGlueLowerStr
+TxtGlueMaxEncoding
+TxtGlueNextCharSize
+TxtGlueParamString
+TxtGluePrepFindString
+TxtGluePreviousCharSize
+TxtGlueReplaceStr
+TxtGlueSetNextChar
+TxtGlueStrEncoding
+TxtGlueStripSpaces
+TxtGlueTransliterate
+TxtGlueTruncateString
+TxtGlueUpperChar
+TxtGlueUpperStr
+TxtGlueWordBounds
+TxtMaxEncoding
+TxtNameToEncoding
+TxtNextCharSize
+TxtParamString
+TxtPreviousCharSize
+TxtReplaceStr
+TxtSetNextChar
+TxtStrEncoding
+TxtTransliterate
+TxtWordBounds
+UDABufferSize
+UDAControl
+UDADelete
+UDAEndOfReader
+UDAExchangeReaderNew
+UDAExchangeWriterNew
+UDAFilterJoin
+UDAFilterType
+UDAInitiateWrite
+UDAMemoryReaderNew
+UDAMoreData
+UDAObjectType
+UDARead
+UDAReaderType
+UDAWriterFlush
+UDAWriterJoin
+UDAWriterType
+UIBrightnessAdjust
+UIColor
+UIColorGetTableEntryIndex
+UIColorGetTableEntryRGB
+UIColorSetTableEntry
+UIColorTableEntries
+UICommon
+UIContrastAdjust
+UIControls
+UIPickColor
+UIPickColorStartPalette
+UIPickColorStartRGB
+UIPickColorStartType
+UIResources
+UnderlineModeType
+unitsEnglish
+unitsMetric
+vchrCommand
+vchrHardAntenna
+vchrMenu
+vchrRadioCoverageFail
+vchrRadioCoverageOK
+VdrvAPIType
+VDrvClose
+VdrvConfigType
+VDrvControl
+VdrvCtlOpCodeEnum
+VDrvCustomControl
+VDrvOpen
+VDrvStatus
+VDrvWrite
+vfprintf
+VFSAnyMountParamType
+VFSCustomControl
+VFSDirCreate
+VFSDirEntryEnumerate
+vfsErrBadData
+vfsErrBadName
+vfsErrBufferOverflow
+vfsErrDirectoryNotFound
+vfsErrDirNotEmpty
+vfsErrFileAlreadyExists
+vfsErrFileBadRef
+vfsErrFileEOF
+vfsErrFileGeneric
+vfsErrFileNotFound
+vfsErrFilePermissionDenied
+vfsErrFileStillOpen
+vfsErrIsADirectory
+vfsErrNameShortened
+vfsErrNoFileSystem
+vfsErrNotADirectory
+vfsErrVolumeBadRef
+vfsErrVolumeFull
+vfsErrVolumeStillMounted
+VFSExportDatabaseToFile
+VFSExportDatabaseToFileCustom
+VFSExportProcPtr
+vfsFileAttrArchive
+vfsFileAttrDirectory
+vfsFileAttrHidden
+vfsFileAttrLink
+vfsFileAttrReadOnly
+vfsFileAttrSystem
+vfsFileAttrVolumeLabel
+VFSFileClose
+VFSFileCreate
+VFSFileDBGetRecord
+VFSFileDBGetResource
+VFSFileDBInfo
+VFSFileDelete
+VFSFileEOF
+VFSFileGetAttributes
+VFSFileGetDate
+VFSFileOpen
+VFSFileRead
+VFSFileReadData
+VFSFileRename
+VFSFileResize
+VFSFileSeek
+VFSFileSetAttributes
+VFSFileSetDate
+VFSFileSize
+vfsFilesystemType_AFS
+vfsFilesystemType_EXT2
+vfsFilesystemType_FAT
+vfsFilesystemType_FFS
+vfsFilesystemType_HFS
+vfsFilesystemType_HFSPlus
+vfsFilesystemType_HPFS
+vfsFilesystemType_MFS
+vfsFilesystemType_NFS
+vfsFilesystemType_Novell
+vfsFilesystemType_NTFS
+vfsFilesystemType_VFAT
+VFSFileTell
+VFSFileWrite
+VFSGetDefaultDirectory
+vfsHandledStartPrc
+vfsHandledUIAppSwitch
+VFSImportDatabaseFromFile
+VFSImportDatabaseFromFileCustom
+VFSImportProcPtr
+VFSInstallFSLib
+vfsModeCreate
+vfsModeExclusive
+vfsModeLeaveOpen
+vfsModeRead
+vfsModeReadWrite
+vfsModeTruncate
+vfsModeVFSLayerOnly
+vfsModeWrite
+vfsMountClass_POSE
+vfsMountClass_Simulator
+vfsMountClass_SlotDriver
+VFSPOSEMountParamType
+VFSRegisterDefaultDirectory
+VFSRemoveFSLib
+VFSSlotMountParamType
+VFSUnregisterDefaultDirectory
+vfsVolumeAttrHidden
+vfsVolumeAttrReadOnly
+vfsVolumeAttrSlotBased
+VFSVolumeEnumerate
+VFSVolumeFormat
+VFSVolumeGetLabel
+VFSVolumeInfo
+VFSVolumeMount
+VFSVolumeSetLabel
+VFSVolumeSize
+VFSVolumeUnmount
+VolumeInfoType
+vsprintf
+vsprintf
+WakeupHandlerProc
+WakeupHandlerProcPtr
+wiCmd
+WiCmdEnum
+WinClipRectangle
+WinCopyRectangle
+WinCreateBitmapWindow
+WinCreateOffscreenWindow
+WinCreateWindow
+WinDeleteWindow
+WinDirectionType
+WinDisplayToWindowPt
+WindowFlagsType
+WindowFormatType
+WinDrawBitmap
+WinDrawChar
+WinDrawChars
+WinDrawGrayLine
+WinDrawGrayRectangleFrame
+WinDrawInvertedChars
+WinDrawLine
+WinDrawOperation
+WinDrawPixel
+WinDrawRectangle
+WinDrawRectangleFrame
+WinDrawTruncChars
+winEnterEvent
+WinEraseChars
+WinEraseLine
+WinErasePixel
+WinEraseRectangle
+WinEraseRectangleFrame
+WinEraseWindow
+winExitEvent
+WinFillLine
+WinFillRectangle
+WinGetActiveWindow
+WinGetBitmap
+WinGetClip
+WinGetDisplayExtent
+WinGetDisplayWindow
+WinGetDrawWindow
+WinGetFirstWindow
+WinGetFramesRectangle
+WinGetPattern
+WinGetPatternType
+WinGetPixel
+WinGetPixelRGB
+WinGetWindowBounds
+WinGetWindowExtent
+WinGetWindowFrameRect
+WinGlueDrawChar
+WinGlueDrawTruncChars
+WinHandle
+WinIndexToRGB
+WinInvertChars
+WinInvertLine
+WinInvertPixel
+WinInvertRectangle
+WinInvertRectangleFrame
+WinLineType
+WinLockInitType
+WinModal
+WinPaintBitmap
+WinPaintChar
+WinPaintChars
+WinPaintLine
+WinPaintLines
+WinPaintPixel
+WinPaintPixels
+WinPaintRectangle
+WinPaintRectangleFrame
+WinPalette
+WinPopDrawState
+WinPtr
+WinPushDrawState
+WinResetClip
+WinRestoreBits
+WinRGBToIndex
+WinSaveBits
+WinScreenLock
+WinScreenMode
+WinScreenModeOperation
+WinScreenUnlock
+WinScrollRectangle
+WinSetActiveWindow
+WinSetBackColor
+WinSetBackColorRGB
+WinSetBounds
+WinSetClip
+WinSetDrawMode
+WinSetDrawWindow
+WinSetForeColor
+WinSetForeColorRGB
+WinSetPattern
+WinSetPatternType
+WinSetTextColor
+WinSetTextColorRGB
+WinSetUnderlineMode
+WinUseTableIndexes
+WinValidateHandle
+WinWindowToDisplayPt
+WriteBlock
+WriteByte
+WriteProc
+//Palm variables types
+Boolean
+MemHandle
+MemPtr
+LocalID
+Err
+UInt
+UInt8
+UInt16
+UInt32
+Int8
+Int16
+Int32
+FlpCompDouble
+FlpDouble
+FlpFloat
+
+// trigraph
+KeyWords3:              ??=
+                        ??
+                        ??/
+                        ??
+                        ??'
+                        ??<
+                        ??!
+                        ??>
+                        ??-
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00FF8080 clWindow B
+Keyword2Col:            $00FFFF40 clWindow B
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          $0000C000 clWindow
+CommentCol:             $00A0A0A0 clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clWhite clWindow
+SymbolCol:              clSilver clWindow
+PreprocessorCol:        $00FFFF40 clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $0040FFFF
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:
+BlockEndStr:
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clRed clWindow
+
+
