@@ -1,0 +1,400 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//
+// Panther highlighter by Nelson Richter, richter at zaffari dot com dot br
+// Updated 2005/01/18
+//
+////////////////////////////////////////////////////////////////////////////
+//
+
+////////////////////////////////////////////////////////////////////////////
+//
+// language name
+
+Language:               Panther
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Prolifics files (*,*.jpl)|*;*.jpl
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+////////////////////////////////////////////////////////////////////////////
+//
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// escape character
+
+EscapeChar:
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// op codes
+
+KeyWords1:              
+@app @date @length @sum @id @screen @current @widget if else while return
+call msg emsg jeferson cat retvar 
+dmrowcount dmretcode break bundle data d_msg emsg flush for global include
+step
+msg next parms proc public query receive return runreport send string
+substring
+unload vars while jm_exit jm_goform jm_gotop jm_keys jm_system jm_winsize
+k_expose valided sm_1clear_array sm_1protect sm_1unprotect sm_a_bitop
+sm_achg sm_allget
+sm_amt_format sm_append_bundle_data sm_append_bundle_done
+sm_append_bundle_item
+sm_apply_prop sm_apply_prop_keep sm_aprotect sm_ascroll sm_aunprotect
+sm_backtab
+sm_base_fldno sm_bel sm_bitop sm_bkrect sm_c_off sm_c_on sm_c_vis sm_calc
+sm_cancel
+sm_chg_attr sm_ckdigit sm_cl_all_mdts sm_cl_unprot sm_clear_array
+sm_close_screen sm_close_window
+sm_copyarray sm_create_bundle sm_create_id sm_create_id_application
+sm_create_id_element_array
+sm_create_id_num sm_create_id_screen sm_create_id_screen_pos
+sm_create_id_tp_req sm_d_msg_line
+sm_dd_able sm_dde_client_disconnect sm_dde_client_off sm_dde_client_on
+sm_dde_client_request
+sm_dde_execute sm_dde_poke sm_dde_server_off sm_dde_server_on
+sm_delay_cursor sm_deselect
+sm_destroy_id sm_disp_off sm_djplcall sm_dlength sm_e_1protect
+sm_e_1unprotect sm_e_achg
+sm_e_amt_format sm_e_bitop sm_e_chg_attr sm_e_dlength sm_e_finquire
+sm_e_fldno sm_e_fset sm_e_fval
+sm_e_gofield sm_e_is_no sm_e_is_yes sm_e_null sm_e_off_gofield sm_e_protect
+sm_e_putfield sm_e_strip_amt_ptr
+sm_e_unprotect sm_fi_path sm_file_exists sm_file_remove sm_file_move
+sm_file_copy sm_filetypes sm_finquire 
+sm_fio_a2f sm_fio_close sm_fio_editor sm_fio_error sm_fio_error_set
+sm_fio_f2a sm_fio_getc 
+sm_fio_gets sm_fio_open sm_fio_putc sm_fio_puts sm_fio_rewind sm_flush
+sm_free_bundle 
+sm_fset sm_fval sm_get_bundle_data sm_get_bundle_item_count
+sm_get_bundle_occur_count
+sm_get_next_bundle_name sm_get_prop sm_get_prop_d sm_get_prop_m
+sm_get_prop_m_s sm_get_prop_s sm_get_prop_x
+sm_get_prop_x_s sm_getcurno sm_getjctrl sm_getkey sm_gofield sm_gp_inquire
+sm_hlp_by_name
+sm_home sm_i_achg sm_i_amt_format sm_i_bitop sm_i_chg_attr sm_i_dlength
+sm_i_doccur sm_i_finquire sm_i_fldno
+sm_i_fset sm_i_fval sm_i_gofield sm_i_ioccur sm_i_is_no sm_i_is_yes
+sm_i_ldb_h_putfield sm_i_ldb_putfield sm_i_null
+sm_i_off_gofield sm_i_putfield sm_i_strip_amt_ptr sm_input sm_inquire
+sm_inst_script sm_is_bundle
+sm_is_no sm_is_yes sm_isabort sm_isalnum sm_isalpha sm_iscntrl sm_iset
+sm_islower sm_ispunct sm_isselected
+sm_issv sm_isupper sm_jclose sm_jfilebox sm_jform sm_jplcall sm_jplpublic
+sm_jplunload sm_jwindow sm_key_integer
+sm_keyfilter sm_keyhit sm_keylabel sm_keyoption sm_l_at_cur sm_l_close
+sm_l_form sm_l_open sm_l_window sm_last
+sm_ldb_get_active sm_ldb_get_inactive sm_ldb_get_next_active
+sm_ldb_get_next_inactive sm_ldb_h_putfield sm_ldb_h_state_get
+sm_ldb_h_state_set sm_ldb_h_unload sm_ldb_handle sm_ldb_is_loaded
+sm_ldb_load sm_ldb_name sm_ldb_next_handle
+sm_ldb_pop sm_ldb_push sm_ldb_putfield sm_ldb_state_get sm_ldb_state_set
+sm_ldb_unload sm_length sm_list_objects_count 
+sm_list_objects_end sm_list_objects_next sm_list_objects_start sm_lstore
+sm_m_flush sm_max_occur sm_menu_bar_error
+sm_menu_create sm_menu_delete sm_menu_get_int sm_menu_get_str
+sm_menu_install sm_menu_remove sm_message_box
+sm_mnitem_change_i_any sm_mnitem_change_i_app sm_mnitem_change_s_any
+sm_mnitem_change_s_app sm_mnitem_delete
+sm_mnitem_get_int sm_mnitem_get_str sm_mnscript_load sm_mnscript_unload
+sm_mouse_divisors sm_ms_inquire
+sm_msg sm_msg_get sm_msgfind sm_msgread sm_mus_form sm_mw_winhelp_hook
+sm_mwindow sm_n_1clear_array sm_n_1protect
+sm_n_1unprotect sm_n_achg sm_n_amt_format sm_n_aprotect sm_n_ascroll
+sm_n_aunprotect sm_n_bitop
+sm_n_chg_attr sm_n_clear_array sm_n_copyarray sm_n_dlength sm_n_finquire
+sm_n_fldno sm_n_fset sm_n_fval sm_n_gofield
+sm_n_gval sm_n_is_no sm_n_is_yes sm_n_keyinit sm_n_ldb_fldno
+sm_n_ldb_h_fldno sm_n_ldb_h_putfield sm_n_ldb_putfield
+sm_n_length sm_n_max_occur sm_n_mnitem_delete sm_n_mnitem_get_int
+sm_n_mnitem_get_str sm_n_null sm_n_num_occurs
+sm_n_off_gofield sm_n_oshift sm_n_protect sm_n_putfield sm_n_rscroll
+sm_n_sc_max sm_n_size_of_array sm_n_strip_amt_ptr
+sm_n_unprotect sm_n_wselect sm_n_ww_length sm_n_ww_write sm_name
+sm_next_sync sm_nl sm_null sm_num_occurs
+sm_o_achg sm_o_amt_format sm_o_bitop sm_o_chg_attr sm_o_dlength sm_o_doccur
+sm_o_finquire sm_o_fldno sm_o_fset
+sm_o_fval sm_o_gofield sm_o_ioccur sm_o_is_no sm_o_is_yes
+sm_o_ldb_h_putfield sm_o_ldb_putfield sm_o_null
+sm_o_off_gofield sm_o_putfield sm_o_strip_amt_ptr sm_obj_copy sm_obj_copy_id
+sm_obj_delete sm_obj_delete_id 
+sm_occur_no sm_off_gofield sm_option sm_optmnu_id sm_oshift sm_pinquire
+sm_popup_at_cur sm_prop_errno sm_prop_error
+sm_prop_get_dbl sm_prop_get_int sm_prop_get_m_dbl sm_prop_get_m_int
+sm_prop_get_m_str sm_prop_get_str sm_prop_get_x_dbl
+sm_prop_get_x_int sm_prop_get_x_str sm_prop_id sm_prop_id_app
+sm_prop_id_element sm_prop_id_element_num sm_prop_id_screen
+sm_prop_id_screen_num sm_prop_id_widget sm_prop_id_widget_num
+sm_prop_name_to_id sm_prop_set_int sm_prop_set_m_int 
+sm_prop_set_m_str sm_prop_set_str sm_prop_set_x_int sm_prop_set_x_str
+sm_protect sm_pset sm_putfield sm_putjctrl
+sm_query_msg sm_r_at_cur sm_r_form sm_r_window sm_receive sm_rescreen
+sm_resize sm_rscroll sm_s_val sm_sc_max sm_sdtime
+sm_select sm_send sm_set_help sm_set_prop sm_set_prop_m sm_set_prop_m_s
+sm_set_prop_s sm_set_prop_x sm_set_prop_x_s
+sm_setbkstat sm_setsibling sm_setstatus sm_sh_off sm_launch sm_shell
+sm_shrink_to_fit sm_sibling sm_size_of_array 
+sm_sjplcall sm_slib_error sm_slib_install sm_slib_load sm_soption
+sm_strip_amt_ptr sm_t_bitop sm_t_scroll sm_t_shift 
+sm_tab sm_tolower sm_toupper sm_ungetkey sm_unprotect sm_viewport sm_wcount
+sm_wdeselect sm_winsizesm_wrotate
+sm_wselect sm_ww_length sm_ww_write sm_obj_sort PV_YES PV_NO PV_SERVER_COM
+sm_validate sm_n_validate 
+sm_com_set_handler sm_com_result sm_com_result_msg sm_obj_call
+sm_com_load_picture sm_com_Query_Interface 
+sm_obj_set_property sm_obj_get_property sm_obj_create
+
+KeyWords2:
+// SQL expressions used inside Panther's code.
+dbms sql select insert delete into update set from values where and or index
+case when then as end in group 
+by order exists close connection declare between with cursor continue
+continue_up continue_bottom 
+continue_top exec store file execute ONERROR jpl transaction begin commit
+distinct timeout
+close_all_connections user password server host database charset max min
+@dmrowcount union
+
+// Widgets properties:
+hidden num_occurrences grid_column length column_arrow_hidden
+active bi_string c_type card card_number column_title comments conceal_tabs
+deck default_cancel di_string 
+drop_down_data drop_down_screen drop_down_size drop_down_source fldnum grid
+grid_column grid_current_occ 
+group hidden id initialization java_tag justification label line_style
+listbox_type member memo1...memo9 
+mnemonic_character mnemonic_position name num_del_images number_of_cards
+precision sign sync_group tableview 
+topmost_card widget_type alt_scroll_func array_size auto_horiz_resize
+auto_vert_resize circular column_move_resize 
+current_offset end_column end_row first_occurrence grid_current_occ height
+hor_scroll_bar horiz_anchor horiz_max_size 
+horiz_min_size horizontal length max_data_length max_occurrences
+num_occurrences onscreen_columns onscreen_rows 
+position_region row_margin scroll_increment scrolling shift_increment
+size_to_contents spacing start_column 
+start_row vert_max_size vert_min_size vert_scroll_bar vertical_anchor width
+horiz_shrinking min_horiz_space 
+min_vert_space region_margin vert_shrinking bg_color_name bg_color_num
+bg_color_type blink dim fg_color_name fg_color_num 
+fg_color_type reverse bold font_name italic point_size underlined
+alt_next_tab_stop alt_prev_tab_stop autotab 
+card_entry_func card_exit_func entry_function exit_function expose_function
+focus_protection hide_function next_tab_stop 
+prev_tab_stop row_entry_func row_exit_func selected tab_entry_func
+tab_exit_func auto_help auto_item external_help_tag 
+help_screen popup_menu popup_script_file selection_screen status_line_text
+tooltip all_protect clearing_protect 
+convert_case edit_mask input_protection keystroke_filter maximum_value
+minimum_value must_fill reg_exp_filter regular_exp 
+required select_on_entry table_lookup calculation control_string
+double_click mdt no_validation validation_func valided 
+active_pixmap armed_pixmap border border_style clock_type
+column_click_action column_click_func column_separators 
+column_titles currency_symbol custom_format customer_drawn data_formatting
+date_format decimal_places decimal_symbol 
+empty_format fill_character frequency frozen_columns inactive_pixmap
+justification max_decimals min_decimals null_field 
+null_text numeric_type password_char password_field placement repeating
+rounding row_separators row_titles sort_order 
+sort_order_func stripe_current_row style system_update thousand_sep title
+word_wrap zero_format class synchronization 
+column_name validation_link version_column group_by having select_expression
+select_force_valid select_set_valid 
+sv tv use_in_select use_in_where where_operator where_use_if_null
+insert_expression use_in_insert in_update_where 
+update_expression use_in_update in_delete_where length precision scale type
+auto_expand default_link export_to_html 
+html_name image_map ins_del_buttons item_link keep_image_size radio_buttons
+scroll_buttons submit target 
+attributes link_attributes prefix_markup suffix_markup javascript on_blur
+close_item system_menu title_bar
+on_change on_click on_focus on_mouse_out on_mouse_over on_select vbscript
+bar_chart_type chart_3d 
+chart_type depth horiz_rotation orientation subtitle subtitle_text_size
+text_size title title_text_size vert_rotation 
+bar_style data_basic_color data_value_location legend line_style line_width
+point_marker x_value_source xy_style y_axis 
+y_value_source pie_diameter pie_direction pie_start_angle pie_x_position
+pie_y_position seg_label_location seg_label_source 
+seg_percent_location seg_style_source seg_value_location legend_border_width
+legend_in_data_space legend_placement 
+legend_text_size legend_title legend_x_anchor legend_x_location
+legend_x_position legend_y_anchor legend_y_location 
+legend_y_position x_axis_label x_axis_label_location x_axis_location
+x_axis_maximum x_axis_minimum x_axis_scale 
+y1_axis_label y1_axis_label_location y1_axis_location y1_axis_maximum
+y1_axis_minimum y1_axis_scale y2_axis_label 
+y2_axis_label_location y2_axis_location y2_axis_maximum y2_axis_minimum
+y2_axis_scale y_axis_label y_axis_label_location 
+y_axis_location y_axis_maximum y_axis_minimum y_axis_scale x_tick_grid_style
+x_tick_label_source x_tick_major_increment 
+x_tick_minor_increment x_tick_style x_tick_width y1_tick_grid_style
+y1_tick_label_source y1_tick_major_increment 
+y1_tick_minor_increment y1_tick_style y1_tick_width y2_tick_grid_style
+y2_tick_label_source y2_tick_major_increment 
+y2_tick_minor_increment y2_tick_style y2_tick_width y_tick_grid_style
+y_tick_label_source y_tick_major_increment 
+y_tick_minor_increment y_tick_style y_tick_width current_component_system
+
+
+KeyWords3:
+// Some Sql functions
+convert char varchar dateadd datepart datediff getdate right left max upper
+lower count isnull
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          " 
+StringEndChar:          " 
+MultilineStrings:       0
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+////////////////////////////////////////////////////////////////////////////
+//
+// colors
+// note:                first value is foreground, second is background
+color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows
+color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu,
+clWindow,
+//                        clWindowFrame, clMenuText, clWindowText,
+clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace,
+clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight,
+clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg:
+$FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            $00C08080 clWhite BI
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clRed clWindow
+StringCol:              $00FF4040 clWindow
+SymbolCol:              clPurple clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
+
