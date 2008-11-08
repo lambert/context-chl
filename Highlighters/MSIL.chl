@@ -1,0 +1,81 @@
+Language:               MSIL
+Description:            MSIL Highlighter written by Deeém2031, webmaster@deeem2031.de
+Filter:                 MSIL files (*.il)|*.il
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _.
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefABCDEFx.
+EscapeChar:
+
+KeyWords1:              .assembly .module .publickeytoken .ver .custom .imagebase .file alignment .stackreserve .subsystem .corflags
+                        .locals init .class .namespace .method .try catch .entrypoint .line .field
+                        .ctor ..ctor
+
+KeyWords2:              extern retargetable
+
+                        privatescope private famandassem assembly family famorassem public nested
+                        static final virtual hide by sig
+                        newslot
+                        abstract specialname pinvokeimpl unmanagedexp interface sealed
+                        rtspecialname reqsecobj
+                        auto sequential explicit
+                        import serializable beforefieldinit
+                        ansi unicode autochar
+                        value enum
+
+                        cil native optil runtime
+                        managed unmanaged
+                        forwardref preservesig internalcall synchronized noinlining
+
+                        in out opt
+                        marshal
+
+                        class valuetype instance
+
+                        //Assemblies
+                        mscorlib
+                        Microsoft .Build .Conversion .Engine .Framework .Tasks .Utilities .CompactFramework .JScript .VisualBasic .Compatibility .Data .Vsa .VisualC .Vb .CodeDOMProcessor
+                        System .Configuration .Install .Data .OracleClient .SqlXml .Deployment .Design .DirectoryServices .Protocols .Drawing .Design .EnterpriseServices .Management .Messaging .Runtime .Remoting .Serialization .Formatters .Soap .Security .ServiceProcess .Transactions .Web .Mobile .RegularExpressions .Services .Windows .Forms .XML
+
+KeyWords3:              nop break ldarg ldloc stloc
+                        ldarga starg ldloca ldnull ldc dup pop jmp call calli ret br brfalse brtrue
+                        beq bge bgt ble blt bne brnull brzero brinst switch ldind stind
+                        add sub mul div rem and or xor shl shr neg not
+                        conv callvirt cpobj ldobj ldstr newobj castclass isinst unbox throw
+                        ldfld ldflda stfld ldsfld ldsflda stsfld stobj box
+                        newarr ldlen ldelema ldelem stelem refanyval ckfinite mkrefany ldtoken
+                        endfinally endfault leave arglist ceq cgt clt ldftn ldvirtftn
+                        localloc endfilter unaligned volatile tail initobj cpblk initblk rethrow sizeof refanytype
+                        .any .i .i1 .i2 .i4 .i8 .r4 .r8 .s .un .ref .u1 .u2 .u4 .u8
+                        .m1 .0 .1 .2 .3 .4 .5 .6 .7 .8
+
+KeyWords4:              unsigned void bool int8 int16 int32 int64 float32 float64 string object
+                        syschar variant currency decimal date bstr lpstr lpwstr lptstr fixed sysstring
+                        objectref iunknown idispatch struct interface safearray fixed array int byvalstr tbstr method as any lpstruct custom error
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clMaroon clWindow
+Keyword4Col:            $317DCE clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
