@@ -1,0 +1,59 @@
+Language:               PCBus
+Filter:                 PCBus files (*.dav,*.pgm,*.sln,*.inc)|*.dav;*.pgm;*.sln;*.inc
+CaseSensitive:          0
+LineComment:            ...
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _*
+IdentifierChars:        a..z A..Z _
+//NumConstBegChars:       0..9
+//NumConstChars:          0..9 abcdefx.
+EscapeChar:
+KeyWords1:          afile cmatch compare cursoff curson dim dscnct edit else
+                    endif eoff eon eos equ equal file filepi flagrest flagsave
+                    form from giving greater if ifile in inc include init
+                    less list listend listoff liston loop match noreturn not
+                    pfile pi repeat resetsw ret retcount rollout schar scrend
+                    scrleft scrnrst scrnsave scrright setflag setswall setswlr
+                    setswtb shutdown traprest trapsave until varlist while xctl
+                    xctloff zero f1 f2 f3 f4 f5 f6 f7 f8 f9 f10
+KeyWords2:          add append beep branch bump call chain charrest charrestore
+                    charsave clear clock close cmove console count debug delete
+                    deletek display div divide edit endset erase execute extend
+                    fposit goto insert keyin lenset load move movefptr movelptr
+                    mult multiply nformat open or pack pause perform prep
+                    prepare print read readkg readkp readks release repeat
+                    replace reposit reset return scan scrnrest scrnrestore
+                    scrnsave search setlptr sformat splclose splopen stateres
+                    staterestore statesav statesave stop store sub subtract trap
+                    trapclr type unpack update weof winrest winrestore winsave
+                    write writeab xor
+KeyWords3:          *blinkon *blinkoff *cursoff *curson *dion *dioff *ef *el
+                    *es *ha *hd *hldos *hlrms *hon *hoff *hu *rd *resetsw
+                    *rptchar *scrend *scrleft *scrright *scrnsave *scrnrst
+                    *setswall *setswlr *setswtb *va *v2lon *attrib *bkgnd
+                    *border *cl *de *dv *eoff *eon *escon *escoff *esoff
+                    *eson *jl *jr *lc *rv *uc *xctl *xctloff *zf *b *c *f *h *l
+                    *n *r *v *w *t *p *+ *-
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWhite
+Keyword1Col:            clGreen clWhite
+Keyword2Col:            clBlue clWhite
+Keyword3Col:            clMaroon ClWhite
+IdentifierCol:          clWindowText clWhite
+CommentCol:             clGray clWhite
+NumberCol:              clRed clWhite
+StringCol:              clNavy clWhite
+SymbolCol:              clWindowText clWhite
+PreprocessorCol:        clBlue clWhite
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+//////////////////////////////////////////////////////////////////////////////
+
