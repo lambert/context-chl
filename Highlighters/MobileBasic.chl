@@ -1,0 +1,99 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Mobile Basic 2.1 Context Syntax Highlighter by Vap (costanzo_z@yahoo.it)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language: Mobile Basic 2.1
+Description: Mobile Basic Context Syntax Highlighter by Vap (costanzo_z@yahoo.it)
+Filter:                 Mobile Basic Files (*.mb2)|*.mb2
+HelpFile:
+CaseSensitive: 0
+LineComment: ' REM
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars: a..z A..Z
+IdentifierChars: a..z A..Z _ % $ 0..9 #
+NumConstBegChars: 0..9
+NumConstChars: 0..9 abcdefhABCDEFH
+EscapeChar:
+
+// CORE COMMANDS
+KeyWords1: Break Call Continue Data Dim Else End EndIf EndSub EndWhile Exit For
+           Global Gosub Goto If Input Local Next Print Read Repeat Restore
+           Return Sub Trap Until While
+
+// DATE, TIME, STRINGS AND MATHEMATICAL FUNCTIONS
+KeyWords2: Day Hour Millisecond Minute Month Second Time Year
+           Acos Acosd Asin AsinD Atan Atand Cos Cosd Exp Log Pow
+           Sin Sind Sqr Tan Tand Asc Chr$ Left$ Len Mid$ Right$ Str$ Val End
+
+// OPERATORS, LOGICAL
+KeyWords3: + - * / Mod = <> < <= > >= And Or Not Xor Int Long Float ( )
+
+// GRAPHICAL, INTERFACE , GAME
+KeyWords4: Alert Command Form_Begin Form_End Form_GetCommand Form_GetInt Form_GetLong
+           Form_GetString Gauge_Item Image_Item List_Item Text_Item Time_Item
+           Down Fire Game_A Game_B Game_C Game_D Left Right Up
+           Blit Cls DrawArc DrawLine DrawRect DrawRoundRect FillArc FillRect FillRoundRect
+           Plot Repaint SetColor ScreenHeight ScreenWidth StringHeight StringWidth
+           DrawGel GelData GelGrab GelHeight GelLoad GelWidth SpriteGel SpriteHit SpriteMov
+           SpritePriority Menu_Add Menu_Remove MenuItem Select MapCreate MapGetCell MapHeight
+           MapLoad MapLoadTile MapMoveTo MapNX MapNY MapSetCell MapWidth MapX MapY SetViewPort
+
+// I/O, SOUNDS, LIGHTS, MISCELLANEOUS
+KeyWords5: Close# Get# Input# Note# Open# Point# Print# Put# Err Fre GetProperty
+           Inkey IsColor NumColors SetProperty Sleep PlayAu PlayOtt PlayTone PlayWav SetLights
+           FlashLights Vibrate
+
+StringBegChar: "
+StringEndChar: "
+MultilineStrings: 0
+UsePreprocessor: 0
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note: first value is foreground, second is background color
+// and third (optional) represents font attribute:
+// B - bold
+// I - italic
+// U - underline
+// S - strike out
+// attributes can be combined: eg. B or BI
+// as value, it could be used any standard windows color:
+// clBlack, clMaroon, clGreen, clOlive, clNavy,
+// clPurple, clTeal, clGray, clSilver, clRed, clLime,
+// clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+// clDkGray, clWhite, clScrollBar, clBackground,
+// clActiveCaption, clInactiveCaption, clMenu, clWindow,
+// clWindowFrame, clMenuText, clWindowText, clCaptionText,
+// clActiveBorder, clInactiveBorder, clAppWorkSpace,
+// clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+// clGrayText, clBtnText, clInactiveCaptionText,
+// clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+// clInfoBk
+// as value, it could be used hex numeric constant too:
+// $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWhite clBlack
+Keyword1Col:            $004040FF clBlack
+Keyword2Col:            clAqua clBlack
+Keyword3Col:            $00FFC0FF clBlack
+IdentifierCol:          clYellow clBlack
+CommentCol:             clLime clBlack
+NumberCol:              $00C0FFC0 clBlack
+StringCol:              clWhite clBlack
+SymbolCol:              clRed clBlack
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clWhite $00505050 B
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+Keyword4Col:            $00FFC0C0 clBlack
+Keyword5Col:            $00FFC0FF clBlack
