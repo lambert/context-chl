@@ -1,0 +1,565 @@
+//@version 1.2
+//@url http://barrioperu.terra.com.pe/avegav2/misc/chau/MAKI.chl
+//
+//////////////////////////////////////////////////////////////////////////////
+//
+// MAKI Winamp scripts highlighter
+// Written by Alfredo Vega
+// Homepage: http://barrioperu.terra.com.pe/avegav2/
+// Creation date: September 10, 2006
+// Version: 1.2
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               MAKI Winamp scripts
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 MAKI Winamp scripts (*.m)|*.m
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            //
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// Classes
+
+// These are the classes in MAKI as defined in the files std.mi, config.mi, and pldir.mi
+//
+// I added to the list the types of variables (numerical and alphanumerical).
+
+KeyWords1:
+
+// Classes defined in file std.mi
+
+                        Object System Container Wac List Map PopupMenu Region Timer
+                        FeedWatcher GuiObject Group Layout Component ComponentBucket
+                        Edit Slider Vis Browser EqVis Status Text Title Layer Button
+                        AnimatedLayer ToggleButton GroupList CfgGroup QueryList
+                        MouseRedir DropDownList LayoutStatus TabSheet GuiList GuiTree
+                        TreeItem MenuButton CheckBox Form
+
+// Classes defined in file config.mi
+
+                        Config ConfigItem ConfigAttribute
+
+// Classes defined in file pldir.mi
+
+                        PlDir
+
+// Types of variables
+
+                        Boolean Int Float Double String Object Null
+
+// Methods
+
+// These are the methods (functions) corresponding to the classes listed above.
+// They are preceded by a dot in order to be recognized by the ConTEXT highlighter engine
+// Besides, this is the way they are invoked in a MAKI script. Before the function,
+// the programmer must always write the name of the object that is referenced to.
+//
+// Please note that some of them seem redundant, because some classes share methods
+// that happen to have the same name. Anyway, I think it is harmless to list them twice,
+// as this list can be also be useful as a complete reference for all the functions.
+// All the methods are grouped by class. Some classes do not have methods but the inherited
+// ones.
+
+KeyWords2:
+
+// Class Object
+
+                        .getClassName .getId .onNotify
+
+// Class System
+
+                        .onScriptLoaded .onScriptUnloading .onQuit .onSetXuiParam
+                        .onKeyDown .onAccelerator .onCreateLayout .onShowLayout
+                        .onHideLayout .onStop .onPlay .onPause .onResume .onTitleChange
+                        .onTitle2Change .onInfoChange .onStatusMsg .onEqBandChanged
+                        .onEqPreampChanged .onEqChanged .onVolumeChanged .onSeek
+                        .getContainer .newDynamicContainer .newGroup .newGroupAsLayout
+                        .getNumContainers .enumContainer .getWac .messageBox
+                        .getPlayItemString .getPlayItemLength .getPlayItemMetaDataString
+                        .getPlayItemDisplayTitle .getExtFamily .playFile .getLeftVuMeter
+                        .getRightVuMeter .getVolume .setVolume .play .stop .pause .next
+                        .previous .eject .seekTo .getPosition .setEqBand .setEqPreamp
+                        .setEq .getEqBand .getEqPreamp .getEq .getMousePosX .getMousePosY
+                        .integerToString .stringToInteger .floatToString .stringToFloat
+                        .integerToLongTime .integerToTime .dateToTime .dateToLongTime
+                        .formatDate .formatLongDate .getDateYear .getDateMonth .getDateDay
+                        .getDateDow .getDateDoy .getDateHour .getDateMin .getDateSec
+                        .getDateDst .getDate .strmid .strleft .strright .strsearch .strlen
+                        .strupper .strlower .urlEncode .removePath .getPath .getExtension
+                        .getToken .sin .cos .tan .asin .acos .atan .atan2 .pow .sqr .sqrt
+                        .random .setPrivateString .setPrivateInt .getPrivateString
+                        .getPrivateInt .setPublicString .setPublicInt .getPublicString
+                        .getPublicInt .getParam .getScriptGroup .getViewportWidth
+                        .getViewportWidthFromPoint .getViewportHeight
+                        .getViewportHeightFromPoint .getViewportLeft
+                        .getViewportLeftFromPoint .getViewportTop .getViewportTopFromPoint
+                        .debugString .ddeSend .onLookForComponent .getCurAppLeft
+                        .getCurAppTop .getCurAppWidth .getCurAppHeight .isAppActive
+                        .getSkinName .switchSkin .isLoadingSkin .lockUI .unlockUI
+                        .getMainBrowser .popMainBrowser .navigateUrl .isObjectValid .integer
+                        .frac .getTimeOfDay .setMenuTransparency .onGetCancelComponent
+                        .getStatus .isKeyDown .setClipboardText .Chr .selectFile .systemMenu
+                        .windowMenu .triggerAction .showWindow .hideWindow .hideNamedWindow
+                        .isNamedWindowVisible .setAtom .getAtom .invokeDebugger .isVideo
+                        .isVideoFullscreen .getIdealVideoWidth .getIdealVideoHeight
+                        .isMinimized .minimizeApplication .restoreApplication
+                        .activateApplication .getPlaylistLength .getPlaylistIndex
+                        .isDesktopAlphaAvailable .isTransparencyAvailable
+                        .onShowNotification .getSongInfoText .getVisBand .getRuntimeVersion
+
+// Class Container
+
+                        .onSwitchToLayout .onBeforeSwitchToLayout .setXmlParam .onHideLayout
+                        .onShowLayout .getLayout .getNumLayouts .enumLayout .switchToLayout
+                        .show .hide .close .toggle .isDynamic .setName .getCurLayout
+
+// Class Wac
+
+                        .getGuid .getName .sendCommand .show .hide .isVisible .onNotify
+                        .onShow .onHide .setStatusBar .getStatusBar
+                        
+// Class GuiObject
+
+                        .show .hide .isVisible .onSetVisible .setAlpha .getAlpha
+                        .onLeftButtonUp .onLeftButtonDown .onRightButtonUp
+                        .onRightButtonDown .onRightButtonDblClk .onLeftButtonDblClk
+                        .onMouseMove .onEnterArea .onLeaveArea .setEnabled .getEnabled
+                        .onEnable .resize .onResize .isMouseOver .getLeft .getTop .getWidth
+                        .getHeight .setTargetX .setTargetY .setTargetW .setTargetH
+                        .setTargetA .setTargetSpeed .gotoTarget .onTargetReached
+                        .cancelTarget .reverseTarget .onStartup .isGoingToTarget
+                        .setXmlParam .getXmlParam .init .bringToFront .bringToBack
+                        .bringAbove .bringBelow .getGuiX .getGuiY .getGuiW .getGuiH
+                        .getGuiRelatX .getGuiRelatY .getGuiRelatW .getGuiRelatH .isActive
+                        .getParent .getParentLayout .getTopParent .runModal .endModal
+                        .findObject .findObjectXY .getName .clientToScreenX .clientToScreenY
+                        .clientToScreenW .clientToScreenH .screenToClientX .screenToClientY
+                        .screenToClientW .screenToClientH .getAutoWidth .getAutoHeight
+                        .setFocus .onChar .onAccelerator .isMouseOverRect .getInterface
+                        .onKeyDown .onKeyUp .onGetFocus .onKillFocus .sendAction .onAction
+
+// Class Group
+
+                        .getObject .getNumObjects .enumObject .onCreateObject .getMousePosX
+                        .getMousePosY .isLayout
+
+// Class Layout
+
+                        .onDock .onUndock .onScale .getScale .setScale .setDesktopAlpha
+                        .getDesktopAlpha .getContainer .center .onMove .onEndMove
+                        .onUserResize .snapAdjust .getSnapAdjustTop .getSnapAdjustRight
+                        .getSnapAdjustLeft .getSnapAdjustBottom .setRedrawOnResize
+                        .beforeRedock .redock .isTransparencySafe .isLayoutAnimationSafe
+                        .onMouseEnterLayout .onMouseLeaveLayout .onSnapAdjustChanged
+
+// Class List
+
+                        .addItem .removeItem .enumItem .findItem .getNumItems .removeAll
+
+// Class Map
+
+                        .getValue .inRegion .loadMap .getWidth .getHeight .getRegion
+
+// Class PopupMenu
+
+                        .addSubMenu .addCommand .addSeparator .popAtXY .popAtMouse
+                        .getNumCommands .checkCommand .disableCommand
+
+// Class Region
+
+                        .add .sub .offset .stretch .copy .loadFromMap .loadFromBitmap
+                        .getBoundingBoxX .getBoundingBoxY .getBoundingBoxW .getBoundingBoxH
+
+// Class Timer
+
+                        .onTimer .setDelay .getDelay .start .stop .isRunning .getSkipped
+
+// Class FeedWatcher
+
+                        .setFeed .releaseFeed .onFeedChange
+
+// Class Component
+
+                        .onGetWac .onGiveUpWac .getGuid .getWac .setRegionFromMap
+                        .setRegion .setAcceptWac .getContent
+
+// Class Edit
+
+                        .onEnter .onAbort .onIdleEditUpdate .onEditUpdate .setText
+                        .setAutoEnter .getAutoEnter .getText .selectAll .enter
+                        .setIdleEnabled .getIdleEnabled
+
+// Class Slider
+
+                        .onSetPosition .onPostedPosition .onSetFinalPosition .setPosition
+                        .getPosition .lock .unlock
+
+// Class Vis
+
+                        .onFrame .setRealtime .getRealtime .getMode .setMode .nextMode
+
+// Class Browser
+
+                        .navigateUrl .back .forward .stop .refresh .home .setTargetName
+                        .onBeforeNavigate .onDocumentComplete
+
+// Class Text
+
+                        .setText .setAlternateText .getText .getTextWidth .onTextChanged
+
+// Class Layer
+
+                        .onBeginResize .onEndResize .fx_onInit .fx_onFrame .fx_onGetPixelR
+                        .fx_onGetPixelD .fx_onGetPixelX .fx_onGetPixelY .fx_onGetPixelA
+                        .setRegionFromMap .setRegion .fx_setEnabled .fx_getEnabled
+                        .fx_setWrap .fx_getWrap .fx_setRect .fx_getRect .fx_setBgFx
+                        .fx_getBgFx .fx_setClear .fx_getClear .fx_setSpeed .fx_getSpeed
+                        .fx_setRealtime .fx_getRealtime .fx_setLocalized .fx_getLocalized
+                        .fx_setBilinear .fx_getBilinear .fx_setAlphaMode .fx_getAlphaMode
+                        .fx_setGridSize .fx_update .fx_restart
+
+// Class Button
+
+                        .onActivate .onLeftClick .onRightClick .setActivated
+                        .setActivatedNoCallback .getActivated .leftClick .rightClick
+
+// Class AnimatedLayer
+
+                        .onPlay .onPause .onResume .onStop .onFrame .setSpeed .gotoFrame
+                        .setStartFrame .setEndFrame .setAutoReplay .play .stop .pause
+                        .isPlaying .isPaused .isStopped .getStartFrame .getEndFrame
+                        .getLength .getDirection .getAutoReplay .getCurFrame .setRealtime
+
+// Class ToggleButton
+
+                        .onToggle .getCurCfgVal
+
+// Class GroupList
+
+                        .instantiate .getNumItems .enumItem .removeAll .scrollToPercent
+
+// Class CfgGroup
+
+                        .cfgGetInt .cfgSetInt .cfgGetString .cfgGetFloat .cfgSetFloat
+                        .cfgSetString .onCfgChanged .cfgGetGuid .cfgGetName
+
+// Class QueryList
+
+                        .onResetQuery
+
+// Class MouseRedir
+
+                        .setRedirection .getRedirection .setRegionFromMap .setRegion
+
+// Class DropDownList
+
+                        .getItemSelected .onSelect .setListHeight .openList .closeList
+                        .setItems .addItem .delItem .findItem .getNumItems .selectItem
+                        .getItemText .getSelected .getSelectedText .getCustomText
+                        .deleteAllItems .setNoItemText
+
+// Class LayoutStatus
+
+                        .callme
+
+// Class TabSheet
+
+                        .getCurPage .setCurPage
+
+// Class GuiList
+
+                        .getNumItems .getWantAutoDeselect .setWantAutoDeselect .onSetVisible
+                        .setAutoSort .next .selectCurrent .selectFirstEntry .previous
+                        .pagedown .pageup .home .end .reset .addColumn .getNumColumns
+                        .getColumnWidth .setColumnWidth .getColumnLabel .setColumnLabel
+                        .getColumnNumeric .setColumnDynamic .isColumnDynamic .setMinimumSize
+                        .addItem .insertItem .getLastAddedItemPos .setSubItem
+                        .deleteAllItems .deleteByPos .getItemLabel .setItemLabel
+                        .getItemSelected .isItemFocused .getItemFocused .setItemFocused
+                        .ensureItemVisible .invalidateColumns .scrollAbsolute
+                        .scrollRelative .scrollLeft .scrollRight .scrollUp .scrollDown
+                        .getSubitemText .getFirstItemSelected .getNextItemSelected
+                        .selectAll .deselectAll .invertSelection .invalidateItem
+                        .getFirstItemVisible .getLastItemVisible .setFontSize .getFontSize
+                        .jumpToNext .scrollToItem .resort .getSortDirection .getSortColumn
+                        .setSortColumn .setSortDirection .getItemCount .setSelectionStart
+                        .setSelectionEnd .setSelected .toggleSelection .getHeaderHeight
+                        .getPreventMultipleSelection .setPreventMultipleSelection .moveItem
+                        .onSelectAll .onDelete .onDoubleClick .onLeftClick
+                        .onSecondLeftClick .onRightClick .onColumnDblClick
+                        .onColumnLabelClick .onItemSelection
+
+// Class GuiTree
+
+                        .onWantAutoContextMenu .onMouseWheelUp .onMouseWheelDown
+                        .onContextMenu .onChar .onItemRecvDrop .onLabelChange
+                        .onItemSelected .onItemDeselected .getNumRootItems .enumRootItem
+                        .jumpToNext .ensureItemVisible .getContentsWidth .getContentsHeight
+                        .addTreeItem .removeTreeItem .moveTreeItem .deleteAllItems
+                        .expandItem .expandItemDeferred .collapseItem .collapseItemDeferred
+                        .selectItem .selectItemDeferred .delItemDeferred .hiliteItem
+                        .unhiliteItem .getCurItem .hitTest .editItemLabel .cancelEditLabel
+                        .setAutoEdit .getAutoEdit .getByLabel .setSorted .getSorted
+                        .sortTreeItems .getSibling .setAutoCollapse .setFontSize
+                        .getFontSize .getNumVisibleChildItems .getNumVisibleItems
+                        .enumVisibleItems .enumVisibleChildItems .enumAllItems .getItemRectX
+                        .getItemRectY .getItemRectW .getItemRectH .getItemFromPoint
+
+// Class TreeItem
+
+                        .getNumChildren .setLabel .getLabel .ensureVisible .getNthChild
+                        .getChild .getChildSibling .getSibling .getParent .editLabel
+                        .hasSubItems .setSorted .setChildTab .isSorted .isCollapsed
+                        .isExpanded .invalidate .isSelected .isHilited .setHilited
+                        .collapse .expand .getTree .onTreeAdd .onTreeRemove .onSelect
+                        .onDeselect .onLeftDoubleClick .onRightDoubleClick .onChar
+                        .onExpand .onCollapse .onBeginLabelEdit .onEndLabelEdit
+                        .onContextMenu
+
+// Class MenuButton
+
+                        .onOpenMenu .onCloseMenu .onSelectItem .openMenu .closeMenu
+
+// Class CheckBox
+
+                        .onToggle .setChecked .isChecked .setText .getText
+
+// Class Form
+
+                        .getContentsHeight .newCell .nextRow .deleteAll
+
+// Class ComponentBucket
+
+                        .getMaxHeight .getMaxWidth .setScroll .getScroll .getNumChildren
+                        .enumChildren
+
+// Class Config
+
+                        .getItem .getItemByGuid .newItem
+
+// Class ConfigItem
+
+                        .getAttribute .newAttribute .getGuid
+
+// Class ConfigAttribute
+
+                        .setData .getData .onDataChanged .getParentItem .getAttributeName
+
+// Class PlDir
+
+                        .showCurrentlyPlayingEntry
+
+// Most of the methods from the class System can be invoked without the prefix 'System'
+// For example:
+//
+//      ButtonsGroup = getScriptGroup();
+//
+// has the same effect that
+//
+//      ButtonsGroup = System.getScriptGroup();
+//
+// So we list the System methods again without the dot
+
+// Class System (again)
+
+                        onScriptLoaded onScriptUnloading onQuit onSetXuiParam
+                        onKeyDown onAccelerator onCreateLayout onShowLayout
+                        onHideLayout onStop onPlay onPause onResume onTitleChange
+                        onTitle2Change onInfoChange onStatusMsg onEqBandChanged
+                        onEqPreampChanged onEqChanged onVolumeChanged onSeek
+                        getContainer newDynamicContainer newGroup newGroupAsLayout
+                        getNumContainers enumContainer getWac messageBox
+                        getPlayItemString getPlayItemLength getPlayItemMetaDataString
+                        getPlayItemDisplayTitle getExtFamily playFile getLeftVuMeter
+                        getRightVuMeter getVolume setVolume play stop pause next
+                        previous eject seekTo getPosition setEqBand setEqPreamp
+                        setEq getEqBand getEqPreamp getEq getMousePosX getMousePosY
+                        integerToString stringToInteger floatToString stringToFloat
+                        integerToLongTime integerToTime dateToTime dateToLongTime
+                        formatDate formatLongDate getDateYear getDateMonth getDateDay
+                        getDateDow getDateDoy getDateHour getDateMin getDateSec
+                        getDateDst getDate strmid strleft strright strsearch strlen
+                        strupper strlower urlEncode removePath getPath getExtension
+                        getToken sin cos tan asin acos atan atan2 pow sqr sqrt
+                        random setPrivateString setPrivateInt getPrivateString
+                        getPrivateInt setPublicString setPublicInt getPublicString
+                        getPublicInt getParam getScriptGroup getViewportWidth
+                        getViewportWidthFromPoint getViewportHeight
+                        getViewportHeightFromPoint getViewportLeft
+                        getViewportLeftFromPoint getViewportTop getViewportTopFromPoint
+                        debugString ddeSend onLookForComponent getCurAppLeft
+                        getCurAppTop getCurAppWidth getCurAppHeight isAppActive
+                        getSkinName switchSkin isLoadingSkin lockUI unlockUI
+                        getMainBrowser popMainBrowser navigateUrl isObjectValid integer
+                        frac getTimeOfDay setMenuTransparency onGetCancelComponent
+                        getStatus isKeyDown setClipboardText Chr selectFile systemMenu
+                        windowMenu triggerAction showWindow hideWindow hideNamedWindow
+                        isNamedWindowVisible setAtom getAtom invokeDebugger isVideo
+                        isVideoFullscreen getIdealVideoWidth getIdealVideoHeight
+                        isMinimized minimizeApplication restoreApplication
+                        activateApplication getPlaylistLength getPlaylistIndex
+                        isDesktopAlphaAvailable isTransparencyAvailable
+                        onShowNotification getSongInfoText getVisBand getRuntimeVersion
+
+// Some reserved words
+
+KeyWords3:
+
+// Compiler directives
+// Usually preceded by the # sign (ConTEXT highlights the sign with a different color)
+
+                        include define ifdef ifndef undef if else elif endif
+                        printf pragma error line
+
+// Definition words
+
+                        Function Global new delete typedef class
+
+// Control sentences
+
+                        if else while do for break return
+
+// Predefined constants in std.mi
+
+                        true false STATUS_PAUSED STATUS_STOPPED STATUS_PLAYING VK_SHIFT
+                        VK_CONTROL VK_ALT VK_PRIOR VK_NEXT VK_END VK_HOME VK_LEFT VK_UP
+                        VK_RIGHT VK_DOWN
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clPurple clWindow B
+Keyword3Col:            clNavy clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              clMaroon clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clRed clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
