@@ -1,0 +1,130 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Matlab (C#) highlighter written by Javier Venegas Requena, login@entelchile.net
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Matlab
+Filter:                 Matlab files (*.m)|*.m
+HelpFile:
+LineComment:            %
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+
+KeyWords1:              builtin eval evalc evalin feval function global nargchk persistent
+                        script break case catch continue else elseif end error for if
+                        otherwise return switch try warning while input keyboard menu pause
+                        class double inferiorto inline int8 int16 int32 isa loadobj saveobj
+                        single superiorto uint8 uint16 uint32 dbclear dbcont dbdown dbmex
+                        dbquit dbstack dbstatus dbstep dbstop dbtype dbup
+                        functions func2str str2func
+
+KeyWords2:              xor
+
+KeyWords3:              abs acos acosh acot acoth acsc acsch addframe addpath airy alim all
+                        allchild alpha alphamap angle ans any area asec asech asin asinh
+                        assignin atan atanh atan2 auread auwrite avifile aviinfo aviread axes
+                        axis balance bar barh bar3 bar3h base2dec beep besselh besseli besselk
+                        besselj bessely beta betainc betaln bicg bicgstab bin2dec bitand bitcmp
+                        bitget bitmax bitor bitset bitshift bitxor blanks blkdiag box
+                        brighten bvp4c bvpget bvpinit bvpset bvpval calendar camdolly
+                        camlight camlookat camorbit campan campos camproj camroll camtarget
+                        camup camva camzoom capture cart2pol cart2sph cat caxis cd
+                        cdf2rdf ceil cell cell2struct celldisp cellfun cellplot cellstr cgs char
+                        checkin checkout chol cholinc cholupdate cla clabel clc clear clf
+                        clipboard clock close closereq cmopts colamd colmmd colorbar colordef
+                        colormap ColorSpec colperm comet comet3 compan compass complex computer
+                        cond condeig condest coneplot conj contour contour3 contourc
+                        contourf contourslice contrast conv conv2 convhull convhulln convn copyfile
+                        copyobj corrcoef cos cosh cot coth cov cplxpair cputime cross csc csch
+                        cumprod cumsum cumtrapz curl customverctrl cylinder daspect date datenum
+                        datestr datetick datevec dblquad
+                        ddeadv ddeexec ddeinit ddepoke ddereq
+                        ddeterm ddeunadv deal deblank dec2base dec2bin dec2hex deconv default4
+                        del2 delaunay delaunay3 delaunayn delete depdir depfun det detrend diag
+                        dialog diary diff dir disp divergence dlmread dlmwrite dmperm doc docopt
+                        dos dot dragrect drawnow dsearch dsearchn echo edit eig eigs ellipj
+                        ellipke eomday eps erf erfc erfcx erfinv errorbar
+                        errordlg etime etree etreeplot exist exit exp expint
+                        expm eye ezcontour ezcontourf ezmesh ezmeshc ezplot ezplot3 ezpolar ezsurf
+                        ezsurfc factor factorial fclose feather feof ferror fft fft2 fftn
+                        fftshift fgetl fgets fieldnames figflag figure filebrowser fileparts fill
+                        fill3 filter filter2 find findall findfigs findobj findstr finish fix flipdim
+                        fliplr flipud floor flops flow fmin fminbnd fmins fminsearch fopen
+                        format fplot fprintf frame2im frameedit fread freqspace frewind fscanf
+                        fseek ftell full fullfile funm fwrite fzero
+                        gallery gamma gammainc gammaln gca gcbf gcbo gcd gcf gco genpath get
+                        getappdata getenv getfield getframe ginput gmres gplot gradient
+                        graymon grid griddata griddata3 griddatan gsvd gtext guidata guide guihandles
+                        hadamard hankel hdf help helpbrowser helpdesk helpdlg helpwin hess hex2dec
+                        hex2num hgload hgsave hidden hilb hist histc hold home hsv2rgb ifft ifft2
+                        ifftn ifftshift im2frame imag image imagesc imfinfo import importdata imread
+                        imwrite ind2rgb ind2sub Inf info inmem inpolygon
+                        inputdlg inputname inspect instraction instrfind int2str
+                        interp1 interp2 interp3 interpft interpn interpstreamspeed intersect inv
+                        invhilb ipermute isappdata ishandle ishold isjava iskeyword ismember
+                        isocaps isocolors isonormals isosurface isstr isvalid isvarname javaArray
+                        javaMethod javaObject kron lasterr lastwarn lcm legend legendre length
+                        license light lightangle lighting lin2mu line LineSpec linspace listdlg
+                        load log log10 log2 logical loglog logm logspace lookfor lower
+                        ls lscov lsqnonneg lsqr lu luinc magic mat2str material matlab matlabrc
+                        matlabroot max mean median memory mesh meshc meshz meshgrid methods
+                        methodsview mexext mfilename min minres mislocked mkdir mlock mod more
+                        movegui movie movie2avi moviein msgbox mu2lin munlock NaN nargin nargout
+                        nargoutchk nchoosek ndgrid ndims newplot nextpow2 nnls nnz noanimate nonzeros
+                        norm normest now null num2cell num2str numel nzmax ode45 ode23 ode113 ode15s
+                        ode23s ode23t ode23tb odefile odeget odeset ones open openfig opengl openvar
+                        optimget optimset orient orth pack pagedlg pagesetupdlg pareto
+                        partialpath pascal patch path pathtool pbaspect pcg pchip pcode pcolor
+                        pdepe pdeval peaks perms permute pi pie pie3 pinv plot plot3 plotedit
+                        plotmatrix plotyy pol2cart polar poly polyarea polyder polyeig polyfit polyint
+                        polyval polyvalm pow2 ppval primes print printopt printdlg prod profile profreport
+                        propedit pwd qmr qr qrdelete qrinsert qrupdate quad quad8 quadl questdlg
+                        quit quiver quiver3 qz rand randn randperm rank rat rats rbbox rcond
+                        readasync real realmax realmin record rectangle rectint reducepatch reducevolume
+                        refresh rehash rem repmat reset reshape residue rgb2hsv rgbplot ribbon
+                        rmappdata rmfield rmpath root roots rose rot90 rotate rotate3d round rref
+                        rrefmovie rsf2csf save saveas scatter scatter3 schur sec sech
+                        selectmoveresize semilogx semilogy serial serialbreak set setappdata setdiff
+                        setfield setstr setxor shading shiftdim shrinkfaces sign sin sinh size
+                        slice smooth3 sort sortrows sound soundcap soundsc spalloc sparse spaugment
+                        spconvert spdiags speye spfun sph2cart sphere spinmap spline spones spparms
+                        sprand sprandn sprandsym sprintf spy sqrt sqrtm squeeze sscanf stairs startup
+                        std stem stem3 stopasync str2double str2mat str2num strcat strcmp
+                        strcmpi stream2 stream3 streamline streamparticles streamribbon streamslice
+                        streamtube strings strjust strmatch strncmp strncmpi strread strrep strtok struct
+                        struct2cell strvcat sub2ind subplot subsasgn subsindex subspace subsref subvolume
+                        sum support surf surfc surf2patch surface surfl surfnorm svd svds
+                        symamd symbfact symmlq symmmd symrcm symvar tan tanh tempdir tempname terminal
+                        texlabel text textread textwrap tic toc title toeplitz trace trapz treelayout
+                        treeplot tril trimesh trisurf triu tsearch tsearchn type uicontextmenu uicontrol
+                        uigetfile uiimport uimenu uiputfile uiresume uiwait uisetcolor
+                        uisetfont undocheckout union unique unix unwrap upper var varargin varargout
+                        vectorize ver version view viewmtx volumebounds voronoi voronoin waitbar waitfor
+                        waitforbuttonpress warndlg waterfall wavplay wavread wavrecord wavwrite web
+                        weekday what whatsnew which whitebg who whos wilkinson wk1read wk1write
+                        workspace xlabel ylabel zlabel xlim ylim zlim xlsfinfo xlsread zeros zoom
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clOlive clWindow B
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
