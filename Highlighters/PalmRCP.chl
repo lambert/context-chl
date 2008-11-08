@@ -1,0 +1,65 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Palm RCP (resource) file highlighter for ConTEXT editor.
+//
+// Revision 1.01, 27 August 2001.
+//
+// Highlighter by Steve Leach (steve_leach@yahoo.com).
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               PalmRCP
+
+Filter:                 Palm RCP files (*.rcp)|*.rcp
+
+CaseSensitive:          0
+
+IdentifierChars:        a..z A..Z _
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+NumConstBegChars:       0..9
+
+NumConstChars:          0..9 .
+
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+KeyWords1:              BEGIN END
+                        LAUNCHERCATEGORY
+                        VERSION
+                        FORM MENU MENUID MODAL FORMBITMAP SAVEBEHIND DEFAULTBTNID
+                        TITLE LABEL LIST BUTTON PUSHBUTTON SCROLLBAR CHECKBOX GADGET
+                        FIELD NONEDITABLE EDITABLE MAXCHARS RIGHTALIGN UNDERLINED
+                        ID AUTOID AT USABLE NONUSABLE FRAME NOFRAME FONT GROUP
+                        POPUPTRIGGER SELECTORTRIGGER REPEATBUTTON POPUPLIST SLIDER
+                        VISIBLEITEMS
+                        TABLE ROWS COLUMNS COLUMNWIDTHS
+                        PULLDOWN MENUITEM
+                        ALERT HELPID CONFIRMATION MESSAGE BUTTONS
+                        BITMAP BITMAPFAMILY ICON ICONFAMILY SMALLICON SMALLICONFAMILY
+                        STRING FILE STRINGTABLE
+                        CATEGORIES TRAP FONT FONTINDEX HEX DATA INTEGER BYTELIST WORDLIST LONGWORDLIST
+                        PALLETTABLE FEATURE GRAFFITIINPUTAREA COUNTRYLOCALISATION KEYBOARD MIDI TRANSLATION
+                        THUMBID BACKGROUNDID DISABLED VERTICAL  FEEDBACK MULTIPLELINES SINGLELINE AUTOSHIFT
+                        HASSCROLLBAR DYNAMICSIZE GRAPHICAL SELECTEDBITMAPID LEFTANCHOR RIGHTANCHOR
+                        #INCLUDE
+
+KeyWords2:              PrevTop PrevLeft PrevHeight PrevWidth PrevBottom PrevRight Center Auto
+
+StringBegChar:          "
+StringEndChar:          "
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clWindowText clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clBlue clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
