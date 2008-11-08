@@ -1,0 +1,137 @@
+//////////////////////////////////////////////////////////////////////////////
+// NuSMV highlighter v1.0 written by Alejandro Aguilar
+// at Cinvestav, Guadalajara, Mexico.
+// [aacornejo@netscape.com]
+//////////////////////////////////////////////////////////////////////////////
+
+// Language name
+// -----------------------------------------------------------------------------
+Language: NuSMV
+
+// Description
+// -----------------------------------------------------------------------------
+Description: NuSMV languaje [aaguilar@gdl.cinvestav.mx]
+
+// Default file filter
+// -----------------------------------------------------------------------------
+Filter: NuSMV file (*.smv,*.fsm)|*.smv;*.fsm
+
+// No help file has been defined (F1 pressing)
+// -----------------------------------------------------------------------------
+HelpFile:
+
+
+
+// Languaje elements
+// =============================================================================
+
+// NuSMV is case sensible [0 - no, 1 - yes]
+// -----------------------------------------------------------------------------
+CaseSensitive: 1
+
+// Line comment (comment to EOL) and block comment (it could be multiline)
+// -----------------------------------------------------------------------------
+LineComment: --
+BlockCommentBeg:
+BlockCommentEnd:
+
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// -----------------------------------------------------------------------------
+IdentifierBegChars: a..z A..Z _
+IdentifierChars: a..z A..Z _ $ # \
+
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+// -----------------------------------------------------------------------------
+NumConstBegChars: 0..9
+
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+// -----------------------------------------------------------------------------
+NumConstChars: 0..9
+
+// No escape character has been defined
+// -----------------------------------------------------------------------------
+EscapeChar:
+
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into five groups which can be
+// highlighted differently
+// -----------------------------------------------------------------------------
+KeyWords1: MODULE VAR ASSIGN DEFINE FAIRNESS INIT TRANS SPEC LTLSPEC INVARSPEC
+	PSLSPEC TRUE FALSE INVAR ISA JUSTICE COMPASSION COMPUTE MIN MAX
+KeyWords2: init next mod process running union case esac in self abort
+KeyWords3: AG AF AX EG EF EX A E U V T X G F S Y Z H O xor EBF ABF EBG ABG BU
+	forall always never next eventually until before next next_a next_e next_event
+	next_event_a, next_event_e never within whilenot
+KeyWords4: boolean
+KeyWords5:
+
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings
+// -----------------------------------------------------------------------------
+StringBegChar: "
+StringEndChar: "
+MultilineStrings: 0
+
+// there's no use of preprocessor directives [0 - no, 1 - yes]
+// -----------------------------------------------------------------------------
+UsePreprocessor: 0
+
+// no highlight current line: [0 - no, 1 - yes]
+// -----------------------------------------------------------------------------
+CurrLineHighlighted: 0
+
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+// -----------------------------------------------------------------------------
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clNavy clWindow B
+Keyword3Col:            clNavy clWindow B
+Keyword4Col:            clPurple clWindow
+Keyword5Col:            clBlue clWindow
+IdentifierCol:          clNavy clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clBlack clWindow B
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
