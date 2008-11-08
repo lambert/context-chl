@@ -1,0 +1,59 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// OCaml highlighter
+// written by Frank Rosemeier - www.rosemeier.info
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Objective Caml (OCaml)
+Filter:                 SML files (*.ml,*.cml,*.oml)|*.ml;*.cml;*.oml
+Description:            OCaml highlighter written by Frank Rosemeier - www.rosemeier.info
+HelpFile:
+CaseSensitive:          1
+LineComment:
+BlockCommentBeg:        (*
+BlockCommentEnd:        *)
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9 '
+NumConstBegChars:       0..9
+NumConstChars:          0..9 .
+EscapeChar:             \
+
+// structural keywords
+KeyWords1:     and as assert asr begin class constraint
+       do done downto else end exception external
+       for fun function functor if in include inherit
+       initializer lazy let local match method module
+               mutable new object of open private rec sig struct
+               then to try type val virtual when while with
+
+// identifier keywords
+KeyWords2:              true false div mod land lor lsl lsr lxor or
+                        parser // Camlp4
+
+// symbolic keywords
+KeyWords3:              + - * ~ ^ != <> < <= = => >  @ :: -> | <- ' `
+                        +. -. *. /. .. # & && : :> := ! ; ;; ? ??
+                        ( ) [ ] [| |] [< >] { } {< >}
+                        << <: >> $ $$ $: // Camlp4
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       1
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clPurple clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clPurple clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
