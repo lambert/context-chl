@@ -1,0 +1,221 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// PPC Assembly highlighter written by Claude Boulade
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               PPC Assembler
+Filter:                 PPC Assembler files (*.s)|*.s
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _ . @
+IdentifierChars:        a..z A..Z _ 0..9 . + -
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefhABCDEFH x .
+EscapeChar:
+
+// op codes
+
+KeyWords1:              a a. abs abs. abso abso. add add. addc addc. addco addco. adde adde. addeo addeo.
+                        addi addic addic. addis addme addme. addmeo addmeo. addo addo. addze addze. addzeo
+                        addzeo. ae ae. aeo aeo. ai ai. ame ame. ameo ameo. and and. andc andc. andi. andil.
+                        andis. andiu. ao ao. aze aze. azeo azeo. b ba bbf bbfa bbfl bbfla bbfr bbfrl bbt
+                        bbta bbtl bbtla bbtr bbtrl bc bc- bc+ bca bca- bca+ bcc bccl bcctr bcctr- bcctr+
+                        bcctrl bcctrl- bcctrl+ bcl bcl- bcl+ bcla bcla- bcla+ bclr bclr- bclr+ bclrl bclrl-
+                        bclrl+ bcr bcrl bctr bctrl bdn bdna bdnl bdnla bdnz bdnz- bdnz+ bdnza bdnza- bdnza+
+                        bdnzf bdnzf- bdnzf+ bdnzfa bdnzfa- bdnzfa+ bdnzfl bdnzfl- bdnzfl+ bdnzfla bdnzfla-
+                        bdnzfla+ bdnzflr bdnzflr- bdnzflr+ bdnzflrl bdnzflrl- bdnzflrl+ bdnzl bdnzl- bdnzl+
+                        bdnzla bdnzla- bdnzla+ bdnzlr bdnzlr- bdnzlr+ bdnzlrl bdnzlrl- bdnzlrl+ bdnzt bdnzt-
+                        bdnzt+ bdnzta bdnzta- bdnzta+ bdnztl bdnztl- bdnztl+ bdnztla bdnztla- bdnztla+
+                        bdnztlr bdnztlr- bdnztlr+ bdnztlrl bdnztlrl- bdnztlrl+ bdz bdz- bdz+ bdza bdza-
+                        bdza+ bdzf bdzf- bdzf+ bdzfa bdzfa- bdzfa+ bdzfl bdzfl- bdzfl+ bdzfla bdzfla-
+                        bdzfla+ bdzflr bdzflr- bdzflr+ bdzflrl bdzflrl- bdzflrl+ bdzl bdzl- bdzl+ bdzla
+                        bdzla- bdzla+ bdzlr bdzlr- bdzlr+ bdzlrl bdzlrl- bdzlrl+ bdzt bdzt- bdzt+ bdzta
+                        bdzta- bdzta+ bdztl bdztl- bdztl+ bdztla bdztla- bdztla+ bdztlr bdztlr- bdztlr+
+                        bdztlrl bdztlrl- bdztlrl+ beq beq- beq+ beqa beqa- beqa+ beqctr beqctr- beqctr+
+                        beqctrl beqctrl- beqctrl+ beql beql- beql+ beqla beqla- beqla+ beqlr beqlr- beqlr+
+                        beqlrl beqlrl- beqlrl+ beqr beqrl bf bf- bf+ bfa bfa- bfa+ bfctr bfctr- bfctr+
+                        bfctrl bfctrl- bfctrl+ bfl bfl- bfl+ bfla bfla- bfla+ bflr bflr- bflr+ bflrl bflrl-
+                        bflrl+ bge bge- bge+ bgea bgea- bgea+ bgectr bgectr- bgectr+ bgectrl bgectrl-
+                        bgectrl+ bgel bgel- bgel+ bgela bgela- bgela+ bgelr bgelr- bgelr+ bgelrl bgelrl-
+                        bgelrl+ bger bgerl bgt bgt- bgt+ bgta bgta- bgta+ bgtctr bgtctr- bgtctr+ bgtctrl
+                        bgtctrl- bgtctrl+ bgtl bgtl- bgtl+ bgtla bgtla- bgtla+ bgtlr bgtlr- bgtlr+ bgtlrl
+                        bgtlrl- bgtlrl+ bgtr bgtrl bl bla ble ble- ble+ blea blea- blea+ blectr blectr-
+                        blectr+ blectrl blectrl- blectrl+ blel blel- blel+ blela blela- blela+ blelr blelr-
+                        blelr+ blelrl blelrl- blelrl+ bler blerl blr blrl blt blt- blt+ blta blta- blta+
+                        bltctr bltctr- bltctr+ bltctrl bltctrl- bltctrl+ bltl bltl- bltl+ bltla bltla-
+                        bltla+ bltlr bltlr- bltlr+ bltlrl bltlrl- bltlrl+ bltr bltrl bne bne- bne+ bnea
+                        bnea- bnea+ bnectr bnectr- bnectr+ bnectrl bnectrl- bnectrl+ bnel bnel- bnel+ bnela
+                        bnela- bnela+ bnelr bnelr- bnelr+ bnelrl bnelrl- bnelrl+ bner bnerl bng bng- bng+
+                        bnga bnga- bnga+ bngctr bngctr- bngctr+ bngctrl bngctrl- bngctrl+ bngl bngl- bngl+
+                        bngla bngla- bngla+ bnglr bnglr- bnglr+ bnglrl bnglrl- bnglrl+ bngr bngrl bnl bnl-
+                        bnl+ bnla bnla- bnla+ bnlctr bnlctr- bnlctr+ bnlctrl bnlctrl- bnlctrl+ bnll bnll-
+                        bnll+ bnlla bnlla- bnlla+ bnllr bnllr- bnllr+ bnllrl bnllrl- bnllrl+ bnlr bnlrl bns
+                        bns- bns+ bnsa bnsa- bnsa+ bnsctr bnsctr- bnsctr+ bnsctrl bnsctrl- bnsctrl+ bnsl
+                        bnsl- bnsl+ bnsla bnsla- bnsla+ bnslr bnslr- bnslr+ bnslrl bnslrl- bnslrl+ bnsr
+                        bnsrl bnu bnu- bnu+ bnua bnua- bnua+ bnuctr bnuctr- bnuctr+ bnuctrl bnuctrl-
+                        bnuctrl+ bnul bnul- bnul+ bnula bnula- bnula+ bnulr bnulr- bnulr+ bnulrl bnulrl-
+                        bnulrl+ br brl bso bso- bso+ bsoa bsoa- bsoa+ bsoctr bsoctr- bsoctr+ bsoctrl
+                        bsoctrl- bsoctrl+ bsol bsol- bsol+ bsola bsola- bsola+ bsolr bsolr- bsolr+ bsolrl
+                        bsolrl- bsolrl+ bsor bsorl bt bt- bt+ bta bta- bta+ btctr btctr- btctr+ btctrl
+                        btctrl- btctrl+ btl btl- btl+ btla btla- btla+ btlr btlr- btlr+ btlrl btlrl- btlrl+
+                        bun bun- bun+ buna buna- buna+ bunctr bunctr- bunctr+ bunctrl bunctrl- bunctrl+ bunl
+                        bunl- bunl+ bunla bunla- bunla+ bunlr bunlr- bunlr+ bunlrl bunlrl- bunlrl+ cal cau
+                        cax cax. caxo caxo. clcs clf cli clrldi clrldi. clrlsldi clrlsldi. clrlslwi
+                        clrlslwi. clrlwi clrlwi. clrrdi clrrdi. clrrwi clrrwi. cmp cmpd cmpdi cmpi cmpl
+                        cmpld cmpldi cmpli cmplw cmplwi cmpw cmpwi cntlz cntlz. cntlzd cntlzd. cntlzw
+                        cntlzw. crand crandc crclr creqv crmove crnand crnor crnot cror crorc crset crxor
+                        dcba dcbf dcbi dcbst dcbt dcbtst dcbz dccci dclst dclz dcread dcs div div. divd
+                        divd. divdo divdo. divdu divdu. divduo divduo. divo divo. divs divs. divso divso.
+                        divw divw. divwo divwo. divwu divwu. divwuo divwuo. doz doz. dozi dozo dozo. eciwx
+                        ecowx eieio eqv eqv. extldi extldi. extlwi extlwi. extrdi extrdi. extrwi extrwi.
+                        exts exts. extsb extsb. extsh extsh. extsw extsw. fa fa. fabs fabs. fadd fadd. fadds
+                        fadds. fcfid fcfid. fcir fcir. fcirz fcirz. fcmpo fcmpu fctid fctid. fctidz fctidz.
+                        fctiw fctiw. fctiwz fctiwz. fd fd. fdiv fdiv. fdivs fdivs. fm fm. fma fma. fmadd
+                        fmadd. fmadds fmadds. fmr fmr. fms fms. fmsub fmsub. fmsubs fmsubs. fmul fmul. fmuls
+                        fmuls. fnabs fnabs. fneg fneg. fnma fnma. fnmadd fnmadd. fnmadds fnmadds. fnms fnms.
+                        fnmsub fnmsub. fnmsubs fnmsubs. fres fres. frsp frsp. frsqrte frsqrte. fs fs. fsel
+                        fsel. fsqrt fsqrt. fsqrts fsqrts. fsub fsub. fsubs fsubs. icbi icbt iccci icread ics
+                        inslwi inslwi. insrdi insrdi. insrwi insrwi. isync l la lbrx lbz lbzu lbzux lbzx ld
+                        ldarx ldu ldux ldx lfd lfdu lfdux lfdx lfq lfqu lfqux lfqx lfs lfsu lfsux lfsx lha
+                        lhau lhaux lhax lhbrx lhz lhzu lhzux lhzx li lil lis liu lm lmw lscbx lscbx. lsi
+                        lswi lswx lsx lu lux lvebx lvehx lvewx lvsl lvsr lvx lvxl lwa lwarx lwaux lwax lwbrx
+                        lwz lwzu lwzux lwzx lx macchw macchw. macchwo macchwo. macchws macchws. macchwso
+                        macchwso. macchwsu macchwsu. macchwsuo macchwsuo. macchwu macchwu. macchwuo
+                        macchwuo. machhw machhw. machhwo machhwo. machhws machhws. machhwso machhwso.
+                        machhwsu machhwsu. machhwsuo machhwsuo. machhwu machhwu. machhwuo machhwuo. maclhw
+                        maclhw. maclhwo maclhwo. maclhws maclhws. maclhwso maclhwso. maclhwsu maclhwsu.
+                        maclhwsuo maclhwsuo. maclhwu maclhwu. maclhwuo maclhwuo. maskg maskg. maskir maskir.
+                        mcrf mcrfs mcrxr mfasr mfbar mfbear mfbesr mfbr0 mfbr1 mfbr2 mfbr3 mfbr4 mfbr5 mfbr6
+                        mfbr7 mfccr0 mfcdbcr mfcmpa mfcmpb mfcmpc mfcmpd mfcmpe mfcmpf mfcmpg mfcmph
+                        mfcounta mfcountb mfcr mfctr mfdac1 mfdac2 mfdar mfdbatl mfdbatu mfdbcr0 mfdbcr1
+                        mfdbsr mfdc_adr mfdc_cst mfdc_dat mfdccr mfdcr mfdcwr mfdear mfdec mfder mfdmacc0
+                        mfdmacc1 mfdmacc2 mfdmacc3 mfdmacr0 mfdmacr1 mfdmacr2 mfdmacr3 mfdmact0 mfdmact1
+                        mfdmact2 mfdmact3 mfdmada0 mfdmada1 mfdmada2 mfdmada3 mfdmasa0 mfdmasa1 mfdmasa2
+                        mfdmasa3 mfdmasr mfdpdr mfdpir mfdsisr mfdvc1 mfdvc2 mfear mfesr mfevpr mfexier
+                        mfexisr mffs mffs. mfiac1 mfiac2 mfiac3 mfiac4 mfibatl mfibatu mfic_adr mfic_cst
+                        mfic_dat mficcr mficdbdr mficr mfictc mfictrl mfimmr mfiocr mfl2cr mflctrl1 mflctrl2
+                        mflr mfm_casid mfm_tw mfmd_ap mfmd_ctr mfmd_dbcam mfmd_dbram0 mfmd_dbram1 mfmd_epn
+                        mfmd_rpn mfmd_twb mfmd_twc mfmi_ap mfmi_ctr mfmi_dbcam mfmi_dbram0 mfmi_dbram1
+                        mfmi_epn mfmi_rpn mfmi_twc mfmmcr0 mfmmcr1 mfmq mfmsr mfpbl1 mfpbl2 mfpbu1 mfpbu2
+                        mfpid mfpit mfpmc1 mfpmc2 mfpmc3 mfpmc4 mfpvr mfrtcl mfrtcu mfsdr0 mfsdr1 mfsgr
+                        mfsia mfsler mfspr mfsprg mfsprg0 mfsprg1 mfsprg2 mfsprg3 mfsprg4 mfsprg5 mfsprg6
+                        mfsprg7 mfsr mfsri mfsrin mfsrr0 mfsrr1 mfsrr2 mfsrr3 mfsu0r mftb mftbhi mftbl
+                        mftblo mftbu mftcr mfthrm1 mfthrm2 mfthrm3 mftid mftsr mfummcr0 mfummcr1 mfupmc1
+                        mfupmc2 mfupmc3 mfupmc4 mfusia mfvscr mfxer mfzpr mr mr. mtasr mtbar mtbear mtbesr
+                        mtbr0 mtbr1 mtbr2 mtbr3 mtbr4 mtbr5 mtbr6 mtbr7 mtccr0 mtcdbcr mtcmpa mtcmpb mtcmpc
+                        mtcmpd mtcmpe mtcmpf mtcmpg mtcmph mtcounta mtcountb mtcr mtcrf mtctr mtdac1 mtdac2
+                        mtdar mtdbatl mtdbatu mtdbcr0 mtdbcr1 mtdbsr mtdccr mtdcr mtdcwr mtdear mtdec mtder
+                        mtdmacc0 mtdmacc1 mtdmacc2 mtdmacc3 mtdmacr0 mtdmacr1 mtdmacr2 mtdmacr3 mtdmact0
+                        mtdmact1 mtdmact2 mtdmact3 mtdmada0 mtdmada1 mtdmada2 mtdmada3 mtdmasa0 mtdmasa1
+                        mtdmasa2 mtdmasa3 mtdmasr mtdsisr mtdvc1 mtdvc2 mtear mtesr mtevpr mtexier mtexisr
+                        mtfsb0 mtfsb0. mtfsb1 mtfsb1. mtfsf mtfsf. mtfsfi mtfsfi. mtiac1 mtiac2 mtiac3
+                        mtiac4 mtibatl mtibatu mticcr mticdbdr mticr mtictc mtictrl mtiocr mtl2cr mtlctrl1
+                        mtlctrl2 mtlr mtmmcr0 mtmmcr1 mtmq mtmsr mtmsrd mtpbl1 mtpbl2 mtpbu1 mtpbu2 mtpid
+                        mtpit mtpmc1 mtpmc2 mtpmc3 mtpmc4 mtrtcl mtrtcu mtsdr0 mtsdr1 mtsgr mtsia mtsler
+                        mtspr mtsprg mtsprg0 mtsprg1 mtsprg2 mtsprg3 mtsprg4 mtsprg5 mtsprg6 mtsprg7 mtsr
+                        mtsrd mtsrdin mtsri mtsrin mtsrr0 mtsrr1 mtsrr2 mtsrr3 mtsu0r mttbhi mttbl mttblo
+                        mttbu mttcr mtthrm1 mtthrm2 mtthrm3 mttid mttsr mtummcr0 mtummcr1 mtupmc1 mtupmc2
+                        mtupmc3 mtupmc4 mtusia mtvscr mtxer mtzpr mul mul. mulchw mulchw. mulchwu mulchwu.
+                        mulhd mulhd. mulhdu mulhdu. mulhhw mulhhw. mulhhwu mulhhwu. mulhw mulhw. mulhwu
+                        mulhwu. muli mulld mulld. mulldo mulldo. mullhw mullhw. mullhwu mullhwu. mulli mullw
+                        mullw. mullwo mullwo. mulo mulo. muls muls. mulso mulso. nabs nabs. nabso nabso.
+                        nand nand. neg neg. nego nego. nmacchw nmacchw. nmacchwo nmacchwo. nmacchws
+                        nmacchws. nmacchwso nmacchwso. nmachhw nmachhw. nmachhwo nmachhwo. nmachhws
+                        nmachhws. nmachhwso nmachhwso. nmaclhw nmaclhw. nmaclhwo nmaclhwo. nmaclhws
+                        nmaclhws. nmaclhwso nmaclhwso. nop nor nor. not not. or or. orc orc. ori oril oris
+                        oriu rac rfci rfi rfid rfsvc rldcl rldcl. rldcr rldcr. rldic rldic. rldicl rldicl.
+                        rldicr rldicr. rldimi rldimi. rlimi rlimi. rlinm rlinm. rlmi rlmi. rlnm rlnm. rlwimi
+                        rlwimi. rlwinm rlwinm. rlwnm rlwnm. rotld rotld. rotldi rotldi. rotlw rotlw. rotlwi
+                        rotlwi. rotrdi rotrdi. rotrwi rotrwi. rrib rrib. sc sf sf. sfe sfe. sfeo sfeo. sfi
+                        sfme sfme. sfmeo sfmeo. sfo sfo. sfze sfze. sfzeo sfzeo. sl sl. slbia slbie sld sld.
+                        sldi sldi. sle sle. sleq sleq. sli sli. sliq sliq. slliq slliq. sllq sllq. slq slq.
+                        slw slw. slwi slwi. sr sr. sra sra. srad srad. sradi sradi. srai srai. sraiq sraiq.
+                        sraq sraq. sraw sraw. srawi srawi. srd srd. srdi srdi. sre sre. srea srea. sreq
+                        sreq. sri sri. sriq sriq. srliq srliq. srlq srlq. srq srq. srw srw. srwi srwi. st
+                        stb stbrx stbu stbux stbx std stdcx. stdu stdux stdx stfd stfdu stfdux stfdx stfiwx
+                        stfq stfqu stfqux stfqx stfs stfsu stfsux stfsx sth sthbrx sthu sthux sthx stm stmw
+                        stsi stswi stswx stsx stu stux stvebx stvehx stvewx stvx stvxl stw stwbrx stwcx.
+                        stwu stwux stwx stx sub sub. subc subc. subco subco. subf subf. subfc subfc. subfco
+                        subfco. subfe subfe. subfeo subfeo. subfic subfme subfme. subfmeo subfmeo. subfo
+                        subfo. subfze subfze. subfzeo subfzeo. subi subic subic. subis subo subo. svc svca
+                        svcl svcla sync t td tdeq tdeqi tdge tdgei tdgt tdgti tdi tdle tdlei tdlge tdlgei
+                        tdlgt tdlgti tdlle tdllei tdllt tdllti tdlng tdlngi tdlnl tdlnli tdlt tdlti tdne
+                        tdnei tdng tdngi tdnl tdnli teq teqi tge tgei tgt tgti ti tlbi tlbia tlbie tlbld
+                        tlbli tlbre tlbrehi tlbrelo tlbsx tlbsx. tlbsync tlbwe tlbwehi tlbwelo tle tlei tlge
+                        tlgei tlgt tlgti tlle tllei tllt tllti tlng tlngi tlnl tlnli tlt tlti tne tnei tng
+                        tngi tnl tnli trap tw tweq tweqi twge twgei twgt twgti twi twle twlei twlge twlgei
+                        twlgt twlgti twlle twllei twllt twllti twlng twlngi twlnl twlnli twlt twlti twne
+                        twnei twng twngi twnl twnli vaddcuw vaddfp vaddsbs vaddshs vaddsws vaddubm vaddubs
+                        vadduhm vadduhs vadduwm vadduws vand vandc vavgsb vavgsh vavgsw vavgub vavguh vavguw
+                        vcfsx vcfux vcmpbfp vcmpbfp. vcmpeqfp vcmpeqfp. vcmpequb vcmpequb. vcmpequh
+                        vcmpequh. vcmpequw vcmpequw. vcmpgefp vcmpgefp. vcmpgtfp vcmpgtfp. vcmpgtsb
+                        vcmpgtsb. vcmpgtsh vcmpgtsh. vcmpgtsw vcmpgtsw. vcmpgtub vcmpgtub. vcmpgtuh
+                        vcmpgtuh. vcmpgtuw vcmpgtuw. vctsxs vctuxs vexptefp vlogefp vmaddfp vmaxfp vmaxsb
+                        vmaxsh vmaxsw vmaxub vmaxuh vmaxuw vmhaddshs vmhraddshs vminfp vminsb vminsh vminsw
+                        vminub vminuh vminuw vmladduhm vmrghb vmrghh vmrghw vmrglb vmrglh vmrglw vmsummbm
+                        vmsumshm vmsumshs vmsumubm vmsumuhm vmsumuhs vmulesb vmulesh vmuleub vmuleuh vmulosb
+                        vmulosh vmuloub vmulouh vnmsubfp vnor vor vperm vpkpx vpkshss vpkshus vpkswss
+                        vpkswus vpkuhum vpkuhus vpkuwum vpkuwus vrefp vrfim vrfin vrfip vrfiz vrlb vrlh vrlw
+                        vrsqrtefp vsel vsl vslb vsldoi vslh vslo vslw vspltb vsplth vspltisb vspltish
+                        vspltisw vspltw vsr vsrab vsrah vsraw vsrb vsrh vsro vsrw vsubcuw vsubfp vsubsbs
+                        vsubshs vsubsws vsububm vsububs vsubuhm vsubuhs vsubuwm vsubuws vsum2sws vsum4sbs
+                        vsum4shs vsum4ubs vsumsws vupkhpx vupkhsb vupkhsh vupklpx vupklsb vupklsh vxor wrtee
+                        wrteei xor xor. xori xoril xoris xoriu
+
+
+// registers, conditions and relocation modifiers
+
+KeyWords2:              r0 r1 sp r2 rtoc r3 r4 r5 r6 r7 r8 r9 r10 r11 r12 r13 r14 r15 r16 r17 r18 r19 r20
+                        r21 r22 r23 r24 r25 r26 r27 r28 r29 r30 r31 r.0 r.1 r.sp r.2 r.toc r.3 r.4 r.5 r.6
+                        r.7 r.8 r.9 r.10 r.11 r.12 r.13 r.14 r.15 r.16 r.17 r.18 r.19 r.20 r.21 r.22 r.23
+                        r.24 r.25 r.26 r.27 r.28 r.29 r.30 r.31 f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+                        f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 f24 f25 f26 f27 f28 f29 f30 f31 f.0 f.1
+                        f.2 f.3 f.4 f.5 f.6 f.7 f.8 f.9 f.10 f.11 f.12 f.13 f.14 f.15 f.16 f.17 f.18 f.19
+                        f.20 f.21 f.22 f.23 f.24 f.25 f.26 f.27 f.28 f.29 f.30 f.31 v0 v1 v2 v3 v4 v5 v6 v7
+                        v8 v9 v10 v11 v12 v13 v14 v15 v16 v17 v18 v19 v20 v21 v22 v23 v24 v25 v26 v27 v28
+                        v29 v30 v31 v.0 v.1 v.2 v.3 v.4 v.5 v.6 v.7 v.8 v.9 v.10 v.11 v.12 v.13 v.14 v.15
+                        v.16 v.17 v.18 v.19 v.20 v.21 v.22 v.23 v.24 v.25 v.26 v.27 v.28 v.29 v.30 v.31
+                        ctr dar dec dsisr fpscr lr pmr sdr1 srr0 srr1 xer cr0 cr1 cr2 cr3 cr4 cr5 cr6 cr7
+                        cr.0 cr.1 cr.2 cr.3 cr.4 cr.5 cr.6 cr.7 eq gt lt so un @l @h @ha @brtaken @brntaken
+                        @got @fixup @plt @pltrel24 @copy @globdat @local24pc @local @plt @pltrel @sdarel
+                        @sectoff @naddr @naddr16 @sdai16 @sda2rel @sda2i16 @sda21 @mrkref @relsect @bitfld
+                        @relsda @xgot
+
+
+// directives
+
+KeyWords3:              .abort .align .ascii .asciz .balign .balignl .balignw .bb .bc .bf .bi .bs .bss .byte
+                        .comm .csect .data .def .desc .dim .double .dsect .eb .ec .ef .ei .eject .else .elseif
+                        .end .endc .endef .endfunc .endif .endm .endr .equ .equiv .err .es .exitm .extern
+                        .fail .file .fill .float .func .function .global .globl .hidden .hword .ident .if
+                        .ifc .ifdef .ifeq .ifeqs .ifge .ifgt .ifle .iflt .ifnc .ifndef .ifne .ifnes .ifnotdef
+                        .include .int .internal .irp .irpc .lcomm .lflags .lglobl .line .list .llong .ln .loc
+                        .long .machine .macro .nolist .octa .org .p2align .p2alignl .p2alignw .print .protected
+                        .psize .purgem .quad .rdata .rename .rept .rodata .sbttl .scl .section .sect .set
+                        .short .single .size .skip .sleb128 .space .stabd .stabn .stabs .stabx .string .struct
+                        .symver .tag .text .title .toc .type .uleb128 .val .vbyte .version .weak .word
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clOlive clWindow B
+Keyword3Col:            clFuchsia clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clHighlight clYellow
+
