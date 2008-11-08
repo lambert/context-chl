@@ -1,0 +1,75 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                          //
+//         ADV highlighter written by SklErø, amy4ever@freemail.it          //
+//             Copyright (c) 2002 SklErø. All rights reserved.              //
+//                                                                          //
+//                       based on MAGE v1.1a RC1 (c) Chir                   //
+//                http://www.geocities.com/chir_geo/indyjava/               //
+//                                                                          //
+//      This program is free software; you can redistribute it and/or       //
+//      modify it under the terms of the GNU General Public License         //
+//      as published by the Free Software Foundation; either version 2      //
+//      of the License, or (at your option) any later version.              //
+//                   http://www.gnu.org/copyleft/gpl.html                   //
+//                                                                          //
+//         Please mail me if you modify or update the code, tanks.          //
+//                                                                          //
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               MAGE GAG Maker
+Filter:                 ADV files (*.adv)|*.adv
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _123456-
+NumConstBegChars:       0..9 #
+NumConstChars:          0..9 #abcdefABCDEFptxmPTXM
+EscapeChar:
+
+KeyWords1:              ALPHA ANGLES ANIMATION BGSOUND COMMAND CURSOR DEFAULTV
+                        ELSE EVENT FOR FONT IF ICON IMAGE INK INTEGER INVENTORY
+                        ITEM ITEMVAR KEY LABEL PAPER PLAYER POSITION PROC ROOM
+                        ROOMVAR SCALE SCREEN SENTENCE SIZE SPEED STRING SUPER
+                        SYSTEM TALK TITLE THEN VERB WALK WHILE THEN COMMUTATIVE
+                        FPS THIS EXTENDS LIGHTING IMPORT
+
+KeyWords2:              ADD ADDANSWER ADDV ATTITUDE CALL CLRANSWER DELANSWER
+                        EXIT GIVE GOTO GOTOTRANSITION LET LETI LETS LOAD LOCATE
+                        MOVE MOVETO MULT MULTV ORIENTATE PLACE RAND SAY SAYI SAYIS
+                        SAYS SETALPHA SETANIMATION SETATTITUDE SETBGSOUND SETICON
+                        SETIMAGE SETINK SETLABEL SETLIGHTING SETMAPMODE WALKTO
+                        SETMOTIONBLUR SETORIENTATION SETPLAYER SETPOSITION
+                        SETROOM BGSOUND SETSCALE SETSPEED SETTRAIL SETVERBLABEL
+                        SLEEP SOUND SPEAK STOPSOUND TRANSITION TURN WAIT WAITANSWER
+                        WAITMOVE WAITMOVETO WAITSAY WAITSAYI WAITSAYIS WAITSAYS
+                        WAITSOUND WAITVIDEO WAITSPEAK WAITWALK WAITWALKTO WALK
+                        ADDIV ADDS
+
+KeyWords3:              OnEntry OnExit OnClick Dialog SansSerif Serif Monospaced
+                        Helvetica TimesRoman Courier DialogInput ZapfDingbats
+                        AND OR NOT COLLISION EQ EQI EQR EQS EQSV EQV GE GEV GT
+                        GTV INSIDE ISPLAYER LE LEV LT LTV NE NEV PRESENT TAKEN
+                        CurrentRoom CurrentPlayer Argv1 Argv2
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clGreen clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
