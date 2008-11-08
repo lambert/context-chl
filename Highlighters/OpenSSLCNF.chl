@@ -1,0 +1,85 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// OpenSSL CNF files Highlighter
+//
+// (feel free to make changes - stick in your name and pl submit it to Eden K.)
+//
+// v 1.0 by Abhijit Rao (abhijit_rao@yahoo.com) - Nov 2004
+//
+//
+///////////////////////////////////////////////////////////////////////////////
+
+Language:               OpenSSL CNF files
+Filter:                 OpenSSL CNF  files (*.cnf)|*.cnf
+
+// if OpenSSL is not installed at this location - please change this
+// I am using the Windows Distribution
+HelpFile:               \OpenSSL\OpenSSLhelp.chm
+
+// OpenSSL cnf is context sensitive ??
+CaseSensitive:          1
+
+LineComment:            #
+
+BlockCommentBeg:
+BlockCommentEnd:
+
+IdentifierBegChars:     a..z A..Z _ $
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             /
+
+// General commands
+KeyWords1:              HOME RANDFILE oid_section default_ca dir certs crl_dir database
+                        unique_subject new_certs_dir certificate serial crlnumber crl
+                        private_key x509_extensions name_opt cert_opt default_days
+                        copy_extensions default_crl_days default_md preserve policy
+                        countryName stateOrProvinceName organizationName organizationalUnitName
+                        commonName emailAddress challengePassword default_bits default_keyfile distinguished_name
+                        attributes x509_extensions input_password output_password string_mask
+                        countryName_default stateOrProvinceName_default organizationName_default
+                        organizationalUnitName_default countryName_min stateOrProvinceName_min
+                        organizationName_min organizationalUnitName_min countryName_max stateOrProvinceName_max
+                        organizationName_max organizationalUnitName_max commonName_default emailAddress_default
+                        challengePassword_default commonName_min emailAddress_min challengePassword_min
+                        commonName_max emailAddress_max challengePassword_max unstructuredName
+                        basicConstraints nsCertType nsComment subjectKeyIdentifier authorityKeyIdentifier
+                        subjectAltName issuerAltName nsCaRevocationUrl nsBaseUrl nsRevocationUrl nsRenewalUrl
+                        nsCaPolicyUrl nsSslServerName keyUsage obj localityName locality_default 0. 1.
+
+// Commands used only in batch files
+KeyWords2:              $dir certs crl newcerts serial private crlnumber usr_cert
+                        index.txt cacert.pem crl.pem cakey.pem .rand
+
+// Sub-keywords
+KeyWords3:              match supplied optional
+
+KeyWords4:
+
+// we will use the string style for section name
+StringBegChar:          " [
+StringEndChar:          " ]
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+OverrideTxtFgColor:     1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+Keyword4Col:            clNavy clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $00808080 clWindow I B
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clYellow B
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clGray clWindow I
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+MatchedBracesCol:       clRed clBlue
+
+
+
+
