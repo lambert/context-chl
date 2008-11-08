@@ -1,0 +1,53 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Express Highlighter written By Solcia Mauro
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Oracle Express
+Filter:                 Oracle Express File (*.exp)|*.exp
+Description:            Oracle Express Highlighter written By Solcia Mauro
+HelpFile:
+CaseSensitive:          0
+LineComment:            "
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefABCDEF
+EscapeChar:
+
+KeyWords1:              lmt limit arg argument vrb variable to if then call do doend dtb attach detach eq upd update
+                        noq push pushlevel pop poplevel rpr descendants using mnt gt lt add delete ne
+                        remove else for show WHILE GOTO return trap on
+
+KeyWords2:              TODAY TOD CHANGECHARS database EXTLINES STPARM JOINCHARS FILEQUERY FILEDELETE DATABASE
+                        isvalue findchars extchars convert NAFILL values joinlines
+
+KeyWords3:              text int error: all ancestors and or _error: NA yes no back SYPAR list EXISTS
+                        WRITERS
+
+//                      I assume Underline and Strike-out are mutually exclusive
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clMaroon clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clRed clWindow
+StringCol:              clRed clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+
