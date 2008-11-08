@@ -1,0 +1,84 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// MSP430 Assembly highlighter written by M. Krueger, info@mk-de.net
+// V.01.01 Rev.01 14.07.2002
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:		MSP430 Assembler
+Filter:			MSP430 ASM files (*.s43;*.d43;*.m43)|*.s43;*.d43;*.m43
+HelpFile:
+CaseSensitive:		0
+
+LineComment:		;
+BlockCommentBeg:	/*
+BlockCommentEnd:	*/
+
+IdentifierBegChars:	a..z A..Z _ ?
+IdentifierChars:	a..z A..Z _ ? 0..9 $ .
+
+NumConstBegChars:	0..9
+NumConstChars:		0..9 x X h H . abcdef ABCDEF
+
+EscapeChar:
+
+// op codes
+KeyWords1:		adc adc.b add add.b addc addc.b and and.b
+			bic bic.b bis bis.b bit bit.b br
+			call clr clr.b clrc clrn clrz cmp cmp.b
+			dadc dadc.b dadd dadd.b dec dec.b decd decd.b dint
+			eint
+			inc inc.b incd incd.b inv inv.b
+			jc jeq jge jhs jlo jlt jmp jn jnc jne jnz jz
+			mov mov.b
+			nop
+			pop pop.b push push.b
+			ret reti rla rla.b rlc rlc.b rra rra.b rrc rrc.b
+			sbc sbc.b setc setn setz sub sub.b subc subc.b swpb sxt
+			tst tst.b
+			xor xor.b
+
+// registers
+KeyWords2:		pc sp cg1 cg2
+			r4 r5 r6 r7 r8 r9 r10 r11 r12 r13 r14 r15
+//			@r4 @r5 @r6 @r7 @r8 @r9 @r10 @r11 @r12 @r13 @r14 @r15
+
+// assembler directives
+KeyWords3:		align aseg assign
+			caseoff caseon col common
+			db define df dl ds dw
+			elif else elseif end endif endm endmod endr equ error even exitm export extern
+			if ifdef ifndef import include
+			library local lstcnd lstcod lstexp lstmac lstout lstpag lstrep lstxrf
+			macro module
+			name
+			org
+			page pagsiz program public
+			radix rept reptc repti rseg
+			set sfrb sfrw stack
+			undef
+			var
+//			#define #elif #else #endif #error #if #ifdef #ifndef #include #undef
+
+StringBegChar:		" '
+StringEndChar:		" '
+MultilineStrings:	0
+
+UsePreprocessor:	0
+CurrLineHighlighted:	0
+
+SpaceCol:		clWindowText clWindow
+Keyword1Col:		clBlue clWindow			// op codes
+Keyword2Col:		clBlack clWindow B		// registers
+Keyword3Col:		clBlue clWindow B		// assembler directives
+IdentifierCol:		clWindowText clWindow
+CommentCol:		clGreen clWindow I
+NumberCol:		clRed clWindow
+StringCol:		clMaroon clWindow
+SymbolCol:		clGray clWindow
+PreprocessorCol:	clTeal clWindow
+SelectionCol:		clWhite clNavy
+CurrentLineCol:		clBlack clYellow
+
+
+
