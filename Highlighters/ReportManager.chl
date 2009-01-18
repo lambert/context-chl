@@ -1,0 +1,133 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Report Manager highlighter written by Bhavbhuti Nathwani
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Report Manager
+Description:            Report Manager highlighter written by Bhavbhuti Nathwani
+Filter:                 Highlighter files (*.rep)|*.rep
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 #abcdefABCDEF
+EscapeChar:
+KeyWords1:
+                                                                ADOConnectionString
+                                                                Aggregate
+                                                                AgIniValue
+                                                                Alias
+                                                                AlignBottom
+                                                                Alignment
+                                                                AllowNulls
+                                                                AutoContract
+                                                                AutoExpand
+                                                                BackExpression
+                                                                BeginPageExpression
+                                                                ChangeBool
+                                                                ChangeExpression
+                                                                Component
+                                                                DatabaseAlias
+                                                                Datasets
+                                                                DataSource
+                                                                Description
+                                                                DisplayFormat
+                                                                DoAfterPrint
+                                                                DoBeforePrint
+                                                                Driver
+                                                                ExportDoNewLine
+                                                                ExportExpression
+                                                                ExportPosition
+                                                                ExportSize
+                                                                Expression
+                                                                ExternalField
+                                                                ExternalSearchField
+                                                                ExternalTable
+                                                                FontSize
+                                                                FontStyle
+                                                                GridHeight
+                                                                GridWidth
+                                                                GroupName
+                                                                Height
+                                                                Hint
+                                                                LFontName
+                                                                LoadDriverParams
+                                                                LoadParams
+                                                                LoginPrompt
+                                                                Name
+                                                                PageBackColor
+                                                                PageHeight
+                                                                PageOrientation
+                                                                PageRepeat
+                                                                Pagesize
+                                                                PageWidth
+                                                                ParamType
+                                                                PenWidth
+                                                                PosX
+                                                                PosY
+                                                                PrintCondition
+                                                                PrintNulls
+                                                                ReportAction
+                                                                ReportField
+                                                                ReportGroupsTable
+                                                                ReportSearchField
+                                                                ReportTable
+                                                                Search
+                                                                Section
+                                                                SectionType
+                                                                SkipExpreH
+                                                                SkipExpreV
+                                                                SkipPage
+                                                                SkipToPageExpre
+                                                                SQL
+                                                                Stream
+                                                                streamformat
+                                                                Strings
+                                                                SubReport
+                                                                Type1Font
+                                                                VAlignment
+                                                                Value
+                                                                WFontName
+                                                                WideText
+                                                                Width
+KeyWords2:
+                                                                Components
+                                                                DatabaseInfo
+                                                                DataInfo
+                                                                end
+                                                                item
+                                                                object
+                                                                Params
+                                                                Sections
+                                                                SubReports
+//                      I assume Underline and Strike-out are mutually exclusive
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clMaroon clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword3Col:            clWindowText clWindow
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
+
