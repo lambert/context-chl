@@ -1,0 +1,97 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// SWI Prolog highlighter written by Pascal Snijders Blok, ppsnijde@cs.vu.nl
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               SWI Prolog
+Filter:                 SWI Prolog files (*.swi)|*.swi
+HelpFile:
+CaseSensitive:          1
+LineComment:            %
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9
+EscapeChar:
+KeyWords1:              abolish abs absolute_file_name access_file acos
+                        append apply apropos arg arithmetic_function asin assert asserta
+                        assertz atan at_end_of_stream at_halt at_initialisation atom atom_char
+                        atom_chars atom_codes atom_concat atomic atom_length atom_prefix
+                        atom_to_term attach_console autoload bagof between block call
+                        call_shared_object_function call_with_depth_limit catch ceil ceiling
+                        character_count char_code char_conversion char_type chdir checklist
+                        clause clause_property close close_dde_conversation
+                        close_shared_object code_type compare compiling compound concat_atom
+                        consult context_module convert_time copy_stream_data copy_term cos
+                        current_arithmetic_function current_atom current_char_conversion
+                        current_flag current_foreign_library current_format_predicate current_functor
+                        current_input current_key current_mudule current_mutext current_op
+                        current_output current_predicate current_prolog_flag current_signal
+                        current_stream current_thread dde_current_connection dde_current_service
+                        dde_execute dde_poke dde_register_service dde_request dde_unregister_service
+                        debug debugging default_module delete delete_directory delete_file
+                        discontiguous dwim_match dwim_predicate
+                        dynamic edit ensure_loaded erase exception exists_directory
+                        exists_file exit exp expand_answer expand_file_name expand_file_search_path
+                        expand_goal expand_query expand_term explain export export_list fail
+                        file_base_name file_directory_name file_name_extension file_search_path
+                        findall flag flatten float float_fractional_part float_interger_part floor
+                        forall format format_predicate free_variables functor
+                        garbage_collect garbage_collect_atoms gensym get get_byte get_char get_code
+                        getenv get_single_char get_time goal_expansion ground guitracer hash_term
+                        help ignore import include index initialisation integer interactor
+                        intersection int_to_atom is_absolute_file_name is_list is_set keysort last
+                        leash length library_directory limit_stack line_count line_position
+                        listing list_to_set load_files load_foreign_library log log10
+                        make_directory make_library_index maplist max member memberchk merge merge_set
+                        message_hook message_to_string meta_predicate min module module_transparent msort
+                        multifile mutex_create mutex_destroy mutex_lock mutex_trylock mutex_unlock
+                        mutex_unlock_all name nl nodebug noguitracer nonvar noprotocol nospy nospyall
+                        notrace nth0 nth1 nth_clause number number_chars number_codes numbervars once
+                        on_signal op open open_dde_conversation open_null_stream open_resource
+                        open_shared_object peek_byte peek_char peek_code phrase plus portray
+                        portray_clause prdeicate_property prdesort preprosessor print print_message
+                        print_message_lines profile profile_count profiler prolog_current_frame
+                        prolog_edit prolog_file_type prolog_frame_attribute prolog_list_goal prolog_load_context
+                        prolog_skip_level prolog_to_os_filename prolog_trace_interception prompt prompt1
+                        proper_list protocol protocola protocolling put put_byte put_char put_code qcompile
+                        qsave_program random read read_clause read_history read_link read_term recorda
+                        recorded recordz redifine_system_predicate rem rename_file repeat require reset_profiler
+                        resource retract retractall reverse rl_add_history rl_read_init_file round same_file see
+                        seeing seek seen select send_arrow setarg setenv set_input setof set_output
+                        set_prolog_flag set_stream set_stream_position set_tty sformat shell show_profile
+                        sign sin size_file skip sleep sort source_file source_location spy sqrt stack_parameter
+                        statistics stream_property string string_concat string_length string_to_atom
+                        string_to_list style_check sub_atom sublist subset sub_string subtract succ swritef tab
+                        tan tell telling term_expansion term_to_atom thread_at_exit thread_create
+                        tehread_exit thread_get_message thread_join thread_peek_message threads thread_self
+                        thread_send_message thread_signal throw time time_file tmp_file told tracing
+                        trim_stacks true truncate ttyflush tty_get_capability tty_goto tty_put unify_with_occurs_check
+                        union unix unknown unload_foreign_library unsetenv use_module var visible volatile
+                        wait_for_input wildcard_match win_exec win_registry_get_value win_shell with_mutex
+                        write write_canonical writef write_ln writeq write_term abort break halt trace prolog make
+
+KeyWords2:              not is mod xor
+KeyWords3:              e pi cputime
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            clRed clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clRed clWindow
+StringCol:              clPurple clWindow
+SymbolCol:              clBlue clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
