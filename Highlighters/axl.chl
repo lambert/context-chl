@@ -1,0 +1,135 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// ESRI AXL (ArcIMS) highlighter
+//
+// Michael Corsello,
+// Nth Dimension Systems, LLC.
+// Mike_Corsello@hotmail.com
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               ESRI AXL
+Filter:                 ESRI Arc XML files (*.axl)|*.axl
+HelpFile:
+CaseSensitive:          1
+LineComment:
+BlockCommentBeg:        <!--
+BlockCommentEnd:        -->
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ? !
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefhABCDEFH .
+EscapeChar:
+
+KeyWords1:              ADD_RELEVANCE_FEEDBACK ADDEDFEATURES ADDRESS ADMIN_TABLE ADMINCMD ARCXML AVIMSWORKSPACE 
+                        BACKGROUND BAND BANDS BUFFER CALLOUTMARKERSYMBOL CAPABILITIES CHANGE_METADATA_ACCESS CHARTSYMBOL 
+                        CHARTVALUE CLEANUP COLLECTION_INFO CONFIG CONTENT_INFO COORDS COORDSYS DATAFRAME DATAFRAMEINFO 
+                        DATASET DELETE_METADATA DELETE_METADATA_RELATIONSHIP DELETEDFEATURES DENSIFY DOCUMENTINFO DRAW
+                        ENVELOPE ENVIRONMENT ERROR EXACT EXTENSION EXTRACT EXTRACTPARAMS FCLASS FEATURE FEATURECOORDSYS 
+                        FEATURECOUNT FEATURES FEATURESERVERWORKSPACE FIELD FIELDS FIELDVALUE FILTERCOORDSYS FULLTEXT
+                        GCCOUNT GCFIELD GCINPUT GCSTYLE GCTAG GEOCODE GET_COLLECTION_INFO GET_CONTENT_INFO GET_EXTRACT 
+                        GET_FEATURES GET_GEOCODE GET_IMAGE GET_LAYOUT GET_METADATA GET_METADATA_DOCUMENT GET_RASTER_INFO 
+                        GET_ROOT_DATASET GET_SERVICE_INFO GET_USER GET_UUID GETCLIENTSERVICES GRADIENTFILLSYMBOL 
+                        GROUPRENDERER HASHLINESYMBOL HOLE IMAGE IMAGEGENERALIZATION IMAGELIMIT IMAGEPROPERTIES 
+                        IMAGESERVERWORKSPACE IMAGESIZE IMAGEWORKSPACE LAYER LAYERDEF LAYERINFO LAYERLIST LAYERS LAYOUT 
+                        LAYOUTINFO LEGEND LINE LOCALE MAP MAPUNITS MARKUP MARKUPLAYER METADATA METADATA_ACTION 
+                        METADATA_CHILD METADATA_CONFIG METADATA_CONTENT METADATA_DATASET METADATA_SIBLING METADATA_SOURCE
+                        MODIFIEDFEATURES MOIMSWORKSPACE MULTIPOINT NORTHARROW OBJECT OTHER OUTPUT OUTPUTFIELD OUTPUTFILE 
+                        OVERVIEWMAP PARTITION PATH POINT POLYGON POLYLINE PROPERTIES PUBLISH_METADATA PUT_METADATA 
+                        PUT_METADATA_RELATIONSHIP PUT_METADATA_SEMANTIC PUT_USER QUERY RANGE RASTER_EXACT RASTER_INFO 
+                        RASTER_OTHER RASTER_RANGE RASTER_RENDERER RASTERFILLSYMBOL RASTERMARKERSYMBOL 
+                        RASTERSHIELDSYMBOLRENAME_METADATA REQUEST RESET RESPONSE RESPONSE_COLUMN RING SCALE SCALEBAR 
+                        SCALEDEPENDENTRENDERER SCREEN SDEWORKSPACE SEARCH_METADATA SEMANTIC_PAIR SEPARATORS SERVICE 
+                        SERVICEINFO SERVICES SHAPEWORKSPACE SHIELDSYMBOL SIMPLELABELRENDERER SIMPLELINESYMBOL 
+                        SIMPLEMARKERSYMBOL SIMPLEPOLYGONSYMBOL SIMPLERENDERER SPATIALFILTER SPATIALQUERY SQVAR 
+                        STOREDQUERIES STOREDQUERY SUBSET TABLE_NAME TAG TAGTEXT TAGVALUE TARGETLAYER TEXT 
+                        TEXTMARKERSYMBOL TEXTSYMBOL THUMBNAIL TOC TOCCLASS TOCGROUP TRUETYPEMARKERSYMBOL UIFONT UPDATED 
+                        USER UUID VALUEMAPLABELRENDERER VALUEMAPRENDERER WORD WORKSPACES
+
+KeyWords2:              xml version encoding language country variant name color size style cs ts dpi
+                        minx miny maxx maxy directory type id visible minscale maxscale workspace color 
+                        field labelpriorities antialiasing font fontstyle fontsize fillcolor label
+                        filltransparency filltype fillinterval boundarycolor boundarytransparency 
+                        boundarywidth boundarytype boundarycaptype boundaryjointype lookupfield 
+                        transparency width captype jointype minsize maxsize labelfield linelabelposition
+                        labelpriorities value fontcolor units docid relevance filter idcolumn insert
+                        tablename map url view transcolor rasterid bufferunits distance project antialiasing
+                        backcolor boundarycolor glowing interval outline shadow forbidden private mode
+                        outline shadow size sizefield lower upper validate datumtransformid 
+                        datumtransformstring string fromlayer deletedfeatures tolerance owner reaspect
+                        spatialoperator machine processid threadid method clip featureid datumtransformid
+                        datumtransformstring count hasmore service precision valuestring word description
+                        width collection orderby tag zcode attributes beginrecord checkesc compact
+                        dataframe envelope featurelimit geometry globalenvelope outputmode skipfeatures
+                        maxcandidates minscore autoresize show autoresize x y envelope extensions renderer
+                        toc toctype username finishcolor overlap startcolor interval linethickness 
+                        tickthickness width mode pixelcount transcolor service printheight printwidth
+                        scalesymbols directory featurecount dynamicfirst nodefault order pageunits 
+                        autoextend cansplit cellspacing columns backgroundcolor cellspacing display
+                        file height layerfontsize reverseorder splittext swatchheight swatchwidth
+                        title titlefontsize valuefontsize coords country language variant dynamic units
+                        layername numresults startresult total docid index_words validate children 
+                        content gnd index_status name onlink owner refcount server servicetype siblings
+                        thumbnail timestamp updated angle outline overlap size upper label baseurl 
+                        legendbaseurl legendname legendpath legendurl alias file framefillcolor
+                        frameoutlinecolor zoomfactor content folder onlink parentdocid servicetype 
+                        accuracy featurelimit joinexpression jointables subfields where equality 
+                        hotspot shadow size usecentroid boundary textposition printmode labelmode newname
+                        connection tables columnname rf bartransparency barwidth mapunits mode outline
+                        overlap precision round scaleunits screenlength screenunits textransparency 
+                        database encrypted geoindexdir instance password foldermask maxresults operator
+                        sort sort2 startresult tag zcode cs ts codepage shared featureweight howmanylabels
+                        labelbufferratio labelpriorities labelweight linelabelposition rotationalangles
+                        jointype captype boundarycaptype boundarycolor boundaryjointype boundarytransparency
+                        boundarytype boundarywidth fillinterval relation joinexpression jointables 
+                        searchorder position prefix equalto greaterthan greaterthanorequalto lessthan
+                        lessthanorequalto angle blockout halignment valignment description anglefield
+                        character rotatemethod style after before rotationalangles
+
+KeyWords3:              decimal_degrees miles feet kilometers meters true false pie bar Initial_Extent Extent_Limit
+                        within overlaps IsExact isContained Geocode StoredQuery Extract point line polygon
+                        USAddressZ USAddress USSingleHouse USSingleHouseZ USSingleRange USSingleRangeZ Zip4 Zip4Range 
+                        Zip5 SingleField words tags alphabet frequency queries jpg bmp gif pnga png24 bdiagonal fdiagonal
+                        horizontal vertical foreground background featureclass acetate image inches yards centimeters 
+                        millimeters decimeters points automatic manual liveData downloadableData offlineData 
+                        staticMapImage document application geographicService clearinghouse unknown wms feature image
+                        metadata image feature database pixel ai bmp emf eps jpg pdf png8 png24 gif png all upper lower 
+                        none full numericonly titlecaps allupper alllower none all upper lower none regular bold italic 
+                        underline outline bolditalic degrees cartesian geodesic and or name relevance contenttype 
+                        local_area global_area regular bold italic underline outline bolditalic full numericonly
+                        interstate usroad rect oval no_weight med_weight high_weight one_label_per_name 
+                        one_label_per_shape one_label_per_part no_weight med_weight high_weight PlaceAbove PlaceBelow 
+                        PlaceOnTop PlaceLeft PlaceRight PlaceAboveBelow PlaceLeftRight PlaceInLine PlaceParallel 
+                        PlaceOnTopHorizontal PlaceAtStartAbove PlaceAtStartOnTop PlaceAtStartBelow PlaceAtEndAbove 
+                        PlaceAtEndOnTop PlaceAtEndBelow PlaceEitherEndAbove PlaceEitherEndOnTop PlaceEitherEndBelow
+                        butt round square round miter bevel circle triangle square cross star solid dash dot dash_dot 
+                        dash_dot_dot bdiagonal fdiagonal cross diagcross horizontal vertical gray lightgray darkgray
+                        area_intersection envelope_intersection optimize spatialfirst attributefirst children parents 
+                        siblings ancestors descendants left center right titlecaps allupper alllower none top center 
+                        bottom geographic arithmetic mod_arithmetic one_label_per_name one_label_per_shape 
+                        one_label_per_part
+
+StringBegChar:          ' "
+StringEndChar:          ' "
+MultilineStrings:       1
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clMaroon clWindow B
+Keyword3Col:            $00C000C0 clWindow B
+IdentifierCol:          clBlack clWindow
+CommentCol:             $0000C000 clWindow
+NumberCol:              clRed clWindow
+StringCol:              clGray clWindow
+SymbolCol:              clOlive clWindow
+PreprocessorCol:        clOlive clWindow B
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            2
+BlockEndStr:
+MatchedBracesCol:       clRed clWindow B
