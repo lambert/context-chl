@@ -1,0 +1,58 @@
+//@version 1
+// RedCode (ICWS-94) Highlighter
+// SargentJazza
+//
+// 05/07/2007
+// Why wasnt '94 made in the first place?
+
+Language:               RedCode94
+Description:            Assembly Langauge for CoreWars
+Filter:                 RedCode94 Programs (*.red)|*.red
+HelpFile:
+CaseSensitive:          0
+LineComment:            ;
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// Opcodes
+KeyWords1:              DAT MOV ADD SUB MUL DIV MOD JMP JMZ JMN DJN SPL CMP SEQ SNE SLT LDP STP NOP
+Keyword1Col:            clWindowText clWindow B
+
+// Statements/Special Lebels
+KeyWords2:              start end equ for rof org
+Keyword2Col:            clGreen clWindow U
+
+// Modifiers
+KeyWords3:              A B AB BA X F I
+Keyword3Col:            clMaroon clWindow B
+
+// Header Statements (One day this will work)
+//KeyWords4:              ;assert ;name ;redcode-94 :recode-86 ;redcode ;strategy ;author
+//Keyword4Col:            clGreen clWindow B
+
+// "Space" Identifiers (One day this will work)
+//KeyWords5:              @ < >
+//Keyword5Col:            clMaroon clWindow B
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+PreprocessorCol:        clBlue clWindow
+CurrLineHighlighted:    1
+
+CurrentLineCol:         clBlack clAqua
+SpaceCol:               clWindowText clWindow
+IdentifierCol:          clGreen clWindow
+CommentCol:             clGray clWhite
+NumberCol:              clRed clWindow
+StringCol:              clWindowText clWindow SB //Duh!
+SymbolCol:              clMaroon clWindow B
+SelectionCol:           clWhite clBlue
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:
+BlockEndStr:
