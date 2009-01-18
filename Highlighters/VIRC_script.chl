@@ -1,0 +1,71 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// *** Visual IRC v2.0 pre7 *** script files Highlighter
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Visual IRC scripts
+Filter:                 Visual IRC scripts (*.vsc,*.lib,*.vsl) |*.vsc;*.lib;*.vsl
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _$·È˙ıÛ¸ˆ˚Ì¡…€⁄’”‹÷Õ
+IdentifierChars:        a..z A..Z 0..9 _·È˙ıÛ¸ˆ˚Ì¡…€⁄’”‹÷Õ
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+//
+KeyWords1:              $scripthost $ver $build $prebuild $N $server Exit NewServerWindow
+                        ShowClientSetup ShowDCCList ShowNotifySetup ShowServerList
+                        ShowScriptLog Comnnect Disconnect Server Quote Msg Say Notice Quit
+                        TextOut TextOutBitmap FlushBitmapCache CTCP RCTCP VERSION TIME Ver Ping Mode
+                        Umode Names Who OnServer Load Topic Kick KB Ban Part Query AddToIAL
+                        RemoveFromIAL Me Desc DCC Send TSend TDCC Accept Reject
+                        Resume Request Min Max Restore Close Show Hide SetInputLine Clear
+                        WebHyperLink Notify FireEvent FireMenuItem SetUserField DelUserField
+                        Log Open Close DNS Cycle Asay Ame SimulateServerData Kill Away
+                        UnEvent SetServData SetNetData AddScriptControl DLL Timer MTimer
+                        Timers UnTimer $NewServerWindow $StrTrim $NickTrim $IsChannel
+                        $NickList $OpList $VoiceList $HalfOpList $PeonList $IsOn
+                        $IsOp $IsVoice $IsHalfOp $GetMode $GetTopic $GetKey $GetLimit
+                        $GetWindowId $ChannelList $ServerList $CurrentServer $IsQuerying
+                        $QueryList $IsDCCChatting $DCCChatList $DCCChatNick $GetAddress
+                        $IsInIAL $EncodeIP $DecodeIP $AliasList EventList $EventMask
+                        $EventExists $GetMenuHint $mIRCColor $ActiveWindow $ActiveServer
+                        $Bitmap $UhostToMask $NickToMask $Notify $Notify $TimeConnected
+                        $GetSetting $GetUserField $UserFieldList $IdleTime $ServerHost
+                        $GetPath $IsLogging $DNS $IsIP $SelectServer $SelectNetwork
+                        $ServerID $NetworkID $GetServSetting $GetNetSetting $PasswordQuery
+                        $GetInputLine $StripAttrs $StripLinks $DLL $Timer $MTimer
+                        $TimerExists $TimerList $GetTimer $LocalNick $RemoteNick
+
+
+//
+KeyWords2:              if endif foreach endforeach
+
+//
+KeyWords3:              MenuTree EndMenuTree EndMenuItem MenuItem MenuHint Event EndEvent
+                        Alias EndAlias
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
