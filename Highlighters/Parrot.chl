@@ -1,0 +1,110 @@
+
+// Parrot VM Assembly code text highlighter 
+//        www.parrotcode.org for info on Parrot
+
+// By D. Newhall Aug-14-2004    (derek_newhall@yahoo.com)
+
+// NOTE: Since the Parrot syntax isn't well documented this might contain errors. Modify freely.
+
+Language:                       Parrot VM Assembler
+Filter:                         Parrot VM Assembler files (*.pasm)|*.pasm
+HelpFile:
+CaseSensitive:                  1
+LineComment:                    #
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:             a..z A..Z _
+IdentifierChars:                a..z A..Z 0..9 _
+NumConstBegChars:               0..9
+NumConstChars:                  0..9 abcdefhABCDEFH
+EscapeChar:                     \
+
+KeyWords1:                      // Keywords
+//Control Operators
+if jump branch jsr bsr ret end unless set_addr invoke invokecc exit
+//Basic data Operators
+ new set get null exists defined
+//String and PMC Operators
+ clone split shift tostring length concat repeat substr substr_r chopn chr delete exists transcode find_encoding assign
+//Conditional Operators
+ eq gt lt ge le ne if
+//Basic math Operators
+ add sub mul div inc dec mod
+//Advanced math Operators
+ sin cos tan sec atan atan2 asin acos asec cosh sinh tanh sech log2 log10 ln log pow exp
+//Register and Stack Operators
+ push_s push_s_c push_p push_p_c push_i push_i_c push_n push_n_c
+ pop_p pop_i pop_i_c pop_s pop_n
+ pushs pops pushi popi pushp popp pushn popn push pop
+ save_i save_s save_p save_n savec save
+ restore_i restore_s restore_p restore_n restore
+ entrytype set_warp warp depth saveall restoreall
+//Name and Pad Operators
+ find_lex find_global find_global_table find_global_slot fetch_lex fetch_global store_global store_lex
+ push_pad pop_pad new_pad newpad
+//Exception Operators
+ set_eh clear_eh throw rethrow trace bounds
+//Object Operators
+ make_object find_method call_method find_attribute set_attribute can isa newclass newsub dlsub dlfunc does
+//Module Operators
+ load_bytecode load_opcode_lib load_string_lib get_op_count get_string_name find_string_lib loadlib
+//IO Operatorss
+ new_fh open read write wait readw writew seek tell status readline close 
+ print err printerr getstdin getstdout getstderr
+//Threading Operators
+ lock unlock pushunlock
+//Interpreter Operators
+ newinterp runinterp callout interpinfo getinterp getprop setprop sets_ind
+//Garbage Collection Operators
+ sweep collect pausecollect resumecollect
+//Key Operators
+ new_key clone_key size_key toss_key ke_type ke_value chop_key inc_key set_key
+//Symbolic Operators
+ setline setfile setpackage getline getfile getpackage
+//Bitwise Operators
+ and or xor not nor nand shl shr
+// Miscelaneous and Operators I've seen in random source files
+ index pack time sleep alarm
+ noop ord rotate_up find_type pioctl
+
+KeyWords2:                      // Registers
+// Integer registers
+I0 I1 I2 I3 I4 I5 I6 I7 I8 I9 I10 I11
+I12 I13 I14 I15 I16 I17 I18 I19 I20 I21
+I22 I23 I24 I25 I26 I27 I28 I29 I30 I31
+// Numerical registers (reals)
+N0 N1 N2 N3 N4 N5 N6 N7 N8 N9 N10 N11
+N12 N13 N14 N15 N16 N17 N18 N19 N20 N21
+N22 N23 N24 N25 N26 N27 N28 N29 N30 N31
+// String registers
+S0 S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11
+S12 S13 S14 S15 S16 S17 S18 S19 S20 S21
+S22 S23 S24 I25 S26 S27 S28 S29 S30 S31
+// PMC registers
+P0 P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11
+P12 P13 P14 P15 P16 P17 P18 P19 P20 P21
+P22 P23 P24 P25 P26 P27 P28 P29 P30 P31
+
+KeyWords3:
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clGreen clWindow
+Keyword3Col:            clMaroon clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clPurple clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clWindowText clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $E1E1E1
+
+
+
