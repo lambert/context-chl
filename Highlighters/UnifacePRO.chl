@@ -1,0 +1,142 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Uniface PRO highlighter written by François Van de Weerdt 
+//                        (francois.van-de-weerdt@cil-aiac.com)
+//  
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               PRO
+Filter:                 PRO files (*.pro) | *.pro
+HelpFile:
+CaseSensitive:          0
+LineComment:            ;
+BlockCommentBeg:        
+BlockCommentEnd:        
+IdentifierBegChars:     a..z A..Z _ 
+IdentifierChars:        a..z A..Z _123456-
+NumConstBegChars:
+NumConstChars:          0..9
+EscapeChar:					$
+
+KeyWords1:              Trigger from Entity Field Form
+                        READ WRIT DELE DTLF LOCK LMK RETS RETR STOR CLR FGF
+                        ERAS EXEC NFLD AIO FMT DECR ACPT QUIT MNUS PULS UKYS WRUP
+                        LPMX DTLE OGF RMO LMO ERRE ERRF LPME SMOD PFLD LFLD VALC
+                        ID OCC
+                        status
+                        numeric string IN OUT INOUT
+                        NOBEEP APPEND INIT QUESTION INFO WARNING ERROR
+                        round fraction trunc
+
+// PRO fonctions
+KeyWords2:
+                        applname batch detachedinstances display
+                        gui ioprint keyboard language logical
+                        nls_sort_order nmforms password putmess
+                        result text textexist user variation
+                        web componentname componenttype entname
+                        fieldname instancechildren instancedb
+                        instancename instanceparent instances
+                        rettype char direction formdb formfocus
+                        formmodality formname formtitle printing
+                        prompt runmode selblk instancepath msgdata
+                        msgdst msgid msginfo msgsrc curhits curkey
+                        curocc entinfo foreign hits keycheck
+                        keyfields keytype occcheck occdel outer
+                        paintedocc relation selectlist storetype
+                        subsetreturn totkeys totocc curline
+                        curword fieldcheck fielddbvalue fieldindb
+                        fieldinfo fieldprofile fieldproperties
+                        fieldvalrep format properties valrep
+                        fielddbmod fieldendmod fieldmod
+                        formdbmod formmod instancedbmod
+                        instancemod keymod occdbmod
+                        occmod fieldvalidation instancevalidation
+                        keyvalidation occvalidation dberror
+                        dbocc  totdbocc check disable hide
+                        empty framedepth lines next occdepth
+                        page previous totlines dataerrorcontext
+                        error procerror procerrorcontext status
+                        clock condition expression date
+                        datim number oprsys syntax time
+                        abs acos asin atan cos exp
+                        fact frac int log log10 pi power
+                        sin sqrt tan
+
+// Statement
+KeyWords3:
+                        // DBMS and transaction control:
+                        close commit open rollback
+                        //I/O control at component level:
+                        erase release retrieve store
+                        // DBMS I/O at occurrence level:
+                        delete lock read reload write
+                        //Component-level data and hitlist manipulation:
+                        clear creocc discard moveocc remocc setocc sort
+                        // Miscellaneous entity-level I/O:
+                        findkey lookup retrieve/o selectdb sql
+                        // Data validation:
+                        validate validatefield validatekey validateocc
+                        // Data manipulation at field, variable, and function level:
+                        addmonths compare file_dump file_load length lowercase
+                        reset scan set uppercase
+                        // List processing:
+                        delitem getitem getlistitems putitem putlistitems sort/list
+                        // Screen interaction and appearance:
+                        askmess clrmess curocc_video display edit
+                        field_syntax field_video message pulldown
+                        putmess refresh
+                        // Web interaction:
+                        webgen webget
+                        // Printing:
+                        eject print print_break skip
+                        // Process flow:
+                        activate apexit apstart break
+                        delete_instance done end  goto
+                        new_instance perform repeat
+                        run selectcase setformfocus spawn
+                        if else elseif endif
+                        call return exit
+                        while endwhile
+                        selectcase case elsecase endselectcase
+                        pragma
+
+                        // Intercomponent communication:
+                        postmessage sendmessage
+                        // Miscellaneous:
+                        blockdata debug entry filebox
+                        macro nodebug numgen numset
+                        operation pragma
+                        params endparams
+                        variables endvariables
+                        
+                        filedump fileload
+
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       1
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clBlack clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue $20FFFF
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+
+
