@@ -1,0 +1,284 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// GFA Basic highlighter written by Tobe, tobe@freemind-tobe.com
+// based on x86 Assembly highlighter by Eden Kirin
+// 
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               GFA Basic
+
+//////////////////////////////////////////////////////////////////////////////
+// put whatever you want here, short description, author name, email address..
+
+Description:            GFA 3.6TT highlighter for Atari computers
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 GFA Basic files (*.lst)|*.lst
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invoked when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+
+LineComment:            ' !
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9 !|&%$
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9 &H
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into five groups which can be
+// highlighted differently
+
+// keywords
+
+KeyWords1:              AS AT
+                        BASE BREAK
+                        C CASE
+                        DATA DEFAULT DEFFN DIM DO DOWNTO
+                        ELSE ENDFUNC ENDIF ENDSELECT
+                        FN FOR FUNCTION
+                        GOSUB GOTO
+                        IF INLINE
+                        L LET LOCAL LOOP
+                        MAT
+                        NEXT
+                        ON OTHERWISE
+                        PROCEDURE
+                        REM REPEAT RESTORE RESUME RETURN
+                        SELECT
+                        USING UNTIL
+                        V VAR VOID
+                        WEND WHILE
+                        _DATA
+                        ~
+
+// constants
+
+KeyWords2:              ADDRIN ADDROUT
+                        BASEPAGE 
+                        CONTRL 
+                        FALSE 
+                        GB GCONTRL GINTIN GINTOUT
+                        IBOX INTIN INTOUT 
+                        KEY 
+                        L~A
+                        MESSAGE
+                        OBOX OFF
+                        PI PTSIN PTSOUT
+                        STE
+                        TRUE TT
+                        VDIBASE
+                        V~H
+                        WINDTAB
+
+// functions
+
+KeyWords3:              ABS ABSOLUTE ACHAR ACLIP ACOS ADD AFTER
+                        ALERT ALINE AND APOLY APPL_EXIT APPL_FIND APPL_INIT
+                        APPL_READ APPL_TPLAY APPL_TRECORD APPL_WRITE ARECT
+                        ARRAYFILL ARRPTR ASC ASIN ATEXT ATN
+                        BCHG BCLR BGET BIN BIOS BITBLT BLOAD BSAVE
+                        BMOVE BOUNDARY BOX BPUT BSAVE BSET BTST BYTE
+                        CALL CARD CFLOAT CHAIN CHAR CHDIR CHDRIVE CHR
+                        CINT CIRCLE CLEAR CLEARW CLIP CLOSE CLOSEW CLR CLS COLOR
+                        COMBIN CONT COS COSQ CPY CRSCOL CRSLIN CURVE
+                        CVD CVF CVI CVL CVS
+                        DATE DEC DEFBIT DEFBYT DEFWRD DEFFLT DEFSTR
+                        DEFFILL DEFLINE DEFLIST DEFMARK DEFMOUSE DEFNUM
+                        DEFTEXT DEG DELAY DELETE DET DFREE DIR DIV DMACONTROL
+                        DMASOUND DOUBLE DPEEK DPOKE DRAW SETDRAW
+                        EDIT ELLIPSE END EOF EQV
+                        ERASE ERR ERROR EVEN EVERY EVNT_BUTTON EVNT_DCLICK
+                        EVNT_KEYBD EVNT_MESAG EVNT_MOUSE EVNT_MULTI EVNT_TIMER EXEC
+                        EXIST EXIT EXP
+                        FACT FATAL FGETDTA FIELD FILES FILESELECT FILL FIX
+                        FLOAT FORM FORM_ALERT FORM_BUTTON FORM_CENTER FORM_DIAL
+                        FORM_DO FORM_ERROR FORM_KEYBD FRAC FRE FSEL_INPUT FSETDTA
+                        FSFIRST FSNEXT FULLW
+                        GDOS GEMDOS GEMSYS GET GETSIZE
+                        GRAF_DRAGBOX GRAF_GROWBOX GRAF_HANDLE GRAF_MKSTATE
+                        GRAF_MOUSE GRAF_MOVEBOX GRAF_RUBBERBOX GRAF_SHRINKBOX
+                        GRAF_SLIDEBOX GRAF_WATCHBOX GRAPHMODE
+                        HARDCOPY HEX HIDEM HIMEM HLINE HTAB
+                        IMP INC INFOW INKEY INP INPAUX INPMID INPUT
+                        INSERT INSTR INT INV
+                        KEYDEF KEYGET KEYLOOK KEYTEST KEYPAD KEYPRESS KILL
+                        LEFT LEN LINE LIST LLIST LOAD LOC LOCATE LOF LOG LOG10
+                        LONG LPEEK LPENX LPENY LPOKE LPOS LPRINT LSET
+                        MALLOC MAX MENU MENU_BAR MENU_ICHECK MENU_IENABLE
+                        MENU_REGISTER MENU_TEXT MENU_TNORMAL MFREE MID MIN
+                        MKDIR MKI MKL MKS MKF MKD MOD MODE MONITOR MOUSEX MOUSEY 
+                        MOUSEK MOUSE MSHRINK MUL MW_OUT
+                        NAME NEW NOT NORM 
+                        OBJC_ADD OBJC_CHANGE OBJC_DELETE OBJC_DRAW OBJC_EDIT
+                        OBJC_FIND OBJC_OFFSET OBJC_ORDER OB_ADR OB_FLAGS OB_H OB_HEAD
+                        OB_NEXT OB_SPEC OB_STATE OB_TAIL OB_TYPE OB_W OB_X OB_Y OCT
+                        ODD ONE OPEN OPENW OPTION OR OUT
+                        PADT PADX PADY PAUSE PBOX PCIRCLE PEEK PELLIPSE PLOT POINT
+                        POKE POLYLINE POLYFILL POLYMARK POS PRBOX PRED PRINT
+                        PSAVE PTST PUT
+                        QDET QSORT QUIT
+                        RAD RAND RANDOM RANDOMIZE RANG RBOX RCALL RC_COPY
+                        RC_INTERSECT READ RECALL RECORD RELSEEK RENAME
+                        RESERVE RIGHT RINSTR RMDIR RND ROL ROR
+                        ROUND RSET RSRC_FREE RSRC_GADDR RSRC_LOAD RSRC_OBFIX 
+                        RSRC_SADDR RUN
+                        SAVE SCRP_READ SCRP_WRITE SDPOKE SEEK SET SETCOLOR
+                        SETDRAW SETMOUSE SETTIME SGET SGN SHEL_ENVRN SHEL_FIND 
+                        SHEL_GET SHEL_PUT SHEL_READ SHEL_WRITE SHL SHOWM SHR SIN 
+                        SINGLE SINQ  SLPOKE SOUND SPACE SPC SPOKE SDPOKE SLPOKE 
+                        SPRITE SPUT SQR SSORT STICK STOP STORE STR STRING SUB
+                        SUCC SWAP SYSTEM
+                        TAB TAN TEXT TIME TIMER TITLEW TOPW TOUCH TRACE TRANS TRIM
+                        TROFF TRON TRUNC TYPE
+                        UPPER
+                        VAL VARIAT VARPTR VDISYS VQT_EXTENT
+                        VQT_NAME VSETCOLOR VST_LOAD_FONTS VST_UNLOAD_FONTS VSYNC
+                        VTAB V_CLRWK V_CLSVWK V_CLSWK V_OPNVWK V_OPNWK V_UPDWK
+                        W WAVE WIND_CALC WIND_CLOSE WIND_CREATE
+                        WIND_DELETE WIND_FIND WIND_GET WIND_OPEN WIND_SET WIND_UPDATE 
+                        WORD WORK_OUT WRITE W_HAND W_INDEX
+                        XBIOS XCPY XOR
+
+
+KeyWords4:
+
+
+KeyWords5:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $FF7700 clWindow
+Keyword2Col:            $777700 clWindow
+Keyword3Col:            $0077FF clWindow
+
+Keyword4Col:            clBlue clWindow
+Keyword5Col:            clBlue clWindow
+
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              $0000FF clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
