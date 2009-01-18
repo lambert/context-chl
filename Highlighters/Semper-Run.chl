@@ -1,0 +1,100 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Semper Run files Highlighter (Semper for Windows)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:				Semper Run files
+Filter:                 Semper Run files (*.run)|*.run
+HelpFile:
+CaseSensitive:			0
+LineComment:			!
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars: 	a..z A..Z _ @ $
+IdentifierChars:		a..z A..Z 0..9 _
+NumConstBegChars:		0..9
+NumConstChars:			0..9
+EscapeChar:
+
+// "Internal" commands reported by show command
+KeyWords1:	     acf  add  ana  bac  bas  bcl  bdi  ber  bhm  bml  bmm
+				 bop  box  bre  buz  cac  cal  chu  clo  cls  col  com  
+				 com  cor  cov  cre  ctf  cut  dat  dcl  ddi  der  des  dia
+				 dif  dil  dop  dt   edg  edi  era  ero  exp  ext  fin
+				 fir  fit  flc  flo  flu  fou  ful  gau  gma  gmg
+				 gms  gra  hal  hel  hfi  hil  his  hp   hpl  ima  int
+				 ior  iow  lab  lat  lea  let  lib  lik  lis  liv  lme
+				 loc  log  lor  lpd  lsd  lse  lut  lva  mac  mag  map
+				 mar  mas  med  min  mot  neg  nex  noi  nul  ocf  ord
+				 ori  ove  ovr  ovw  p    pac  par  pas  pca  pcb  pct
+				 pcu  pdr  pea  ped  pex  pfe  pfi  phi  phr  pic  pid
+				 pix  pma  pmo  pos  prc  pri  pro  ps  pse  psh  pty
+				 ram  ran  rcf  rec  rei  rep  rf   rgb  rhi  rot  sca  sec
+				 sel  sep  sha  she  ski  slg  sna  sol  spc  sta  str
+				 thr  tit  tur  typ  unp  use  vie  wai  wal  war  wei
+				 wgr  win  wpr  wsa  wti  xcf  xwi  ymo  zon  analyse
+				 backproject  base  bclose  bdilate  berode  bhmt  bmlut
+				 bmmap  bopen  break  cache  calculate  chull  close  colour
+				 compress  contour  correct  covariance  create  data
+				 dclose  ddilate  derode  destripe  diagnostic  differentiate
+				 dilate  display  dopen  edge  edit  erase  erode  expand
+				 extract  find  flc  flood  flush  fourier  fullplane
+				 gaussian  gmadjust  gmgetprops  gmsetprops  grab  halfplane
+				 help	hfill  hilbert  histogram  image  ioread  iowrite
+				 label lattice  learn	letter  library  likelihood  list
+				 live  lmean  local  lorentzian	lset  lvariance  macro  magnify
+				 mark	mask  median  mindistance  motif  negate  next  noise
+				 order  origin  overlay  ovread  ovwrite  pack  partition  paste
+				 pcalculate  pcurve  pdraw  peak  pedit  pextract  pferet
+				 pfilter  phistogram  picture	pixel  pmark  pmoment	print
+				 project  pset  pshow	ptype  ramps  rank  reclass reinitialise
+				 rename  renumber  rhistgram  rotate  scale  section  select
+				 separate	sharpen  sheet  skiz  snap  solid  stack	strain
+				 threshold	turn  type  unpack	view  wait	walsh  warp  wclip
+				 weight  wgrab	window	wprint  wsave  wtitle  xwires  ymod	zone
+
+// Commands related to Batch files and script control
+KeyWords2:	  ask  ass  assign  bee  beep  bel  bell  buz  buzz  con  console
+			  cop  copy	 dea  deassign  del  delete  dir  dis  display  ech
+			  echo  end	 exa  examine  for  if  inp  input	jum  jump  loo
+			  loop	mon  monitor  oka  okay	 out  output	pag  page  que
+			  question	rea  read  rep  report  ret  return	 run  sav  save
+			  sho  show  sur  survey  syn  syntax  tim  time  tit  title  tra
+			  trap  uns  unset	unl  unless  wcl  wclip  wp  wri  write  yes  yesno
+
+// keys and options to commands
+KeyWords3:	  @xy  @pos  arr  arrow	 bot  bottom	dev  device	 fro  from
+			  lef  left	mkm  mkmode	 mks  mksize	non  none  pli  plist
+			  pos  position  rad  radius res  reset rig  right  siz  size
+			  sit  sites  tex  text  tim  times	to	top  uvo  uvonly  val
+			  value	ver  verify	 wid  width
+
+// functions
+KeyWords4:	  sin  asin  cos  acos  tan  pha  phase  exp  ln  min  max  mod
+			  mod  msq  roo  root  rem  rou  round  fix  not  and  or  rad
+			  deg  ife  ifelse  p  re  im
+
+StringBegChar:			'
+StringEndChar:			'
+MultilineStrings:		0
+UsePreprocessor:		0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            if
+BlockEndStr:            loop
