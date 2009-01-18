@@ -1,0 +1,64 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// FREEPASCAL SYNTAX HIGHLIGHTER FILE, by Nicolas Vaughan (nivaca@gmail.com) //
+//
+///////////////////////////////////////////////////////////////////////////////
+
+Language:               FreePascal files
+Filter:                 FreePascal files (*.pas)|*.pas
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        {
+BlockCommentEnd:        }
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             \
+
+// TYPES
+KeyWords1:              BOOLEAN CHAR INTEGER POINTER REAL BYTE COMP DOUBLE EXTENDED
+                        LONGBOOL LONGINT PCHAR SHORTBOOL SHORTINT SINGLE STRING 
+                        WORD WORDBOOL
+
+
+// RESERVED WORDS
+KeyWords2:              ABSOLUTE AND ARRAY ASM ASSEMBLER BEGIN CASE CONST CONSTRUCTOR
+                        DESTRUCTOR DIV DO DOWNTO ELSE END EXPORT EXPORTS EXTERNAL FAR
+                        FILE FOR FORWARD FUNCTION GOTO IF IMPLEMENTATION IN INDEX
+                        INHERITED INLINE INTERFACE INTERRUPT LABEL LIBRARY MOD NAME NEAR
+                        NIL NOT OBJECT OF OR PACKED PRIVATE PROCEDURE PROGRAM PUBLIC RECORD
+                        REPEAT RESIDENT SET SHL SHR THEN TO TYPE UNIT UNTIL USES VAR
+                        VIRTUAL WHILE WITH XOR
+
+// COMMON FUNCTIONS
+KeyWords3:              READ READLN WRITE WRITELN CLRSCR RANDOM GOTOXY INC DEC ROUND TRUNC
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       1
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+KeyWord1Col:            clMaroon clWindow B
+Keyword2Col:            clNavy clWindow B
+Keyword3Col:            clTeal clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $00A0A0A0 clWindow I
+NumberCol:              clBlue clWindow
+StringCol:              clRed clWindow
+SymbolCol:              clPurple clWindow B
+PreprocessorCol:        $008080FF clWindow
+SelectionCol:           clWhite clTeal
+CurrentLineCol:         clBlack $00C0FFFF
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:            begin
+BlockEndStr:            end
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clLime clWindow
+Keyword1Col:            clMaroon clWindow B
