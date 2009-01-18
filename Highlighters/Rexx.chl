@@ -1,0 +1,88 @@
+//
+// Open ObjectREXX (ooRexx) Highlighter by Alan Green 2007-06-01
+//
+
+Language:               ObjectREXX
+Filter:                 ObjectREXX files (*.rex;*.r;*.rx;*.cmd)|*.rex;*.r;*.rx;*.cmd
+HelpFile:
+CaseSensitive:          0
+LineComment:            /* */
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+KeyWords1:              address arg call do drop exit expose forward guard if
+                        interpret iterate leave nop numeric parse procedure pull
+                        push queue raise reply return say select signal trace use
+                        when otherwise then else to end options stdout_for_stderr until
+
+KeyWords2:              abbrev abs address arg b2x beep bitand bitor bitxor c2d c2x
+                        center centre changestr charin charout chars compare condition
+                        copies countstr d2c d2x datatype date delstr delword digits
+                        directory endlocal errortext filespec form format fuzz insert
+                        lastpos left length linein lineout lines max min overlay pos
+                        queued random reverse right rxfuncadd rxfuncdrop rxfuncquery
+                        rxqueue setlocal sign sourceline space stream strip substr
+                        time trace translate trunc userid value var verify word
+                        wordindex wordlength wordpos words x2b x2c x2d xrange
+                        close command description flush init makearray open position
+                        qualify query queue queued seek state symbol
+
+KeyWords3:              RxMessageBox RxWinExec SysAddFileHandle SysAddRexxMacro
+                        SysBootDrive SysClearRexxMacroSpace SysCloseEventSem
+                        SysCloseMutexSem SysCreatePipe SysCurPos SysCurState SysDriveInfo
+                        SysDriveMap SysDropFuncs SysDropLibrary SysDropRexxMacro
+                        SysDumpVariables SysFileCopy SysFileDelete SysFileMove
+                        SysFileSearch SysFileSystemType SysFileTree SysFork SysFromUnicode
+                        SysGetCollate SysGetErrortext SysGetFileDateTime SysGetKey
+                        SysGetMessage SysGetMessageX SysIni SysIsFile SysIsFileCompressed
+                        SysIsFileDirectory SysIsFileEncrypted SysIsFileLink SysIsFileNotContentIndexed
+                        SysIsFileOffline SysIsFileSparse SysIsFileTemporary SysLoadFuncs
+                        SysLoadRexxMacroSpace SysMapCase SysMkDir SysNationalLanguageCompare
+                        SysOpenEventSem SysOpenMutexSem SysPostEvenSem SysProcessType
+                        SysPulseEventSem SysQueryProcess SysQueryProcessCodePage
+                        SysQueryRexxMacro SysReleaseMutexSem SysReorderRexxMacro
+                        SysRequestMutexSem SysResetEventSem SysRmDir SysSaveRexxMacroSpace
+                        SysSearchPath SysSetFileDateTime SysSetPriority SysSetProcessCodePage
+                        SysShutdownSystem SysSleep SysStemCopy SysStemDelete SysStemInsert
+                        SysStemSort SysSwitchSession SysSystemDirectory SysTempFileName
+                        SysTextScreenRead SysTextScreenSize SysToUnicode SysUtilVersion
+                        SysVersion SysVolumeLabel SysWait SysWaitEventSem SysWaitNamedPipe
+                        SysWinDecryptFile SysWinEncryptFile SysWinGetDefaultPrinter SysWinGetPrinters
+                        SysWinSetDefaultPrinter SysWinVer
+
+KeyWords4:              RC RESULT SELF SIGL SUPER COPY DELETE DIR ERASE MODE PATH SET
+                        cp mv rm ls echo env
+
+
+StringBegChar:          " '
+StringEndChar:          " '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clFuchsia clWindow
+Keyword4Col:            clNavy clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clGreen clWindow
+StringCol:              clRed clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+// OverrideTxtFgColor:     0
+// BlockAutoindent:        0
+// BlockBegStr:            do
+// BlockEndStr:            end
+// MatchedBracesCol:       $004040FF clBlack
+
+
