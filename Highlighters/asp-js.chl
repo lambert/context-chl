@@ -1,0 +1,78 @@
+
+Language:               ASP-JS
+Filter:                 ASP files (*.asp)|*.asp
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z _123456-
+NumConstBegChars:       0..9 #
+NumConstChars:          0..9 #abcdefABCDEFptxmPTXM
+EscapeChar:
+
+KeyWords1:              abs acos anchor asin assert atan big blink bold ceil charat cos exp
+      fixed floor fontcolor fontsize getdate getday gethours getminutes getmonth
+      getseconds gettime gettimezoneoffset getyear indexof italics join lastindexof
+      link log max min parse pow random reverse round setdate sethours setminutes
+      setmonth setseconds settime setyear sin small sort split sqrt strike sub substring
+      substr sup tan togmtstring tolocalestring tolowercase touppercase utc escape eval
+      isnan isfinite parsefloat parseint unescape valueof charcodeat fromcharcode slice
+      concat lastindexof test search replace match exec encodeuri encodeuricomponent
+      decodeuri decodeuricomponent tostring tofixed toprecision toexponential toutcstring
+      todatestring totimestring tolocaledatestring tolocaletimestring setmilliseconds
+      setfullyear getfullyear pop push shift unshift splice try catch message name
+      description throw error finally
+
+
+KeyWords2:              array boolean date math number string length e ln2 ln10 log2e log10e pi sqrt1_2 sqrt2
+      application request response server session lock unlock clientcertificate cookies
+      form querystring servervariables buffer contenttype expires expiresabsolute status
+      addheader appendtolog binarywrite clear end flush redirect write scripttimeout
+      createobject htmlencode mappath urlencode sessionid timeout abandon arguments
+      activeconnection open close movenext movefirst cursortype eof bof typeof constructor
+      instanceof isprototypeof prototype
+
+
+KeyWords3:              adodb.command adodb.connection adodb.field adodb.property adodb.recordset all_http
+			all_raw appl_md_path appl_physical_path auth_password auth_type auth_user cdfs
+			cert_cookie cert_flags cert_issuer cert_keysize cert_secretkeysize cert_secretkeysize
+			cert_serialnumber cert_server_issuer cert_server_subject cert_subject content_length
+			content_type count domain dsn empty expires false fat fat32 gateway_interface haskeys
+			http_ http_accept http_accept_language http_cookie http_referrer http_user_agent
+			httpshttps_keysize https_secretkeysize https_server_issuer https_server_subject
+			instance_id instance_meta_path item local_addr logon_user mswc.adrotator
+			mswc.browsertype mswc.contentrotator mswc.nextlink nothing null off on path path_info
+			path_translated private public query_string remote_addr remote_host remote_user
+			request_method script_name scripting.dictionary scripting.filesystemobject secure
+			server_name server_port server_port_secure server_protocol server_software true url
+			do if else for while break continue return switch case in function new this var with delete
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            $00AAFF clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGreen clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
+
