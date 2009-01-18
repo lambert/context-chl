@@ -1,0 +1,1346 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Symbian C++ higlighter
+//
+// The Raahe Institute of Technology and Business
+// http://www.oamk.fi/ratoli/
+// Author: Jouni Kivirinta, jki(at)ratol.fi
+//
+//
+//  Version history:
+//  ----------------
+//  1.0    31.05.2005
+//      Initial release
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Symbian C++
+Filter:                 Symbian C++ Files (*.cpp,*.h,*.inl,*.hrh,*.rh,*.loc)|*.cpp;*.h;*.inl;*.hrh;*.rh;*.loc
+// Adjust the help file path according to your setup.
+HelpFile:               C:\Symbian\80a\S60_2nd_FP2\Documentation\SDK_v8.1a.chm
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+NumConstBegChars:       0..9 0x
+NumConstChars:          0..9 abcdefABCDEF. // & hex
+
+EscapeChar:             \
+
+// C++ keywords
+KeyWords1:  and and_eq asm auto bitand bitor bool break case catch char class
+            compl const const_cast continue default delete do double
+            dynamic_cast else enum explicit export extern false float for
+            friend goto if inline int long mutable namespace new not not_eq
+            operator or or_eq private protected public register
+            reinterpret_cast return short signed sizeof static static_cast
+            struct switch template this throw true try typedef typeid typename
+            union unsigned using virtual void volatile wchar_t while xor xor_eq
+
+// Symbian keywords
+KeyWords2:  __ASSERT_ALWAYS __ASSERT_DEBUG __crt0 __DbgMarkCheck __DbgMarkEnd
+            __DbgMarkStart __DbgSetAllocFail __DbgTestInvariant __DEBUGGER
+            __DebugPrint __DECLARE_NAME __DECLARE_TEST __DECLARE_TEST_DEBUG
+            __GCC32__ __MARM__ __MUTABLE __NO_MUTABLE_KEYWORD __PROFILE_DISPLAY
+            __PROFILE_END __PROFILE_RESET __PROFILE_START __PROFILING__
+            __RHEAP_CHECK __RHEAP_CHECKALL __RHEAP_FAILNEXT __RHEAP_MARK
+            __RHEAP_MARKEND __RHEAP_MARKENDC __RHEAP_RESET __RHEAP_SETFAIL
+            __TEST_INVARIANT __UHEAP_CHECK __UHEAP_CHECKALL __UHEAP_FAILNEXT
+            __UHEAP_MARK __UHEAP_MARKEND __UHEAP_MARKENDC __UHEAP_RESET
+            __UHEAP_SETFAIL __VC32__ __WINS__ __WINS_UID _0CInteger _0TInt64
+            _0TRealX _1CInteger _1TInt64 _1TRealX _2CInteger _2TInt64
+            _3CInteger _3TInt64 _DEBUG _FOFF _ioctl_cancel_r _ioctl_complete_r
+            _ioctl_r _L _L16 _L8 _LIT _LIT16 _LIT8 _S _S16 _S8 _UNICODE
+            AAA_ServerStartCache AAA_ServerStartSLog AAA_ServerStartSPlugin
+            ACAgnSymbolList ACAgnTodoListNames ACApaScanningDataRecognizer
+            ACApaScanningFileRecognizer ACAutoTestGroupResults
+            ACAutoTestResultSet ACDir ACGridCellRegion ACImQueuedList
+            ACMsgRecipientList ACMsvEntry ACObjectCon ACObjectIx ACPageText
+            ACPbkFieldsInfo ACPdrModelList ACShgNameSet ACSimPdCache
+            ACSmlSyncLog AddToWinsEpocThreadList Adjust AdjustL adler32 After
+            AgnDateTime AgnEntryStorer AgnModel AknBidiTextUtils
+            AknCommonDialogs AknDialogShutter AknDraw AknDrawWithSkins
+            AknEditUtils AknFileFilterFactory AknFind
+            AknInputLanguageInfoFactory AknLAFUtils AknLayoutUtils
+            AknListBoxLayouts AknListBoxShortCuts
+            AknListBoxShortCutsImplementation AknListBoxUtils
+            AknNotifierController AknPopupLayouts AknsDrawUtils
+            AknSelectionService AknsUtils AknTextUtils AlarmClientUtils Alloc
+            AllocBufferL AllocL AllocLC AllocLen AllocSize ApacPlain12
+            ApacPlain16 Apfile AppInfoFileUtils ArrayExternalizeCountL
+            ArrayInternalizeCountL ASCliDefinitions ASSERT At ATEntryArray
+            ATRegion ATRemoteEntryArray ATRemoteRegArray ATUidType Available
+            AVTCellRef BaflUtils BaSystemSound Beep BigEndian BinarySearch
+            BmpToEpocBitmap BRFormula BTNSmlDbItemUid BTRealX ByteOrder
+            C95FontConverter C97FontConverter CActive CActiveApDb
+            CActiveConsole CActiveFavouritesDbNotifier CActiveScheduler
+            CActiveSchedulerWait CActiveSequentialProcess CAddVoiceTagDialog
+            CAdvGsmCbmiList CAdvGsmCcbsRequestList CAdvGsmLanguageList
+            CAdvGsmPhoneBookRead CAdvGsmPhoneBookSearch
+            CAdvGsmRetrieveActiveCcbs CAdvGsmRetrieveCbmiList
+            CAdvGsmRetrievePreferredNetworks CAdvGsmRetrievePrefLanguages
+            CAdvGsmRetrieveSmsParameters CAdvGsmRetrieveStaticNetworks
+            CAdvGsmSmspList CAgentBase CAgentSMBase CAgentStateBase CAgnAlarm
+            CAgnAnniv CAgnAppt CAgnAttendee CAgnBasicEntry CAgnCategory
+            CAgnDayDateTimeInstanceList CAgnDeletedTodoListList CAgnEntry
+            CAgnEntryModel CAgnEvent CAgnExceptionList CAgnIndexedModel
+            CAgnModel CAgnMonthInstanceList CAgnObserver CAgnRptDef CAgnServer
+            CAgnSortAnniv CAgnSortAppt CAgnSortEntry CAgnSortEntryTable
+            CAgnSortEvent CAgnSortTodo CAgnStreamIdSet CAgnSymbolList
+            CAgnSyncAccess CAgnSyncIter CAgnTodo CAgnTodoInstanceList
+            CAgnTodoList CAgnTodoListList CAgnTodoListNames
+            CAknAlphaPasswordSettingPage CAknAnimatedGc CAknAnimatedView
+            CAknAnimationData CAknApplication CAknAppStyleGrid CAknAppUi
+            CAknAttributeFilter CAknBatteryNotify CAknBatteryPane
+            CAknBigSettingItemBase CAknBinaryPopupSettingItem
+            CAknBitmapAnimation CAknCaleMonthStyleGrid CAknCcpuSupport
+            CAknCharMap CAknCharMapDialog CAknCheckBoxSettingPage
+            CAknColourSelectionGrid CAknColumnListBox CAknColumnListBoxView
+            CAknConfirmationNote CAknContextPane CAknDateSettingPage CAknDialog
+            CAknDllInitializer CAknDocument CAknDouble2GraphicLargeStyleListBox
+            CAknDouble2GraphicStyleListBox CAknDouble2LargeStyleListBox
+            CAknDouble2PopupMenuStyleListBox CAknDoubleGraphicStyleListBox
+            CAknDoubleLargeGraphicPopupMenuStyleListBox
+            CAknDoubleLargeStyleListBox CAknDoubleNumberStyleListBox
+            CAknDoublePopupMenuStyleListBox CAknDoubleStyle2ListBox
+            CAknDoubleStyleListBox CAknDoubleTimeStyleListBox
+            CAknDrawSynchronizer CAknDummyListBoxView CAknDurationQueryDialog
+            CAknDurationSettingPage CAknEcsDetector CAknEdwinFormAccessor
+            CAknEdwinSettingPage CAknEdwinState CAknEnumeratedItemBase
+            CAknEnumeratedTextPopupSettingItem CAknEnumeratedTextSettingItem
+            CAknEnv CAknErrorNote CAknFastSwapWindowGrid CAknFileNameFilter
+            CAknFileNamePromptDialog CAknFileSelectionDialog
+            CAknFilteredTextListBoxModel CAknFloatingPointQueryDialog CAknForm
+            CAknFormDoubleGraphicStyleListBox CAknFormDoubleStyleListBox
+            CAknFormGraphicStyleListBox CAknFormGraphicWideStyleListBox
+            CAknGenericReader CAknGlobalConfirmationQuery CAknGlobalListQuery
+            CAknGlobalMsgQuery CAknGlobalNote CAknGlobalProgressDialog
+            CAknGMSPopupGrid CAknGMSStyleGrid CAknGMSStyleGridView CAknGrid
+            CAknGridM CAknGridView CAknIconArray CAknIncallBubble
+            CAknIndicatorContainer CAknInformationNote CAknInputFrame
+            CAknInputLanguageItem CAknInputLanguageList CAknIntegerEdwin
+            CAknIntegerEdwinSettingItem CAknIntegerSettingItem
+            CAknIntegerSettingPage CAknIpFieldEditor CAknIpFieldSettingItem
+            CAknIpFieldSettingPage CAknKeySoundSystem CAknLibrary
+            CAknListBoxFilterItems CAknListBoxLayoutDecorator
+            CAknListBoxSettingPage CAknListQueryControl CAknListQueryDialog
+            CAknLocalScreenClearer CAknMarkableListDialog CAknMemoryCardDialog
+            CAknMemorySelectionDialog CAknMemorySelectionSettingItem
+            CAknMemorySelectionSettingPage CAknMessageQueryControl
+            CAknMessageQueryDialog CAknMfneSettingPage
+            CAknMultiLineDataQueryDialog CAknMultilineQueryControl
+            CAknNavigationControlContainer CAknNavigationDecorator
+            CAknNaviLabel CAknNoteControl CAknNoteDialog CAknNoteWrapper
+            CAknNotifyBase CAknNumberQueryDialog CAknNumericEdwin
+            CAknNumericPasswordSettingPage CAknNumericSecretEditor
+            CAknPasswordSettingItem CAknPasswordSettingPage
+            CAknPhoneNumberEditor CAknPinbStyleGrid CAknPopupField
+            CAknPopupFieldList CAknPopupFieldText CAknPopupHeadingPane
+            CAknPopupList CAknPopupNotify CAknPopupSettingList
+            CAknPopupSettingPage CAknProgressDialog CAknQdialStyleGrid
+            CAknQueryControl CAknQueryDialog CAknQueryValue CAknQueryValueDate
+            CAknQueryValueDateArray CAknQueryValueDuration
+            CAknQueryValueDurationArray CAknQueryValueNumber
+            CAknQueryValueNumberArray CAknQueryValuePhone
+            CAknQueryValuePhoneArray CAknQueryValueText CAknQueryValueTextArray
+            CAknQueryValueTime CAknQueryValueTimeArray
+            CAknRadioButtonSettingPage CAknResourceNoteDialog
+            CAknsAppSkinInstance CAknsBasicBackgroundControlContext
+            CAknsBitmapItemData CAknsBmpAnimItemData CAknsColorTableItemData
+            CAknScreenClearerBase CAknScrollButton CAknSearchField
+            CAknSelectionListDialog CAknSetStyleListBox CAknSetStyleListBoxView
+            CAknSettingCache CAknSettingItem CAknSettingItemArray
+            CAknSettingItemList CAknSettingNumberStyleListBox CAknSettingPage
+            CAknSettingStyleListBox CAknsFrameBackgroundControlContext
+            CAknSgcClient CAknSignalNotify CAknSignalPane CAknsImageItemData
+            CAknsImageTableItemData CAknSingle2GraphicStyleListBox
+            CAknSingleGraphicBtPopupMenuStyleListBox
+            CAknSingleGraphicHeadingPopupMenuStyleListBox
+            CAknSingleGraphicHeadingStyleListBox
+            CAknSingleGraphicPopupMenuStyleListBox
+            CAknSingleGraphicStyleListBox
+            CAknSingleHeadingPopupMenuStyleListBox
+            CAknSingleHeadingStyleListBox CAknSingleLargeStyleListBox
+            CAknSingleNumberHeadingStyleListBox CAknSingleNumberStyleListBox
+            CAknSinglePopupMenuStyleListBox CAknSinglePopupSubmenuStyleListBox
+            CAknSingleStyleListBox CAknsItemData CAknSkinnableClock
+            CAknsLayeredBackgroundControlContext CAknSlider
+            CAknSliderSettingItem CAknSliderSettingPage
+            CAknsListBoxBackgroundControlContext CAknSmallIndicator
+            CAknsMaskedBitmapItemData CAknSoftNotificationParameters
+            CAknSoftNotifier CAknSoundInfo CAknStaticNoteDialog
+            CAknStaticNoteStackIndicator CAknTabGroup CAknTextQueryDialog
+            CAknTextSettingItem CAknTextSettingPage CAknTimeOffsetSettingItem
+            CAknTimeOffsetSettingPage CAknTimeOrDateSettingItem
+            CAknTimeQueryDialog CAknTimeSettingPage CAknTitlePane
+            CAknWaitDialog CAknWaitNoteWrapper CAknWarningNote CAknView
+            CAknViewAppUi CAknVolumeControl CAknVolumeSettingItem
+            CAknVolumeSettingPage CAknWsEventMonitor CalcChunkHeapCompression
+            CalenNoteDataUtil CAlgorithmIdentifier CAmrToPcmDecoder
+            CApaAIFViewData CApaAppData CApaAppInfoFileReader
+            CApaAppInfoFileWriter CApaApplication CApaAppList
+            CApaAppListNotifier CApaAppListServer CApaAppLocatorProxy
+            CApaAppViewData CApAccessPointItem CApaCommandLine
+            CApaDataRecognizer CApaDataRecognizerType CApaDocument CApaDoor
+            CApaDoorBase CApaFileRecognizer CApaFileRecognizerType
+            CApaFsMonitor CApaMaskedBitmap CApaModelDoor CApaModelHeader
+            CApaProcess CApaRecentFile CApaScanningAppFinder
+            CApaScanningControlFinder CApaScanningDataRecognizer
+            CApaScanningFileRecognizer CApaSystemControl CApaSystemControlList
+            CApaWindowGroupName CApDataHandler CApListItem CApListItemList
+            CApNetworkItem CApNetworkItemList CApNetworks CAppctrlDetailsDialog
+            CAppinstDetailsDialog CApProtHandler CApSelect CApSettingsHandler
+            CApUtils CArrayFix CArrayFixBase CArrayFixFlat CArrayFixSeg
+            CArrayPak CArrayPakBase CArrayPakFlat CArrayPtr CArrayPtrFlat
+            CArrayPtrSeg CArrayVar CArrayVarBase CArrayVarFlat CArrayVarSeg
+            CAsymmetricCipher CAsymmetricSignature CAsyncCallBack
+            CAsyncNotifier CAsyncOneShot CAttrEncoderVisitor
+            CAttrExtractVisitor CAttributeLookupTable CAuthority16 CAuthority8
+            CAutoDummyClient CAutoHciClient CAutoL2CapClient CAutoOomClient
+            CAutoPanicClient CAutoRFCommCapClient CAutoSdpClient CAutoSPPClient
+            CAutoTestGroupResults CAutoTestResult CAutoTestResults
+            CBaActiveScheduler CBaBackupSessionWrapper CBadSignatureDetails
+            CBaflFileSortTable CBaNamedPlugins CBandedDevice CBase
+            CBaseContainer CBaseExtProxyDrive CBaseMtm CBaseMtmUi
+            CBaseMtmUiData CBaseScriptParser CBaseServerMtm
+            CBaseSmsActiveSocketWatcher CBasicGsmRetrieveDetectedNetworks
+            CBaSystemSoundArray CBCardEngine CBearerBase CBifChangeObserver
+            CBiff1904 CBiffBLANK CBiffBOOLERR CBiffBOUNDSHEET CBiffCOLINFO
+            CBiffDIMENSIONS7 CBiffDIMENSIONS8 CBiffFONT CBiffFORMAT
+            CBiffFORMAT7 CBiffFORMAT8 CBiffFORMULA CBiffMULTBLANK CBiffMULTRK
+            CBiffNUMBER CBiffRecord CBiffRK CBiffSHRFMLA CBiffSTRING7
+            CBiffSTRING8 CBiffXF CBIOClientMtm CBIODatabase CBioIconUtils
+            CBioInfoFileReader CBioInfoFileWriter CBIOServerMtm CBioTestUtils
+            CBitMapAllocator CBitmapAnimClientData CBitmapFont CBitmapFrameData
+            CBitmapRotator CBitmapScaler CBitmapStoreReader CBitwiseBitmap
+            CBlogger CBNFNode CBookmarkDb CBoundedSecurityBase
+            CBrdBroadcastServerSession CBrdBroadcastServerSessionActiveWrapper
+            CBrowserTelService CBTaaControllerApi CBTAtPipe CBtClientMtm
+            CBTConnection CBTDevice CBTFTController CBtHeader CBtHostResolver
+            CBTL2CapSync CBtListenActive CBTMCMSettings CBTRegistry CBTRfs
+            CBtSendOperation CBtSrvMtm CBtTestClient CBtTestControllerBase
+            CBtTestControllers CBtTestOutputDevice CBubbleManager CBufBase
+            CBufferedImageDecoder CBufFlat CBufFlatTextLine CBufSeg CBufStore
+            CBuilderAdapterVisitor CCacheDatabaseManager CCacheItem
+            CCacheServerItem CCalenImportedModel CCalenImporter CCalenModel
+            CCallBase CCalypsoLinkFile CCamera CCameraServServer CCapCodec
+            CCaptureKeys CCBACommandAbsorbingControl CCdBluetoothReceiver
+            CCdBluetoothTransmitter CCdClientSession CCdIrReceiver
+            CCdIrTransmitter CCdLoopbackReceiver CCdLoopbackTransmitter
+            CCdScheduler CCdSmsReceiver CCdSmsTransmitter CCertFormat
+            CCertificate CCertManUi CCertManUIKeeper CCertManUIViewAuthority
+            CCertManUIViewPersonal CCertManUIViewTrust CCertParser
+            CCertStoreEntry CCertStoreSimple CChangeVoiceTagDialog
+            CCharFormatLayer CChineseCalendarConverter CChunkPile CCirBuf
+            CCirBufBase CCirBuffer CCleanup CCleanupStackableFont
+            CClientMtmRegistry CClipboard CClkAlmIdleObserver CClkAlmModel
+            CClkDateTimeView CClkIdleObserver CClkIntermediateObserver
+            CClkMdlResponder CClkModelBase CClkNitzIdleObserver CClkNitzModel
+            CCnaConverter CCnaConverterList CCnaConvInfoFileReader
+            CCnaConvInfoFileWriter CCnaScanningConverterFinder CCntFilter
+            CCntRawPhoneNumberExtractor CCnvCharacterSetConverter
+            CCnvCharacterSetNames CCnvConverter CCodData CCodEng CCodEngBase
+            CCodeQueryDialog CCoeAppUi CCoeAppUiBase CCoeAppUiSimple
+            CCoeBrushAndPenContext CCoeControl CCoeEnv CCoeFep
+            CCoeFepParameters CCoeScheduler
+            CCoeScreenDeviceChangeDefaultHandler CCoeStatic CColorArray
+            CColorList CColorPalette CColumnListBoxData
+            CColumnListBoxItemDrawer CColumnListBoxView
+            CCommandAbsorbingControl CCommandLineArguments
+            CCommDbOverrideSettings CCommonContentPolicy CCommPrinterPort
+            CCommsDatabase CCommsDatabaseBase CCommsDbAccess
+            CCommsDbConnectionPrefTableView CCommsDbProtectConnectPrefTableView
+            CCommsDbProtectTableView CCommsDbTableView CCommsDbTemplateRecord
+            CComNSMConverter CComponentInfo CComponentTester CComposerEngine
+            CComposerFileView CComposerStaffView CConnectionProvdBase
+            CConnectionStageNotifierWCB CConnectionStatus CConnNeedTrans
+            CConsoleBase CConsoleTextWin CContactAgentField CContactCard
+            CContactCardTemplate CContactChangeNotifier
+            CContactConcatenatedView CContactDatabase CContactDateField
+            CContactFieldStorage CContactFilteredView CContactFindView
+            CContactGroup CContactGroupView CContactICCEntry CContactIdArray
+            CContactItem CContactItemField CContactItemFieldSet
+            CContactItemPlusGroup CContactItemViewDef CContactLocalView
+            CContactNamedLocalView CContactNamedRemoteView CContactNumberField
+            CContactOwnCard CContactRemoteView CContactStoreField
+            CContactSubView CContactTemplate CContactTextDef CContactTextField
+            CContactViewBase CContactViewDef CContactViewHighRange
+            CContactViewLowRange CContactViewRange CContactViewRangeBase
+            CContainer CContentLoader CContentType CContrastEnhancement
+            CConverterBase CConvertToImage CCrCertEntry CCrCertificate
+            CCrCertMgr CCrPin CCrWIMSecModule CCrWIMSecModuleMgr
+            CCsHlpSupervisor CCustomServer CCustomServerSession
+            CDaActiveIncremental CDaDbIncremental CDaExporter
+            CDaFileDelimitedImporter CDaFileImporter CDaFileSeparatedImporter
+            CDaIncremental CDaMerger CDaModel CDaRow CDaSqlEvaluator
+            CDaSqlParams CDaStoreReclaim CDataLogger CDateTimeField
+            CDaUndoStack CDaUserColSet CDaUserDbDesc CDbAsyncIncremental
+            CDbBlobSpace CDbColSet CDbCursor CDbCustReader CDbDatabase
+            CDbFileStoreDatabase CDbKey CDBManager CDbNames CDbRecordBase
+            CDbRecordIter CDbSource CDbStoreDatabase CDbSyncIncremental
+            CDbTable CDbTableDatabase CDbTableDef CDbTableIndexDef CDdEng
+            CDelimitedDataBase16 CDelimitedDataBase8 CDelimitedPath16
+            CDelimitedPath8 CDelimitedPathSegment16 CDelimitedPathSegment8
+            CDelimitedQuery16 CDelimitedQuery8 CDeltaTimer CDesC16Array
+            CDesC16ArrayFlat CDesC16ArraySeg CDesC8Array CDesC8ArrayFlat
+            CDesC8ArraySeg CDesCArray CDesCArrayFlat CDesCArraySeg
+            CDetailsDialogBase CDHKey CDialogProcessor CDictionaryFileStore
+            CDictionaryStore CDigDeleteQuery CDigResourceObjectArrayImpl
+            CDigViewGraph CDigViewNode CDir CDirCB CDirectFileStore
+            CDirectoryLocalizer CDirectScreenAccess CDirectScreenBitmap
+            CDirScan CDocumentHandler CDosAsyncExecBase CDosBTAudioBase
+            CDosEventListenerBase CDosEventManager CDosEventSender
+            CDosExtensionBase CDosHelperBase CDosLightsBase CDosMtcBase
+            CDosSaeBase CDosSelfTestBase CDosServer CDosSysUtilsBase
+            CDoubleLargeStyleItemDrawer CDSAKeyPairPlain CDSAParameters
+            CDSAPublicKey CDSASignature CDummyMdaController CDummyMdaRecognizer
+            CDummyMdaResource CEchoEngine CEcTcpAdapterGroupCreatorFunction
+            CEditableText CEditorPlainTextWithUndo CEditorWithUndo
+            CEikAlarmControl CEikAlignedControl CEikAlmControlSupervisor
+            CEikApplication CEikAppUi CEikAppUiFactory CEikArrowHeadScrollBar
+            CEikArrowHeadScrollButton CEikAutoMenuTitle CEikBitmapButton
+            CEikBorderedControl CEikBusyMsgWin CEikButtonBase
+            CEikButtonGroupContainer CEikButtonGroupFactoryArray
+            CEikButtonGroupStack CEikButtonPanel CEikCapCArray
+            CEikCaptionedControl CEikCba CEikCDlgDialogFactory CEikCDlgLibrary
+            CEikClock CEikCoCtlLibrary CEikColumnListBox
+            CEikColumnListBoxEditor CEikCommandButton CEikCommandButtonBase
+            CEikConsoleControl CEikConsoleScreen CEikControlGroup
+            CEikCtlLibrary CEikDateEditor CEikDebugPreferences CEikDialog
+            CEikDialogExtension CEikDialogPage CEikDlgLibrary
+            CEikDllInitializer CEikDocument CEikDurationEditor CEikEdwin
+            CEikEmbeddableAppList CEikFileNameLabel CEikFixedPointEditor
+            CEikFloatingPointEditor CEikFormattedCellListBox
+            CEikGlobalTextEditor CEikHotKeyControl CEikHotKeyTable CEikImage
+            CEikInfoDialog CEikInfoMsgWin CEikInverterCommandButton
+            CEikKeyWindow CEikLabel CEikLabeledButton CEikLibrary CEikListBox
+            CEikListBoxTextEditor CEikMenuBar CEikMenuBarTitle CEikMenuButton
+            CEikMenuPane CEikMenuPaneItem CEikMenuPaneTitle CEikMfne
+            CEikMfneField CEikMfneNumber CEikMfneSeparator CEikMfneSymbol
+            CEikMover CEikMsgWin CEikNumberEditor CEikonEnv
+            CEikPasswordModeCategory CEikProcess CEikProgressInfo
+            CEikRangeEditor CEikRichTextEditor CEikScreenClearerWin
+            CEikScrollBar CEikScrollBarFrame CEikScrollButton CEikSecretEditor
+            CEikServAlarmAlertServer CEikServAppUi CEikServAppUiBase
+            CEikServAppUiServer CEikServEnv CEikServNotifyServer
+            CEikSettingsListBox CEikSnakingListBox CEikSnakingTextListBox
+            CEikSpacer CEikStatusPane CEikStatusPaneBase
+            CEikStatusPaneModelBase CEikTextButton CEikTextListBox
+            CEikTimeAndDateEditor CEikTimeEditor CEikTimeOffsetEditor
+            CEikToolBar CEikTwoPictureCommandButton CEikUndertaker
+            CElementEncoder CElementParser CEmailNotifBioControl
+            CEmailNotificationParser CEmbeddedStore CEmccInterface
+            CEmsAnimationIE CEmsFormatIE CEmsInformationElement
+            CEmsObjectDistribution CEmsPictureIE CEmsPreDefAnimationIE
+            CEmsPreDefSoundIE CEmsSoundIE CEmsUserPrompt
+            CEnvironmentChangeNotifier CEpoc32Shell CEpoc32View
+            CEpocConnectPort CEpocRecord CEraseVoiceTagDialog CErrorDiffuser
+            CErrorUI CertStore CESockIniData CEventLogger CExampleCookieManager
+            CExcel95StreamReader CExcel9700StreamReader CExcelLibrary
+            CExcelLibraryR CExcelLibraryW CExportBufferBase
+            CExportDynamicBuffer CEZCompressor CEZDecompressor
+            CEZFileBufferManager CEZFileToGZip CEZGZipToFile CEZZStream
+            CFavouritesDb CFavouritesItem CFavouritesItemList CFaxBase
+            CFaxHeader CFaxHeaderLines CFaxMtmClient CFaxOperationProgress
+            CFaxPageInfo CFaxPages CFaxRecipient CFaxRender CFaxRenderBase
+            CFaxServerMtm CFaxsTestUtils CFaxT4 CFaxTransfer CFaxTransferSource
+            CFaxWatcher CFbsBitGc CFbsBitGcBitmap CFbsBitGcFont CFbsBitmap
+            CFbsBitmapAsyncStreamer CFbsBitmapDevice CFbsColor256BitmapUtil
+            CFbsDevice CFbsDrawDevice CFbsDrvControl CFbsDrvDevice CFbsFont
+            CFbsScreenDevice CFbsTypefaceStore CFepFastFileAccessor
+            CFepGenericGlobalSettings CFepGlobalDynamicFrequencyTable CFFSCheck
+            CFileBase CFileCB CFileExtensionMIMEType CFileImportBuffer CFileMan
+            CFileNameField CFilePrinterPort CFileSelectorView CFileShare
+            CFileStore CFileSystem CFindFileByType CFindItemDialog
+            CFindItemEngine CFindItemMenu CFLDController CFLDFileListBox
+            CFLDFileListContainer CFLDFileListModel CFLDRingingTonePlayer
+            CFLDSinglePopupMenuStyleEntryFormatter CFolderDataArray
+            CFolderModel CFont CFontCache CFontConverter CFontStore CFormatCB
+            CFormatLayer CFormattedCellGridData CFormattedCellListBoxData
+            CFormattedCellListBoxItemDrawer CFormattedCellListBoxView
+            CFormGraphicListBoxData CFrameImageData CFrameInfoStrings
+            CFtpProtocol CFTPSession CFxcmTestUtils CGameFileHandler
+            CGdbCommPort CGdbCommServPort CGdbDriver CGdbEngine CGenericParam
+            CGenericParamConsumer CGenericParamList CGlobalText CGmsModel
+            CGmsPictureControl CGmsWrapper CGraphicsContext CGridCellImg
+            CGridCellRegion CGridImg CGridLabelImg CGridLay CGridModel
+            CGridPrinter CGsmCompressionBase CGsmEmergencyNumbersList
+            CGsmNetworkList CGsmPhoneBookResults CGsmPhoneBookSearch
+            CGsmRetrieveSimEmergencyNumbers CGulIcon CHandleItem
+            CHardwareGraphicsAccelerator CHCIClient CHCINotifier CHeaderCodec
+            CHeaderField CHeaderFieldParam CHeaderFieldPart CHeaderFooter
+            CHeaderReader CHeaderWriter CHeartbeat Check CHelpBitmaps
+            CHelpBitmapStore CHelpDbCustomization CHelpDbWriter
+            CHelpTextAttributes CHlpDbWriter CHlpItem CHlpList CHlpModel
+            CHlpRowSet CHlpTable CHlpTopic CHlpView CHMAC CHostResolvProvdBase
+            CHTTPFormEncoder CHttpTcpClient CHttpTcpServerLocation
+            CIACBioControl CIacSettingsParser CIclRecognizerUtil CIdle
+            CIdleFinder CIetd CImageDecodeConstruct CImageDecoder
+            CImageDecoderPlugin CImageEncodeConstruct CImageEncoder
+            CImageEncoderPlugin CImageMaskProcessorReadCodec
+            CImageProcessorReadCodec CImageReadCodec CImageTypeDescription
+            CImageUplUI CImageWriteCodec CImap4ClientMtm CImap4ServerMtm
+            CImBaseEmailSettings CImCacheManager CImCalculateMsgSize
+            CImClientMTMUtils CImConvertCharconv CImConvertHeader CImcvUtils
+            CImEmailMessage CImEmailOperation CImEntryFinder CImFinder
+            CImHeader CImIAPPreferences CImImap4GetMail CImImap4Settings CImLog
+            CImLogMessage CImMessageCounter CImMessageFinder CImMimeHeader
+            CImOffLineArrayStore CImOffLineOperation CImOffLineOperationArray
+            CImOperationQueueList CImplementationInformationType CImPOP3GetMail
+            CImPop3Settings CImportBufferBase CImppServerMtm CImPruneMessage
+            CImpsClientLogger CImpsCommCap CImpsCommonGroupProps
+            CImpsCommonGroupPropsInt CImpsData CImpsDataAccessor
+            CImpsDetailedResult CImpsGroupProp CImpsGroupProps CImpsKey
+            CImpsOnlineStatus CImpsPresence CImpsPresenceAttr CImpsPresenceList
+            CImpsPrivateGroupProps CImpsPrivateGroupPropsInt CImpsSearchRequest
+            CImpsServer CImpsSubsList CImpsUserAvailability CImQueuedList
+            CImRecvConvert CImSendMessage CImSmtpSettings CImSSmtpSettings
+            CImTextServerSession CIndicatorWatcher CInfoFont CInfomatrixTrace
+            CIniData CInstallationConditionInfoReader
+            CInstallationDependencyInfoReader CInstallationFile
+            CInstallationFileInfoReader CInstallationOptionsInfoReader
+            CInstallationSignatureInfoReader CInstallEngine CInstallUtils
+            CInstSysLog CIntConnectionInitiator CInteger
+            CInternetConnectionManager CIpAddress CIrClientMtm CIrdaPrinterPort
+            CIrHeader CIrListenActive CIrListenAppUi CIrListenAppUiBase
+            CIrListenRealAppUi CIrListenServer CIrMtmFileNameExternaliser
+            CIrSrvMtm CItemSet CIULEngine CIULFolderArray CIULSelectedFolder
+            CIULSettingsHandler CJpegYuvDecoder CKeyTranslator
+            CLafEdwinCustomDrawBase CLcdPartialMode CLeakTestTransition
+            CleanupStack CLineBase CLineLayout CLineReader CListBoxData
+            CListBoxNumbers CListBoxView CListGridWrapper CListItemDrawer
+            CLocDrvMountCB ClockBold30 CLogActive CLogBase CLogChangeDefinition
+            CLogClient CLogEvent CLogEventType CLogFilter CLogFilterList
+            CLogging CLogPackage CLogsAocObjFactory CLogsEngine
+            CLogsReaderConfigFactory CLogView CLogViewDuplicate CLogViewEvent
+            CLogViewRecent CLogWrapper CMAArchiveHandler CMACompressor
+            CMADecompressor CMAMMCAppEngine CManDummyClient CManHciClient
+            CManL2CapClient CManRFCommCapClient CManSdpClient CManSPPClient
+            CManualSecuritySettings CMBufManager CMBufPool CMceLogEngine CMcn
+            CMcnTopicArray CMD2 CMD5 CMda16PcmTo16PcmCodec CMda16To16AudioCodec
+            CMda16To8AudioCodec CMda8To16AudioCodec CMdaActive CMdaAudioBuffer
+            CMdaAudioClipDstPort CMdaAudioClipFormat CMdaAudioClipSrcPort
+            CMdaAudioCodec CMdaAudioConvertUtility CMdaAudioDstDatatype
+            CMdaAudioDstIO CMdaAudioInputStream CMdaAudioMaths
+            CMdaAudioOutputStream CMdaAudioOutputStreamPadFunction1
+            CMdaAudioPlayerUtility CMdaAudioRecorderUtility
+            CMdaAudioSrcDatatype CMdaAudioSrcIO CMdaAudioToneUtility
+            CMdaAudioType CMdaBitmapRotator CMdaBitmapScaler CMdaBuffer
+            CMdaClipFormatMatcher CMdaClipLocation CMdaClipResourceHandle
+            CMdaColorImageProcessor CMdaConnection CMdaController
+            CMdaControllerSlave CMdaDatatype CMdaDispatcher CMdaDispatchMessage
+            CMdaErrorDiffuser CMdaEventBroadcaster
+            CMdaImageBitmapToBitmapUtility CMdaImageBitmapToDescUtility
+            CMdaImageBitmapToFileUtility CMdaImageDataReadUtility
+            CMdaImageDataWriteUtility CMdaImageDescToBitmapUtility
+            CMdaImageFileToBitmapUtility CMdaImageUtility CMdaIO CMdaIOFactory
+            CMdaJfifClipFormat CMdaJpgCodecFactory CMdaLibrary
+            CMdaLinearClipFormat CMdaMachine CMdaMessage CMdaMessageProcessor
+            CMdaMonochromeErrorDiffuser CMdaMonochromeImageProcessor
+            CMdaMonochromePixelWriter CMdaMonochromeThumbnailProcessor
+            CMdaObject CMdaObjectLoader CMdaPixelWriter CMdaPort CMdaProcessor
+            CMdaRecognizer CMdaResource CMdaResourceHandle CMdaResourceManager
+            CMdaResourceObject CMdaRootResourceObject CMdaServer
+            CMdaStreamDevice CMdaStreamResourceHandle CMdaTargetedMessage
+            CMdaThreadObjectBase CMdaThumbnailProcessor CMdaTimer
+            CMdaTimerFactory CMdaToneGeneratorDevice CMdaVideoBuffer
+            CMdaVideoClipDstPort CMdaVideoClipFormat CMdaVideoClipSrcPort
+            CMdaVideoDstDatatype CMdaVideoDstIO CMdaVideoReadCodec
+            CMdaVideoSrcDatatype CMdaVideoSrcIO CMdaVideoWriteCodec
+            CMediaObject CMemPagePool CMemStatePopup CMenuAppGridControl
+            CMenuAppListControl CMenuFolders CMessageDigest CMessageIterator
+            CMetafileDevice CMetafileGc CMetafilePlayback CMimeInfo CMimeParser
+            CMMFAudioControllerCustomCommandParser
+            CMMFAudioPlayControllerCustomCommandParser
+            CMMFAudioPlayDeviceCustomCommandParser
+            CMMFAudioRecordControllerCustomCommandParser
+            CMMFAudioRecordDeviceCustomCommandParser CMMFBitmapFrameBuffer
+            CMMFChannelAndSampleRateConverterFactory CMMFCodec CMMFController
+            CMMFControllerEventMonitor CMMFControllerImplementationInformation
+            CMMFControllerPluginSelectionParameters CMMFCustomCommandParserBase
+            CMMFDataBuffer CMMFDataPath CMMFDataPathEventMonitor
+            CMMFDataSinkHolder CMMFDataSourceHolder CMMFDescriptorBuffer
+            CMMFDevSound CMMFDevSoundEventHandler CMMFFormatDecode
+            CMMFFormatDecodePluginSelectionParameters CMMFFormatEncode
+            CMMFFormatEncodePluginSelectionParameters
+            CMMFFormatImplementationInformation
+            CMMFFormatPluginSelectionParameters CMMFFormatSelectionParameters
+            CMMFMetaDataEntry CMMFObject CMMFObjectContainer
+            CMMFPluginImplementationInformation CMMFPluginSelectionParameters
+            CMmfRecognizerUtil CMMFTransferBuffer CMMFUrlParams
+            CMMFVideoControllerCustomCommandParser
+            CMMFVideoPlayControllerCustomCommandParser
+            CMMFVideoRecordControllerCustomCommandParser CMMFYUVBuffer
+            CMmsClientMtm CMMSDemo1Engine CMmsNotificationClientMtm
+            CMontgomeryStructure CMountCB CmRouterClientModuleCreatorFunction
+            CMseng CMsgActive CMsgAddressControl CMsgAsyncItemSaver
+            CMsgAttachmentInfo CMsgAttachmentModel CMsgAttaListItemArray
+            CMsgBaseControl CMsgBioBodyControl CMsgBioControl
+            CMsgBioControlFactory CMsgBodyControl CMsgCaptionedHighlight
+            CMsgDetailWindow CMsgEditorAppUi CMsgEditorDocument
+            CMsgEditorThreadWatchingOperation CMsgEditorWatchingOperation
+            CMsgEditorView CMsgEmbeddedEditorWatchingOperation CMsgErrorWatcher
+            CMsgExpandableControl CMsgExpandableControlEditor
+            CMsgFolderSelectionDialog CMsgInfoMessageInfoDialog CMsgMailAppUi
+            CMsgMailDocument CMsgMailPreferences CMsgNameValue
+            CMsgRecipientItem CMsgRecipientList CMsgSimOperation
+            CMsgViewAttachmentsDialog CMSPUtil CmStreamMan_Base
+            CmStreamProcessorInstance_Base CmStreamProcessorInstanceGroup
+            CmStreamProcessorModuleCreatorFunction
+            CmStreamProcessorServerExtension CMsvBIOWapAccessParser
+            CMsvCachedStore CMsvClientEntry CMsvCompletedOperation
+            CMsvCompOperation CMsvConfigEntrySelection CMsvDefaultServices
+            CMsvEntry CMsvEntryArray CMsvEntryFilter CMsvEntryLite
+            CMsvEntrySelection CMsvFindOperation CMsvFindResultSelection
+            CMsvFindText CMsvGenericFileParser CMsvIndexEntry CMsvOffPeakTimes
+            CMsvOperation CMsvOperationActiveSchedulerWait CMsvOperationWait
+            CMsvOpWait CMsvProgressReporterOperation CMsvRecipient
+            CMsvRemoteOperationProgress CMsvScheduledEntry CMsvScheduleSend
+            CMsvScheduleSettings CMsvSendErrorActions CMsvServer
+            CMsvServerEntry CMsvServerIndex CMsvSession CMsvSingleOpWatcher
+            CMsvStore CMsvSysAgentActions CMsvTestUtils CMtmDllInfo
+            CMtmDllInfoArray CMtmDllRegistry CMtmGroupData CMtmRegistryControl
+            CMtmStore CMtmStoreMtmReleaser CMtmUiDataRegistry CMtmUiRegistry
+            CMuiuOperationWait CMuiuSettingsArray CNameDialerModel CNbsWatcher
+            CNetwork CNetworkControllerBase CNewEntryObserver CNifAgentBase
+            CNifCompanionSession CNifFactory CNifIfBase CNifIfFactory
+            CNifIfLink CNode CNotepadApi CNotepadDialogBase
+            CNotepadEditorDialog CNotepadListDialog CNotepadModel
+            CNotepadViewerDialog CNotifierDialogController CNSmlAgnChangeFinder
+            CNSmlChangeFinder CNSmlCtCap CNSmlCtCapsHandler CNSmlCtParam
+            CNSmlCtProp CNSmlDbCaps CNSmlDbMeta CNSmlDbMetaHandler CNSmlParam
+            CNSmlParamBoolean CNSmlParamChoiceList CNSmlParamChoiceListBase
+            CNSmlParamDateTime CNSmlParamDateTimeRange CNSmlParamDirectoryName
+            CNSmlParamFileName CNSmlParamHBufC CNSmlParamList CNSmlParamNumber
+            CNSmlParamNumberRange CNSmlSynchronizerServer CNumPagesField
+            CnvBig5 CnvGb2312 CnvGbk CnvHalfWidthKatakana8 CnvJisBase
+            CnvJisRoman CnvJisX0201 CnvJisX0208 CnvJisX0212 CnvShiftJis
+            CnvUtfConverter CnvUtilities CObex CObexBaseObject CObexBufObject
+            CObexClient CObexClientMtm CObexFileContainer CObexFileObject
+            CObexHeader CObexMtmFileNameExternaliser CObexNullObject
+            CObexSdpUtils CObexSendOperation CObexServer
+            CObexServerSendOperation CObexSrvMtm CObexUtils CObject CObjectCon
+            CObjectConIx CObjectIx CObserverRegistry CoeSoundPlayer
+            COle2BigBlockChain COle2BigBlockDepot COle2File COle2PropertySet
+            COle2PsMap COle2SmallBlockChain COle2SmallBlockDepot COle2Stream
+            COle2StreamPackage Collate Color16array Color16inverse ColorUtils
+            CommInit CommonPhoneParser CommTimer CompareFilenames
+            CompleteWithAppPath compress compress2 CompressAllHeaps ConeUtils
+            Console CONST_CAST ContactGuid ConvertFromUnicode ConvertToUnicode
+            COpenFont COpenFontFile COpenFontRasterizer COperatorLogoBioControl
+            CountAllocCells CPageBuffer CPageCache CPageFieldBase CPageNumField
+            CPageText CPageTextEntry CPAlbBitmap CPAlbImageData
+            CPAlbImageEngine CPAlbImageFactory CPAlbImageFetchPopupList
+            CPAlbImageListControl CPAlbImageRecognizer CPAlbImageUtil
+            CPAlbImageViewerBasic CPAlbImageViewerControl CPAlbPictureEngine
+            CPAlbPictureFetchPopupList CPAlbPictureGridControl
+            CPAlbPictureViewerControl CPAlbPublisher CPAlbUtImageRecognizer
+            CPalette CParaFormat CParaFormatLayer CParagraphStyle CParaLayout
+            CParallelPrinterPort CParsedField CParserGroupedProperty
+            CParserParam CParserProperty CParserPropertyValue
+            CParserPropertyValueAgent CParserPropertyValueAlarm
+            CParserPropertyValueBinary CParserPropertyValueCDesCArray
+            CParserPropertyValueDate CParserPropertyValueDateTime
+            CParserPropertyValueDaylight CParserPropertyValueHBufC
+            CParserPropertyValueInt CParserPropertyValueMultiDateTime
+            CParserPropertyValueRecurrence CParserPropertyValueTimeZone
+            CParserTimePropertyValue CParserVCal CParserVCalEntity CParserVCard
+            CPartnerFindHciClient CPbkAddressSelect CPbkAddToGroup
+            CPbkAppGlobalsBase CPbkAppUiBase CPbkAppViewBase CPbkAssignToGroup
+            CPbkAttachmentFile CPbkAttachmentFileArray CPbkCompressUiImpl
+            CPbkConstants CPbkContactChangeNotifier
+            CPbkContactDetailsBaseControl CPbkContactEditorDlg
+            CPbkContactEngine CPbkContactFindView CPbkContactIdSet
+            CPbkContactInfoControl CPbkContactItem CPbkContactIter
+            CPbkContactListControlBase CPbkContactSubView
+            CPbkContactViewListControl CPbkControlContainerImpl
+            CPbkDataSaveAppUi CPbkDbRecovery CPbkDeleteContactQuery
+            CPbkDeleteContacts CPbkDocumentBase CPbkDummyControlExtension
+            CPbkEmailAddressSelect CPbkEntryArrayNotifier CPbkEntryCache
+            CPbkEntryListControl CPbkFFSCheck CPbkFieldData CPbkFieldDataArray
+            CPbkFieldInfo CPbkFieldInfoGroup CPbkFieldsInfo CPbkGroupBelongings
+            CPbkGroupMembersFetchDlg CPbkGroupNameQueryDlg CPbkIconArray
+            CPbkIconInfoContainer CPbkIdleFinder CPbkImageDataWithInfo
+            CPbkItemTypeSelectAddToExisting CPbkItemTypeSelectCreateNew
+            CPbkMemoryEntryAddItemDlg CPbkMemoryEntryDefaultsDlg
+            CPbkMmsAddressSelect CPbkMultipleEntryFetchDlg CPbkPhonebookInfoDlg
+            CPbkPhoneNumberSelect CPbkPhoneNumberSelectBase
+            CPbkPhotoCardControl CPbkProgressNoteWrapper CPbkRemoveFromGroup
+            CPbkRingingToneFetch CPbkSelectFieldDlg CPbkSettingsDlg
+            CPbkSetToneToGroup CPbkSimEntry CPbkSimEntryManager
+            CPbkSingleEntryFetchDlg CPbkSingleItemFetchDlg CPbkSmsAddressSelect
+            CPbkThumbnailManager CPbkThumbnailPopup CPbkURLAddressSelect
+            CPbkWaitNoteWrapper CPbkWaitNoteWrapperBase
+            CPbkViewContactNameFormatter CPbkViewGlobals CPbkViewState
+            CPbkVoiceDialHandler CPbkVoiceTagListBaseDlg CPbkVoiceTagListDlg
+            CPbkVoiceTagRemovalListDlg CPcmToAmrEncoder CPdrControl CPdrDevice
+            CPdrGc CPdrModelInfo CPdrModelList CPdrResources CPdrTypefaceStore
+            CPeriodic CPermanentFileStore CPersistentStore
+            CPhApEAbbreviatedDiallingNumberFetch CPhApECbsMCNMonitor
+            CPhApEContactManager CPhApEExtManager
+            CPhApEImageDescToBitmapConverter CPhApEImageFileToBitmapConverter
+            CPhApEMessageServiceMonitor CPhApEPhoneEventLogging
+            CPhApEProfileMonitor CPhApEVmbxMonitor CPhCltDialer
+            CPhCltEmergencyTelNumber CPhCltExtPhoneBase CPhCltUssdBasicClient
+            CPhCltUssdClientObserver CPhCltUssdNotifyHandler
+            CPhCltUssdSatClient CPhEngLineMonitorContainer CPhEngModel
+            CPhoneBase CPhoneCntSaveAddToName CPhoneCntVoiceKeyImp
+            CPhoneFactoryBase CPhoneGsmHandlerContainer
+            CPhoneGsmManufacturerHandler CPhoneGsmMiscHandler
+            CPhoneGsmOptionContainer CPhoneGsmPcnProcedureHandler
+            CPhoneGsmPhoneNumberHandler CPhoneGsmSimControlHandler
+            CPhoneGsmSsCallHandler CPhoneGsmSsCcbsHandler CPhoneGsmSsHandler
+            CPhoneNumberMatcher CPicture CPinbHistory CPinbLinkApp
+            CPinbLinkBase CPinbLinkDoc CPinbLinkFile CPinbLinkNote CPinbLinkNum
+            CPinbModel CPKCS1SignatureResult CPKIXCertChain
+            CPKIXValidationResult CPlainText CPlaybackVoiceTagDialog CPlpClient
+            CPlpIo CPlpLinkMonitorClient CPlpLog CPlpServer CPlpServerManager
+            CPlpSession CPlpSocketHandler CPluginActiveBase
+            CPluginActiveObserver CPluginBase CPluginCacheItem
+            CPluginCacheManager CPluginFactory CPluginIterator CPluginManager
+            CPluginManagerOwner CPluginOwner CPluginServerClient
+            CPNGNumberGrouping CPolygonFiller CPop3ClientMtm
+            CPopupFormattedListBoxData CPort CPrinterControl CPrinterDevice
+            CPrinterDriver CPrinterDriverUI CPrintPreviewImage CPrintSetup
+            CProfileAPI CProfileDb CProtocolBase CProtocolFamilyBase
+            CProtocolHandler CProtTransaction CProxyDrive CProxyDriveFactory
+            CPsActiveSystemAgent CPsetCallBarring CPsetCallDiverting
+            CPsetCallWaiting CPsetCli CPsetContainer
+            CPsetCustomerServiceProfile CPsetNetwork CPsetSAObserver
+            CPsuiBarringObs CPsuiCliObserver CPsuiContainer CPsuiDivertObs
+            CPsuiResourceLoader CPsuiWaitingObs CPtrC16Array CPtrC8Array
+            CPtrCArray CPushAsyncOpRunner CPushBaseData CPushBaseMsg
+            CPushedDeckDb CPushInitiator CPushInitiatorList CPushMsgLock
+            CPushMtmOperation CPushMtmSettings CPushMtmSiClient
+            CPushMtmSiServer CPushMtmSiUi CPushMtmSiUiData CPushMtmSLClient
+            CPushMtmSLServer CPushMtmSLUi CPushMtmSLUiData CPushMtmSpClient
+            CPushMtmSpServer CPushMtmSpUi CPushMtmSpUiData CPushMtmUi
+            CPushMtmUiData CPushMtmUtil CPushNewServiceMessageListHandler
+            CPushSiData CPushSiMsg CPushSLData CPushSLMsg CPushSpData
+            CPushSpMsg CPushWatcher CRandomServer CRandomSession crc32
+            CReadFaxFile CReadFaxPages CreateAgentL CreateAppUi CreateCAnimDllL
+            CreateCcbsFactoryL CreateClientAgentL CreateCntFactoryL
+            CreateDirectoryU CreateFileU CreateFredLauncherL CreateLanucherL
+            CreateMessageServerL CreateMutexU CreateProxyDriveL
+            CreateRecognizer CreateSemaphoreU CRecordAttr CRecurrenceParser
+            CRedirServer CRegion CRegisteredMtmDll CRegisteredMtmDllArray
+            CRegisteredParserDll CRegistry CRemLinkServer CResponseSizeVisitor
+            CRfc822Token CRichBio CRichText CRichTextIndex
+            CRingingToneBioControl CRSAKeyPair CRSAKeyPairPlain CRSAPublicKey
+            CRSASignatureResult CRxData CSARStore CSASyncAid CSATodoListChanges
+            CSAUidIdMap CSavedDeckDb CSaveNotifier CScheduleBaseServerMtm
+            CScheduledTask CScreenDriver CScriptFile CScriptSection
+            CScriptSectionItem CSDNEngine CSdpAgent CSdpAttr
+            CSdpAttrIdMatchList CSdpAttrValueBoolean CSdpAttrValueDEA
+            CSdpAttrValueDES CSdpAttrValueEncoded CSdpAttrValueInt
+            CSdpAttrValueList CSdpAttrValueNil CSdpAttrValueString
+            CSdpAttrValueUint CSdpAttrValueURL CSdpAttrValueUUID CSdpDatabase
+            CSdpSearchPattern CSdpServRecord CSearchFieldEditor CSecureSocket
+            CSecureSocketLibraryLoader CSecureStore CSecurityBase
+            CSecurityDecryptBase CSecurityEncryptBase CSecurityHandler
+            CSecuritySettings CSelectableItem CSelectionItemList CSendAppUi
+            CSendAs CSendBaseUi CSendNormalUi CSerial CSerialPrinterPort
+            CServer CServer2 CServerMtmDllRegistry CServerWithIdleShutdown
+            CServiceRequest CServiceSearchVisitor CServProviderBase CSession
+            CSession2 CSettingInfo CSettingItemEditingListBoxData
+            CSettingsListBoxData CSettingsListBoxItemDrawer
+            CSettingsListBoxView CSHA CSHA1 CSharableSession CShareActive
+            CSharedDataI CSharedDataInteger CSharedDataServer CSharedDataString
+            CSharpening CSheetEngine CShgAdditionalDataIter
+            CShgCellAdditionalData CShgFormulaTextLexer CShgFormulaTranslator
+            CShgFormulaViewer CShgName CShgNameSet CShgProtectionIter CShgStack
+            CShgWorkBook CShgWorkSheet CSignalStrengthWatcher
+            CSignatureDetailsDialog CSignedObject CSigningAlgorithmIdentifier
+            CSigningKeyParameters CSimChanged CSimOwnNumberArray
+            CSimOwnNumberEntry CSimPdActiveCopy CSimPdActiveDelete CSimPdCache
+            CSimPdEditor CSimPdEngine CSimPdEntry CSimPdEntryCopy CSimPdInfo
+            CSimPdNamesListControl CSimPdPhonebookFactory
+            CSingleHeadingStyleItemDrawer CSingleHeadingStyleView
+            CSizeAccumulator CSlide CSmilComposer CSmilInterpreter
+            CSmilPresentation CSmlAgendaData CSmlAgentLog CSmlAppEngine
+            CSmlBioControl CSmlContactsData CSmlContentData CSmlContentType
+            CSmlContentTypeItem CSmlCrypt CSmlDeviceInfoParser CSmlProfile
+            CSmlProfileListItem CSmlSettings CSmlSettingsBIOParser CSmlSyncLog
+            CSmlSyncLogEvent CSmlTransport CSmsAlphabetConverter
+            CSmsBaseWatcher CSmsBuffer CSmsBufferBase CSmsBufferSegmenter
+            CSmsClientMtm CSmsCommand CSmsDeliver CSmsDeliverReport
+            CSmsEditorBuffer CSmsEMSBufferSegmenter CSmsEventLogger CSmsHeader
+            CSmsInformationElement CSmsMessage CSmsMessageSettings CSmsMtmUi
+            CSmsMtmUiData CSmsNumber CSmsPDU CSmsServerMtm CSmsSettings
+            CSmsSimParamOperation CSmsStatusReport CSmsSubmit CSmsSubmitReport
+            CSmsTestBase CSmsTestUtils CSmsuActiveBase CSmsuBackupObserver
+            CSmsUserData CSmtpClientMtm CSmtpSrvMtm CSmumMainSettingsDialog
+            CSnakingListBoxView CSocketClientBase CSocketConnection
+            CSocketListener CSocketServExtBase CSocketSession
+            CSoftwareGraphicsAccelerator CSpdiaControl CSPluginServer
+            CSpriteSet CSslAdaptor CStateMachineAgentBase
+            CStoreableOverrideSettings CStoreMap CStreamBase CStreamDictionary
+            CStreamFactoryBase CStreamStore CStringResourceReader CStyleList
+            CSubjectPublicKeyInfo CSubSessionExtBase CSynClientMtm CSynSrvMtm
+            CSysAgentModemChangeObserver CSysAgentPhoneWatcher
+            CSysAgentWatcherBase CSystemLock CT9InputLanguageInfo CTask
+            CTcpListenerModuleCreatorFunction CTelephony CTelnetSession
+            CTelObject CTestActive CTestController CTestTimer CTestUtils
+            CTestUtilsWatcherStarter CTextField CTextFieldSet
+            CTextFileReaderSource CTextLayout CTextListBoxModel
+            CTextListItemDrawer CTextMtmClient CTextPageRegionPrinter
+            CTextPaginator CTextResolver CTextServerMtm CTextSourceReader
+            CTextView CTimer CTmText CTmTextLayout CTopSetBase CTranpSession
+            CTransition CTrapCleanup CTxData CTypefaceStore CTypeStoreManager
+            CUAProfileUI CUidNameArray CUnitTest CUri16 CUri8 CUrl
+            CUserActivityManager CUtf8Utils CValidityPeriod
+            CWapBoundCLPushService CWapBoundDatagramService
+            CWapConnectionManager CWapFullySpecCLPushService
+            CWapFullySpecDatagramService CWapMessageUtils CWapWatcher CWatcher
+            CWatcherArray CWatcherLog CWatcherWait CVCalendarBioControl
+            CVCardBioControl CWconEpocDoc CWconLibrary CWconMsCharProps
+            CWconMsDoc CWconMsFib CWconMsFont CWconMsNote CWconMsParaProps
+            CWconMsPlcf CWconMsPropBin CWconMsProps CWconMsPropValConverter
+            CWconMsText CWconMsTextbox CWeekDayArray CVersitAlarm
+            CVersitDaylight CVersitParser CVersitRecurrence
+            CVersitRecurrenceDaily CVersitRecurrenceMonthlyByDay
+            CVersitRecurrenceMonthlyByPos CVersitRecurrenceWeekly
+            CVersitRecurrenceYearlyByDay CVersitRecurrenceYearlyByMonth
+            CVersitTlsData CVersitUnicodeUtils CVibraControlImpl CVideoDisplay
+            CVideoPlayer CVideoPlayerUtility CVideoRecorderUtility CViewContact
+            CWindowGc CWindowToBitmapMappingGc CWmlBioControl CVoiceDialDialog
+            CVoiceDialer CVoiceRecEngine CVoiceTagContact CVoiceTagField
+            CWordModel CWordModelHeader CWordModelHeaderV2 CWordModelHeaderV3
+            CWordWrappedFormattedCellItemDrawer CVRDeleteProcessor
+            CVRFileListView CVRFileRecognizer CWriteBiff7Factory
+            CWriteBiff8Factory CWriteBiffBLANK CWriteBiffBOF CWriteBiffBOF7
+            CWriteBiffBOF8 CWriteBiffBOOLERR CWriteBiffBOUNDSHEET
+            CWriteBiffBOUNDSHEET7 CWriteBiffBOUNDSHEET8 CWriteBiffCOLINFO
+            CWriteBiffDBCELL CWriteBiffEOF CWriteBiffEXTERNCOUNT7
+            CWriteBiffEXTERNSHEET7 CWriteBiffEXTERNSHEET8 CWriteBiffFactory
+            CWriteBiffFONT CWriteBiffFONT7 CWriteBiffFONT8 CWriteBiffFORMAT
+            CWriteBiffFORMAT7 CWriteBiffFORMAT8 CWriteBiffFORMULA
+            CWriteBiffFORMULA7 CWriteBiffFORMULA8
+            CWriteBiffHORIZONTALPAGEBREAKS CWriteBiffHORIZONTALPAGEBREAKS7
+            CWriteBiffHORIZONTALPAGEBREAKS8 CWriteBiffINDEX CWriteBiffINDEX7
+            CWriteBiffINDEX8 CWriteBiffLABEL CWriteBiffLABEL7 CWriteBiffLABEL8
+            CWriteBiffNUMBER CWriteBiffPAGEBREAKS CWriteBiffPALETTE
+            CWriteBiffRecord CWriteBiffROW CWriteBiffSingle CWriteBiffSTRING
+            CWriteBiffSTRING7 CWriteBiffSTRING8 CWriteBiffSUPBOOK8
+            CWriteBiffVERTICALPAGEBREAKS CWriteBiffVERTICALPAGEBREAKS7
+            CWriteBiffVERTICALPAGEBREAKS8 CWriteBiffWINDOW1 CWriteBiffWINDOW2
+            CWriteBiffWINDOW28 CWriteBiffXF CWriteBiffXF7 CWriteBiffXF8
+            CWriteFaxFile CWriteFaxPages CVRMoveProcessor CVRPinboardProcessor
+            CVRRecView CWsBackedUpWindow CWsBitmap CWspHeaderEncoder
+            CWsScreenDevice CWTLSAlgorithmIdentifier CWTLSCertChain
+            CWTLSCertificate CWTLSName CWTLSRSAPublicKey
+            CWTLSRSASignatureResult CWTLSSigningAlgorithmIdentifier
+            CWTLSStructuredText CWTLSSubjectPublicKeyInfo CWTLSText
+            CWTLSValidationResult CWTLSValidityPeriod CWVActiveDbNotifier
+            CWVSAPSettings CWVSAPSettingsList CWVSAPSettingsListItem
+            CWVSAPSettingsStore CWVSettingsBioControl CWVSettingsParser
+            CVwsServer CVwsSessionWrapper CX500DistinguishedName
+            CX509AlgorithmIdentifier CX509AltNameExt CX509AuthorityKeyIdExt
+            CX509BasicConstraintsExt CX509CertChain CX509CertExtension
+            CX509Certificate CX509CertPoliciesExt CX509CertPolicyInfo
+            CX509DHDomainParams CX509DHPublicKey CX509DHValidationParams
+            CX509DNSName CX509DNSNameSubtree CX509DomainName CX509DSAParameters
+            CX509DSAPublicKey CX509DSASignature CX509ExtendedKeyUsageExt
+            CX509GeneralName CX509GeneralSubtree CX509IPAddress CX509IPBasedURI
+            CX509IPSubnetMask CX509KeyUsageExt CX509NameConstraintsExt
+            CX509PolicyConstraintsExt CX509PolicyMapping CX509PolicyMappingExt
+            CX509PolicyQualifierInfo CX509RFC822Name CX509RFC822NameSubtree
+            CX509RSAPublicKey CX509SigningAlgorithmIdentifier
+            CX509SubjectKeyIdExt CX509SubjectPublicKeyInfo CX509ValidityPeriod
+            CX520AttributeTypeAndValue CXmlAttributeSpec CXmlDtdStore
+            CXmlElement CXmlEntitySpec CXmlLexer CXmlTag CXmlTagSpec
+            CXmlTagStack CZipFile CZipFileMember CZipFileMemberIterator Dbms
+            Dbs DChangeNotifier DChunk DebugNotifySessions DebugRegister
+            DebugThreadPanic DefaultColor256Util deflate deflateCopy deflateEnd
+            deflateInit_ deflateInit2_ deflateParams deflateReset
+            deflateSetDictionary DefWindowProcU DeleteFileU DiffArrayL
+            DispatchMessageU Dll DLogicalChannel DLogicalDevice DMedia
+            DMediaDriver DMMCController DMMCSession DMMCStack DoCancel
+            DoCompareElements DoCopyElements DoExternalizeAllL
+            DoInternalizeAllL DPBusMediaDriver DPeriphBusController
+            DPhysicalDevice DPlatTransferBuffer DPowerHandler DPowerModel
+            DProcess DrawUtils DriveNumberToLocalDriveNumber
+            DriveNumberToSupportedLocalDriveNumber DRMCommon DServer DSession
+            DThread DTimer DTInt64 DTransferWindow DTRealX Dummy DUndertaker
+            DynamicPalette E32DeInitialize E32Dll E32ExitProcess E32Initialize
+            EAccessDenied EAlreadyLoggedOn EBadHandle EBadName EBadPriority
+            EBadUnitNumber EBinary ECausedException EChunkSizeTooBig
+            ECompletion ECShgProtectionIter EDecimal EDesOverflow
+            EEventAlreadyCaptured EEventNotCaptured EEventRequestPending
+            EFailedKernelHeapCheck EFalse EHardwareNotAvailable EHex
+            EikButtonGroupFactory EikControlFactory EikDll EikFileUtils
+            EikResourceUtils EikSoftkeyImage EIllegalWsProcess ELangAfrikaans
+            ELangAlbanian ELangAmerican ELangAmharic ELangArabic ELangArmenian
+            ELangAustralian ELangAustrian ELangAzerbaijani ELangBelarussian
+            ELangBelgianFlemish ELangBelgianFrench ELangBengali
+            ELangBrazilianPortuguese ELangBulgarian ELangBurmese
+            ELangCanadianEnglish ELangCanadianFrench ELangCatalan ELangCroatian
+            ELangCyprusGreek ELangCyprusTurkish ELangCzech ELangDanish
+            ELangDutch ELangEnglish ELangEstonian ELangFarsi
+            ELangFinlandSwedish ELangFinnish ELangFrench ELangGeorgian
+            ELangGerman ELangGreek ELangGujarati ELangHebrew ELangHindi
+            ELangHongKongChinese ELangHungarian ELangIcelandic ELangIndonesian
+            ELangInternationalEnglish ELangInternationalFrench
+            ELangInternationalSpanish ELangIrish ELangItalian ELangJapanese
+            ELangKannada ELangKazakh ELangKhmer ELangKorean ELangLao
+            ELangLatinAmericanSpanish ELangLatvian ELangLithuanian
+            ELangMacedonian ELangMalay ELangMalayalam ELangMarathi
+            ELangMoldavian ELangMongolian ELangNewZealand ELangNorwegian
+            ELangNorwegianNynorsk ELangOther ELangPolish ELangPortuguese
+            ELangPrcChinese ELangPunjabi ELangRomanian ELangRussian
+            ELangScotsGaelic ELangSerbian ELangSinhalese ELangSlovak
+            ELangSlovenian ELangSomali ELangSouthAfricanEnglish ELangSpanish
+            ELangSwahili ELangSwedish ELangSwissFrench ELangSwissGerman
+            ELangSwissItalian ELangTagalog ELangTaiwanChinese ELangTajik
+            ELangTamil ELangTelugu ELangTest ELangThai ELangTibetan
+            ELangTigrinya ELangTurkish ELangTurkmen ELangUkrainian ELangUrdu
+            ELangUzbek ELangWelsh ELangVietnamese ELangZulu ELeave
+            ELeaveWithoutTrap EMesAlreadyPending EMsvCloseSession
+            EMsvCorruptedIndexRebuilding EMsvCorruptedIndexRebuilt
+            EMsvEntriesChanged EMsvEntriesCreated EMsvEntriesDeleted
+            EMsvEntriesMoved EMsvGeneralError EMsvMediaAvailable
+            EMsvMediaChanged EMsvMediaIncorrect EMsvMediaUnavailable
+            EMsvMtmGroupDeInstalled EMsvMtmGroupInstalled
+            EMsvServerFailedToStart EMsvServerReady EMsvServerTerminated
+            EmulatorColorDepth EmulatorDataPath EmulatorFlip EmulatorPath
+            EntryPoint Environment EOctal EpocBitmapToBmp
+            ERequestAlreadyPending ERequestFromWrongThread ERequestNoInvalid
+            EscapeUtils ESegmentReadOutOfRange ESegmentWriteOutOfRange
+            ETDbColSetIter ETHeaderFieldParamIter ETHeaderFieldPartIter
+            ETHTTPFilterIterator ETHTTPHdrFieldIter ETimerAlreadyPending
+            ETInt64 ETMBufPktQIter ETRealX ETrue ETShgCellIter ETShgNameIter
+            ETShgWorkSheetIter EuniwInit EUnsharableSession ExampleParser Exit
+            EXPORT_C ExternalizeL EZGZipFile FastCounter FaxServerUtils
+            FaxUtils FbsStartup FbsStartupServer FeatureManager
+            FepObserverHandleStartOfTransactionL FileNamesIdentical
+            FileServerIsHung FileStoreFactory FindFirstFileU FindNextFileU
+            FindUtilFactoryL FLogger Fold FontUtils FOREVER Free
+            FreeLogicalDevice FreePhysicalDevice FreePlpSvrTls FreeZ FTInt64
+            FTRealX FTShgCellIter GateFunction GdbAssertFailed GdbPanic
+            GDI_Reserved get_crc_table GetBTDevAddrText GetCurrentDirectoryU
+            GetDevicePlayerPolicy GetDeviceRecorderPolicy GetDiskFreeSpaceU
+            GetDriveTypeU GetEnvironment GetEnvironmentVariableU
+            GetFileAttributesU GetFileSystem GetFullPathNameU GetMaxTextLength
+            GetMessageU GetModuleFileNameU GetModuleHandleU GetObjectU
+            GetPlpSvrTlsL GetServiceManager GetStartupDescriptor GetTempPathU
+            GetVolumeInformationU GLDEF_C GLDEF_D GLREF_C GLREF_D GTInt64
+            GTPoint GTRealX GTSize GTTime GulTls H HAL HandleException HBufC
+            HBufC16 HBufC8 HDbColumnSet Heap HlpLauncher
+            HMdaToneFixedSequenceNames HTInt64 HTPoint HTRealX HTSize HTTime
+            Huffman ImageProcessorUtility ImageReadUtilSourcePort_Reserved
+            IMB_Range ImCheckDiskSpace IMPORT_C InactivityTime
+            InetProtTextUtils inflate inflateEnd inflateInit_ inflateInit2_
+            inflateReset inflateSetDictionary inflateSync inflateSyncPoint
+            InfoPrint InitUansi InstallIrda InstallPosixServerActiveObject
+            InstallSMS InternalizeL Invariant ioctl ioctl_cancel ioctl_complete
+            IsDriveHung IServerArcMainThreadFunction IsInThisCharacterSetL
+            IsRomAddress JustInTime KCurrentProcessHandle KCurrentThreadHandle
+            KDefaultJustifyWidth KDefaultRealWidth KDefaultStackSize
+            KDefaultUnit KDegToRad KDeltaTimerDefaultGranularity
+            KDriveAttInternal KDriveAttLocal KDriveAttRedirected
+            KDriveAttRemote KDriveAttRemovable KDriveAttRom KDriveAttSubsted
+            KDriveAttTransaction KDriveFileSysFAT KDriveFileSysLFFS
+            KDriveFileSysROM KDrpi KDstEuropean KDstHome KDstNorthern
+            KDstSouthern Kern KErrAbort KErrAccessDenied KErrAlreadyExists
+            KErrArgument KErrBadDescriptor KErrBadDriver KErrBadHandle
+            KErrBadLibraryEntryPoint KErrBadName KErrBadPower KErrCancel
+            KErrCommsFrame KErrCommsLineFail KErrCommsOverrun KErrCommsParity
+            KErrCompletion KErrCorrupt KErrCouldNotConnect
+            KErrCouldNotDisconnect KErrDied KErrDirFull KErrDisconnected
+            KErrDiskFull KErrDisMounted KErrDivideByZero KErrEof KErrGeneral
+            KErrHardwareNotAvailable KErrInUse KErrLocked KErrNoMemory KErrNone
+            KErrNotFound KErrNotReady KErrNotSupported KErrOverflow
+            KErrPathNotFound KErrServerBusy KErrServerTerminated KErrTimedOut
+            KErrTooBig KErrTotalLossOfPrecision KErrUnderflow KErrUnknown
+            KErrWrite KExponentBias KeyDataConvTable KeyDataFuncTable
+            KeyDataSettings KFirstFreeEntryId KHandleNoClose KIndexPtr
+            KMantissaBits KMatchAny KMatchOne KMaxAmPmName KMaxAmPms
+            KMaxCheckedUid KMaxCurrencySymbol KMaxDayName KMaxDayNameAbb
+            KMaxDays KMaxDeviceInfo KMaxExitCategoryName KMaxExponent
+            KMaxExponentConversion KMaxFileName KMaxFullName KMaxInfoName
+            KMaxLocalDrives KMaxLongDateFormatSpec KMaxMessageArguments
+            KMaxMonthName KMaxMonthNameAbb KMaxMonths KMaxName KMaxOsName
+            KMaxPassword KMaxPath KMaxPBusSockets KMaxPrecision
+            KMaxShortDateFormatSpec KMaxSuffix KMaxSuffixes KMaxTimeFormatSpec
+            KMaxTInt KMaxTInt16 KMaxTInt32 KMaxTInt8 KMaxTranslateTable
+            KMaxTReal KMaxTReal32 KMaxTReal64 KMaxTUint KMaxTUint16 KMaxTUint32
+            KMaxTUint8 KMaxUidName KMaxUnits KMaxVersionName
+            KMediaAttDualDensity KMediaAttFormattable KMediaAttHasPassword
+            KMediaAttLockable KMediaAttLocked KMediaAttVariableSize
+            KMediaAttWriteProtected KMinHeapGrowBy KMinHeapSize KMinTInt
+            KMinTInt16 KMinTInt32 KMinTInt8 KMinTReal KMinTReal32 KMinTReal64
+            KMsq3 KMsvDeletedEntryFolderEntryId KMsvDraftEntryId
+            KMsvFindCaseSensitive KMsvFindWholeWord KMsvGlobalInBoxIndexEntryId
+            KMsvGlobalOutBoxIndexEntryId KMsvLocalServiceIndexEntryId
+            KMsvMessagePartAttachments KMsvMessagePartBody KMsvMessagePartDate
+            KMsvMessagePartDescription KMsvMessagePartNone
+            KMsvMessagePartOriginator KMsvMessagePartRecipient
+            KMsvNullIndexEntryId KMsvRootIndexEntryId KMsvSentEntryId
+            KMsvTempIndexEntryId KMsvUnknownServiceIndexEntryId KNoChar
+            KNullDesC KNullDesC16 KNullDesC8 KNullHandle KNullUid KNullUidValue
+            KNullUnit KPi KPiBy2 KPiInv KPrecisionLimit KRadToDeg
+            KRequestPending KRlg2 KRln10 KRln2 KSpecialExponent KSqhf KSqt3
+            KTInt64 KTReal32ExponentBias KTReal32MaxExponent
+            KTReal32MinExponent KTReal32SpecialExponent KTReal32ZeroExponent
+            KTReal64ExponentBias KTReal64MaxExponent KTReal64MinExponent
+            KTReal64SpecialExponent KTReal64ZeroExponent KTRealX LafAppUi
+            LafArrowHeadScrollBar LafArrowHeadScrollButton LafBitmapButton
+            LafBusyMsgWin LafButtonBase LafButtonGroupContainer LafButtonPanel
+            LafCommandButton LafCommandButtonBase LafEdwin LafEnv
+            LafFileNameLabel LafImage LafInfoMsgWin LafInverterCommandButton
+            LafLabel LafLabeledButton LafListBox LafListBoxData
+            LafListBoxTextEditor LafListBoxView LafListItemDrawer LafMenuBar
+            LafMenuBarTitle LafMenuButton LafMenuPane LafMenuPaneItem
+            LafMenuPaneTitle LafMsgWin LafScrollBar LafScrollBarFrame
+            LafScrollBarFrameCornerWindow LafScrollButton LafScrollThumb
+            LafServAppUiBase LafShutdown LafSnakingTextListBox
+            LafStatusPaneContainer LafTextButton LafTextListBox
+            LafTextListItemDrawer LafToolBar LafTwoPictureCommandButton
+            LafVirtualCursor Language LatinBold12 LatinBold13 LatinBold16
+            LatinBold17 LatinBold19 LatinClock14 LatinPlain12 Leave
+            LeaveIfError LeaveIfNull LeaveNoMemory LibEntry LibEntryL
+            LittleEndian LoadLibraryU LoadLogicalDevice LoadPhysicalDevice
+            LOCAL_C LOCAL_D LocalDrive LocalDriveMapping LockedDec LockedInc
+            LockPeriod Locl LowerCase LTInt64 LTRealX MachineConfiguration
+            MAdvGsmPhoneCCBS MAdvGsmPhoneEmergencyNumbers MAgnVersit
+            MAknFadedComponent MAknQueryValue MAknsControlContext
+            MAknsDataContext MAknSgcStatusPaneRedrawCoordinator MAknSyncDrawer
+            MapEmulatedFileName MapError Math MBackupOperationObserver
+            MBasicGsmPhoneNetwork MBeating MBtreeIndexOrg MBtreeKey
+            MBtreeLeafOrg MBtreeNodeOrg MBusDev MCacheManagerObserver
+            MCacheServerItemObserver MCInteger McliUtils
+            MCoeCaptionRetrieverForFep MCoeControlBrushContext
+            MCoeControlContext MCoeFepAwareTextEditor
+            MCoeFepAwareTextEditor_Extension1 MCoeFepLayDocExtension
+            MCoeFepObserver MCoeFocusObserver MCoeForegroundObserver
+            MCoeMessageObserver MCoeObserverOfLoadedFep
+            MCoeResourceChangeObserver MCoeView MCoeViewActivationObserver
+            MCoeViewDeactivationObserver MComm MContactSynchroniser
+            MContactUiActive MConverterUiObserver MdaImageProcessorUtility
+            MdaManager MDesC16Array MDesC8Array MDesCArray
+            MDialogProcessorObserver MDumbModelHeaderFactory
+            MediaPasswordEnvironmentVar MEikAutoMenuObserver MEikButtonGroup
+            MEikCommandObserver MEikListBoxEditor MEikMenuObserver
+            MEikPictureFactory MEikSrvNotifierBase Mem MessageServer
+            MFepAttributeStorer MFepInlineTextFormatRetriever
+            MFepPointerEventHandlerDuringInlineEdit MFileManObserver
+            MFormCustomDraw MFormCustomWrap MFormParam MGFetch
+            MGraphicsDeviceMap MGridTable MGulLogicalBorder MHTTPFilter
+            MHTTPFilterBase MIncrementalCollector MLayDoc MListBoxModel
+            MLogClientChangeObserver MMCDriveLetter MMCDriveNumber MMCPassword
+            MMdaMachineSlave MMdaMachineSlaveParent MMdaMessage
+            MMsvSessionObserver MMsvStoreObserver MObjectProvider MoveFileU
+            MPagePool MParser MPbkDataSaveCallback MPbkFieldData
+            MPluginCacheManagerObserver MSaPhoneOnOffObserver
+            MSdpElementBuilder MSendAsObserver MsgAttachmentUtils MsgBioUtils
+            MsgEditorCommons MsgEditorLauncher MShgCallBackAPI MStreamBuf
+            mStreamMan_Object MsvFactorySettings MsvUiEditorUtilities
+            MsvUiServiceUtilities MsvUtils MTextListBoxModel MTimer MTInt64
+            MTmCustom MTmSource MTmTextLayoutForwarder MturUtils MUnifiedEditor
+            MUTABLE_CAST MVersitObserver MVersitPlugIn NameApaServServerThread
+            NameApaServStartSemaphore NameEalwlServerThread
+            NameEalwlStartSemaphore NCInteger NewAlarm NewApplication
+            NewBIOIMtmUiDataLayerL NewBIOUMtmUiL NewBtMtmUiDataLayerL
+            NewBtMtmUiL NewConverter NewDecoderL NewEncoderL NewHCIFactoryL
+            NewIMPIMtmUiDataLayerL NewImpsSenderL NewIMPUMtmUiL NewInterface
+            NewL NewLocalSoundDeviceL NewMtmUiDataLayerL NewMtmUiL
+            NewPhoneNumberParser NewPP3IMtmUiDataLayerL NewPP3UMtmUiL
+            NewPrinterDeviceL NewProcessId NewSMTIMtmUiDataLayerL NewSMTUMtmUiL
+            NewSoundDeviceL NewTelephonySoundDeviceL NextProcessFn Nif Nifman
+            NotifierArray NShgUtils NTInt64 NULL NullFunction1 NullFunction2
+            NumberPlain5 NW_Cleanup NW_Sec_Info NW_Url_Init_Client
+            ObexInternalUtils ObexPasswordExternaliser OCInteger OpenMutexU
+            OTInt64 OTTmDocPos OutputDebugStringU PadFunction1 PadFunction2
+            PadFunction3 PadFunction4 PadFunction5 PadFunction6 Panic
+            PanicClient PanicStub1 PanicStub10 PanicStub11 PanicStub12
+            PanicStub13 PanicStub14 PanicStub15 PanicStub16 PanicStub17
+            PanicStub18 PanicStub19 PanicStub2 PanicStub20 PanicStub21
+            PanicStub22 PanicStub23 PanicStub24 PanicStub25 PanicStub26
+            PanicStub27 PanicStub28 PanicStub29 PanicStub3 PanicStub30
+            PanicStub31 PanicStub32 PanicStub4 PanicStub5 PanicStub6 PanicStub7
+            PanicStub8 PanicStub9 PanicTFixedArray Password PathInfo
+            PbkEng_TestAccess PbkEngUtils PbkSimEntryCopyFactory PCInteger
+            PeekMessageU PhCltUtils PhEngDebugInfo PhoneGsmParser PinbUtils
+            Plat PlpVariant Pop PopAndDestroy PosixServerName PostMessageU
+            Power PowerManager ProfileEnd ProfileReset ProfileResult
+            ProfileStart PTInt64 PTTmDocPos PushL QueryVersionSupported
+            QuickSort RAdvGsmCall RAdvGsmLine RAdvGsmPhone RAdvGsmPhoneBook
+            RAdvGsmSmsMessaging RAdvGsmSmsStorage RAgendaServ RAknKeyLock
+            RAlarmServer RAmPmClock RAnalogClock RAnim RAnimDll RAnimWithUtils
+            RApaLsSession RAppDisp RArray RArrayBase RASCliSession
+            RBackedUpWindow RBasicGsmCall RBasicGsmPhone RBitmapAnim
+            RBlankWindow RBTBasebandSecurity RBTDeviceHandler RBTMan
+            RBTManSubSession RBTSecMan RBTSecManBasebandParameters
+            RBTSecuritySettings RBufReadStream RBufWriteStream
+            RBusLogicalChannel RCacheSession RCall RCameraServ RCbs
+            RCbsTopicMessages RCdCommandSession RCertificate RChangeNotifier
+            RChunk RClkNitzMdlServer RClockAnim RComm RCommServ
+            RConeResourceLoader RConeResourceLoading RConnection RConnNeed
+            RConsole RContactViewSortOrder RContentDisp RCountServ
+            RCriticalSection RCtmGsmPhone RCustomerServiceProfileCache
+            RDbColReadStream RDbColWriteStream RDbDatabase RDbIncremental
+            RDbIndexes RDbNamedDatabase RDbNotifier RDbRow RDbRowConstraint
+            RDbRowSet RDbs RDbStoreDatabase RDbTable RDbTableRow RDbUpdate
+            RDbView RDebug RDecryptStream RDesReadStream RDesWriteStream
+            RDevComm RDevice RDeviceVideo RDevSound RDictionaryReadStream
+            RDictionaryWriteStream RDigitalClock RDir RDirectScreenAccess
+            RDosBTAudio RDosExtension RDosHelper RDosLights RDosMtc RDosSae
+            RDosSelfTest RDosServer RDosSubSession RDosSysUtils RDrawableWindow
+            RDummyMdaObject RDummyMdaSession ReadConsoleInputU ReAlloc ReAllocL
+            REComSession RegisterClassU RegisterWsExe REikAppUiSession
+            REINTERPRET_CAST RemoveDirectoryU RemoveFromWinsEpocThreadList
+            REncryptStream ReplacementForUnconvertibleUnicodeCharacters
+            RequestComplete ResetInactivityTime RESOURCE ResourceUtils
+            RestoreBTDevAddrsL RFavouritesDbIncremental RFavouritesDbNotifier
+            RFax RFbsSession RFile RFileBuf RFileLogger RFilePagePool
+            RFileReadStream RFileWriteStream RFormat RFormatStream RFormula RFs
+            RFsBase RGenConAgentDialogServer RGenericAgent RGsmCallGroup
+            RGsmPhoneBook RHandleBase RHardwareBitmap RHeaderField RHeap
+            RHeapBase RHostResolver RHTTPFilterCollection RHTTPHeaders
+            RHTTPMessage RHTTPPropertySet RHTTPRequest RHTTPResponse
+            RHTTPSession RHTTPTransaction RImpsAccessClient RImpsClient
+            RImpsFundClient RImpsGroupClient RImpsImClient RImpsPresenceClient
+            RIncrMatcherBase RIncrMatcherPtr RIncrMatcherTextBuf
+            RIrListenServerSession RISANotify RIServerArc RLibrary RLine
+            RLoader RLoaderClient RLoaderServ RLoadUrl RLogicalChannel RMBuf
+            RMBufAsyncRequest RMBufCell RMBufChain RMBufPacketBase RMBufPktQ
+            RMBufQ RMBufStreamQ RMdaObject RMdaSession RMemReadStream
+            RMemWriteStream RMenuServSession RMessage RMessage2 RMessagePtr
+            RMessagePtr2 RMessageWindow RMMFAudioControllerCustomCommands
+            RMMFAudioPlayControllerCustomCommands
+            RMMFAudioPlayDeviceCustomCommands
+            RMMFAudioRecordControllerCustomCommands
+            RMMFAudioRecordDeviceCustomCommands RMMFController
+            RMMFControllerProxy RMMFCustomCommandsBase RMMFDataPathProxy
+            RMMFSubThreadBase RMMFVideoControllerCustomCommands
+            RMMFVideoPlayControllerCustomCommands
+            RMMFVideoRecordControllerCustomCommands RMRouterAgent
+            RmRouterClient RmStreamSession_Base RMsvReadStream
+            RMsvServerSession RMsvWriteStream RMutex RNetDatabase RNif
+            RNifMonitor RNotifier RNSmlDMSynchronizer RNSmlDSSynchronizer
+            RNSmlSynchronizer RNtRas ROldWorldServer RPbkViewResourceFile
+            RPhCltCallNotify RPhCltEmergencyNumber RPhCltIhf RPhCltResourceFile
+            RPhCltServer RPhCltUssd RPhEngLineContainer RPhone
+            RPhraseAttribsEntry RPlpCustomSession RPlpServAndSocket
+            RPointerArray RPointerArrayBase RProcess RProperty RRandomSession
+            RRawDisk RReadStream RRedirSession RRef RRefBase RRegion RRegionBuf
+            RRemoteFileSystem RRemoteLink RRemoteRpc RRemoteSessionBase
+            RResourceFile RRTest RSat RSatUiSession RSAVarChangeNotify
+            RScheduler RSdp RSdpDatabase RSecureStorePagePool
+            RSecurityDialogServer RSemaphore RServer RServer2 RServiceResolver
+            RSessionBase RShareBuf RSharedDataClient RShareReadStream
+            RShareWriteStream RSmsMessaging RSmsSocketReadStream
+            RSmsSocketWriteStream RSmsStorage RSocket RSocketServ RSoundPlugIn
+            RSSSettings RStarterSession RStorePagePool RStoreReadStream
+            RStoreReclaim RStoreWriteStream RStringBase RStringPool
+            RSubSessionBase RSystemAgent RSystemAgentBase RSystemAgentUtils
+            RTcpListener RTelServer RTelSubSessionBase RTest RTestAlarmAlert
+            RTextBuf RTHeaderFieldParamIter RTHeaderFieldPartIter RThread
+            RTHTTPFilterIterator RTHTTPHdrFieldIter RTimeDevice RTimer
+            RTmParFormat RTmParFormatLayer RTmStyle RTNSmlDbItemUid
+            RTransferBuffer RTransferWindow RunCommServer RUndertaker
+            RunRandomServer RunScheduler RWAPConn RWAPServ RWDPConn
+            RWin32Stream RWindow RWindowBase RWindowGroup RWindowTreeNode
+            RVmbxNumber RWorldServer RWriteStream RWSPCLConn RWSPCOConn
+            RWSPCOTrans RWsPointerCursor RWsSession RWsSprite RWsSpriteBase
+            RWTLS RWTPConn RZipFileMemberReaderStream S SConsoleKey SdpUtil
+            Security SecurityDialogFactory SetConsoleTitleU SetCurrencySymbol
+            SetDebugMask SetEmulatorColorDepth SetEnvironment
+            SetEnvironmentVariableU SetFileAttributesU SetHomeTime
+            SetJustInTime SetLocalDriveMapping SetMachineConfiguration
+            SetMediaPasswordEnvironmentVar SetMMCPassword
+            SetSeries60ColorScheme SetTrapHandler SetupEmulatedDrive
+            SetupEmulatorPaths SetVolumeLabelU SFileShareLock SHalInfoV1
+            SharedDataFlusher SiboUtil SLocaleData SmlDebugDumpL SmlDebugInitL
+            SmlDebugPrint_CodeL SmlDebugPrintL SmumUtil SObjectIxRec
+            SocketServer SocketServExt SocketTimer SpawnPosixServerThread SPoly
+            StartAlarmWorldServer StartC32 StartDialogThread StartESOCK
+            StartLoaderServer StartMediaServer StartMediaServerL
+            StartMessageServer StartSch32 StartSystemAgent StartThread
+            StartupApaServer StartupEALWL StartWapServer StartWimServer
+            STATIC_CAST StaticAnyPointer StoreBTDevAddrsL StringLength
+            StringLoader StripUnsupportedDataL Sup SwitchHeap Synchroniser
+            SysAlarm SysEvent SysLocale SysStartup SysUtil
+            TAcceleratedBitmapSpec TAgnAlarmDefaults TAgnCompoundIteratorBase
+            TAgnConnectivityFilter TAgnDailyRpt TAgnDateTime TAgnDayFilter
+            TAgnEntryDateIterator TAgnEntryId TAgnEntryInfoFilter TAgnEntryIter
+            TAgnException TAgnFilter TAgnId TAgnInstanceDateTimeId
+            TAgnInstanceId TAgnIterator TAgnLiteEntry TAgnMonthlyByDatesRpt
+            TAgnMonthlyByDaysRpt TAgnMonthlyRpt TAgnReplicationData TAgnRpt
+            TAgnSmartLiteEntry TAgnsrvFindFilter TAgnsrvTidyFilter
+            TAgnSymbolFilter TAgnTodoDefaults TAgnTodoDisplaySettings
+            TAgnTodoListId TAgnTodoNonRptIterator TAgnUniqueId TAgnWeeklyRpt
+            TAgnVersion TAgnYearlyByDateRpt TAgnYearlyByDayRpt
+            TAknDesCArrayDecorator TAknEditorCaseState
+            TAknInputLanguageCapabilities TAknLayoutRect TAknLayoutText
+            TAknMultiLineTextLayout TAknPopupFader TAknPopupWindowLayoutDef
+            TAknQueryEcsObserver TAknSyncControlDrawer TAknSystemFont
+            TAknTextLineLayout TAknWindowLineLayout TAlgStyle TAliasAddress
+            TAlign TAllocSize TAllowDuplicates TAlphabeticNumeral TAmPm
+            TAmPmName TAmrFrameInfo TAnalogDisplayHand TAny TApaAppCapability
+            TApaAppEntry TApaAppIdentifier TApaAppInfo TApaAppViewInfo
+            TApaDocCleanupItem TApaLastUsedEntry TApaModelDoorFactory
+            TApaPictureFactory TApaTask TApaTaskList TArabicNumeral
+            TArithmeticalDate TArray TASN1DecBitString TASN1DecBoolean
+            TASN1DecGeneralizedTime TASN1DecGeneralString TASN1DecGeneric
+            TASN1DecGraphicString TASN1DecIA5String TASN1DecInteger
+            TASN1DecNull TASN1DecNumericString TASN1DecObjectIdentifier
+            TASN1DecOctetString TASN1DecPrintableString TASN1DecSequence
+            TASN1DecSet TASN1DecTeletexString TASN1DecUTCTime
+            TASN1DecUTF8String TASN1DecVideotexString TASN1DecVisibleString
+            TAuthorityC16 TAuthorityC8 TAuthorityParser16 TAuthorityParser8
+            TAutoClose TAutoSwitchOffBehavior TAutoSwitchOffType
+            TBacklightBehavior TBaSoundPriorityBase TBaSoundPriorityEncoder
+            TBaSystemSoundInfo TBaSystemSoundType TBatteryState TBatteryType
+            TBidiLogicalToVisual TBidirectionalState TBidiText TBitInput
+            TBitmapUtil TBitOutput TBlitInfo TBlockType TBmpCompression
+            TBmpImageData TBool TBps TBTAccessRequestState
+            TBTAccessRequirements TBTBasebandLinkState
+            TBTBasebandNotificationParams TBTBasebandParameters
+            TBTCommPortSettings TBTDevAddr TBTDeviceClass
+            TBTDeviceResponseParams TBTDeviceSecurity
+            TBTDeviceSecurityPerService TBTDeviceSelectionParams TBtree
+            TBtreeFixBase TBtreeInlineIndexOrg TBtreeInlineLeafOrg TBtreeKey
+            TBtreeToken TBTSecurityHCIRequest TBTServiceSecurity TBTSockAddr
+            TBuf TBuf16 TBuf8 TBufBase16 TBufBase8 TBufBuf TBufC TBufC16 TBufC8
+            TBufCBase16 TBufCBase8 TBufferReaderSource TBufRep TBufSegLink
+            TBullet TBusLocalDrive TCachePagePool TCalendar TCallBack
+            TCapsDevCommV01 TCapsDevVideoV01 TCaptureKey TCardinality TCatInfo
+            TCbs TCellRef TCertManClientInfo TCertStoreInfo TChar
+            TCharacterMetrics TCharF TCharFormat TCharFormatMask TChargeCard
+            TCharLC TCharUC TCheckedUid TChineseCalendar TChineseDate
+            TCipher3DES TCipher3DESCBC TCipher3DESCFB TCipher3DESECB
+            TCipher3DESOFB TCipherDES TCipherDESCBC TCipherDESCFB TCipherDESECB
+            TCipherDESOFB TCipherDESX TCipherNull TCipherRC2 TCipherRC2CBC
+            TCipherRC2CFB TCipherRC2ECB TCipherRC2OFB TCipherRC4 TCipherRC5
+            TCipherRC5CBC TCipherRC5CFB TCipherRC5ECB TCipherRC5OFB
+            TCleanupItem TCleanupOperation TCleanupTrapHandler TClockFormat
+            TCnvCategory TCoeColorUse TCoeHelpContext TCoeInputCapabilities
+            TColor256Util TColorConvertor TColour TCommand TCommCaps
+            TCommCapsV01 TCommConfig TCommConfigV01 TCommDbConnPref
+            TCommDbMultiConnPref TConnectionSettings TConnPref TConsoleKey
+            TContactIter TContactTextDefItem TCrypto TCSD TCurrencySymbol
+            TCurrencySymbolPos TCustomServerCharConv TDaColMapFactory
+            TDaFileImporterFactory TDaFileImportParams TDaFilter TDaSort
+            TDataBits TDataPackage TDataRecognitionResult TDataType
+            TDataTypeWithPriority TDateFormat TDateSuffix TDateTime TDaUserCol
+            TDay TDayName TDayNameAbb TDbAuthentication TDbCol TDbColSetIter
+            TDbColumn TDbColumnDef TDbKeyCol TDblQue TDblQueBase TDblQueIter
+            TDblQueIterBase TDblQueLink TDblQueLinkBase TDbSeekKey TDbWindow
+            TDCT TDecryptFilter TDelimitedParserBase16 TDelimitedParserBase8
+            TDelimitedPathParser16 TDelimitedPathParser8
+            TDelimitedPathSegmentParser16 TDelimitedPathSegmentParser8
+            TDelimitedQueryParser16 TDelimitedQueryParser8 TDeltaQue
+            TDeltaQueBase TDeltaQueLink TDeltaTimerEntry TDeneryToCharBase TDes
+            TDes16 TDes8 TDesBuf TDesC TDesC16 TDesC8 TDeviceInfo TDfc
+            TDialLocation TDigitalDisplayAmPm TDigitalDisplayTextSection
+            TDigitizerCalibration TDigitizerCalibrationType TDisplayModeUtils
+            TDllReason TDllRefTable TDllRefTableEntry TDrawTextLayoutContext
+            TDrive TDriveInfo TDriveInfoV1 TDriveInfoV1Buf TDriveList
+            TDriveName TDriveNumber TDriveUnit TE64Addr TEighthDCT
+            TEikButtonCoordinator TEikScrollBarFrameLayout TEikScrollBarModel
+            TEikVirtualCursor TelephoneNumber TEllipse TEncryptFilter TEntry
+            TEntryArray TEntryKey TEpoc32ShellCallbacks TestMsvOperationTimer
+            TEtextComponentInfo TEui64Addr TEventModifier TExcInfo TExcType
+            TExitType TextUtils TEZGZipHeader TEZGZipTrailer TFalse
+            TFavouritesWapAp TFaxBandHeader TFaxPrepareProgress TFaxProgress
+            TFaxRenderProgress TFaxSessionProgress TFaxSettings
+            TFieldMapExternalizer TFileMode TFileName TFileOpen TFileText
+            TFilterConfigurationIterator TFindChunk TFindDevice TFindDriver
+            TFindFieldInfo TFindFile TFindHandleBase TFindLibrary
+            TFindLogicalChannel TFindLogicalDevice TFindMutex
+            TFindPhysicalDevice TFindProcess TFindSemaphore TFindServer
+            TFindThread TFindWidthOfWidestAbbreviatedDayName
+            TFindWidthOfWidestAbbreviatedMonthName TFindWidthOfWidestAmPmName
+            TFindWidthOfWidestDateSuffix TFindWidthOfWidestDayName
+            TFindWidthOfWidestDigit TFindWidthOfWidestDigitType
+            TFindWidthOfWidestMonthName TFindWidthOfWidestTextItem
+            TFirstWeekRule TFontPresentation TFontSpec TFontStyle
+            TFormAndEtextEditor TFormatInfo TFormatMode TFrameDataBlock
+            TFrameInfo TFrameOverlay TFullName TFunctor
+            TGeneralIdentityRelation TGeneralLinearOrder TGifBackgroundColor
+            TGifColorTable TGifComment TGifImageControl TGifImageDescriptor
+            TGifLZWInfo TGregorianCalendar TGridColors TGridUtils
+            TGsmCompressionSettings TGsmDateTime TGsmSmsSlot
+            TGsmSmsTypeOfAddress TGulAlignment TGulBorder THalfDCT THalInfoV1
+            THalInfoV1Buf THandleInfo THeaderFieldParamIter
+            THeaderFieldPartIter THeapWalk TheNotifier TheServerThread
+            ThreadFunction ThreadFunctionL ThreadMain THTTPFilterIterator
+            THTTPHdrFieldIter THTTPHdrVal THttpLogger THuffmanTable
+            TIASDatabaseEntry TIASDatabaseEntryV001 TIASQuery TIASResponse
+            TickCount TIdentityRelation TIdPair TImageBitmapUtil
+            TImageDataBlock TImageParameterData TImap4GenericProgress
+            TImAttachmentFile TImCodecB64 TImCodecQP TImCodecUU Time
+            TImEmailTransformingInfo TImHeaderEncodingInfo TImMessageField
+            TImpsFeature TImpsPackedEntity TImpsServices TImRfc822DateField
+            TImSmtpProgress TInactivityLink TInetAddr TInquirySockAddr
+            TInstallPrefs TInt TInt16 TInt32 TInt64 TInt64A TInt8 TInternetDate
+            TIp6Addr TIpcArgs TIrdaSockAddr TitleCase TJpegComment
+            TJpegImageData TJpegQTable TKey TKeyArrayFix TKeyArrayFixPtr
+            TKeyArrayPak TKeyArrayVar TKeyCmpNumeric TKeyCmpText TKeyCode
+            TKeyCodePattern TKeyData TL2CAPSockAddr TLanguage TLanguageInfo
+            TLatLong TLeave TLex TLex16 TLex8 TLexMark TLexMark16 TLexMark8
+            TLibAssocBase TLibraryCreateInfo TLibraryFunction TLinAddr
+            TLinearDDA TLinearOrder TListFontBoundValues TListItemProperties
+            TLoaderInfo TLoaderMsg TLocalDrive TLocalDriveCaps TLocale
+            TLocaleMessageText TLogConfig TLogicalFont TLogTransferWindow
+            TLogWindow TLongDateFormatSpec TLSDebug TMABackupItemArray
+            TMachineInfoV1 TMachineInfoV1Buf TMachineInfoV2 TMachineInfoV2Buf
+            TMachineStartupType TMAMMCInfo TMappingDataTypeToApp TMargins
+            TMargins8 TMaskedModifiers TMatchParams TMbmDecodeData
+            TMbmEncodeData TMBufMark TMBufPktQIter TMda16PcmToAlawCodec
+            TMda16PcmToImaAdpcmCodec TMda16PcmToMulawCodec TMdaAlawTo16PcmCodec
+            TMdaAudioDataSettingsQuery TMdaAudioS16ToS16PcmSwapEndianCodec
+            TMdaAudioS16ToS8PcmCodec TMdaAudioS16ToU16BEPcmCodec
+            TMdaAudioS16ToU16PcmCodec TMdaAudioS16ToU8PcmCodec
+            TMdaAudioS8ToS16PcmCodec TMdaAudioU16BEToS16PcmCodec
+            TMdaAudioU16ToS16PcmCodec TMdaAudioU8ToS16PcmCodec TMdaBitmapUtil
+            TMdaImaAdpcmBaseCodec TMdaImaAdpcmTo16PcmCodec
+            TMdaMulawTo16PcmCodec TMdaResourceEntryParser TMdaResourceMatcher
+            TMdaTableAudioCodec TMediaDrvDescData TMediaType TMemBuf
+            TMemoryInfoV1 TMemoryInfoV1Buf TMMCCard TMMCStateMachine TMMFEvent
+            TMMFMessage TMMFMessageDestination TMonth TMonthName TMonthNameAbb
+            TMsgEditorFlags TMsgFunctionInfo TMsvChildrenDetails
+            TMsvConfigEntry TMsvEmailEntry TMsvEntry TMsvEntryEvent
+            TMsvEntryScheduleData TMsvFaxEntry TMsvFindOperationProgress
+            TMsvFindResult TMsvId TMsvIndexLoadProgress TMsvIndexProgress
+            TMsvLocalOperationProgress TMsvNotifBuffer TMsvOffPeakTime TMsvOp
+            TMsvPackedChangeNotification TMsvPackedEntry TMsvPackedEntryArray
+            TMsvPackedMtmGroupData TMsvPackedOperation
+            TMsvPackedRegisteredMtmDllArray TMsvPartList TMsvPriority
+            TMsvSchedulePackage TMsvSelectionOrdering TMsvSendErrorAction
+            TMsvServerOperationProgress TMsvSessionEvent
+            TMsvSysAgentConditionAction TMTMFaxSettings TMTMTxtSettings TName
+            TNonPrintingCharVisibility TNotifyInfo TNotifyType
+            TNSmlAgnSnapshotItem TNSmlCtCapData TNSmlDbItemUid
+            TNSmlModificationItem TNSmlSnapshotItem TObsStarter TOldLatLong
+            TOldWorldId TOnOffInfoV1 TOnOffInfoV1Buf TOpenFileScan
+            TOpenFontCharMetrics TOpenFontGlyphData TOpenFontMetrics
+            TOpenFontSpec TOutputHandshake TPadding TPaddingNone TPaddingPKCS1
+            TPaddingSSLv3 TPagedSetBase TPagedSetBiIterBase TPagedSetIterBase
+            TPagedSetToken TPageMargins TPageSpec TPAlbAutoSubscriber
+            TPAlbIconUtil TPAlbSettings TParaBorder TParaFormatMask TParity
+            TParse TParseBase TParsePtr TParsePtrC TPbkContactEntry
+            TPbkContactItemField TPbkContactViewIterator
+            TPbkFieldInfoExportTypeAdapter TPbkIconInfo TPbkImageLoadParameters
+            TPbkViewContactFieldDataArray TPBusCallBack TPckg TPckgBuf TPckgC
+            TPhCltExtPhoneDialData TPictureHeader TPixelInfo TPlpCharConv
+            TPlpConfigPkgSerial TPlpSerialCategory TPngEncodeData TPoint
+            TPop3Progress TPppAddr TPrinterModelEntry TPrinterModelHeader
+            TPrintParameters TPriQue TPriQueLink TProcessCreateInfo TProcessId
+            TProcessPriority TPtr TPtr16 TPtr8 TPtrC TPtrC16 TPtrC8
+            TPushMtmUtil TPushUiUtil TPushUtil TQTable TQuarterDCT
+            TQueuedOperation TQueuedOperationKey TQueuedOperationSwap Trace
+            TRadix TRandom TRangeRef TranslateCnvErrToEpocErr TRAP TRAPD
+            TrapHandler TRawEvent TRawEventBuf TReal TReal32 TReal64 TReal96
+            TRealFormat TRealFormatType TRealX TRect TRefByValue TRegion
+            TRegionFix TRegistry TRegistryCategory TRegistryCategoryIter
+            TRegistryIter TRemoteEntryArray TRemoteQueryDrive TRemoteRegArray
+            TRemSvPtr TRequestStatus TResourceReader TRfcommRemotePortParams
+            TRfcommSockAddr TRgb TRomanNumeral TRomDir TRomDllHeader TRomEntry
+            TRomExeHeader TRomHeader TRomInfoEntryV1 TRomInfoV1 TRomInfoV1Buf
+            TSAFilter TSAREntry TScreenInfoV01 TSecondLink TSecUi TSecureFilter
+            TSeek TSendingCapabilities TSerialPrinterPortConfig TSglQue
+            TSglQueBase TSglQueIter TSglQueIterBase TSglQueLink TShare TShgCell
+            TShgCellIter TShgCellRef TShgNameIter TShgNumberFormat
+            TShgWorkSheetIter TShortDateFormatSpec TSignatureInterpreter TSize
+            TSmlAgentInfoMsg TSmlDeviceInfo TSmlFormatInfo TSms TSmsAddr
+            TSmsBufferReassembler TSmsSettings TSmsUserDataSettings
+            TSmsUtilities TSockAddr TSoundCaps TSoundCapsV01 TSoundConfig
+            TSoundConfigV01 TSoundInfoV1 TSoundInfoV1Buf TSoundVolume
+            TStackFunctionMarker TStartup TStdScanCode TStopBits
+            TStorePagePoolToken TStreamBuf TStreamExchange TStreamFilter
+            TStreamId TStreamMark TStreamTransfer TSubConnectionClosedEvent
+            TSubConnectionEvent TSubConnectionOpenedEvent
+            TSubConnectionQoSChangedEvent TSupplyInfoV1 TSupplyInfoV1Buf
+            TSupplyStatus TSwap TSwizzleCBase TSymmetricCipher TSyncAidFilter
+            TSysAgentEvent TTabStop TTaskInfo TText TText16 TText8
+            TTextFieldEntry TTextFieldHeader TTextFormat TTextHeaderUtils
+            TTextOps TThreadFunction TThreadId TThreadPriority TTickLink
+            TTiffImageData TTime TTimeFormat TTimeFormatSpec TTimeIntervalBase
+            TTimeIntervalDays TTimeIntervalHours TTimeIntervalMicroSeconds
+            TTimeIntervalMicroSeconds32 TTimeIntervalMinutes
+            TTimeIntervalMonths TTimeIntervalSeconds TTimeIntervalYears
+            TTmBullet TTmCharFormat TTmCharFormatLayer TTmCharFormatMask
+            TTmDocPos TTmFormatParam TTmFormatParamBase TTmParBorder
+            TTmParFormatMask TTmReformatParam TTmReformatResult TTmTab
+            TTranpConfig TTranpPicture TTrap TTrapHandler TTrapK TTrue
+            TTypeface TTypefaceFontsEntry TUid TUidNameInfo TUidNameKey
+            TUidType TUint TUint16 TUint32 TUint8 TUnicode TUnicodeCompressor
+            TUnicodeExpander TUnitsFormat TUriC16 TUriC8 TUriParser16
+            TUriParser8 TUUID TValidationStatus TVariant TVersion TVersionName
+            TVersitDateTime TVideoCaps TVideoCapsV01 TVideoMode
+            TViewYPosQualifier TVolumeInfo TWordModelHeaderFactory
+            TWordModelHeaderFactoryV2 TWordModelHeaderFactoryV3 TWorldId
+            TVRRename TWspHeaderSegmenter TWspPrimitiveDecoder
+            TWspPrimitiveEncoder TWTLSStructuredTextField TWTLSValidationStatus
+            TxtUtils TZoomFactor uncompress UndoSystem UNICODE UnloadDll
+            UpperCase UpWins UriUtils User UserExec UserHal UserHeap UserSvr
+            VA_ARG VA_END VA_START WaitForAnyRequest WaitForRequest
+            ValidateName VCAknColumnListBox VCEikFormattedCellListBox
+            VCEikSettingsListBox Version VersitUtils VibraFactory
+            WimSecurityDialogFactory WindowServerThread WinsE32Main WinsMain
+            WriteToDisk VRMemoFetcher VRUtils WSL_OS_Stop VTUid XCInteger
+            XTInt64 XTRealX YAHABVCPbkContactItem YAHABVCSimPdEntry
+            YAHABVCWriteBiffFONT YAHABVCWriteBiffFORMAT
+            YAHABVTPbkContactItemField YCInteger YTInt64 YTPoint YTRealX YTSize
+            YTTime ZCInteger zError zlibVersion ZTInt64 ZTPoint ZTRealX ZTSize
+            ZTTime
+
+//
+KeyWords3:
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clPurple clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow I
+SymbolCol:              clOlive clWindow
+PreprocessorCol:        clTeal clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clNavy $00F2F2F2
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:            {
+BlockEndStr:            }
+Keyword3Col:            clWindowText clWindow
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clRed clWindow
+
