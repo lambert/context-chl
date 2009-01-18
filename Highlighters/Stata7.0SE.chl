@@ -1,0 +1,431 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Stata 7.0 SE Highlighter written by Elmer Villanueva based on work
+// by J Scott Long and Friedrich Huebler.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Stata 7.0 SE
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Stata files (*.do,*.ado)|*.do;*.ado
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            *
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// op codes
+
+// Stata Commands
+KeyWords1: __GEEBT __GEERC __GEEUC 
+           _3dax0 _3daxmin _3daxout _3daxtbl _3ddflts _3dmkdta _3dmnmx _3dproj _3drproj 
+           _3drshow _3dshad _3dsvusr
+           _ac _addl _addop _adjksm _all
+           _bsqreg _byobs
+           _callerr _cpmatnm _cr1form _cr1invt _cr1se _cr1t _crc2use _crc4fld _crcacnt 
+           _crcar1 _crcause _crcbcrt _crcbin _crcbygr _crcchi2 _crcchkt _crcchkw _crcci 
+           _crccip _crceprs _crcexn1 _crcexn2 _crcexn4 _crcexn5 _crcexn6 _crcexn7 _crcexn8 
+           _crcexn9 _crcexna _crcexnb _crcexnc _crcexnd _crcexne _crcexnf _crcexnt _crcgldv 
+           _crcglil _crcichi _crcird _crcirr _crcksm _crclf _crcmeq _crcmiss _crcnlou 
+           _crcnms2 _crcnuse _crcor _crcphdr _crcplst _crcra _crcrd _crcrnfd _crcrr _crcrsfl 
+           _crcseq _crcshdr _crcslbl _crcsrv2 _crcsrvc _crcstep _crcswxx _crct _crctmge 
+           _crcunab _crcunit _crcvarl _crcwsrv _crczsku _cu_c0
+           _diparm
+           _evlist
+           _fracchk _fraccox _fracddp _fracdis _fracdv _fracin _fracmdp _fracord _fracpp
+           _fracpv _fracrep _fracwgt _fracxo
+           _gcount _gcut _gdiff _getbv _getrhs _getrres _gfill _ggroup _giqr _gladder _glmfl 
+           _glmilnk _glmmapf _glmmapl _glmresd _glmrpt _glmwgt _gma _gmad _gmax _gmdmean 
+           _gmdmed _gmean _gmedian _gmin _gmtr _gpctile _grank _grank2 _grfirst _grlast 
+           _grmax _grmean _grmin _grmiss _grmiss2 _grobs _grsd _grsum _gsd _gsrank _gstd 
+           _gsum _gtma _gtrank
+           _hu _hub _hube _huber _inlist _invlist _isfit
+           _jprfpdt _jprfpdx _jprfpfp _jprfpgn _jprfpin _jprfplx _jprfpmm _jprfppp _jprfpre 
+           _jprfprp _jprfpse _jprfptp _jprfpxo _jprglef _jprglfl _jprglil _jprglld _jprglwz
+           _jprxrpa
+           _kalman1 _ksmwrk
+           _ldrtest _linemax
+           _maked _merge _mfrmvec _mkvec _mvec
+           _newey _nlout _nobs
+           _opnum
+           _parsevl _parsewt _partset _pctile _pred_me _pred_se _predict
+           _qreg
+           _repart _result _rmcoll _robksm _robust
+           _sfran _subchar _svy _sw_lik _sw_lik2 _sw_ood
+           _ts _ts_dsmp _ts_flag _ts_gdat _ts_meqn _ts_pars _ts_peri _tsheadr _ttest _ttest1 
+           _ttest2 _tutends _tx_mtr1 _tx_mtr2 _tx_mtr3 _tx_mtr4 _tx_mtr5 _tx_rpl
+           _wkapm _wsrvcrv
+           _xtrenorm
+           
+           abbrev about abs acprplot add adjust ado adopath alpha an ano anov anova anovadef 
+           aorder ap app appe appen append arch arch_dr arch_p areg areg_p args arima 
+           arima_dr arima_p as ass asse asser assert at avplot avplots aw aweight
+
+           bcskew0 be bee beep binreg bipp_lf bipr_lf bipr_p biprobit bitest bitesti bitowt
+           blogit bmemsize boot bootsamp boxcox boxcox_p bprobit break brier bs bsampl_w
+           bsample bsqreg bstat bstrap by bys bysort byte
+
+           c_local canon canon_p capture cat cc cchart cci cd cell cellsize centile cf char
+           char chdir checksum chi2 chi2tail ci cii cksum clear clo clocal clog clog_lf
+           clog_p clogi clogi_sw clogit clogit_p clogitp clogl_sw cloglog close cluster
+           cmdlog cnr cnre cnreg cnreg_sw cnsreg codebook col collaps4 collapse compare
+           compress compute cond conf confi confir confirm cons const constr constra
+           constrai constrain constraint contract copy cor corc corr corr2data corre correl
+           correla correlat correlate corrgram cou coun count cox cox_p cox_sw coxbase
+           coxhaz coxvar cp cprplot crc cross cs cscript csi ct ct_is ctset ctst_5 ctst_st
+           cttost cumsp cumul cusum 
+           
+           d datetof dbeta de debug debugbuf dec deco decod decode def deff define des desc 
+           descr descri describ describe dfbeta dfuller di dir dis discard disp disp_res 
+           disp_s displ displa display do doe doed doedi doedit dotplot dprobit drawnorm 
+           drop ds dstdize dwstat dydx dyex dynre dynren
+
+           e ed edi edit egen eivreg else emdef en enc enco encod encode end eq eqlist erase
+           ereg ereg_lf ereg_p ereg_sw err erro error est esti estim estima estimat estimate
+           estimates etodow etof etomdy ex exact exec execu execut execute exi exit expand
+           export eydx eyex
+
+           F fac fact facto factor fast fft fillin findit fit float for for5_0 force form
+           forma format fpredict frac_154 frac_adj frac_chk frac_cox frac_ddp frac_dis
+           frac_dv frac_in frac_mun frac_pp frac_pq frac_pv frac_wgt frac_xo fracgen
+           fracplot fracpoly fracpred freq frequency Ftail ftodate ftoe ftomdy ftowdate fw
+           fweight
+
+           g gamma gamma_lf gamma_p gamma_sw ge gen gene gener genera generat generate
+           genrank genstd genvmean gettoken gl gladder glm glm_p glm_sw glmpred glo glob
+           globa global glogit glogit_p gnbre_lf gnbreg gnbreg_5 gnbreg_p gomp_lf gompe_sw
+           gomper_p gompertz gph gphdot gphpen gphprint gprobi_p gprobit gr gr_print gra
+           grap graph grebar greigen grmeanby group gsort gwood
+
+           h hadimvo hareg hausman  he heck_d2 heckma_p heckman heckp_lf heckpr_p heckprob
+           hel help helpchk hereg hetpr_lf hetpr_p hetprob hettest hilite hist hlogit hlu
+           hotel hprobit hreg
+
+           icd9 icd9p if iis impute in index inf infi infil infile infix inlist inp inpu
+           input ins insh inshe inshee insheet insp inspe inspec inspect int integ intreg
+           intrg_ll invchi2 invchi2tail invF invFtail invnchi2 invnorm invttail ipolate
+           iqreg ir iri istdize ivreg iw iweight
+           
+           joinby
+
+           kalarma1 kap kap_3 kapmeier kappa kapwgt kdensity keep ksm ksmirnov ktau kwallis
+
+           l la lab labe label ladder length level leverage lfit lfit_p li lincom linesize
+           linktest lis list llogi_sw llogis_p llogist ln lnorm_lf lnorm_sw lnorma_p lnormal
+           lnskew0 lo loc loca local log logi logis_lf logistic logit logit_p loglogs logrank
+           logtype loneway long loo look lookfor looku lookup lower lpredict lroc lrtest
+           ls lsens lsens_x lstat ltable ltrim lv lvr2plot
+           
+           m ma mac macr macro man mantel mark markout marksample mat matcell match matcol
+           matcproc matname matr matri matrix matrow matsize matstrik max mcc mcci md0_ md1_
+           md1debu_ md2_ md2debu_ mdytoe mdytof mean means median memory memsize meqparse mer
+           merg merge mfx mhodds min missing mkdir mkmat mkspline ml ml_5 ml_adjs ml_bhhhs
+           ml_c_d ml_check ml_clear ml_cnt ml_debug ml_defd ml_e0 ml_e0i ml_e1 ml_e2 ml_ebfg0
+           ml_ebfr0 ml_ebh0q ml_ebhh0 ml_ebhr0 ml_ebr0i ml_ecr0i ml_edfp0 ml_edfr0 ml_edr0i
+           ml_eds ml_eer0i ml_egr0i ml_elf ml_elfi ml_elfs ml_enr0i ml_enrr0 ml_exde ml_geqnr
+           ml_grad0 ml_graph ml_hbhhh ml_hd0 ml_init ml_inv ml_log ml_max ml_mlout ml_model
+           ml_nb0 ml_opt ml_plot ml_query ml_rdgrd ml_repor ml_s_e ml_searc mleval mlf_
+           mlmatsum mlog mlogi mlogit mlogit_p mlopts mlsum mlvecsum mnl0_ mor more mov move
+           mrdu0_ mvdecode mvencode mvreg
+           
+           n nbreg nbreg_al nbreg_lf nbreg_sw nchi2 net newey newey_p news nl nl_p nlexp2
+           nlexp2a nlexp3 nlgom3 nlgom4 nlinit nllog3 nllog4 nlogit nlpred no nobreak nod
+           nodiscrete noe noesample nof nofreq noi nois noisi noisil noisily nol nolabel
+           nonl nonlinear normden nose note notes notify now nowght npnchi2 nptrend numlist
+           
+           obs off old_ver olo olog ologi ologi_sw ologit ologit_p ologitp on one onew onewa
+           oneway op_colnm op_comp op_diff op_inv op_str opr opro oprob oprob_sw oprobi
+           oprobi_p oprobit oprobitp order orthog orthpoly ou out outf outfi outfil outfile
+           outs outsh outshe outshee outsheet ovtest
+           
+           pac par pars parse pause pc pchart pchi pcorr pctile pentium percent pergram
+           permanent personal pkcollapse pkcross pkequiv pkexamine pkshape pksumm pl playsnd
+           plo plot plug plugi plugin pnorm poisgof poiss_lf poiss_sw poisso_p poisson pop
+           popu popup post postclose postfile pperron pr prais prais_e prais_p pred predi
+           predic predict predict preserve printgr priorest pro prob probi probit probit_p
+           prog progr progra program prove prtest prtesti push pw pwcorr pwd pweight
+           
+           q qby qchi qnorm qqplot qreg qreg_c qreg_p qreg_sw qu quadchk quantile que quer
+           query qui quie quiet quietl quietly
+           
+           range ranksum rawsum rchart rcof real recast recode reg reg3 reg3_p regdw regr
+           regre regre_p2 regres regres_p regress regriv_p remap ren rena renam rename
+           renpfix repeat replace replay reshape restore ret retu retur return reverse rm
+           roccomp rocfit rocgold roctab rot rota rotat rotate round row rreg rreg_p rtrim
+           ru run runtest rvfplot rvpplot
+           
+           sa safesum sample sampsi sav save saving say sca scal scala scalar sco scob_lf
+           scob_p scobi_sw scobit scor score sd sdtest sdtesti se search separate seperate
+           serrbar set sfrancia sh she shel shell shewhart showpoint signrank signtest simul
+           simulinit sktest sleep smcl smooth snapspan so sor sort spearman speedchk1
+           speekchk2 spikeplt spline_x sqreg sret sretu sretur sreturn st st_ct st_hc st_hcd
+           st_is st_issys st_note st_promo st_set st_show st_smpl st_subid stack stackdepth
+           stackreset statsby stbase stci stcox stcox_p stcoxkm stcurv stcurve stdes stem
+           stereg stfill stgen stinit stir stjoin stmc stmh stphplot stphtest stptime strate
+           streg streset string sts stset stsplit stsum sttocc sttoct stvary stweib su
+           subinstr subinword subpop substr subwin sum summ summa summar summari summariz
+           summarize sureg survcurv survsum svmat svy_disp svy_dreg svy_est svy_get svy_head
+           svy_sub svy_x svydes svyintrg svyivreg svylc svylog_p svylogit svymean svymlog
+           svyolog svyoprob svypois svyprobt svyprop svyratio svyreg svyreg_p svyset svytab
+           svytest svytotal sw swcnreg swcox swereg swilk swlogis swlogit swologit swoprbt
+           swpois swprobit swqreg swtobit swweib symmetry symmi symplot syntax sysdir sysmenu
+           
+           ta tab tab_or tab1 tab2 tabd tabdi tabdis tabdisp tabi table tabodds tabstat tabu
+           tabul tabula tabulat tabulate te tempfile tempname tempvar tes test testnl
+           testparm teststd text timer tis tob tobi tobit tobit_p tobit_sw token tokeni
+           tokeniz tokenize touch treatreg trim truncreg tset tsfill tsreport tsrevar tsset
+           tsunab ttail ttest ttesti tut_chk tut_wait tutorial ty typ type typeof
+           
+           u unab unabbrev uniform update upper us use using
+           
+           val values var variable varlabelpos vce verinst vers versi versio version vif vwls
+           
+           wdatetof wdctl wdlg wdupdate weib_lf weib_lf0 weibu_sw weibul_p weibull wh whelp
+           whi whic which whil while wilc_st wilcoxon win wind windo window winexec winhelp
+           wmenu wntestb wntestq
+           
+           xchart xcorr xi xpose xt_iis xt_tis xtabond xtbin_p xtclog xtcnt_p xtcorr xtdata
+           xtdes xtgee xtgee_p xtgls xtgls_p xthaus xtile xtint_p xtintreg xtivreg xtlogit
+           xtnb_fe xtnb_lf xtnbreg xtpcse xtpois xtpred xtprobit xtps_fe xtps_lf xtps_ren
+           xtrch_p xtrchh xtrefe_p xtreg xtreg_be xtreg_fe xtreg_ml xtreg_re xtregar xtrere_p
+           xtsum xttab xttest0 xttobit xttrans xwin xwind xwindo xwindow
+           
+           zap_s zinb zinb_llf zinb_plf zip zip_llf zip_p zip_plf zt_ct_5 zt_hc_5 zt_hcd_5
+           zt_is_5 zt_iss_5 zt_sho_5 zt_smp_5 ztbase_5 ztcox_5 ztdes_5 ztereg_5 ztfill_5
+           ztgen_5 ztir_5 ztjoin_5 zts_5 ztset_5 ztspli_5 ztsum_5 zttoct_5 ztvary_5 ztweib_5
+
+// Stata STB Commands
+KeyWords2: a2 ac accrue acplot addnote addtex adgaker2 adgakern adjksm adjmean adjprop
+           aflogit akapm alpha2 altitude amemiya amoeba amstat anydx anyproc arpois asserteq
+           asurvcrv atkinson atrgph autosmoo
+           
+           bailey bandw bartcdf bartq bcloglog bcvwarp bcvwarpw besd bhatmesd bhatplot binsm
+           biprob bisect biv bound boxcoxg boxcoxr boxdetr2 boxdetra boxtid br2 breg brier2
+           briertst bringin browse browsew brset brsq bsmplot bv bvs byvar
+           
+           cascade cdf cenpois censor centcalc chkdp chkdup chksumm chow chplot clrscrn
+           cnpoislf coint coll2 colldiag collfreq compdta compobs concord condraw confx
+           conhull conv2num coranal corcor corcori corrprob cosdetra cpoisson crlad csunits
+           cusumb cw cw__book cw__chap cw__exer cw__find cw__xeq cw_more cw_qnir cw_use
+           cw_yesno cwhetero
+           
+           dagum_ll dagumfit date2obs datelab datevars days360 defntion defv destring diablo
+           dickey diest dif diflogen digami digamma discrim dispcon doit domdiver downame 
+           dropoper dstndiz dtadd dtainfo dtdiff dups dymh dyrate 
+
+           effmod ehcvsrc elapse ellip epiconf epoisson eprobit eqmat equim equimi equip 
+           equipi esarea etab etoj example1 example2 example3 example4 example5 exchstr
+           exercise expr exprcmd extlogit extrname 
+           
+           faketemp fcnplot fig1 fig2 fig3 filldate findbug finddate findlag findobs findsmpl
+           firstocc fisher fisheri fitline fitpower for2 for3 forgraph fp fpcurve fpderiv 
+           fpgen fpgraph fpplot fpshow fpx frac_ord frac_rep frac_sel friedman ftoidate 
+           funnel 
+           
+           galbr gam gamplot gaussgen geivars genhw genhwi genl genvsum glcurve glmlogis glmp
+           glmr gmci gof goll gologit gphdt gphprt gphsave gphwp gpredict gr1 gr2 gr3 gr3q
+           gr3save gr3set gr3use grlexis2 growth growthi grvar gumbel gwarpreg gwr gwrgrid
+           
+           hansen hbolic header heckpbt heckpbtl hh_is hh_slct hhcorr hhcount hhi hhset hhtab
+           hidlin hinflu hlbivnor hlclean hlmakfun hltex hpfilter hreg2 hreg2sls 
+           
+           iclassr iclassr2 idatetof ifexp implogit ineqdec0 ineqdeco ineqfac inequal infilen
+           inflogit invt iov iptab iqr
+
+           jknife johnson jtoe jumble
+
+           kerncos kerneld kernepa kerngaus kernquar kernreg kernsim kerntria kerntriw keyb
+           knnreg kornbrot ktau2
+
+           l1way l2cvwarp l2cvwarw labbe labedit labgraph lag lastbday lastday ldev lead
+           lexis lexport lfitx2 lftbl limport lin_m6r linest lintrend lnsim logdummy logifit
+           logiodd2 logiodds logistat loglin logpred logsumm loop loopdef lorenz lorobwei 
+           lotus lpartr lrcotest lrtest2 lspline lstand ltablem lw lw_gfmt lw_unit lwald
+           
+           makfun manova mat2mac matcond mateq matginv matmax matmin matnorm matnull matorth
+           matrand matrank matsum maxr2 mca mcc3i mcompp mcompr1 mcompr2 mcompr3 mcross 
+           mdytodow memchk memset mergedct mergein meta metabias metacum metainf metan metap
+           metareg mfracpol mhrate minlen mixcase mkbilogn mkquant ml_heck mlcoint mlfit
+           mnthname modl modltbl modt modti monte mountain movsumm mpredict msurface multnorm
+           mv2snp mwstati mx_d0 mx_d1 mx_lf mx_marq mx_model mx_mx1 myols mypoislf 
+           
+           namedow namemnth nbgof nbin0lf nbinlf nbinreg nicenum nlaphea nlsm nlsm_e nlsm_epu
+           nlsm_h nlsm_m nlsm_mu nlsm_rpt nlsm_s nmatch nmissing nonlin norm notedit notefile
+           npresent npt_s nptr nptri null1 null2 numdays numode nwest 
+           
+           obrien ocratio ocrpred omodel omscore outreg outreg5 overlap overlapi 
+           
+           parcoord parmest parsoptp partres pattern pbis pca pciest pdagum pearson period
+           permband pgm_ll pgmhaz phi phscore phtest1 phtest2 plot3d plotrds2 poilog poisml
+           poisson2 post_fl post_zap postclos povdeco poverty powell ppunit prcmp0 prcmp0x
+           prcmp1 prcmp1x prcmp2 prcmp2x prcmp3 prcmp3x prcmp4 prcomp prcompw predlog 
+           printlog probpred projdate psm pswdiff ptransdb pwcorrs pyears 
+           
+           qa__exit qa__zap qa_ans qa_ans2 qa_ask qa_begin qa_clear qa_dense qa_drive qa_err
+           qa_err2 qa_text qa_xeq qdagum qsm qsort qsortidx qsturng quandt quasi 
+           
+           r_chi2 r_cnrml r_exp r_lnrml r_ltnrml r_nrml r_t r_unfrm ralloc ramsey ranksum2 
+           ranova readtok redo regdiag regh reghv regmsng regmv regpred regpred2 relsgini 
+           repl replstr replword report resample reshape2 rfpr_ll1 rfprobit ridder rmttest
+           rndbb rndbin rndbinx rndchi rndexp rndf rndgam rndgamx rndivg rndivgx rndlgn 
+           rndpoi rndpoix rndt rndwei robksm roblowes robvar roc rpoisson rspread running
+           rxrcrlq rxridge rxrmaxl rxrmkdta rxrrisk rxrsimu 
+           
+           s_no safetob sample2 sampsi2 sampsiz savin scenario seq setfwid silvtest similari
+           simple simplex simul2 simula sktest2 sktestd sktestdc slice slrplot sm_ll sm4253eh
+           smfit smr smrby smri smtwice sortd sp_adj spbase spear spline splitstr srecode 
+           st_aux st_rpool staalen stage stats stb stb_cal stb_clr stb_dirs stb_dtl stb_dtl0
+           stb_dtl1 stb_ex stb_find stb_idx stb_list stb_next stb_qih stb_qihh stb_sel 
+           stb_sys stcoxe stcoxplt stcoxtvc stegen stfracp stkap stlexis stmfracp strepl 
+           sttody sttvc sturng1 sturng2 sturng3 sturng4 sturng5 sturng6 sturng7 sturng8 
+           sumdist suprob survtab svy_logt svy_olog svy_pars svy_preg svy_reg switchr
+           
+           t_crcs t_def t_drop t_form t_fpar t_fval t_menu t_num t_print t_text t2way tab2i
+           tabrate tabw tauprob tci tester testres testsum textab tgraph tidwell tmerge tobin
+           today triatex trigami trigamma trimblnk trnbin0 trpois0 trpoislf tryrej tsfit 
+           tsload tsmult tspred tsreg tv tvprob
+           
+           unblock unilogit unitroot univar unlabeld urnmodel 
+           
+           var_get var_key varcond varnull varorth varrank varset varxplor vbar venndiag 
+           violin vorder vserteq 
+           
+           warpden warpdenm warpdens warping warpoly warpreg warpstep wcotest wgap win1 win2 
+           winset winshow with wntestf wsanova 
+           
+           xfrac xi_ei xi_eic xi_eicu xi_eii xi_mkun xi_mkun2 xmerge xmerged xparse xri_enll 
+           xri_mell xri_mpll xri_nll xri_pnll xri_slll xrigls xriml xriqtest xtab 
+           
+           yrxlab ystrday
+           
+           z_r z_rci z_rcii z_rcopy z_rplt z_rvrfy zinb_ll zinbreg zip_ll zipois zippred
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          " '
+StringEndChar:          " '
+MultilineStrings:       1
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clGreen clWindow B
+Keyword3Col:            clFuschia clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clOlive clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clWhite clDkGray
+
+OverrideTxtFgColor:     0
+
+
