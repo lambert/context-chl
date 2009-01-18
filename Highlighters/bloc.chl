@@ -1,0 +1,126 @@
+////////////////////////////
+//
+// BLOC - Basic Like Object Compiler
+// (c) 2003
+// http://bloc.arachnoware.com
+// Support:
+// http://forums.arachnoware.com
+// (c) arachnoWare Inc., 1996 - 2003
+//
+////////////////////////////
+
+Language:               BLOC Compiler
+Filter:                 BLOC Compiler file (*.blc,*.bli)|*.blc;*.bli
+HelpFile:
+CaseSensitive:          0
+LineComment:            '
+BlockCommentBeg:        {
+BlockCommentEnd:        }
+IdentifierBegChars:     a..z A..Z _ $
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// keywords
+KeyWords1:
+          Cls Dim Var Print Input Rem Const As At
+          Pos Pause Delay TextColor TextBGColor DefTYpe PType PROCEDURALTYPE
+          Chr Open Output Read Write Mode Try Except Finally
+          Addr AddrOf Asc Close CurDir Eof Line $COMPILE $COMPRESS $BLOCPATH
+          Result Ptr New Free TextWin Window True False Cursor CursorOn
+          CursorOff Global Goto Inc Incr Dec Decr UsePascal
+          End KeyPress WaitKey To Type GotoXY Locate
+          Inkey ReadKey ClrScr ClearScreen Div Div2 Len Length For Next Downto
+          While Wend REMESP REMESPI REMESPD Append Save TRIM RTRIM LTRIM RIGHT
+          LEFT MID RPOS LEN UCASE LCASE Continue LIMPFDL CLREOL BYTESDE SISEOF
+          EOL ENUM Exit Command ParamStr ParamCount Val Abs Date Time
+          USEP USEPASCAL ENDP ENDPASCAL ARCTAN COS EXP HI SUP LO INF INT ENT LOG LN PI
+          POWER RANDOM RND ROUND SIN SQRT SQR SWAP TRUNC HEXSTR HEX
+          BINSTR BIN MKDIR MAKEDIR MD RD RMDIR REMOVEDIR LOCAL
+          RUNERROR RANDOMIZE ENVCOUNT ENVSTR ENVIRON DISKSIZE DISKFREE
+          SHELL SYSTEM DELLINE REMOVELINE INSLINE INSERTLINE
+          FILEEXISTS EXISTS RENFILE RENAMEFILE REN DELFILE CD CHDIR CHANGEDIR
+          $LIBRARY STDCall Export $APPTYPE EXTFILEDIR EXTRACTDIR EXTFILEPATH EXTRACTPATH
+          CHFEXT CHANGEEXTENSION EXTFILENAME EXTRACTNAME EXTFILEDRIVE EXTRACTDRIVE
+          EXTEXT EXTRACTFILEEXTENSION Sub Procedure Function Declare If Then Else
+          ElseIf Or And Not XOR SHL SHR ASSIGNED SETCODEFILE UNSETCODEFILE PASCAL
+          cgi_get_value cgi_get_nextvalue cgi_set_content Create DTDRead XMLRead Del Delete
+          STRTOPCHAR PCHARTOSTR PCHARLSCAN PCHARSCAN PCHARPOS PCHARLCASE PCHARUCASE
+          PCHARLEN PCHAREND PCHARMOVE PCHARCOPYX PCHARCOPY PCHARICCOMP PCHARCOMP
+          PCHARJOINX PCHARJOIN ByRef ByVal Packed Str Instr Class Private Public
+          Protected Constructor Destructor Extends Inherited Property Set Nothing
+         
+
+
+// functions
+KeyWords2:
+         $library $include
+
+// Opciones
+    CGI_HTTP_USERAGENT cgi_http_request_method cgi_http_referer
+    cgi_http_remote cgi_http_url  Caption Width Height OnMouseDown
+    OnMouseUp OnMouseMove Position Visible WindowState Color FormStyle
+    ParentFont BorderStyle ActiveControl AutoSize Cursor Text TabOrder TabStop
+    Font Size Name Pitch Size FormState Hint Top Left
+    OnShow OnResize OnClick OnDblClick OnHide OnCreate OnWindowStateChange
+    OnCloseQuery OnPaint OnEnter OnExit
+    OnKeyPress OnKeyDown OnKeyUp OnChange OnClose OnActivate OnDesactivate
+    Funcs Types Vars Consts Protos Main Labels Subs
+
+
+// Var Types Structs, etc
+KeyWords3:
+          String Integer Boolean Long Bool Char Double
+          Byte Float Real AnsiString AString PCHar DWord Word LPSTRZ
+          LPVOID HANDLE THANDLE Pointer File Text BLCDOMDOCUMENT BLCDOMNODE
+          Cardinal File Windows Strings CRT SysUtils Sockets
+          Math GUI DOS CONSOLE CGI BLCFORM BLCBUTTON BLCEDIT BLCLABEL
+          Black Blue Green Cyan Red Magenta Brown LightGray DarkGray
+          LightBlue LightGreen LightCyan LightRed LightMagenta Yellow
+          White Blink On Off podefaultposonly podefaultsizeonly
+          podesigned podesktopcenter
+          pomainformcenter poownerformcenter poscreencenter poDefault
+          wsMaximized wsMinimized wsNormal
+          clBlack clMaroon clGreen clOlive clNavy clPurple clTeal clGray clSilver
+          clRed clLime clYellow clBlue clFuchsia clAqua clWhite clScrollBar
+          clBackground clActiveCaption clInactiveCaption clMenu clWindow
+          clWindowFrame clMenuText clWindowText clCaptionText clActiveBorder
+          clInactiveBorder clAppWorkSpace clHighlight clHighlightText clBtnFace
+          clBtnShadow clGrayText clBtnText clInactiveCaptionText clBtnHighlight
+          cl3DDkShadow cl3DLight clInfoText clInfoBk clNone
+          crAppStart crArrow crCross crDefault crDrag crHandPoint crHelp crHourGlass
+          crHSplit crIBeam crMultiDrag crNo crNoDrop crSizeAll crSizeNESW crSizeNS
+          crSizeNWSE crSizeWE crSQLWait crUpArrow crVSplit
+          bsNone bssingle bssizeable bstoolwindow bssizetoolwin
+          fsmdichild fsmdiform fsnormal fsstayontop BTPXMLDocument BTPDomNode
+
+
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            $880000 clWindow
+Keyword3Col:            $ff6600 clWindow
+IdentifierCol:          clBlack clWindow
+CommentCol:             $0066FF clWindow
+NumberCol:              $000099 clWindow
+StringCol:              $008800 clWindow
+SymbolCol:              $000099 clWindow
+PreprocessorCol:        $9900FF clWindow
+SelectionCol:           clGray $00C0C0FF
+CurrentLineCol:         clBlack $FAFAFA
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clRed clWindow
+
+
