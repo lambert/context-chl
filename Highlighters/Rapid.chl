@@ -1,0 +1,84 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            //
+// Rapid Highlighter written by Peter Maudlin, pmaudlin@cadillaccasting.com   //
+//                         V0.3    27 JAN 08                                  //
+//                                                                            //
+// I'll think of something catchy to say when I find the time to think of it. //
+//                                                                            //
+////////////////////////////////////////////////////////////////////////////////
+
+Language:               Rapid Highlighter
+Description:            Rapid Highlighter highlighter written by Peter Maudlin, pmaudlin@cadillacasting.com
+Filter:                 Highlighter files (*.prg)|*.prg
+HelpFile:
+CaseSensitive:          0
+LineComment:            !
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 .
+EscapeChar:
+
+// GENERIC PROGRAMMING COMMANDS
+KeyWords1:              AND DO BREAK ACos ASin ATan ATan2
+                        ELSE ELSEIF ENDFOR ENDIF Tan Sin Cos
+                        ENDWHILE ERROR EXITFOR FROM EXIT
+                        GOTO IF INOUT LOCAL MOD NOSTEPIN NOT
+                        OR RAISE READONLY RETRY RETURN
+                        STEP SYSMODULE THEN TO TRYNEXT STOP
+                        WHILE XOR WaitTime SQRT ROUND POW
+                        ADD INCR DECR
+
+// CODE DELIMITING
+KeyWords2:              MODULE PROC VAR CONST PERS ENDPROC ENDTRAP TRAP ENDMODULE
+                        ENDFUNC FUNC DDN RDN PAR ALT DIM SMT EIT CSE EXP ARG ID
+
+// TEACH PENDANT COMMANDS & DATATYPES
+KeyWords3:              TPERASE TPWRITE TPReadFK TPReadNum
+												TRUE FALSE
+                        num robtarget pos string intnum tooldata
+                        bool jointtarget speeddata wobjdata clock
+                        robjoint
+
+// MOTION COMMANDS & NESTING COMMANDS
+KeyWords4:              MoveJ MoveC MoveL MoveABSJ GRIPLOAD ACCSET TEST CASE DEFAULT
+												Offs StopMove ENDTEST
+
+
+// IO COMMANDS
+KeyWords5:              RESET SET SETGO ISLEEP ITRIGG ISignalDI CONNECT WITH WAITDI
+                        CLKSTOP CLKSTART CLKRESET TESTDI ClkRead DOutput GOutput 
+												CPos CRobT SetDO ResetDO Clear
+
+StringBegChar:          "
+StringEndChar:          "
+SymbolBegChar:          <
+SymbolEndChar:          >
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clYellow
+NumberCol:              clWindowText clWindow
+StringCol:              $0000C000 clWindow
+SymbolCol:              clWindowText clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite $00C00000
+CurrentLineCol:         clBlack $00D1FCFC
+
+OverrideTxtFgColor:     0
+
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clOlive clWindow
+Keyword4Col:            clRed clWindow
+Keyword5Col:            clMaroon clWindow
+MatchedBracesCol:       $004040FF clWhite
