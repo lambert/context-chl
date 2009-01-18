@@ -1,0 +1,235 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// x86 Assembly highlighter written by Eden Kirin, eden.kirin@inet.hr
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               SAS
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 SAS files (*.sas)|*.sas
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            *
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// op codes
+
+KeyWords1:              _null_
+                        abort array attrib and
+                        by
+                        call cards cards4 center
+                        data delete  do drop dim
+                        else end eof
+                        file format formchar footenote footenote1 footenote2 footenote3 footenote4
+                        footenote5 footenote6 footenote7 footenote8 footenote9 footenote10 firstobs
+                        filename
+                        go getvarc getvarn
+                        if infile informat input in
+                        keep
+                        label length link lostcard ls libname left lrecl  lastobs
+                        merge missing mtrace mprint min max  mlogic missover  mdy
+                        nonumber nobs nomprint nomtrace nosymbolgen noovp null
+                        over output out options or otherwise
+                        put ps pad
+                        rename retain return run rank
+                        select set skip stop symbolgen sum  source2  symput  same  sum substr
+                        then to title title1 title2 title3 title4 title5 title6 title7 title8 title9
+                        title10 trim  time
+                        until update
+                        varnum
+                        where while window  when
+
+
+KeyWords2:              %bquote
+                        %display %do
+                        %end %else %eval
+                        %goto %global
+                        %if %include %input
+                        %keydef
+                        %label %let %local
+                        %macro %mend
+                        %put
+                        %str %scan %syscall %sysexec %sysrput %symget %symput %sysfunc
+                        %then %to
+                        %upcase %until
+                        %while %window
+                        MPRINT MLOGIC MTRACE
+                        SYMBOLGEN
+
+KeyWords3:              as after append
+                        break
+                        calender catalog chart cimport class contents compare contents copy corr cport create column
+                        datasets define display
+                        ERROR endsas
+                        format forms freq from
+                        group
+                        headline headskip
+                        id intervals into
+                        lifetest list line lsmeans
+                        method means  model
+                        new noobs noprint n NOTE
+                        options out order obs outsurv
+                        proc print plots plot pmenu printto  pageby
+                        rank report repeated
+                        sort spell strata standard summary sql split skip sumby
+                        tables tabulate test timeplot ttest table  transpose
+                        uniform univariate
+                        var value  v5tov6
+                        width WARNING
+
+
+                        aceclus anova
+                        calis cancorr candisc catmod cluster corresp
+                        discrim
+                        factor fastclus freq
+                        genmod glm glmmod
+                        inbreed
+                        lattice lifereg lifetest logistic
+                        mds mixed modeclus multtest
+                        nested nlin npar1way
+                        output orthoreg
+                        phreg plan princomp prinqual
+                        reg rsreg
+                        score stepdisc
+                        template transreg tree ttest
+                        varclus varcomp
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          ",'
+StringEndChar:          ",'
+MultilineStrings:       1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clFuchsia clWindow B
+Keyword3Col:            clGreen clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clOlive clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
