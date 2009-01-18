@@ -1,0 +1,123 @@
+//////////////////////////////////////////////////////////////////////////////
+
+//
+
+// Prolog highlighter written by Trent Apted
+
+//
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+
+Language:               Prolog
+
+Filter:                 Prolog files (*.pl)|*.pl
+
+HelpFile:
+
+CaseSensitive:          1
+
+LineComment:            %
+
+BlockCommentBeg:        /*
+
+BlockCommentEnd:        */
+
+IdentifierBegChars:     a..z
+
+IdentifierChars:        A..Z a..z _ 0..9
+
+NumConstBegChars:       A..Z 0..9 _
+
+NumConstChars:          A..Z a..z 0..9 _ .
+
+EscapeChar:             \
+
+
+//keywords or builtin predicates without arguments
+KeyWords1:              fail true repeat mod is xfx xfy yfx fx fy xf yf
+			end_of_file nl seen told block break false
+			flush_output listing mode meta_predicate
+			multifile otherwise parallel public reinitialize
+			sequential ttyflush ttynl volatile
+
+//builtin predicates (with arguments)
+KeyWords2:              sort bagof setof findall not op see tell read write
+			tab get get0 put name var nonvar atom integer length
+			float number atomic compound call functor arg
+			assert asserta assertz retract abolish abort
+			absolute_file_name at_end_of_line at_end_of_stream
+			atom_chars b_delete bb_get bb_put bb_update
+			call_cleanup call_residue callable character_count
+			clause close compare copy_term create_mutable
+			current_atom current_input current_key current_module
+			current_op current_output current_predicate
+			current_stream dif display ensure_loaded erase
+			error_exception expand_term format freeze frozen
+			functor get_mutable goal_expansion ground if incore
+			instance is_mutable keysort line_count line_position
+			muse_flag name nonvar number_chars numbervars
+			on_exception open open_null_stream peek_char phrase
+			portray_clause print prolog_flag prolog_load_context
+			prompt put raise_exception read_term recorda recorded
+			recordz retractall seeing seek set_input set_output
+			set_stream_position simple skip skip_line source_file
+			stream_code stream_interrupt stream_position stream_select
+			tab telling term_expansion ttyget ttyget0 ttyput
+			ttyskip ttytab update_mutable when write_canonical
+			write_term writeq
+
+//queries
+KeyWords3:	        consult spy trace compile debug debugging dynamic
+			fcompile file_search_path fileerrors
+			foreign_resource garbage_collect garbage_collect_atoms
+			gc halt help initialization leash library_directory
+                        line_foreign_resource load load_files load_foreign_resouce
+                        unload_foreign_resource method_expansion module
+                        muse_flags muse_sync muse_trace nodebug nofileerrors
+                        nogc nospy nospyall notrace nozip portray portray_message
+                        print_message profile_data profile_reset reconsult
+                        require restore save_program spypoint_condition
+                        statistics unknown unknown_predicate_handler use_module
+                        user_help version
+
+
+StringBegChar:          '
+
+StringEndChar:          '
+
+MultilineStrings:       0
+
+UsePreprocessor:        0
+
+CurrLineHighlighted:    0
+
+
+
+SpaceCol:               clWindowText clWindow
+
+Keyword1Col:            clNavy clWindow B
+
+Keyword2Col:            clGreen clWindow B
+
+Keyword3Col:            clOlive clWindow B
+
+IdentifierCol:          clBlue clWindow
+
+CommentCol:             clGray clWindow I
+
+NumberCol:              clWindowText clWindow
+
+StringCol:              clMaroon clWindow
+
+SymbolCol:              clPurple clWindow
+
+PreprocessorCol:        clBlue clWindow
+
+SelectionCol:           clWhite clNavy
+
+CurrentLineCol:         clBlack clYellow
+
+
+
