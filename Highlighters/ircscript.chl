@@ -1,0 +1,488 @@
+// Language name (user language name)
+Language:            IRC Script
+
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+Filter:                 MIRCscripts (*.mrc)|*.mrc
+
+// help file which will be invokend when F1 is pressed
+HelpFile:
+
+// language case sensitivity
+//                   0  - no
+//                   1  - yes
+CaseSensitive:       0
+
+// comment type:
+// LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be multiline
+// BlockCommentEnd - block comment end
+//LineComment:         #
+
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// IdentifierBegChar - Identifier begin characters
+IdentifierBegChars:  a..z A..Z _
+IdentifierChars:     a..z A..Z _ 0..9
+
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstBegChars:    0..9
+
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstChars:       0..9 .abcdefhABCDEFH
+
+// escape character
+EscapeChar:          \
+
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into tree groups which can be
+// highlighted differently
+KeyWords1:
+
+:Action:
+:Active:
+:Agent:
+:AppActive:
+:Ban:
+:Chat:
+:Close:
+:Connect:
+:Ctcp:
+:CtcpReply:
+:DccServer:
+:DeHelp:
+:DeOp:
+:DeVoice:
+:Dialog:
+:Dns:
+:Error:
+:Exit:
+:FileRcvd:
+:FileSent:
+:GetFail:
+:Help:
+:Hotlink:
+:Input:
+:Invite:
+:Join:
+:KeyDown:
+:KeyUp:
+:Kick:
+:Load:
+:Logon:
+:MidiEnd:
+:Mode:
+:Mp3End:
+:Nick:
+:NoSound:
+:Notice:
+:Notify:
+:Op:
+:Open:
+:Part:
+:Ping:
+:Pong:
+:PlayEnd:
+:Quit:
+:Raw:
+:RawMode:
+:SendFail:
+:Serv:
+:ServerMode:
+:ServerOp:
+:Signal:
+:Snotice:
+:Start:
+:Text:
+:Topic:
+:UnBan:
+:Unload:
+:Unotify:
+:UserMode:
+:Voice:
+:Wallops:
+:WaveEnd:
+menu
+alias
+
+KeyWords2:
+if
+else
+while
+true
+false
+$wildsite
+$ulist
+$ulevel
+$target
+$site
+$scriptline
+$scriptdir
+$script
+$numeric
+$nick
+$mode
+$matchkey
+$maddress
+$group
+$fulladdress
+$event
+$dlevel
+$clevel
+$address
+$0
+$asctime
+$chan
+$ctime
+$ctimer
+$date
+$day
+$daylight
+$duration
+$fulldate
+$gmt
+$idle
+$ltimer
+$online
+$ticks
+$time
+$timer
+$timestamp
+$timezone
+$timestampfmt
+$uptime
+$abook
+$alias
+$crc
+$disk
+$exists
+$file
+$filtered
+$finddir
+$findfile
+$getdir
+$ini
+$isdir
+$isfile
+$logdir
+$lines
+$longfn
+$mididir
+$mircdir
+$mircexe
+$mircini
+$mklogfn
+$nofile
+$read
+$readini
+$readn
+$sdir
+$sfile
+$shortfn
+$address
+$anick
+$comchan
+$ial
+$ialchan
+$ibl
+$level
+$link
+$mask
+$me
+$mnick
+$nick
+$notify
+$snicks
+$snotify
+$abs
+$and
+$asc
+$base
+$biton
+$bitoff
+$bytes
+$calc
+$chr
+$cos
+$acos
+$count
+$encode
+$decode
+$int
+$isbit
+$islower
+$isupper
+$left
+$len
+$log
+$longip
+$lower
+$mid
+$not
+$or
+$ord
+$pos
+$rand
+$remove
+$replace
+$right
+$round
+$sin
+$asin
+$sqrt
+$str
+$strip
+$stripped
+$tan
+$atan
+$upper
+$warp
+$xor
+$addtok
+$deltok
+$findtok
+$gettok
+$instok
+$istok
+$matchtok
+$numtok
+$puttok
+$remtok
+$reptok
+$sorttok
+$wildtok
+$active
+$appactive
+$chan
+$chat
+$fserv
+$get
+$query
+$send
+$wid
+$+
+$?=
+$*=
+$!=
+$ansi2mirc
+$away
+$cb
+$chantypes
+$chanmodes
+$cmdbox
+$cmdline
+$color
+$cr
+$creq
+$crlf
+$dccignore
+$dccport
+$dll
+$editbox
+$emailaddr
+$eval
+$fullname
+$hash
+$highlight
+$host
+$iif
+$ifmatch
+$ignore
+$inpaste
+$input
+$ip
+$isalias
+$isid
+$lf
+$lock
+$md5
+$modespl
+$network
+$os
+$port
+$prefix
+$result
+$rgb
+$server
+$serverip
+$show
+$sreq
+$status
+$titlebar
+$url
+$usermode
+$version
+$agent
+$agentver
+$agentstat
+$agentname
+$notags
+$dde
+$isdde
+$ddename
+$window
+$line
+$fline
+$sline
+$mouse
+$click
+$inrect
+$inpoly
+$onpoly
+$rgb
+$getdot
+$height
+$pic
+$width
+$sock
+$sockname
+$sockerr
+$sockbr
+$portfree
+$dialog
+$did
+$didwm
+$didtok
+$bvar
+$bfind
+$hget
+$hfind
+$regex
+$regml
+$regsub
+$comerr
+$com
+$signal
+$cid
+$scid
+$scon
+$ialchan
+$vol
+$inwave
+$inmidi
+$insong
+$sound
+$var
+
+
+==
+===
+!=
+<
+>
+>=
+<=
+//
+\\
+&
+isin
+isincs
+iswm
+isnum
+isletter
+isalnum
+isalpha
+islower
+isupper
+ison
+isop
+ishop
+isvoice
+isreg
+ischan
+isban
+isaop
+isavoice
+isignore
+isprotect
+isnotify
+
+//KeyWords3:
+
+// string delimiter:
+// StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings,
+// as perl has it
+StringBegChar:       " '
+StringEndChar:       " '
+MultilineStrings:    0
+
+// use preprocessor:
+// 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+UsePreprocessor:     1
+
+// highlight line:
+// 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+CurrLineHighlighted:    1
+
+// colors
+// note:             first value is foreground, second is
+//                   background color
+//                     and third (optional) is font attribute:
+//                     B - bold
+//                     I - italic
+//                     U - underline
+//                     S - strike out
+//                     attributes can be combined: eg. B or BI
+//                   as value, it could be used any standard
+//                   windows color:
+//                     clBlack, clMaroon, clGreen, clOlive,
+//                     clNavy, clPurple, clTeal, clGray,
+//                     clSilver, clRed, clLime, clYellow,
+//                     clBlue, clFuchsia, clAqua, clLtGray,
+//                     clDkGray, clWhite, clScrollBar,
+//                     clBackground, clActiveCaption,
+//                     clInactiveCaption, clMenu, clWindow,
+//                     clWindowFrame, clMenuText, clWindowText,
+//                     clCaptionText, clActiveBorder,
+//                     clInactiveBorder, clAppWorkSpace,
+//                     clHighlight, clHighlightText, clBtnFace,
+//                     clBtnShadow, clGrayText, lBtnText,
+//                     clInactiveCaptionText, clBtnHighlight,
+//                     cl3DDkShadow, cl3DLight, clInfoText,
+//                     clInfoBk
+//                   as value, it could be used hex numeric
+//                   constant too:
+//                     $BBGGRR - BB: blue, GG: green, RR: red,
+//                               eg: $FF6A00
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clSilver clWindow B
+Keyword2Col:            clAqua clWindow B
+Keyword3Col:            clAqua clWindow B
+IdentifierCol:          clGray clWindow B
+CommentCol:             clBlack clWhite B
+NumberCol:              clRed clWindow
+StringCol:              $0000C000 clWindow B
+SymbolCol:              clGray clWindow B
+PreprocessorCol:        clGray clWindow B
+SelectionCol:           $00400000 $00C0FFFF
+
+// If CurrLineHighlighted: 1
+CurrentLineCol:         clBlack clWindow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+MatchedBracesCol:       $00FFFF40 clWindow BIU
+
+
+
+
