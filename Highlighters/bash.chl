@@ -1,0 +1,171 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Bash Script highlighter
+// (written by Marek Zakowicz [mailto:ma_zak@tlen.pl], based on bash manual page)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Bash Script
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Bash Scripts (*.sh,*.bash)|*.sh;*.bash
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            #
+BlockCommentBeg:
+BlockCommentEnd:
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _$
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:             \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+KeyWords1:              case do done elif else esac fi for function if in then select until while
+// Shell builtin commands:
+KeyWords2:              alias bg bind break builtin cd command compgen complete continue declare dirs disown echo enable eval exec exit export
+                        fc fg getopts hash help history jobs kill let local logout popd printf pushd pwd read readonly return
+                        set shift shopt source suspend test times trap type typeset ulimit umask unalias unset wait
+// Variables are set or used by the shell:
+KeyWords3:              BASH BASH_VERSINFO BASH_VERSION COMP_CWORD COMP_LINE COMP_POINT COMP_WORDS DIRSTACK EUID FUNCNAME GROUPS
+                        HISTCMD HOSTNAME HOSTTYPE LINENO MACHTYPE OLDPWD OPTARG OPTIND OSTYPE PIPESTATUS PPID PWD RANDOM REPLY
+                        SECONDS SHELLOPTS SHLVL UID
+
+                        BASH_ENV CDPATH COLUMNS COMPREPLY FCEDIT FIGNORE GLOBIGNORE HISTCONTROL HISTFILE HISTFILESIZE HISTIGNORE
+                        HISTSIZE HISTSIZE HOME HOSTFILE IFS IGNOREEOF INPUTRC LANG LC_ALL LC_ALL LC_CTYPE LC_CTYPE LC_MESSAGES LC_NUMERIC
+                        LINES MAIL MAILCHECK MAILPATH OPTERR PATH POSIXLY_CORRECT PROMPT_COMMAND PS1 PS2 PS3 PS4 TIMEFORMAT TMOUT
+                        auto_resume histchars
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "'
+StringEndChar:          "'
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWhite clBlack
+Keyword1Col:            $0080FF80 clBlack
+Keyword2Col:            $0000C0C0 clBlack
+Keyword3Col:            $00FFC0FF clBlack
+IdentifierCol:          clWhite clBlack
+CommentCol:             $00D0D0D0 clBlack
+NumberCol:              $00C0C0FF clBlack
+StringCol:              $0080FFFF clBlack
+SymbolCol:              $00C0C000 clBlack
+PreprocessorCol:        $0000C0C0 clBlack
+SelectionCol:           clWhite $00C0C000
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+
+MatchedBracesCol:       clRed clBlack
