@@ -1,0 +1,89 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// AutoIt highlighter (www.hiddensoft.com) written by Marc René Delhalle
+//  modified for AutoIt 3.0.74 by Bill Hilton
+//
+//////////////////////////////////////////////////////////////////////////////
+Language:               AutoIt3
+Filter:                 AutoIt Files (*.au3)|*.au3
+HelpFile:               C:\Program Files\AutoIt3\AutoIt.chm
+CaseSensitive:          0
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+KeyWords1:              AdlibDisable AdlibEnable Asc AutoItSetOption AutoItWinGetTitle 
+                        AutoItWinSetTitle BitAND BitOR BlockInput Break CDTray Chr ClipGet ClipPut 
+						ControlCommand ControlDisable ControlEnable ControlFocus ControlGetPos 
+						ControlGetText ControlHide ControlLeftClick ControlMove ControlSend 
+						ControlSetText ControlShow DirCreate DirRemove DriveGetDrive 
+						DriveGetFileSystem DriveGetLabel DriveGetSerial DriveGetType DriveSetLabel 
+						DriveSpaceFree DriveSpaceTotal DriveStatus EnvGet EnvSet FileClose 
+						FileCopy FileCreateShortcut FileDelete FileExists FileFindFirstFile 
+						FileFindNextFile FileGetAttrib FileGetLongName FileGetShortName 
+						FileGetSize FileGetTime FileGetVersion FileInstall FileMove FileOpen 
+						FileOpenDialog FileReadLine FileRecycle FileSaveDialog FileSelectFolder 
+						FileWriteLine Float Hex IniDelete IniRead IniWrite Inputbox Int IsAdmin 
+						IsArray IsFloat IsInt IsString Mod MouseClick MouseClickDrag MouseDown 
+						MouseGetCursor MouseGetPos MouseMove MouseUp MsgBox PixelGetColor 						PixelSearch ProcessClose ProcessExists ProcessWait ProcessWaitClose 
+						ProgressOff ProgressOn ProgressSet Random RegDelete RegRead RegWrite Run 
+						RunAsSet RunWait Send SendSetCapslockState SetError Shutdown Sleep 
+						SoundPlay SoundSetWaveVolume SplashImageOn SplashOff SplashTextOn 						StatusbarGetText String StringAddCR StringInStr StringIsAlNum 
+						StringIsAlpha StringIsASCII StringIsDigit StringIsFloat StringIsInt 
+						StringIsLower StringIsSpace StringIsUpper StringIsXDigit StringLeft 
+						StringLen StringLower StringMid StringReplace StringRight StringSplit 
+						StringStripCR StringStripWS StringTrimLeft StringTrimRight StringUpper 
+						TimerStart TimerStop TrayTip UBound URLDownloadToFile WinActivate 						WinActive WinClose WinExists WinGetClassList WinGetClientSize WinGetPos 
+						WinGetText WinGetTitle WinKill WinMinimizeAll WinMinimizeAllUndo WinMove
+						WinSetDelay WinSetOnTop WinSetTitle WinShow WinWait WinWaitActive
+						WinWaitClose WinWaitNotActive
+KeyWords2:              MB_OK MB_OKCANCEL MB_ABORTRETRYIGNORE MB_YESNOCANCEL MB_YESNO
+                        MB_RETRYCANCEL MB_ICONHAND MB_ICONQUESTION MB_ICONEXCLAMATION
+						MB_ICONASTERISK MB_APPLMODAL MB_SYSTEMMODAL MB_TASKMODAL ! # + ^
+						{ } SPACE ENTER ALT BACKSPACE BS DELETE DEL UP DOWN LEFT RIGHT HOME END
+                        ESCAPE ESC INSERT INS PGUP PGDN F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12
+						TAB PRINTSCREEN LWIN RWIN NUMLOCK CTRLBREAK PAUSE CAPSLOCK NUMPAD0 NUMPAD1
+						NUMPAD2 NUMPAD3 NUMPAD4 NUMPAD5 NUMPAD6 NUMPAD7 NUMPAD8 NUMPAD9 NUMPADMULT
+						NUMPADADD NUMPADSUB NUMPADDIV NUMPADDOT APPSKEY ALTDOWN SHIFTDOWN CTRLDOWN
+						LWINDOWN RWINDOWN ASC A_HOUR A_MDAY A_MIN A_MON A_NUMBATCHLINES A_OSTYPE
+						A_OSVERSION A_SCRIPTDIR A_SCRIPTFULLPATH A_SCRIPTNAME A_SEC A_WDAY
+                        A_WORKINGDIR A_YDAY A_YEAR CLIPBOARD HKEY_LOCAL_MACHINE HKEY_CURRENT_USER
+						HKEY_USERS HKEY_CURRENT_CONFIG HKEY_CLASSES_ROOT ABORT CANCEL IGNORE NO OK
+						RETRY YES error SEC MIN HOUR MDAY MON YEAR WDAY YDAY ProgramFilesDir
+                        CommonFilesDir MyDocumentsDir AppDataCommonDir DesktopCommonDir
+                        DocumentsCommonDir FavoritesCommonDir ProgramsCommonDir StartMenuCommonDir
+						StartupCommonDir AppDataDir DesktopDir FavoritesDir ProgramsDir
+						StartMenuDir StartupDir Computername WindowsDir SystemDir SW_HIDE
+						SW_MINIMIZE SW_MAXIMIZE SW_RESTORE SW_SHOW ScriptFullPath ScriptName
+						ScriptDir WorkingDir OSType OSVersion OSBuild OSServicePack AutoItVersion
+						IPAddress1 IPAddress2 IPAddress3 IPAddress4 CR LF CRLF DesktopWidth
+						DesktopHeight ContinueLoop Do Until ExitLoop For Next If Else EndIf Select
+						Case EndSelect While WEnd NOT Then Exit
+KeyWords3:              ExpandEnvStrings MouseCoordMode PixelCoordMode RunErrorsFatal
+                        SendCapslockMode SendKeyDelay WinWaitDelay WinDetectHiddenText
+                        WinTitleMatchMode
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clGreen clWindow B
+Keyword3Col:            clTeal clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
