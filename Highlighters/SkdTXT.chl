@@ -1,0 +1,43 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// SkdTXT highlighter written by Arno van Amersfoort, arnova@molphys.leidenuniv.nl
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               SkdTXT
+Filter:                 SkdTXT files (*.skd)|*.skd
+HelpFile:
+CaseSensitive:          0
+LineComment:            %%
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _
+NumConstBegChars:       0..9 #
+NumConstChars:          0..9 .
+EscapeChar:
+
+KeyWords1:              offset cf ch lw cross dot line box circle arc
+                        lbt lct ltt cbt cct ctt rbt rct rtt scnt scrt marc mdash mtext
+
+KeyWords2:              include la4 page2 scale2
+
+KeyWords3:
+
+StringBegChar:          (
+StringEndChar:          )
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow B
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
