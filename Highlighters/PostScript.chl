@@ -1,0 +1,64 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// PostScript highlighter written by Konrad Iwanicki, K.Iwanicki@students.mimuw.edu.pl
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               PostScript
+Filter:                 PostScript files (*.ps)|*.ps
+HelpFile:
+CaseSensitive:          1
+LineComment:            %
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _\/
+IdentifierChars:        a..z A..Z 0..9 ?
+NumConstBegChars:       ()
+NumConstChars:
+EscapeChar:             \
+
+KeyWords1:              pop exch dup copy index roll clear count mark cleartomark
+                        counttomark exec if ifelse for repeat loop exit stop stopped
+                        countexecstack execstack quit start forall def begin end dict
+
+KeyWords2:              newpath currentpoint moveto rmoveto lineto rlineto arc
+                        arcn arcto curveto rcurveto closepath flattenpath reversepath
+                        strokepath charpath clippath pathbox pathforall initclip clip
+                        eoclip erasepage fill eofill stroke image imagemask showpage
+                        copypage definefont findfont scalefont makefont setfont currentfont
+                        show ashow widthshow awidthshow kshow stringwidth matrix
+                        initmatrix identmatrix currentmatrix defaultmatrix setmatrix
+                        translate scale rotate concat concatmatrix transform dtransform
+                        itransform idtransform invertmatrix gsave grestore grestoreall
+                        initgraphics setlinewidth currentlinewidth setlinecap
+                        currentlinecap setlinejoin currentlinejoin setmiterlimit
+                        currentmiterlimit setdash currentdash setflat currentflat
+                        setgray currentgray sethsbcolor currenthsbcolor setrgbcolor
+                        currentrgbcolor setscreen currentscreen settransfer
+                        currenttransfer
+KeyWords3:              add div idiv mod mul sub abs neg ceiling floor round truncate
+                        sqrt atan cos sin exp ln log rand srand rrand eq ne ge gt
+                        le lt and not or xor true false bitshift string length get put
+                        getinterval putinterval anchorsearch search token
+
+StringBegChar:          (
+StringEndChar:          )
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            clRed clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clMaroon clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
+
