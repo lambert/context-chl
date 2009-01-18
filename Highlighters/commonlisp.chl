@@ -1,0 +1,320 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Common-Lisp highlighter
+// written by me - x@y.z
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Common Lisp
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Lisp files (*.lsp,*.lisp)|*.lsp;*.lisp
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            ;
+BlockCommentBeg:        #|
+BlockCommentEnd:        |#
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@?&$#
+IdentifierChars:        a..z A..Z _ 0..9 ?&%$#@:
+
+//////////////////////////////////////////////////////////////////////////////
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+NumConstChars:          0..9 .
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+EscapeChar:             \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// reserved words
+
+KeyWords1:              * ** *** + ++ +++ - / // /// 1+ 1- < <= = > >= ~ 
+                        abort abs acons acos acosh add-method adjoin adjust-array 
+                        adjustable-array-p alpha-char-p alphanumericp alter always 
+                        and append appending apply applyhook *applyhook* apropos 
+                        apropos-list aref arithmetic-error arithmetic-error-operands 
+                        arithmetic-error-operation array-dimension array-dimension-limit 
+                        array-dimensions array-element-type array-has-fill-pointer-p 
+                        array-in-bounds-p array-rank array-rank-limit array-row-major-index 
+                        array-total-size array-total-size-limit arrayp as ash 
+                        asin asinh assert assoc assoc-if assoc-if-not atan atanh 
+                        atom augment-environment bit bit-and bit-andc1 bit-andc2 
+                        bit-eqv bit-ior bit-nand bit-nor bit-not bit-orc1 bit-orc2 
+                        bit-vector-p bit-xor block boole both-case-p boundp 
+                        break *break-on-signals* *break-on-warnings* broadcast-stream-streams 
+                        butlast byte byte-position byte-size caaaar caaadr caaar caadar 
+                        caaddr caadr caar cadaar cadadr cadar caddar cadddr caddr cadr 
+                        call-arguments-limit call-method call-next-method car case catch 
+                        catenate ccase cdaaar cdaadr cdaar cdadar cdaddr cdadr cdar 
+                        cddaar cddadr cddar cdddar cddddr cdddr cddr cdr ceiling cell-error 
+                        cell-error-name cerror change-class char char-bit char-bits 
+                        char-bits-limit char-code char-code-limit char-control-bit char-downcase 
+                        char-equal char-font char-font-limit char-greaterp char-hyper-bit 
+                        char-int char-lessp char-meta-bit char-name char-not-equal 
+                        char-not-greaterp char-not-lessp char-super-bit char-upcase 
+                        char/= char< char<= char= char> char>= character characterp 
+                        check-type check-type choose choose-if chunk cis class-name 
+                        class-of clear-input close clrhash code-char coerce 
+                        collect collect-alist collect-and collect-append collect-file 
+                        collect-first collect-fn collect-hash collect-last collect-length 
+                        collect-max collect-min collect-nconc collect-nth collect-or 
+                        collect-plist collect-sum collecting collecting-fn commonp 
+                        compile compile-file compile-file-pathname *compile-file-pathname* 
+                        *compile-file-truename* *compile-print* *compile-verbose* 
+                        compiled-function-p compiler-let compiler-macro-function 
+                        compiler-macroexpand compiler-macroexpand-1 complement complex 
+                        complexp compute-applicable-methods compute-restarts concatenate 
+                        concatenated-stream-streams cond condition conjugate cons consp 
+                        constantp continue control-error copy-alist copy-list 
+                        copy-pprint-dispatch copy-readtable copy-seq copy-symbol copy-tree 
+                        cos cosh cotruncate count count-if count-if-not counting ctypecase 
+                        *debug-io* *debugger-hook* decf declaim declaration-information 
+                        declare decode-float decode-universal-time *default-pathname-defaults* 
+                        defclass defgeneric define-compiler-macro define-condition 
+                        define-declaration define-method-combination define-modify-macro 
+                        define-setf-method defmacro defmethod defpackage defstruct deftype 
+                        defun defvar delete delete-duplicates delete-file delete-if 
+                        delete-if-not delete-package denominator deposit-field describe 
+                        describe-object destructuring-bind digit-char digit-char-p directory 
+                        directory-namestring disassemble division-by-zero do do* 
+                        do-all-symbols do-external-symbols do-symbols 
+                        documentation doing dolist dotimes double-float-epsilon 
+                        double-float-negative-epsilon dpb dribble ecase 
+                        echo-stream-input-stream echo-stream-output-stream ed eighth elt 
+                        encapsulated enclose encode-universal-time end-of-file endp 
+                        enough-namestring ensure-generic-function eq eql equal equalp 
+                        error *error-output* etypecase eval eval-when 
+                        evalhook *evalhook* evenp every exp expand export expt f fboundp 
+                        fdefinition *features* ffloor fifth file-author file-error 
+                        file-error-pathname file-length file-namestring file-position 
+                        file-string-length file-write-date fill fill-pointer finally 
+                        find find-all-symbols find-class find-if find-if-not find-method 
+                        find-package find-restart find-symbol finish-output first flet 
+                        float float-digits float-precision float-radix float-sign 
+                        floating-point-overflow floating-point-underflow floatp floor 
+                        for format formatter fourth funcall function function-information 
+                        function-keywords function-lambda-expression functionp gatherer 
+                        gathering gcd generator generic-flet generic-function generic-labels 
+                        gensym *gensym-counter* gentemp get get-decoded-time get-internal-real-time 
+                        get-internal-run-time get-output-stream-string get-properties 
+                        get-setf-method get-setf-method-multiple-value get-universal-time 
+                        getf gethash go graphic-char-p handler-bind handler-case hash-table-count 
+                        hash-table-p hash-table-rehash-size hash-table-rehash-threshold 
+                        hash-table-size hash-table-test host-namestring identity if 
+                        ignore-errors imagpart import in-package incf initialize-instance 
+                        initially input-stream-p inspect int-char integer-decode-float 
+                        integer-length integerp interactive-stream-p intern internal-time-units-per-second 
+                        intersection invalid-method-error invoke-debugger invoke-restart 
+                        isqrt iterate keywordp lambda-list-keywords lambda-parameters-limit 
+                        last latch lcm ldb ldb-test ldiff least-negative-double-float 
+                        least-negative-long-float least-negative-normalized-double-float 
+                        least-negative-normalized-long-float least-negative-normalized-short-float 
+                        least-negative-normalized-single-float least-negative-short-float 
+                        least-negative-single-float least-positive-double-float 
+                        least-positive-long-float least-positive-normalized-double-float 
+                        least-positive-normalized-long-float least-positive-normalized-short-float 
+                        least-positive-normalized-single-float least-positive-short-float 
+                        least-positive-single-float length let let* lisp-implementation-type 
+                        lisp-implementation-version list list* list-all-packages list-length 
+                        listen listp load load-logical-pathname-translations *load-pathname* 
+                        *load-print* load-time-value *load-truename* *load-verbose* 
+                        locally log logand logandc1 logandc2 logbitp logcount logeqv logical-pathname$ 
+                        logical-pathname logical-pathname-translations logior lognand lognor 
+                        lognot logorc1 logorc2 logtest logxor long-float-epsilon long-float-negative-epsilon 
+                        long-site-name loop loop-finish lower-case-p machine-instance machine-type 
+                        machine-version macro-function macroexpand macroexpand-1 *macroexpand-hook* 
+                        make-array make-broadcast-stream make-char make-concatenated-stream 
+                        make-condition make-dispatch-macro-character make-echo-stream make-hash-table 
+                        make-instance make-instances-obsolete make-list make-load-form 
+                        make-load-form-saving-slots make-package make-pathname make-random-state 
+                        make-sequence make-string make-string-input-stream make-string-output-stream 
+                        make-symbol make-synonym-stream make-two-way-stream makunbound map map-fn 
+                        map-into mapc mapcan mapcar mapcon maphash mapl maplist mapping mask 
+                        mask-field max maximize maximizing member member-if member-if-not merge 
+                        merge-pathnames method-combination-error method-qualifiers min mingle 
+                        minimize minimizing minusp mismatch mod *modules* most-negative-double-float 
+                        most-negative-fixnum most-negative-long-float most-negative-short-float 
+                        most-negative-single-float most-positive-double-float most-positive-fixnum 
+                        most-positive-long-float most-positive-short-float most-positive-single-float 
+                        muffle-warning multiple-value-bind multiple-value-call multiple-value-list 
+                        multiple-value-prog1 multiple-value-setq multiple-values-limit name-char 
+                        named namestring nbutlast nconc nconcing never next-in next-method-p 
+                        next-out nil nintersection ninth no-applicable-method no-next-method not 
+                        notany notevery nreconc nreverse nset-difference nset-exclusive-or 
+                        nstring-capitalize nstring-downcase nstring-upcase nsublis nsubst nsubst-if 
+                        nsubst-if-not nsubstitute nsubstitute-if nsubstitute-if-not nth nth-value 
+                        nthcdr null numberp numerator nunion oddp off-line-port open open-stream-p 
+                        optimizable-series-function or output-stream-p *package* package-error 
+                        package-error-package package-name package-nicknames package-shadowing-symbols 
+                        package-use-list package-used-by-list packagep pairlis parse-integer parse-macro 
+                        parse-namestring pathname pathname-device pathname-directory pathname-host 
+                        pathname-match-p pathname-name pathname-type pathname-version pathnamep peek-char 
+                        phase pi plusp pop position position-if position-if-not positions pprint-dispatch 
+                        pprint-exit-if-list-exhausted pprint-fill pprint-indent pprint-linear 
+                        pprint-logical-block pprint-newline pprint-pop pprint-tab pprint-tabular previous 
+                        prin1 *print-array* *print-base* *print-case* *print-circle* *print-escape* 
+                        *print-gensym* *print-length* *print-level* *print-lines* *print-miser-width* 
+                        print-object *print-pprint-dispatch* *print-pretty* *print-radix* *print-readably* 
+                        *print-right-margin* print-unreadable-object probe-file proclaim producing 
+                        prog prog* prog1 prog2 progn program-error progv propagate-alterability provide 
+                        psetf psetq push pushnew *query-io* quote random *random-state* random-state-p 
+                        rassoc rassoc-if rassoc-if-not rational rationalize rationalp read *read-base* 
+                        read-byte read-char read-char-no-hang *read-default-float-format* 
+                        read-delimited-list *read-eval* read-from-string read-line 
+                        read-preserving-whitespace *read-suppress* *readtable* readtable-case 
+                        readtablep realp realpart reduce reinitialize-instance rem remf remhash 
+                        remove remove-duplicates remove-method remprop rename-file rename-package 
+                        repeat replace require rest restart restart-bind restart-case restart-name 
+                        result-of return return-from revappend reverse room rotatef round 
+                        row-major-aref rplaca rplacd sbit scale-float scan scan-alist scan-file 
+                        scan-fn scan-fn-inclusive scan-hash scan-lists-of-lists scan-lists-of-lists-fringe 
+                        scan-multiple scan-plist scan-range scan-sublists scan-symbols schar search second 
+                        series series-element-type serious-condition set 
+                        set-char-bit set-difference set-dispatch-macro-character set-exclusive-or 
+                        set-macro-character set-pprint-dispatch set-syntax-from-char setf setq seventh 
+                        shadow shadowing-import shared-initialize shiftf short-float-epsilon 
+                        short-float-negative-epsilon short-site-name signal signum simple-bit-vector-p 
+                        simple-condition simple-condition-format-arguments simple-condition-format-string 
+                        simple-error simple-string-p simple-type-error simple-vector-p simple-warning 
+                        sin single-float-epsilon single-float-negative-epsilon sinh sixth sleep 
+                        slot-boundp slot-exists-p slot-makunbound slot-missing slot-unbound slot-value 
+                        software-type software-version some sort special-form-p split split-if sqrt 
+                        stable-sort standard-char-p *standard-input* *standard-output* step 
+                        storage-condition store-value stream-element-type stream-error stream-error-stream 
+                        stream-external-format streamp string string-capitalize string-char-p 
+                        string-downcase string-equal string-greaterp string-left-trim string-lessp 
+                        string-not-equal string-not-greaterp string-not-lessp string-right-trim 
+                        string-trim string-upcase string/= string< string<= string= string> string>= 
+                        stringp sublis subseq subseries subsetp subst subst-if subst-if-not substitute 
+                        substitute-if substitute-if-not subtypep sum summing *suppress-series-warnings* 
+                        svref sxhash symbol-function symbol-macrolet symbol-name symbol-package 
+                        symbol-plist symbol-value symbolp synonym-stream-symbol t tagbody tailp tan tanh 
+                        tenth *terminal-io* terminate-producing terpri the thereis third throw time 
+                        to-alter trace *trace-output* translate-logical-pathname translate-pathname 
+                        tree-equal truename truncate two-way-stream-input-stream two-way-stream-output-stream 
+                        type-error type-error-datum type-error-expected-type type-of typecase typep 
+                        unbound-variable undefined-function unexport unintern union unless 
+                        unread-char until until-if untrace unuse-package unwind-protect 
+                        update-instance-for-different-class update-instance-for-redefined-class 
+                        upgraded-array-element-type upgraded-complex-part-type upper-case-p use-package 
+                        use-value user-homedir-pathname values values-list variable-information vector 
+                        vector-pop vector-push vector-push-extend vectorp warn warning when 
+                        while wild-pathname-p with with-accessors with-added-methods with-compilation-unit 
+                        with-condition-restarts with-hash-table-iterator with-input-from-string with-open-file 
+                        with-open-stream with-output-to-string with-package-iterator with-simple-restart 
+                        with-slots with-standard-io-syntax write write-byte write-char write-string 
+                        write-to-string y-or-n-p yes-or-no-p zerop
+
+
+// predefined words
+
+KeyWords2:
+
+KeyWords3:
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clSilver $004C4C00
+Keyword1Col:            clSilver $004C4C00
+Keyword2Col:            clSilver $004C4C00
+Keyword3Col:            clSilver $004C4C00
+IdentifierCol:          clSilver $004C4C00
+CommentCol:             $00909090 $004C4C00
+NumberCol:              clSilver $004C4C00
+StringCol:              clSilver $004C4C00
+SymbolCol:              clSilver $004C4C00
+PreprocessorCol:        clSilver $004C4C00
+SelectionCol:           $00404000 $00AAAAAA
+CurrentLineCol:         clSilver clNavy
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:            (
+BlockEndStr:            )
+MatchedBracesCol:       clWhite clBlack
