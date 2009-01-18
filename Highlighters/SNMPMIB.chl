@@ -1,0 +1,50 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// SNMP MIB highlighter written by Bob Meierhofer, bobm@aravox.com
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:		SNMP MIB
+Filter: 		MIB files (*.mib)|*.mib
+HelpFile:
+CaseSensitive:		0
+LineComment:		--
+BlockCommentBeg:	--
+BlockCommentEnd:	--
+IdentifierBegChars:	a..z A..Z _
+IdentifierChars:	a..z A..Z _ 0..9
+NumConstBegChars:	0..9
+NumConstChars:		0..9 abcdefx.
+EscapeChar:
+
+KeyWords1:		DEFINITIONS ::= BEGIN IMPORTS MODULE IDENTITY OBJECT TYPE
+			NOTIFICATION FROM LAST UPDATED ORGANIZATION CONTACT INFO
+			DESCRIPTION REVISION OBJECT IDENTIFIER SYNTAX ACCESS
+			STATUS SEQUENCE SIZE INDEX OF GROUP COMPLIANCE MAX DEFVAL
+
+KeyWords2:		mandatory read only write INTEGER Counter32 IpAddress
+			Counter64 Gauge32 Gauge64 Integer32 DisplayString not
+			accessible Unsigned32 RowStatus TimeInterval DateAndTime
+			StorageType SnmpAdminString current
+
+KeyWords3:
+
+StringBegChar:		"
+StringEndChar:		"
+MultilineStrings:	1
+UsePreprocessor:	0
+CurrLineHighlighted:	1
+
+SpaceCol:		clWindowText clWindow
+Keyword1Col:		clBlue clWindow B
+Keyword2Col:		clNavy clWindow
+Keyword3Col:		clOlive clWindow
+IdentifierCol:		clWindowText clWindow
+CommentCol:		clGreen clWindow I
+NumberCol:		clRed clWindow
+StringCol:		clMaroon clWindow
+SymbolCol:		clGray clWindow
+PreprocessorCol:	clBlue clWindow
+SelectionCol:		clWhite clNavy
+CurrentLineCol: 	clBlack clYellow
+
