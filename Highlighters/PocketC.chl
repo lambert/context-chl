@@ -1,0 +1,87 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// PocketC highlighter written by Diego Mazzaro, diego@mazzaro.net
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               PocketC CE
+Filter:                 PocketC CE files (*.pc)|*.pc
+HelpFile:
+Description:            PocketC highlighter written by Diego Mazzaro
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             \
+
+//True Keywords
+KeyWords1:              int string float char return if while do for break
+			continue switch case default else include
+
+//Embedded functions
+KeyWords2:              clear puts putsl gets
+                        settextdefault getbkmode setbkmode setfontattr polyline polygon
+                          textw keepscreen_on keepscreen_off screenx screeny texth
+                          clearg text line rect roundrect circle ellipse drawbitmap
+                          drawbitblt setbrushattr setpenattr setbkcolor settextcolor
+                          setpixelattr setpixel getpixelR getpixelG getpixelB settextangle
+                        getc keyevent getnotify flushevent event postevent penx peny
+                          cursorwait menu guiid key timerid settimer killtimer waitp
+                        writebyte readbyte fileenum filecopy filemove fileopen filemodeget
+                          filemodeset fileclose fileread filewrite filegetlen filesetlen
+                          fileseek fileseekend fileflush filepos MoveFile CreateDirectory
+                          RemoveDirectory DeleteFile GetFileAttr OpenFileDlg SaveFileDlg
+                          writebytes writechar writechars writeint readint readchar
+                        wndmove wndshow menudel menuins lbrstcnt lbdelstr lbgetcnt
+                          lbgetcur lbsetcur lbgettxt lbfndstr sendmsg createctrl
+                          cbaddstr cbinsstr cbrstcnt cbdelstr cbgetcnt cbgetcur cbsetcur
+                          cbgettxt cbfndstr cbselstr guisetfocus guigetfocus delgui
+                          delallgui cbxset cbxget editget editset lbaddstr lbinsstr
+                          menupop menu_off menu_on menupopex
+                        rand random floor ceil abs cos sin tan acos asin atan cosh sinh
+                          tanh pow sqrt log log10 exp
+                        regwstr regwint regrstr regrint regdelkey regdelval
+                        commsetmask commwait rawiropen seropen seropenex commclrerr
+                          commsetbrk commclrbrk commesc commgetmask
+                        recentdoc shortcut debugout getcurpath quit showabout graph_off
+                          graph_on MessageBox about confirm alert title runapptime
+                          sleep exec loadres showhelp
+                        beep wave
+                        strgetc strsetc strlen strmid strleft strright strupr strlwr
+                          strrchr strchr strspn strrvrs isalphanum isalpha strncmp
+                          hex format islower isupper
+                        getmonth getyear ticks getsec getmin gethour getday
+                        dbenum dbname dbsize dbnrecs dbrecpropcnt dbrecproptype
+                          dbrecpropval dbseek dbrecwrite dbrecread dbrecdelprop
+                          dbrecdel dbrecnow dbdelete dbcreate dbopen dbclose
+                        free settype typeof memcpy malloc
+
+//Obsolete / unsure Keywords
+KeyWords3:              define
+                        CopyFile serdata serrecv sersend serclose
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clNavy clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
+
