@@ -1,0 +1,562 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Abaqus highlighter written by TchicTchic (tchic.tchic[at]gmail.com)
+//
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+// language name
+Language:               Abaqus
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+Filter:                 Abaqus (*.inp)|*.inp;*.data
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+HelpFile:
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+CaseSensitive:          1
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+LineComment:            **
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+IdentifierBegChars:     a..z A..Z _ *
+IdentifierChars:        a..z A..Z _ *
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstBegChars:       0..9
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstChars:          0..9 abcdefx. E
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+EscapeChar:
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+// Types :
+// Keywords
+KeyWords1:	*HEADING *STEP *INCLUDE *END STEP *END ASSEMBLY *END INSTANCE *END LOAD CASE *END PART *ASSEMBLY *LOAD CASE *PART *INSTANCE
+KeyWords2:	ELSET ENGINEERING INC INPUT LINE MATERIAL NAME NSET PIN TIE TYPE WRITE GENERATE FIELD VARIABLE HISTORY
+STEFAN BOLTZMANN ABSOLUTE ZERO ZERO FREQUENCY STEADY STATE NEW OLD SET CHANGE NUMBER SHIFT
+MODEL POSITION NEWSET OLDSET HOST
+KeyWords3:
+*ACOUSTIC FLOW VELOCITY
+*ACOUSTIC MEDIUM
+*ACOUSTIC WAVE FORMULATION
+*ADAPTIVE MESH
+*ADAPTIVE MESH CONSTRAINT
+*ADAPTIVE MESH CONTROLS
+*AMPLITUDE
+*ANNEAL
+*ANNEAL TEMPERATURE
+*AQUA
+*ASYMMETRIC-AXISYMMETRIC
+*AXIAL
+*BASE MOTION
+*BASELINE CORRECTION
+*BEAM ADDED INERTIA
+*BEAM FLUID INERTIA
+*BEAM GENERAL SECTION
+*BEAM SECTION
+*BEAM SECTION GENERATE
+*BIAXIAL TEST DATA
+*BLOCKAGE
+*BOND
+*BOUNDARY
+*BRITTLE CRACKING
+*BRITTLE FAILURE
+*BRITTLE SHEAR
+*BUCKLE
+*BUCKLING ENVELOPE
+*BUCKLING LENGTH
+*BUCKLING REDUCTION FACTORS
+*BULK VISCOSITY
+*C ADDED MASS
+*CAPACITY
+*CAP CREEP
+*CAP HARDENING
+*CAP PLASTICITY
+*CAST IRON COMPRESSION HARDENING
+*CAST IRON PLASTICITY
+*CAST IRON TENSION HARDENING
+*CAVITY DEFINITION
+*CECHARGE
+*CECURRENT
+*CENTROID
+*CFILM
+*CFLOW
+*CFLUX
+*CHANGE FRICTION
+*CLAY HARDENING
+*CLAY PLASTICITY
+*CLEARANCE
+*CLOAD
+*COHESIVE SECTION
+*COMBINED TEST DATA
+*COMPLEX FREQUENCY
+*CONCRETE
+*CONCRETE COMPRESSION DAMAGE
+*CONCRETE COMPRESSION HARDENING
+*CONCRETE DAMAGED PLASTICITY
+*CONCRETE TENSION DAMAGE
+*CONCRETE TENSION STIFFENING
+*CONDUCTIVITY
+*CONNECTOR BEHAVIOR
+*CONNECTOR CONSTITUTIVE REFERENCE
+*CONNECTOR DAMAGE EVOLUTION
+*CONNECTOR DAMAGE INITIATION
+*CONNECTOR DAMPING
+*CONNECTOR DERIVED COMPONENT
+*CONNECTOR ELASTICITY
+*CONNECTOR FAILURE
+*CONNECTOR FRICTION
+*CONNECTOR HARDENING
+*CONNECTOR LOAD
+*CONNECTOR LOCK
+*CONNECTOR MOTION
+*CONNECTOR PLASTICITY
+*CONNECTOR POTENTIAL
+*CONNECTOR SECTION
+*CONNECTOR STOP
+*CONSTRAINT CONTROLS
+*CONTACT
+*CONTACT CLEARANCE
+*CONTACT CLEARANCE ASSIGNMENT
+*CONTACT CONTROLS
+*CONTACT CONTROLS ASSIGNMENT
+*CONTACT DAMPING
+*CONTACT EXCLUSIONS
+*CONTACT FILE
+*CONTACT FORMULATION
+*CONTACT INCLUSIONS
+*CONTACT INTERFERENCE
+*CONTACT OUTPUT
+*CONTACT PAIR
+*CONTACT PRINT
+*CONTACT PROPERTY ASSIGNMENT
+*CONTACT RESPONSE
+*CONTOUR INTEGRAL
+*CONTROLS
+*CORRELATION
+*CO-SIMULATION
+*CO-SIMULATION REGION
+*COUPLED TEMPERATURE-DISPLACEMENT
+*COUPLED THERMAL-ELECTRICAL
+*COUPLING
+*CRADIATE
+*CREEP
+*CREEP STRAIN RATE CONTROL
+*CRUSHABLE FOAM
+*CRUSHABLE FOAM HARDENING
+*CYCLED PLASTIC
+*CYCLIC
+*CYCLIC HARDENING
+*CYCLIC SYMMETRY MODEL
+*D ADDED MASS
+*DAMAGE EVOLUTION
+*DAMAGE INITIATION
+*DAMAGE STABILIZATION
+*DAMPING
+*DASHPOT
+*DEBOND
+*DECHARGE
+*DECURRENT
+*DEFORMATION PLASTICITY
+*DENSITY
+*DEPVAR
+*DESIGN GRADIENT
+*DESIGN PARAMETER
+*DESIGN RESPONSE
+*DETONATION POINT
+*DFLOW
+*DFLUX
+*DIAGNOSTICS
+*DIELECTRIC
+*DIFFUSIVITY
+*DIRECT CYCLIC
+*DISPLAY BODY
+*DISTRIBUTION
+*DISTRIBUTING
+*DISTRIBUTING COUPLING
+*DLOAD
+*DRAG CHAIN
+*DRUCKER PRAGER
+*DRUCKER PRAGER CREEP
+*DRUCKER PRAGER HARDENING
+*DSA CONTROLS
+*DSECHARGE
+*DSECURRENT
+*DSFLOW
+*DSFLUX
+*DSLOAD
+*DYNAMIC
+*DYNAMIC TEMPERATURE-DISPLACEMENT
+*EL FILE
+*EL PRINT
+*ELASTIC
+*ELCOPY
+*ELECTRICAL CONDUCTIVITY
+*ELEMENT
+*ELEMENT MATRIX OUTPUT
+*ELEMENT OUTPUT
+*ELEMENT PROPERTIES
+*ELEMENT RESPONSE
+*ELGEN
+*ELSET
+*EMBEDDED ELEMENT
+*EMISSIVITY
+*ENERGY FILE
+*ENERGY OUTPUT
+*ENERGY PRINT
+*EOS
+*EOS COMPACTION
+*EOS SHEAR
+*EPJOINT
+*EQUATION
+*EXPANSION
+*EXTREME ELEMENT VALUE
+*EXTREME NODE VALUE
+*EXTREME VALUE
+*FAIL STRAIN
+*FAIL STRESS
+*FAILURE RATIOS
+*FASTENER
+*FASTENER PROPERTY
+*FIELD
+*FILE FORMAT
+*FILE OUTPUT
+*FILM
+*FILM PROPERTY
+*FILTER
+*FIXED MASS SCALING
+*FLOW
+*FLUID BEHAVIOR
+*FLUID BULK MODULUS
+*FLUID CAVITY
+*FLUID DENSITY
+*FLUID EXCHANGE
+*FLUID EXCHANGE ACTIVATION
+*FLUID EXCHANGE PROPERTY
+*FLUID EXPANSION
+*FLUID FLUX
+*FLUID INFLATOR
+*FLUID INFLATOR ACTIVATION
+*FLUID INFLATOR MIXTURE
+*FLUID INFLATOR PROPERTY
+*FLUID LEAKOFF
+*FLUID LINK
+*FLUID PROPERTY
+*FOUNDATION
+*FRACTURE CRITERION
+*FRAME SECTION
+*FREQUENCY
+*FRICTION
+*GAP
+*GAP CONDUCTANCE
+*GAP ELECTRICAL CONDUCTANCE
+*GAP FLOW
+*GAP HEAT GENERATION
+*GAP RADIATION
+*GASKET BEHAVIOR
+*GASKET CONTACT AREA
+*GASKET ELASTICITY
+*GASKET SECTION
+*GASKET THICKNESS BEHAVIOR
+*GEL
+*GEOSTATIC
+*HEAT GENERATION
+*HEAT TRANSFER
+*HEATCAP
+*HOURGLASS STIFFNESS
+*HYPERELASTIC
+*HYPERFOAM
+*HYPOELASTIC
+*HYSTERESIS
+*IMPEDANCE
+*IMPEDANCE PROPERTY
+*IMPERFECTION
+*IMPORT
+*IMPORT CONTROLS
+*IMPORT ELSET
+*IMPORT NSET
+*INCIDENT WAVE
+*INCIDENT WAVE FLUID PROPERTY
+*INCIDENT WAVE INTERACTION
+*INCIDENT WAVE INTERACTION PROPERTY
+*INCIDENT WAVE PROPERTY
+*INCIDENT WAVE REFLECTION
+*INCREMENTATION OUTPUT
+*INELASTIC HEAT FRACTION
+*INERTIA RELIEF
+*INITIAL CONDITIONS
+*INTEGRATED OUTPUT
+*INTEGRATED OUTPUT SECTION
+*INTERACTION OUTPUT
+*INTERACTION PRINT
+*INTERFACE
+*ITS
+*JOINT
+*JOINT ELASTICITY
+*JOINT PLASTICITY
+*JOINTED MATERIAL
+*JOULE HEAT FRACTION
+*KAPPA
+*KINEMATIC
+*KINEMATIC COUPLING
+*LATENT HEAT
+*MAP SOLUTION
+*MASS
+*MASS DIFFUSION
+*MASS FLOW RATE
+*MATERIAL
+*MATRIX
+*MATRIX ASSEMBLE
+*MATRIX INPUT
+*MEMBRANE SECTION
+*MODAL DAMPING
+*MODAL DYNAMIC
+*MODAL FILE
+*MODAL OUTPUT
+*MODAL PRINT
+*MODEL CHANGE
+*MOHR COULOMB
+*MOHR COULOMB HARDENING
+*MOISTURE SWELLING
+*MOLECULAR WEIGHT
+*MONITOR
+*MOTION
+*MPC
+*MULLINS EFFECT
+*M1
+*M2
+*NCOPY
+*NFILL
+*NGEN
+*NMAP
+*NO COMPRESSION
+*NO TENSION
+*NODAL THICKNESS
+*NODE
+*NODE FILE
+*NODE OUTPUT
+*NODE PRINT
+*NODE RESPONSE
+*NONSTRUCTURAL MASS
+*NORMAL
+*NSET
+*ORIENTATION
+*ORNL
+*OUTPUT
+*PARAMETER
+*PARAMETER DEPENDENCE
+*PARAMETER SHAPE VARIATION
+*PERIODIC
+*PERMEABILITY
+*PHYSICAL CONSTANTS
+*PIEZOELECTRIC
+*PIPE-SOIL INTERACTION
+*PIPE-SOIL STIFFNESS
+*PLANAR TEST DATA
+*PLASTIC
+*PLASTIC AXIAL
+*PLASTIC M1
+*PLASTIC M2
+*PLASTIC TORQUE
+*POROUS BULK MODULI
+*POROUS ELASTIC
+*POROUS FAILURE CRITERIA
+*POROUS METAL PLASTICITY
+*POST OUTPUT
+*POTENTIAL
+*PREPRINT
+*PRESSURE PENETRATION
+*PRESSURE STRESS
+*PRESTRESS HOLD
+*PRE-TENSION SECTION
+*PRINT
+*PSD-DEFINITION
+*RADIATE
+*RADIATION FILE
+*RADIATION OUTPUT
+*RADIATION PRINT
+*RADIATION SYMMETRY
+*RADIATION VIEWFACTOR
+*RANDOM RESPONSE
+*RATE DEPENDENT
+*RATIOS
+*REBAR
+*REBAR LAYER
+*REFLECTION
+*RELEASE
+*RESPONSE SPECTRUM
+*RESTART
+*RETAINED EIGENMODES
+*RETAINED NODAL DOFS
+*RIGID BODY
+*RIGID SURFACE
+*ROTARY INERTIA
+*SECTION CONTROLS
+*SECTION FILE
+*SECTION ORIGIN
+*SECTION POINTS
+*SECTION PRINT
+*SELECT CYCLIC SYMMETRY MODES
+*SELECT EIGENMODES
+*SFILM
+*SFLOW
+*SHEAR CENTER
+*SHEAR FAILURE
+*SHEAR RETENTION
+*SHEAR TEST DATA
+*SHELL GENERAL SECTION
+*SHELL SECTION
+*SHELL TO SOLID COUPLING
+*SIMPEDANCE
+*SIMPLE SHEAR TEST DATA
+*SLIDE LINE
+*SLOAD
+*SOILS
+*SOLID SECTION
+*SOLUBILITY
+*SOLUTION TECHNIQUE
+*SOLVER CONTROLS
+*SORPTION
+*SPECIFIC HEAT
+*SPECTRUM
+*SPRING
+*SRADIATE
+*STATIC
+*STEADY STATE CRITERIA
+*STEADY STATE DETECTION
+*STEADY STATE DYNAMICS
+*STEADY STATE TRANSPORT
+*SUBMODEL
+*SUBSTRUCTURE COPY
+*SUBSTRUCTURE DELETE
+*SUBSTRUCTURE DIRECTORY
+*SUBSTRUCTURE GENERATE
+*SUBSTRUCTURE LOAD CASE
+*SUBSTRUCTURE MATRIX OUTPUT
+*SUBSTRUCTURE PATH
+*SUBSTRUCTURE PROPERTY
+*SURFACE
+*SURFACE BEHAVIOR
+*SURFACE FLAW
+*SURFACE INTERACTION
+*SURFACE PROPERTY
+*SURFACE PROPERTY ASSIGNMENT
+*SURFACE SECTION
+*SWELLING
+*SYMMETRIC MODEL GENERATION
+*SYMMETRIC RESULTS TRANSFER
+*SYSTEM
+*TEMPERATURE
+*TENSILE FAILURE
+*TENSION STIFFENING
+*THERMAL EXPANSION
+*TIE
+*TIME POINTS
+*TORQUE
+*TORQUE PRINT
+*TRACER PARTICLE
+*TRANSFORM
+*TRANSPORT VELOCITY
+*TRANSVERSE SHEAR STIFFNESS
+*TRIAXIAL TEST DATA
+*TRS
+*UEL PROPERTY
+*UNDEX CHARGE PROPERTY
+*UNIAXIAL TEST DATA
+*USER DEFINED FIELD
+*USER ELEMENT
+*USER MATERIAL
+*USER OUTPUT VARIABLES
+*VARIABLE MASS SCALING
+*VIEWFACTOR OUTPUT
+*VISCO
+*VISCOELASTIC
+*VISCOUS
+*VOID NUCLEATION
+*VOLUMETRIC TEST DATA
+*WAVE
+*WIND
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+StringBegChar:          
+StringEndChar:          
+MultilineStrings:
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+UsePreprocessor:        0
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+CurrLineHighlighted:    0
+//////////////////////////////////////////////////////////////////////////////
+// colors
+//        note:           first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $FF0000 clWindow B
+Keyword2Col:            $333399 clWindow
+Keyword3Col:            $FF0000 clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              $78017C clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
