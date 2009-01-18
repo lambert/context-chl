@@ -1,0 +1,104 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// ASP highlighter v1.0 beta written by Patrick Caldwell, caldwdp@auburn.edu
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               ASP
+Filter:                 ASP files (*.asp)|*.asp
+HelpFile:
+CaseSensitive:          0
+LineComment:            '
+BlockCommentBeg:        <!--
+BlockCommentEnd:        -->
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z _123456-
+NumConstBegChars:       0..9 #
+NumConstChars:          0..9 #abcdefABCDEFptxmPTXM
+EscapeChar:
+
+KeyWords1:              abs application array asc atn cbool cbyte ccur cdate cdbl chr cint clng cos
+			csng cstr date dateadd datediff datepart dateserial datevalue day dim eval exp filter fix
+			formatcurrency formatdatetime formatnumber formatpercent getlocale getobject getref
+			hex hour inputbox instr instrrev int isarray isdate isempty isnull isnumeric isobject join
+			lbound lcase left len loadpicture log ltrim mid minute month monthname msgbbox now
+			oct replace request response rgb right rnd round rtrim scriptengine
+			scriptenginebuildversion scriptenginemajorversion scriptengineminorversion second
+			server session setlocale sgn sin space split sqr strcomp string strreverse tan time timer
+			timeserial timevalue trim typename ubound ucase vartype weekday weekdayname year
+
+
+KeyWords2:              abandon absolutepage absoluteposition activecommand activeconnection activexcontrols 
+			actualsize add addheader addnew appendchunk appendtolog aspcode aspdescription
+			atendofline atendofstream attributes availablespace backgroundsounds begintrans
+			begintranscomplete beta binaryread binarywrite bof bookmark border browser buffer
+			buildpath cachecontrol cachesize cancel cancelbatch cancelupdate category cdf charset
+			chosecontent clear clickable clientcertificate clone close codepage column commandtext
+			commandtimeout commandtype committrans committranscomplete comparebookmarks
+			comparemode connectcomplete connectionstring connectiontimeout contents
+			contents.remove contents.removeall contenttype cookies copy copyfile copyfolder
+			copyrecord copyto createfolder createobject createparameter createtextfile cursorlocation
+			cursortype datamember datasource datecreated datelastaccessed datelastmodified
+			defaultdatabase definedsize delete deletefile deletefolder deleterecord description
+			direction disconnect drive driveexists driveletter drives drivetype editmode end eof eos
+			errors execute executecomplete exists expires expiresabsolute fields file fileexists files
+			filesystem filter find flush folderexists form frames freespace getabsolutepathname
+			getadvertisement getallcontent getbasename getchildren getchunk getdrive getdrivename
+			getfile getfilename getfolder getlasterror getlistcount getlistindex getnextdescription
+			getnexturl getnthdescription getnthurl getparentfoldername getpreviousdescription
+			getpreviousurl getrows getspecialfolder getstring gettempname helpcontext helpfile
+			htmlencode index infomessage isclientconnected isolationlevel isready isrootfolder item
+			items javaapplets javascript key keys lcid line lineseparator loadfromfile lock locktype
+			mappath marshaloptions maxrecords mode move movefile movefirst movefolder
+			movelast movenext moveprevious moverecord name nativeerror nextrecordset number
+			numericscale open openastextstream openschema opentextfile originalvalue pagecount
+			pagesize parameters parentfolder parenturl path pics platform position precision prepared
+			properties provider querystring read readall readline readtext recordcount recordtype
+			redirect remove removeall requery resync rollbacktrans rollbacktranscomplete rootfolder
+			save savetofile scripttimeout seek serialnumber servervariables sessionid seteos
+			sharename shortname shortpath size skip skipline sort source sqlstate state staticobjects
+			status stayinsync subfolders supports tables targetframe timeout totalbytes totalsize
+			transfer type underlyingvalue unlock update updatebatch urlencode value vbscript
+			version volumename willconnect willexecute write writeblanklines writeline writetext
+
+
+KeyWords3:              adodb.command adodb.connection adodb.field adodb.property adodb.recordset all_http 
+			all_raw appl_md_path appl_physical_path auth_password auth_type auth_user cdfs
+			cert_cookie cert_flags cert_issuer cert_keysize cert_secretkeysize cert_secretkeysize
+			cert_serialnumber cert_server_issuer cert_server_subject cert_subject content_length
+			content_type count domain dsn empty expires false fat fat32 gateway_interface haskeys
+			http_ http_accept http_accept_language http_cookie http_referrer http_user_agent
+			httpshttps_keysize https_secretkeysize https_server_issuer https_server_subject
+			instance_id instance_meta_path item local_addr logon_user mswc.adrotator
+			mswc.browsertype mswc.contentrotator mswc.nextlink nothing null off on path path_info
+			path_translated private public query_string remote_addr remote_host remote_user
+			request_method script_name scripting.dictionary scripting.filesystemobject secure
+			server_name server_port server_port_secure server_protocol server_software true url
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clMaroon clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGreen clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
+
