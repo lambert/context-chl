@@ -1,0 +1,196 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// V(ery high speed integrated circuit) Hardware Description Language highlighter
+// Template: x86 Assembly highlighter by Eden Kirin, context@fixedsys.com
+//
+//////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               VHDL
+
+
+//////////////////////////////////////////////////////////////////////////////
+// put whatever you want here, short description, author name, email address..
+
+Description:            VHDL highlighter written by Erick Patiño Rubio, erick.patino@cts-design.com
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 VHDL files (*.vhd)|*.vhd
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invoked when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+
+LineComment:            --
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 _
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into five groups which can be
+// highlighted differently
+
+// Keywords
+KeyWords1:              abs access after alias all and architecture array
+                        assert attribute begin block body buffer bus case
+                        component configuration constant disconnent downto
+                        else elsif end entity exit file for function generate
+                        generic group guarded if impure in inertial inout is
+                        label library linkage literal loop map mod nand new
+                        next nor not null of on open or others out package port
+                        postponed procedure process pure range record register
+                        reject rem report return rol ror select severity signal
+                        sla sll sra srl subtype then to transport type
+                        unaffected units until use variable wait when while
+                        with xnor xor
+
+// Data types
+KeyWords2:              bit bit_vector boolean character file integer natural
+                        positive real severity_level signed std_logic
+                        std_logic_vector std_ulogic std_ulogic_vector string
+                        time unsigned
+
+// Place custom extensions here
+KeyWords3:
+
+KeyWords4:
+
+KeyWords5:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clBlack clWindow B
+Keyword3Col:            clNavy clWindow B
+Keyword4Col:            clGreen clWindow B
+Keyword5Col:            clOlive clWindow B
+IdentifierCol:          clNavy clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clGreen clWindow
+SelectionCol:           clHighlightText clHighlight
+CurrentLineCol:         clWindowText clWindow
+MatchedBracesCol:       clRed clWindow
+
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+
+
+
