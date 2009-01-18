@@ -1,0 +1,260 @@
+// TorqueScript highlighter for ConTEXT.
+// Written by Rohit Kanwar (rohit@rohitkanwar.net)
+//
+//      Credits: I used the PHP-HTML highlighter available on the ConTEXT website 
+//      as the template for this highlighter. The author information provided in that file 
+//      appears to be incorrect (as it referes to the "x86 Assembly highlighter").
+
+//////////////////////////////////////////////////////////////////////////////
+// The language name
+Language:               TorqueScript (TorqueGameBuilder)
+
+//////////////////////////////////////////////////////////////////////////////
+// The file filter
+Filter:                 TorqueScript Files (*.cs,*.mis)|*.cs;*.mis
+
+//////////////////////////////////////////////////////////////////////////////
+// The Help file which will be invoked when F1 is pressed:
+// The TGB Reference PDF document is a good choice for this.
+//      It is assumed here that you have installed TGB in the default path, i.e.,
+//      "C:\Program Files\TorqueGameBuilder[Pro]"
+//      If you have installed it in a different path, modify the following accordingly.
+HelpFile:               "file:///C:/PROGRA~1/TORQUE~1/documentation/reference/TGB%20Reference.pdf"
+
+//////////////////////////////////////////////////////////////////////////////
+// Whether the language is case sensitive or not:
+// 0 = no
+// 1 = yes
+CaseSensitive:          1
+
+//////////////////////////////////////////////////////////////////////////////
+// The markers for the comments:
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+//////////////////////////////////////////////////////////////////////////////
+// Identifier characters:
+IdentifierBegChars:     $ % a..z A..Z
+IdentifierChars:        a..z A..Z 0..9 _
+
+//////////////////////////////////////////////////////////////////////////////
+// Numeric constants characters:
+NumConstBegChars:       0..9 
+NumConstChars:          0..9 .
+
+//////////////////////////////////////////////////////////////////////////////
+// The escape character:
+EscapeChar:             \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// List of keywords
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into multiple groups which can be
+// highlighted differently
+
+//////////////////////////////////////////////////////////////////////////////
+// Standard TorqueScript keywords
+KeyWords1:              else or break return while if for continue function 
+                        new datablock case switch$ switch default package true 
+                        false exec echo
+
+//////////////////////////////////////////////////////////////////////////////
+//The built-in classes/objects of Torque Game Builder ver. 1.1.0
+// Reference: "TGB Reference.pdf" distributed with TGB ver. 1.1.0
+//      The sequence in which the classes/objects appear here is exactly the 
+//      same as in the reference document.
+//      There is a blank space at the end of every line, so that you can combine 
+//      two or more of the lines below, if you want.
+KeyWords2:              t2dSceneObject t2dStaticSprite t2dAnimatedSprite t2dScroller 
+                        t2dShape3D t2dTrigger t2dTileMap t2dTileLayer 
+                        t2dParticleEffect t2dParticleEmitter t2dPath 
+                        t2dSceneWindow t2dSceneGraph t2dSceneObjectDatablock 
+                        t2dSceneGraphDatablock t2dImageMapDatablock 
+                        t2dAnimationDatablock t2dCollisionMaterialDatablock 
+                        SimObject SimSet SimGroup ScriptObject ActionMap 
+                        FileObject TCPObject 
+
+//////////////////////////////////////////////////////////////////////////////
+// All the methods, callbacks and fields of the in-built classes/objects of TGB 1.1.0 (see Keywords2)
+// Reference: Same as above.
+//      Each line below represents one category of methods (as defined in the reference) 
+//      for one particular  in-built object of TGB. For example, the first line contains the 
+//      "special methods" of the t2dSceneObject, the second line contains the "Collision Methods" 
+//      of the t2dSceneObject, and so on. The callbacks and fields for a particular object are on 
+//      their own  separate line. The sequence in which the methods and fields appear here is 
+//      exactly the same as in the reference document.
+//      There is a blank space at the end of every line, so that you can combine two or more 
+//      of the lines below, if you want.
+KeyWords3:              setPosition setPositionX setPositionY getPosition getPositionX getPositionY setSize setWidth setSizeX setHeight setSizeY getSize getWidth getSizeX getHeight getSizeY setArea getArea getAreaMin getAreaMax setRotation getRotation setAutoRotation getAutoRotation setFlip setFlipX setFlipY getFlipX getFlipY setGraphGroup getGraphGroup setLayer getLayer setPositionTarget setPositionTargetOff moveTo setRotationTarget setRotationTargetOff rotateTo setWorldLimit getWorldLimit 
+                        setCollisionActive getCollisionActive getCollisionActiveSend getCollisionActiveReceive setCollisionPhysics setCollisionPhysicsSend setCollisionPhysicsReceive getCollisionPhysics getCollisionPhysicsSend getCollisionPhysicsReceive setCollisionMasks setCollisionGroups setCollisionLayers setCollisionAgainst getCollisionMasks getCollisionGroups getCollisionLayers setCollisionDetection setCollisionPolyCustom setCollisionPolyPrimitive setCollisionPolyScale setCollisionCircleScale setCollisionCircleSuperscribed getCollisionDetection getCollisionPoly getCollisionPolyCount getCollisionPolyScale getCollisionCircleScale getCollisionCircleSuperscribed setCollisionResponse setCollisionCallback getCollisionResponse getCollisionCallback castCollision castCollisionList setCollisionMaxIterations getCollisionMaxIterations setCollisionSuppress getCollisionSuppress 
+                        setLinearVelocity setLinearVelocityX setLinearVelocityX setLinearVelocityPolar getLinearVelocity getLinearVelocityX getLinearVelocityY getLinearVelocityPolar setAngularVelocity getAngularVelocity setMinLinearVelocity setMaxLinearVelocity setMinAngularVelocity setMaxAngularVelocity getMinLinearVelocity getMaxLinearVelocity getMinAngularVelocity getMaxAngularVelocity setConstantForce setConstantForceX setConstantForceY setGraviticConstantForce setConstantForcePolar stopConstantForce getConstantForce getConstantForceX getConstantForceY getGraviticConstantForce setImpulseForce setImpulseForcePolar setForceScale getForceScale setAtRest setImmovable setForwardMovementOnly setForwardSpeed getAtRest getImmovable getForwardMovementOnly setMass setInertialMoment setAutoMassInertia getMass getInertialMoment getAutoMassInertia setCollisionMaterial setDamping setDensity setFriction setRestitution getDamping getDensity getFriction getRestitution setPhysicsSuppress getPhysicsSuppress 
+                        mount setMountForce setMountOwned setMountTrackRotation setMountInheritAttributes dismount getMountForce getMountInheritAttributes getMountOwned getMountTrackRotation getIsMounted getMountedParent addLinkPoint removeLinkPoint removeAllLinkPoints setLinkPoint getLinkCount getLinkPoint setMountRotation getMountRotation setAutoMountRotation getAutoMountRotation getAttachedToPath attachGui detachGui 
+                        addToScene removeFromScene getSceneGraph safeDelete setEnabled getEnabled setPaused getPaused setVisible getVisible setLifetime getLifetime 
+                        setBlending setBlendingStatus setSrcBlendFactor setDstBlendFactor setBlendColor setBlendColour setBlendAlpha getBlending getBlendingStatus getSrcBlendFactor getDstBlendFactor getBlendColor getBlendColour getBlendAlpha 
+                        getLocalPoint getWorldPoint getIsPointInObject clone copy loadCopy saveCopy setUseMouseEvents getUseMouseEvents setConfigDatablock getConfigDatablock setDebugOn setDebugOff setTimerOn setTimerOff 
+                        onCollision onWorldLimit onLevelLoaded onPositionTarget onRotationTarget onTimer onMouseMove onMouseDown onMouseDragged onMouseUp onRightMouseDown onRightMouseDragged onRightMouseUp 
+                        AngularVelocity AutoMassInertia AutoMountRotation AutoRotation BlendColor BlendingEnabled class CollisionActiveReceive CollisionActiveSend CollisionCallback CollisionCircleScale CollisionCircleSuperscribed CollisionDetectionMode CollisionGroups CollisionLayers CollisionMaxIterations CollisionPhysicsReceive CollisionPhysicsSend CollisionPolyList CollisionPolyScale CollisionResponseMode config ConstantForce ConstantForceGravitic Damping Density DstBlendFactor Enabled FlipX FlipY ForceScale ForwardOnly Friction GraphGroup Immovable Inertia Layer Lifetime LinearVelocity LinkPoints Mass MaxAngularVelocity MaxLinearVelocity MinAngularVelocity MinLinearVelocity MountForce MountInheritAttributes MountOffset MountOwned MountRotation MountTrackRotation Paused position Restitution Rotation scenegraph size SrcBlendFactor superclass UseMouseEvents Visible WorldLimitCallback WorldLimitMax WorldLimitMin WorldLimitMode 
+                        setImageMap setFrame getImageMap getFrame 
+                        imageMap frame 
+                        playAnimation setAnimation setAnimationFrame setFrameChangeCallback getAnimation getAnimationName getAnimationFrame getAnimationTime getIsAnimationFinished 
+                        onAnimationStart onFrameChange onAnimationEnd 
+                        animationName 
+                        setImageMap setRepeat setRepeatX setRepeatY setScroll setScrollX setScrollY setScrollPolar setScrollPosition setScrollPositionX setScrollPositionY getImageMap getRepeatX getRepeatY getScrollPositionX getScrollPositionY getScrollX getScrollY 
+                        imageMap repeatX repeatY scrollX scrollY scrollPositionX scrollPositionY 
+                        setShape setDetailLevel setSkin playAnimation playAnimationSequence getCurrentDetailLevel getCurrentIntraDetailLevel getDetailLevelCount setShapeAngularVelocity setShapeOffset setShapeRotation setShapeScale getShapeAngularVelocity getShapeOffset getShapeRotation getShapeScale setTimeScale setTriggerActive 
+                        onAnimationTrigger 
+                        shape animation detailLevel intraDetailLevel shapeAngularVelocity shapeOffset shapeRotation shapeScale 
+                        setEnterCallback setLeaveCallback setStayCallback getEnterCallback getLeaveCallback getStayCallback 
+                        onEnter onStay onLeave 
+                        EnterCallback StayCallback LeaveCallback 
+                        loadTileMap createTileLayer deleteTileLayer deleteTileLayerId deleteAllLayers getTileLayer getTileLayerCount saveTileMap setAllLayersToParent 
+                        onTileScript 
+                        loadTileLayer saveTileLayer clearLayer resetLayer setAutoPan setAutoPanX setAutoPanY setAutoPanPolar setPanPosition setPanPositionX setPanPositionY setWrap setWrapX setWrapY getAutoPanX getAutoPanY getPanPositionX getPanPositionY getWrapX getWrapY resizeLayer setTileCountX setTileCountY setTileSize setTileSizeX setTileSizeY getTileSize getTileSizeX getTileSizeY setTileIcons setCursorPosition setCursorIconActive setCustomIconActive setGridActive setScriptIconActive 
+                        setStaticTile setAnimatedTile setActiveTile clearTile pickTile setTileCollisionActive setTileCollisionPolyCustom setTileCollisionPolyPrimitive setTileCollisionScale setTileCustomData setTileFlip setTileScript getTileType getTileCollision getTileCount getTileCountX getTileCountY getTileCustomData getTileFlip getTileScript getTileScriptActioned 
+                        layerFile 
+                        loadEffect saveEffect playEffect stopEffect findParticlePeak moveEffectTo setEffectCollisionStatus getEffectCollisionStatus setEffectLifeMode getEffectLifeMode 
+                        addEmitter findEmitterObject getEmitterObject getEmitterCount moveEmitter removeEmitter clearEmitters 
+                        onStopEffect onParticleCollision 
+                        effectFile useEffectCollisions effectMode effectTime 
+                        loadEmitter saveEmitter setEmitterName setEmitterType getEmitterName getEmitterType setImageMap setAnimationName getImageMapNameFrame getAnimationName getUsingAnimation getParentEffect setVisible getVisible setAlignAngleOffset setAlignKeepAligned setAttachPositionToEmitter setAttachRotationToEmitter setBlending setEmitterCollisionStatus setFirstInFrontOrder setFixedAngleOffset setFixedAspect setFixedForceAngle setIntenseParticles setLinkEmissionRotation setParticleOrientationMode setPivotPoint setRandomAngleOffset setRandomArc setSingleParticle setUseEffectEmission getAlignAngleOffset getAlignKeepAligned getAttachPositionToEmitter getAttachRotationToEmitter getBlending getEffectCollisionStatus getFirstInFrontOrder getFixedAngleOffset getFixedAspect getFixedForceAngle getIntenseParticles getLinkEmissionRotation getParticleOrientation getParticleOrientationMode getPivotPoint getRandomAngleOffset getRandomArc getSingleParticle getUseEffectEmission 
+                        addNode removeNode getNodeCount clear setPathType getPathType attachObject detachObject 
+                        setStartNode setEndNode setFollowMode setLoops setMoveForward setOrient setSpeed getStartNode getEndNode getFollowMode getLoops getMoveForward getOrient getSpeed 
+                        pathType 
+                        loadLevel addToLevel endLevel setSceneGraph resetSceneGraph getSceneGraph setRenderMasks setRenderGroups setRenderLayers setDebugBanner 
+                        setCurrentCameraArea setCurrentCameraPosition setCurrentCameraZoom getCurrentCameraArea getCurrentCameraPosition getCurrentCameraZoom setViewLimitOn setViewLimitOff setTargetCameraArea setTargetCameraPosition setTargetCameraZoom startCameraMove stopCameraMove completeCameraMove getIsCameraMoving undoCameraMove startCameraShake stopCameraShake setCameraInterpolationMode setCameraInterpolationTime mount dismount getIsCameraMounted 
+                        getWindowExtents getCanvasPoint getWindowPoint getWorldPoint getIsWindowPoint setMousePosition getMousePosition setUseObjectMouseEvents setUseWindowMouseEvents getUseObjectMouseEvents setObjectMouseEventFilter setObjectMouseEventGroupFilter setObjectMouseEventLayerFilter setObjectMouseEventUseInvisibleFilter setLockMouse getLockMouse 
+                        onExtentChange onMouseMove onMouseEnter onMouseLeave onMouseDown onMouseDragged onMouseUp onRightMouseDown onRightMouseDragged onRightMouseUp 
+                        lockMouse useWindowMouseEvents useObjectMouseEvents 
+                        loadLevel addToLevel endLevel loadScene saveScene addToScene removeFromScene clearScene initialise getSceneTime setScenePhysicsFPSActive setScenePhysicsLimitFPS setScenePhysicsMaxIterations setScenePhysicsTargetFPS getScenePhysicsFPSActive getScenePhysicsLimitFPS getScenePhysicsMaxIterations getScenePhysicsTargetFPS getSceneObject getSceneObjectCount getSceneObjectList setLayerDrawOrder setSceneDrawOrder pickLine pickPoint pickRadius pickRect setScenePause getScenePause setDebugOff setDebugOn getGlobalTileMap setConstantForce setConstantForcePolar stopConstantForce getConstantForce 
+                        onUpdateScene onLevelLoaded onSafeDelete
+                        AngularVelocity AutoMassInertia AutoMountRotation AutoRotation BlendColor BlendingEnabled class CollisionActiveReceive CollisionActiveSend CollisionCallback CollisionCircleScale CollisionCircleSuperscribed CollisionDetectionMode CollisionGroups CollisionLayers CollisionMaxIterations CollisionPhysicsReceive CollisionPhysicsSend CollisionPolyList CollisionPolyScale CollisionResponseMode ConstantForce ConstantForceGravitic Damping Density DstBlendFactor Enabled FlipX FlipY ForceScale ForwardOnly Friction GraphGroup Immovable Inertia Layer Lifetime LinearVelocity LinkPoints Mass MaxAngularVelocity MaxLinearVelocity MinAngularVelocity MinLinearVelocity MountForce MountInheritAttributes MountOffset MountOwned MountRotation MountTrackRotation Paused position Restitution Rotation size SrcBlendFactor superclass UseMouseEvents Visible WorldLimitCallback WorldLimitMax WorldLimitMin WorldLimitMode 
+                        containerBinSize containerBinCount useLayerSorting lastInFrontSorting scenePhysicsLimitFPS scenePhysicsTargetFPS scenePhysicsMaxIterations 
+                        compile setFilterMode getFilterMode getImageMapMode getFrameCount getFrameSize getSrcBitmapName getSrcBitmapSize getFrameTexturePage getTexturePageCount getTexturePageFrameCount getTexturePageSize 
+                        onImageMapPackStart onImageMapPackEnd onImageMapError 
+                        allowUnload cellCountX cellCountY cellHeight cellOffsetX cellOffsetY cellRowOrder cellStrideX cellStrideY cellWidth filterMode filterPad frameCount imageMode imageName linkImageMaps preferPerf preload 
+                        animationCycle animationFrames animationTime canSaveDynamicFields imageMap randomStart startFrame 
+                        AutoMassInertia Damping Density ForceScale Friction Immovable inertialmoment Mass Restitution 
+                        setName setInternalName getName getInternalName getID save delete schedule setFieldValue getFieldValue getDynamicField getDynamicFieldCount getClassName isMemberOfClass getGroup isChildOfGroup isMethod dump dumpClassHierarchy 
+                        add remove clear bringToFront pushToBack listObjects getObject getCount isMember 
+                        findObjectByInternalName 
+                        Class SuperClass 
+                        bind bindCmd getBinding getCommand unbind push pop save getScale getDeadZone isInverted 
+                        openForRead openForWrite openForAppend readLine writeLine writeObject isEOF close 
+                        connect listen send disconnect 
+                        onConnectRequest onLine onConnected onConnectFailed onDisconnected onDNSResolved onDNSFailed 
+                        mFloor mCeil mAbs mSqrt mPow mLog mSin mCos mTan mAsin mAcos mAtan mRadToDeg mDegToRad mFloatLength bit bits t2dVectorAdd t2dVectorSub t2dVectorMult t2dVectorDot t2dVectorCompare t2dVectorDistance t2dAngleBetween t2dVectorNormalise t2dVectorScale t2dVectorLength t2dRectNormalise t2dGetMin t2dGetMax mSolveQuadratic mSolveCubic mSolveQuartic setRandomSeed getRandomSeed getRandom mathInit 
+                        strcmp stricmp strlen strstr strpos strlwr strupr strchr strreplace getSubStr getWord getWords firstWord restWords setWord setField setRecord removeWord removeField removeRecord getWordCount getFieldCount getRecordCount expandEscape collapseEscape ltrim rtrim trim stripTrailingSpaces stripChars stripColorCodes stripMLControlChars 
+                        findFirstFile findNextFile getFileCount findFirstFileMultiExpr findNextFileMultiExpr getFileCountMultiExpr getDirectoryList getWorkingDirectory isFile isWriteableFilename fileExt fileBase fileName filePath fileSize getFileCRC createPath pathCopy fileDelete expandFilename 
+                        setLogMode echo warn error cls dumpConsoleClasses dumpConsoleFunctions trace backtrace call compile exec eval setEchoFileLoads echoInputState DNetSetLogging enableWinConsole 
+                        setScreenMode setRes prevResolution nextResolution getRes getDesktopResolution getResolutionList toggleFullScreen isFullscreen switchBitDepth setDisplayDevice getDisplayDeviceList getVideoDriverInfo isDeviceFullScreenOnly VideoSetGammaCorrection setVerticalSync SetOpenGLTextureCompressionHint setOpenGLAnisotropy createCanvas setCanvasTitle createEffectCanvas getT2DMaxTextureSize 
+                        activateDirectInput activateKeyboard enableMouse enableJoystick deactivateDirectInput deactivateKeyboard disableMouse disableJoystick isJoystickDetected GetJoystickAxes lockMouse 
+                        OpenALInitDriver OpenALShutdownDriver alGetString alxGetWaveLen alxCreateSource alxPlay alxStop alxStopAll alxIsPlaying alxGetChannelVolume alxSetChannelVolume alxGetStreamPosition alxGetStreamDuration alGetString 
+                        setModPaths getModPaths deleteDatablocks deleteVariables clearTextureHolds flushTextureCache purgeResources recompileAllImageMaps FreeMemoryDump getT2DDatablockSet 
+                        setNetPort QueryLanServers QueryMasterServer querySingleServer cancelServerQuery stopServerQuery startHeartbeat stopHeartbeat getServerCount setServerInfo commandToServer commandToClient msg allowConnections 
+                        addTaggedString removeTaggedString getTaggedString buildTaggedString detag getTag 
+                        schedule cancel isEventPending getEventTimeLeft getScheduleDuration getTimeSinceStart 
+                        telnetSetParameters dbgSetParameters dbgIsConnected dbgDisconnect 
+                        saveJournal playJournal 
+                        profilerEnable profilerDump profilerDumpToFile profilerReset profilerMarkerEnable 
+                        activatePackage deactivatePackage isPackage 
+                        setCoreLangTable getCoreLangTable populateFontCacheString populateFontCacheRange populateAllFontCacheString populateAllFontCacheRange dumpFontCacheStatus writeFontCache exportCachedFont importCachedFont duplicateCachedFont 
+                        getT2DVersion getVersionNumber getVersionString getCompileTimeString getBuildString getExecutableName isDebugBuild getSimTime getRealTime nameToID isObject screenshot png2jpg gotoWebPage setClipboard getClipboard quit quitWithErrorMessage restartInstance minimizeWindow export t2dBeginScene t2dEndScene t2dAssert t2dAssertISV 
+
+//////////////////////////////////////////////////////////////////////////////
+// System variables and Profiler parameters for TGB 1.1.0
+// Reference: Same as above.			
+KeyWords4:              $pref T2D warnFileDeprecated warnSceneOccupancy dualCollisionCallbacks imageMapDumpTextures imageMapEchoErrors imageMapFixedMaxTextureSize imageMapFixedMaxTextureError imageMapShowPacking contactHistoryMax contactHistoryChange particleEngineQuantityScale 
+                        t2dSceneWindow_onRender t2dSceneContainer_findObjects 
+                        t2dSceneContainer_findPotentialCollisions t2dSceneGraph_updateScene 
+                        t2dSceneGraph_subUpdateScene t2dSceneGraph_onUpdateSceneScript 
+                        t2dSceneGraph_preIntegrate t2dSceneGraph_Integrate 
+                        t2dSceneGraph_postIntegrate t2dSceneGraph_layerSorting 
+                        t2dSceneGraph_renderObjects t2dSceneGraph_renderView 
+                        t2dSceneObject_processCollisionStatus t2dSceneObject_updateWorldLimit 
+                        t2dSceneObject_checkCollisionSend t2dSceneObject_calculateMountNodes 
+                        t2dSceneObject_updateMount t2dSceneObject_updateSpatialConfig 
+                        t2dSceneObject_updateLocalPhysics t2dSceneObject_updateAttachedGui 
+                        t2dSceneObject_setLifetime t2dSceneContainer_BinRelocation 
+                        t2dSceneContainer_allocateSceneBinReference t2dSceneContainer_freeSceneBinReference 
+                        t2dSceneContainer_addSceneReferenceBlock t2dPhysics_collide 
+                        t2dPhysics_updateNetVelocity t2dPhysics_updateGrossVelocity 
+                        t2dPhysics_updateSpatials t2dPhysics_generateCollisionPoly 
+                        t2dPhysics_generateCollisionCircle t2dPhysics_findContactPoints 
+                        t2dPhysics_resolveOverlap t2dPhysics_resolveOverlapOnly 
+                        t2dPhysics_resolveForwardCollision 
+
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "'
+StringEndChar:          "'
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor:
+// 0 = no
+// 1 = yes
+// Note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Highlight Current Line:
+// 0 = no
+// 1 = yes
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00C00000 clWindow B
+Keyword2Col:            $000000C0 clWindow B
+Keyword3Col:            clPurple clWindow B
+Keyword4Col:            clOlive clWindow B
+IdentifierCol:          clOlive clWindow
+CommentCol:             clGray clWindow
+NumberCol:              $00C000C0 clWindow
+StringCol:              clRed clWindow
+SymbolCol:              clGreen clWindow B
+PreprocessorCol:        clGreen clWindow I
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00FFFFC0
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
