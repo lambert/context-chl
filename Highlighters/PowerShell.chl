@@ -1,0 +1,83 @@
+// *****************************************************************************
+//
+// ConTEXT Highlighter for Microsoft PowerShell Scripting Language
+//
+// History:
+//    27.04.2006: Egon Rath (egon.rath@gmail.com) : Initially created
+//
+// *****************************************************************************
+
+Language:                     Microsoft PowerShell Script
+Filter:                       Microsoft PowerShell Script (*.ps1)|*.ps1
+
+CaseSensitive:                0
+LineComment:                  #
+
+IdentifierBegChars:           a..z A..Z _ -
+IdentifierChars:              a..z A..Z _ 0..9 -
+
+NumConstBegChars:             0..9
+NumConstChars:                0..9 abcdefx.
+
+UsePreprocessor:              1
+
+EscapeChar:                   `
+
+KeyWords1:                    Add-Content Add-History Add-Member Add-PSSnapin
+                              Clear-Content Clear-Item Clear-ItemProperty Clear-Variable Compare-Object ConvertFrom-SecureString Convert-Path ConvertTo-Html ConvertTo-SecureString Copy-Item Copy-ItemProperty
+                              Export-Alias Export-Clixml Export-Console Export-Csv
+                              ForEach-Object Format-Custom Format-List Format-Table Format-Wide
+                              Get-Acl Get-Alias Get-AuthenticodeSignature Get-ChildItem Get-Command Get-Content Get-Credential Get-Culture Get-Date Get-EventLog Get-ExecutionPolicy Get-Help Get-History Get-Host Get-Item Get-ItemProperty Get-Location Get-Member Get-PfxCertificate Get-Process Get-PSDrive Get-PSProvider Get-PSSnapin Get-Service Get-TraceSource Get-UICulture Get-Unique Get-Variable Get-WmiObject Group-Object
+                              Import-Alias Import-Clixml Import-Csv Invoke-Expression Invoke-History Invoke-Item
+                              Join-Path
+                              Measure-Command Measure-Object Move-Item Move-ItemProperty
+                              New-Alias New-Item New-ItemProperty New-Object New-PSDrive New-Service New-TimeSpan New-Variable
+                              Out-Default Out-File Out-Host Out-Null Out-Printer Out-String
+                              Pop-Location Push-Location
+                              Read-Host Remove-Item Remove-ItemProperty Remove-PSDrive Remove-PSSnapin Remove-Variable Rename-Item Rename-ItemProperty Resolve-Path Restart-Service Resume-Service
+                              Select-Object Select-String Set-Acl Set-Alias Set-AuthenticodeSignature Set-Content Set-Date Set-ExecutionPolicy Set-Item Set-ItemProperty Set-Location Set-PSDebug Set-Service Set-TraceSource Set-Variable Sort-Object Split-Path Start-Service Start-Sleep Start-Transcript Stop-Process Stop-Service Stop-Transcript Suspend-Service
+                              Tee-Object Test-Path Trace-Command
+                              Update-FormatData Update-TypeData
+                              Where-Object Write-Debug Write-Error Write-Host Write-Output Write-Progress Write-Verbose Write-Warning
+                              
+KeyWords2:                    -eq -ne -gt -ge -lt -le -and -or -not -contains -is -as -band 
+                              -bor -bnot -f -replace -match -like
+
+KeyWords3:                    Alias Certificate Environment FileSystem Function Registry Variable
+                              ac ansp clc cli clp clv cpi cpp cvpa diff epal epcsv fc fl ft fw gal
+                              gc gci gcm gdr ghy gi gl gm gp gps group gsv gsnp gu gv gwmi iex ihy ii ipal
+                              ipcsv mi mp nal ndr ni nv oh rdr ri rni rnp rp rsnp rv rvpa sal sasv sc select
+                              si sl sleep sort sp spps spvs sv tee where write cat cd clear cp h history kill
+                              lp ls mount mv popd ps pushd pwd r rm rmdir echo cls chdir copy del dir erase
+                              move rd ren set type
+                              
+KeyWords4:                    process throw finally break continue do else elseif exit filter for foreach function
+                              if in begin return switch trap until end while param
+
+StringBegChar:                "
+StringEndChar:                "
+BlockBegStr:                  {
+BlockEndStr:                  }
+BlockAutoindent:              1
+MultilineStrings:             0
+
+UsePreprocessor:              0
+
+CurrLineHighlighted:          0
+
+OverrideTxtFgColor:           0
+SpaceCol:                     clWindowText clWindow
+Keyword1Col:                  clNavy clWindow B
+Keyword2Col:                  clBlue clWindow B
+Keyword3Col:                  clOlive clWindow B
+Keyword4Col:                  clPurple clWindow B
+Keyword5Col:                  clWindowText clWindow
+IdentifierCol:                clWindowText clWindow
+CommentCol:                   clTeal $00D0D0D0 I
+NumberCol:                    $000000C0 clWindow I
+StringCol:                    clRed clWindow
+SymbolCol:                    clWindowText clWindow
+PreprocessorCol:              clWindowText clWindow
+SelectionCol:                 clWhite clNavy
+CurrentLineCol:               clWindowText $00C0FFFF
+MatchedBracesCol:             clWindowText $00D0D0D0 B
