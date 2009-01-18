@@ -1,0 +1,56 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// SciLab highlighter written by Roberto Hernández, robher@adinet.com.uy
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               SciLab
+Filter:                 SciLab files (*.sci,*.sce)|*.sci;*.sce
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+KeyWords1:              abort apropos break case clear do else elseif end exit
+                        for help if pause quit resume return select then what
+                        while who
+
+KeyWords2:              deff function
+
+KeyWords3:              %f %F %inf %pi %s %t %T abs argn atan bode ceil clean
+                        coeff cos csim dbphi denom disp errcatch errclear error
+                        eval evans evstr execstr floor funcprot horner imag
+                        isempty iserror length linspace list locate log log10
+                        logspace max mclose min mopen nextpowQ numer nyquist
+                        part plot2d plot2d1 plot2d2 plot2d3 plot2d4 poly real
+                        repfreq roots round sgrid sign sin size sqrt ss2tf
+                        strindex string strsubst syslin tan tf2ss tlist type
+                        typeof unix unix_g unix_s unix_w warning x_choose
+                        x_dialog x_mdialog x_message xbasc xgrid xselect
+                        xsetech xtitle
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    1
+
+SpaceCol:               $50F8FF $A00000
+Keyword1Col:            $FFF8FF $A00000
+Keyword2Col:            $FFF850 $A00000
+Keyword3Col:            $50F850 $A00000
+IdentifierCol:          $50F8FF $A00000
+CommentCol:             clGray $A00000
+NumberCol:              $5050FF $A00000
+StringCol:              $FF50FF $A00000
+SymbolCol:              $A0A700 $A00000
+PreprocessorCol:        clBlue $A00000
+SelectionCol:           $A00000 clGray
+CurrentLineCol:         $A00000 $50F8FF
+
