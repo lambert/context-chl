@@ -1,0 +1,42 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Windows INF/Setup Information highlighter written by goldfndr (Google me)
+// The keywords are from MSDN but I lost track of where
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               INF - Setup Information
+Filter:                 Setup Information files (*.inf)|*.inf
+HelpFile:
+CaseSensitive:		0
+LineComment:		;
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:	a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9 . -
+NumConstBegChars:       [
+NumConstChars:          a..z A..Z _ 0..9 - . ]
+KeyWords1:              IfStr IfContains IfInt EndIf Else-IfStr Else-IfContains Else-IfInt
+			Return Goto Exit
+KeyWords2:		set Shell RunProgram Install detect Debug-Output
+			AddSectionFilesToCopyList CopyFilesInCopyList AddFileToDeleteList
+			OpenRegKey CloseRegKey SetRegValue DeleteRegValue
+KeyWords3:		read-syms LoadLibrary LibraryProcedure FreeLibrary ui start
+StringBegChar:        	" %
+StringEndChar:		" %
+MultilineStrings:	0
+UsePreprocessor:        0
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clTeal B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:		clOlive clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow B
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
