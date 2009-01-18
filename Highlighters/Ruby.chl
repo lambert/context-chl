@@ -1,0 +1,124 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Ruby highlighter written by David Asorey Álvarez, forodejazz@yahoo.es
+// I'm learning ruby now -english too :-),thus, I'm sure there are some errors.
+// If you change this file and ruby code hightlights better, please, send me a copy!
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Ruby
+Filter:                 Ruby files (*.rb, *.rbw)|*.rb; *.rbw
+HelpFile:
+CaseSensitive:          1
+LineComment:            #
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _1234567890
+NumConstBegChars:       ()[]{}
+NumConstChars:          0..9 @ $
+EscapeChar:             \
+
+KeyWords1:              require class def end puts if else elsif while for return
+                        print upto unless case yield raise begin retry next redo
+
+// This are special variables
+KeyWords2:              @ $ $@ $& $` $' $+ $1, $2.. $~ $= $/ $\ $, $; $. $< $> $_ $0 $* $$ $?
+                        $: $" $DEBUG $FILENAME $LOAD_PATH $stdin $stdout $stderr $VERBOSE option $-0
+                        $-a $-d $-F $-i $-I $-l $-p $-v
+                        TRUE FALSE NIL STDIN STDOUT STDERR ENV ARGF ARGV DATA RUBY_VERSION
+                        RUBY_RELEASE_DATE RUBY_PLATFORM
+
+// This are classes, modules and methods
+KeyWords3:              Array  new & * + - << <=> = =~ == === | assoc at clear collect collect!
+                        compact compact! concat delete delete_at delete_if each each_index
+                        empty? eql? fill first flatten flatten! include? index indexes
+                        indices join last length map! nitems pack pop push rassoc reject!
+                        replace reverse reverse! reverse_each rindex shift size slice slice!
+                        sort sort! to_a to_ary to_s uniq uniq! unshift Bignum Arithmetic
+                        Bit  size to_f to_i to_s Binding Class
+                        inherited new new superclass Continuation call Dir chdir chroot delete
+                        entries foreach getwd glob mkdir new open pwd rmdir unlink close each read
+                        rewind seek tell Exception exception backtrace exception message set_backtrace
+                        FalseClass File atime basename chmod chown ctime delete dirname
+                        expand_path ftype join link lstat mtime new open readlink rename size split
+                        stat symlink truncate umask unlink utime atime chmod chown ctime flock lstat
+                        mtime path truncate File::Stat  atime blksize blockdev? blocks chardev?
+                        ctime dev directory? executable? executable_real? file? ftype gid grpowned? ino
+                        mode mtime nlink owned? pipe? rdev readable? readable_real? setgid? setuid?
+                        size size? socket? sticky? symlink? uid writable? writable_real? zero? Fixnum
+                        Arithmetic operations Bit operations  id2name size to_f to_i to_s Float
+                        Arithmetic operations  ceil finite? floor infinite? nan? round to_f to_i
+                        to_s Hash new clear default default= delete delete_if each
+                        each_key each_pair each_value empty? fetch has_key? has_value? include? index
+                        indexes indices invert key? keys length member? rehash reject reject! replace
+                        shift size sort store to_a to_s update value? values Integer chr downto
+                        integer? next step succ times upto IO foreach new pipe popen readlines select <<
+                        binmode clone close close_read close_write closed? each each_byte each_line eof
+                        eof? fcntl fileno flush getc gets ioctl isatty lineno lineno= pid pos pos=
+                        print printf putc puts read readchar readline readlines reopen rewind seek stat
+                        sync sync= sysread syswrite tell to_i to_io tty? ungetc write MatchData
+                        begin end length offset post_match pre_match size string to_a to_s Method
+                        arity call to_proc Module constants nesting new ancestors
+                        class_eval class_variables clone const_defined? const_get const_set constants
+                        included_modules instance_methods method_defined? module_eval name
+                        private_class_method private_instance_methods protected_instance_methods
+                        public_class_method public_instance_methods alias_method append_features attr
+                        attr_accessor attr_reader attr_writer extend_object include method_added
+                        module_function private protected public remove_const remove_method
+                        undef_method NilClass nil? to_a to_i to_s Numeric +@ -@ abs coerce divmod
+                        eql? integer? modulo nonzero? remainder zero? Object __id__ __send__
+                        class clone display dup eql? equal? extend freeze frozen? hash id inspect
+                        instance_eval instance_of? instance_variables is_a? kind_of? method
+                        method_missing methods nil? private_methods protected_methods public_methods
+                        respond_to? send singleton_methods taint tainted? to_a to_s type untaint Proc
+                        new  arity call Range new === begin each end exclude_end? first last length
+                        size Regexp compile escape last_match new quote casefold? kcode
+                        match source String new capitalize capitalize!
+                        center chomp chomp! chop chop! concat count crypt delete delete! downcase
+                        downcase! dump each each_byte each_line empty? gsub gsub! hash hex include?
+                        index intern length ljust next next! oct replace reverse reverse! rindex rjust
+                        scan size slice slice! split squeeze squeeze! strip strip! sub sub! succ succ!
+                        sum swapcase swapcase! to_f to_i to_s to_str tr tr! tr_s tr_s! unpack upcase
+                        upcase! upto Struct new new members each length members size to_a
+                        values Struct::Tms Symbol id2name inspect to_i to_s Thread abort_on_exception
+                        abort_on_exception critical critical= current exit fork kill list main new
+                        pass start stop  abort_on_exception abort_on_exception alive? exit
+                        join key? kill priority priority= raise run safe_level status stop? value
+                        wakeup ThreadGroup new add list Time at gm local mktime new now times utc + - <=
+                        > asctime ctime day gmt? gmtime hour isdst localtime mday min mon month sec
+                        strftime to_a to_f to_i to_s tv_sec tv_usec usec utc utc? wday yday year zone
+                        TrueClass Comparable Comparisons between? Enumerable collect detect
+                        each_with_index entries find find_all grep include? map max member? min reject
+                        select sort to_a Errno FileTest GC disable enable start garbage_collect Kernel
+                        Array Float Integer String abort at_exit autoload binding
+                        block_given? callcc caller catch chomp chomp! chop chop! eval exec exit exit!
+                        fail fork format gets global_variables gsub gsub! iterator? lambda load
+                        local_variables loop open p print printf proc putc puts raise rand readline
+                        readlines require scan select set_trace_func singleton_method_added sleep split
+                        sprintf srand sub sub! syscall system test throw trace_var trap untrace_var
+                        Marshal dump load restore Math atan2 cos exp frexp ldexp log log10 sin sqrt tan
+                        ObjectSpace _id2ref define_finalizer each_object garbage_collect
+                        undefine_finalizer Process egid egid= euid euid= exit! fork getpgid getpgrp
+                        getpriority gid gid= kill pid ppid setpgid setpgrp setpriority setsid uid uid=
+                        wait wait2 waitpid waitpid2
+
+StringBegChar:          " '
+StringEndChar:          " '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            clMaroon clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clTeal clWindow B
+StringCol:              clMaroon clWindow
+SymbolCol:              clWindowText clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
