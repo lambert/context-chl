@@ -1,0 +1,39 @@
+Language:               Windows resource scripts
+Filter:                 Windows resource scripts (*.rc)|*.rc
+HelpFile:
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 x abcdefhABCDEFH .
+EscapeChar:             \
+
+KeyWords1:              ACCELERATORS AUTO3STATE AUTOCHECKBOX AUTORADIOBUTTON BEGIN BITMAP CAPTION
+                        CHARACTERISTICS CHECKBOX CLASS COMBOBOX CONTROL CTEXT CURSOR DEFPUSHBUTTON
+                        DIALOG DIALOGEX EDITTEXT END EXSTYLE FONT GROUPBOX ICON LANGUAGE LISTBOX LTEXT
+                        MENU MENUEX MENUITEM MESSAGETABLE POPUP PUSHBOX PUSHBUTTON RADIOBUTTON RCDATA
+                        RTEXT SCROLLBAR STATE3 STRINGTABLE STYLE VERSION VERSIONINFO
+                        PRELOAD LOADONCALL FIXED MOVEABLE DISCARDABLE PURE IMPURE
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlack clWindow B
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clBlue clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clTeal clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clGreen clWindow I
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
