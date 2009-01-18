@@ -1,0 +1,39 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// ScriptIt script highlighter written by goldfndr (Google me)
+// Microsoft never dedicated a file extension to it so this one is arbitrary.
+//
+//////////////////////////////////////////////////////////////////////////////
+Language:               ScriptIt
+Filter:                 ScriptIt scripts (*.s)|*.s
+HelpFile: C:\Program Files\WinBatch\Windows Interface Language.hlp
+CaseSensitive:          0
+LineComment:            REM
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _ ~ { }
+IdentifierChars:        a..z A..Z _ ~ { }
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+KeyWords1:              ~winwaitactive ~winwaitclose = @ # ~exit
+KeyWords2:              run [SCRIPT] [ADLIB]
+KeyWords3:              if then strcat strscan strsub AskItemList Display Run
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clMaroon clWindow BI
+IdentifierCol:          clWindowText clWindow I
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
