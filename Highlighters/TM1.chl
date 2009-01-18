@@ -1,0 +1,63 @@
+//@version 1.2
+//@url http://drighetto.free.fr/files/miscellaneous/conTEXTHighlighters/TM1.chl
+////////////////////////////////////////////////////////////////////////
+//
+// Applix TM1 script highlighter (Rules and Turbo Integration)
+// Author        : Dominique Righetto <dominique.righetto@laposte.net>
+// Site          : http://drighetto.free.fr
+// Creation date : August 2006
+// Version       : 1.2
+//
+////////////////////////////////////////////////////////////////////////
+
+Language:               Applix TM1 scripting language
+Description:            TM1 highlighter for rules and Turbo Integrator scripts, written by Dominique Righetto <dominique.righetto@laposte.net>
+Filter:                 TM1 script (*.tm1,*.rux)|*.tm1;*.rux
+HelpFile:
+CaseSensitive:          0
+LineComment:            #
+BlockCommentBeg:        #
+BlockCommentEnd:        #
+IdentifierChars:        a..z A..Z _
+IdentifierBegChars:     a..z A..Z _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// 1 Statements (Rules functions)
+KeyWords1:              ABS ACOS ASIN ATTRN ATTRS ATAN CAPIT CHAR CODE COS DATE DATES DAY DAYNO DB DELET DIMIX DIMNM DIMSIZ DNLEV DTYPE ELCOMP ELCOMPN ELISANC ELISCOMP ELISPAR ELLEV ELPAR ELPARN ELWEIGHT EXP FILL FV IF ELSE ENDIF END INSRT INT ISUND LN LOG LONG LOWER MAX MIN MOD MONTH NOW NUMBR PAYMT PV RAND ROUND ROUNDP SCAN SIGN SIN SQRT STET STR SUBST TABDIM TAN TIME TIMST TIMVL TODAY TRIM UNDEF UNDEFVALS UPPER YEAR CONTINUE STET
+
+// 2 Internal Functions (Turbo Integrator functions)
+KeyWords2:              CellGetN CellGetS CellIsUpdateable CellPutN CellPutProportionalSpread CellPutS CubeCreate CubeDestroy CubeGetLogChanges CubeSetLogChanges DimensionCreate DimensionDestroy DimensionDeleteAllElements DimensionElementInsert DimensionElementDelete DimensionElementComponentAdd DimensionElementComponentDelete DimensionElementPrincipalName DimensionSortOrder SubsetCreate SubsetDestroy SubsetAliasSet SubsetDeleteAllElements SubsetElementInsert SubsetElementDelete SubsetExists SubsetGetSize PublishView ViewConstruct ViewColumnDimensionSet ViewCreate ViewDestroy ViewExists ViewRowDimensionSet ViewSubsetAssign ViewSetSkipZeroes ViewSetSkipCalcs ViewSetSkipRuleValues ViewTitleDimensionSet ViewTitleElementSet ViewSuppressZeroesSet ViewZeroOut AttrInsert AttrDelete AttrN AttrS AttrPutN AttrPutS AllowExternalRequests ExecuteCommand If ItemSkip ItemReject ProcessBreak ProcessQuit While AddClient AddGroup AssignClientToGroup DeleteClient DeleteGroup ElementSecurityGet ElementSecurityPut RemoveClientFromGroup SecurityRefresh SaveDataAll ServerShutdown ASCIIfunctions ASCIIOutput ASCIIDelete ODBCfunctions ODBCOpen ODBCOutput ODBCClose BatchUpdateStart BatchUpdateFinish Expand FileExists NumberToString NumberToStringEx StringToNumber StringToNumberEx 
+                        ExecuteProcess ProcessExitNormal ChoreQuit ProcessExitByChoreQuit ProcessExitMinorError ProcessExitByQuit
+                        ProcessExitWithMessage ProcessExitSeriousError ProcessExitOnInit ProcessExitByBreak ViewExtractSkipCalcsSet ViewExtractSkipRuleValuesSet ViewExtractSkipZeroesSet
+
+// 3 Built-In Variables
+KeyWords3:
+
+StringBegChar: '
+StringEndChar: '
+MultilineStrings: 1
+UsePreprocessor: 0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00FF4040 clWindow B
+Keyword2Col:            $000000C0 clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              $00C0C000 clWindow
+StringCol:              $00FF40FF clWindow
+SymbolCol:              clWindowText clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         $00FF4040 clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clFuchsia $0040FFFF
