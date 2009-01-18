@@ -1,0 +1,156 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Fortran 77/95 highlighter written by sw, sw@byggdata.se
+//
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+// language name
+Language:               Fortran
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+Filter:                 Fortran files (*.for,*.f90)|*.for;*.f90
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+HelpFile:
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+CaseSensitive:          0
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+LineComment:            !
+BlockCommentBeg:
+BlockCommentEnd:
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstBegChars:       0..9
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstChars:          0..9 abcdefhABCDEFH
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+EscapeChar:
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+// Types :
+KeyWords1:		allocatable character common complex data dimension double
+			equivalence external implicit in inout integer intent intrinsic
+			kind logical namelist none optional out parameter pointer
+			private public real result save sequence target type use
+// Keywords 
+KeyWords2:		allocate block call case contains continue cycle deallocate
+			default do else elseif elsewhere end enddo endif endwhere
+			entry exit function go goto if interface module nullify only 
+			operator procedure program recursive return select stop 
+			subroutine then to where while
+//     miscellaneous additional keywords that are required for some statements :
+//     ( excluding: admit at loop map execute guess otherwise quit record remote structure union until)
+ 			access action advance blank blocksize carriagecontrol
+			delim direct eor err exist file flen fmt form formatted
+			iostat name named nextrec nml number opened pad position
+			readwrite recl sequential status unformatted unit
+//     i/o statements :
+              		backspace close endfile format inquire open print read 
+          		rewind write
+// F90 functions
+KeyWords3:       	abs achar acos adjustl adjustr aimag aint all allocated
+			anint any asin atan atan2 bit_size break btest carg
+			ceiling char cmplx conjg cos cosh cpu_time count cshift
+			date_and_time dble digits dim dot_product dprod dvchk
+			eoshift epsilon error exp exponent floor flush fraction
+			getcl huge iachar iand ibclr ibits ibset ichar ieor index
+			int intrup invalop ior iostat_msg ishft ishftc lbound
+			len len_trim lge lgt lle llt log log10 matmul max maxexponent
+			maxloc maxval merge min minexponent minloc minval mod modulo
+			mvbits nbreak ndperr ndpexc nearest nint not offset ovefl
+			pack precfill precision present product prompt radix
+			random_number random_seed range repeat reshape rrspacing
+			scale scan segment selected_int_kind selected_real_kind
+			set_exponent shape sign sin sinh size spacing spread sqrt
+			sum system system_clock tan tanh timer tiny transfer transpose
+			trim ubound undfl unpack val verify
+// Intrinsic Operators :
+ 			.AND. .EQ. .EQV. .GE. .GT. .LE. .LT. .NE. .NEQV. .NOT.
+			.OR. .TRUE. .FALSE.
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+UsePreprocessor:        0
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+CurrLineHighlighted:    0
+//////////////////////////////////////////////////////////////////////////////
+// colors
+//        note:           first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+SpaceCol:               clWindowText $00D0D0D0
+Keyword1Col:            clGreen $00D0D0D0
+Keyword2Col:            $00C00000 $00D0D0D0
+Keyword3Col:            clOlive $00D0D0D0
+IdentifierCol:          clBlack $00D0D0D0
+CommentCol:             clGray $00D0D0D0
+NumberCol:              $00C000C0 $00D0D0D0
+StringCol:              $00C000C0 $00D0D0D0
+SymbolCol:              clMaroon $00D0D0D0
+PreprocessorCol:        clBlue $00D0D0D0
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00D0D0D0
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clOlive $00D0D0D0
