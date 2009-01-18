@@ -1,0 +1,59 @@
+////////////////////////////////////////////////////////////////////////////////////
+//
+// Revolt GAME
+// parameters.txt highlighter for ConTEXT written by MATTIA GALLO - logax@libero.it
+//
+////////////////////////////////////////////////////////////////////////////////////
+
+Language:               Revolt Cars
+Filter:                 Revolt Cars Parameter (parameters.txt)|*.txt;*.*
+Description:            Revolt GAME - parameters.txt highlighter for ConTEXT written by Mattia Gallo
+HelpFile:
+CaseSensitive:          0
+LineComment:            ;
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// General commands
+KeyWords1:              TRUE FALSE
+
+// Commands used only in batch files
+KeyWords2:              BODY AI WHEEL AXLE AERIAL SPINNER PIN SPRING
+
+// Sub-keywords
+KeyWords3:              MODEL TPAGE COLL  BestTime Selectable Class Obtain Rating TopEnd Acc Weight Handling Mass
+                        Trans MaxRevs EnvRGB SteerRate SteerMod EngineRate TopSpeed DownForceMo CoM Weapon Radius
+                        ModelNum  Offset Mass Inertia Gravity  Hardness Resistance AngRes ResMod Grip StaticFrict
+                        KineticFric Offset1 Offset2 Offset  IsPresent IsPowered IsTurnable SteerRatio EngineRatio
+                        MaxPos SkidWidth Name AxleFrictio Grip StaticFrict KineticFric OverAccThresh OvertakeBias
+                        Length Stiffness Damping Restitution Axis  AngVel SecModelNum TopModelNum KineticFriction
+                        UnderThresh  UnderRange  UnderFront UnderRear UnderMax  OverThresh OverRange AxleFriction
+                        OverMax OverAccThre OverAccRang PickupBias BlockBias  OvertakeBia Suspension OverAccRange
+                        Aggression StaticFriction Direction ToeIn DownForceMod
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow
+Keyword2Col:            clRed clWindow B
+Keyword3Col:            clNavy clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
+
