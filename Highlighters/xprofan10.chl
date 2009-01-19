@@ -1,0 +1,67 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// RGH- XProfan v10 written by Michael Dell -> support@conansplace.de
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               RGH- XProfan v10
+Filter:                 Profan files (*.prf,*.xprf,*.p32,*.p16,*.ph,*.pinc,*.inc)|*.prf;*.xprf;*.p32;*.p16;*.ph;*.pinc;*.inc
+HelpFile:               C:\Programme\XProfan10\Help\Profan.hlp        // <-- PLEASE fitting Here - Hier BITTE Anpassen
+CaseSensitive:          0
+LineComment:            ' ; //
+BlockCommentBeg:	/*
+BlockCommentEnd:	*/
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z 0..9 _ & % ! $
+NumConstBegChars:       0..9
+NumConstChars:          0..9 ABCDEF abcdef
+EscapeChar:		ESC
+
+// Key- Words
+KeyWords1: add addfiles addfonts addstring addwindows append appendmenu appendmenubar arc assign beep blockwrite break byte case casenot char charset checkmenu chdir chord clear clearclip clearlist cliploadbmp close closerw cls color continue copy copybmp copybmptomem copysizedbmp createmenu dbcreate dbcreateindex dbsetmemowidth ddelink ddeexecute ddeterminate debugout dec decimals declare def deleteobject dim dim dim dim dim dispose drawicon drawextbmp drawexticon drawlibicon drawsizedextbmp drawsysicon drawtext ellipse else elseif enablemenu enablewindow endif end endpaint endprint endproc endsub endwhile endwith erase exitwindows filemode fill font freedll getmessage if ifnot inc input input insertmenu killtimer let line lineto listboxitem list list list list loadbmp loadsizedbmp locate long mcls mcopybmp mcopysizedbmp mloadbmp messagebox mkdir moveto music nextpage numwidth orientation openrw outp outpb parameters password pie play playsound popup print print proc putclip randomize readtext rectangle rem removemenu rename repaint reset rewrite rmdir roundrect run savebmp savebmptoclip screen screencopy seek separator setautopaint setcheck setclosemsg setdialogfont seterrorlevel setfattr setfont setmenuitem setpixel setscrollpos setscrollrange setstyle settext settimer settruecolor setwindowpos shell showcursor showmax showmin shownormal sleep sound sqldone sqlexec sqlsetnull sqlsetdel startpaint startprint struct class strwidth sub subpopup tbox textcolor traceon traceoff trackmenu usebrush usecursor useextcursur useextmenu usefont useicon usepen usermessages waitinput waitkey waitmouse waitscan wend while whilenot whileloop with wincopy window windowstyle windowtitle winhelp word writeini sendmail sendlist sendraw setpassive drawpic drawsizedpic button checkbox choicebox dateedit defbutton dialog edit extdialog font groupbox hscroll icon listbox multiedit radiobutton richedit sortedlistbox spinedit statuswindow tabctrl text timeedit tooltip vscroll window toolbar hpic hicon sqlcolwidth sqlfile logfile escape repeat until  batch compiler cpp debug kernelout includepath mapfile nosectioncheck replace return runtime preferednamespace export noexport for to do begin include swap createhtmlbox createtext createdialog createchoicebox createlistbox createsortedlistbox createtabcontrol createwindow creategroupbox createedit createmultiedit createbutton createdefbutton createdateedit createtimeedit createspinedit createpicbutton createiconbutton createhtmlbox createtoolwindow createleftbutton createcentertext createrighttext createsunkentext createsunkencentertext createsunkenrighttext createstatic createblackframe createblackrect SUBPROC SELECT ENDSELECT oGL oglSprite typ posx posy posz posdx posdy posdz maxx maxy maxz minx miny minz rotx roty rotz rotdx rotdy rotdz colorr colorg colorb alpha lasttick dtick mode textur texturm cl cq clq cli cle cliq cleq clr clrq aaa aad aam adc add and arpl bound bsf bsr bswap bt btc btr bts call cbw cdq clc cld cli clts cmc cmp cmps cmpsb cmpsd cmpsw cmpxchg cwd cwde daa das dec div emms enter f2xm1 fabs fadd faddp fbld fbstp fchs fclex fcmovb fcmovbe fcmove fcmovnb fcmovnbe fcmovne fcmovnu fcmovu fcom fcomi fcomip fcomp fcompp fcos fdecstp fdiv fdivp fdivr fdivrp femms free fiadd ficom ficomp fidiv fidivr fild fimul fincstp finit fist fistp fisub fisubr fld fld1 fldcw fldenv fldl2e fldl2t fldlg2 fldln2 fldpi fldz fmul fmulp fnclex fninit fnop fnsave fnstcw fnstenv fnstsw fpatan fprem1 fptan frndint frstor fsave fscale fsin fsincos fsqrt fst fstcw fstenv fstp fstsw fsub fsubp fsubr fsubrp ftst fucom fucomi fucomip fucomp fucompp fwait fxch fxtract fyl2xp1 hlt idiv imul in inc ins insb insd insw int into invd invlpg iret iretd iretw ja jae jb jbe jc jcxz je jecxz jg jge jl jle jmp jna jnae jnb jnbe jnc jne jng jnge jnl jnle jno jnp jns jnz jo jp jpe jpo js jz lahf lar lds lea leave les lfs lgdt lgs lidt lldt lmsw lock lods lodsb lodsd lodsw loop loope loopne loopnz loopz lsl lss ltr mov movd movq  movs movsb movsd movsw movsx movzx mul neg nop not or out outs outsb outsd outsw packssdw packsswb packuswb paddb paddd paddsb paddsw paddusb paddusw paddw pand pandn pavgusb pcmpeqb pcmpeqd pcmpeqw pcmpgtb pcmpgtd pcmpgtw pf2id pfacc pfadd pfcmpeq pfcmpge pfcmpgt pfmax pfmin pfmul pfrcp pfrcpit1 pfrcpit2 pfrsqit1 pfrsqrt pfsub pfsubr pi2fd pmaddwd pmulhrw pmulhw pmullw pop popa popad popaw popf popfd popfw por prefetch prefetchw pslld psllq psllw psrad psraw psrld psrlq psrlw psubb psubd psubsb psubsw psubusb psubusw psubw punpckhbw punpckhdq punpckhwd punpcklbw punpckldq punpcklwd push pusha pushad pushaw pushf pushfd pushfw pxor rcl rcr rep repe repne repnz repz ret rol ror sahf sal sar sbb scas scasb scasd scasw set setae setb setbe setc sete setg setge setl setle setna setnae setnb setnbe setnc setne setng setnge setnl setnle setno setnp setns setnz seto setp setpo sets setz sgdt shl shld shr shrd sidt sldt smsw stc std sti stos stosb stosd stosw sub test verr verw wait wbinvd xadd xchg xlat xlatb xor 
+
+// System- Variables
+KeyWords2: bitspixel bmpcol bmpx bmpy button csrlin dbdeleted dbeof dbfcount dbfdecs dbflen dbfname dbfnumber dbftype dbheader dblupdate dblupdate4 dbmemo dbreccount dbrecno dbrecsize dbversion ddewin desktop dlgproc dlgwproc dos16 dos32 dosver drive errnumber error errorlevel font ftpconnected getcount getcursel getfocus getinputstate getinput gettext gettickcount hdc hdc2 hinstance hmenue hwnd input input input input ioresult key lastmessage lfn linux loop lparam maxx maxy mcierror menuitem message mousekey mousepressed mousex mousey mwnd notifycode notifywnd os2 parcount pcount pdc peekmessage pos printing profver progdir scankey sqlcount sqldbc sqlenv syspath tempdir ulparam umessage uwparam win16 win32 winbottom windproc winleft winpath winproc winright wintop winver wmnotify wmpaint wmtimer wparam ftpstatus ftpstatus lastfocus sqlerror cymenue cycaption BMPF Match MatchPos MatchLen WinError ChildMessage oGLError ax bx cx dx ex si di bp sp ss es ds cs ip al ah bl bh ch cl dh dl eh el eax ebx ebp ecx edi edx esi esp
+
+// Functions
+KeyWords3: abs add add addchoice addr addstring and ansitooem arctan bin blockread byte call char choosedir chr closecom comerror control cos cot create ctod date dbappendblank dbbrowse dbclose dbdelete dbedit dbfind dbget dbgetfield dbgetmemo dbgo dbindex dbopen dbpack dbput dbputfield dbputmemo dbputrec dbseek dbundelete dbuse del deletechoice deletestring destroywindow diskfree disksize div& div double dtoc editbox eof equ equ exp external extstring filepos filesize findfirst findnext findwindow format ftp getactivetab getactivewindow getbvalue getbyte getcheck getclip getcount getcursel getdir getenv getfattr getfdate getfilesize getfocus getftime getgvalue gethandle getkey getline getlinecount getpixel getrvalue getstring getstyle gettext gt gt height hex iconcount if inkey inp inpb input ins insertstring inserttab instr int keyin left len lg list list list% list& listbox listboxitem ln loadfile long longname lower lt lt mcisend mempos menuitem messagebox mid mkstr mod mouse movelisttochoice movelisttoedit movelisttolist movelisttomem movelisttostr mul neq neq new not oct oemtoansi or opencom ord par pi pow postmessage pwd readcom readini rgb right rnd round rtf savefile scankey selectstring sendkey sendmessage sendstring set setactivewindow setbit setcom setcomext setfocus shellexec shortname howwindow sin single sizeof space sqlinit sqr sqrt str string sub substr tab tabchanged tan testbit time tmouse translate trim typeof classof upper usedll val width winexec winexecwait word writecom xor createbutton createcheckbox createchoicebox createdateedit createdefbutton createdialog createedit createextdialog createfont creategroupbox createhscroll createicon createlistbox createmultiedit createradiobutton createrichedit createsortedlistbox createspinedit createstatuswindow createtabctrl createtext createtimeedit createtooltip createvscroll createwindow fileexists direxists filesearch filename filestatus smtp ftp clicked itemid joy iskey get setcomtimeouts PutChar PutLong PutWord GetChar$ GetLong GetWord putbyte CopyPic CopySizedPic GetSelCount GetState MoveListToHandle MoveHandleToList MoveListToArr MoveArrToList MoveListToStr Match db PutWord PutLong PutChar GetWord GetLong GetChar WinError PType LoWord HiWord MakeLong
+
+// Functions2
+KeyWords4: out 186 286 386 486 586 8086 8087 alpha seq code const cref data  err err1 err2 errb errdef errdif erre fardata lall lfcond list model msfloat radix sall sfcond stack type xall xcref xlist curseg filename code codesize datasize const data stack align and assume at b byte comm comment common compact d db dd df dosseg dup fq dt dw dword else end endif endm endp ends eq equ even exitm extrn far ge group h high huge ifdef include includelib irp irpc label large le length low local lt macro mask medium memory name near not o offset or org page para proc public purge q record rept seg segment shl short size shr small stack struc subttl this tiny title type use16 use32 width word xor code data nothing ptr asmstart asmend invoke scall pcall argcl argclc getcl getpercent intdiv intmul intsqrt atodw htodw dwtoa dw2hex dw2ah udw2str ustr2dw ltoa atol bmpbutton exist filesize read_disk_file write_disk_file loadlist malloc free memcopy memfill createmmf closemmf cmpmem szlen szappend szcopy szcmp szcmpi szrev szlower szupper sztrim szltrim szrtrim szcatstr szmulticat szleft szright szremove szmid strlen instring wordreplace getapppath namefrompath getpathonly browseforfolder colordialog fontdialog pagesetupdialog printdialog openfiledialog savefiledialog msgbox inputfile outputfile fcreate fdelete fopen fclose fread fwrite fprint fseek fseteof fsize alloc free endw
+
+// Functions3
+KeyWords5:
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        O O+ P P+ P* I DEFINE UNDEF IFDEF IFNDEF ELSE ENDIF
+CurrLineHighlighted:    1
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00D50000 clWindow B
+Keyword2Col:            $00A89803 clWindow B
+Keyword3Col:            clBlack clWindow B
+Keyword4Col:            clWindowText clWindow B
+Keyword5Col:            clWindowText clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $00A0A0A0 clWindow I
+NumberCol:              $0000B0B0 clWindow
+StringCol:              clRed clWindow
+SymbolCol:              clNavy clWindow
+PreprocessorCol:        $00FF8080 clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00E5E5E5
+
+
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            '*
+BlockEndStr:            '*
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
+
+
+
