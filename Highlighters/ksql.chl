@@ -1,0 +1,63 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// KSQL highlighter, simon_garland@gmx.net
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               KSQL
+Filter:                 KSQL files (*.t)|*.t
+HelpFile:
+CaseSensitive:          1
+LineComment:            /
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z _ 1234567890
+NumConstBegChars:       0..9
+NumConstChars:          0..9 e
+EscapeChar:             
+
+KeyWords1:              insert insert1 insert2 delete update select from where by 
+
+// special variables
+KeyWords2:              current_database current_date current_time current_timestamp current_user
+
+// functions			
+KeyWords3:				KeyWords3:abs add all alter and as asc at avg avgs between
+						case ceiling check coalesce column correlation cos count covariance create
+						cross  default deltas desc deviation
+						distinct drop each eachleft eachright else end enlist exists exp extract
+						fill fills first fkey floor foreign funcs grant having in
+						index intersect into is key keywords last like
+						load log lower max maxs median meta min mins next not
+						null nullif on or prd prds prev primary privileges rand rank
+						ratios references replace reverse rload rowcount rsave save show sin
+						skew sqr sqrt substring sum sumf sums table tables take tan
+						tbls then to trim union update upper values variance vars view
+						views when within 
+
+              
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00C00000 $00FFFFC0
+Keyword2Col:            $00C00000 $00FFC0C0
+Keyword3Col:            clBlack $00C0FFC0
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clBlue clWindow B
+StringCol:              clGreen clWindow
+SymbolCol:              clPurple clWhite B
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+
