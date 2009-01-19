@@ -1,0 +1,375 @@
+Language:               Yana Framework Templates
+
+Description:            Yana Framework template file highlighter written by Thomas Meyer
+
+Filter:                 Template files (*.html)|*.html
+
+HelpFile:
+
+CaseSensitive:          1
+
+LineComment:
+BlockCommentBeg:        [%* <!--
+BlockCommentEnd:        *%] -->
+
+IdentifierBegChars:     % a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+
+
+NumConstBegChars:       $ #
+NumConstChars:          a..z A..Z _ 0..9  . - > [ ]
+
+EscapeChar:
+
+KeyWords1:
+%capture
+%config_load
+%else
+%elseif
+%foreach
+%foreachelse
+%import
+%if
+%include
+%include_php
+%insert
+%ldelim
+%literal
+%php
+%rdelim
+%section
+%sectionelse
+if
+foreach
+section
+
+//  Custom functions
+
+%assign
+%counter
+%cycle
+%debug
+%eval
+%fetch
+%html_options
+%html_select_date
+%html_select_time
+%math
+%popup
+%popup_init
+%textformat
+
+//  YANA functions
+
+%import
+%captcha
+%create
+%sml_load
+%smlLoad
+%embeddedTags
+%smilies
+%preview
+%printArray
+%printUnorderedList
+%rss
+%varDump
+
+KeyWords2:
+ capitalize
+ count_characters
+ count_paragraphs
+ count_sentences
+ count_words
+ date_format
+ default
+ escape
+ indent
+ lower
+ regex_replace
+ replace
+ spacify
+ string_format
+ strip
+ strip_tags
+ truncate
+ upper
+ wordwrap
+ nl2br
+ cat
+
+//  YANA modifiers
+
+ date
+ embeddedTags
+ embeddedtags
+ css
+ url
+
+KeyWords3:
+above
+advance
+all_extra
+assign
+autostatus
+autostatuscap
+background
+below
+bgbackground
+bgcolor
+border
+caparray
+capcolor
+capicon
+caption
+captionfont
+captionsize
+center
+closecolor
+closefont
+closesize
+closetext
+day_extra
+day_format
+day_size
+delay
+delimiter
+direction
+display_days
+display_hours
+display_meridian
+display_minutes
+display_months
+display_seconds
+display_years
+end_year
+equation
+fgbackground
+fgcolor
+field_array
+field_order
+field_separator
+file
+fixx
+fixy
+format
+frame
+from
+fullhtml
+hauto
+height
+hour_extra
+image
+inarray
+indent
+indent_char
+indent_first
+item
+key
+layout
+left
+loop
+max
+meridian_extra
+minute_extra
+minute_interval
+month_extra
+month_format
+month_size
+month_value_format
+name
+noclose
+offsetx
+offsety
+once
+options
+output
+padx
+pady
+prefix
+print
+reverse_years
+right
+scope
+script
+second_extra
+second_interval
+section
+selected
+show
+skip
+snapx
+snapy
+start
+start_year
+status
+step
+sticky
+stop
+style
+text
+textcolor
+textfont
+textsize
+time
+timeout
+trigger
+use_24_hours
+value
+values
+var
+vauto
+width
+wrap
+wrap_char
+wrap_cut
+year_as_text
+year_extra
+year_size
+dump
+keys_as_href
+
+// HTML tags
+KeyWords4:
+!DOCTYPE
+a
+abbr
+acronym
+address
+applet
+area
+b
+base
+basefont
+bgsound
+bdo
+big
+blink
+blockquote
+body
+br
+button
+caption
+center
+cite
+code
+col
+colgroup
+comment
+dd
+del
+dfn
+dir
+div
+dl
+dt
+em
+embed
+fieldset
+font
+form
+frame
+frameset
+h
+h1
+h2
+h3
+h4
+h5
+h6
+head
+hr
+hta:application
+html
+i
+iframe
+img
+input
+ins
+isindex
+kbd
+label
+legend
+li
+link
+listing
+map
+marquee
+menu
+meta
+multicol
+nextid
+nobr
+noframes
+noscript
+object
+ol
+optgroup
+option
+p
+param
+plaintext
+pre
+q
+s
+samp
+script
+select
+server
+small
+sound
+spacer
+span
+strike
+strong
+style
+sub
+sup
+table
+tbody
+td
+textarea
+textflow
+tfoot
+th
+thead
+title
+tr
+tt
+u
+ul
+var
+wbr
+xmp
+
+
+StringBegChar:          " ' <[CDATA[
+StringEndChar:          " ' ]]>
+MultilineStrings:       0
+
+
+UsePreprocessor:        0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $009A260A clWindow B
+Keyword2Col:            clNavy clWindow B
+Keyword3Col:            clPurple clWindow B
+IdentifierCol:          $00707070 clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clBlue clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clBlack clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+MatchedBracesCol:       $004040FF $0080FFFF
+
+
+BlockAutoindent:        1
+BlockBegStr:            [%
+BlockEndStr:            %]
+
+
+CurrLineHighlighted:    0
+OverrideTxtFgColor:     0
+Keyword4Col:            $00707070 clWindow B
+Keyword5Col:            $008080FF clWindow
+PreprocessorCol:        clWindowText clWindow
