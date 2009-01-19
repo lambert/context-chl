@@ -1,0 +1,204 @@
+//////////////////////////////////////////////////////////////////////////////
+//LDIF highlighter written by Ulrich Walcher
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               LDIF
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+
+
+Filter:                 LDAP Data Interchange Format files (*.ldif)|*.ldif
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            -- #
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldnt be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _ 0..9 ? @ ( ) + -
+IdentifierChars:        a..z A..Z _ 0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldnt be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldnt be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:			
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// identifier
+
+KeyWords1:              dn
+
+// objectclass
+
+KeyWords2:              alias country locality organization organizationalUnit person organizationalPerson
+				organizationalRole groupOfNames residentialPerson applicationProcess applicationEntity
+				dSA device strongAuthenticationUser certificationAuthority groupOfUniqueNames
+				userSecurityInformation certificationAuthority-V2 cRLDistributionPoint dmd
+				pkiCA deltaCRL labeledURI labeledURIObject uid userid mail rfc822Mailbox
+				simpleSecurityObject dc domainComponent dcObject uidObject associatedDomain
+				email emailAddress pkcs9email top
+
+				inetOrgPerson
+
+				posixAccount shadowAccount posixGroup ipService ipProtocol oncRpc ipHost ipNetwork
+				nisNetgroup memberNisNetgroup nisMap nisObject ieee802Device bootableDevice
+
+// attributetype
+
+KeyWords3:			objectClass aliasedObjectName aliasedEntryName knowledgeInformation cn commonName sn
+				surname serialNumber c countryName l localityName st stateOrProvinceName street
+				streetAddress o organizationName ou organizationalUnitName title description searchGuide
+				businessCategory postalAddress postalCode postOfficeBox physicalDeliveryOfficeName
+				telephoneNumber telexNumber teletexTerminalIdentifier facsimileTelephoneNumber fax x121Address
+				internationaliSDNNumber registeredAddress destinationIndicator preferredDeliveryMethod
+				presentationAddress supportedApplicationContext member owner roleOccupant seeAlso userPassword
+				userCertificate cACertificate authorityRevocationList certificateRevocationList
+				crossCertificatePair name givenName gn initials generationQualifier x500UniqueIdentifier
+				dnQualifier enhancedSearchGuide protocolInformation distinguishedName uniqueMember houseIdentifier
+				supportedAlgorithms deltaRevocationList dmdName
+
+				carLicense departmentNumber displayName employeeNumber employeeType jpegPhoto preferredLanguage
+				userSMIMECertificate userPKCS12
+
+				uidNumber gidNumber gecos homeDirectory loginShell shadowLastChange shadowMin shadowMax
+				shadowWarning shadowInactive shadowExpire shadowFlag memberUid memberNisNetgroup
+				nisNetgroupTriple ipServicePort ipServiceProtocol ipProtocolNumber oncRpcNumber
+				ipHostNumber ipNetworkNumber ipNetmaskNumber macAddress bootParameter bootFile
+				nisMapName nisMapEntry 
+
+
+//  private attributetypes (non RFC)
+
+KeyWords4:              telephoneNumberPlain facsimileTelephoneNumberPlain mobileNumber mobileNumberPlain
+				privateNumber privateNumberPlain
+                       
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          '
+StringEndChar:          '
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, # and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clBlack clWindow
+Keyword1Col:            clRed clWindow
+Keyword2Col:            clGreen clWindow
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clBlack clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              clBlack clWindow
+StringCol:              $00A0A0A0 clWindow
+SymbolCol:              $00C00000 clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00C0FFFF
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword4Col:            clNavy clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
