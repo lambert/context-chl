@@ -1,0 +1,58 @@
+////////////////////////////////////
+//
+// Lua highlighter for ConText
+// By Marco Pontello
+//    marcopon at myrealbox.com
+//    http://mark0.ngi.it
+//
+//                   25/01/2004
+//
+//
+// "Lua is a powerful light-weight
+// programming language designed
+// for extending applications"
+//
+// http://www.lua.org
+//
+////////////////////////////////////
+
+Language:               Lua
+Filter:                 Lua (*.lua)|*.lua
+HelpFile:
+CaseSensitive:          1
+LineComment:            --
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 #abcdefABCDEF
+EscapeChar:
+
+KeyWords1:              and break do else elseif
+                        end false for function if
+                        in local nil not or
+                        repeat return then true until while
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clMaroon clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+
