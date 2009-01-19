@@ -1,0 +1,71 @@
+////////////////////////////
+//
+// wxBasic
+//
+////////////////////////////
+
+Language:               wxBasic
+Filter:                 wxBasic programs (*.wxb)|*.wxb
+HelpFile:
+
+CaseSensitive:          0
+LineComment:            '
+LineComment			//
+
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _
+
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// keywords
+KeyWords1:              And Append Argv As Case Close Common Connect Const
+				Continue Declare Delete Dim Each Else ElseIf
+				End Erase Exit Explicit  
+				fClose fGets FileExists  fOpen For fPuts FreeFile Function
+				Global If In Include Input Inv Line 
+				New Next NoConsole Not Open Option Or
+				Output Print QBasic Randomize ReadByte Return Select Shared Shell Shl
+				Shr Step Sub Then To Until
+				Wend While WriteByte Xor
+
+
+
+// functions
+KeyWords2:              Abs ACos AndBits ASin ATan Asc Chr$ Cos Date$ Eof Fix Frac Floor Hex$
+				Indexes Instr Int LBound LCase$ Left$ Len Length  Loc Lof Log 
+				LTrim$ Mid$ Mod NotBits OrBits Reverse$ Right$ RInstr Rnd Round RTrim$ Seek Sgn
+				Sin Space$ Sqr Str$ String$ Tan Ticks Time$ TypeOf$
+				UBound UCase$ Val XorBits				
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow I
+
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clRed clWindow
+NumberCol:              clBlack clWindow
+StringCol:              clGreen clWindow I
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+OverrideTxtFgColor:     0
+
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
+
