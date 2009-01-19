@@ -1,0 +1,48 @@
+///////////////////////////////////////////////////////////////////////////////////////////
+//
+// Visual Basic .NET (VB.NET) highlighter written by Kresimir Grozdek, kresimir@algebra.hr
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+
+Language:               VB NET
+Filter:                 VB NET files (*.vb)|*.vb
+HelpFile:
+CaseSensitive:          1
+LineComment:            '
+BlockCommentBeg:         
+BlockCommentEnd:        '
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             0
+
+KeyWords1:              #If #End If #End #ElseIf #Else #Const Boolean Byte Char Date Decimal Double Integer Long Object Short Single String Exception AppActivate Beep Call ChDir ChDrive Class Declare Delegate DeleteSetting Dim Do Loop End Enum Error Event Exit Each Function Goto Overloads Overrides CantOverride MustOverride Protected Implements Imports Inherits Interface Kill Lock UnLock Mid MidB Namespace Open Option Compare Explicit Strict Print Private Property Public Put RaiseEvent Randomize ReDim Rem Reset Resume SaveSetting Seek Select Case SetAttr Stop Sub SyncLock TimeOfDay Try Catch Finally Structure Width With Write Addhandler As Assembly Auto BeginEpilogue Binary ByRef ByVal Const Else Empty EndPrologue Error ExternalSource For Friend Get Handles Input Is Len Let Lock Me Mid Module MustInherit MyBase MyClass New Next Nothing NotInheritable NotOverridable Null Off On Option Optional Overridable ParamArray Print Private Property Public ReadOnly RemoveHandler Resume Seek Step String Then Throw Time To WithEvents WriteOnly ElseIf EndIf Height In Return Set Shared Type TypeOf Until While AddressOf And BitAnd BitNot BitOr BitXor Is Like Mod Not Or Xor Abs Array Asc AscB AscW Atn CallByName CBool CByte CChar CChr CDate CDbl CDec Choose Chr Chr$ ChrB ChrB$ ChrW CInt CLng CLng8 Close CObj Command Command$ Cos CreateObject CShort CSng CStr CurDir CType CVDate CVErr DateAdd DateDiff DatePart DateSerial DateValue Day DDB Dir Dir$ EOF Error Error$ Exp FileAttr FileCopy FileDateTime FileLen Filter Fix Format Format$ FormatCurrency FormatDateTime FormatNumber FormatPercent FreeFile FV Get GetAllSettings GetAttr GetObject GetSetting Hex Hex$ Hour If IMEStatus Input Input$ InputB InputB$ InputBox InStr InStrB InstrRev Int IPmt IRR IsArray IsDate IsEmpty IsError IsNull IsNumeric IsObject Join LBound LCase LCase$ Left Left$ LeftB LeftB$ Len LenB LineInput Loc LOF Log LTrim LTrim$ Mid Mid$ MidB MidB$ Minute MIRR MkDir Month MonthName MsgBox Now NPer NPV Oct Oct$ Partition Pmt PPmt PV Rate Replace Right Right$ RightB RightB$ RmDir Rnd RTrim RTrim$ Second Seek Sgn Shell Sin SLN Space Space$ Spc Split Sqr Str Str$ StrComp StrConv String$ StrReverse Switch SYD Tab Tan TimeOfDay Timer TimeSerial TimeValue DateTime Today Trim Trim$ TypeName UBound UCase UCase$ Val Weekday WeekdayName Year Method Black Red Green Yellow Blue Magenta Cyan White BinaryCompare TextCompare Win16 Win32 UseSystemDayOfWeek Sunday Monday Tuesday Wednesday Thursday Friday Saturday Jan1 FirstFourDays FirstFullWeek GeneralDate LongDate ShortDate LongTime ShortTime Normal ReadOnly Hidden Volume Directory Archive KeyLButton KeyRButton KeyCancel KeyMButton KeyBack KeyTab KeyClear KeyReturn KeyShift KeyControl KeyMenu KeyPause KeyCapital KeyEscape KeySpace KeyPageUp KeyPageDown KeyEnd KeyHome KeyLeft KeyUp KeyRight KeyDown KeySelect KeyPrint KeyExecute KeySnapshot KeyInsert KeyDelete KeyHelp KeyNumlock KeyA KeyB KeyC KeyD KeyE KeyF KeyG KeyH KeyI KeyJ KeyK KeyL KeyM KeyN KeyO KeyP KeyQ KeyR KeyS KeyT KeyU KeyV KeyW KeyX KeyY KeyZ Key0 Key1 Key2 Key3 Key4 Key5 Key6 Key7 Key8 Key9 KeyNumpad0 KeyNumpad1 KeyNumpad2 KeyNumpad3 KeyNumpad4 KeyNumpad5 KeyNumpad6 KeyNumpad7 KeyNumpad8 KeyNumpad9 KeyMultiply KeyAdd KeySeparator KeySubtract KeyDecimal KeyDivide KeyF1 KeyF2 KeyF3 KeyF4 KeyF5 KeyF6 KeyF7 KeyF8 KeyF9 KeyF10 KeyF11 KeyF12 KeyF13 KeyF14 KeyF15 KeyF16 CrLf Cr Lf NewLine NullChar NullString ObjectError Tab Back FormFeed VerticalTab OKOnly OKCancel AbortRetryIgnore YesNoCancel YesNo RetryCancel Critical Question Exclamation Information DefaultButton1 DefaultButton2 DefaultButton3 ApplicationModal SystemModal MsgBoxSetForeground MsgBoxRight MsgBoxRtlReading OK Cancel Abort Retry Ignore Yes No Hide NormalFocus MinimizedFocus MaximizedFocus NormalNoFocus MinimizedNoFocus WindowsFolder SystemFolder TemporaryFolder UpperCase LowerCase ProperCase Wide Narrow Katakana Hiragana Unicode FromUnicode ScrollBars Desktop ActiveTitleBar InactiveTitleBar MenuBar WindowBackground WindowFrame MenuText WindowText TitleBarText ActiveBorder InactiveBorder ApplicationWorkspace Highlight HighlightText ButtonFace ButtonShadow GrayText ButtonText InactiveCaptionText 3DHighlight 3DDKShadow 3DLight InfoText InfoBackground true false Default
+
+KeyWords2:              TextStream Folders Folder FileSystemObject Files File Err Drives Drive Dictionary Debug Collection ADO Assemblies Bases Binary Code CodeDOM CodeModel Collections Compiler ComponentModel ComponentModel Configuration Console Core Cryptography Data Description Design Diagnostics DirectoryServices Discovery DOM Drawing Drawing2D Emit Expando Formatters Globalization HtmlControls Imaging Install Interceptors Internal InterOpServices IO IsolatedStorage ListControls Messaging Microsoft Net NewXML Permissions Policy Principalv Printing Protocols Reflection RegularExpressions Remoting Resources Runtime Schema Security Serialization ServiceProcess Services SQL SQLTypes SymbolStore System Text Threading Timers UI VisualBasic Web WebControls Win32 WinForms X509Certificates Xml XPath Xsl XSLT
+
+KeyWords3:
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
