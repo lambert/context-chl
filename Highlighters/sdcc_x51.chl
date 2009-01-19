@@ -1,0 +1,110 @@
+// CC5X PIC C Compiler highlighter written by Leandro Daniel Huff - leandrohuff@gmail.com
+
+Language:           SDCC x51
+Description:        SDCC x51 Compiler Highlighter
+// default is *.c and *.h but conflict with standard C/C++ file extension
+Filter:                 SDCC_x51 files (*.c,*.sdc,*.h,*.hdc)|*.c;*.cdc;*.h;*.hdc
+HelpFile:
+CaseSensitive:      1
+LineComment:        //
+BlockCommentBeg:    /*
+BlockCommentEnd:    */
+IdentifierBegChars: a..z A..Z _
+IdentifierChars:    a..z A..Z _ 0..9
+NumConstBegChars:   0..9
+NumConstChars:      0..9 abcdefhABCDEFH xX
+EscapeChar:
+
+
+
+// Reserved words
+
+KeyWords1:
+
+      _asm _endasm break case continue default do else enum for goto
+      if pragma return struct switch typedef union while sizeof
+
+// PIC Instructions used in #asm ... #endasm statements
+
+      add addc subb inc dec mul mov div da anl orl xrl clr
+      rl rlc rr rrc swap movc movx push pop xch xchd setb
+      cpl orl jc jnc jb jnb jbc acall lcall ret reti ajmp
+      ljmp sjmp jmp jz jnz cjne djnz nop
+
+
+
+// Types variables
+
+KeyWords2:
+
+      void bit char int float pointer
+
+
+
+// Supported type modifiers
+
+KeyWords3:
+
+      auto const extern global long register short signed static unsigned volatile at
+      data near xdata far idata pdata code sfr sfr16 sfr32 sbit reentrant interrupt
+      critical _naked using double
+
+
+
+
+// PIC File Registers to [12F629,16F628A,16F684,16F876A]
+
+KeyWords4:
+
+      P0 SP DPL DP0L DPH DP0H DP1L DP1H SPDR PCON
+      TCON TMOD TL0 TL1 TH0 TH1 P1 WMCON SCON SBUF
+      P2 IE SPSR P3 IP T2CON T2MOD PSW ACC B A 
+      RCAP2L RCAP2H
+
+
+
+// Pic File Bits to [12F629,16F628A,16F684,16F876A]
+
+KeyWords5:
+
+      P0_0 P0_1 P0_2 P0_3 P0_4 P0_5 P0_6 P0_7
+      IT0 IE0 IT1 IE1 TR0 TF0 TR1 TF1
+      P1_0 P1_1 P1_2 P1_3 P1_4 P1_5 P1_6 P1_7
+      RI TI RB8 TB8 REN SM2 SM1 SM0
+      P2_0 P2_1 P2_2 P2_3 P2_4 P2_5 P2_6 P2_7
+      EX0 ET0 EX1 ET1 ES EA
+      P3_0 P3_1 P3_2 P3_3 P3_4 P3_5 P3_6 P3_7
+      RXD TXD INT0 INT1 T0 T1 WR RD
+      PX0 PT0 PX1 PT1 PS
+      P F1 OV RS0 RS1 F0 AC CY
+      IDL PD GF0 GF1 SMOD T0_M0 T0_M1 T0_CT
+      T0_GATE T1_M0 T1_M1 T1_CT T1_GATE
+      T0_MASK T1_MASK ACC_0 ACC_1 ACC_2 ACC_3
+      ACC_4 ACC_5 ACC_6 ACC_7
+
+
+
+StringBegChar:       " '
+StringEndChar:       " '
+MultilineStrings:    0
+UsePreprocessor:     1
+CurrLineHighlighted:    0
+SpaceCol:               clWhite clWindow
+Keyword1Col:            clBlue clWindow B
+Keyword2Col:            $00FC8E07 clWindow
+Keyword3Col:            $009B34F8 clWindow
+Keyword4Col:            $004040FF clWindow
+Keyword5Col:            $00FF8080 clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $0061B107 clWindow I
+NumberCol:              clGreen clWindow
+StringCol:              clBlue clAqua
+SymbolCol:              clFuchsia clWindow
+PreprocessorCol:        clRed clWindow
+SelectionCol:           clWindowText $00C0FFC0
+CurrentLineCol:         clBlack $00EAFFFE
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+MatchedBracesCol:       clWindowText clYellow
