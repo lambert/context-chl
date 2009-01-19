@@ -1,0 +1,672 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// MAYA 8.0 MEL (Maya Embedded Language)
+// ConText highlighter
+// written by Mark Feller, 15.01.2007, mark.feller@gmx.de
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Mel (Maya)
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 MEL files (*.mel)|*.mel
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+// Put your path here!!!
+
+HelpFile:               
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the EOL
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+//
+// if there is more than one definition of line/beg/end comment string,
+// you can separate it with spaces.
+// for example, for pascal it would be:
+//   LineComment:       //
+//   BlockCommentBeg:   (* {
+//   BlockCommentEnd:   *) }
+
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _ - ;
+IdentifierChars:        a..z A..Z _ 0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       $
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          a..z A..Z _ 0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:                 \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+
+KeyWords1:  false float int matrix no off on string true vector yes
+
+KeyWords2:  ; break case continue default do else for if in while
+
+KeyWords3:  about abs addAttr addAttributeEditorNodeHelp addDynamic addNewShelfTab addPP
+            addPrefixToName advanceToNextDrivenKey affectedNet affects aimConstraint air
+            aliasAttr align alignCtx alignCurve alignSurface allViewFit ambientLight angle
+            angleBetween animCone animCurveEditor animDisplay animView annotate
+            appendStringArray applicationName applyAttrPreset applyTake arclen
+            arcLenDimContext arcLengthDimension arrayMapper art3dPaintCtx artAttrCtx
+            artAttrPaintVertexCtx artAttrSkinPaintCtx artAttrTool artBuildPaintMenu
+            artFluidAttrCtx artPuttyCtx artSelectCtx artSetPaintCtx artUserPaintCtx
+            assignCommand assignInputDevice assignViewportFactories attachCurve
+            attachDeviceAttr attachSurface attrColorSliderGrp attrCompatibility
+            attrControlGrp attrEnumOptionMenu attrEnumOptionMenuGrp attrFieldGrp
+            attrFieldSliderGrp attributeExists attributeInfo attributeMenu attributeQuery
+            attrNavigationControlGrp attrPaintCtx attrPresetEditWin autoKeyframe autoPlace
+            
+            bakeClip bakeFluidShading bakePartialHistory bakeResults bakeSimulation
+            basename basenameEx batchRender bessel bevel bevelPlus bindPose bindSkin
+            binMembership blend2 blendShape blendShapeEditor blendShapePanel blendTwoAttr
+            blindDataType boneLattice boundary boxDollyCtx boxZoomCtx bufferCurve
+            buildBookmarkMenu buildKeyframeMenu button buttonManip 
+            
+            cacheFile
+            cacheFileCombine cacheFileMerge camera cameraView canCreateManip canvas
+            capitalizeString catchQuiet CBG ceil changeSubdivComponentDisplayLevel
+            changeSubdivRegion channelBox character characterize characterMap
+            characterOutlineEditor chdir checkBox checkBoxGrp checkDefaultRenderGlobals
+            choice circle circularFillet clamp clear clearCache clip clipEditor
+            clipEditorCurrentTimeCtx clipSchedule clipSchedulerOutliner clipTrimBefore
+            closeCurve closeSurface cluster cmdFileOutput cmdList cmdScrollFieldExecuter
+            cmdScrollFieldReporter cmdShell coarsenSubdivSelectionList collision color
+            colorAtPoint colorEditor colorIndex colorIndexSliderGrp colorSliderButtonGrp
+            colorSliderGrp columnLayout commandEcho commandLine commandPort commonPaintCtx
+            compactHairSystem componentEditor compositingInterop computePolysetVolume
+            condition cone confirmDialog connectAttr connectControl connectDynamic
+            connectionInfo connectJoint constrain constrainValue constructionHistory
+            contextInfo control convertFromOldLayers convertIffToPsd convertLightmap
+            convertSolidTx convertTessellation convertUnit copyArray copyFlexor copyKey
+            copySkinWeights cos cpButton cpCache cpClothSet cpCollision cpConstraint
+            cpConvClothToMesh cpForces cpGetSolverAttr cpPanel cpProperty
+            cpRigidCollisionFilter cpSeam cpSetEdit cpSetSolverAttr cpSolver cpSolverTypes
+            cpTool cpUpdateClothUVs createDisplayLayer createDrawCtx createEditor
+            createLayeredPsdFile createMotionField createNewShelf createNode
+            createRenderLayer createSubdivRegion cross crossProduct ctxAbort ctxCompletion
+            ctxEditMode ctxTraverse currentCtx currentTime currentTimeCtx currentUnit curve
+            curveAddPtCtx curveCVCtx curveEditorCtx curveEPCtx curveIntersect
+            curveMoveEPCtx curveOnSurface curveSketchCtx cutKey cycleCheck cylinder 
+            
+            dagPose
+            date dateString defaultLightListCheckBox defaultNavigation defineDataServer
+            defineVirtualDevice deformer deg_to_rad delete deleteAttr
+            deleteShadingGroupsAndMaterials deleteShelfTab deleteUI deleteUnusedBrushes
+            delrandstr detachCurve detachDeviceAttr detachSurface deviceEditor devicePanel
+            dgdirty dgeval dgInfo dgtimer dimWhen directionalLight directKeyCtx dirmap
+            dirname disable disconnectAttr disconnectJoint diskCache displacementToPoly
+            displayAffected displayAllWindows displayColor displayCull displayLevelOfDetail
+            displayPref displayRGBColor displaySmoothness displayStats displaySurface
+            distanceDimContext distanceDimension doBlur docServer dolly dollyCtx
+            dopeSheetEditor dot dotProduct doubleProfileBirailSurface drag dragAttrContext
+            draggerContext dropoffLocator duplicate duplicateCurve duplicateSurface
+            dynamicLoad dynCache dynControl dynExport dynExpression dynGlobals
+            dynPaintEditor dynParticleCtx dynPref dynRelEditor dynRelEdPanel 
+            
+            editAttrLimits
+            editDisplayLayerGlobals editDisplayLayerMembers editor editorTemplate
+            editRenderLayerAdjustment editRenderLayerGlobals editRenderLayerMembers
+            effector emit emitter enableDevice encodeString endString endsWith env
+            equivalent equivalentTol erf error eval evalDeferred evalEcho event
+            exactWorldBoundingBox exampleUI exclusiveLightCheckBox exec
+            executeForEachObject exists exp exportComposerCurves expression
+            expressionEditorListen extendCurve extendSurface extrude 
+            
+            fcheck fclose
+            feedbackMapDirtyAttr feof fflush fgetline fgetword file fileBrowserDialog
+            fileDialog fileExtension fileInfo filetest filletCurve filter filterCurve
+            filterExpand filterStudioImport findAllIntersections findAnimCurves finder
+            findKeyframe findMenuItem findRelatedSkinCluster firstParentOf fitBspline
+            flexor floatArrayEq floatEq floatField floatFieldGrp floatScrollBar floatSlider
+            floatSlider2 floatSliderButtonGrp floatSliderGrp floor flow fluidCacheInfo
+            fluidEmitter fluidVoxelInfo flushUndo fmod fontDialog fopen format formatPrint
+            formLayout fprint frameLayout fread freeFormFillet frewind fromNativePath
+            fwrite 
+            
+            gamma gauss geometryConstraint getApplicationVersionAsFloat getAttr
+            getClassification getDefaultBrush getenv getFileList getFluidAttr
+            getHairFeedbackNode getInputDeviceRange getMapNameForAttr getMayaPanelTypes
+            getModifiers getPanel getParticleAttr getpid globalStitch glRender
+            glRenderEditor gmatch goal gotoBindPose grabColor gradientControl
+            gradientControlNoAttr graphDollyCtx graphSelectContext graphTrackCtx gravity
+            grid gridLayout group groupObjectsByName 
+            
+            hardenPointCurve hardware
+            hardwareRenderPanel headsUpDisplay headsUpMessage help helpLine hermite
+            HfAddAttractorToAS HfAssignAS HfBuildEqualMap HfBuildFurFiles HfBuildFurImages
+            HfCancelAFR HfConnectASToHF HfCreateAttractor HfDeleteAS HfEditAS
+            HfPerformCreateAS HfRemoveAttractorFromAS HfSelectAttached HfSelectAttractors
+            HfUnAssignAS hide hilite hitTest hotBox hotkey hotkeyCheck hsv_to_rgb hudButton
+            hudSlider hudSliderButton hwReflectionMap hwRender hwRenderLoad hyperGraph
+            hyperPanel hyperShade hypot 
+            
+            iconTextButton iconTextCheckBox iconTextRadioButton
+            iconTextRadioCollection iconTextScrollList iconTextStaticLabel
+            ikfkDisplayMethod ikHandle ikHandleCtx ikHandleDisplayScale ikSolver
+            ikSplineHandleCtx ikSystem ikSystemInfo illustratorCurves image imfPlugins
+            importComposerCurves inheritTransform insertJoint insertJointCtx insertKeyCtx
+            insertKnotCurve insertKnotSurface instance instanceable instancer internalVar
+            intersect interToUI intField intFieldGrp intScrollBar intSlider intSliderGrp
+            iprEngine isAnimCurve isConnected isDirty isolateSelect isParentOf isSameObject
+            isTrue isValidObjectName isValidString isValidUiName itemFilter itemFilterAttr
+            itemFilterRender itemFilterType 
+            
+            joint jointCluster jointCtx jointDisplayScale
+            jointLattice 
+            
+            keyframe keyframeOutliner keyframeRegionCurrentTimeCtx
+            keyframeRegionDirectKeyCtx keyframeRegionDollyCtx keyframeRegionInsertKeyCtx
+            keyframeRegionMoveKeyCtx keyframeRegionScaleKeyCtx keyframeRegionSelectKeyCtx
+            keyframeRegionSetKeyCtx keyframeRegionTrackCtx keyframeStats keyTangent
+            
+            lassoContext lattice latticeDeformKeyCtx launch launchImageEditor layerButton
+            layeredShaderPort layeredTexturePort layout layoutDialog lightlink lightList
+            lightListEditor lightListPanel linearPrecision lineIntersection linstep
+            listAllMenus listAnimatable listAttr listCameras listConnections
+            listDeviceAttachments listerEditor listHistory listInputDeviceAxes
+            listInputDeviceButtons listInputDevices listMenuAnnotation listNodeTypes
+            listRelatives listSets listThisMenu listTransforms listUnselected loadFluid
+            loadNewShelf loadPlugin loadPrefObjects lockNode loft log longNameOf lookThru
+            ls lsThroughFilter lsType lsUI 
+            
+            mag makebot makeIdentity makeLive makePaintable
+            makeRoll makeSingleSurface makeTubeOn manipMoveContext manipMoveLimitsCtx
+            manipOptions manipRotateContext manipRotateLimitsCtx manipScaleContext
+            manipScaleLimitsCtx marker match max Mayatomr memory menu menuBarLayout
+            menuEditor menuItem menuItemToShelf menuSet menuSetPref messageLine min
+            minimizeApp mirrorJoint modelCurrentTimeCtx modelEditor modelPanel mouse move
+            moveIKtoFK moveKeyCtx moveVertexAlongDirection movIn movOut
+            multiProfileBirailSurface mute 
+            
+            nameCommand nameField namespace namespaceInfo
+            newCluster newPanelItems newton nodeIconButton nodeOutliner nodePreset nodeType
+            noise nonLinear normalConstraint normalize nurbsBoolean nurbsCopyUVSet
+            nurbsCube nurbsEditUV nurbsPlane nurbsSelect nurbsSquare nurbsToPoly
+            nurbsToPolygonsPref nurbsToSubdiv nurbsViewDirectionVector 
+            
+            objectCenter
+            objectLayer objectType objectTypeUI objExists obsoleteProc
+            oceanNurbsPreviewPlane offsetCurve offsetCurveOnSurface openGLExtension
+            openMayaPref optionMenu optionMenuGrp optionVar orbit orbitCtx orientConstraint
+            outlinerEditor outlinerPanel overrideModifier 
+            
+            paintEffectsDisplay pairBlend
+            palettePort panel paneLayout panelConfiguration panelHistory paramDimContext
+            paramDimension paramLocator parent parentConstraint particle particleExists
+            particleInstancer particleRenderInfo partition pasteKey pathAnimation pause
+            pclose percent performanceOptions pfxstrokes pickWalk picture pixelMove
+            planarSrf plane play playbackOptions playblast plugAttr pluginInfo plugNode
+            pointConstraint pointCurveConstraint pointLight pointMatrixMult pointOnCurve
+            pointOnSurface pointPosition poleVectorConstraint polyAppend polyAppendFacetCtx
+            polyAppendVertex polyAutoProjection polyAverageNormal polyAverageVertex
+            polyBevel polyBlendColor polyBlindData polyBoolOp polyBridgeEdge
+            polyCacheMonitor polyCheck polyChipOff polyClipboard polyCloseBorder
+            polyCollapseEdge polyCollapseFacet polyColorBlindData polyColorPerVertex
+            polyColorSet polyCompare polyCone polyCopyUV polyCreaseCtx polyCreaseEdge
+            polyCreateFacet polyCreateFacetCtx polyCube polyCut polyCutCtx polyCylinder
+            polyCylindricalProjection polyDelEdge polyDelFacet polyDelVertex
+            polyDuplicateAndConnect polyDuplicateEdge polyEditUV polyEditUVShell
+            polyEvaluate polyExtrudeEdge polyExtrudeFacet polyFlipEdge polyFlipUV
+            polyForceUV polyGeoSampler polyHelix polyInfo polyInstallAction polyLayoutUV
+            polyListComponentConversion polyMapCut polyMapDel polyMapSew polyMapSewMove
+            polyMergeEdge polyMergeEdgeCtx polyMergeFacet polyMergeFacetCtx polyMergeUV
+            polyMergeVertex polyMirrorFace polyMoveEdge polyMoveFacet polyMoveFacetUV
+            polyMoveUV polyMoveVertex polyNormal polyNormalizeUV polyNormalPerVertex
+            polyOptions polyOutput polyPipe polyPlanarProjection polyPlane
+            polyPlatonicSolid polyPoke polyPrism polyProjection polyPyramid polyQuad
+            polyQueryBlindData polyReduce polySelect polySelectConstraint
+            polySelectConstraintMonitor polySelectCtx polySelectEditCtx polySeparate
+            polySetToFaceNormal polySewEdge polyShortestPathCtx polySmooth polySoftEdge
+            polySphere polySphericalProjection polySplit polySplitCtx polySplitEdge
+            polySplitRing polySplitVertex polyStraightenUVBorder polySubdivideEdge
+            polySubdivideFacet polySuperCtx polyTorus polyToSubdiv polyTransfer
+            polyTriangulate polyUnite polyUVSet polyWedgeFace popen popupMenu pose pow
+            preloadRefEd print printMemory progressBar progressWindow projectCurve
+            projectionContext projectionManip projectLight projectLightEditor
+            projectTangent projFileViewer promptDialog propModCtx propMove
+            psdChannelOutliner psdEditTextureFile psdExport psdTextureFile putenv puttyCtx
+            pwd 
+            
+            querySubdiv quit 
+            
+            rad_to_deg radial radioButton radioButtonGrp
+            radioCollection radioMenuItemCollection rampColorPort rand randomizeFollicles
+            randstate rangeControl readTake rebuildCurve rebuildSurface recordAttr
+            recordDevice redo reference referenceEdit referenceQuery
+            refineSubdivSelectionList refresh refreshAE rehash reloadImage removeJoint
+            removeMultiInstance rename renameAttr renameSelectionList renameUI render
+            renderer renderGlobalsNode renderInfo renderLayerButton renderLayerPostProcess
+            renderManip renderPartition renderQualityNode renderSettings
+            renderThumbnailUpdate renderWindowEditor renderWindowSelectContext reorder
+            reorderDeformers requires reroot resampleFluid resetAE resetPfxToPolyCamera
+            resetTool resolutionNode retarget reverseCurve reverseSurface revolve
+            rgb_to_hsv rigidBody rigidSolver roll rollCtx rootOf rot rotate
+            rotationInterpolation roundConstantRadius rowColumnLayout rowLayout
+            runAllShelfItems runTimeCommand runup 
+            
+            sampleImage saveAllShelves saveAttrPreset
+            saveFluid saveImage saveInitialState saveMenu savePrefObjects savePrefs
+            saveShelf saveToolSettings scale scaleBrushBrightness scaleComponents
+            scaleConstraint scaleKey scaleKeyCtx sceneEditor sceneUIReplacement scmh
+            scriptCtx scriptEditorInfo scriptedPanel scriptedPanelType scriptJob scriptNode
+            scriptTable scrollField scrollLayout sculpt searchPathArray seed select
+            selectContext selectedNodes selectionConnection selectKey selectKeyCtx
+            selectKeyframeRegionCtx selectMode selectPref selectPriority selectType
+            selLoadSettings separator setAttr setAttrMapping setConstraintRestPosition
+            setDefaultShadingGroup setDrivenKeyframe setDynamic setEditCtx setEditor
+            setEditPaintCtx setEscapeCtx setFluidAttr setFocus setInfinity
+            setInputDeviceMapping setKeyCtx setKeyframe setKeyPath setMenuMode
+            setNodeTypeFlag setParent setParticleAttr setPfxToPolyCamera setProject sets
+            setStampDensity setStartupMessage setState setToolTo setUITemplate
+            setXformManip shadingConnection shadingGeometryRelCtx shadingGroupDialogDaemon
+            shadingLightRelCtx shadingNetworkCompare shadingNode shapeCompare shelfButton
+            shelfLayout shelfTabLayout shellField shelveAllMenuItems shelveMenuItems
+            shelveThisMenu shortNameOf showHelp showHidden showManipCtx
+            showSelectionInTitle showShadingGroupAttrEditor showWindow sign simplify sin
+            singleProfileBirailSurface size skinCluster skinPercent smoothCurve smoothstep
+            smoothTangentSurface snap2to2 snapKey snapMode snapshot snapTogetherCtx soft
+            softModCtx sort sound soundControl spaceLocator sphere sphrand spotLight
+            spotLightPreviewPort spreadSheetEditor spring sqrt squareSurface srtContext
+            stackTrace startString startsWith stitchAndExplodeShell stitchSurface
+            stitchSurfacePoints strcmp stringArrayCatenate stringArrayContains
+            stringArrayCount stringArrayIntersector stringArrayRemove
+            stringArrayRemoveDuplicates stringArrayRemoveExact stringArrayToString
+            stringToStringArray strip stripPrefixFromName stroke subdAutoProjection
+            subdCleanTopology subdCollapse subdDuplicateAndConnect subdEditUV subdiv
+            subdivCrease subdivDisplaySmoothness subdListComponentConversion subdMapCut
+            subdMapSewMove subdMatchTopology subdMirror subdToBlind subdToPoly
+            subdTransferUVsToCache substitute substituteAllString substituteGeometry
+            substring superCtx surface surfacePaintCtx surfaceSampler surfaceShaderList
+            swatchDisplayPort switchTable symbolButton symbolCheckBox sysFile system
+            
+            tabLayout tan tangentConstraint TestAllAttrEditors testAllMenuItems
+            testAllOptionBoxes testAttrNameSize testCmdFlags testCmdsWithObjects
+            testMenuAnnotation testOptionBoxesForOneMenu testThisMenu
+            texLatticeDeformContext texManipContext texMoveContext texMoveUVShellContext
+            texRotateContext texScaleContext texSelectContext texSelectShortestPathCtx
+            texSmudgeUVContext text textCurves textField textFieldButtonGrp textFieldGrp
+            textManip textScrollList textToShelf textureDisplacePlane textureHairColor
+            texturePlacementContext textureWindow texWinToolCtx threadCount
+            threePointArcCtx timeControl timePort timerX toggle toggleAxis
+            toggleWindowVisibility tokenize tokenizeList tolerance tolower toNativePath
+            toolButton toolCollection toolDropped toolHasOptions toolPropertyWindow torus
+            toupper trace track trackCtx transferAttributes transformCompare
+            transformLimits translator trim trunc truncateFluidCache truncateHairCache
+            tumble tumbleCtx turbulence twoPointArcCtx 
+            
+            uiOnDemandExample uiTemplate
+            unassignInputDevice undo undoInfo ungroup uniform unit unloadPlugin untangleUV
+            untrim upAxis updateAE userCtx userPaintCtx uvLink uvSnapshot 
+            
+            validateShelfName
+            valuePaintCtx vectorize verifyCmd view2dToolCtx viewCamera viewClipPlane
+            viewFit viewHeadOn viewLookAt viewPlace viewSet visor volumeAxis vortex
+            
+            waitCursor warning webBrowser webBrowserPrefs whatIs window windowPref wire
+            wireContext workspace wrinkle wrinkleContext writeTake wtPaintCtx
+            
+            xbmLangPathList xform xpmPicker
+
+KeyWords4:  abstractBaseCreate abstractBaseNurbsConversion addDoubleLinear addMatrix
+            aimConstraint airField alignCurve alignManip alignSurface ambientLight
+            angleBetween animBlend animBlendInOut animClip animCurve animCurveTA
+            animCurveTL animCurveTT animCurveTU animCurveUA animCurveUL animCurveUT
+            animCurveUU anisotropic annotationShape arcLengthDimension areaLight
+            arrayMapper artAttrPaintTest attachCurve attachSurface attrHierarchyTest
+            audio avgCurves avgNurbsSurfacePoints avgSurfacePoints 
+            
+            bakeSet
+            baseGeometryVarGroup baseLattice baseShadingSwitch bevel bevelPlus
+            birailSrf blend blendColors blendColorSets blendDevice blendShape
+            blendTwoAttr blendWeighted blindDataTemplate blinn boneLattice boolean
+            boundary boundaryBase brownian brush bulge bump2d bump3d 
+            
+            cacheBase
+            cacheBlend cacheFile camera cameraView character characterMap
+            characterOffset checker choice chooser clamp clipLibrary clipScheduler
+            closeCurve closestPointOnMesh closestPointOnSurface closeSurface cloth
+            cloud cluster clusterHandle condition constraint contrast controlPoint
+            copyColorSet copyUVSet crater createBPManip createColorSet createUVSet
+            curveFromMesh curveFromMeshCoM curveFromMeshEdge curveFromSubdiv
+            curveFromSubdivEdge curveFromSubdivFace curveFromSurface curveFromSurfaceBnd
+            curveFromSurfaceCoS curveFromSurfaceIso curveInfo curveIntersect
+            curveNormalizer curveNormalizerAngle curveNormalizerLinear curveRange
+            curveShape curveVarGroup 
+            
+            dagNode dagPose defaultLightList
+            defaultRenderUtilityList defaultShaderList defaultTextureList deformableShape
+            deformBend deformFlare deformFunc deformSine deformSquash deformTwist
+            deformWave deleteColorSet deleteComponent deleteUVSet dependNode detachCurve
+            detachSurface dielectric_material dimensionShape directedDisc
+            directionalLight diskCache displacementShader displayLayer
+            displayLayerManager distanceBetween distanceDimShape dof doubleShadingSwitch
+            dpBirailSrf dragField dropoffLocator dynBase dynGlobals 
+            
+            entity envBall
+            envChrome envCube envFacade envFog environmentFog envSky envSphere
+            explodeNurbsShell expression extendCurve extendSurface extrude 
+            
+            facade
+            ffBlendSrf ffBlendSrfObsolete ffd  ffFilletSrf field file filletCurve
+            filter filterClosestSample filterEuler filterResample filterSimplify
+            fitBspline flexorShape flow fluidEmitter fluidShape fluidSliceManip
+            fluidTexture2D fluidTexture3D follicle fourByFourMatrix fractal frameCache
+            FurAttractors FurCurveAttractors FurDescription FurFeedback FurGlobals
+            furPointOnMeshInfo furPointOnSubd 
+            
+            gammaCorrect geoConnectable geoConnector
+            geometryConstraint geometryFilter geometryShape geometryVarGroup
+            globalCacheControl globalStitch granite gravityField grid groupId groupParts
+            guide hairConstraint 
+            
+            hairSystem hairTubeShader hardenPoint
+            hardwareRenderGlobals heightField hikEffector hikFloorContactMarker
+            hikGroundPlane hikHandle hikSolver historySwitch holdMatrix hsvToRgb
+            hwReflectionMap hwRenderGlobals hwShader hyperGraphInfo hyperLayout
+            hyperView 
+            
+            ikEffector ikHandle ikMCsolver ikPASolver ikRPsolver ikSCsolver
+            ikSolver ikSplineSolver ikSystem imagePlane implicitBox implicitCone
+            implicitSphere insertKnotCurve insertKnotSurface instancer intersectSurface
+            
+            jiggle joint jointCluster jointFfd jointLattice 
+            
+            lambert lattice layeredShader
+            layeredTexture leastSquaresModifier leather light lightFog lightInfo
+            lightLinker lightList lineModifier locator lodGroup lodThresholds loft
+            lookAt luminance 
+            
+            M3dView makeCircularArc makeGroup makeIllustratorCurves
+            makeNurbCircle makeNurbCone makeNurbCube makeNurbCylinder makeNurbPlane
+            makeNurbSphere makeNurbsSquare makeNurbTorus makeTextCurves
+            makeThreePointCircularArc makeTwoPointCircularArc MAngle MAnimControl
+            MAnimCurveChange MAnimCurveClipboard MAnimCurveClipboardItem
+            MAnimCurveClipboardItemArray MAnimMessage MAnimUtil marble MArgDatabase
+            MArgList MArgParser MArrayDataBuilder MArrayDataHandle materialFacade
+            materialInfo MAttributeIndex MAttributeSpec MAttributeSpecArray MBoundingBox
+            MCallbackIdArray MClothConstraint MClothConstraintBridge MClothConstraintCmd
+            MClothControl MClothEdge MClothForce MClothMaterial MClothParticle
+            MClothPolyhedron MClothSolverRegister MClothSystem MClothTriangle MColor
+            MColorArray MCommandMessage MCommandResult MCommonRenderSettingsData
+            MCommonSystemUtils MComputation MConditionMessage MCursor MDagMessage
+            MDagModifier MDagPath MDagPathArray MDataBlock MDataHandle MDeviceChannel
+            MDeviceState MDGContext MDGMessage MDGModifier MDistance MDoubleArray MDrawData
+            MDrawInfo MDrawProcedureBase MDrawRequest MDrawRequestQueue MDrawTraversal
+            MDynamicsUtil MDynSweptLine MDynSweptTriangle mentalrayIblShape
+            mentalrayTexture mesh meshVarGroup MEulerRotation MEvent MEventMessage
+            MFeedbackLine MFileIO MFileObject MFloatArray MFloatMatrix MFloatPoint
+            MFloatPointArray MFloatVector MFloatVectorArray MFn MFnAirField MFnAmbientLight
+            MFnAnimCurve MFnAnisotropyShader MFnAreaLight MFnArrayAttrsData MFnAttribute
+            MFnBase MFnBlendShapeDeformer MFnBlinnShader MFnCamera MFnCharacter
+            MFnCircleSweepManip MFnClip MFnComponent MFnComponentListData
+            MFnCompoundAttribute MFnCurveSegmentManip MFnDagNode MFnData MFnDependencyNode
+            MFnDirectionalLight MFnDirectionManip MFnDiscManip MFnDistanceManip
+            MFnDoubleArrayData MFnDoubleIndexedComponent MFnDragField
+            MFnDynSweptGeometryData MFnEnumAttribute MFnExpression MFnField MFnFluid
+            MFnFreePointTriadManip MFnGenericAttribute MFnGeometryData MFnGeometryFilter
+            MFnGravityField MFnHikEffector MFnIkEffector MFnIkHandle MFnIkJoint MFnIkSolver
+            MFnInstancer MFnIntArrayData MFnKeyframeDelta MFnKeyframeDeltaAddRemove
+            MFnKeyframeDeltaBlockAddRemove MFnKeyframeDeltaBreakdown
+            MFnKeyframeDeltaInfType MFnKeyframeDeltaMove MFnKeyframeDeltaScale
+            MFnKeyframeDeltaTangent MFnKeyframeDeltaWeighted MFnLambertShader MFnLattice
+            MFnLatticeData MFnLatticeDeformer MFnLayeredShader MFnLight
+            MFnLightDataAttribute MFnManip3D MFnMatrixAttribute MFnMatrixData MFnMesh
+            MFnMeshData MFnMessageAttribute MFnMotionPath MFnNewtonField MFnNonAmbientLight
+            MFnNonExtendedLight MFnNumericAttribute MFnNumericData MFnNurbsCurve
+            MFnNurbsCurveData MFnNurbsSurface MFnNurbsSurfaceData MFnParticleSystem
+            MFnPartition MFnPfxGeometry MFnPhongEShader MFnPhongShader MFnPlugin
+            MFnPluginData MFnPointArrayData MFnPointLight MFnPointOnCurveManip
+            MFnPointOnSurfaceManip MFnRadialField MFnReflectShader MFnRenderLayer
+            MFnRotateManip MFnScaleManip MFnSet MFnSingleIndexedComponent MFnSkinCluster
+            MFnSphereData MFnSpotLight MFnStateManip MFnStringArrayData MFnStringData
+            MFnSubd MFnSubdData MFnSubdNames MFnToggleManip MFnTransform
+            MFnTripleIndexedComponent MFnTurbulenceField MFnTypedAttribute
+            MFnUInt64ArrayData MFnUniformField MFnUnitAttribute MFnVectorArrayData
+            MFnVolumeAxisField MFnVolumeLight MFnVortexField MFnWeightGeometryFilter
+            MFnWireDeformer MGeometryData MGeometryManager MGeometryPrimitive
+            MGeometryRequirements MGlobal MHardwareRenderer MHWShaderSwatchGenerator
+            MHwTextureManager MIffFile MIffTag MIkHandleGroup MIkSystem MImage
+            MImageFileInfo MIntArray MItCurveCV MItDag MItDependencyGraph
+            MItDependencyNodes MIteratorType MItGeometry MItInstancer MItKeyframe
+            MItMeshEdge MItMeshFaceVertex MItMeshPolygon MItMeshVertex MItSelectionList
+            MItSubdEdge MItSubdFace MItSurfaceCV MLibrary MLightLinks MLockMessage
+            MManipData MMaterial MMatrix MMessage MModelMessage MNodeMessage MObject
+            MObjectArray MObjectHandle MObjectSetMessage motionPath mountain movie
+            mpBirailSrf MPlug MPlugArray MPoint MPointArray MPolyMessage MProgressWindow
+            MPx3dModelView MPxBakeEngine MPxCommand MPxComponentShape MPxContext
+            MPxContextCommand MPxControlCommand MPxData MPxDeformerNode
+            MPxDragAndDropBehavior MPxEmitterNode MPxFieldNode MPxFileTranslator
+            MPxFluidEmitterNode MPxGeometryData MPxGeometryIterator MPxGlBuffer
+            MPxHwShaderNode MPxIkSolver MPxIkSolverNode MPxImageFile MPxImagePlane
+            MPxLocatorNode MPxManipContainer MPxMaterialInformation MPxMayaAsciiFilter
+            MPxMidiInputDevice MPxModelEditorCommand MPxNode MPxObjectSet
+            MPxParticleAttributeMapperNode MPxPolyTrg MPxPolyTweakUVCommand
+            MPxSelectionContext MPxSpringNode MPxSurfaceShape MPxSurfaceShapeUI
+            MPxToolCommand MPxTransform MPxTransformationMatrix MPxUIControl
+            MPxUITableControl MQuaternion MRampAttribute MRenderCallback MRenderData
+            MRenderingInfo MRenderLine MRenderLineArray MRenderShadowData MRenderTarget
+            MRenderUtil MRenderView MSceneMessage MSelectInfo MSelectionList MSelectionMask
+            MSimple MSpace MStatus MString MStringArray MSwatchRenderBase
+            MSwatchRenderRegister MSyntax MTesselationParams MTime MTimeArray MTimer
+            MTimerMessage MToolsInfo MTransformationMatrix MTrimBoundaryArray MTypeId
+            MUiMessage MUint64Array MUintArray multDoubleLinear multilisterLight
+            multiplyDivide multMatrix MUserEventMessage mute MVector MVectorArray
+            MViewportRenderer 
+            
+            network newtonField noise nonAmbientLightShapeNode
+            nonExtendedLightShapeNode nonLinear normalConstraint nurbsCurve
+            nurbsDimShape nurbsSurface nurbsTessellate nurbsToSubdiv nurbsToSubdivProc
+            
+            objectAttrFilter objectBinFilter objectFilter objectMultiFilter
+            objectNameFilter objectRenderFilter objectScriptFilter objectSet
+            objectTypeFilter ocean oceanShader offsetCos offsetCurve offsetSurface
+            oldBlindDataBase opticalFX orientationMarker orientConstraint 
+            
+            pairBlend
+            paramDimension parentConstraint parentTessellate particle particleAgeMapper
+            particleCloud particleColorMapper particleIncandMapper particleSamplerInfo
+            particleTranspMapper partition passMatrix pfxGeometry pfxHair pfxToon phong
+            phongE place2dTexture place3dTexture planarTrimSurface plane
+            plusMinusAverage pointConstraint pointEmitter pointLight pointMatrixMult
+            pointOnCurveInfo pointOnSurfaceInfo poleVectorConstraint polyAppend
+            polyAppendVertex polyAutoProj polyAverageVertex polyBase polyBevel
+            polyBlindData polyBoolOp polyChipOff polyCloseBorder polyCollapseEdge
+            polyCollapseF polyColorMod polyColorPerVertex polyCone polyCopyUV
+            polyCreaseEdge polyCreateFace polyCreator polyCube polyCut polyCutManip
+            polyCutManipContainer polyCylinder polyCylProj polyDelEdge polyDelFacet
+            polyDelVertex polyDuplicateEdge polyExtrudeEdge polyExtrudeFace
+            polyExtrudeVertex polyFlipEdge polyFlipUV polyHelix polyLayoutUV polyMapCut
+            polyMapDel polyMapSew polyMapSewMove polyMergeEdge polyMergeFace
+            polyMergeUV polyMergeVert polyMirror polyModifier polyModifierUV
+            polyModifierWorld polyMoveEdge polyMoveFace polyMoveFacetUV polyMoveUV
+            polyMoveVertex polyNormal polyNormalizeUV polyNormalPerVertex polyOptUvs
+            polyPipe polyPlanarProj polyPlane polyPlatonicSolid polyPoke polyPokeManip
+            polyPrimitive polyPrimitiveMisc polyPrism polyProj polyPyramid polyQuad
+            polyReduce polySeparate polySewEdge polySmooth polySmoothFace
+            polySmoothProxy polySoftEdge polySphere polySphProj polySplit polySplitEdge
+            polySplitRing polySplitVert polyStraightenUVBorder polySubdEdge polySubdFace
+            polyTorus polyToSubdiv polyTransfer polyTriangulate polyTweak polyTweakUV
+            polyUnite polyVertexNormalManip polyWedgeFace positionMarker postProcessList
+            primitive projectCurve projection projectTangent proxyManager psdFileTex
+            
+            quadShadingSwitch 
+            
+            radialField ramp rampShader rbfSrf rebuildCurve
+            rebuildSurface record reference reflect remapColor remapHsv remapValue
+            renderBox renderCone renderGlobals renderGlobalsList renderLayer
+            renderLayerManager renderLight renderQuality renderRect renderSphere
+            resolution resultCurve resultCurveTimeToAngular resultCurveTimeToLinear
+            resultCurveTimeToTime resultCurveTimeToUnitless reverse reverseCurve
+            reverseSurface revolve revolvedPrimitive rgbToHsv rigidBody rigidConstraint
+            rigidSolver rock roundConstantRadius
+
+            sampler samplerInfo scaleConstraint
+            script sculpt selectionListOperator setRange shaderGlow shadingEngine
+            shadingMap shape shellTessellate simpleVolumeShader singleShadingSwitch
+            sketchPlane skinCluster smear smoothCurve smoothTangentSrf snapshot
+            snapshotShape snow softMod softModHandle softModManip solidFractal
+            spBirailSrf spotLight spring squareSrf stencil stitchAsNurbsShell stitchSrf
+            stroke strokeGlobals stucco studioClearCoat styleCurve subCurve
+            subdAddTopology subdAutoProj subdBase subdBlindData subdCleanTopology
+            subdHierBlind subdiv subdivCollapse subdivComponentId subdivReverseFaces
+            subdivSurfaceVarGroup subdivToNurbs subdivToPoly subdLayoutUV subdMapCut
+            subdMappingManip subdMapSewMove subdModifier subdModifierUV
+            subdModifierWorld subdPlanarProj subdProjManip subdTweak subdTweakUV
+            subSurface surfaceEdManip surfaceInfo surfaceLuminance surfaceShader
+            surfaceShape surfaceVarGroup
+
+            tangentConstraint texBaseDeformManip
+            texLatticeDeformManip texSmudgeUVManip texture2d texture3d textureBakeSet
+            textureEnv textureToGeom time timeFunction timeToUnitConversion toolDrawManip
+            toonLineAttributes towPointOnSurfaceManip transform transformGeometry
+            transmat trim trimWithBoundaries tripleShadingSwitch turbulenceField tweak
+
+            uniformField unitConversion unitToTimeConversion unknown unknownDag
+            unknownTransform untrim useBackground uvChooser
+
+            vectorProduct
+            vectorRenderGlobals vertexBakeSet viewManip volumeAxisField volumeFog
+            volumeLight volumeNoise volumeShader vortexField water
+
+            weightGeometryFilter wire wood wrap wtAddMatrix
+
+            xformManip
+
+KeyWords5:  alias case catch global proc return source switch
+            // I also like to have the -edit and -query flags highlighted.
+            -e -edit -q -query
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+// we use this to make an additional comment
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clGray $00E6E6E6
+Keyword1Col:            clNavy $00E6E6E6 B
+Keyword2Col:            clMaroon $00E6E6E6 B
+Keyword3Col:            clBlue $00E6E6E6 B
+Keyword4Col:            $00007EA0 $00E6E6E6 B
+Keyword5Col:            $00AF0CAB $00E6E6E6 B
+IdentifierCol:          clWindowText $00E6E6E6
+CommentCol:             clGray $00E6E6E6
+NumberCol:              $004040FF $00E6E6E6 B
+StringCol:              clGreen $00E6E6E6 B
+SymbolCol:              clBlack $00E6E6E6 B
+PreprocessorCol:        clGray $00E6E6E6
+SelectionCol:           clWhite $00FF8080
+CurrentLineCol:         clBlack $00D6ECEF
+
+
+
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+MatchedBracesCol:       clRed $0040FFFF
+
