@@ -1,0 +1,95 @@
+
+Language:               Mapfile
+
+
+Filter:                 Map files (*.map) | *.map
+
+
+CaseSensitive:          1
+
+
+LineComment:            #
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+// DO NOT touch the following lines...i know that it is not the real PHP syntax
+// but it's the best way to have two syntax at the same time. Should work for
+// most identifiers thou.
+
+IdentifierBegChars:     $ a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+
+NumConstBegChars:       0..9
+
+
+NumConstChars:          0..9
+
+KeyWords1: MAP OUTPUTFORMAT END LEGEND LABEL QUERYMAP REFERENCE SCALEBAR WEB METADATA LAYER
+        CLASS STYLE
+
+KeyWords2: EXTENT IMAGECOLOR IMAGETYPE SYMBOLSET SHAPEPATH SIZE STATUS UNITS NAME MIMETYPE DRIVER EXTENSION IMAGEMODE TRANSPARENT
+            FORMATOPTION KEYSIZE KEYSPACING TYPE BUFFER COLOR FORCE MINDISTANCE MINFEATURESIZE OFFSET PARTIALS POSITION
+            IMAGE OUTLINECOLOR MARKER MARKERSIZE MINBOXSIZE MAXBOXSIZE INTERVALS IMAGEPATH IMAGEURL QUERYFORMAT LEGENDFORMAT
+            BROWSEFORMAT CONNECTION CONNECTIONTYPE DATA GROUP SIZEUNITS TOLERANCEUNITS ANGLE SYMBOL TEMPLATE FILTER WIDTH
+
+KeyWords3: ON METERS FALSE MEDIUM BITMAP TRUE CC LL OFF HILITE MILES PIXELS DEFAULT LINE POINT POSTGIS
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          " '
+StringEndChar:          " '
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+// we use this to make an additional comment
+
+UsePreprocessor:        1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              $000000C0 clWindow
+StringCol:              $000000C0 clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clGray clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
+
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
+HelpFile:
