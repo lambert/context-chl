@@ -1,0 +1,129 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// Vectron Script highlighter for ConText
+//
+// Written by Volker Görgler
+//
+// info@vg-software.com
+// http://www.vg-software.com
+//
+// Vectron Script based on LUA
+// Therefore the LUA-KeyWords are also included.
+//
+// LUA is a programming language designed for extending applications.
+// For further information see: http://www.lua.org
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+Language:               Vectron Script
+Filter:                 Vectron Script (*.lua,*.vsi,*.vsp)|*.lua,*.vsi,*.vsp
+HelpFile:
+CaseSensitive:          1
+LineComment:            --
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _%@.
+IdentifierChars:        a..z A..Z _ 0..9 _ .
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 #abcdefABCDEF
+EscapeChar:
+
+////////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:               C:\Vectron\Scripts\VectronScript_de.pdf
+
+
+KeyWords1:              and break do else elseif
+                        end false for function if
+                        in local nil not or
+                        repeat return then true until while
+
+KeyWords2:              assert collectgarbage dofile error getfenv getmetatable
+                        ipairs load loadfile loadstring module next pairs pcall
+                        print rawequal rawget rawset require select setfenv
+                        setmetatable tonumber tostring type unpack xpcall
+                        coroutine.create coroutine.running coroutine.status
+                        coroutine.wrap coroutine.yield string.byte string.char
+                        string.dump string.find string.format string.gmatch
+                        string.gsub string.len string.lower string.rep
+                        string.reverse string.sub string.upper table.concat
+                        table.getn table.sort table.insert table.remove math.abs
+                        math.acos math.asin math.atan math.atan2 math.ceil
+                        math.cos math.cosh math.deg math.exp math.floor
+                        math.log math.log10 math.max math.min math.modf math.pi
+                        math.pow math.rad math.sin math.sinh math.sqrt math.tan
+                        math.tanh math.frexp math.ldexp math.random
+                        math.randomseed io.close io.flush io.input io.lines
+                        io.open io.output io.popen io.read io.tmpfile io.type
+                        io.write os.clock os.date os.difftime os.execute os.exit
+                        os.getenv os.remove os.rename os.setlocale os.time
+                        os.tmpname debug.debug debug.getfenv debug.gethook
+                        debug.getinfo debug.getlocal debug.getmetatable
+                        debug.getrefistry debug.getupvalue debug.setfenv
+                        debug.setlocal debug.setupvalue debug.sethook
+                        debug.setmetatable debug.traceback package.cpath
+                        package.loaded package.loadlib package.path
+                        package.preload package.seeall
+  
+KeyWords3:              vpos.print vpos.doKeyFunction vpos.getVPOSDataBCD
+                        vpos.getVPOSDataBCDFix vpos.getVPOSDataInteger
+                        vpos.getVPOSDataString vpos.getRandomNumber
+                        vpos.playSound vpos.stopSound vpos.startScript
+                        vpos.exitScript vpos.getScriptNo vpos.messageBox
+                        vpos.getParameter vpos.setReturnvalue vpos.doReInit
+                        vpos.tonumber vpos.getHardwareinfos vpos.operator.get
+                        vpos.operator.set vpos.operator.getName vpos.plu.new
+                        vpos.plu.get vpos.plu.set vpos.plu.getName vpos.plu.getNo
+                        vpos.plu.getPrice vpos.plu.findFirst vpos.plu.findNext
+                        vpos.dep.get vpos.dep.set vpos.dep.getName
+                        vpos.dep.getPrice vpos.modifier.get vpos.modifier.getName
+                        vpos.modifier.getTime vpos.receipt.getRecordCount
+                        vpos.receipt.getRecordType vpos.receipt.open
+                        vpos.receipt.close vpos.receipt.addPLU
+                        vpos.receipt.addModifier vpos.receipt.addDiscount
+                        vpos.receipt.addRecord vpos.receipt.correctPLU
+                        vpos.receipt.getPLURecField vpos.receipt.getRecField
+                        vpos.receipt.setRecField vpos.receipt.getSubTotal
+                        vpos.receipt.getPLUPriceTotal vpos.receipt.writeInfoRec
+                        vpos.receipt.writeInfoData vpos.receipt.writeUserData
+                        vpos.receipt.getPLUTaxNos vpos.guestcheck.open
+                        vpos.guestcheck.close vpos.guestcheck.getRecordType
+                        vpos.guestcheck.getRecordCount vpos.params.get
+                        vpos.config.get vpos.tables.getMaxRecords
+                        vpos.tables.getUsedRecords vpos.tables.get vpos.tables.set
+                        vpos.tables.findFirst vpos.tables.findNext
+                        vpos.time.getString vpos.time.getLong vpos.time.getHMS
+                        vpos.time.getTimestamp vpos.time.getTimediff
+                        vpos.date.getString vpos.date.getDMY vpos.time.sleep
+                        vpos.view.showInputWindow vpos.view.showWindow
+                        vpos.view.showForm vpos.counter.increase
+                        vpos.counter.clear vpos.serial.send
+                        vpos.serial.receive vpos.vectroNet.connect
+                        vpos.vectroNet.disconnect vpos.vectroNet.isConnected
+                        vpos.vectroNet.startSendLoyaltyUpdateRequest
+                        vpos.vectroNet.startSendLoyaltyInfoRequest
+                        vpos.events.registerFunction vpos.events.unregisterFunction
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clMaroon clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              clRed clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clOlive clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+
