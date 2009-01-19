@@ -1,0 +1,63 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// MQL (.mql) highlighter written by Jeff Flick, <jeff.flick@cnh.com>
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               MQL
+Filter:                 MQL files (*.mql)|*.mql
+HelpFile:
+// it actually is case sensitive
+CaseSensitive:          0
+LineComment:            #
+BlockCommentBeg:        #
+BlockCommentEnd:        #
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             \
+
+KeyWords1: off on add remove rem modify mod system delete import export input from to overwrite
+           use into onto web select inactive dump disable enable start commit set pass password
+
+
+
+KeyWords2: menu command inquiry table form vault policy attribute type group role relationship relation
+           setting description disc label href user bus business state alt name businessobject rel
+           column string hidden nothidden range program function meaning cardinality revision clone
+           notpropagatemodify propagateconnection preventduplicates notenforce sequence store
+           format version owner public sequence promote pattern argument code property field Department
+           Location person Person Type ECO ECR Part iconmail email trans transaction context cont
+
+
+
+KeyWords3: Trigger trigger trig verb verbose history hist file log
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            $00C00000 clWindow
+Keyword3Col:            $00404000 clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow I
+NumberCol:              $000000C0 clWindow
+StringCol:              clRed clWindow
+SymbolCol:              $00004000 clWindow
+PreprocessorCol:        clNavy clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
+
