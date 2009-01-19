@@ -1,0 +1,166 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Omnimark highlighter written by Matthew Bentley, matt_bentley@softhome.net
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Omnimark
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Omnimark files (*.xom, *.xin)|*.xom;*.xin
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z #^_
+IdentifierChars:        a..z A..Z 0..9 #^_-
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+KeyWords1:              ACTIVATE AGAIN CATCH CLEAR CLOSE COPY COPY-CLEAR CROSS-TRANSLATE DEACTIVATE DECLARE DECREMENT DEFINE DISCARD DIVIDE DO DOCUMENT-END DOCUMENT-START DONE DTD-START ELEMENT ELSE ESCAPE EXITFAIL FIND FIND-END FIND-START FORMAT GROUP HALT HALT-EVERYTHING IGNORE IMPLIED INCLUDE INCLUDE-GUARD INCLUDE-END INCLUDE-START INCREMENT INPUT JOIN LINE-END LINE-START LOG LOOKAHEAD MACRO MACRO-END MARKED-SECTION MARKUP-COMMENT MARKUP-ERROR MARKUP-PARSER MASK MATCH MINUS MODULO NEW NEWLINE NEXT OPEN OUTPUT OUTPUT-TO OVER PROCESS PROCESS-END PROCESS-START PROCESSING-INSTRUCTION PROLOG-END PROLOG-IN-ERROR PUT REMOVE REOPEN REPEAT RESET RETHROW RETURN SAVE SAVE-CLEAR SCAN SELECT SET SGML SGML-COMMENT SGML-DECLARATION-END SGML-DTD SGML-DTDS SGML-ERROR SGML-IN SGML-OUT SGML-PARSE SGML-PARSER SHIFT SUBMIT SUCCEED SUPPRESS SYSTEM-CALLTEST-SYSTEM THROW TO TRANSLATE UC UL UNLESS UP-TRANSLATE WHEN XML-PARSE
+
+KeyWords2:              ACTIVE AFTER ANCESTOR AND ANOTHER ARG AS ATTACHED ATTRIBUTE ATTRIBUTES BASE BEFORE BINARY BINARY-INPUT BINARY-MODE BINARY-OUTPUT BREAK-WIDTH BUFFER BY CASE CHILDREN CLOSED COMPILED-DATE COMPLEMENT CONREF CONTENT CONTEXT-TRANSLATE COUNTER CREATED CREATING CREATOR CURRENT DATA-ATTRIBUTE DATA-ATTRIBUTES DATA-CONTENT DATA-LETTERS DATE DECLARED-CONREF DECLARED-CURRENT DECLARED-DEFAULTED DECLARED-FIXED DECLARED-IMPLIED DECLARED-REQUIRED DEFAULT-ENTITY DEFAULTED DEFAULTING DELIMITER DIFFERENCE DIRECTORY DOCTYPE DOCUMENT DOCUMENT-ELEMENT DOMAIN-FREE DOWN-TRANSLATE DTD DTD-END DTDS ELEMENTS ELSEWHERE EMPTY ENTITIES ENTITY EPILOG-START EQUAL EXCEPT EXISTS EXTERNAL EXTERNAL-DATA-ENTITY EXTERNAL-ENTITY EXTERNAL-FUNCTION EXTERNAL-OUTPUT-FUNCTION EXTERNAL-TEXT-ENTITY FALSE FILE FUNCTION FUNCTION-LIBRARY GENERAL GLOBAL GREATER-EQUAL GREATER-THAN GROUPS HAS HASNT HERALDED-NAMES ID ID-CHECKING IDREF IDREFS IN IN-LIBRARY INCLUSION INITIAL INITIAL-SIZE INSERTION-BREAK INSTANCE INTERNAL INVALID-DATA IS ISNT ITEM KEY KEYED LAST LASTMOST LC LENGTH LESS-EQUAL LESS-THAN LETTERS LIBRARY LITERAL LOCAL MATCHES MIXED MODIFIABLE NAME NAME-LETTERS NAMECASE NAMED NAMES NDATA-ENTITY NEGATE NESTED-REFERENTS NMTOKEN NMTOKENS NO NO-DEFAULT-IO NON-CDATA NON-IMPLIED NON-SDATA NOT NOTATION NUMBER-OF NUMBERS NUTOKEN NUTOKENS OCCURRENCE OF OPAQUE OPTIONAL OR PARAMETER PARENT PAST PATTERN PLUS PREPARENT PREVIOUS PROPER PUBLIC READ-ONLY READABLE REFERENT REFERENTS REFERENTS-ALLOWED REFERENTS-DISPLAYED REFERENTS-NOT-ALLOWED REMAINDER REPEATED REPLACEMENT-BREAK REVERSED SILENT-REFERENT SIZE SKIP SOURCE SPECIFIED STATUS STREAM SUBDOC-ENTITY SUBDOCUMENT SUBDOCUMENTS SUBELEMENT SWITCH SYMBOL SYSTEM TEXT-MODE THIS TIMES TOKEN TRUE UNANCHORED UNATTACHED UNION USEMAP USING VALUE VALUED VARIABLE WITH WRITABLE XML XML-DTD XML-DTDS YES EXIT
+
+KeyWords3:              #ADDITIONAL-INFO #APPINFO #CAPACITY #CHARSET #CLASS #COMMAND-LINE-NAMES #CONSOLE #CURRENT-INPUT #CURRENT-OUTPUT #DATA #DOCTYPE #DOCUMENT #DTD #EMPTY #ERROR #ERROR-CODE #FILE-NAME #FIRST #GROUP #IMPLIED #ITEM #LANGUAGE-VERSION #LAST #LIBPATH #LIBRARY #LIBVALUE #LINE-NUMBER #MAIN-INPUT #MAIN-OUTPUT #MARKUP-ERROR-COUNT #MARKUP-ERROR-TOTAL #MARKUP-PARSER #MARKUP-WARNING-COUNT #MARKUP-WARNING-TOTAL #MESSAGE #NONE #OUTPUT #PLATFORM-INFO #PROCESS-INPUT #PROCESS-OUTPUT #RECOVERY-INFO #SGML #SGML-ERROR-COUNT #SGML-ERROR-TOTAL #SGML-WARNING-COUNT #SGML-WARNING-TOTAL #SUPPRESS #SYNTAX #! ANY ANY-TEXT BLANK CDATA CDATA-ENTITY CONTENT-END CONTENT-START DIGIT LETTER NUMBER PCDATA RCDATA SDATA SDATA-ENTITY SPACE TEXT VALUE-END VALUE-START WORD-END WORD-START WHITE-SPACE
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "'
+StringEndChar:          "'
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlack clWindow B
+Keyword2Col:            clBlack clWindow B
+Keyword3Col:            clTeal clWindow
+//IdentifierCol:          clBlack clWindow
+IdentifierCol:          $00420D0D clWindow
+CommentCol:             $007B7E6D clWindow
+//CommentCol:             $064926 clWindow
+NumberCol:              clRed clWindow
+StringCol:              $00005100 clWindow
+SymbolCol:              clBlue clWindow
+PreprocessorCol:        clPurple clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clBlue $00DADADA
+
+
+
