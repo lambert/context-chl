@@ -1,0 +1,263 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// TASM highlighter, written by Claus-Juergen Claussen,
+// claussen.leimen@t-online.de
+//
+// This highlighter covers the 8086 - 80486 CPUs and their co-processors
+// as well as Turbo Assembler 1.0 to 3.2 in MASM mode and Ideal mode
+//
+// If a user would like to highlight keywords of Pentium and TASM 4.0 to 5.0,
+// he (or she) can add them easily.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// Language name
+
+Language:               TASM
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Default file filter
+// Note: if more than one extension is associated, e.g.:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Turbo Assembler files (*.asm)|*.asm
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Help file which will be invoked when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            ;
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Identifier characters
+// Note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _%@?.
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// Numeric constants begin characters
+// Note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines others
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Numeric constants characters
+// Note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines others
+
+NumConstChars:          0..9 abcdefhoqABCDEFHOQ
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Escape character
+
+EscapeChar:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Keyword table
+// Note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// Processor instructions
+
+KeyWords1:     aaa aad aam aas adc add and arpl bound bsf bsr bswap bt
+               btc btr bts call cbw cdq clc cld cli clts cmc cmp cmps
+               cmpsb cmpsd cmpsw cmpxchg cwd cwde daa das dec div enter
+
+               f2xm1 fabs fadd faddp fbld fbstp fchs fclex
+               fcmovb fcmovbe fcmove fcmovnb fcmovnbe fcmovne fcmovnu
+               fcmovu fcom fcomi fcomip fcomp fcompp fcos fdecstp fdiv
+               fdivp fdivr fdivrp femms ffree fiadd ficom ficomp fidiv
+               fidivr fild fimul fincstp finit fist fistp fisub fisubr
+               fld fld1 fldcw fldenv fldl2e fldl2t fldlg2 fldln2 fldpi
+               fldz fmul fmulp fnclex fninit fnop fnsave fnstcw
+               fnstenv fnstsw fpatan fprem1 fptan frndint frstor fsave
+               fscale fsin fsincos fsqrt fst fstcw fstenv fstp fstsw
+               fsub fsubp fsubr fsubrp ftst fucom fucomi fucomip
+               fucomp fucompp fwait fxch fxtract fyl2xp1
+
+               hlt idiv imul in inc ins insb insd insw int into invd
+               invlpg iret iretd iretw ja jae jb jbe jc jcxz je jecxz
+               jg jge jl jz jg jge jl jle jna jnae jnb jnbe jnc jne
+               jng jnge jnl jnle jno jnp jns jnz jo jp jpe jpo js jmp
+
+               lahf lar lea leave lgdt lidt lgs lss lfs lds les lldt
+               lmsw lock lods lodsb lodsd lodsw loop loope loopne
+               loopnz loopz lsl ltr mov movs movsb movsw movsd movsx
+               movzx mul neg nop not or out outs outsb outsd outsw
+               pop popa popad popaw popf popfd popfw push pusha pushad
+               pushaw pushf pushfd pushfw rcl rcr rol ror rep repe
+               repne repnz repz ret sahf sal sar shl shr sbb scas
+               scasb scasd scasw seta setae setb setbe setc sete setg
+               setge setl setle setna setnae setnb setnbe setnc setne
+               setng setnge setnl setnle setno setnp setns setnz seto
+               setp setpe setpo sets setz sgdt sidt shld shrd sldt
+               smsw stc std sti stos stosb stosd stosw str sub test
+               verr verw wait wbinvd xadd xchg xlat xlatb xor
+
+// Registers
+
+KeyWords2:     ax bx cx dx si di bp sp ip ss es ds cs fs gs
+               al ah bl bh cl ch dl dh
+               eax ebx ecx edx esi edi ebp esp eip
+
+// Predefined symbols, operators and directives
+
+KeyWords3:     .186 .286 .286c .286p .287 .386 .386c .386p .387 .486
+               .486c .486p .487 .8086 .8087
+               p186 p286 p286n p286p p287 p386 p386n p386p p387 p486
+               p486n p487 p8086 p8087 pno87
+
+               .alpha .break .cref .sec .code .const .data .data?
+               .exit .model .stack .fardata .fardata? .type
+               .lall .lfcond .list .radix .sall
+               .sfcond .startup .tfcond .xall .xcref .xlist
+
+               const codeseg dataseg udataseg fardata ufardata
+               include includelib locals nolocals jumps nojumps
+               label name page smart nosmart struc warn nowarn
+               ideal masm masm51 nomasm51 quirks group segment
+               para byte word dword fword pword qword tbyte page
+               at public private stack memory common virtual
+               use16 use32 equ db dd df dp dq dt dw dup org ptr
+               dosseg seg offset end ends proc endp retf retn
+               macro endm exitm local startupcode exitcode comment
+               align radix title uses code data stack dgroup
+               model tiny small medium compact large huge tchuge
+               far near short global extrn assume nothing
+
+               c abs pascal basic fortran prolog nolanguage assembler
+
+               .err err .err1 .err2 .errb .errdef .errdif .errdifi
+               .erre .erridn .erridni .errnb .errndef .errnz
+               errif errif1 errif2 errifb errifdef errifdif
+               errifdifi errife errifidn errifidni errifnb errifndef
+
+               alias arg catstr comm display else elseif emul endif
+               enum even evendata farstack fastimul flipflag getfield
+               goto if if1 if2 ifb ifdef ifdif ifdifi ife ifidn
+               ifidni ifnb ifndef instr irp irpc largestack maskflag
+               multerrs nearstack noemul nomulterrs popstate procdesc
+               proctype publicdll purge pushstate record rept retcode
+               setfield setflag sizestr smallstack substr subttl table
+               tblinit tblinst tblptr testflag type typedef union
+               version while
+
+               %bin %conds %cref %refall %crefref %crefuref %ctls %depth
+               %incl %linum %list %macs %newpage %noconds %nocref %noctls
+               %noincl %nolist %nomacs %nosyms %notrunc %out %pagesize %pcnt
+               %poplctl %pushlctl %subttl %syms %tabsize %text %title
+               %trunc
+
+               @32bit @code @codesize @const @cpu @curseg @data @data?
+               @datasize @fardata @fardata? @filename
+               @interface @model @object @startup @table_ @tableaddr_
+               @wordsize @stack ??date ??filename ??time ??version
+
+               codeptr dataptr eq ge gt high le length low lt mask mod ne
+               size symtype this unknown width fq endif ifdef purge rept
+
+
+//////////////////////////////////////////////////////////////////////////////
+// String delimiter: StringBegChar - string begin character
+// StringEndChar - string end character
+// MultilineStrings - enables multiline strings, as perl has it
+
+StringBegChar:          "'
+StringEndChar:          "'
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Use preprocessor: 0 - no  1 - yes
+// Note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Highlight line: 0 - no  1 - yes
+// Note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Colors
+// Note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+
+Keyword1Col:            clGreen clWindow
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clBlack clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00C4FFFF
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
+
+
