@@ -1,0 +1,340 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// xblite highlighter
+// http://perso.wanadoo.fr/xblite/
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:		xblite
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 xblite files (*.x,*.dec,*.xl,*.xbl)|*.x;*.dec;*.xl;*.xbl
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:              c:\xblite\manual\xblite_manual.chm
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//			0  - no
+//			1  - yes
+
+CaseSensitive:		1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:		'
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:	a..z A..Z $#_& [..]
+IdentifierChars:	a..z A..Z 0..9 @%&$!#._ [..]
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:	0..9 
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:		0..9 abcdefhxABCDEFH
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar: \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into three groups which can be
+// highlighted differently
+
+KeyWords1:
+
+ABS ALL ASC
+ATTACH AUTO AUTOS AUTOX
+BIN$ BINB$ BITFIELD
+CASE CFUNCTION CHR$ CJUST$ CLEAR CLOSE CLR CONSOLE CSIZE
+CSIZE$ CSTRING$
+DCOMPLEX DEC DECLARE DHIGH DIM DLOW DMAKE DO DOUBLE DOUBLEAT
+ELSE END ENDIF EOF ERROR ERROR$ EXIT EXPORT EXTERNAL EXTS EXTU
+FALSE FIX FOR FORMAT$ FUNCADDR FUNCADDRESS FUNCTION
+GHIGH GIANT GIANTAT GLOW GMAKE GOADDR GOADDRESS GOSUB GOTO
+HEX$ HEXX$ HIGH0 HIGH1
+IF IFF IFT IFZ IMPORT INC INCHR INCHRI INFILE$ INLINE$ INSTR INSTRI INT INTERNAL
+LCASE$ LCLIP$ LEFT$ LEN LIBRARY LJUST$ LOF LONGDOUBLE LONGDOUBLEAT LOOP LTRIM$
+MAKE MAX MID$ MIN MOD
+NEXT NULL$
+OCT$ OCTO$ OPEN
+POF POWER PRINT PROGRAM PROGRAM$
+QUIT
+RCLIP$ READ REDIM RETURN RIGHT$ RINCHR RINCHRI RINSTR RINSTRI RJUST$ ROTATEL
+ROTATER RTRIM$
+SBYTE SBYTEAT SCOMPLEX SEEK SELECT SET SFUNCTION SGN SHARED SHELL SIGN
+SIGNED$ SINGLE SINGLEAT SIZE SLONG SLONGAT SMAKE SPACE$ SSHORT
+SSHORTAT STATIC STEP STOP STR$ STRING STRING$ STUFF$ SUB SUBADDR SUBADDRESS SWAP
+TAB THEN TO TRIM$ TRUE TYPE
+UBOUND UBYTE UBYTEAT UCASE$ ULONG ULONGAT UNION UNTIL USHORT USHORTAT
+VERSION VERSION$ VOID
+WHILE WRITE
+XLONG XLONGAT XMAKE
+
+KeyWords2:
+
+FPClassifyL
+IsFiniteL
+IsInfL
+IsNanL
+IsNormalL
+IsSubNormalL
+IsZeroL
+HIWORD
+LOWORD  
+MAKELONG 
+PowL
+RGB 
+SignBitL
+XstAbend
+XstAlert  
+XstBackArrayToBinArray  
+XstBackStringToBinString$  
+XstBinArrayToBackArray  
+XstBinRead  
+XstBinStringToBackString$  
+XstBinStringToBackStringNL$  
+XstBinStringToBackStringThese$  
+XstBinWrite  
+XstBytesToBound  
+XstCauseException  
+XstCenterWindow  
+XstChangeDirectory  
+XstCompareStrings  
+XstCopyArray  
+XstCopyDirectory  
+XstCopyFile  
+XstCopyMemory  
+XstCreateDoubleImage$  
+XstDateAndTimeToFileTime  
+XstDecomposePathname  
+XstDeleteFile  
+XstDeleteLines
+XstEnableFPExceptions  
+XstErrorNameToNumber  
+XstErrorNumberToName  
+XstExceptionNameToNumber 
+XstExceptionNumberToName  
+XstExceptionToSystemException 
+XstFileTimeToDateAndTime
+XstFileToSystemFile
+XstFindArray  
+XstFindFile  
+XstFindFiles  
+XstFindMemoryMatch
+XstGetClipboard
+XstGetCommandLine  
+XstGetCommandLineArguments  
+XstGetCPUName  
+XstGetCurrentDirectory  
+XstGetDateAndTime  
+XstGetDateAndTimeFormatted  
+XstGetDrives  
+XstGetEndian  
+XstGetEndianName  
+XstGetEnvironmentVariable  
+XstGetEnvironmentVariables  
+XstGetException  
+XstGetExceptionFunction  
+XstGetExceptionInformation 
+XstGetExecutionPathArray  
+XstGetFileAttributes  
+XstGetFiles  
+XstGetFilesAndAttributes 
+XstGetFPUControlWord
+XstGetLocalDateAndTime
+XstGetMemoryMap
+XstGetOSName  
+XstGetOSVersion  
+XstGetPathComponents  
+XstGetProgramFileName$  
+XstGetSystemError  
+XstGetSystemTime  
+XstGetTypedArray  
+XstGuessFileName  
+XstIsAbsolutePath  
+XstIsDataDimension  
+XstKillTimer  
+XstLoadString  
+XstLoadStringArray  
+XstLockFileSection  
+XstLog
+XstLongDoubleToString$
+XstLTRIM  
+XstMakeDirectory  
+XstMergeStrings$  
+XstMultiStringToStringArray  
+XstNextCField$  
+XstNextCLine$  
+XstNextField$  
+XstNextItem$  
+XstNextLine$  
+XstParse$
+XstParseStringToStringArray
+XstPathString$
+XstPathToAbsolutePath  
+XstQuickSort  
+XstRaiseException 
+XstRandom
+XstRandomCreateSeed
+XstRandomSeed
+XstRandomUniform
+XstReadString
+XstRegisterException 
+XstRenameFile  
+XstReplace
+XstReplaceArray
+XstReplaceLines  
+XstRTRIM  
+XstSaveString  
+XstSaveStringArray  
+XstSaveStringArrayCRLF  
+XstSetClipboard  
+XstSetCommandLineArguments  
+XstSetCurrentDirectory  
+XstSetDateAndTime  
+XstSetEnvironmentVariable  
+XstSetException 
+XstSetExceptionFunction
+XstSetFPUControlWord
+XstSetFPUPrecision
+XstSetFPURounding
+XstSetSystemError
+XstSleep  
+XstStartTimer  
+XstStringArraySectionToString  
+XstStringArraySectionToStringArray  
+XstStringArrayToString  
+XstStringArrayToStringCRLF 
+XstStringToLongDouble
+XstStringToNumber  
+XstStringToStringArray  
+XstSystemErrorNumberToName  
+XstSystemErrorToError  
+XstSystemExceptionNumberToName  
+XstSystemExceptionToException  
+XstTally
+XstTRIM
+XstTry 
+XstTypeSize  
+XstUnlockFileSection  
+XstVersion$  
+XstWriteString  
+XsxVersion$  
+XxxFormat$  
+XxxReadFile  
+XxxWriteFile 
+
+
+KeyWords3:
+
+OR AND XOR NOT < > ~ ^ * / | \ & !! ! && ^^ || = <> <= >= == << >> <<< >>> + - !<= !< !> !>= !=
+
+//string delimiter
+StringBegChar: "
+StringEndChar: "
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:	0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:		first value is foreground, second is background color
+//			  and third (optional) represents font attribute:
+//			  B - bold
+//			  I - italic
+//			  U - underline
+//			  S - strike out
+//			  attributes can be combined: eg. B or BI
+//			as value, it could be used any standard windows color:
+//			  clBlack, clMaroon, clGreen, clOlive, clNavy,
+//			  clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//			  clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//			  clDkGray, clWhite, clScrollBar, clBackground,
+//			  clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//			  clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//			  clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//			  clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//			  clGrayText, clBtnText, clInactiveCaptionText,
+//			  clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//			  clInfoBk
+//			as value, it could be used hex numeric constant too:
+//			  $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clLime clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clFuchsia clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
