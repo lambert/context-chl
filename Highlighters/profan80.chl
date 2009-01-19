@@ -1,0 +1,108 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// RGH- Profan written by Michael Dell -> carnotaurus@onlinehome.de
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               RGH- Profan v8
+Filter:                 Profan files (*.prf,*.p32,*.pru,*.ph,*.inc)|*.prf;*.p32;*.pru;*.ph;*.inc
+HelpFile:               C:\Programme2\Programmen\PROFAN76a\profan.hlp
+CaseSensitive:          0
+LineComment:            ' REM
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _ # % & $
+IdentifierChars:        a..z A..Z 0..9 _
+NumConstBegChars:       0..9
+NumConstChars:          0..9 # % & $ abcdefx.
+EscapeChar:
+
+// Key- Words
+KeyWords1: Add AddFiles AddFonts AddString AddWindows Append AppendMenu AppendMenuBar Arc Assign Beep BlockWrite Break Byte Case CaseNot
+Char CharSet CheckMenu ChDir Chord Clear ClearClip ClearList ClipLoadBmp Close CloseRW Cls Color Continue Copy CopyBmp CopyBmpToMem
+CopySizedBmp CreateMenu DbCreate DbCreateIndex DbSetMemoWidth DDELink DDEExecute DDETerminate DebugOut Dec Decimals Declare Def
+DeleteObject Dim Dim! Dim$ Dim% Dim& Dispose DrawIcon DrawExtBmp DrawExtIcon DrawLibIcon DrawSizedExtBmp DrawSysIcon DrawText
+Ellipse Else ElseIf EnableMenu EnableWindow EndIf End EndPaint EndPrint EndProc EndSub EndWhile EndWith Erase ExitWindows FileMode
+Fill Font FreeDLL GetMessage If IfNot Inc Input Input# InsertMenu KillTimer Let Line LineTo ListBoxItem$ List! List$ List% List&
+LoadBmp LoadSizedBmp Locate Long MCLS MCopyBmp MCopySizedBmp MLoadBmp MessageBox MkDir MoveTo Music NextPage NumWidth Orientation
+OpenRW OutP OutPB Parameters PassWord Pie Play PlaySound PopUp Print Print# Proc PutByte PutClip Randomize ReadText Rectangle
+Rem RemoveMenu Rename RePaint Reset Return Rewrite RmDir RoundRect Run SaveBmp SaveBmpToClip Screen ScreenCopy Seek Separator
+SetAutoPaint SetCheck SetCloseMsg SetDialogFont SetErrorLevel SetFAttr SetFont SetMenuItem SetPixel SetScrollPos SetScrollRange
+SetStyle SetText SetTimer SetTrueColor SetWindowPos Shell ShowCursor ShowMax ShowMin ShowNormal Sleep Sound SQLDone SQLExec
+SQLSetNull SQLSetDel StartPaint StartPrint String Struct StrWidth Sub SubPopUp TBox TextColor TraceOn TraceOff TrackMenu UseBrush
+UseCursor UseExtCursur UseExtMenu UseFont UseIcon UsePen UserMessages WaitInput WaitKey WaitMouse WaitScan Wend While WhileNot WhileLoop
+With WinCopy Window WindowStyle WindowTitle WinHelp Word WriteIni
+
+// System- Variables
+KeyWords2: %BitsPixel &BmpCol %BmpX %BmpY %Button %CsrLin %dbDeleted %dbEoF %dbFCount %dbFDecs %dbFLen $dbFName %dbFNumber $dbFType
+%dbHeader $dbLUpdate $dbLUpdate4 %dbMemo &dbRecCount &dbRecNo %dbRecSize %dbVersion %DDEWin %Desktop &DlgProc &DlgWProc
+%DOS16 %DOS32 $DosVer $Drive %ErrNumber %Error %ErrorLevel %Font %FTPconnected %GetCount %GetCurSel %GetFocus %GetInputState
+$GetInput $GetText &GetTickCount %hDC %hDC2 %hInstance &hMenue %hWnd %Input !Input $Input &Input %IOResult %Key %Lastmessage
+%LFN %Linux &Loop &LParam %MaxX %MaxY %MCIError %MenuItem %Message %MouseKey %MousePressed %MouseX %MouseY %MWnd %NotifyCode
+&NotifyWnd %OS2 %ParCount %PCount &PDC %PeekMessage %Pos %Printing $ProfVer $ProgDir %ScanKey &SQLCount &SQLDBC &SQLENV
+$SysPath $TempDir &ULParam %UMessage &UWParam %Win16 %Win32 %WinBottom &WinDProc %WinLeft $WinPath &WinProc %WinRight
+%WinTop $WinVer %wmNotify %wmPaint %wmTimer &WParam
+
+// Functions
+KeyWords3: @! @$ @% @& @Abs @Add$ @Add @AddChoice @Addr @AddString @And @AnsiToOem$ @ArcTan @Bin$ @BlockRead @Byte @Call @Char$ @ChooseDir$
+@Chr$ @CloseCom @ComError @Control @Cos @Cot @Create @CToD$ @Date$ @dbAppendBlank @dbBrowse @dbClose @dbDelete @dbEdit @dbFind
+@dbGet$ @dbGetField$ @dbGetMemo @dbGo @dbIndex @dbOpen @dbPack @dbPut @dbPutField @dbPutMemo @dbPutRec @dbSeek @dbUndelete
+@dbUse @Del$ @DeleteChoice @DeleteString @DestroyWindow @DiskFree @DiskSize @Div& @Div @Double @DToC$ @EditBox @Eof @Equ$ @Equ
+@Exp @External @ExtString$ @FilePos @FileSize @FindFirst$ @FindNext$ @FindWindow @Format$ @FTP @GetActiveTab @GetActiveWindow
+@GetBValue @GetByte @GetCheck @GetClip$ @GetCount @GetCurSel @GetDir$ @GetEnv$ @GetFAttr @GetFDate$ @GetFileSize @GetFocus
+@GetFTime$ @GetGValue @GetHandle @GetKey$ @GetLine$ @GetLineCount @GetPixel @GetRValue @GetString$ @GetStyle @GetText$ @GT
+@GT$ @Height @Hex$ @IconCount @If @Inkey$ @Inp @InpB @Input$ @Ins$ @InsertString @InsertTab @InStr @Int @KeyIn @Left$ @Len
+@Lg @List! @List$ @List% @List& @ListBox$ @ListBoxItem$ @Ln @LoadFile$ @Long @LongName$ @Lower$ @LT @LT$ @MCISend$ @MemPos
+@MenuItem @MessageBox @Mid$ @MkStr$ @Mod @Mouse @MoveListToChoice @MoveListToEdit @MoveListToList @MoveListToMem @MoveListToStr$
+@Mul @NEq @NEq$ @Not @Oct$ @OemToAnsi$ @Or @OpenCom @Ord @Par$ @Pi @Pow @PostMessage @Pwd$ @ReadCom @ReadIni$ @RGB @Right$ @Rnd
+@Round @RTF @SaveFile$ @ScanKey @SelectString @SendKey @SendMessage @SendString @Set @SetActiveWindow @SetBit @SetCom @SetComExt
+@SetFocus @ShellExec @ShortName$ @ShowWindow @Sin @Single @SizeOf @Space$ @SQLInit @Sqr @Sqrt @Str$ @String$ @Sub @SubStr$ @Tab
+@TabChanged @Tan @TestBit @Time$ @TMouse @Translate$ @Trim$ @Upper$ @UseDLL @Val @Width @WinExec @WinExecWait @Word @WriteCom
+@XOr Abs Add$ Add AddChoice Addr AddString And AnsiToOem$ ArcTan Bin$ BlockRead Byte Call Char$ ChooseDir$ Chr$ CloseCom
+ComError Control Cos Cot Create CToD$ Date$ dbAppendBlank dbBrowse dbClose dbDelete dbEdit dbFind dbGet$ dbGetField$ dbGetMemo
+dbGo dbIndex dbOpen dbPack dbPut dbPutField dbPutMemo dbPutRec dbSeek dbUndelete dbUse Del$ DeleteChoice DeleteString DestroyWindow
+DiskFree DiskSize Div& Div Double DToC$ EditBox Eof Equ$ Equ Exp External ExtString$ FilePos FileSize FindFirst$ FindNext$
+FindWindow Format$ FTP GetActiveTab GetActiveWindow GetBValue GetByte GetCheck GetClip$ GetCount GetCurSel GetDir$ GetEnv$ GetFAttr
+GetFDate$ GetFileSize GetFocus GetFTime$ GetGValue GetHandle GetKey$ GetLine$ GetLineCount GetPixel GetRValue GetString$ GetStyle
+GetText$ GT GT$ Height Hex$ IconCount If Inkey$ Inp InpB Input$ Ins$ InsertString InsertTab InStr Int KeyIn Left$ Len Lg List!
+List$ List% List& ListBox$ ListBoxItem$ Ln LoadFile$ Long LongName$ Lower$ LT LT$ MCISend$ MemPos MenuItem MessageBox Mid$
+MkStr$ Mod Mouse MoveListToChoice MoveListToEdit MoveListToList MoveListToMem MoveListToStr$ Mul NEq NEq$ Not Oct$ OemToAnsi$
+Or OpenCom Ord Par$ Pi Pow PostMessage Pwd$ ReadCom ReadIni$ RGB Right$ Rnd Round RTF SaveFile$ ScanKey SelectString SendKey
+SendMessage SendString Set SetActiveWindow SetBit SetCom SetComExt SetFocus ShellExec ShortName$ ShowWindow Sin Single SizeOf
+Space$ SQLInit Sqr Sqrt Str$ String$ Sub SubStr$ Tab TabChanged Tan TestBit Time$ TMouse Translate$ Trim$ Upper$ UseDLL Val
+Width WinExec WinExecWait Word WriteCom XOr CreateButton CreateCheckBox CreateChoiceBox CreateDateEdit CreateDefButton
+CreateDialog CreateEdit CreateExtDialog CreateFont CreateGroupBox CreateHScroll CreateIcon CreateListBox CreateMultiEdit
+CreateRadioButton CreateRichEdit CreateSortedListBox CreateSpinEdit CreateStatusWindow CreateTabCtrl CreateText
+CreateTimeEdit CreateToolTip CreateVScroll CreateWindow
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        $O $O+ $P $P+
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00D50000 clWindow B
+Keyword2Col:            $00A89803 clWindow B
+Keyword3Col:            clBlack clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $0000B900 clWindow I
+NumberCol:              $0000C0C0 clWindow
+StringCol:              clRed clWindow
+SymbolCol:              clNavy clWindow
+PreprocessorCol:        $00FF8080 clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:            '
+BlockEndStr:
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
+
+
+
