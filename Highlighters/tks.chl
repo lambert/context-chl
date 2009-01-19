@@ -1,0 +1,119 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// TKS (.tks) highlighter written by Bastian Spiegel, <bs@tkscript.de>
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               TKS
+Filter:                 TKS files (*.tks)|*.tks
+HelpFile:
+// it actually is case sensitive except for the gl* calls
+CaseSensitive:          0
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             \
+
+KeyWords1: if else for do while switch case break loop foreach of
+           function module class return use new
+           default Pointer define #define enum null deref
+           Array int float String local tag bindkey unbindkey
+           asm compile prepare clamp wrap
+           true false __obj__ this
+
+
+KeyWords2: sin cos asin sqrt rnd frac round abs acos tan exp ln 2n
+           winrect winsin win1x win1xs winsin2 wintri
+           tcstring tcint tcfloat tcchar tcobject
+           rgb argb vector
+           stdflush stdout stderr dcon trace dtrace
+           glAlphaFunc glArrayElement glBegin glBindTexture glBindTexture1d glBindTexture2d
+           glBlendFunc glCallList glCullFace glClearColor glClear glClearDepth glClearStencil
+           glColor3f glColor3ub glColor4f glColor4ub glColorABGR glColorARGB glColorBGR
+           glColorRGB glColorMask glCopyPixels glCopyTexSubImage2D glCopyTexImage2D glDepthFunc
+           glDepthMask glDisable glDisableCS glDrawArrays glDrawBuffer glEdgeFlag glEnable glEnableCS
+           glEnd glFinish glFlush glFrontFace glFrustum glHint glLoadIdentity glLineLoop glLines
+           glLineWidth glLineStipple glLineStrip glLogicOp glMatrixMode glNormal3f glOrtho glPointSize
+           glPixelZoom glPoints glPolygon glPolygonMode glPopAttrib glPushAttrib glPopClientAttrib
+           glPushClientAttrib glPopMatrix glPushMatrix glQuads glQuadStrip glRasterPos2i glRasterPos2f
+           glRasterPos3f glReadBuffer glRectf glRotatef glScalef glScissor glShadeModel glStencilFunc
+           glStencilOp glStencilMask glTexCoord1f glTexCoord2f glTexGeni glTranslatef glTriangles
+           glVertex2i glVertex2f glVertex3f glViewport
+
+KeyWords3: halt bra sfcmp sicmp sitestz sitestzp bsr rts siloop swaps pushstf popstf pushlv
+           poplv pushv popv pushc sinot siinv sineg siquad sitestbz sitestbz2 sfneg sfquad
+           sfsin sfcos sftan sfatan2 sfsqrt sirnd siabs sfabs sffrac sfround siand sior sieor simod
+           siadd sisub siaddq1 siaddq2 siaddq3 siaddq4 siaddq5 siaddq6 siaddq7 siaddq8
+           sisubq1 sisubq2 sisubq3 sisubq4 sisubq5 sisubq6 sisubq7 sisubq8
+           simul sidiv siasl siasr sicmpb sfadd sfsub sfmul sfdiv sfcmpb stcif stcif2
+           stcfi stcfi2 iasel fasel apush apushw apushb apush4b apushnextl apushnextw apushnextb
+           apushnext4b apushl16 apushw16 apushb16 apush4b16 apopl apopw apopb apop4b apopnextl
+           apopnextw apopnextb apopnext4b apopl16 apopw16 apopb16 apop4b16 apushl2 apushl3
+           apush4 pushlivinc pushincliv pushlivdec pushdecliv pushivinc pushinciv pushivdec
+           pushdeciv movlv movlvc movv movvc livandliv livorliv liveorliv livmodliv livaddliv
+           livsubliv livmulliv livdivliv pushlivandliv pushlivorliv pushliveorliv pushlivmodliv
+           pushlivaddliv pushlivsubliv pushlivmulliv pushlivdivliv pushlivandc pushlivorc pushliveorc
+           pushlivmodc pushlivaddc pushlivsubc pushlivmulc pushlivdivc lfvaddlfv lfvsublfv lfvmullfv lfvdivlfv
+           pushlfvaddlfv pushlfvsublfv pushlfvmullfv pushlfvdivlfv pushlfvaddc pushlfvsubc pushlfvmulc pushlfvdivc
+           livandc livorc liveorc livmodc livaddc livsubc livmulc livdivc livaslc livasrc lfvaddc lfvsubc
+           lfvmulc lfvdivc sipush0 sipush1 sipush2 sipush3 sipop
+           Application AudioGenerator AudioMixer
+           AudioMixerChannel AudioSample Buffer
+           Caps ClampedFloat ClassArray
+           Color Configuration DampedFloat
+           DisplayList EditableMesh Envelope
+           File Float FloatArray
+           FMusicXM Font ForcePoint
+           FPS GLLight GLMatrix
+           GLPrim GLState HashTable
+           IntArray Integer IPAddress
+           IVector Joystick Key
+           Language Math Matrix
+           Mesh MeshIndex MeshInstance
+           MeshMaterial MeshTriangle Modulator
+           ModulatorFactory Mouse MouseRegions
+           Mutex MySQLConnection MySQLRow
+           Network NetworkBuffer ObjectArray
+           PaintDevice ParticleSystem PointerArray
+           Pool SamplePlayer Scene3DS
+           SceneGraph SceneNode Sprite
+           SpriteCon Stack Stream
+           String StringArray StringIterator
+           TCPSocket Texture TextureModBlur
+           TextureModColor TextureModMovetable TextureModPrim
+           TextureModTransform Thread Time
+           Triangle UDPPacket UDPSocket
+           Vector Vector4 VectorArray
+           Viewport WrappedFloat
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlack clWindow B
+Keyword2Col:            $00C00000 clWindow
+Keyword3Col:            $00404000 clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              $000000C0 clWindow
+StringCol:              clRed clWindow
+SymbolCol:              $00004000 clWindow
+PreprocessorCol:        clNavy clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
+
+
