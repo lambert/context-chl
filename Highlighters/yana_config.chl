@@ -1,0 +1,171 @@
+Language:               Yana Framework
+
+Description:            Yana Framework configuration file highlighter written by Thomas Meyer
+
+Filter:                 Yana config files (*.config, *.sml, *.cfg)| *.config;*.sml;*.cfg
+
+CaseSensitive:          1
+
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        / a..z A..Z _
+
+NumConstBegChars:       0..9
+NumConstChars:          0..9
+
+KeyWords1:              INCLUDE
+                        PRIMARY_KEY
+                        FOREIGN_KEYS
+                        TRIGGER
+                        BEFORE_INSERT
+                        BEFORE_UPDATE
+                        BEFORE_DELETE
+                        AFTER_INSERT
+                        AFTER_UPDATE
+                        AFTER_DELETE
+                        CONSTRAINT
+                        SELECT
+                        INSERT
+                        UPDATE
+                        DELETE
+                        DESCRIPTION
+                        TYPE
+                        LENGTH
+                        REQUIRED
+                        DEFAULT
+                        UNIQUE
+                        UNSIGNED
+                        INDEX
+                        DISPLAY
+                        HIDDEN
+                        NEW
+                        EDIT
+                        SEARCH
+                        WIDTH
+                        HEIGHT
+                        RATIO
+                        BACKGROUND
+                        ID
+                        VERSION
+                        NAME
+                        AUTHOR
+                        CONTACT
+                        LOGO
+                        PRIORITY
+                        UPDATE
+                        DIRECTORY
+                        USE_STRICT
+                        READONLY
+                        MODE
+                        TEMPLATE
+                        PERMISSION
+                        TEXT
+                        GOTO
+                        DEFAULT_ONLY
+                        ACTION
+                        TITLE
+                        IMAGE
+                        FILTER
+                        AUTOMOUNT
+                        FILE
+                        PROFILE_KEY
+                        ACTIVE
+                        ALLOW_UNDEFINED_ACTIONS
+                        MESSAGE
+                        HOMEPAGE
+                        PROFILE
+                        AUTOFREE
+                        PERSISTENT
+                        SSL
+                        USE_ODBC
+                        DBMS
+                        HOST
+                        PORT
+                        USERNAME
+                        PASSWORD
+                        GROUP_ID
+                        JS
+                        PHP
+                        ZEROFILL
+                        NUMERIC
+
+KeyWords2:              integer
+                        int
+                        boolean
+                        bool
+                        float
+                        string
+                        text
+                        url
+                        ip
+                        mail
+                        time
+                        select
+                        array
+                        true
+                        false
+                        AUTO
+                        file
+                        image
+                        dir
+                        NULL
+                        profile
+                        set
+
+KeyWords3:              INFO
+                        LANGUAGE_INFO
+                        LANGUAGE
+                        SKIN_INFO
+                        TABLES
+                        CONTENT
+                        INTERFACE
+                        SETUP
+                        ONSUCCESS
+                        ONERROR
+                        SETTINGS
+                        SRC
+                        STYLE
+                        SCRIPT
+                        EVENT
+                        SKIN
+                        DATABASE
+                        DSN
+                        OPTIONS
+                        REQUIRE_ODBC
+                        USER
+                        DATE
+                        START
+                        EMBTAG
+
+KeyWords4:
+
+StringBegChar:          %
+
+StringEndChar:          %
+
+MultilineStrings:       0
+
+BlockAutoindent:        0
+
+UsePreprocessor:        0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $00E8651E clWindow
+Keyword2Col:            clNavy clWindow B
+Keyword3Col:            clPurple clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clTeal clWindow
+NumberCol:              $000000C0 clWindow
+StringCol:              clGreen clWindow
+SymbolCol:              clBlack clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+MatchedBracesCol:       $004040FF clWindow
+
+CurrLineHighlighted:    0
+OverrideTxtFgColor:     0
+Keyword4Col:            $00707070 clWindow B
+Keyword5Col:            $008080FF clWindow
+PreprocessorCol:        clBlack clWindow
+BlockBegStr:
+BlockEndStr:
+HelpFile:
