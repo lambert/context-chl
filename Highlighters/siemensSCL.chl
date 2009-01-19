@@ -1,0 +1,49 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Siemens SCL Language highlighter written by J. Plum
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               Siemens SCL
+Filter:                 .pdl
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierChars:        a..z A..Z _
+IdentifierBegChars:     a..z A..Z _
+NumConstBegChars:       0..9 W#
+NumConstChars:          0..9 W# .
+EscapeChar:
+
+// 1 Variable definitions and Structure defs
+KeyWords1:              VAR VAR_INPUT VAR_OUTPUT VAR_TEMP VAR_IN_OUT END_VAR IF THEN
+                        ELSE ELSE_IF END_IF ARRAY OF FUNCTION_BLOCK STRUCT END_STRUCT
+                        END_FUNCTION_BLOCK
+
+// 2 Definitions and Commands
+KeyWords2:              BOOL INT REAL WORD DWORD INT_TO_WORD DINT_TO_REAL INT_TO_DINT
+                        WORD_TO_INT ABS
+
+// 3 Built-In Variables
+KeyWords3:              AND NOT OR
+
+StringBegChar: ' "
+StringEndChar: ' "
+MultilineStrings: 0
+UsePreprocessor: 0
+CurrLineHighlighted: 0
+
+SpaceCol: clWindowText clWindow
+Keyword1Col: clBlue clWindow B
+Keyword2Col: clBlue clWindow
+Keyword3Col: clOlive clWindow
+IdentifierCol: clWindowText clWindow
+CommentCol: clGreen clWindow I
+NumberCol: clFuchsia clWindow
+StringCol: clFuchsia clWindow
+SymbolCol: clWindowText clWindow
+PreprocessorCol: clBlue clWindow
+SelectionCol: clWhite clNavy
+CurrentLineCol: clBlack clYellow
