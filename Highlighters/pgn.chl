@@ -1,0 +1,101 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// PGN - Portable Game Notation highlighter
+// To write your chess (and others) games
+// written by Ruben Carlo Benante. - dr.beco@gmail.com
+
+// language name
+Language:               PGN - Portable Game Notation
+
+// default file filter
+Filter:                 PGN files (*.pgn)|*.pgn
+
+// help file which will be invokend when F1 is pressed
+HelpFile:
+
+// language case sensitivity: 0  - no, 1  - yes
+CaseSensitive:          0
+
+// comment type: LineComment - comment to the end of line
+LineComment:
+BlockCommentBeg:  {
+BlockCommentEnd:  }
+
+// identifier characters
+IdentifierBegChars:     a..z A..Z
+IdentifierChars:        a..z A..Z 0..9
+
+// numeric constants begin characters
+NumConstBegChars:       0..9 $
+NumConstChars:          0..9 .
+
+// escape character
+EscapeChar:
+
+// keyword table
+KeyWords1:              Event Site Date
+                        Round White Black Result ECO
+                        Annotator PlyCount EventDate EventCountry SourceDate
+                        WhiteTitle BlackTitle FM IM GM WhiteElo BlackElo
+                        WhiteNA BlackNA WhiteType BlackType program human
+                        TimeControl FEN Termination abandoned adjudication
+                        death emergency normal rules infraction time forfeit
+                        unterminated Mode OTB PM EM ICS TC
+
+KeyWords2:              1-0 1/2-1/2 0-1 1:0 1/2:1/2 0:1 * K Q B N R P x O-O
+                        O-O-O = + # ! ? !! !? ?! ??
+
+KeyWords3:              a b c d e f g h
+
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings
+StringBegChar:          " (
+StringEndChar:          " )
+MultilineStrings:       1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no, 1 - yes
+UsePreprocessor:        0
+
+// highlight line: 0 - no, 1 - yes
+CurrLineHighlighted:    0
+
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clNavy clWindow
+Keyword3Col:            clPurple clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clPurple clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+//MatchedBracesCol:       clWindowText clWindow
+
