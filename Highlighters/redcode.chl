@@ -1,0 +1,53 @@
+////////////////////////////////
+//
+// RedCode (ICWS-86) Highlighter
+// By Marco Pontello
+//    marcopon at myrealbox.com
+//
+// 05/07/2002
+//
+////////////////////////////////
+
+Language:               REDCODE
+Filter:                 REDCODE programs (*.red)|*.red
+HelpFile:
+CaseSensitive:          0
+LineComment:            ;
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:
+
+// keywords - opcodes
+KeyWords1:              DAT MOV ADD SUB JMP JMN JMZ DJN CMP SPL
+
+
+// keywords - other reserved things...
+KeyWords2:              start end equ
+
+KeyWords3:
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clWindowText clWindow B
+Keyword2Col:            clWindowText clWindow
+Keyword3Col:            clGreen clWindow
+IdentifierCol:          $00804000 clWindow
+CommentCol:             $0000C000 clWhite
+NumberCol:              clRed clWindow
+StringCol:              $00C08000 clWindow
+SymbolCol:              $008080FF clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clBlue
+CurrentLineCol:         clBlack $00FFFFC0
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:
+BlockEndStr:
