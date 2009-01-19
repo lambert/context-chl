@@ -1,0 +1,365 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Pike highlighter
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               Pike
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 Pike files (*.pike,*.pmod)|*.asm;*.pmod
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+HelpFile:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            // #!
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9 ?
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9 abcdefhABCDEFHxX
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar: \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+// reserved words
+
+KeyWords1:             array break case catch class constant continue default do else final float
+                       for foreach function gauge if inherit inline int lambda local mapping
+                       mixed multiset nomask object predef private program protected
+                       public return sscanf static string switch typeof varargs void while
+
+// built in functions
+
+KeyWords2:              _disable_threads _do_call_out _exit _locate_references
+                        _memory_usage _next _refs _verify_internals abs acos add_constant
+                        add_include_path add_module_path add_program_path aggregate
+                        aggregate_mapping aggregate_multiset alarm all_constant allocate
+                        arr array array_sscanf arrayp asin atan atan2 atexit backtrace
+                        basename call_function call_out call_out_info cd ceil chmod clone
+                        column combine_path compile compile_file compile_string copy_value
+                        cos cpp create crypt ctime decode_value describe_backtrace
+                        describe_error destruct dirname encode_value encode_value_canonic
+                        enumerate equal errno exece exit exp explode_path file_stat
+                        file_truncate filter find_call_out floatp floor for fork fun
+                        function function_name function_object functionp gc get_dir
+                        get_profiling_info getcwd getenv getpid glob gmtime has_index
+                        has_value hash indices int intp is_absolute_path kill lambda
+                        load_module localtime log lower_case m_delete man map map_array
+                        mapping mappingp master max min mkdir mkmapping mkmultiset mktime
+                        multisetp mv new next_object object_program object_variablep
+                        objectp operator pow programp putenv query_host_name query_num_arg
+                        random random_seed read_file remove_call_out remove_include_path
+                        remove_module_path remove_program_path replace replace_master
+                        reverse rint rm round rows rusage search sgn shutting_down signal
+                        signame signum sin sizeof sleep sort sprintf sqrt stat strerror
+                        string_to_unicode string_to_utf8 stringp strlen tan this_object
+                        throw time trace typeof ualarm unicode_to_string upper_case
+                        utf8_to_string values version write zero_type
+
+// standard modules
+
+KeyWords3: ADT.Table ADT.Table.ASCII.encode ADT.Table.Table.table.sum ADT.Table.table
+ADT.Table.table._indices ADT.Table.table._sizeof ADT.Table.table._values ADT.Table.table.append_bottom
+ADT.Table.table.append_right ADT.Table.table.col ADT.Table.table.create ADT.Table.table.decode
+ADT.Table.table.distinct ADT.Table.table.encode ADT.Table.table.group ADT.Table.table.limit
+ADT.Table.table.map ADT.Table.table.remove ADT.Table.table.rename ADT.Table.table.reverse
+ADT.Table.table.row ADT.Table.table.rsort ADT.Table.table.select ADT.Table.table.sort
+ADT.Table.table.type ADT.Table.table.where Array.diff Array.diff_compare_table
+Array.diff_longest_sequence Array.everynth Array.filter Array.longest_ordered_sequence
+Array.map Array.permute Array.reduce Array.rreduce Array.search_array Array.shuffle
+Array.sort_array Array.splice Array.sum_arrays Array.uniq Calendar.Gregorian Calendar.Gregorian.Stardate
+Calendar.Gregorian.Stardate.TNGDate Calendar.Gregorian.Year Calendar.Gregorian.Year.parse
+Calendar.time_unit Calendar.time_unit.greater Calendar.time_unit.lesser Calendar.time_unit.next
+Calendar.time_unit.prev Crypto.cast Crypto.des Crypto.idea Crypto.rc4 Crypto.rc4.crypt 
+Crypto.rc4.set_decrypt_key Crypto.rc4.set_encrypt_key Crypto.rsa Crypto.rsa.decrypt Crypto.rsa.encrypt
+Crypto.rsa.generate_key Crypto.rsa.query_blocksize Crypto.rsa.set_private_key Crypto.rsa.set_public_key
+Crypto.rsa.sha_sign Crypto.rsa.sha_verify Crypto.rsa.sign Crypto.rsa.verify Gdbm.gdbm.close Gdbm.gdbm.create
+Gdbm.gdbm.delete Gdbm.gdbm.fetch Gdbm.gdbm.firstkey Gdbm.gdbm.nextkey Gdbm.gdbm.reorganize Gdbm.gdbm.store
+Gdbm.gdbm.sync Getopt.find_all_options Getopt.find_option Getopt.get_args Gmp.mpz Gmp.mpz.cast
+Gmp.mpz.create Gmp.mpz.digits Gmp.mpz.gcd Gmp.mpz.powm Gmp.mpz.probably_prime_p Gmp.mpz.size
+Gmp.mpz.sqrt Gz.crc32 Gz.deflate Gz.deflate.create Gz.deflate.deflate Gz.inflate Gz.inflate.create
+Gz.inflate.inflate Image.ANY Image.ANY._decode Image.ANY.decode Image.ANY.decode_alpha
+Image.AVS Image.AVS._decode Image.AVS.decode Image.AVS.encode Image.BMP Image.BMP._decode
+Image.BMP.decode Image.BMP.decode_header Image.BMP.encode Image.Color Image.Color.Color 
+Image.Color.Color.bright Image.Color.Color.cast Image.Color.Color.cmyk Image.Color.Color.create
+Image.Color.Color.dark Image.Color.Color.dull Image.Color.Color.grey Image.Color.Color.greylevel
+Image.Color.Color.hex Image.Color.Color.hsv Image.Color.Color.html Image.Color.Color.light
+Image.Color.Color.name Image.Color.Color.neon Image.Color.Color.rgb Image.Color.Color.s
+Image.Color._indices Image.Color._values Image.Color.cmyk Image.Color.greylevel
+Image.Color.guess Image.Color.hsv Image.Color.html Image.Color.rgb Image.Colortable
+Image.Colortable.add Image.Colortable.cast Image.Colortable.corners Image.Colortable.create
+Image.Colortable.cubicles Image.Colortable.floyd_steinberg Image.Colortable.full Image.Colortable.image
+Image.Colortable.map Image.Colortable.nodither Image.Colortable.ordered Image.Colortable.randomcube
+Image.Colortable.randomgrey Image.Colortable.reduce Image.Colortable.reduce_fs Image.Colortable.rigid
+Image.Colortable.spacefactors Image.Font Image.Font.baseline Image.Font.create Image.Font.height
+Image.Font.load Image.Font.set_xspacing_scale Image.Font.set_yspacing_scale Image.Font.text_extents
+Image.Font.write Image.GD Image.GD._decode Image.GD.decode Image.GD.decode_alpha
+Image.GD.decode_header Image.GD.encode Image.GIF Image.GIF.__decode Image.GIF._decode
+Image.GIF._encode Image.GIF._gce_block Image.GIF._render_block Image.GIF.decode Image.GIF.decode_layer
+Image.GIF.decode_layers Image.GIF.decode_map Image.GIF.encode Image.GIF.encode_trans Image.GIF.end_block
+Image.GIF.header_block Image.GIF.netscape_loop_block Image.GIF.render_block Image.HRZ
+Image.HRZ._decode Image.HRZ.decode Image.HRZ.encode Image.ILBM Image.ILBM.__decode
+Image.ILBM._decode Image.ILBM.decode Image.ILBM.encode Image.Image Image.Image.apply_matrix
+Image.Image.apply_max Image.Image.autocrop Image.Image.average Image.Image.bitscale
+Image.Image.box Image.Image.cast Image.Image.change_color Image.Image.circle Image.Image.clear
+Image.Image.clone Image.Image.color Image.Image.copy Image.Image.create Image.Image.dct
+Image.Image.distancesq Image.Image.find_autocrop Image.Image.find_max Image.Image.find_min
+Image.Image.gamma Image.Image.getpixel Image.Image.gradients Image.Image.grey Image.Image.hsv_to_rgb
+Image.Image.invert Image.Image.line Image.Image.make_ascii Image.Image.map_closest Image.Image.map_fast
+Image.Image.map_fs Image.Image.match Image.Image.max Image.Image.min Image.Image.mirrorx
+Image.Image.mirrory Image.Image.modify_by_intensity Image.Image.noise Image.Image.orient
+Image.Image.orient4 Image.Image.outline Image.Image.outline_mask Image.Image.paste
+Image.Image.paste_alpha Image.Image.paste_alpha_color Image.Image.paste_mask Image.Image.phaseh
+Image.Image.phasehv Image.Image.phasev Image.Image.phasevh Image.Image.polyfill
+Image.Image.random Image.Image.randomgrey Image.Image.read_lsb_grey Image.Image.read_lsb_rgb
+Image.Image.rgb_to_hsv Image.Image.rotate Image.Image.rotate_ccw Image.Image.rotate_cw
+Image.Image.rotate_expand Image.Image.scale Image.Image.select_colors Image.Image.select_from
+Image.Image.setcolor Image.Image.setpixel Image.Image.skewx Image.Image.skewx_expand
+Image.Image.skewy Image.Image.skewy_expand Image.Image.sum Image.Image.sumf Image.Image.test
+Image.Image.threshold Image.Image.tuned_box Image.Image.turbulence Image.Image.write_lsb_grey
+Image.Image.write_lsb_rgb Image.Image.xsize Image.Image.ysize Image.JPEG Image.JPEG._decode
+Image.JPEG.decode Image.JPEG.decode_header Image.JPEG.encode Image.Layer Image.Layer.alpha
+Image.Layer.alpha_value Image.Layer.autocrop Image.Layer.available_modes Image.Layer.clone
+Image.Layer.create Image.Layer.crop Image.Layer.fill Image.Layer.fill_alpha
+Image.Layer.find_autocrop Image.Layer.get_misc_value Image.Layer.image Image.Layer.mode
+Image.Layer.set_alpha_value Image.Layer.set_fill Image.Layer.set_image Image.Layer.set_misc_value
+Image.Layer.set_mode Image.Layer.set_offset Image.Layer.set_tiled Image.Layer.tiled
+Image.Layer.xoffset Image.Layer.xsize Image.Layer.yoffset Image.Layer.ysize Image.PCX
+Image.PCX._decode Image.PCX._encode Image.PCX.decode Image.PCX.encode Image.PNG
+Image.PNG.__decode Image.PNG._chunk Image.PNG._decode Image.PNG.decode Image.PNG.encode
+Image.PNM Image.PNM.decode Image.PNM.encode Image.PNM.encode_P1 Image.PNM.encode_P2
+Image.PNM.encode_P3 Image.PNM.encode_P4 Image.PNM.encode_P5 Image.PNM.encode_P6
+Image.PNM.encode_ascii Image.PNM.encode_binary Image.PSD Image.Poly Image.TGA
+Image.TGA._decode Image.TGA.decode Image.TGA.encode Image.TIFF Image.TIFF._decode
+Image.TIFF._encode Image.TIFF.decode Image.TIFF.encode Image.TTF Image.TTF.Face
+Image.TTF.Face._names Image.TTF.Face.flush Image.TTF.Face.names Image.TTF.Face.properties
+Image.TTF.FaceInstance Image.TTF.FaceInstance.create Image.X Image.X.decode_pseudocolor
+Image.X.decode_truecolor Image.X.decode_truecolor_masks Image.X.encode_pseudocolor Image.X.encode_truecolor
+Image.X.encode_truecolor_masks Image.XBM Image.XBM._decode Image.XBM.decode Image.XBM.encode
+Image.XCF Image.XCF.___decode Image.XCF.__decode Image.XCF._decode Image.XCF.decode
+Image.XCF.decode_layers Image.XFace Image.XFace.decode Image.XFace.decode_header Image.XFace.encode
+Image.XWD Image.XWD._decode Image.XWD.decode Image.XWD.decode_header Image._load
+Image.colortable Image.lay Image.load Image.load_layer Locale.Gettext
+Locale.Gettext.bindtextdomain Locale.Gettext.dcgettext Locale.Gettext.dgettext
+Locale.Gettext.gettext Locale.Gettext.localeconv Locale.Gettext.setlocale Locale.Gettext.textdomain
+MIME.Message MIME.Message.body_parts MIME.Message.boundary MIME.Message.cast
+MIME.Message.charset MIME.Message.create MIME.Message.disp_params MIME.Message.disposition
+MIME.Message.get_filename MIME.Message.getdata MIME.Message.getencoded MIME.Message.headers
+MIME.Message.is_partial MIME.Message.params MIME.Message.setboundary MIME.Message.setcharset
+MIME.Message.setdata MIME.Message.setdisp_param MIME.Message.setencoding MIME.Message.setparam
+MIME.Message.subtype MIME.Message.transfer_encoding MIME.Message.type MIME.decode
+MIME.decode_base64 MIME.decode_qp MIME.decode_uue MIME.decode_word MIME.encode
+MIME.encode_base64 MIME.encode_qp MIME.encode_uue MIME.encode_word MIME.generate_boundary
+MIME.guess_subtype MIME.parse_headers MIME.quote MIME.reconstruct_partial MIME.tokenize
+Math.Matrix Math.Matrix.add Math.Matrix.cast Math.Matrix.create Math.Matrix.cross
+Math.Matrix.mult Math.Matrix.norm Math.Matrix.norm2 Math.Matrix.normv Math.Matrix.sub
+Math.Matrix.transpose Mysql.mysql Mysql.mysql.affected_rows Mysql.mysql.big_query
+Mysql.mysql.binary_data Mysql.mysql.create Mysql.mysql.create_db Mysql.mysql.drop_db
+Mysql.mysql.error Mysql.mysql.host_info Mysql.mysql.insert_id Mysql.mysql.list_dbs
+Mysql.mysql.list_fields Mysql.mysql.list_processes Mysql.mysql.list_tables Mysql.mysql.protocol_info
+Mysql.mysql.reload Mysql.mysql.select_db Mysql.mysql.server_info Mysql.mysql.shutdown
+Mysql.mysql.statistics Parser.HTML Parser.HTML._inspect Parser.HTML._set_data_callback
+Parser.HTML._set_entity_callback Parser.HTML._set_tag_callback Parser.HTML.add_container
+Parser.HTML.add_containers Parser.HTML.add_entities Parser.HTML.add_entity Parser.HTML.add_quote_tag
+Parser.HTML.add_tag Parser.HTML.add_tags Parser.HTML.at Parser.HTML.at_char
+Parser.HTML.at_column Parser.HTML.at_line Parser.HTML.case_insensitive_tag Parser.HTML.clear_containers
+Parser.HTML.clear_entities Parser.HTML.clear_quote_tags Parser.HTML.clear_tags Parser.HTML.clone
+Parser.HTML.containers Parser.HTML.context Parser.HTML.current Parser.HTML.entities
+Parser.HTML.feed Parser.HTML.feed_insert Parser.HTML.finish Parser.HTML.get_extra
+Parser.HTML.ignore_unknown Parser.HTML.lazy_argument_end Parser.HTML.lazy_entity_end
+Parser.HTML.match_tag Parser.HTML.mixed_mode Parser.HTML.parse_tag_args Parser.HTML.parse_tag_name
+Parser.HTML.quote_tags Parser.HTML.read Parser.HTML.set_extra Parser.HTML.splice_arg
+Parser.HTML.tag Parser.HTML.tag_args Parser.HTML.tag_content Parser.HTML.tag_name
+Parser.HTML.tags Parser.HTML.write_out Parser.HTML.ws_before_tag_name Parser.HTML.xml_tag_syntax
+Parser.SGML Parser.SGML.create Parser.SGML.feed Parser.SGML.finish
+Parser.SGML.result Process.Spawn Process.Spawn.fdProcess.Spawn.kill
+Process.Spawn.pid Process.Spawn.stderr Process.Spawn.stdinProcess.Spawn.stdout
+Process.Spawn.wait Process.create_process Process.create_process.kill Process.create_process.pid
+Process.create_process.set_priority Process.create_process.status Process.create_process.wait
+Process.exec Process.exece Process.popen Process.spawn Process.system Protocols.DNS
+Protocols.DNS.client Protocols.DNS.client.create Protocols.DNS.client.get_primary_mx
+Protocols.DNS.client.gethostbyaddr Protocols.DNS.client.gethostbyname Protocols.HTTP
+Protocols.HTTP.Query Protocols.HTTP.Query.async_request Protocols.HTTP.Query.cast
+Protocols.HTTP.Query.data Protocols.HTTP.Query.downloaded_bytes Protocols.HTTP.Query.set_callbacks
+Protocols.HTTP.Query.thread_request Protocols.HTTP.Query.total_bytes Protocols.HTTP.delete_url
+Protocols.HTTP.get_url Protocols.HTTP.get_url_data Protocols.HTTP.get_url_nice
+Protocols.HTTP.post_url Protocols.HTTP.post_url_data Protocols.HTTP.post_url_nice
+Protocols.HTTP.put_url Protocols.HTTP.unentity Protocols.LysKOM
+Protocols.LysKOM.Connection Protocols.LysKOM.Connection.async_ Protocols.LysKOM.Connection.async_cb_
+Protocols.LysKOM.Connection.create Protocols.LysKOM.Request Protocols.LysKOM.Request._Request
+Protocols.LysKOM.Session Protocols.LysKOM.Session.create Protocols.LysKOM.Session.create_person
+Protocols.LysKOM.Session.create_text Protocols.LysKOM.Session.login Protocols.LysKOM.Session.logout
+Protocols.LysKOM.Session.send_message Protocols.LysKOM.Session.try_complete_person Regexp.create
+Regexp.match Regexp.split Simulate.PI Simulate.add_efun Simulate.aggregate_list
+Simulate.all_efuns Simulate.explode Simulate.filter_array Simulate.get_function
+Simulate.implode Simulate.l_sizeof Simulate.listp Simulate.m_indices
+Simulate.m_sizeof Simulate.m_values Simulate.map_array Simulate.map_regexp
+Simulate.member_array Simulate.mklist Simulate.previous_object Simulate.query_host_name
+Simulate.strstr Simulate.sum Simulate.this_function Stdio.FILE
+Stdio.FILE.getchar Stdio.FILE.gets Stdio.FILE.printf Stdio.FILE.ungets
+Stdio.File Stdio.File.assign Stdio.File.close Stdio.File.connect
+Stdio.File.create Stdio.File.dup Stdio.File.dup2 Stdio.File.errno
+Stdio.File.open Stdio.File.open_socket Stdio.File.pipe Stdio.File.query_address
+Stdio.File.query_close_callback Stdio.File.query_id Stdio.File.query_read_callback 
+Stdio.File.query_write_callback Stdio.File.read Stdio.File.read_oob Stdio.File.seek
+Stdio.File.set_blocking Stdio.File.set_buffer Stdio.File.set_close_callback Stdio.File.set_close_on_exec
+Stdio.File.set_id Stdio.File.set_nonblocking Stdio.File.set_read_callback Stdio.File.set_write_callback
+Stdio.File.stat Stdio.File.tell Stdio.File.truncate Stdio.File.write Stdio.File.write_oob
+Stdio.Port Stdio.Port.accept Stdio.Port.bind Stdio.Port.create Stdio.Port.errno
+Stdio.Port.listen_fd Stdio.Port.query_id Stdio.Port.set_id Stdio.Readline
+Stdio.Readline.create Stdio.Terminfo Stdio.Terminfo.Termcap Stdio.Terminfo.Termcap.create
+Stdio.Terminfo.Termcap.tputs Stdio.Terminfo.Terminfo Stdio.Terminfo.getFallbackTerm
+Stdio.Terminfo.getTerm Stdio.Terminfo.getTermcap Stdio.Terminfo.getTerminfo Stdio.UDP
+Stdio.UDP.bind Stdio.UDP.enable_broadcast Stdio.UDP.query_address Stdio.UDP.read
+Stdio.UDP.send Stdio.UDP.set_nonblocking Stdio.UDP.set_read_callback Stdio.append_path
+Stdio.exist Stdio.file_size Stdio.is_dir Stdio.is_file
+Stdio.is_link Stdio.mkdirhier Stdio.perror Stdio.read_bytes
+Stdio.read_file Stdio.readline Stdio.recursive_rm Stdio.sendfile
+Stdio.stderr Stdio.stdin Stdio.stdout Stdio.werror
+Stdio.write_file String.capitalize String.common_prefix String.count String.fuzzymatch 
+String.implode_nicely String.sillycaps String.strmult String.trim_all_whites
+String.trim_whites String.width Thread.Condition Thread.Condition.broadcast
+Thread.Condition.signal Thread.Condition.wait Thread.Fifo Thread.Fifo.create
+Thread.Fifo.read Thread.Fifo.size Thread.Fifo.write Thread.Mutex
+Thread.Mutex.lock Thread.Mutex.trylock Thread.Queue Thread.Queue.read
+Thread.Queue.size Thread.Queue.write Thread.all_threads Thread.this_thread
+Thread.thread_create Thread.thread_local Thread.thread_local.thread_local.get
+Thread.thread_local.thread_local.set Yabu.db._values Yabu.db.create Yabu.db.list_tables
+Yabu.db.purge Yabu.db.sync Yabu.db.table Yabu.table._values
+Yabu.table.delete Yabu.table.get Yabu.table.list_keys Yabu.table.purge
+Yabu.table.set Yabu.table.transaction Yabu.transaction.commit Yabu.transaction.rollback
+Yp.YpDomain Yp.YpDomain.all Yp.YpDomain.bind Yp.YpDomain.map
+Yp.YpDomain.match Yp.YpDomain.order Yp.YpDomain.server Yp.YpMap
+Yp.YpMap._indices Yp.YpMap._sizeof Yp.YpMap._values Yp.YpMap.all
+Yp.YpMap.map Yp.YpMap.match Yp.YpMap.order Yp.YpMap.server
+Yp.default_yp_domain 
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+UsePreprocessor:        1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow
+Keyword2Col:            clPurple clWindow
+Keyword3Col:            clBlue clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+
+
