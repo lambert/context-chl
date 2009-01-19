@@ -1,0 +1,162 @@
+/////////////////////////////////////
+//
+// PowerBASIC highlighter for ConText
+// By Marco Pontello
+//    marcopon at myrealbox.com
+//    http://mark0.ngi.it
+//
+//                   04/02/2004
+//
+//
+// http://www.powerbasic.com
+//
+/////////////////////////////////////
+
+// language name
+Language:               PowerBASIC/CC
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// PureBasic files (*.pb)|*.pb
+Filter:                 PowerBasic files (*.bas, *.inc)|*.bas; *.inc
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+HelpFile:               D:\pbcc30\bin\PBCC.hlp
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+CaseSensitive:          0
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+LineComment:            '
+BlockCommentBeg:
+BlockCommentEnd:
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+IdentifierBegChars:     a..z A..Z _ @ . # $ %
+IdentifierChars:        a..z A..Z _ 0..9 ? # & $ %
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstBegChars:       0..9
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+NumConstChars:          0..9 abcdefhABCDEFH .
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+EscapeChar:
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+// op codes
+
+KeyWords1:
+Abs Accept Access Addr Alias All And Any Append Array As Asc
+Ascend Asciiz Asciz Asm At Atn Attach Attrib BDecl Base Baud Beep Bin$ Binary Bit Bits% Bits& Bits? Bits?? Bits??? Break ByCopy
+ByRef ByVal Byte CByt CCur CCux CD CDbl CDecl CDwd CInt CLng CQud CSng CWrd Call Case Ceil Cext ChDir ChDrive Chr$ Close Cls CodePtr
+Collate Color Comm Command$ Con Connect ConsIn Const ConsName$ ConsOut Console Cos Create CtsFlow Cur CurDir$ Currency CurrencyX Cursor
+CursorX CursorY Cux CvByt CvCur CvCux CvDwd CvWrd Cvd Cve Cvi Cvl Cvq Cvs Data DataCount Date$ Declare Decr DefByt DefCur DefCux DefDbl
+DefDwd DefExt DefInt DefLng DefQud DefSng DefStr DefWrd Default Delete Descend Dim Dir$ DiskFree DiskSize Double Down DsrFlow DsrSens
+DtrFlow DtrLine Dword Else ElseIf Environ$ Eof Eqv Erase Err ErrApi ErrClear Error Exe Exit Exp Exp10 Exp2 Explicit Export Ext Extended
+Extract$ Far FileAttr FileCopy FileName$ Fill Fix Flow Flush FormFeed Format$ Frac FreeFile From Function Get Get$ GetAttr GetStdErr
+GetStdIn GetStdOut Global GoSub GoTo Handle Hex$ HiByt HiWrd Host ICase Idn Imp In InKey$ InShift InStat InStr Incr Inp Input Input#
+Input$ Insert Int Integer Inv IsFalse IsTrue Iterate Kill LBound LCase$ LPrint LPrint$ LSet LTrim$ Left Left$ Len Let Lib Line LoByt
+LoWrd Loc Local Locate Lock Lof Log Log10 Log2 Long MCase$ Main MakDwd MakLng MakPtr Mat Max Max$ Max% Max& Mid$ Min Min$ Min% Min&
+MkByt$ MkCur$ MkCux$ MkDir MkDwd$ MkWrd$ Mkd$ Mke$ Mki$ Mkl$ Mkq$ Mks$ Mod Mouse MouseButtons MouseStat MouseX MouseY Move Name
+None Not Notify Null Oct$ Of Off On Open Opt Option Optional Or Out Output PCopy Page Parity ParityChar ParityRepl ParityType Parse$ ParseCount
+PbMain Peek Peek$ Pointer Poke Poke$ Port Preserve Print Print# Private Ptr Put Put$ Quad RGB RSet RTrim$ Random Randomize ReDim Read Read$
+Recv RegExpr RegRepl Register Remain$ Remove$ Repeat$ Replace Reset Resume Return Right Right$ Ring Rlsd RmDir Rnd Rotate Round
+RtsFlow RxBuffer RxQue SDecl Scan Screen ScreenAttr ScreenX ScreenY Scroll Seek Send Server Set SetAttr SetEof Sgn Shared Shell
+Shift Signed Sin Single SizeOf Sleep Sort Space$ Spc Sqr Static Status StdCall StdEof StdErr StdIn StdOut Step Stop Str$ StrDelete$
+StrInsert$ StrPtr StrReverse$ String String$ Sub Suspend Swap Tab TagArray Tally Tan Tcp Then Thread Time$ TimeOut Timer To Toggle Trim$
+Trn TxBuffer TxQue UBound UCase UCase$ Udp UnLock Until Up Using Val VarPtr Verify Version3 Version4 Version5 WaitKey$
+WaitStat Width Width# WinMain With Word Write Write# XInpFlow XOutFlow Xor Zer
+#Bloat #Stack #Tools Accel ACode$ ArrayAttr Calc CallStk CallStk$ CallStkCount
+Choose ClsID$ Client User Post CSet CSet$ GetStdKdb GetStdVid
+Error$ FileScan FuncName$ Guid$ GuidTxt$ HiInt IIf Interface IsNothing IsObject
+Join$ LoInt LSet$ Macro MakInt MakWrd ObjActive Object ObjPtr ObjResult PageActive PageVisible Parse Profile
+ProgID$ Retain$ RSet$ Switch Tab$ ThreadCount Trace Try UCode$ Using$ Variant Dispatch Guid Variant# Variant$
+VariantVT Catch Finally if end
+
+KeyWords2:
+#Compile #Debug #Dim #Else #ElseIf EndIF #Include #Option #Register #Resource #Stack
+
+KeyWords3:
+$Bel $Bs $Compile $Cr $CrLf $Debug $Dim $Dq $Else $ElseIf $EndIf $Eof $Esc $Ff
+$If $Include $Lf $Nul $Option $Register $Resource $Stack $Tab $Vt
+%Def %Pb_Cc32 %Pb_Dll16 %Pb_Dll32 %Pb_Exe %Pb_RevLetter %Pb_Revision
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+UsePreprocessor:        0
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+CurrLineHighlighted:    0
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            clMaroon clWindow
+Keyword3Col:            clNavy clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGreen clWindow
+NumberCol:              clRed clWindow
+StringCol:              clPurple clWindow
+SymbolCol:              $00303030 clWindow
+PreprocessorCol:        clBlue clWindow B
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
