@@ -1,0 +1,167 @@
+[a | align attribute]
+ align="|center"
+
+[ah | anchor href tag]
+<a href="http://|.html" target="_self"></a>
+
+[an | anchor name tag]
+<a name="|"></a>
+
+[btn | Button (generic)]
+<input type="button" name="btn|" value="Caption" onClick="JavaScript:">
+
+[button | button to execute JavaScript code]
+<input type="button" name="btn" value="Run" onClick="JavaScript:|()">
+
+[cell | cell tag]
+<td align="center" nowrap>|</td>
+
+[desc | Meta tag description]
+<meta name="description" content="|Page description here...">
+
+[f | font tag]
+<font face="|arial" size="3" color="#000000"></font>
+
+[form | form tag]
+<form name="frm" method="GET" action="mailto:|" onSubmit="JavaScript:return validate(this);">
+  <input type="text" name="txt" value="">
+  <input type="radio" name="rad" value="0">
+</form>
+
+[fr | Frame]
+<frameset frameborder="no" border="0" framespacing="0" rows="50,*">
+  <frame name="title" src="title.html" marginheight="0" marginwidth="0"  scrolling="no">
+  <frame name="body" src="body.html" marginheight="0" marginwidth="0">
+</frameset>
+<noframes>
+  <body bgcolor="#FFFFFF">
+    Your browser doesn't supports frames.
+  </body>
+</noframes>
+
+[h | height attribute]
+ height="|"
+
+[html | Basic HTML squeleton]
+<html>
+<head>
+  <meta http-equiv="Expires" content="0">
+  <title>|Page Title</title>
+</head>
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+</body>
+</html>
+
+[img | Image]
+<img src="|.gif" border="0" vspace="0" hspace="0">
+
+[in | generic input tag]
+<input type="|" name="MyInput" value="MyValue">
+
+[js | JavaScript basic tags]
+<script language="JavaScript">
+|
+</script>
+
+[jsrc | Java Script with source]
+<script language="JavaScript" src="|.js"></script>
+
+[jsval | JavaScript with basic form validation code]
+<script language="JavaScript">
+var daysXMonth = new Array(0,31,28,31,30,31,30,31,31,30,31,30,31);
+
+function validate(|frm) {
+    var msg = "";
+    if (frm.txt.value.length == 0) msg = msg + "\n- text field required.";
+    var i=0;
+    var chkd = false;
+    while (!chkd && (frm.rad.length > i)) {
+        chkd = chkd || frm.rad[i].checked;
+        i++;
+    }
+    if (!chkd) msg = msg + "\n- radio button required.";
+    if ((frm.txtYYYY.value.length == 0) || (frm.txtDD.value.length == 0)) msg = msg + "\n- date must be provided."
+    else if (isNaN(frm.txtYYYY.value) || isNaN(frm.txtDD.value)) mensaje = mensaje + "\n- date must only use numeric characters."
+    else {
+        if (!isValidDate(parseInt(frm.YYYY.value),
+            frm.selMM.options[frm.selMM.selectedIndex].value,
+            parseInt(frm.txtDD.value))) msg = msg + "\n- Date is not valid.";
+    }
+    if (0 > frm.sel2.selectedIndex) msg = msg + "\n- must select one option.";
+    i=0;
+    chkd = false;
+    while (!chkd && (frm.chk.length > i)) {
+        chkd = chkd || frm.chk[i].checked;
+        i++;
+    }
+    if ((frm.txtOthers.value.length != 0) && !frm.chk[frm.chk.length-1].checked) {
+        frm.chk[frm.chk.length-1].click();
+        chkd = true;
+    }
+    if (!chkd) msg = msg + "\n- must select one option.";
+    if (frm.chk[frm.chk.length-1].checked && (frm.txtOthers.value.length == 0)) msg = msg + "\n- must provide the 'others' options.";
+    if (msg != "") {
+        msg = "The form can't be sent because have some errors:\n" + msg;
+        alert(msg);
+        return false;
+    }
+    else return true;
+}
+
+function isValidDate(YYYY,MM,DD) {
+    if (((YYYY % 400) == 0) || (((YYYY % 100) != 0) && ((YYYY % 4) == 0))) daysXMonth[2] = 29
+    else daysXMonth[2] = 28;
+    if ((1 > DD) || (DD > daysXMonth[MM])) return false
+    else return true;
+}
+</script>
+
+[key | Meta tag for keywords]
+<meta name="keywords" content="|,">
+
+[nocache | Avoid proxy from cache this page]
+  <meta http-equiv="Expires" content="0">
+
+[p | paragraph tag]
+<p align="justify">|</p>
+
+[refresh | Tag for page refresh or redirect]
+  <meta http-equiv="Refresh" content="2; url=|">
+
+[reset | generic reset button]
+<input type="reset" name="|btnReset" value="Reset">
+
+[row | row tag]
+<tr>
+  |
+</tr>
+
+[sel | select]
+<select size="1" name="sel">
+  <option value="1">|</option>
+  <option value="2"></option>
+</select>
+
+[style | Style]
+<style>
+  BODY, DIV, TD, LAYER { font-size:10pt; font-family:arial; }
+  A:link, A:visited { color:#000080; text-decoration:none; }
+  A:hover, A:active { color:#ff0000; text-decoration:none; }
+</style>
+
+[submit | generic submit button]
+<input type="submit" name="|btnSubmit" value="Submit">
+
+[table | HTML table]
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle">|</td>
+  </tr>
+</table>
+
+[text | Text Area]
+<textarea name="txt|" wrap="virtual" rows="10" cols="50"></textarea>
+
+[w | Width attribute]
+ width="|"
+
