@@ -14,7 +14,7 @@ Language:               68HC11 Assembler
 // default file filter
 // note: if more than one extension is associated, eg:
 // C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
-                                                                                                        
+
 Filter:                 68HC11 Assembler files (*.asm)|*.asm
 
 
@@ -177,3 +177,5 @@ BlockAutoindent:        0
 BlockBegStr:
 BlockEndStr:
 MatchedBracesCol:       clWindowText clWindow
+
+
